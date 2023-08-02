@@ -1,9 +1,0 @@
-digraph "solid_mechanics/openfdem_solid.h"
-{
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="solid_mechanics/openfdem\l_solid.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
-  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="solid_mechanics_contact\l/get_potentional_contact\l_couple.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$get__potentional__contact__couple_8h.html",tooltip=" "];
-}

@@ -1,8 +1,0 @@
-digraph "solid_mechanics" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  dir_bfbf0affba6c593d8d7c5b89d6ac5d5c [shape=box, label="solid_mechanics", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_bfbf0affba6c593d8d7c5b89d6ac5d5c.html"];
-  dir_252290403b193df537c3d7c85c46a42c [shape=box label="materials" fillcolor="white" style="filled" color="red" URL="dir_252290403b193df537c3d7c85c46a42c.html"];
-  dir_bfbf0affba6c593d8d7c5b89d6ac5d5c->dir_252290403b193df537c3d7c85c46a42c [headlabel="1", labeldistance=1.5 headhref="dir_000004_000000.html"];
-}

@@ -1,9 +1,0 @@
-# Defining the exact version will make sure things don't break
-sphinx==5.3.0
-sphinx_rtd_theme==1.1.1
-readthedocs-sphinx-search==0.1.1
-breathe==4.35.0
-rst2pdf==0.100
-sphinx.ext.autosectionlabel==1.4
-sphinx_copybutton==0.5.2
-sphinx_design==0.5.0
