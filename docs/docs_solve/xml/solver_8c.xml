@@ -1,0 +1,305 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="solver_8c" kind="file" language="C++">
+    <compoundname>solver.c</compoundname>
+    <includes refid="solver_8h" local="yes">solver.h</includes>
+    <includes local="yes">../common/openfdem_math.h</includes>
+    <includes refid="solver__large__deformation_8h" local="yes">solver_large_deformation.h</includes>
+    <includes local="yes">../mesh/get_element_coord.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>boudary/openfdem_boundary.h</label>
+        <link refid="openfdem__boundary_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>../solid/solid_mechanics_contact/openfdem_solid_contact.h</label>
+      </node>
+      <node id="9">
+        <label>../../common/openfdem_enum.h</label>
+      </node>
+      <node id="20">
+        <label>solver_large_deformation.h</label>
+        <link refid="solver__large__deformation_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>../solid/openfdem_nodal.h</label>
+      </node>
+      <node id="5">
+        <label>../io/dumper/openfdem_history.h</label>
+      </node>
+      <node id="1">
+        <label>solver.c</label>
+        <link refid="solver_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>solver.h</label>
+        <link refid="solver_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>../solid/solid_mechanics_cohesive/DFN/openfdem_DFN.h</label>
+      </node>
+      <node id="3">
+        <label>openfdem.h</label>
+        <link refid="openfdem_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>../../common/openfdem_commom.h</label>
+      </node>
+      <node id="21">
+        <label>../mesh/get_element_coord.h</label>
+      </node>
+      <node id="19">
+        <label>../common/openfdem_math.h</label>
+      </node>
+      <node id="11">
+        <label>../mesh/group/openfdem_group.h</label>
+      </node>
+      <node id="17">
+        <label>../solid/solid_mechanics_cohesive/sesmic/openfdem_sesmic.h</label>
+      </node>
+      <node id="13">
+        <label>../solid/solid_mechanics/openfdem_solid.h</label>
+      </node>
+      <node id="4">
+        <label>../common/openfdem_general.h</label>
+      </node>
+      <node id="14">
+        <label>../solid/solid_mechanics_cohesive/openfdem_solid_cohesive.h</label>
+      </node>
+      <node id="16">
+        <label>../solid/materials/openfdem_mat.h</label>
+      </node>
+      <node id="18">
+        <label>../geometry/openfdem_geometry.h</label>
+      </node>
+      <node id="6">
+        <label>../mesh/openfdem_mesh_insert.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="solver_8c_1a5ab1372a1cd7aeb0b8d841714cfeed10" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void solver_main</definition>
+        <argsstring>(General general, Boudary boudary, Solidmat solidmat, Element element, Cohelement cohelement, Nodal nodal, Real global_damp)</argsstring>
+        <name>solver_main</name>
+        <param>
+          <type>General</type>
+          <declname>general</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__boundary_8h_1a46c9ed01abc40da05d649718dcf1f738" kindref="member">Boudary</ref></type>
+          <declname>boudary</declname>
+        </param>
+        <param>
+          <type>Solidmat</type>
+          <declname>solidmat</declname>
+        </param>
+        <param>
+          <type>Element</type>
+          <declname>element</declname>
+        </param>
+        <param>
+          <type>Cohelement</type>
+          <declname>cohelement</declname>
+        </param>
+        <param>
+          <type>Nodal</type>
+          <declname>nodal</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>global_damp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="solver.c" line="7" column="13" bodyfile="solver.c" bodystart="7" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="solver_8c_1a974fc828287916ee2cccf9e23105a294" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Openfdem_main_solve</definition>
+        <argsstring>(Openfdem openfdem)</argsstring>
+        <name>Openfdem_main_solve</name>
+        <param>
+          <type><ref refid="openfdem_8h_1ae9eb6c46c16ca89df8f85b6463ca7ee7" kindref="member">Openfdem</ref></type>
+          <declname>openfdem</declname>
+          <briefdescription><para><itemizedlist>
+<listitem><para>explicit solver of equations ** </para>
+</listitem></itemizedlist>
+</para>
+</briefdescription>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="solver.c" line="59" column="6" bodyfile="solver.c" bodystart="59" bodyend="111"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>File<sp/><sp/><sp/>Openfdem_main_solve.c<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="solver_8h" kindref="compound">solver.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../common/openfdem_math.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="solver__large__deformation_8h" kindref="compound">solver_large_deformation.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../mesh/get_element_coord.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="solver_8c_1a5ab1372a1cd7aeb0b8d841714cfeed10" kindref="member">solver_main</ref>(<sp/></highlight><highlight class="comment">/*<sp/>mechanical<sp/>solver<sp/>for<sp/>2D<sp/>nodes<sp/>with<sp/>x,y<sp/>d.o.f.<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>General<sp/>general,<sp/><ref refid="struct_boundary__structure" kindref="compound">Boudary</ref><sp/>boudary,<sp/>Solidmat<sp/>solidmat,<sp/>Element<sp/>element,<sp/>Cohelement<sp/>cohelement,</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>Nodal<sp/>nodal,<sp/>Real<sp/>global_damp)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nodalid,<sp/>elementid;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>nodal-&gt;unbalance_force<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>body<sp/>force</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="boudary__body__force_8c_1a82cfc08a541c932fdd65a2b0ccb2ce6b" kindref="member">boudary_body_force</ref>(nodal,<sp/>general);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>nodal<sp/>force</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="boudary__nodal__force_8c_1a16019afc65ee58f7cd4ba979156fbf53" kindref="member">boudary_nodal_force</ref>(general,<sp/>boudary,<sp/>nodal);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>edge<sp/>force</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="solver_8h_1af5e7df0f5f0088a2b32cf804314a36d2" kindref="member">boudary_edge_force</ref>(general,<sp/>boudary,<sp/>solidmat,<sp/>element,<sp/>nodal);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>element<sp/>insitu<sp/><sp/>force</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="boudary__element__insitu__force_8c_1a25675ea42d69c6ffd8cb2d2e2b28b5fb" kindref="member">boudary_element_insitu_force</ref>(boudary,<sp/>element,<sp/>nodal);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>update<sp/>velocity</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(nodalid<sp/>=<sp/>0;<sp/>nodalid<sp/>&lt;<sp/>nodal-&gt;n_num;<sp/>nodalid++)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nodal-&gt;total_force[nodalid].x<sp/>=<sp/>nodal-&gt;total_force[nodalid].x<sp/>*<sp/>(1.0<sp/>-<sp/>global_damp);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nodal-&gt;total_force[nodalid].y<sp/>=<sp/>nodal-&gt;total_force[nodalid].y<sp/>*<sp/>(1.0<sp/>-<sp/>global_damp);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nodal-&gt;nodal_vel[nodalid].x<sp/>+=<sp/>(nodal-&gt;total_force[nodalid].x<sp/>/<sp/>nodal-&gt;node[nodalid].mass)<sp/>*<sp/>general-&gt;TimeStep;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nodal-&gt;nodal_vel[nodalid].y<sp/>+=<sp/>(nodal-&gt;total_force[nodalid].y<sp/>/<sp/>nodal-&gt;node[nodalid].mass)<sp/>*<sp/>general-&gt;TimeStep;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>no<sp/>need<sp/>to<sp/>parallel<sp/>at<sp/>here,<sp/>waiting<sp/>for<sp/>openmp<sp/>5.0<sp/><sp/>reduction<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(nodalid<sp/>=<sp/>0;<sp/>nodalid<sp/>&lt;<sp/>nodal-&gt;n_num;<sp/>nodalid++)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nodal-&gt;unbalance_force<sp/>=<sp/>Openfdem_max(nodal-&gt;unbalance_force,<sp/>sqrt(nodal-&gt;total_force[nodalid].x<sp/>*<sp/>nodal-&gt;total_force[nodalid].x<sp/>+</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nodal-&gt;total_force[nodalid].y<sp/>*<sp/>nodal-&gt;total_force[nodalid].y));</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nodal-&gt;max_velocity<sp/>=<sp/>Openfdem_max(nodal-&gt;max_velocity,<sp/>sqrt(nodal-&gt;nodal_vel[nodalid].x<sp/>*<sp/>nodal-&gt;nodal_vel[nodalid].x<sp/>+</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nodal-&gt;nodal_vel[nodalid].y<sp/>*<sp/>nodal-&gt;nodal_vel[nodalid].y));</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>nodal<sp/>velocity<sp/>boudary</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="boudary__nodal__velocity_8c_1a5487fb9228c9be99b3f5256f8316f40d" kindref="member">boudary_nodal_velocity</ref>(general,<sp/>boudary,<sp/>nodal);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>edge<sp/>velocity<sp/>boudary</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="solver_8h_1ae52d34bd489a12d717a129a788902d6d" kindref="member">boudary_edge_velocity</ref>(general,<sp/>boudary,<sp/>nodal);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>update<sp/>node<sp/>coord</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(nodalid<sp/>=<sp/>0;<sp/>nodalid<sp/>&lt;<sp/>nodal-&gt;n_num;<sp/>nodalid++)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nodal-&gt;node[nodalid].x<sp/>+=<sp/>nodal-&gt;nodal_vel[nodalid].x<sp/>*<sp/>general-&gt;TimeStep;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nodal-&gt;node[nodalid].y<sp/>+=<sp/>nodal-&gt;nodal_vel[nodalid].y<sp/>*<sp/>general-&gt;TimeStep;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>update<sp/>element<sp/>coord</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>get_element_coord(nodal-&gt;node,<sp/>element,<sp/>general);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>update<sp/>cohelement<sp/>coord<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="solver_8c_1a974fc828287916ee2cccf9e23105a294" kindref="member">Openfdem_main_solve</ref>(<ref refid="struct_open_f_d_e_m__structure" kindref="compound">Openfdem</ref><sp/>openfdem<sp/><sp/><sp/></highlight><highlight class="comment">/***<sp/>explicit<sp/>solver<sp/>of<sp/>equations<sp/><sp/><sp/>***/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>General<sp/>general<sp/>=<sp/>&amp;(openfdem-&gt;<ref refid="struct_open_f_d_e_m__structure_1a5931164798490264817af416acbdb73d" kindref="member">general</ref>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>OPFDEM<sp/>control<sp/>database<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Element<sp/>element<sp/>=<sp/>&amp;(openfdem-&gt;<ref refid="struct_open_f_d_e_m__structure_1a0fcf7bfa67d9455bc7adac09fec26cc8" kindref="member">element</ref>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>OPFDEM<sp/>element<sp/>database<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Cohelement<sp/>cohelement<sp/>=<sp/>&amp;(openfdem-&gt;<ref refid="struct_open_f_d_e_m__structure_1a127741ba6a1f0c1c4bdcdc6570e77418" kindref="member">cohelement</ref>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Contact<sp/>contact<sp/>=<sp/>&amp;(openfdem-&gt;<ref refid="struct_open_f_d_e_m__structure_1a9e9be939de15abdeb132637e0bf7c357" kindref="member">contact</ref>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>OPFDEM<sp/>interaction<sp/>database<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Nodal<sp/>nodal<sp/>=<sp/>&amp;(openfdem-&gt;<ref refid="struct_open_f_d_e_m__structure_1a6880fa5e75dbd732e222b9b20772c956" kindref="member">nodal</ref>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>OPFDEM<sp/>node<sp/>database<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>History<sp/>history<sp/>=<sp/>&amp;(openfdem-&gt;<ref refid="struct_open_f_d_e_m__structure_1aa92d00acc32543652d79498cd87914ad" kindref="member">history</ref>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>OPFDEM<sp/>output<sp/>database<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Solidmat<sp/>solidmat<sp/>=<sp/>&amp;(openfdem-&gt;<ref refid="struct_open_f_d_e_m__structure_1a89fc3c6f0384d0495663ed306c511933" kindref="member">solidmat</ref>);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>OPFDEM<sp/>property<sp/>database<sp/><sp/>for<sp/>elements<sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_boundary__structure" kindref="compound">Boudary</ref><sp/>boudary<sp/>=<sp/>&amp;(openfdem-&gt;<ref refid="struct_open_f_d_e_m__structure_1a4259b77fdd0c08d3e1918a97706ed8b1" kindref="member">boudary</ref>);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>OPFDEM<sp/>property<sp/>database<sp/><sp/>for<sp/>nodes<sp/>(BC)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mesh<sp/>mesh<sp/>=<sp/>&amp;(openfdem-&gt;<ref refid="struct_open_f_d_e_m__structure_1a44c3414271ec9ee5c16dc75a188e0dbb" kindref="member">mesh</ref>);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>OPFDEM<sp/>property<sp/>database<sp/><sp/>for<sp/>meshing<sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DFN<sp/>dfn<sp/>=<sp/>&amp;(openfdem-&gt;<ref refid="struct_open_f_d_e_m__structure_1a6e6d68f1cb97ca6282de9da3010c45c9" kindref="member">dfn</ref>);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>OPFDEM<sp/>property<sp/>database<sp/>for<sp/>DFN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Seismic<sp/>seismic<sp/>=<sp/>&amp;(openfdem-&gt;<ref refid="struct_open_f_d_e_m__structure_1a6b0ddf22d7f97d850a87a588583e62c1" kindref="member">seismic</ref>);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>OPFDEM<sp/>seismic<sp/>monitoring<sp/>parameters<sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>ele_mat_id;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>NodalNumberinOldMesh;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NodalNumberinOldMesh<sp/>=<sp/>nodal-&gt;n_num;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UInt<sp/>cohesive_mat,<sp/>nodalid;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Real<sp/>time_step,<sp/>nodal_mass;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UInt<sp/>mat;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="solver_8h_1aeadc50d540af0a72ab8d1cad9c7ace38" kindref="member">solver_update_energy</ref>(general,<sp/>nodal,<sp/>element,<sp/>cohelement,<sp/>contact);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>solve<sp/>for<sp/>all<sp/>soludtion<sp/>by<sp/>adding<sp/>boudary<sp/>conditions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="solver_8c_1a5ab1372a1cd7aeb0b8d841714cfeed10" kindref="member">solver_main</ref>(</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>general,boudary,<sp/>solidmat,<sp/>element,<sp/>cohelement,<sp/>nodal,<sp/>general-&gt;global_damp);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(ele_mat_id<sp/>=<sp/>0;<sp/>ele_mat_id<sp/>&lt;<sp/>solidmat-&gt;n_mat;<sp/>ele_mat_id++)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>solve<sp/>for<sp/>all<sp/>rigid<sp/>elements</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(solidmat-&gt;elemat[ele_mat_id].cons)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>RIGID:</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="solver_8h_1af4fab905f52d133e681eaf034070f253" kindref="member">solver_rigid</ref>(<sp/></highlight><highlight class="comment">/*<sp/>mechanical<sp/>solver<sp/>rigid<sp/>triangles<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>element,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>general-&gt;TimeStep,<sp/>solidmat-&gt;elemat[ele_mat_id].mat-&gt;rigid.den,<sp/>ele_mat_id,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nodal-&gt;node,<sp/>nodal-&gt;total_force,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nodal-&gt;nodal_vel</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SOFTEN:</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="solver_8h_1af5fc879ee27e590797b2b138f2049bd3" kindref="member">solver_large_deformation</ref>(<sp/><sp/></highlight><highlight class="comment">/*<sp/>fracture<sp/>triangle<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>element,<sp/>nodal,<sp/>solidmat,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ele_mat_id,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>element-&gt;soften_state[solidmat-&gt;elemat[ele_mat_id].mat-&gt;soften.damage]</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((nodal-&gt;n_num)<sp/>!=<sp/>NodalNumberinOldMesh)contact-&gt;contact_trigger<sp/>=<sp/>5.0<sp/>*<sp/>contact-&gt;contact_buffer;<sp/><sp/></highlight><highlight class="comment">//<sp/>only<sp/>for<sp/>soften</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>update<sp/>timestep</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="solver_8h_1a483b6c8314046c4d5d80741af051ba7e" kindref="member">solver_get_timestep</ref>(general,<sp/>nodal,<sp/>element,<sp/>cohelement,<sp/>contact,<sp/>solidmat);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+    </programlisting>
+    <location file="solver.c"/>
+  </compounddef>
+</doxygen>

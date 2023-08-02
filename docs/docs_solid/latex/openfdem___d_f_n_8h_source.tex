@@ -1,0 +1,29 @@
+\hypertarget{openfdem___d_f_n_8h_source}{}\doxysection{openfdem\+\_\+\+DFN.\+h}
+\label{openfdem___d_f_n_8h_source}\index{/Users/ekaterinaossetchkina/CProjects/openfdem\_solver/openfdem src/src/solid/solid\_mechanics\_cohesive/DFN/openfdem\_DFN.h@{/Users/ekaterinaossetchkina/CProjects/openfdem\_solver/openfdem src/src/solid/solid\_mechanics\_cohesive/DFN/openfdem\_DFN.h}}
+\mbox{\hyperlink{openfdem___d_f_n_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* file StructureDefinition.h  OPFDEM data base description */}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#ifndef \_OPENFDEM\_STRUCTURE\_DFN\_}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#define \_OPENFDEM\_STRUCTURE\_DFN\_}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{6     \textcolor{keywordtype}{char}* \mbox{\hyperlink{structdfn__type_a7bb5e40c10df6a41df64bda1f4bb3e26}{tag}};    \textcolor{comment}{//group name}}
+\DoxyCodeLine{7     UInt \mbox{\hyperlink{structdfn__type_a86993fe33fbfae6dc7dc1ba1186674e7}{n\_1}};    \textcolor{comment}{// nodes}}
+\DoxyCodeLine{8     UInt \mbox{\hyperlink{structdfn__type_acd08e998e76a2e6139f8a25733822f42}{n\_2}};    \textcolor{comment}{// size of DFNs in this group}}
+\DoxyCodeLine{9     DFN\_enum \mbox{\hyperlink{structdfn__type_af969a03f3eac8ae78f1a78c30159cd98}{type}};  \textcolor{comment}{// DFN type}}
+\DoxyCodeLine{10     Int \mbox{\hyperlink{structdfn__type_ab622bcadff8b16d377d737678ba88cb0}{cohele}};   \textcolor{comment}{// point to cohesive element, default: -\/1}}
+\DoxyCodeLine{11 \} \mbox{\hyperlink{structdfn__type}{dfn\_type}};}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{comment}{/* OPFDEM Module Properties -\/ DFN */}}
+\DoxyCodeLine{15 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_d_f_n__structure}{DFN\_structure}}* \mbox{\hyperlink{openfdem___d_f_n_8h_a9dac545f6239cb8ce514928f7a7fca0b}{DFN}};}
+\DoxyCodeLine{16 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_d_f_n__structure}{DFN\_structure}}}
+\DoxyCodeLine{17 \{   }
+\DoxyCodeLine{18     UInt \mbox{\hyperlink{struct_d_f_n__structure_a0f7696c180d26f168ec2d3fa27935df3}{n\_dfn}};   \textcolor{comment}{/* number of groups in DFN */}}
+\DoxyCodeLine{19     \mbox{\hyperlink{structdfn__type}{dfn\_type}}* \mbox{\hyperlink{struct_d_f_n__structure_abefb99986e7e3d2348f0b48498d6434e}{dfn}};}
+\DoxyCodeLine{20 \};}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// !\_OPENFDEM\_STRUCTURE\_DFN\_}}
+\DoxyCodeLine{23 }
+
+\end{DoxyCode}

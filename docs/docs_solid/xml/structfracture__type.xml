@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="structfracture__type" kind="struct" language="C++" prot="public">
+    <compoundname>fracture_type</compoundname>
+    <includes refid="openfdem__solid__cohesive_8h" local="no">openfdem_solid_cohesive.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structfracture__type_1a33447f96f00d708dd345d6eb79c95d41" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real time</definition>
+        <argsstring></argsstring>
+        <name>time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_cohesive/openfdem_solid_cohesive.h" line="26" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_cohesive/openfdem_solid_cohesive.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfracture__type_1aac1eda0d5c805f405c197137935d2431" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real length</definition>
+        <argsstring></argsstring>
+        <name>length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_cohesive/openfdem_solid_cohesive.h" line="27" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_cohesive/openfdem_solid_cohesive.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfracture__type_1a6ccecf169e044f4f450c9464a7b78234" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real energy</definition>
+        <argsstring></argsstring>
+        <name>energy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_cohesive/openfdem_solid_cohesive.h" line="28" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_cohesive/openfdem_solid_cohesive.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfracture__type_1a8ef1d85fc5ad9cfd0d7a9932a773f3d5" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_cohesive/openfdem_solid_cohesive.h" line="29" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_cohesive/openfdem_solid_cohesive.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfracture__type_1aaca16c96f43b7c4d55119bcdd9367993" prot="public" static="no" mutable="no">
+        <type>UInt</type>
+        <definition>UInt coele</definition>
+        <argsstring></argsstring>
+        <name>coele</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_cohesive/openfdem_solid_cohesive.h" line="30" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_cohesive/openfdem_solid_cohesive.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_cohesive/openfdem_solid_cohesive.h" line="25" column="1" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_cohesive/openfdem_solid_cohesive.h" bodystart="25" bodyend="31"/>
+    <listofallmembers>
+      <member refid="structfracture__type_1aaca16c96f43b7c4d55119bcdd9367993" prot="public" virt="non-virtual"><scope>fracture_type</scope><name>coele</name></member>
+      <member refid="structfracture__type_1a6ccecf169e044f4f450c9464a7b78234" prot="public" virt="non-virtual"><scope>fracture_type</scope><name>energy</name></member>
+      <member refid="structfracture__type_1aac1eda0d5c805f405c197137935d2431" prot="public" virt="non-virtual"><scope>fracture_type</scope><name>length</name></member>
+      <member refid="structfracture__type_1a33447f96f00d708dd345d6eb79c95d41" prot="public" virt="non-virtual"><scope>fracture_type</scope><name>time</name></member>
+      <member refid="structfracture__type_1a8ef1d85fc5ad9cfd0d7a9932a773f3d5" prot="public" virt="non-virtual"><scope>fracture_type</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

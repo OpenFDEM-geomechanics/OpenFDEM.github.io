@@ -1,0 +1,26 @@
+of.boundary.nodal
+=================
+.. raw:: html
+
+    <style> .red {color:#F64A8A; font-weight:bold;} </style>
+    <style> .blue {color:#4169E1; font-weight:bold;} </style>
+
+.. role:: red
+.. role:: blue
+
+**of.**\ :red:`boundary.nodal.clear` :blue:`*nodal_tag1*` <string> :blue:`*nodal_tag2*` <string> :blue:`*nodal_tag3*` <string>
+    Delete the nodal boundaries defined previously. Directly set the nodal groups.
+    
+    **Parameters:** 
+        **nodal_tag:** tag of the group to be delted.
+
+|
+
+Example:
+--------------------------------------------------------------------
+
+.. code-block:: 
+
+    of.boundary.nodal.clear ‘leftedge’ ‘rightedge’ ‘up’ ‘down’
+
+

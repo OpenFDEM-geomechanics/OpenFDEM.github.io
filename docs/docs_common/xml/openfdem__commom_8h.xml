@@ -1,0 +1,1344 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="openfdem__commom_8h" kind="file" language="C++">
+    <compoundname>openfdem_commom.h</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">limits.h</includes>
+    <includes local="no">signal.h</includes>
+    <includes refid="openfdem__message_8h" local="yes">openfdem_message.h</includes>
+    <includes refid="openfdem__enum_8h" local="yes">openfdem_enum.h</includes>
+    <includes refid="openfdem__struct_8h" local="yes">openfdem_struct.h</includes>
+    <includedby refid="openfdem__general_8h" local="yes">openfdem_general.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>stdlib.h</label>
+      </node>
+      <node id="8">
+        <label>openfdem_enum.h</label>
+        <link refid="openfdem__enum_8h"/>
+      </node>
+      <node id="1">
+        <label>openfdem_commom.h</label>
+        <link refid="openfdem__commom_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>openfdem_message.h</label>
+        <link refid="openfdem__message_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>limits.h</label>
+      </node>
+      <node id="4">
+        <label>string.h</label>
+      </node>
+      <node id="6">
+        <label>signal.h</label>
+      </node>
+      <node id="9">
+        <label>openfdem_struct.h</label>
+        <link refid="openfdem__struct_8h"/>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>openfdem_commom.h</label>
+        <link refid="openfdem__commom_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>openfdem_tools.h</label>
+        <link refid="openfdem__tools_8h"/>
+      </node>
+      <node id="2">
+        <label>openfdem_general.h</label>
+        <link refid="openfdem__general_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="openfdem__commom_8h_1ace5d16511ddcfcce938c2a0e577eaa27" prot="public" static="no">
+        <name>FileNull</name>
+        <initializer>((FILE*)NULL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="41" column="9" bodyfile="openfdem_commom.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="openfdem__commom_8h_1a6eb0a185bcaad3f0aca1180139d65615" prot="public" static="no">
+        <name>Char2DNull</name>
+        <initializer>((char **)NULL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="42" column="9" bodyfile="openfdem_commom.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="openfdem__commom_8h_1a7b9da6389c9fd8ae161aca291c470b5c" prot="public" static="no">
+        <name>Double1DNull</name>
+        <initializer>((double*)NULL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="43" column="9" bodyfile="openfdem_commom.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="openfdem__commom_8h_1a33a0b45fdf98646f43688c0e276ea58c" prot="public" static="no">
+        <name>Double2DNull</name>
+        <initializer>((double**)NULL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="44" column="9" bodyfile="openfdem_commom.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="openfdem__commom_8h_1a302a79e79b0ab226620f524e971e5bd3" prot="public" static="no">
+        <name>Double3DNull</name>
+        <initializer>((double***)NULL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="45" column="9" bodyfile="openfdem_commom.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="openfdem__commom_8h_1ae645df46a063f9058c909eaa025a5ce4" prot="public" static="no">
+        <name>Int1DNull</name>
+        <initializer>((long*)NULL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="46" column="9" bodyfile="openfdem_commom.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="openfdem__commom_8h_1a880e86f6ad7544fd1005362977f9554e" prot="public" static="no">
+        <name>Int2DNull</name>
+        <initializer>((long**)NULL)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="47" column="9" bodyfile="openfdem_commom.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="openfdem__commom_8h_1a10df2a33cf7a4f64536570dd71fa2388" prot="public" static="no">
+        <name>Edge2Length</name>
+        <param><defname>l</defname></param>
+        <param><defname>x1</defname></param>
+        <param><defname>y1</defname></param>
+        <param><defname>x2</defname></param>
+        <param><defname>y2</defname></param>
+        <initializer>{l=sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2));}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="49" column="9" bodyfile="openfdem_commom.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="openfdem__commom_8h_1a1afca53d8f6cdecf198d8b56659b9e8d" prot="public" static="no">
+        <name>V2Darea</name>
+        <param><defname>s</defname></param>
+        <param><defname>l1</defname></param>
+        <param><defname>l2</defname></param>
+        <param><defname>l3</defname></param>
+        <initializer>{s=0.5*(l1+l2+l3);s=sqrt(s*(s-l1)*(s-l2)*(s-l3));}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="50" column="9" bodyfile="openfdem_commom.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="openfdem__commom_8h_1af665cf923dfc77c52e48dd74d2e4b0e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void get_filename_no_path</definition>
+        <argsstring>(char *return_string, char *input_string)</argsstring>
+        <name>get_filename_no_path</name>
+        <param>
+          <type>char *</type>
+          <declname>return_string</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>input_string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="52" column="6" declfile="openfdem_commom.h" declline="52" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1a2e9397c17229b54bd1c975a3113817eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void get_path</definition>
+        <argsstring>(char *return_string, char *input_string)</argsstring>
+        <name>get_path</name>
+        <param>
+          <type>char *</type>
+          <declname>return_string</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>input_string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="59" column="6" declfile="openfdem_commom.h" declline="59" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1af76155db7f59aaa192f71cb60cba22bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void parse_string</definition>
+        <argsstring>(FILE *InputFile, char *string)</argsstring>
+        <name>parse_string</name>
+        <param>
+          <type>FILE *</type>
+          <declname>InputFile</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="63" column="6" declfile="openfdem_commom.h" declline="63" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1a261da189fde53df5cc9cd97f43d53385" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void get_filename_no_suffix</definition>
+        <argsstring>(char *return_string, char *input_string)</argsstring>
+        <name>get_filename_no_suffix</name>
+        <param>
+          <type>char *</type>
+          <declname>return_string</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>input_string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="67" column="6" declfile="openfdem_commom.h" declline="67" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1a98630ddb729d88fab94e9fee4ce88e7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void get_suffix</definition>
+        <argsstring>(char *return_string, char *input_string)</argsstring>
+        <name>get_suffix</name>
+        <param>
+          <type>char *</type>
+          <declname>return_string</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>input_string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="71" column="6" declfile="openfdem_commom.h" declline="71" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1ae99538b7a858821ae21d6ea432192455" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void strip_ext</definition>
+        <argsstring>(char *fname)</argsstring>
+        <name>strip_ext</name>
+        <param>
+          <type>char *</type>
+          <declname>fname</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="75" column="6" declfile="openfdem_commom.h" declline="75" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1a9fb67a9b32c39c75beeb77d6f6ecdbf0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double *</type>
+        <definition>double* malloc_1D_double_array</definition>
+        <argsstring>(long m1)</argsstring>
+        <name>malloc_1D_double_array</name>
+        <param>
+          <type>long</type>
+          <declname>m1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="77" column="8" declfile="openfdem_commom.h" declline="77" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1a8f14e1fb10db366742b22c28eb480c23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double *</type>
+        <definition>double* initialize_1D_double_array</definition>
+        <argsstring>(long m1, double dini)</argsstring>
+        <name>initialize_1D_double_array</name>
+        <param>
+          <type>long</type>
+          <declname>m1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dini</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="80" column="8" declfile="openfdem_commom.h" declline="80" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1a775d41b3e9fccb53efa5ed050f9006a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double **</type>
+        <definition>double** malloc_2D_double_array</definition>
+        <argsstring>(long m2, long m1)</argsstring>
+        <name>malloc_2D_double_array</name>
+        <param>
+          <type>long</type>
+          <declname>m2</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>m1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="87" column="8" declfile="openfdem_commom.h" declline="87" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1a135d4d0bce0649a5fccdf6b70df4fc2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double **</type>
+        <definition>double** initialize_2D_double_array</definition>
+        <argsstring>(long m2, long m1, double dini)</argsstring>
+        <name>initialize_2D_double_array</name>
+        <param>
+          <type>long</type>
+          <declname>m2</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>m1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dini</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="94" column="8" declfile="openfdem_commom.h" declline="94" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1a7421b6d81d94fc5929920dc4bfc7836a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double ***</type>
+        <definition>double*** malloc_3D_double_array</definition>
+        <argsstring>(long m3, long m2, long m1)</argsstring>
+        <name>malloc_3D_double_array</name>
+        <param>
+          <type>long</type>
+          <declname>m3</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>m2</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>m1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="102" column="8" declfile="openfdem_commom.h" declline="102" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1a17dbcbf772a2abfab531a7b5232bbfcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double ***</type>
+        <definition>double*** initialize_3D_double_array</definition>
+        <argsstring>(long m3, long m2, long m1, double dini)</argsstring>
+        <name>initialize_3D_double_array</name>
+        <param>
+          <type>long</type>
+          <declname>m3</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>m2</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>m1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dini</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="109" column="8" declfile="openfdem_commom.h" declline="109" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1aa0fd612d2737f61a0e4fb3ea9eac1152" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long *</type>
+        <definition>long* malloc_1D_int_array</definition>
+        <argsstring>(long m1)</argsstring>
+        <name>malloc_1D_int_array</name>
+        <param>
+          <type>long</type>
+          <declname>m1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="117" column="6" declfile="openfdem_commom.h" declline="117" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1a949156108abf19843c73d35073f3b93b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long *</type>
+        <definition>long* initialize_1D_int_array</definition>
+        <argsstring>(Int m1, Int iini)</argsstring>
+        <name>initialize_1D_int_array</name>
+        <param>
+          <type><ref refid="openfdem__struct_8h_1a91adff1610bdf681555a8f2e330dc963" kindref="member">Int</ref></type>
+          <declname>m1</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__struct_8h_1a91adff1610bdf681555a8f2e330dc963" kindref="member">Int</ref></type>
+          <declname>iini</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="122" column="6" declfile="openfdem_commom.h" declline="122" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1a3ea49b16ac7c8f615eae074a829494fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="openfdem__struct_8h_1a26ff0e0ab71ea1ed8bac401c56ed2242" kindref="member">UInt</ref> *</type>
+        <definition>UInt* initialize_1D_UInt_array</definition>
+        <argsstring>(UInt m1, UInt iini)</argsstring>
+        <name>initialize_1D_UInt_array</name>
+        <param>
+          <type><ref refid="openfdem__struct_8h_1a26ff0e0ab71ea1ed8bac401c56ed2242" kindref="member">UInt</ref></type>
+          <declname>m1</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__struct_8h_1a26ff0e0ab71ea1ed8bac401c56ed2242" kindref="member">UInt</ref></type>
+          <declname>iini</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="128" column="6" declfile="openfdem_commom.h" declline="128" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1acb9b2b8f3672919f95a07c99e60c7fca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long **</type>
+        <definition>long** malloc_2D_int_array</definition>
+        <argsstring>(long m2, long m1)</argsstring>
+        <name>malloc_2D_int_array</name>
+        <param>
+          <type>long</type>
+          <declname>m2</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>m1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="130" column="6" declfile="openfdem_commom.h" declline="130" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1aed43181f659652b1528b8d258d7ea0cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long **</type>
+        <definition>long** initialize_2D_int_array</definition>
+        <argsstring>(long m2, long m1, long iini)</argsstring>
+        <name>initialize_2D_int_array</name>
+        <param>
+          <type>long</type>
+          <declname>m2</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>m1</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>iini</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="136" column="6" declfile="openfdem_commom.h" declline="136" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1a44a50ebc6e050a1160c98c980db6fa29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void parse_1D_double_array</definition>
+        <argsstring>(FILE *fileptr, double initial_double, long max_size, long actual_size, double **d1aray)</argsstring>
+        <name>parse_1D_double_array</name>
+        <param>
+          <type>FILE *</type>
+          <declname>fileptr</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>initial_double</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>max_size</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>actual_size</declname>
+        </param>
+        <param>
+          <type>double **</type>
+          <declname>d1aray</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="143" column="6" declfile="openfdem_commom.h" declline="143" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1aa939a2ce8f595ac5670aadd09d943f9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void parse_2D_double_array</definition>
+        <argsstring>(FILE *fileptr, double initial_double, long max_size1, long max_size2, long read_way, long actual_size1, long actual_size2, double ***d2aray)</argsstring>
+        <name>parse_2D_double_array</name>
+        <param>
+          <type>FILE *</type>
+          <declname>fileptr</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>initial_double</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>max_size1</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>max_size2</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>read_way</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>actual_size1</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>actual_size2</declname>
+        </param>
+        <param>
+          <type>double ***</type>
+          <declname>d2aray</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="153" column="6" declfile="openfdem_commom.h" declline="153" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1a5540f08e627f982a13199cf206c20557" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void parse_3D_double_array</definition>
+        <argsstring>(FILE *fileptr, double dinit, long n1, long n2, long n3, double ****d3aray)</argsstring>
+        <name>parse_3D_double_array</name>
+        <param>
+          <type>FILE *</type>
+          <declname>fileptr</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dinit</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>n1</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>n2</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>n3</declname>
+        </param>
+        <param>
+          <type>double ****</type>
+          <declname>d3aray</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="165" column="6" declfile="openfdem_commom.h" declline="165" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1a95d44e1e0c04b6ad91d43e2ef8c8ccea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void parse_1D_int_array</definition>
+        <argsstring>(FILE *fileptr, long initial_int, long max_size, long actual_size, long **i1aray)</argsstring>
+        <name>parse_1D_int_array</name>
+        <param>
+          <type>FILE *</type>
+          <declname>fileptr</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>initial_int</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>max_size</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>actual_size</declname>
+        </param>
+        <param>
+          <type>long **</type>
+          <declname>i1aray</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="175" column="6" declfile="openfdem_commom.h" declline="175" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1a3a509d6e6dc5c08180d922fb9cbb03fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void parse_2D_int_array</definition>
+        <argsstring>(FILE *fileptr, long initial_int, long max_size1, long max_size2, long read_way, long actual_size1, long actual_size2, long ***i2aray)</argsstring>
+        <name>parse_2D_int_array</name>
+        <param>
+          <type>FILE *</type>
+          <declname>fileptr</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>initial_int</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>max_size1</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>max_size2</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>read_way</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>actual_size1</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>actual_size2</declname>
+        </param>
+        <param>
+          <type>long ***</type>
+          <declname>i2aray</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="184" column="6" declfile="openfdem_commom.h" declline="184" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1a08956be0fb422d6ef15e2d0d20a38664" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void get_vector_unit</definition>
+        <argsstring>(double *e1x, double *e1y, double rx, double ry)</argsstring>
+        <name>get_vector_unit</name>
+        <param>
+          <type>double *</type>
+          <declname>e1x</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>e1y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rx</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>ry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="197" column="6" declfile="openfdem_commom.h" declline="197" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1a41bdfd2cdd985bb1accdb397d85623c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void get_vector_rotated</definition>
+        <argsstring>(double *e1x, double *e1y, double e2x, double e2y)</argsstring>
+        <name>get_vector_rotated</name>
+        <param>
+          <type>double *</type>
+          <declname>e1x</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>e1y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>e2x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>e2y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="206" column="6" declfile="openfdem_commom.h" declline="206" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1af173a450ad4cc4ab481cdd7baa9359eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void get_vector_global_to_local</definition>
+        <argsstring>(double *u, double *v, double rx, double ry, double e1x, double e1y, double e2x, double e2y)</argsstring>
+        <name>get_vector_global_to_local</name>
+        <param>
+          <type>double *</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rx</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>ry</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>e1x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>e1y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>e2x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>e2y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="215" column="6" declfile="openfdem_commom.h" declline="215" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1a51b7a5723a0ddff629684fd44c348522" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int openfdem_run_usr_break</definition>
+        <argsstring>(double dctime, long ncstep, long mcstep)</argsstring>
+        <name>openfdem_run_usr_break</name>
+        <param>
+          <type>double</type>
+          <declname>dctime</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>ncstep</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>mcstep</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="226" column="5" declfile="openfdem_commom.h" declline="226" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1af7f1202c194c5b481913c1462d0d78e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long get_line_current_position</definition>
+        <argsstring>(FILE *fileptr)</argsstring>
+        <name>get_line_current_position</name>
+        <param>
+          <type>FILE *</type>
+          <declname>fileptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="230" column="6" declfile="openfdem_commom.h" declline="230" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1afa541b0a975a6787ce700def1480026c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void create_result_store_folder</definition>
+        <argsstring>(char *Result_store_folder)</argsstring>
+        <name>create_result_store_folder</name>
+        <param>
+          <type>char *</type>
+          <declname>Result_store_folder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="234" column="6" declfile="openfdem_commom.h" declline="234" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1ab96946f187e9d673ae894f7d5de3f34f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NULL_vector</definition>
+        <argsstring>(of_vector *d1aray)</argsstring>
+        <name>NULL_vector</name>
+        <param>
+          <type><ref refid="structof__vector" kindref="compound">of_vector</ref> *</type>
+          <declname>d1aray</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="236" column="6" declfile="openfdem_commom.h" declline="236" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1a40c0b3bf8e49a1f4384b6e09fa394f68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void parse_vector</definition>
+        <argsstring>(FILE *fileptr, double dinit, of_vector *d1aray)</argsstring>
+        <name>parse_vector</name>
+        <param>
+          <type>FILE *</type>
+          <declname>fileptr</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dinit</declname>
+        </param>
+        <param>
+          <type><ref refid="structof__vector" kindref="compound">of_vector</ref> *</type>
+          <declname>d1aray</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="238" column="6" declfile="openfdem_commom.h" declline="238" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1aad351edf42fca5614e7ad3a7b9152910" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void parse_1D_vector</definition>
+        <argsstring>(FILE *fileptr, double dinit, long max_size, long actual_size, of_vector **d1aray)</argsstring>
+        <name>parse_1D_vector</name>
+        <param>
+          <type>FILE *</type>
+          <declname>fileptr</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dinit</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>max_size</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>actual_size</declname>
+        </param>
+        <param>
+          <type><ref refid="structof__vector" kindref="compound">of_vector</ref> **</type>
+          <declname>d1aray</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="240" column="6" declfile="openfdem_commom.h" declline="240" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1a947d1a55deeab18a67ecfd434e44f387" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structof__tensor" kindref="compound">of_tensor</ref> *</type>
+        <definition>of_tensor* initialize_1D_tensor</definition>
+        <argsstring>(unsigned int size, double double_ini)</argsstring>
+        <name>initialize_1D_tensor</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>double_ini</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="242" column="11" declfile="openfdem_commom.h" declline="242" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1a209a0c132db108f6d825d6cd9909480e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structof__tensor" kindref="compound">of_tensor</ref> *</type>
+        <definition>of_tensor* parse_1D_tensor</definition>
+        <argsstring>(FILE *fileptr, UInt size, Real double_ini)</argsstring>
+        <name>parse_1D_tensor</name>
+        <param>
+          <type>FILE *</type>
+          <declname>fileptr</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__struct_8h_1a26ff0e0ab71ea1ed8bac401c56ed2242" kindref="member">UInt</ref></type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref></type>
+          <declname>double_ini</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="244" column="11" declfile="openfdem_commom.h" declline="244" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1a2c972d77af801a1f8cea61f684c7b515" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="openfdem__struct_8h_1a26ff0e0ab71ea1ed8bac401c56ed2242" kindref="member">UInt</ref> *</type>
+        <definition>UInt* realloc_UInt_array</definition>
+        <argsstring>(UInt *array, UInt size)</argsstring>
+        <name>realloc_UInt_array</name>
+        <param>
+          <type><ref refid="openfdem__struct_8h_1a26ff0e0ab71ea1ed8bac401c56ed2242" kindref="member">UInt</ref> *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__struct_8h_1a26ff0e0ab71ea1ed8bac401c56ed2242" kindref="member">UInt</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="246" column="6" declfile="openfdem_commom.h" declline="246" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__commom_8h_1a7b41dba21c77adeae6dd90f7cc038066" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int *</type>
+        <definition>int* realloc_Int_array</definition>
+        <argsstring>(int *array, int size)</argsstring>
+        <name>realloc_Int_array</name>
+        <param>
+          <type>int *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_commom.h" line="248" column="5" declfile="openfdem_commom.h" declline="248" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>OpenFDEM<sp/>-<sp/>Open<sp/>Access<sp/>Finite<sp/>Discrete<sp/>Element<sp/>Method.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>2019<sp/>to<sp/>2021<sp/>by<sp/>Wuhan<sp/>Institute<sp/>of<sp/>Rock<sp/>and<sp/>Soil<sp/>Mechanics.<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>Free<sp/>for<sp/>educational,<sp/>research<sp/>and<sp/>non-profit<sp/>purposes.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Refer<sp/>to<sp/>the<sp/>license<sp/>file<sp/>for<sp/>details.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/>*<sp/>File:<sp/><sp/><sp/>openfdem_commom.h</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/>*<sp/>Author:<sp/>Xiaofeng<sp/>Li</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/>*<sp/>Email:<sp/><sp/>xfli@whrsm.ac.cn</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/>*<sp/>Created<sp/>on<sp/>June<sp/>24,<sp/>2020<sp/><sp/>*</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/><sp/>*<sp/>Description<sp/>of<sp/>this<sp/>file:</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/><sp/>*<sp/>The<sp/>mian<sp/>functions<sp/>used<sp/>in<sp/>OpenFDEM</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_OPENFDEM_COMMON_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_OPENFDEM_COMMON_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>c/c++<sp/>includes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;signal.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//local<sp/>includes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="openfdem__message_8h" kindref="compound">openfdem_message.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="openfdem__enum_8h" kindref="compound">openfdem_enum.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="openfdem__struct_8h" kindref="compound">openfdem_struct.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="openfdem__commom_8h_1ace5d16511ddcfcce938c2a0e577eaa27" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FileNull<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((FILE*)NULL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="openfdem__commom_8h_1a6eb0a185bcaad3f0aca1180139d65615" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Char2DNull<sp/><sp/><sp/><sp/><sp/><sp/>((char<sp/>**)NULL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="openfdem__commom_8h_1a7b9da6389c9fd8ae161aca291c470b5c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Double1DNull<sp/><sp/><sp/><sp/>((double*)NULL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="openfdem__commom_8h_1a33a0b45fdf98646f43688c0e276ea58c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Double2DNull<sp/><sp/><sp/><sp/>((double**)NULL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="openfdem__commom_8h_1a302a79e79b0ab226620f524e971e5bd3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Double3DNull<sp/><sp/><sp/><sp/>((double***)NULL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="openfdem__commom_8h_1ae645df46a063f9058c909eaa025a5ce4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Int1DNull<sp/><sp/><sp/><sp/><sp/><sp/><sp/>((long*)NULL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="openfdem__commom_8h_1a880e86f6ad7544fd1005362977f9554e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Int2DNull<sp/><sp/><sp/><sp/><sp/><sp/><sp/>((long**)NULL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="openfdem__commom_8h_1a10df2a33cf7a4f64536570dd71fa2388" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Edge2Length(l,x1,y1,x2,y2)<sp/>{l=sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2));}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="openfdem__commom_8h_1a1afca53d8f6cdecf198d8b56659b9e8d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>V2Darea(s,l1,l2,l3)<sp/>{s=0.5*(l1+l2+l3);s=sqrt(s*(s-l1)*(s-l2)*(s-l3));}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="openfdem__commom_8h_1af665cf923dfc77c52e48dd74d2e4b0e3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="openfdem__commom_8h_1af665cf923dfc77c52e48dd74d2e4b0e3" kindref="member">get_filename_no_path</ref>(<sp/></highlight><highlight class="comment">/*<sp/>copy<sp/>no<sp/>extension<sp/>and<sp/>path<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>return_string,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>to<sp/>copy<sp/>to<sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>input_string<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>to<sp/>copy<sp/>from<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="openfdem__commom_8h_1a2e9397c17229b54bd1c975a3113817eb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="openfdem__commom_8h_1a2e9397c17229b54bd1c975a3113817eb" kindref="member">get_path</ref>(</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>return_string,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>input_string);<sp/><sp/></highlight><highlight class="comment">/*<sp/>copy<sp/><sp/>path<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="openfdem__commom_8h_1af76155db7f59aaa192f71cb60cba22bf" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="openfdem__commom_8h_1af76155db7f59aaa192f71cb60cba22bf" kindref="member">parse_string</ref>(</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE*<sp/>InputFile,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);<sp/><sp/></highlight><highlight class="comment">/*<sp/>parse<sp/>string<sp/>with<sp/>quotoes<sp/>and<sp/>space<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="openfdem__commom_8h_1a261da189fde53df5cc9cd97f43d53385" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="openfdem__commom_8h_1a261da189fde53df5cc9cd97f43d53385" kindref="member">get_filename_no_suffix</ref>(</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>return_string,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>input_string);<sp/></highlight><highlight class="comment">/*<sp/>copy<sp/>filename<sp/>without<sp/>suffix<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="openfdem__commom_8h_1a98630ddb729d88fab94e9fee4ce88e7d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="openfdem__commom_8h_1a98630ddb729d88fab94e9fee4ce88e7d" kindref="member">get_suffix</ref>(</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>return_string,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>input_string);<sp/><sp/></highlight><highlight class="comment">/*<sp/>copy<sp/><sp/>suffix<sp/>C:/usr/files/example.fdem-&gt;fdem*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="openfdem__commom_8h_1ae99538b7a858821ae21d6ea432192455" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="openfdem__commom_8h_1ae99538b7a858821ae21d6ea432192455" kindref="member">strip_ext</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>fname);<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>copy<sp/>fdem.geo<sp/>-&gt;<sp/>fdem<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="openfdem__commom_8h_1a9fb67a9b32c39c75beeb77d6f6ecdbf0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/><ref refid="openfdem__commom_8h_1a9fb67a9b32c39c75beeb77d6f6ecdbf0" kindref="member">malloc_1D_double_array</ref>(<sp/><sp/></highlight><highlight class="comment">/*<sp/>alocate<sp/>array<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>m1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>size<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="80" refid="openfdem__commom_8h_1a8f14e1fb10db366742b22c28eb480c23" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/><ref refid="openfdem__commom_8h_1a8f14e1fb10db366742b22c28eb480c23" kindref="member">initialize_1D_double_array</ref>(<sp/><sp/></highlight><highlight class="comment">/*<sp/>alocate<sp/>array<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>m1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>size<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dini<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>initial<sp/>value<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="openfdem__commom_8h_1a775d41b3e9fccb53efa5ed050f9006a5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">**<sp/><ref refid="openfdem__commom_8h_1a775d41b3e9fccb53efa5ed050f9006a5" kindref="member">malloc_2D_double_array</ref>(<sp/><sp/></highlight><highlight class="comment">/*<sp/>alocate<sp/>array<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>m2,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>m2<sp/>1D<sp/>arrays<sp/>size<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>m1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>of<sp/>size<sp/><sp/><sp/>m1<sp/>double<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="openfdem__commom_8h_1a135d4d0bce0649a5fccdf6b70df4fc2a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">**<sp/><ref refid="openfdem__commom_8h_1a135d4d0bce0649a5fccdf6b70df4fc2a" kindref="member">initialize_2D_double_array</ref>(<sp/><sp/></highlight><highlight class="comment">/*<sp/>alocate<sp/>array<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>m2,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>m2<sp/>1D<sp/>arrays<sp/>size<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>m1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>of<sp/>size<sp/><sp/><sp/>m1<sp/>double<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dini<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>initial<sp/>value<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="openfdem__commom_8h_1a7421b6d81d94fc5929920dc4bfc7836a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">***<sp/><ref refid="openfdem__commom_8h_1a7421b6d81d94fc5929920dc4bfc7836a" kindref="member">malloc_3D_double_array</ref>(<sp/><sp/></highlight><highlight class="comment">/*<sp/>alocate<sp/>array<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>m3,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>m3<sp/>2D<sp/>arrays<sp/>size<sp/>m2*m1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>m2,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>m3*m2<sp/>1D<sp/>arrays<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>m1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>of<sp/>size<sp/><sp/><sp/>m1<sp/>double<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="109" refid="openfdem__commom_8h_1a17dbcbf772a2abfab531a7b5232bbfcd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">***<sp/><ref refid="openfdem__commom_8h_1a17dbcbf772a2abfab531a7b5232bbfcd" kindref="member">initialize_3D_double_array</ref>(<sp/><sp/></highlight><highlight class="comment">/*<sp/>alocate<sp/>array<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>m3,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>m3<sp/>2D<sp/>arrays<sp/>size<sp/>m2*m1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>m2,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>m3*m2<sp/>1D<sp/>arrays<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>m1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>of<sp/>size<sp/><sp/><sp/>m1<sp/>double<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dini<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>initial<sp/>value<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="117" refid="openfdem__commom_8h_1aa0fd612d2737f61a0e4fb3ea9eac1152" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">*<sp/><ref refid="openfdem__commom_8h_1aa0fd612d2737f61a0e4fb3ea9eac1152" kindref="member">malloc_1D_int_array</ref>(<sp/><sp/></highlight><highlight class="comment">/*<sp/>alocate<sp/>array<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>m1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>size<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="122" refid="openfdem__commom_8h_1a949156108abf19843c73d35073f3b93b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">*<sp/><ref refid="openfdem__commom_8h_1a949156108abf19843c73d35073f3b93b" kindref="member">initialize_1D_int_array</ref>(<sp/><sp/></highlight><highlight class="comment">/*<sp/>alocate<sp/>array<sp/>with<sp/>initial<sp/>value<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="openfdem__struct_8h_1a91adff1610bdf681555a8f2e330dc963" kindref="member">Int</ref><sp/>m1,<sp/><ref refid="openfdem__struct_8h_1a91adff1610bdf681555a8f2e330dc963" kindref="member">Int</ref><sp/>iini<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>size<sp/>&amp;<sp/>initial<sp/>value<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="openfdem__commom_8h_1a3ea49b16ac7c8f615eae074a829494fe" refkind="member"><highlight class="normal"><ref refid="openfdem__struct_8h_1a26ff0e0ab71ea1ed8bac401c56ed2242" kindref="member">UInt</ref>*<sp/><ref refid="openfdem__commom_8h_1a3ea49b16ac7c8f615eae074a829494fe" kindref="member">initialize_1D_UInt_array</ref>(<ref refid="openfdem__struct_8h_1a26ff0e0ab71ea1ed8bac401c56ed2242" kindref="member">UInt</ref><sp/>m1,<sp/><ref refid="openfdem__struct_8h_1a26ff0e0ab71ea1ed8bac401c56ed2242" kindref="member">UInt</ref><sp/>iini);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="openfdem__commom_8h_1acb9b2b8f3672919f95a07c99e60c7fca" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">**<sp/><ref refid="openfdem__commom_8h_1acb9b2b8f3672919f95a07c99e60c7fca" kindref="member">malloc_2D_int_array</ref>(<sp/><sp/></highlight><highlight class="comment">/*<sp/>alocate<sp/>array<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>m2,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>m2<sp/>1D<sp/>arrays<sp/>size<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>m1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>of<sp/>size<sp/><sp/><sp/>m1<sp/>long<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="136" refid="openfdem__commom_8h_1aed43181f659652b1528b8d258d7ea0cf" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">**<sp/><ref refid="openfdem__commom_8h_1aed43181f659652b1528b8d258d7ea0cf" kindref="member">initialize_2D_int_array</ref>(<sp/><sp/></highlight><highlight class="comment">/*<sp/>alocate<sp/>array<sp/>with<sp/>initial<sp/>value<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>m2,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>m2<sp/>1D<sp/>arrays<sp/>size<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>m1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>of<sp/>size<sp/><sp/><sp/>m1<sp/>long<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>iini<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>initial<sp/>value<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="143" refid="openfdem__commom_8h_1a44a50ebc6e050a1160c98c980db6fa29" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="openfdem__commom_8h_1a44a50ebc6e050a1160c98c980db6fa29" kindref="member">parse_1D_double_array</ref>(<sp/><sp/></highlight><highlight class="comment">/*<sp/>read<sp/>array<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE*<sp/>fileptr,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>file<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>initial_double,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>initialise<sp/>to<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>max_size,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>size<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>actual_size,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>title</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">**<sp/>d1aray<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>array<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153" refid="openfdem__commom_8h_1aa939a2ce8f595ac5670aadd09d943f9d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="openfdem__commom_8h_1aa939a2ce8f595ac5670aadd09d943f9d" kindref="member">parse_2D_double_array</ref>(<sp/><sp/></highlight><highlight class="comment">/*<sp/>read<sp/>array<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE*<sp/>fileptr,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>file<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>initial_double,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>initialise<sp/>to<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>max_size1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>size<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>max_size2,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>size<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>read_way,</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>actual_size1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>title</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>actual_size2,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>title</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">***<sp/>d2aray<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>array<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="165" refid="openfdem__commom_8h_1a5540f08e627f982a13199cf206c20557" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="openfdem__commom_8h_1a5540f08e627f982a13199cf206c20557" kindref="member">parse_3D_double_array</ref>(<sp/><sp/></highlight><highlight class="comment">/*<sp/>read<sp/>array<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE*<sp/>fileptr,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>file<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dinit,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>initialise<sp/>to<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>n1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>size<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>n2,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>size<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>n3,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>size<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">****<sp/>d3aray<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>array<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="175" refid="openfdem__commom_8h_1a95d44e1e0c04b6ad91d43e2ef8c8ccea" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="openfdem__commom_8h_1a95d44e1e0c04b6ad91d43e2ef8c8ccea" kindref="member">parse_1D_int_array</ref>(<sp/><sp/></highlight><highlight class="comment">/*<sp/>read<sp/>array<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="comment">//<sp/>inputfile,<sp/>initial<sp/>value,<sp/>array<sp/>size,<sp/>actual<sp/>array<sp/>size,<sp/>return<sp/>array</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal">FILE*<sp/>fileptr,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>file<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>initial_int,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>initialise<sp/>to<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>max_size,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>size<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>actual_size,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>title</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">**<sp/>i1aray<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>array<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="184" refid="openfdem__commom_8h_1a3a509d6e6dc5c08180d922fb9cbb03fe" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="openfdem__commom_8h_1a3a509d6e6dc5c08180d922fb9cbb03fe" kindref="member">parse_2D_int_array</ref>(<sp/><sp/></highlight><highlight class="comment">/*<sp/>read<sp/>array<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE*<sp/>fileptr,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>file<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>initial_int,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>initialise<sp/>to<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>max_size1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>size<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>max_size2,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>size<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>read_way,</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>actual_size1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>title</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>actual_size2,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>title</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">***<sp/>i2aray<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>array<sp/>pointer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197" refid="openfdem__commom_8h_1a08956be0fb422d6ef15e2d0d20a38664" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="openfdem__commom_8h_1a08956be0fb422d6ef15e2d0d20a38664" kindref="member">get_vector_unit</ref>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>calc.<sp/>unit<sp/>vector<sp/>from<sp/>vector<sp/>r<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>e1x,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>x<sp/>member<sp/>of<sp/>unit<sp/>vector<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>e1y,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>y<sp/>member<sp/>of<sp/>unit<sp/>vector<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>rx,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>x<sp/>member<sp/>of<sp/>vector<sp/>r<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ry<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>y<sp/>member<sp/>of<sp/>vector<sp/>r<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206" refid="openfdem__commom_8h_1a41bdfd2cdd985bb1accdb397d85623c0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="openfdem__commom_8h_1a41bdfd2cdd985bb1accdb397d85623c0" kindref="member">get_vector_rotated</ref>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>rotate<sp/>by<sp/>-90<sp/>degrees<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>e1x,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>x<sp/>member<sp/>of<sp/>rotated<sp/>unit<sp/>vector<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>e1y,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>y<sp/>member<sp/>of<sp/>rotated<sp/>unit<sp/>vector<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>e2x,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>x<sp/>member<sp/>of<sp/>unit<sp/>vector<sp/>to<sp/>rotate*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>e2y<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>y<sp/>member<sp/>of<sp/>unit<sp/>vector<sp/>to<sp/>rotate*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215" refid="openfdem__commom_8h_1af173a450ad4cc4ab481cdd7baa9359eb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="openfdem__commom_8h_1af173a450ad4cc4ab481cdd7baa9359eb" kindref="member">get_vector_global_to_local</ref>(<sp/><sp/></highlight><highlight class="comment">/*<sp/>transform<sp/>node<sp/>to<sp/>local<sp/>coord.<sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>u,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>1st<sp/>local<sp/>coordinate<sp/>(=&gt;x)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>v,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>2nd<sp/>local<sp/>coordinate<sp/>(=&gt;y)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>rx,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>x<sp/>coord.<sp/>of<sp/>the<sp/>node<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ry,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>y<sp/>coord.<sp/>of<sp/>the<sp/>node<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>e1x,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>x<sp/>member<sp/>of<sp/>1st<sp/>unit<sp/>vector<sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>e1y,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>y<sp/>member<sp/>of<sp/>1st<sp/>unit<sp/>vector<sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>e2x,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>x<sp/>member<sp/>of<sp/>2nd<sp/>unit<sp/>vector<sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>e2y<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>y<sp/>member<sp/>of<sp/>2nd<sp/>unit<sp/>vector<sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226" refid="openfdem__commom_8h_1a51b7a5723a0ddff629684fd44c348522" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="openfdem__commom_8h_1a51b7a5723a0ddff629684fd44c348522" kindref="member">openfdem_run_usr_break</ref>(</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dctime,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>ncstep,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>mcstep</highlight></codeline>
+<codeline lineno="228"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230" refid="openfdem__commom_8h_1af7f1202c194c5b481913c1462d0d78e5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="openfdem__commom_8h_1af7f1202c194c5b481913c1462d0d78e5" kindref="member">get_line_current_position</ref>(</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE*<sp/>fileptr</highlight></codeline>
+<codeline lineno="232"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234" refid="openfdem__commom_8h_1afa541b0a975a6787ce700def1480026c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="openfdem__commom_8h_1afa541b0a975a6787ce700def1480026c" kindref="member">create_result_store_folder</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>Result_store_folder);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236" refid="openfdem__commom_8h_1ab96946f187e9d673ae894f7d5de3f34f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="openfdem__commom_8h_1ab96946f187e9d673ae894f7d5de3f34f" kindref="member">NULL_vector</ref>(<ref refid="structof__vector" kindref="compound">of_vector</ref>*<sp/>d1aray);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238" refid="openfdem__commom_8h_1a40c0b3bf8e49a1f4384b6e09fa394f68" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="openfdem__commom_8h_1a40c0b3bf8e49a1f4384b6e09fa394f68" kindref="member">parse_vector</ref>(FILE*<sp/>fileptr,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dinit,<sp/><ref refid="structof__vector" kindref="compound">of_vector</ref>*<sp/>d1aray);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240" refid="openfdem__commom_8h_1aad351edf42fca5614e7ad3a7b9152910" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="openfdem__commom_8h_1aad351edf42fca5614e7ad3a7b9152910" kindref="member">parse_1D_vector</ref>(FILE*<sp/>fileptr,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dinit,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>max_size,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>actual_size,<sp/><ref refid="structof__vector" kindref="compound">of_vector</ref>**<sp/>d1aray);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242" refid="openfdem__commom_8h_1a947d1a55deeab18a67ecfd434e44f387" refkind="member"><highlight class="normal"><ref refid="structof__tensor" kindref="compound">of_tensor</ref>*<sp/><ref refid="openfdem__commom_8h_1a947d1a55deeab18a67ecfd434e44f387" kindref="member">initialize_1D_tensor</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>double_ini);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244" refid="openfdem__commom_8h_1a209a0c132db108f6d825d6cd9909480e" refkind="member"><highlight class="normal"><ref refid="structof__tensor" kindref="compound">of_tensor</ref>*<sp/><ref refid="openfdem__commom_8h_1a209a0c132db108f6d825d6cd9909480e" kindref="member">parse_1D_tensor</ref>(FILE*<sp/>fileptr,<sp/><ref refid="openfdem__struct_8h_1a26ff0e0ab71ea1ed8bac401c56ed2242" kindref="member">UInt</ref><sp/>size,<sp/><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref><sp/>double_ini);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246" refid="openfdem__commom_8h_1a2c972d77af801a1f8cea61f684c7b515" refkind="member"><highlight class="normal"><ref refid="openfdem__struct_8h_1a26ff0e0ab71ea1ed8bac401c56ed2242" kindref="member">UInt</ref>*<sp/><ref refid="openfdem__commom_8h_1a2c972d77af801a1f8cea61f684c7b515" kindref="member">realloc_UInt_array</ref>(<ref refid="openfdem__struct_8h_1a26ff0e0ab71ea1ed8bac401c56ed2242" kindref="member">UInt</ref>*<sp/>array,<sp/><ref refid="openfdem__struct_8h_1a26ff0e0ab71ea1ed8bac401c56ed2242" kindref="member">UInt</ref><sp/>size);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248" refid="openfdem__commom_8h_1a7b41dba21c77adeae6dd90f7cc038066" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/><ref refid="openfdem__commom_8h_1a7b41dba21c77adeae6dd90f7cc038066" kindref="member">realloc_Int_array</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>array,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>!_OPENFDEM_COMMON_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="openfdem_commom.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,19 @@
+digraph "mat_element_t"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="mat_element_t",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mat" ];
+  Node2 [label="any_mat_type",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$unionany__mat__type.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elastic" ];
+  Node3 [label="solid_elastic_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsolid__elastic__t.html",tooltip=" "];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" transverse" ];
+  Node4 [label="solid_transverse_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsolid__transverse__t.html",tooltip=" "];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" rigid" ];
+  Node5 [label="solid_rigid_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsolid__rigid__t.html",tooltip=" "];
+  Node6 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" soften" ];
+  Node6 [label="solid_soften_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsolid__soften__t.html",tooltip=" "];
+  Node7 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" MC" ];
+  Node7 [label="solid_MC_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsolid___m_c__t.html",tooltip=" "];
+}

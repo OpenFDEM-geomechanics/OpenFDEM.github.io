@@ -1,0 +1,315 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Tutorial 3: Pressure Method &mdash; OpenFDEM Solver 0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="general commands" href="command_line_guide.html" />
+    <link rel="prev" title="Tutorial 2: In Situ Stress Tutorial" href="tutorial2_insitu.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> OpenFDEM Solver
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst_about_project/intro.html">Features and About OpenFDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst_about_project/requirements.html">System Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst_about_project/started.html">Quick Start for Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst_about_project/copyrights.html">Copyright</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tutorial1_ucs.html">Tutorial 1: UCS model from Gmsh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial2_insitu.html">Tutorial 2: In Situ Stress Tutorial</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorial 3: Pressure Method</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#full-tutorial-script">Full Tutorial Script</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">User Guide:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="command_line_guide.html">general commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_guide.html#config">config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_guide.html#geometry">geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_guide.html#mesh-insert">mesh_insert</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_guide.html#nodal">nodal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_guide.html#element">element</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_guide.html#contact">contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_guide.html#cohelement">cohelement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_guide.html#group">group</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_guide.html#boundary">boundary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_guide.html#material">material</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_guide.html#gbm">gbm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_guide.html#history">history</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_guide.html#dfn">dfn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_guide.html#table">table</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_guide.html#damping">damping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_guide.html#id5">hydro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_guide.html#gravity">gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_guide.html#seismic">seismic</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst_developer/developer.html">Common class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst_developer/developer.html#geometry-class">Geometry class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst_developer/developer.html#solid-class">Solid class</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Appendix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst_developer/appendix.html">Index</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">OpenFDEM Solver</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Tutorial 3: Pressure Method</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/rst_tutorials/tutorial3_pressure.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tutorial-3-pressure-method">
+<h1>Tutorial 3: Pressure Method<a class="headerlink" href="#tutorial-3-pressure-method" title="Permalink to this headline">¶</a></h1>
+<p><strong>Runtime</strong>: ~2 hours on i9 8-core Windows 10 Machine</p>
+<div class="section" id="full-tutorial-script">
+<h2>Full Tutorial Script<a class="headerlink" href="#full-tutorial-script" title="Permalink to this headline">¶</a></h2>
+<p>To run the model, save your text file with the <cite>.of</cite> extension. Rebuild the openfdem solution and drag your
+<cite>.of</cite> file into the <cite>OpenFDEM.exe</cite>. It will automatically run and save the outputs.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># clear old memories, be optional</span>
+<span class="n">of</span><span class="o">.</span><span class="n">new</span>
+
+<span class="c1"># Create a retangular block, group tag is rock, the range is xmin =0, xmax =1, ymin=0,ymax= 1</span>
+<span class="n">of</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">square</span> <span class="s1">&#39;rock&#39;</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">1</span>
+<span class="c1"># Create a hole in the block, cut is to fragment the block and seprate the rock block to hole block and </span>
+<span class="c1"># new rock block (out of the hole block)</span>
+<span class="n">of</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">cut</span><span class="o">.</span><span class="n">circle</span> <span class="s1">&#39;hole&#39;</span> <span class="s1">&#39;rock&#39;</span> <span class="mf">0.5</span> <span class="mf">0.5</span> <span class="mf">0.1</span> <span class="mi">70</span>
+<span class="c1"># assign global mesh size, the default keyword is for global entities</span>
+<span class="n">of</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">size</span> <span class="s1">&#39;all&#39;</span> <span class="mf">0.02</span>
+<span class="c1"># starts to mesh, delaunay is optional, it is the default value</span>
+<span class="n">of</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">mesh</span> <span class="n">delaunay</span>
+
+<span class="c1">#insert cohesive elements, globally</span>
+<span class="n">of</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">insert</span> <span class="s1">&#39;all&#39;</span>
+
+<span class="c1"># assign  material parameters to solid elements based on the element groups</span>
+<span class="n">of</span><span class="o">.</span><span class="n">mat</span><span class="o">.</span><span class="n">element</span> <span class="s1">&#39;all&#39;</span> <span class="n">elastic</span> <span class="n">den</span> <span class="mi">2000</span> <span class="n">E</span> <span class="mf">30e9</span> <span class="n">v</span> <span class="mf">0.3</span> <span class="n">damp</span> <span class="mf">0.9</span>
+<span class="n">of</span><span class="o">.</span><span class="n">mat</span><span class="o">.</span><span class="n">cohesive</span> <span class="s1">&#39;all&#39;</span> <span class="n">EM</span> <span class="n">ten</span> <span class="mf">10e6</span> <span class="n">coh</span> <span class="mf">20e6</span> <span class="n">fric</span> <span class="mf">0.3</span> <span class="n">GI</span> <span class="mi">20</span> <span class="n">GII</span> <span class="mi">40</span> 
+<span class="n">of</span><span class="o">.</span><span class="n">mat</span><span class="o">.</span><span class="n">contact</span> <span class="s1">&#39;all&#39;</span> <span class="n">MC</span> <span class="n">fric</span> <span class="mf">0.3</span>
+
+<span class="c1">#create excavation element group using cricle tool, based on the centric point and radius</span>
+<span class="n">of</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">element</span><span class="o">.</span><span class="n">circle</span> <span class="s1">&#39;excavation&#39;</span> <span class="mf">0.5</span> <span class="mf">0.5</span> <span class="mf">0.1</span>
+<span class="c1">#create bottom_edge nodal group using plane tool, based on the start point coord and end point coord</span>
+<span class="n">of</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">nodal</span><span class="o">.</span><span class="n">plane</span> <span class="s1">&#39;bottom_edge&#39;</span> <span class="mf">0.0</span> <span class="mf">0.0</span> <span class="mf">1.0</span> <span class="mf">0.0</span>
+<span class="c1">#create up_edge nodal group using plane tool, based on the start point coord and end point coord</span>
+<span class="n">of</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">nodal</span><span class="o">.</span><span class="n">plane</span> <span class="s1">&#39;up_edge&#39;</span> <span class="mf">0.0</span> <span class="mf">1.0</span> <span class="mf">1.0</span> <span class="mf">1.0</span>
+<span class="c1">#create left_edge nodal group using plane tool, based on the start point coord and end point coord</span>
+<span class="n">of</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">nodal</span><span class="o">.</span><span class="n">plane</span> <span class="s1">&#39;left_edge&#39;</span> <span class="mf">0.0</span> <span class="mf">0.0</span> <span class="mf">0.0</span> <span class="mf">1.0</span>
+<span class="c1">#create right_edge nodal group using plane tool, based on the start point coord and end point coord</span>
+<span class="n">of</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">nodal</span><span class="o">.</span><span class="n">plane</span> <span class="s1">&#39;right_edge&#39;</span> <span class="mf">1.0</span> <span class="mf">0.0</span> <span class="mf">1.0</span> <span class="mf">1.0</span>
+
+<span class="c1"># set interval to write paraview field results</span>
+<span class="n">of</span><span class="o">.</span><span class="n">history</span><span class="o">.</span><span class="n">pv</span><span class="o">.</span><span class="n">interval</span> <span class="mi">500</span>
+<span class="n">of</span><span class="o">.</span><span class="n">history</span><span class="o">.</span><span class="n">pv</span><span class="o">.</span><span class="n">field</span> <span class="nb">all</span>
+<span class="n">of</span><span class="o">.</span><span class="n">history</span><span class="o">.</span><span class="n">pv</span><span class="o">.</span><span class="n">fracture</span> <span class="nb">all</span>
+<span class="n">of</span><span class="o">.</span><span class="n">history</span><span class="o">.</span><span class="n">pv</span><span class="o">.</span><span class="n">cohesive</span> <span class="nb">all</span>
+
+<span class="c1"># assign pressure boundary on edges, comprssion is postive</span>
+<span class="n">of</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">pressure</span><span class="o">.</span><span class="n">normal</span> <span class="s1">&#39;bottom_edge&#39;</span> <span class="mf">15e6</span>
+<span class="n">of</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">pressure</span><span class="o">.</span><span class="n">normal</span> <span class="s1">&#39;up_edge&#39;</span> <span class="mf">15e6</span>
+<span class="n">of</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">pressure</span><span class="o">.</span><span class="n">normal</span> <span class="s1">&#39;left_edge&#39;</span> <span class="mf">5e6</span>
+<span class="n">of</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">pressure</span><span class="o">.</span><span class="n">normal</span> <span class="s1">&#39;right_edge&#39;</span> <span class="mf">5e6</span>
+
+<span class="c1"># total run steps to equlibrium the insitu stress</span>
+<span class="n">of</span><span class="o">.</span><span class="n">step</span> <span class="mi">100000</span>
+
+<span class="c1"># excavted the hole</span>
+<span class="n">of</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">excavation</span> <span class="s1">&#39;excavation&#39;</span>
+<span class="c1"># run steps to compute the tunnel deformation</span>
+<span class="n">of</span><span class="o">.</span><span class="n">step</span> <span class="mi">500000</span>
+<span class="c1"># terminate the run and step out solver</span>
+<span class="n">of</span><span class="o">.</span><span class="n">stop</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="command_line_guide.html" class="btn btn-neutral float-right" title="general commands" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="tutorial2_insitu.html" class="btn btn-neutral float-left" title="Tutorial 2: In Situ Stress Tutorial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, Grasselli&#39;s Geomechanics Group.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

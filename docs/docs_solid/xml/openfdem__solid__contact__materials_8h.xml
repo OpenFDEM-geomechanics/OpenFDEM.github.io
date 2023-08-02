@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="openfdem__solid__contact__materials_8h" kind="file" language="C++">
+    <compoundname>openfdem_solid_contact_materials.h</compoundname>
+    <includedby refid="openfdem__mat_8h" local="yes">/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/openfdem_mat.h</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/openfdem_mat.h</label>
+        <link refid="openfdem__mat_8h"/>
+      </node>
+      <node id="1">
+        <label>/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat_contact/openfdem_solid_contact_materials.h</label>
+        <link refid="openfdem__solid__contact__materials_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structsolidcon___m_c__t" prot="public">solidcon_MC_t</innerclass>
+    <innerclass refid="structsolidcon__dynamic___m_c__t" prot="public">solidcon_dynamic_MC_t</innerclass>
+    <innerclass refid="unionany__conmat__type" prot="public">any_conmat_type</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>OpenFDEM<sp/>-<sp/>Open<sp/>Access<sp/>Finite<sp/>Discrete<sp/>Element<sp/>Method.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>2019<sp/>to<sp/>2021<sp/>by<sp/>Wuhan<sp/>Institute<sp/>of<sp/>Rock<sp/>and<sp/>Soil<sp/>Mechanics.<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>Free<sp/>for<sp/>educational,<sp/>research<sp/>and<sp/>non-profit<sp/>purposes.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Refer<sp/>to<sp/>the<sp/>license<sp/>file<sp/>for<sp/>details.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/>*<sp/>File:<sp/><sp/><sp/>openfdem_solid_materials.h</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/>*<sp/>Author:<sp/>Xiaofeng<sp/>Li</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/>*<sp/>Email:<sp/><sp/>xfli@whrsm.ac.cn</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/>*<sp/>Created<sp/>on<sp/>June<sp/>21,<sp/>2020<sp/><sp/>*</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/><sp/>*<sp/>Description<sp/>of<sp/>this<sp/>file:</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/><sp/>*<sp/>Matrix<sp/>elements<sp/>structures<sp/>definition</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_OPENFDEM_SOLID_CONTACT_MATERIALS_ALL_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_OPENFDEM_SOLID_CONTACT_MATERIALS_ALL_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="structsolidcon___m_c__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31" refid="structsolidcon___m_c__t_1a87632afe13128ce6163d016ae441eb29" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Real<sp/><ref refid="structsolidcon___m_c__t_1a87632afe13128ce6163d016ae441eb29" kindref="member">fri</ref>;</highlight></codeline>
+<codeline lineno="32" refid="structsolidcon___m_c__t_1a2bd23696c07680220a1506e697dc1256" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Real<sp/><ref refid="structsolidcon___m_c__t_1a2bd23696c07680220a1506e697dc1256" kindref="member">kn</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Unit:<sp/>Pa<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="structsolidcon___m_c__t_1ab43a2e63660bfc6b2dbfce51e0f2db78" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Real<sp/><ref refid="structsolidcon___m_c__t_1ab43a2e63660bfc6b2dbfce51e0f2db78" kindref="member">ks</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Unit:<sp/>Pa.m^-1*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}<sp/><ref refid="structsolidcon___m_c__t" kindref="compound">solidcon_MC_t</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="structsolidcon__dynamic___m_c__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="37" refid="structsolidcon__dynamic___m_c__t_1a2bd23696c07680220a1506e697dc1256" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Real<sp/><ref refid="structsolidcon__dynamic___m_c__t_1a2bd23696c07680220a1506e697dc1256" kindref="member">kn</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Unit:<sp/>Pa<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="structsolidcon__dynamic___m_c__t_1ab43a2e63660bfc6b2dbfce51e0f2db78" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Real<sp/><ref refid="structsolidcon__dynamic___m_c__t_1ab43a2e63660bfc6b2dbfce51e0f2db78" kindref="member">ks</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Unit:<sp/>Pa.m^-1*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="structsolidcon__dynamic___m_c__t_1a7b74ac8e9f0b9155db09e31cf45ed553" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Real<sp/><ref refid="structsolidcon__dynamic___m_c__t_1a7b74ac8e9f0b9155db09e31cf45ed553" kindref="member">static_fri</ref>;</highlight></codeline>
+<codeline lineno="40" refid="structsolidcon__dynamic___m_c__t_1a8688e845284ec39e794ad3e3d5d8bc4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Real<sp/><ref refid="structsolidcon__dynamic___m_c__t_1a8688e845284ec39e794ad3e3d5d8bc4d" kindref="member">residual_fri</ref>;</highlight></codeline>
+<codeline lineno="41" refid="structsolidcon__dynamic___m_c__t_1ad6729f8c347b1b09a271069b115ab7d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Real<sp/><ref refid="structsolidcon__dynamic___m_c__t_1ad6729f8c347b1b09a271069b115ab7d5" kindref="member">slip_rate</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}<sp/><ref refid="structsolidcon__dynamic___m_c__t" kindref="compound">solidcon_dynamic_MC_t</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="unionany__conmat__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45" refid="unionany__conmat__type_1a46ff468723bafdbe65233331e4bf5fe5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsolidcon___m_c__t" kindref="compound">solidcon_MC_t</ref><sp/><ref refid="unionany__conmat__type_1a46ff468723bafdbe65233331e4bf5fe5" kindref="member">MC</ref>;</highlight></codeline>
+<codeline lineno="46" refid="unionany__conmat__type_1a4e5f5e8d2b4e2d02fce010e00e0fc352" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsolidcon__dynamic___m_c__t" kindref="compound">solidcon_dynamic_MC_t</ref><sp/><ref refid="unionany__conmat__type_1a4e5f5e8d2b4e2d02fce010e00e0fc352" kindref="member">D_MC</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}<sp/><ref refid="unionany__conmat__type" kindref="compound">any_conmat_type</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>!_OPENFDEM_SOLID_CONTACT_MATERIALS_ALL_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat_contact/openfdem_solid_contact_materials.h"/>
+  </compounddef>
+</doxygen>

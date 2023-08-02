@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="unionany__mat__type" kind="union" language="C++" prot="public">
+    <compoundname>any_mat_type</compoundname>
+    <includes refid="openfdem__solid__materials_8h" local="no">openfdem_solid_materials.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="unionany__mat__type_1a3e9d2489a661ef5fe97aa56c27708415" prot="public" static="no" mutable="no">
+        <type><ref refid="structsolid__elastic__t" kindref="compound">solid_elastic_t</ref></type>
+        <definition>solid_elastic_t elastic</definition>
+        <argsstring></argsstring>
+        <name>elastic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" line="74" column="17" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionany__mat__type_1ad75543d390c29e156fc376f13f2632e0" prot="public" static="no" mutable="no">
+        <type><ref refid="structsolid__soften__t" kindref="compound">solid_soften_t</ref></type>
+        <definition>solid_soften_t soften</definition>
+        <argsstring></argsstring>
+        <name>soften</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" line="75" column="16" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionany__mat__type_1a91999daf3c4591bf3eee460d8526ed15" prot="public" static="no" mutable="no">
+        <type><ref refid="structsolid__rigid__t" kindref="compound">solid_rigid_t</ref></type>
+        <definition>solid_rigid_t rigid</definition>
+        <argsstring></argsstring>
+        <name>rigid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" line="76" column="15" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionany__mat__type_1a9c2c9b883d2dcaf1f338eb3fbc7ff870" prot="public" static="no" mutable="no">
+        <type><ref refid="structsolid__transverse__t" kindref="compound">solid_transverse_t</ref></type>
+        <definition>solid_transverse_t transverse</definition>
+        <argsstring></argsstring>
+        <name>transverse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" line="77" column="20" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionany__mat__type_1ac5cf33c7e49efa0a734ad8dd3c7d94ce" prot="public" static="no" mutable="no">
+        <type><ref refid="structsolid___m_c__t" kindref="compound">solid_MC_t</ref></type>
+        <definition>solid_MC_t MC</definition>
+        <argsstring></argsstring>
+        <name>MC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" line="78" column="12" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>any_mat_type</label>
+        <link refid="unionany__mat__type"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>elastic</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>soften</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>rigid</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>transverse</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>MC</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>solid_MC_t</label>
+        <link refid="structsolid___m_c__t"/>
+      </node>
+      <node id="2">
+        <label>solid_elastic_t</label>
+        <link refid="structsolid__elastic__t"/>
+      </node>
+      <node id="4">
+        <label>solid_rigid_t</label>
+        <link refid="structsolid__rigid__t"/>
+      </node>
+      <node id="3">
+        <label>solid_soften_t</label>
+        <link refid="structsolid__soften__t"/>
+      </node>
+      <node id="5">
+        <label>solid_transverse_t</label>
+        <link refid="structsolid__transverse__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" line="73" column="1" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" bodystart="73" bodyend="79"/>
+    <listofallmembers>
+      <member refid="unionany__mat__type_1a3e9d2489a661ef5fe97aa56c27708415" prot="public" virt="non-virtual"><scope>any_mat_type</scope><name>elastic</name></member>
+      <member refid="unionany__mat__type_1ac5cf33c7e49efa0a734ad8dd3c7d94ce" prot="public" virt="non-virtual"><scope>any_mat_type</scope><name>MC</name></member>
+      <member refid="unionany__mat__type_1a91999daf3c4591bf3eee460d8526ed15" prot="public" virt="non-virtual"><scope>any_mat_type</scope><name>rigid</name></member>
+      <member refid="unionany__mat__type_1ad75543d390c29e156fc376f13f2632e0" prot="public" virt="non-virtual"><scope>any_mat_type</scope><name>soften</name></member>
+      <member refid="unionany__mat__type_1a9c2c9b883d2dcaf1f338eb3fbc7ff870" prot="public" virt="non-virtual"><scope>any_mat_type</scope><name>transverse</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

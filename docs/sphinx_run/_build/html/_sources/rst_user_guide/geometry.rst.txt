@@ -1,0 +1,34 @@
+Geometry
+===============================
+
+.. toctree::
+   :maxdepth: 1
+
+   Geometry/of.geometry.square
+   Geometry/of.geometry.cut.square
+   Geometry/of.geometry.remove.square
+   Geometry/of.geometry.circle
+   Geometry/of.geometry.cut.circle
+   Geometry/of.geometry.remove.circle
+   Geometry/of.geometry.ellipse
+   Geometry/of.geometry.cut.ellipse
+   Geometry/of.geometry.remove.ellipse
+   Geometry/of.geometry.polygon
+   Geometry/of.geometry.cut.polygon
+   Geometry/of.geometry.remove.polygon
+   Geometry/of.geometry.table
+   Geometry/of.geometry.cut.table
+   Geometry/of.geometry.remove.table
+   Geometry/of.geometry.domain
+   Geometry/of.geometry.cut.joint
+   Geometry/of.geometry.cut.jset
+   Geometry/of.geometry.cut.DFN
+   Geometry/of.geometry.cut.arc
+   Geometry/of.geometry.minsize
+   Geometry/of.geometry.minangle
+   Geometry/of.geometry.iteration
+   Geometry/of.geometry.group
+   Geometry/of.geometry.mesh.size
+   Geometry/of.geometry.recombine
+   Geometry/of.geometry.mesh
+   Geometry/of.geometry.mesh.write

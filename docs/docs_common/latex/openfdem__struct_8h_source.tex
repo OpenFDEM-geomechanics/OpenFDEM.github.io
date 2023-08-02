@@ -1,0 +1,75 @@
+\hypertarget{openfdem__struct_8h_source}{}\doxysection{openfdem\+\_\+struct.\+h}
+\label{openfdem__struct_8h_source}\index{E:/openfdem\_solver/openfdem src/src/common/openfdem\_struct.h@{E:/openfdem\_solver/openfdem src/src/common/openfdem\_struct.h}}
+\mbox{\hyperlink{openfdem__struct_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ * OpenFDEM -\/ Open Access Finite Discrete Element Method.}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ * Copyright (C) 2019 to 2021 by Wuhan Institute of Rock and Soil Mechanics. All Rights Reserved.}}
+\DoxyCodeLine{5 \textcolor{comment}{ *}}
+\DoxyCodeLine{6 \textcolor{comment}{ *}}
+\DoxyCodeLine{7 \textcolor{comment}{ *}}
+\DoxyCodeLine{8 \textcolor{comment}{ * Free for educational, research and non-\/profit purposes.}}
+\DoxyCodeLine{9 \textcolor{comment}{ * Refer to the license file for details.}}
+\DoxyCodeLine{10 \textcolor{comment}{ */}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12  \textcolor{comment}{/*}}
+\DoxyCodeLine{13 \textcolor{comment}{  * File:   openfdem\_struct.h}}
+\DoxyCodeLine{14 \textcolor{comment}{  * Author: Xiaofeng Li}}
+\DoxyCodeLine{15 \textcolor{comment}{  * Email:  xfli@whrsm.ac.cn}}
+\DoxyCodeLine{16 \textcolor{comment}{  *}}
+\DoxyCodeLine{17 \textcolor{comment}{  * Created on June 21, 2020  *}}
+\DoxyCodeLine{18 \textcolor{comment}{  *}}
+\DoxyCodeLine{19 \textcolor{comment}{  */}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21   \textcolor{comment}{/*}}
+\DoxyCodeLine{22 \textcolor{comment}{   * Description of this file:}}
+\DoxyCodeLine{23 \textcolor{comment}{   * The local structures definied}}
+\DoxyCodeLine{24 \textcolor{comment}{   *}}
+\DoxyCodeLine{25 \textcolor{comment}{   */}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#ifndef \_OPENFDEM\_LOCAL\_STRUCT\_}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#define \_OPENFDEM\_LOCAL\_STRUCT\_}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#define UInt unsigned int}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#define Int long}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#define Real double}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{35 \{}
+\DoxyCodeLine{36     \mbox{\hyperlink{openfdem__struct_8h_a060b837c3b4486ee35317744156f3da2}{Real}} \mbox{\hyperlink{structof__vectorn_ad9734a44902f9ef4926e4542ca707581}{normal}};    \textcolor{comment}{// normal compoment}}
+\DoxyCodeLine{37     \mbox{\hyperlink{openfdem__struct_8h_a060b837c3b4486ee35317744156f3da2}{Real}} \mbox{\hyperlink{structof__vectorn_a310ba3fd84c68c8ddfe68def2767c8e6}{shear}};     \textcolor{comment}{// shear compoment}}
+\DoxyCodeLine{38 \} \mbox{\hyperlink{structof__vectorn}{of\_vectorn}};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{41 \{}
+\DoxyCodeLine{42     \mbox{\hyperlink{openfdem__struct_8h_a060b837c3b4486ee35317744156f3da2}{Real}} \mbox{\hyperlink{structof__vector_ac2e288ebffee7f8ca19c46021f4d38f0}{x}};    \textcolor{comment}{// x compoment}}
+\DoxyCodeLine{43     \mbox{\hyperlink{openfdem__struct_8h_a060b837c3b4486ee35317744156f3da2}{Real}} \mbox{\hyperlink{structof__vector_a18279dd4d4460f2130f7a45358c14ffa}{y}};     \textcolor{comment}{// y compoment}}
+\DoxyCodeLine{44 \} \mbox{\hyperlink{structof__vector}{of\_vector}};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{47 \{}
+\DoxyCodeLine{48     \mbox{\hyperlink{openfdem__struct_8h_a060b837c3b4486ee35317744156f3da2}{Real}} \mbox{\hyperlink{structof__tensor_a7e65ab819e0717c931d8e052b6f4976c}{xx}};   \textcolor{comment}{// xx compoment}}
+\DoxyCodeLine{49     \mbox{\hyperlink{openfdem__struct_8h_a060b837c3b4486ee35317744156f3da2}{Real}} \mbox{\hyperlink{structof__tensor_a124420f8d64e46bf72f288c1a8852601}{xy}};   \textcolor{comment}{// xy compoment}}
+\DoxyCodeLine{50     \mbox{\hyperlink{openfdem__struct_8h_a060b837c3b4486ee35317744156f3da2}{Real}} \mbox{\hyperlink{structof__tensor_a2bdf6fba07771d98b9558f145295d559}{yy}};   \textcolor{comment}{// yy compoment}}
+\DoxyCodeLine{51     \mbox{\hyperlink{openfdem__struct_8h_a060b837c3b4486ee35317744156f3da2}{Real}} \mbox{\hyperlink{structof__tensor_ac0e43764b95093f36600dcc0f92d55bd}{yx}};   \textcolor{comment}{// yx compoment}}
+\DoxyCodeLine{52     \mbox{\hyperlink{openfdem__struct_8h_a060b837c3b4486ee35317744156f3da2}{Real}} \mbox{\hyperlink{structof__tensor_a7422b6b5ccd2bd88f9db814e869550f9}{zz}};   \textcolor{comment}{// out of the plane}}
+\DoxyCodeLine{53 \} \mbox{\hyperlink{structof__tensor}{of\_tensor}};}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{56 \{}
+\DoxyCodeLine{57     \mbox{\hyperlink{openfdem__struct_8h_a060b837c3b4486ee35317744156f3da2}{Real}} \mbox{\hyperlink{structof__principal_a1e3bce6a088d2a8640b06e95d9cba0f7}{p1}};   \textcolor{comment}{// sigma\_1 compoment}}
+\DoxyCodeLine{58     \mbox{\hyperlink{openfdem__struct_8h_a060b837c3b4486ee35317744156f3da2}{Real}} \mbox{\hyperlink{structof__principal_a81752ee17228b403b4fa5dd9de99a04c}{p2}};   \textcolor{comment}{// sigma\_2 compoment}}
+\DoxyCodeLine{59     \mbox{\hyperlink{openfdem__struct_8h_a060b837c3b4486ee35317744156f3da2}{Real}} \mbox{\hyperlink{structof__principal_ab9b5dbdbf77fdf4a55796eba89a9c039}{p3}};   \textcolor{comment}{// sigma\_3 compoment}}
+\DoxyCodeLine{60 \} \mbox{\hyperlink{structof__principal}{of\_principal}};}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{63 \{}
+\DoxyCodeLine{64     \mbox{\hyperlink{openfdem__struct_8h_a060b837c3b4486ee35317744156f3da2}{Real}} \mbox{\hyperlink{structof__fracture_ad01545dd29abf5eb2e4c3e5a4f9db506}{I}};    \textcolor{comment}{// point 1}}
+\DoxyCodeLine{65     \mbox{\hyperlink{openfdem__struct_8h_a060b837c3b4486ee35317744156f3da2}{Real}} \mbox{\hyperlink{structof__fracture_a6f8d67bf7b6592ae423e87420983f098}{II}};   \textcolor{comment}{// point 2}}
+\DoxyCodeLine{66     \mbox{\hyperlink{openfdem__struct_8h_a060b837c3b4486ee35317744156f3da2}{Real}} \mbox{\hyperlink{structof__fracture_a0c84414b319058e73d8c5f2089ad1c0a}{III}};     \textcolor{comment}{// point 3}}
+\DoxyCodeLine{67 \} \mbox{\hyperlink{structof__fracture}{of\_fracture}};}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// !\_OPENFDEM\_LOCAL\_STRUCT\_}}
+
+\end{DoxyCode}

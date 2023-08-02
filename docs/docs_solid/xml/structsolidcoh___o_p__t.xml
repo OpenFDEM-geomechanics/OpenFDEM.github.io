@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="structsolidcoh___o_p__t" kind="struct" language="C++" prot="public">
+    <compoundname>solidcoh_OP_t</compoundname>
+    <includes refid="openfdem__solid__cohesive__materials_8h" local="no">openfdem_solid_cohesive_materials.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsolidcoh___o_p__t_1a2012363918f3e6b9833567dfef6c22f1" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real pn</definition>
+        <argsstring></argsstring>
+        <name>pn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat_cohesive/openfdem_solid_cohesive_materials.h" line="55" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat_cohesive/openfdem_solid_cohesive_materials.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsolidcoh___o_p__t_1aa70c5b55bd505e62c2ba18dc264b5259" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real pt</definition>
+        <argsstring></argsstring>
+        <name>pt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat_cohesive/openfdem_solid_cohesive_materials.h" line="56" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat_cohesive/openfdem_solid_cohesive_materials.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsolidcoh___o_p__t_1a4c9547f0756d1ef47036d3e7bfee1ddd" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real ten</definition>
+        <argsstring></argsstring>
+        <name>ten</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat_cohesive/openfdem_solid_cohesive_materials.h" line="57" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat_cohesive/openfdem_solid_cohesive_materials.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsolidcoh___o_p__t_1a792ea6e0cbf026edd6f77835f0fb7c8d" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real coh</definition>
+        <argsstring></argsstring>
+        <name>coh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat_cohesive/openfdem_solid_cohesive_materials.h" line="58" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat_cohesive/openfdem_solid_cohesive_materials.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsolidcoh___o_p__t_1a0458329966afb9c25d1884eae2f05ccc" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real delta_n</definition>
+        <argsstring></argsstring>
+        <name>delta_n</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat_cohesive/openfdem_solid_cohesive_materials.h" line="59" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat_cohesive/openfdem_solid_cohesive_materials.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsolidcoh___o_p__t_1af7d01a30c5b5da658ab0e2f002205146" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real delta_s</definition>
+        <argsstring></argsstring>
+        <name>delta_s</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat_cohesive/openfdem_solid_cohesive_materials.h" line="60" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat_cohesive/openfdem_solid_cohesive_materials.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat_cohesive/openfdem_solid_cohesive_materials.h" line="54" column="1" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat_cohesive/openfdem_solid_cohesive_materials.h" bodystart="54" bodyend="61"/>
+    <listofallmembers>
+      <member refid="structsolidcoh___o_p__t_1a792ea6e0cbf026edd6f77835f0fb7c8d" prot="public" virt="non-virtual"><scope>solidcoh_OP_t</scope><name>coh</name></member>
+      <member refid="structsolidcoh___o_p__t_1a0458329966afb9c25d1884eae2f05ccc" prot="public" virt="non-virtual"><scope>solidcoh_OP_t</scope><name>delta_n</name></member>
+      <member refid="structsolidcoh___o_p__t_1af7d01a30c5b5da658ab0e2f002205146" prot="public" virt="non-virtual"><scope>solidcoh_OP_t</scope><name>delta_s</name></member>
+      <member refid="structsolidcoh___o_p__t_1a2012363918f3e6b9833567dfef6c22f1" prot="public" virt="non-virtual"><scope>solidcoh_OP_t</scope><name>pn</name></member>
+      <member refid="structsolidcoh___o_p__t_1aa70c5b55bd505e62c2ba18dc264b5259" prot="public" virt="non-virtual"><scope>solidcoh_OP_t</scope><name>pt</name></member>
+      <member refid="structsolidcoh___o_p__t_1a4c9547f0756d1ef47036d3e7bfee1ddd" prot="public" virt="non-virtual"><scope>solidcoh_OP_t</scope><name>ten</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

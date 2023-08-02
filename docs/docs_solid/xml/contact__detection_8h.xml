@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="contact__detection_8h" kind="file" language="C++">
+    <compoundname>contact_detection.h</compoundname>
+    <includes local="yes">../../solve/openfdem.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>../../solve/openfdem.h</label>
+      </node>
+      <node id="1">
+        <label>/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/contact_detection.h</label>
+        <link refid="contact__detection_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="contact__detection_8h_1af62fcad85e214e8a2e0128dc7bb4f42f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Openfdem_contact_dection</definition>
+        <argsstring>(Openfdem openfdem)</argsstring>
+        <name>Openfdem_contact_dection</name>
+        <param>
+          <type>Openfdem</type>
+          <declname>openfdem</declname>
+          <briefdescription><para><itemizedlist>
+<listitem><para>contact detection ** </para>
+</listitem></itemizedlist>
+</para>
+</briefdescription>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/contact_detection.h" line="7" column="6" declfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/contact_detection.h" declline="7" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"><sp/></highlight><highlight class="comment">/*<sp/>File<sp/><sp/>Y3Dcd.c<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_OPENFDEM_CONTACT_DETECTION_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_OPENFDEM_CONTACT_DETECTION_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../solve/openfdem.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="contact__detection_8h_1af62fcad85e214e8a2e0128dc7bb4f42f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="contact__detection_8h_1af62fcad85e214e8a2e0128dc7bb4f42f" kindref="member">Openfdem_contact_dection</ref>(Openfdem<sp/>openfdem<sp/><sp/><sp/></highlight><highlight class="comment">/***<sp/><sp/>contact<sp/>detection<sp/><sp/>***/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>!_OPENFDEM_CONTACT_DETECTION_</highlight></codeline>
+    </programlisting>
+    <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/contact_detection.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src</compoundname>
+    <innerdir refid="dir_405fd32de3649961a5f009c7a3fe84df">/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/"/>
+  </compounddef>
+</doxygen>

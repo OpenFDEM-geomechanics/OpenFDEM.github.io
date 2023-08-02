@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structboudary__flow__type" kind="struct" language="C++" prot="public">
+    <compoundname>boudary_flow_type</compoundname>
+    <includes refid="openfdem__boundary_8h" local="no">openfdem_boundary.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structboudary__flow__type_1a7bb5e40c10df6a41df64bda1f4bb3e26" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* tag</definition>
+        <argsstring></argsstring>
+        <name>tag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boudary/openfdem_boundary.h" line="43" column="6" bodyfile="boudary/openfdem_boundary.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structboudary__flow__type_1ac5be957a3d6122ceb5541461a6e6bbdc" prot="public" static="no" mutable="no">
+        <type>boundary_fluid_enum</type>
+        <definition>boundary_fluid_enum type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boudary/openfdem_boundary.h" line="44" column="21" bodyfile="boudary/openfdem_boundary.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structboudary__flow__type_1abd5746c9a8c4bf217e5294c6c702559b" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boudary/openfdem_boundary.h" line="45" column="6" bodyfile="boudary/openfdem_boundary.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structboudary__flow__type_1aec9b4ef0ff6c23a6f57abee2099c7623" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real p0</definition>
+        <argsstring></argsstring>
+        <name>p0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boudary/openfdem_boundary.h" line="46" column="6" bodyfile="boudary/openfdem_boundary.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structboudary__flow__type_1ac5e729344f74cd4d439c0d21978b5e81" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real p</definition>
+        <argsstring></argsstring>
+        <name>p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boudary/openfdem_boundary.h" line="47" column="6" bodyfile="boudary/openfdem_boundary.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structboudary__flow__type_1a7ef3f46493fb58b9ba575aa63f0c7aa1" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real p_x</definition>
+        <argsstring></argsstring>
+        <name>p_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boudary/openfdem_boundary.h" line="48" column="6" bodyfile="boudary/openfdem_boundary.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structboudary__flow__type_1aa31194def25263b03ac299a628e97be7" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real p_y</definition>
+        <argsstring></argsstring>
+        <name>p_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boudary/openfdem_boundary.h" line="49" column="6" bodyfile="boudary/openfdem_boundary.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structboudary__flow__type_1adcccd0b12fd7d0ed57f8c7fb3f9cae83" prot="public" static="no" mutable="no">
+        <type>Int</type>
+        <definition>Int table</definition>
+        <argsstring></argsstring>
+        <name>table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boudary/openfdem_boundary.h" line="50" column="5" bodyfile="boudary/openfdem_boundary.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structboudary__flow__type_1ab4edaa939d5469abd0e3b312d5dcbd1c" prot="public" static="no" mutable="no">
+        <type>UInt</type>
+        <definition>UInt size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boudary/openfdem_boundary.h" line="51" column="6" bodyfile="boudary/openfdem_boundary.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structboudary__flow__type_1a7b70dfb97ab7a8a3940c84b74b4077b1" prot="public" static="no" mutable="no">
+        <type>UInt *</type>
+        <definition>UInt* node</definition>
+        <argsstring></argsstring>
+        <name>node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boudary/openfdem_boundary.h" line="52" column="6" bodyfile="boudary/openfdem_boundary.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="boudary/openfdem_boundary.h" line="42" column="1" bodyfile="boudary/openfdem_boundary.h" bodystart="42" bodyend="53"/>
+    <listofallmembers>
+      <member refid="structboudary__flow__type_1a7b70dfb97ab7a8a3940c84b74b4077b1" prot="public" virt="non-virtual"><scope>boudary_flow_type</scope><name>node</name></member>
+      <member refid="structboudary__flow__type_1ac5e729344f74cd4d439c0d21978b5e81" prot="public" virt="non-virtual"><scope>boudary_flow_type</scope><name>p</name></member>
+      <member refid="structboudary__flow__type_1aec9b4ef0ff6c23a6f57abee2099c7623" prot="public" virt="non-virtual"><scope>boudary_flow_type</scope><name>p0</name></member>
+      <member refid="structboudary__flow__type_1a7ef3f46493fb58b9ba575aa63f0c7aa1" prot="public" virt="non-virtual"><scope>boudary_flow_type</scope><name>p_x</name></member>
+      <member refid="structboudary__flow__type_1aa31194def25263b03ac299a628e97be7" prot="public" virt="non-virtual"><scope>boudary_flow_type</scope><name>p_y</name></member>
+      <member refid="structboudary__flow__type_1ab4edaa939d5469abd0e3b312d5dcbd1c" prot="public" virt="non-virtual"><scope>boudary_flow_type</scope><name>size</name></member>
+      <member refid="structboudary__flow__type_1adcccd0b12fd7d0ed57f8c7fb3f9cae83" prot="public" virt="non-virtual"><scope>boudary_flow_type</scope><name>table</name></member>
+      <member refid="structboudary__flow__type_1a7bb5e40c10df6a41df64bda1f4bb3e26" prot="public" virt="non-virtual"><scope>boudary_flow_type</scope><name>tag</name></member>
+      <member refid="structboudary__flow__type_1ac5be957a3d6122ceb5541461a6e6bbdc" prot="public" virt="non-virtual"><scope>boudary_flow_type</scope><name>type</name></member>
+      <member refid="structboudary__flow__type_1abd5746c9a8c4bf217e5294c6c702559b" prot="public" virt="non-virtual"><scope>boudary_flow_type</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

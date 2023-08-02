@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="structmat__element__t" kind="struct" language="C++" prot="public">
+    <compoundname>mat_element_t</compoundname>
+    <includes refid="openfdem__mat_8h" local="no">openfdem_mat.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmat__element__t_1a7bb5e40c10df6a41df64bda1f4bb3e26" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* tag</definition>
+        <argsstring></argsstring>
+        <name>tag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/openfdem_mat.h" line="11" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/openfdem_mat.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmat__element__t_1ab7d2c2ff27ff51d56eb332cb487653a6" prot="public" static="no" mutable="no">
+        <type>element_cons</type>
+        <definition>element_cons cons</definition>
+        <argsstring></argsstring>
+        <name>cons</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/openfdem_mat.h" line="12" column="14" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/openfdem_mat.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmat__element__t_1a0ab0303cb2396b3ad2dad522c5d893d2" prot="public" static="no" mutable="no">
+        <type><ref refid="unionany__mat__type" kindref="compound">any_mat_type</ref> *</type>
+        <definition>any_mat_type* mat</definition>
+        <argsstring></argsstring>
+        <name>mat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/openfdem_mat.h" line="13" column="14" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/openfdem_mat.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmat__element__t_1a40cb5b4cd1114f92e20d24963e7d3d88" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real damp</definition>
+        <argsstring></argsstring>
+        <name>damp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/openfdem_mat.h" line="14" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/openfdem_mat.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>any_mat_type</label>
+        <link refid="unionany__mat__type"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>elastic</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>soften</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>rigid</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>transverse</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>MC</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>mat_element_t</label>
+        <link refid="structmat__element__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>mat</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>solid_MC_t</label>
+        <link refid="structsolid___m_c__t"/>
+      </node>
+      <node id="3">
+        <label>solid_elastic_t</label>
+        <link refid="structsolid__elastic__t"/>
+      </node>
+      <node id="5">
+        <label>solid_rigid_t</label>
+        <link refid="structsolid__rigid__t"/>
+      </node>
+      <node id="4">
+        <label>solid_soften_t</label>
+        <link refid="structsolid__soften__t"/>
+      </node>
+      <node id="6">
+        <label>solid_transverse_t</label>
+        <link refid="structsolid__transverse__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/openfdem_mat.h" line="10" column="1" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/openfdem_mat.h" bodystart="10" bodyend="15"/>
+    <listofallmembers>
+      <member refid="structmat__element__t_1ab7d2c2ff27ff51d56eb332cb487653a6" prot="public" virt="non-virtual"><scope>mat_element_t</scope><name>cons</name></member>
+      <member refid="structmat__element__t_1a40cb5b4cd1114f92e20d24963e7d3d88" prot="public" virt="non-virtual"><scope>mat_element_t</scope><name>damp</name></member>
+      <member refid="structmat__element__t_1a0ab0303cb2396b3ad2dad522c5d893d2" prot="public" virt="non-virtual"><scope>mat_element_t</scope><name>mat</name></member>
+      <member refid="structmat__element__t_1a7bb5e40c10df6a41df64bda1f4bb3e26" prot="public" virt="non-virtual"><scope>mat_element_t</scope><name>tag</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,282 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="solid__mechanics_8c" kind="file" language="C++">
+    <compoundname>solid_mechanics.c</compoundname>
+    <includes refid="solid__mechanics_8h" local="yes">solid_mechanics.h</includes>
+    <includes refid="solid__mechanics__elastic__triangle_8h" local="yes">solid_mechanics/solid_mechanics_elastic_triangle.h</includes>
+    <includes refid="solid__mechanics__soften__triangle_8h" local="yes">solid_mechanics/solid_mechanics_soften_triangle.h</includes>
+    <includes refid="solid__mechanics__transverse__triangle_8h" local="yes">solid_mechanics/solid_mechanics_transverse_triangle.h</includes>
+    <includes refid="solid__mechanics__cohesive__4__node___e_m_8h" local="yes">solid_mechanics_cohesive/solid_mechanics_cohesive_4_node_EM.h</includes>
+    <includes refid="solid__mechanics__cohesive__4__node___e_m__anisotropic_8h" local="yes">solid_mechanics_cohesive/solid_mechanics_cohesive_4_node_EM_anisotropic.h</includes>
+    <includes refid="solid__mechanics__cohesive__4__node___e_m__hetero_8h" local="yes">solid_mechanics_cohesive/solid_mechanics_cohesive_4_node_EM_hetero.h</includes>
+    <includes refid="solid__mechanics__cohesive__4__node__linear_8h" local="yes">solid_mechanics_cohesive/solid_mechanics_cohesive_4_node_linear.h</includes>
+    <includes local="yes">../mesh/get_element_coord.h</includes>
+    <incdepgraph>
+      <node id="9">
+        <label>solid_mechanics_cohesive/solid_mechanics_cohesive_4_node_EM.h</label>
+        <link refid="solid__mechanics__cohesive__4__node___e_m_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>solid_mechanics_cohesive/solid_mechanics_cohesive_4_node_linear.h</label>
+        <link refid="solid__mechanics__cohesive__4__node__linear_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>../mesh/get_element_coord.h</label>
+      </node>
+      <node id="10">
+        <label>solid_mechanics_cohesive/solid_mechanics_cohesive_4_node_EM_anisotropic.h</label>
+        <link refid="solid__mechanics__cohesive__4__node___e_m__anisotropic_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>../solve/openfdem.h</label>
+      </node>
+      <node id="4">
+        <label>../common/openfdem_math.h</label>
+      </node>
+      <node id="11">
+        <label>solid_mechanics_cohesive/solid_mechanics_cohesive_4_node_EM_hetero.h</label>
+        <link refid="solid__mechanics__cohesive__4__node___e_m__hetero_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>solid_mechanics/solid_mechanics_soften_triangle.h</label>
+        <link refid="solid__mechanics__soften__triangle_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>../../solve/openfdem.h</label>
+      </node>
+      <node id="8">
+        <label>solid_mechanics/solid_mechanics_transverse_triangle.h</label>
+        <link refid="solid__mechanics__transverse__triangle_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>solid_mechanics/solid_mechanics_elastic_triangle.h</label>
+        <link refid="solid__mechanics__elastic__triangle_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>solid_mechanics.c</label>
+        <link refid="solid__mechanics_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>solid_mechanics.h</label>
+        <link refid="solid__mechanics_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="solid__mechanics_8c_1a8f1c5f4e4894d94620578b6c8270be1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Openfdem_element_force_update</definition>
+        <argsstring>(Openfdem openfdem)</argsstring>
+        <name>Openfdem_element_force_update</name>
+        <param>
+          <type>Openfdem</type>
+          <declname>openfdem</declname>
+          <briefdescription><para><itemizedlist>
+<listitem><para>nodal forces ** </para>
+</listitem></itemizedlist>
+</para>
+</briefdescription>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="solid_mechanics.c" line="12" column="6" bodyfile="solid_mechanics.c" bodystart="12" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="solid__mechanics_8c_1a6c8a90c937b3069a39cafc0eb5ac8d66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Openfdem_cohesive_force_update</definition>
+        <argsstring>(Openfdem openfdem)</argsstring>
+        <name>Openfdem_cohesive_force_update</name>
+        <param>
+          <type>Openfdem</type>
+          <declname>openfdem</declname>
+          <briefdescription><para><itemizedlist>
+<listitem><para>nodal forces ** </para>
+</listitem></itemizedlist>
+</para>
+</briefdescription>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="solid_mechanics.c" line="75" column="6" bodyfile="solid_mechanics.c" bodystart="75" bodyend="128"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>File<sp/><sp/><sp/>Openfdem_force_update.c<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="solid__mechanics_8h" kindref="compound">solid_mechanics.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="solid__mechanics__elastic__triangle_8h" kindref="compound">solid_mechanics/solid_mechanics_elastic_triangle.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="solid__mechanics__soften__triangle_8h" kindref="compound">solid_mechanics/solid_mechanics_soften_triangle.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="solid__mechanics__transverse__triangle_8h" kindref="compound">solid_mechanics/solid_mechanics_transverse_triangle.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="solid__mechanics__cohesive__4__node___e_m_8h" kindref="compound">solid_mechanics_cohesive/solid_mechanics_cohesive_4_node_EM.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="solid__mechanics__cohesive__4__node___e_m__anisotropic_8h" kindref="compound">solid_mechanics_cohesive/solid_mechanics_cohesive_4_node_EM_anisotropic.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="solid__mechanics__cohesive__4__node___e_m__hetero_8h" kindref="compound">solid_mechanics_cohesive/solid_mechanics_cohesive_4_node_EM_hetero.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="solid__mechanics__cohesive__4__node__linear_8h" kindref="compound">solid_mechanics_cohesive/solid_mechanics_cohesive_4_node_linear.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../mesh/get_element_coord.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="solid__mechanics_8c_1a8f1c5f4e4894d94620578b6c8270be1e" kindref="member">Openfdem_element_force_update</ref>(Openfdem<sp/>openfdem<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/***<sp/><sp/>nodal<sp/>forces<sp/><sp/>***/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>General<sp/>general<sp/>=<sp/>&amp;(openfdem-&gt;general);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>OPFDEM<sp/>control<sp/>database<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_element__structure" kindref="compound">Element</ref><sp/>element<sp/>=<sp/>&amp;(openfdem-&gt;element);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>OPFDEM<sp/>element<sp/>database<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_nodal__structure" kindref="compound">Nodal</ref><sp/>nodal<sp/>=<sp/>&amp;(openfdem-&gt;nodal);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>OPFDEM<sp/>node<sp/>database<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>History<sp/>history<sp/>=<sp/>&amp;(openfdem-&gt;history);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>OPFDEM<sp/>output<sp/>database<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_solid__mat__structure" kindref="compound">Solidmat</ref><sp/>solidmat<sp/>=<sp/>&amp;(openfdem-&gt;solidmat);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>OPFDEM<sp/>property<sp/>database<sp/><sp/>for<sp/>elements<sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>elementid,<sp/>nodalid;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>nodal-&gt;<ref refid="struct_nodal__structure_1ad4f201896e1805fade036eda392b460b" kindref="member">element_maximuum_unbalance_force</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>zero<sp/>nodal<sp/>forces<sp/>and<sp/>mases<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(nodalid<sp/>=<sp/>0;<sp/>nodalid<sp/>&lt;<sp/>nodal-&gt;<ref refid="struct_nodal__structure_1a04b4e941d4a6c63bc0c92d66006be96c" kindref="member">n_num</ref>;<sp/>nodalid++)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nodal-&gt;<ref refid="struct_nodal__structure_1a3ed7c5a4900781be4b94bc49fd189e45" kindref="member">node</ref>[nodalid].<ref refid="structnode__type_1a2547c7e5234ab6bc9cf895624626bb36" kindref="member">mass</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nodal-&gt;<ref refid="struct_nodal__structure_1a26f47726ca87f90b27c31e37e11c8772" kindref="member">total_force</ref>[nodalid].x<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nodal-&gt;<ref refid="struct_nodal__structure_1a26f47726ca87f90b27c31e37e11c8772" kindref="member">total_force</ref>[nodalid].y<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>update<sp/>the<sp/>element<sp/>size<sp/>and<sp/>minmum<sp/>element<sp/>size<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>get_element_min_size(nodal-&gt;<ref refid="struct_nodal__structure_1a3ed7c5a4900781be4b94bc49fd189e45" kindref="member">node</ref>,<sp/>element,<sp/>general);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(elementid<sp/>=<sp/>0;<sp/>elementid<sp/>&lt;<sp/>element-&gt;<ref refid="struct_element__structure_1a47bec07d0894339c532c714540d4087c" kindref="member">e_num</ref>;<sp/>elementid++)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(solidmat-&gt;<ref refid="struct_solid__mat__structure_1abd0efe4abcf7d9df0896b53186177ae5" kindref="member">elemat</ref>[element-&gt;<ref refid="struct_element__structure_1a6c9b10a142500847fddcc2b5fd237c13" kindref="member">ele</ref>[elementid].<ref refid="structelement__type_1abdc03d35cad4b39f082215c818e84067" kindref="member">matid</ref>].<ref refid="structmat__element__t_1ab7d2c2ff27ff51d56eb332cb487653a6" kindref="member">cons</ref>)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>ELASTIC:</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="solid__mechanics__elastic__triangle_8c_1a160dabd762f9bdd7d8237273b96af888" kindref="member">Solid_mechanics_elastic_triangle</ref>(<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>small<sp/>strain<sp/>elastic<sp/>triangle<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>element,<sp/>solidmat,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>general,<sp/>elementid,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nodal</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SOFTEN:</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="solid__mechanics__soften__triangle_8c_1ac2f2c2380f990bb4e2a175b15882b8ca" kindref="member">Solid_mechanics_soften_triangle</ref>(<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>small<sp/>strain<sp/>softening<sp/>triangle<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>element,<sp/>solidmat,<sp/>elementid,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nodal,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>element-&gt;<ref refid="struct_element__structure_1af05e719b691b8dbd13efed6b9fc3d245" kindref="member">soften_state</ref>[solidmat-&gt;<ref refid="struct_solid__mat__structure_1abd0efe4abcf7d9df0896b53186177ae5" kindref="member">elemat</ref>[element-&gt;<ref refid="struct_element__structure_1a6c9b10a142500847fddcc2b5fd237c13" kindref="member">ele</ref>[elementid].<ref refid="structelement__type_1abdc03d35cad4b39f082215c818e84067" kindref="member">matid</ref>].<ref refid="structmat__element__t_1a0ab0303cb2396b3ad2dad522c5d893d2" kindref="member">mat</ref>-&gt;<ref refid="unionany__mat__type_1ad75543d390c29e156fc376f13f2632e0" kindref="member">soften</ref>.<ref refid="structsolid__soften__t_1a5416f8f3ea61c148dd2373c9cd2ac8a0" kindref="member">damage</ref>]</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>TRANSVERSE:</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="solid__mechanics__transverse__triangle_8c_1a092d2727f55d06996a5c52aa4c74942e" kindref="member">Solid_mechanics_transverse_triangle</ref>(<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>small<sp/>strain<sp/>softening<sp/>triangle<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>element,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>solidmat,<sp/>general,<sp/>elementid,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nodal</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>obtain<sp/>the<sp/>maximuum<sp/>unbalance<sp/>force<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(nodalid<sp/>=<sp/>0;<sp/>nodalid<sp/>&lt;<sp/>nodal-&gt;<ref refid="struct_nodal__structure_1a04b4e941d4a6c63bc0c92d66006be96c" kindref="member">n_num</ref>;<sp/>nodalid++)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nodal-&gt;<ref refid="struct_nodal__structure_1ad4f201896e1805fade036eda392b460b" kindref="member">element_maximuum_unbalance_force</ref><sp/>&lt;<sp/>sqrt(nodal-&gt;<ref refid="struct_nodal__structure_1a26f47726ca87f90b27c31e37e11c8772" kindref="member">total_force</ref>[nodalid].x<sp/>*<sp/>nodal-&gt;<ref refid="struct_nodal__structure_1a26f47726ca87f90b27c31e37e11c8772" kindref="member">total_force</ref>[nodalid].x</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>nodal-&gt;<ref refid="struct_nodal__structure_1a26f47726ca87f90b27c31e37e11c8772" kindref="member">total_force</ref>[nodalid].y<sp/>*<sp/>nodal-&gt;<ref refid="struct_nodal__structure_1a26f47726ca87f90b27c31e37e11c8772" kindref="member">total_force</ref>[nodalid].y))</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nodal-&gt;<ref refid="struct_nodal__structure_1ad4f201896e1805fade036eda392b460b" kindref="member">element_maximuum_unbalance_force</ref><sp/>=<sp/>sqrt(nodal-&gt;<ref refid="struct_nodal__structure_1a26f47726ca87f90b27c31e37e11c8772" kindref="member">total_force</ref>[nodalid].x<sp/>*<sp/>nodal-&gt;<ref refid="struct_nodal__structure_1a26f47726ca87f90b27c31e37e11c8772" kindref="member">total_force</ref>[nodalid].x</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>nodal-&gt;<ref refid="struct_nodal__structure_1a26f47726ca87f90b27c31e37e11c8772" kindref="member">total_force</ref>[nodalid].y<sp/>*<sp/>nodal-&gt;<ref refid="struct_nodal__structure_1a26f47726ca87f90b27c31e37e11c8772" kindref="member">total_force</ref>[nodalid].y);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="solid__mechanics_8c_1a6c8a90c937b3069a39cafc0eb5ac8d66" kindref="member">Openfdem_cohesive_force_update</ref>(Openfdem<sp/>openfdem<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/***<sp/><sp/>nodal<sp/>forces<sp/><sp/>***/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>General<sp/>general<sp/>=<sp/>&amp;(openfdem-&gt;general);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>OPFDEM<sp/>control<sp/>database<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_element__structure" kindref="compound">Element</ref><sp/>element<sp/>=<sp/>&amp;(openfdem-&gt;element);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>OPFDEM<sp/>element<sp/>database<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_coh__element__structure" kindref="compound">Cohelement</ref><sp/>cohelement<sp/>=<sp/>&amp;(openfdem-&gt;cohelement);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_contact__structure" kindref="compound">Contact</ref><sp/>contact<sp/>=<sp/>&amp;(openfdem-&gt;contact);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>OPFDEM<sp/>interaction<sp/>database<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_nodal__structure" kindref="compound">Nodal</ref><sp/>nodal<sp/>=<sp/>&amp;(openfdem-&gt;nodal);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>OPFDEM<sp/>node<sp/>database<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>History<sp/>history<sp/>=<sp/>&amp;(openfdem-&gt;history);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>OPFDEM<sp/>output<sp/>database<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_solid__mat__structure" kindref="compound">Solidmat</ref><sp/>solidmat<sp/>=<sp/>&amp;(openfdem-&gt;solidmat);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>OPFDEM<sp/>property<sp/>database<sp/><sp/>for<sp/>elements<sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_seismic__structure" kindref="compound">Seismic</ref><sp/>seismic<sp/>=<sp/>&amp;(openfdem-&gt;seismic);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>OPFDEM<sp/>seismic<sp/>monitoring<sp/>parameters<sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cohelement_id;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>nodal-&gt;<ref refid="struct_nodal__structure_1a6921186bbb8def50da103c389e46f85c" kindref="member">cohesive_maximuum_unbalance_force</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(cohelement_id<sp/>=<sp/>0;<sp/>cohelement_id<sp/>&lt;<sp/>cohelement-&gt;<ref refid="struct_coh__element__structure_1af9606282b3f52144a66174c964f90276" kindref="member">cohe_num</ref>;<sp/>cohelement_id++)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(solidmat-&gt;<ref refid="struct_solid__mat__structure_1aa4d8920cccd2705cc2d8d8de0033b1fd" kindref="member">cohelemat</ref>[cohelement-&gt;<ref refid="struct_coh__element__structure_1a5c6b14a4ceedd3ac04927d5d6c28811c" kindref="member">cohele</ref>[cohelement_id].<ref refid="structcohelement__type_1abdc03d35cad4b39f082215c818e84067" kindref="member">matid</ref>].<ref refid="structmat__cohelement__t_1af10a9fa01cb90333299f9aedd0e4a181" kindref="member">cons</ref>)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>COH_EM:</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="solid__mechanics__cohesive__4__node___e_m_8c_1a8a874eb24c0b151d8aad6d0acd641f7b" kindref="member">Solid_mechanics_cohesive_4_node_EM</ref>(<sp/><sp/></highlight><highlight class="comment">/*<sp/>joint<sp/>element<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nodal,<sp/>cohelement_id,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>general-&gt;CurrentTime,<sp/>general-&gt;TimeStep,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cohelement,<sp/>element,<sp/>contact,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>solidmat,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>seismic,<sp/>general);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>COH_LINEAR:</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="solid__mechanics__cohesive__4__node__linear_8c_1aa793d06deadcf561dc04c60df7e67e0e" kindref="member">Solid_mechanics_cohesive_4_node_linear</ref>(<sp/><sp/></highlight><highlight class="comment">/*<sp/>joint<sp/>element<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nodal,<sp/>cohelement_id,</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>general-&gt;CurrentTime,<sp/>general-&gt;TimeStep,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cohelement,<sp/>element,</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>solidmat,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>seismic);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>COH_EM_HET:</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="solid__mechanics__cohesive__4__node___e_m__hetero_8c_1a47a07a04ac4dc9325c277ff1215ecd6a" kindref="member">solid_mechanics_cohesive_4_node_EM_hetero</ref>(<sp/><sp/></highlight><highlight class="comment">/*<sp/>joint<sp/>element<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nodal,<sp/>cohelement_id,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>general-&gt;CurrentTime,<sp/>general-&gt;TimeStep,</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cohelement,<sp/>element,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>solidmat,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>seismic);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>COH_EM_ANI:</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="solid__mechanics__cohesive__4__node___e_m__anisotropic_8c_1afc0158030a6457af812196eacb72ccfb" kindref="member">solid_mechanics_cohesive_4_node_EM_anisotropic</ref>(<sp/><sp/></highlight><highlight class="comment">/*<sp/>joint<sp/>element<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nodal,<sp/>cohelement_id,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>general-&gt;CurrentTime,<sp/>general-&gt;TimeStep,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cohelement,<sp/>element,</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>solidmat,</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>seismic);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="solid_mechanics.c"/>
+  </compounddef>
+</doxygen>

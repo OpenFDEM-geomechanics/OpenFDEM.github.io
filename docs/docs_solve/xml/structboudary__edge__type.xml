@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structboudary__edge__type" kind="struct" language="C++" prot="public">
+    <compoundname>boudary_edge_type</compoundname>
+    <includes refid="openfdem__boundary_8h" local="no">openfdem_boundary.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structboudary__edge__type_1a7bb5e40c10df6a41df64bda1f4bb3e26" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* tag</definition>
+        <argsstring></argsstring>
+        <name>tag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boudary/openfdem_boundary.h" line="18" column="6" bodyfile="boudary/openfdem_boundary.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structboudary__edge__type_1a661fe93905b3c63a88c7b9934f0ab652" prot="public" static="no" mutable="no">
+        <type>boundary_node_enum</type>
+        <definition>boundary_node_enum type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boudary/openfdem_boundary.h" line="19" column="20" bodyfile="boudary/openfdem_boundary.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structboudary__edge__type_1a606f31413d8d490335b26204d08670a6" prot="public" static="no" mutable="no">
+        <type>of_vector</type>
+        <definition>of_vector value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boudary/openfdem_boundary.h" line="20" column="11" bodyfile="boudary/openfdem_boundary.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structboudary__edge__type_1adcccd0b12fd7d0ed57f8c7fb3f9cae83" prot="public" static="no" mutable="no">
+        <type>Int</type>
+        <definition>Int table</definition>
+        <argsstring></argsstring>
+        <name>table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boudary/openfdem_boundary.h" line="21" column="5" bodyfile="boudary/openfdem_boundary.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structboudary__edge__type_1ab4edaa939d5469abd0e3b312d5dcbd1c" prot="public" static="no" mutable="no">
+        <type>UInt</type>
+        <definition>UInt size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boudary/openfdem_boundary.h" line="22" column="6" bodyfile="boudary/openfdem_boundary.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structboudary__edge__type_1ab4216aabbbc39fc332d374c1be7d6ab6" prot="public" static="no" mutable="no">
+        <type>UInt **</type>
+        <definition>UInt** edge</definition>
+        <argsstring></argsstring>
+        <name>edge</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boudary/openfdem_boundary.h" line="23" column="6" bodyfile="boudary/openfdem_boundary.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="boudary/openfdem_boundary.h" line="17" column="1" bodyfile="boudary/openfdem_boundary.h" bodystart="17" bodyend="24"/>
+    <listofallmembers>
+      <member refid="structboudary__edge__type_1ab4216aabbbc39fc332d374c1be7d6ab6" prot="public" virt="non-virtual"><scope>boudary_edge_type</scope><name>edge</name></member>
+      <member refid="structboudary__edge__type_1ab4edaa939d5469abd0e3b312d5dcbd1c" prot="public" virt="non-virtual"><scope>boudary_edge_type</scope><name>size</name></member>
+      <member refid="structboudary__edge__type_1adcccd0b12fd7d0ed57f8c7fb3f9cae83" prot="public" virt="non-virtual"><scope>boudary_edge_type</scope><name>table</name></member>
+      <member refid="structboudary__edge__type_1a7bb5e40c10df6a41df64bda1f4bb3e26" prot="public" virt="non-virtual"><scope>boudary_edge_type</scope><name>tag</name></member>
+      <member refid="structboudary__edge__type_1a661fe93905b3c63a88c7b9934f0ab652" prot="public" virt="non-virtual"><scope>boudary_edge_type</scope><name>type</name></member>
+      <member refid="structboudary__edge__type_1a606f31413d8d490335b26204d08670a6" prot="public" virt="non-virtual"><scope>boudary_edge_type</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="structgeo__line__type" kind="struct" language="C++" prot="public">
+    <compoundname>geo_line_type</compoundname>
+    <includes refid="openfdem__geometry_8h" local="no">openfdem_geometry.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgeo__line__type_1a443519726cbe3c4f2b2fe1d42ce2fd2f" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* group</definition>
+        <argsstring></argsstring>
+        <name>group</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" line="14" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgeo__line__type_1a5af46ae509897be4d3fc85b0a66a9b85" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int embed</definition>
+        <argsstring></argsstring>
+        <name>embed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" line="15" column="5" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgeo__line__type_1a249af15d8db761707a936222aa812000" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int embed_id</definition>
+        <argsstring></argsstring>
+        <name>embed_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" line="16" column="5" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgeo__line__type_1adb59b30b743ea4c3e94d6eab9a707e98" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int node_1</definition>
+        <argsstring></argsstring>
+        <name>node_1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" line="17" column="5" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgeo__line__type_1a4694cfb4f513f9569d393754d43aadca" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int node_2</definition>
+        <argsstring></argsstring>
+        <name>node_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" line="18" column="5" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" line="13" column="1" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" bodystart="13" bodyend="19"/>
+    <listofallmembers>
+      <member refid="structgeo__line__type_1a5af46ae509897be4d3fc85b0a66a9b85" prot="public" virt="non-virtual"><scope>geo_line_type</scope><name>embed</name></member>
+      <member refid="structgeo__line__type_1a249af15d8db761707a936222aa812000" prot="public" virt="non-virtual"><scope>geo_line_type</scope><name>embed_id</name></member>
+      <member refid="structgeo__line__type_1a443519726cbe3c4f2b2fe1d42ce2fd2f" prot="public" virt="non-virtual"><scope>geo_line_type</scope><name>group</name></member>
+      <member refid="structgeo__line__type_1adb59b30b743ea4c3e94d6eab9a707e98" prot="public" virt="non-virtual"><scope>geo_line_type</scope><name>node_1</name></member>
+      <member refid="structgeo__line__type_1a4694cfb4f513f9569d393754d43aadca" prot="public" virt="non-virtual"><scope>geo_line_type</scope><name>node_2</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

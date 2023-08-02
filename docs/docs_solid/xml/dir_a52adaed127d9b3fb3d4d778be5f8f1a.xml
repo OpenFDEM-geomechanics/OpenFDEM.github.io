@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="dir_a52adaed127d9b3fb3d4d778be5f8f1a" kind="dir">
+    <compoundname>/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat</compoundname>
+    <innerfile refid="openfdem__solid__materials_8h">openfdem_solid_materials.h</innerfile>
+    <innerfile refid="push__element__materials_8h">push_element_materials.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/"/>
+  </compounddef>
+</doxygen>

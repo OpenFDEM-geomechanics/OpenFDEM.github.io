@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="structsolid__soften__t" kind="struct" language="C++" prot="public">
+    <compoundname>solid_soften_t</compoundname>
+    <includes refid="openfdem__solid__materials_8h" local="no">openfdem_solid_materials.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsolid__soften__t_1a14c963d6d8380710c186c60602e1f0ca" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real E</definition>
+        <argsstring></argsstring>
+        <name>E</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" line="39" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsolid__soften__t_1a06898261af043e5ebf4d9444a4383d54" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real v</definition>
+        <argsstring></argsstring>
+        <name>v</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" line="40" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsolid__soften__t_1abef76d23cdd90539c6c86a2b2d9464c7" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real den</definition>
+        <argsstring></argsstring>
+        <name>den</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" line="41" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsolid__soften__t_1af625b8a1d8ebc4a81dd229d2274879ac" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real K</definition>
+        <argsstring></argsstring>
+        <name>K</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" line="42" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsolid__soften__t_1a2195b706c3b8de0b5adb9ccb58eeb4d4" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real G</definition>
+        <argsstring></argsstring>
+        <name>G</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" line="43" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsolid__soften__t_1afe5a1a6ffe78fb667689d3c87a679de7" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real stretch</definition>
+        <argsstring></argsstring>
+        <name>stretch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" line="44" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsolid__soften__t_1a792ea6e0cbf026edd6f77835f0fb7c8d" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real coh</definition>
+        <argsstring></argsstring>
+        <name>coh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" line="45" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsolid__soften__t_1a5416f8f3ea61c148dd2373c9cd2ac8a0" prot="public" static="no" mutable="no">
+        <type>Int</type>
+        <definition>Int damage</definition>
+        <argsstring></argsstring>
+        <name>damage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" line="46" column="5" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" line="38" column="1" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" bodystart="38" bodyend="47"/>
+    <listofallmembers>
+      <member refid="structsolid__soften__t_1a792ea6e0cbf026edd6f77835f0fb7c8d" prot="public" virt="non-virtual"><scope>solid_soften_t</scope><name>coh</name></member>
+      <member refid="structsolid__soften__t_1a5416f8f3ea61c148dd2373c9cd2ac8a0" prot="public" virt="non-virtual"><scope>solid_soften_t</scope><name>damage</name></member>
+      <member refid="structsolid__soften__t_1abef76d23cdd90539c6c86a2b2d9464c7" prot="public" virt="non-virtual"><scope>solid_soften_t</scope><name>den</name></member>
+      <member refid="structsolid__soften__t_1a14c963d6d8380710c186c60602e1f0ca" prot="public" virt="non-virtual"><scope>solid_soften_t</scope><name>E</name></member>
+      <member refid="structsolid__soften__t_1a2195b706c3b8de0b5adb9ccb58eeb4d4" prot="public" virt="non-virtual"><scope>solid_soften_t</scope><name>G</name></member>
+      <member refid="structsolid__soften__t_1af625b8a1d8ebc4a81dd229d2274879ac" prot="public" virt="non-virtual"><scope>solid_soften_t</scope><name>K</name></member>
+      <member refid="structsolid__soften__t_1afe5a1a6ffe78fb667689d3c87a679de7" prot="public" virt="non-virtual"><scope>solid_soften_t</scope><name>stretch</name></member>
+      <member refid="structsolid__soften__t_1a06898261af043e5ebf4d9444a4383d54" prot="public" virt="non-virtual"><scope>solid_soften_t</scope><name>v</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

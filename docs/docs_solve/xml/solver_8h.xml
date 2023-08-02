@@ -1,0 +1,469 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="solver_8h" kind="file" language="C++">
+    <compoundname>solver.h</compoundname>
+    <includes refid="openfdem_8h" local="yes">openfdem.h</includes>
+    <incdepgraph>
+      <node id="7">
+        <label>boudary/openfdem_boundary.h</label>
+        <link refid="openfdem__boundary_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>../solid/solid_mechanics_contact/openfdem_solid_contact.h</label>
+      </node>
+      <node id="8">
+        <label>../../common/openfdem_enum.h</label>
+      </node>
+      <node id="6">
+        <label>../solid/openfdem_nodal.h</label>
+      </node>
+      <node id="4">
+        <label>../io/dumper/openfdem_history.h</label>
+      </node>
+      <node id="1">
+        <label>solver.h</label>
+        <link refid="solver_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>../solid/solid_mechanics_cohesive/DFN/openfdem_DFN.h</label>
+      </node>
+      <node id="2">
+        <label>openfdem.h</label>
+        <link refid="openfdem_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>../../common/openfdem_commom.h</label>
+      </node>
+      <node id="10">
+        <label>../mesh/group/openfdem_group.h</label>
+      </node>
+      <node id="16">
+        <label>../solid/solid_mechanics_cohesive/sesmic/openfdem_sesmic.h</label>
+      </node>
+      <node id="12">
+        <label>../solid/solid_mechanics/openfdem_solid.h</label>
+      </node>
+      <node id="3">
+        <label>../common/openfdem_general.h</label>
+      </node>
+      <node id="13">
+        <label>../solid/solid_mechanics_cohesive/openfdem_solid_cohesive.h</label>
+      </node>
+      <node id="15">
+        <label>../solid/materials/openfdem_mat.h</label>
+      </node>
+      <node id="17">
+        <label>../geometry/openfdem_geometry.h</label>
+      </node>
+      <node id="5">
+        <label>../mesh/openfdem_mesh_insert.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="solver_8h_1a974fc828287916ee2cccf9e23105a294" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Openfdem_main_solve</definition>
+        <argsstring>(Openfdem openfdem)</argsstring>
+        <name>Openfdem_main_solve</name>
+        <param>
+          <type><ref refid="openfdem_8h_1ae9eb6c46c16ca89df8f85b6463ca7ee7" kindref="member">Openfdem</ref></type>
+          <declname>openfdem</declname>
+          <briefdescription><para><itemizedlist>
+<listitem><para>explicit solver of equations ** </para>
+</listitem></itemizedlist>
+</para>
+</briefdescription>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="solver.h" line="8" column="6" declfile="solver.h" declline="8" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="solver_8h_1af5e7df0f5f0088a2b32cf804314a36d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void boudary_edge_force</definition>
+        <argsstring>(General general, Boudary boudary, Solidmat solidmat, Element element, Nodal nodal)</argsstring>
+        <name>boudary_edge_force</name>
+        <param>
+          <type>General</type>
+          <declname>general</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__boundary_8h_1a46c9ed01abc40da05d649718dcf1f738" kindref="member">Boudary</ref></type>
+          <declname>boudary</declname>
+        </param>
+        <param>
+          <type>Solidmat</type>
+          <declname>solidmat</declname>
+        </param>
+        <param>
+          <type>Element</type>
+          <declname>element</declname>
+        </param>
+        <param>
+          <type>Nodal</type>
+          <declname>nodal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="solver.h" line="10" column="6" declfile="solver.h" declline="10" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="solver_8h_1a25675ea42d69c6ffd8cb2d2e2b28b5fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void boudary_element_insitu_force</definition>
+        <argsstring>(Boudary boudary, Element element, Nodal nodal)</argsstring>
+        <name>boudary_element_insitu_force</name>
+        <param>
+          <type><ref refid="openfdem__boundary_8h_1a46c9ed01abc40da05d649718dcf1f738" kindref="member">Boudary</ref></type>
+          <declname>boudary</declname>
+        </param>
+        <param>
+          <type>Element</type>
+          <declname>element</declname>
+        </param>
+        <param>
+          <type>Nodal</type>
+          <declname>nodal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="solver.h" line="15" column="6" declfile="solver.h" declline="15" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="solver_8h_1a16019afc65ee58f7cd4ba979156fbf53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void boudary_nodal_force</definition>
+        <argsstring>(General general, Boudary boudary, Nodal nodal)</argsstring>
+        <name>boudary_nodal_force</name>
+        <param>
+          <type>General</type>
+          <declname>general</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__boundary_8h_1a46c9ed01abc40da05d649718dcf1f738" kindref="member">Boudary</ref></type>
+          <declname>boudary</declname>
+        </param>
+        <param>
+          <type>Nodal</type>
+          <declname>nodal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="solver.h" line="18" column="6" declfile="solver.h" declline="18" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="solver_8h_1a82cfc08a541c932fdd65a2b0ccb2ce6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void boudary_body_force</definition>
+        <argsstring>(Nodal nodal, General general)</argsstring>
+        <name>boudary_body_force</name>
+        <param>
+          <type>Nodal</type>
+          <declname>nodal</declname>
+        </param>
+        <param>
+          <type>General</type>
+          <declname>general</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="solver.h" line="20" column="6" declfile="solver.h" declline="20" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="solver_8h_1a5487fb9228c9be99b3f5256f8316f40d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void boudary_nodal_velocity</definition>
+        <argsstring>(General general, Boudary boudary, Nodal nodal)</argsstring>
+        <name>boudary_nodal_velocity</name>
+        <param>
+          <type>General</type>
+          <declname>general</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__boundary_8h_1a46c9ed01abc40da05d649718dcf1f738" kindref="member">Boudary</ref></type>
+          <declname>boudary</declname>
+        </param>
+        <param>
+          <type>Nodal</type>
+          <declname>nodal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="solver.h" line="23" column="6" declfile="solver.h" declline="23" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="solver_8h_1ae52d34bd489a12d717a129a788902d6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void boudary_edge_velocity</definition>
+        <argsstring>(General general, Boudary boudary, Nodal nodal)</argsstring>
+        <name>boudary_edge_velocity</name>
+        <param>
+          <type>General</type>
+          <declname>general</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__boundary_8h_1a46c9ed01abc40da05d649718dcf1f738" kindref="member">Boudary</ref></type>
+          <declname>boudary</declname>
+        </param>
+        <param>
+          <type>Nodal</type>
+          <declname>nodal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="solver.h" line="26" column="6" declfile="solver.h" declline="26" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="solver_8h_1a483b6c8314046c4d5d80741af051ba7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void solver_get_timestep</definition>
+        <argsstring>(General general, Nodal nodal, Element element, Cohelement cohelement, Contact contact, Solidmat solidmat)</argsstring>
+        <name>solver_get_timestep</name>
+        <param>
+          <type>General</type>
+          <declname>general</declname>
+        </param>
+        <param>
+          <type>Nodal</type>
+          <declname>nodal</declname>
+        </param>
+        <param>
+          <type>Element</type>
+          <declname>element</declname>
+        </param>
+        <param>
+          <type>Cohelement</type>
+          <declname>cohelement</declname>
+        </param>
+        <param>
+          <type>Contact</type>
+          <declname>contact</declname>
+        </param>
+        <param>
+          <type>Solidmat</type>
+          <declname>solidmat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="solver.h" line="30" column="6" declfile="solver.h" declline="30" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="solver_8h_1aeadc50d540af0a72ab8d1cad9c7ace38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void solver_update_energy</definition>
+        <argsstring>(General general, Nodal nodal, Element element, Cohelement cohelement, Contact contact)</argsstring>
+        <name>solver_update_energy</name>
+        <param>
+          <type>General</type>
+          <declname>general</declname>
+        </param>
+        <param>
+          <type>Nodal</type>
+          <declname>nodal</declname>
+        </param>
+        <param>
+          <type>Element</type>
+          <declname>element</declname>
+        </param>
+        <param>
+          <type>Cohelement</type>
+          <declname>cohelement</declname>
+        </param>
+        <param>
+          <type>Contact</type>
+          <declname>contact</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="solver.h" line="33" column="6" declfile="solver.h" declline="33" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="solver_8h_1af5fc879ee27e590797b2b138f2049bd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void solver_large_deformation</definition>
+        <argsstring>(Element element, Nodal nodal, Solidmat solidmat, long propelementid, double *soften_state)</argsstring>
+        <name>solver_large_deformation</name>
+        <param>
+          <type>Element</type>
+          <declname>element</declname>
+        </param>
+        <param>
+          <type>Nodal</type>
+          <declname>nodal</declname>
+        </param>
+        <param>
+          <type>Solidmat</type>
+          <declname>solidmat</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>propelementid</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>soften_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="solver.h" line="35" column="6" declfile="solver.h" declline="35" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="solver_8h_1af4fab905f52d133e681eaf034070f253" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void solver_rigid</definition>
+        <argsstring>(Element element, double TimeStep, double PropElementDensity, long ele_mat_id, node_type *node, of_vector *NodalContactForce, of_vector *NodalCurrentVelocity)</argsstring>
+        <name>solver_rigid</name>
+        <param>
+          <type>Element</type>
+          <declname>element</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>TimeStep</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>PropElementDensity</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>ele_mat_id</declname>
+        </param>
+        <param>
+          <type>node_type *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>of_vector *</type>
+          <declname>NodalContactForce</declname>
+        </param>
+        <param>
+          <type>of_vector *</type>
+          <declname>NodalCurrentVelocity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="solver.h" line="39" column="6" declfile="solver.h" declline="39" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"><sp/></highlight><highlight class="comment">/*<sp/>File<sp/><sp/><sp/>Openfdem_main_solve.c<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_OPENFDEM_MAIN_SOLVER_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_OPENFDEM_MAIN_SOLVER_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="openfdem_8h" kindref="compound">openfdem.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="solver_8h_1a974fc828287916ee2cccf9e23105a294" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="solver_8h_1a974fc828287916ee2cccf9e23105a294" kindref="member">Openfdem_main_solve</ref>(<ref refid="struct_open_f_d_e_m__structure" kindref="compound">Openfdem</ref><sp/>openfdem<sp/><sp/><sp/></highlight><highlight class="comment">/***<sp/>explicit<sp/>solver<sp/>of<sp/>equations<sp/><sp/><sp/>***/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="10" refid="solver_8h_1af5e7df0f5f0088a2b32cf804314a36d2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="solver_8h_1af5e7df0f5f0088a2b32cf804314a36d2" kindref="member">boudary_edge_force</ref>(</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>General<sp/>general,</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_boundary__structure" kindref="compound">Boudary</ref><sp/>boudary,<sp/>Solidmat<sp/>solidmat,<sp/>Element<sp/>element,</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>Nodal<sp/>nodal);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="solver_8h_1a25675ea42d69c6ffd8cb2d2e2b28b5fb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="solver_8h_1a25675ea42d69c6ffd8cb2d2e2b28b5fb" kindref="member">boudary_element_insitu_force</ref>(</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_boundary__structure" kindref="compound">Boudary</ref><sp/>boudary,<sp/>Element<sp/>element,<sp/>Nodal<sp/>nodal);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="solver_8h_1a16019afc65ee58f7cd4ba979156fbf53" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="solver_8h_1a16019afc65ee58f7cd4ba979156fbf53" kindref="member">boudary_nodal_force</ref>(General<sp/>general,<sp/><ref refid="struct_boundary__structure" kindref="compound">Boudary</ref><sp/>boudary,<sp/>Nodal<sp/>nodal);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="solver_8h_1a82cfc08a541c932fdd65a2b0ccb2ce6b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="solver_8h_1a82cfc08a541c932fdd65a2b0ccb2ce6b" kindref="member">boudary_body_force</ref>(</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>Nodal<sp/>nodal,<sp/>General<sp/>general);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="solver_8h_1a5487fb9228c9be99b3f5256f8316f40d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="solver_8h_1a5487fb9228c9be99b3f5256f8316f40d" kindref="member">boudary_nodal_velocity</ref>(General<sp/>general,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_boundary__structure" kindref="compound">Boudary</ref><sp/>boudary,<sp/>Nodal<sp/>nodal);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="solver_8h_1ae52d34bd489a12d717a129a788902d6d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="solver_8h_1ae52d34bd489a12d717a129a788902d6d" kindref="member">boudary_edge_velocity</ref>(</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>General<sp/>general,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_boundary__structure" kindref="compound">Boudary</ref><sp/>boudary,<sp/>Nodal<sp/>nodal);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="solver_8h_1a483b6c8314046c4d5d80741af051ba7e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="solver_8h_1a483b6c8314046c4d5d80741af051ba7e" kindref="member">solver_get_timestep</ref>(General<sp/>general,<sp/>Nodal<sp/>nodal,<sp/>Element<sp/>element,<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>Cohelement<sp/>cohelement,<sp/>Contact<sp/>contact,<sp/>Solidmat<sp/>solidmat);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="solver_8h_1aeadc50d540af0a72ab8d1cad9c7ace38" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="solver_8h_1aeadc50d540af0a72ab8d1cad9c7ace38" kindref="member">solver_update_energy</ref>(General<sp/>general,<sp/>Nodal<sp/>nodal,<sp/>Element<sp/>element,<sp/>Cohelement<sp/>cohelement,<sp/>Contact<sp/>contact);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="solver_8h_1af5fc879ee27e590797b2b138f2049bd3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="solver_8h_1af5fc879ee27e590797b2b138f2049bd3" kindref="member">solver_large_deformation</ref>(<sp/><sp/></highlight><highlight class="comment">/*<sp/>fracture<sp/>triangle<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>Element<sp/>element,<sp/>Nodal<sp/>nodal,<sp/>Solidmat<sp/>solidmat,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>propelementid,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>soften_state);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="solver_8h_1af4fab905f52d133e681eaf034070f253" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="solver_8h_1af4fab905f52d133e681eaf034070f253" kindref="member">solver_rigid</ref>(<sp/></highlight><highlight class="comment">/*<sp/>mechanical<sp/>solver<sp/>rigid<sp/>triangles<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>Element<sp/>element,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>TimeStep,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>PropElementDensity,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>ele_mat_id,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>node_type*<sp/>node,<sp/>of_vector*<sp/>NodalContactForce,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>of_vector*<sp/>NodalCurrentVelocity</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>!_OPENFDEM_MAIN_SOLVER_</highlight></codeline>
+    </programlisting>
+    <location file="solver.h"/>
+  </compounddef>
+</doxygen>

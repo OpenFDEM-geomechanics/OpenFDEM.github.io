@@ -1,0 +1,407 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_general__structure" kind="struct" language="C++" prot="public">
+    <compoundname>General_structure</compoundname>
+    <includes refid="openfdem__general_8h" local="no">openfdem_general.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_general__structure_1a7885dbdd04f90ee3c5e7df29d143ee3c" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long TotalStep</definition>
+        <argsstring></argsstring>
+        <name>TotalStep</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="29" column="7" bodyfile="openfdem_general.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_general__structure_1a1e1e662e21d41c5274cf9b0ea249132d" prot="public" static="no" mutable="no">
+        <type><ref refid="openfdem__enum_8h_1a7b4ce13363fe4f0be5abc2a77a751dd3" kindref="member">config_type_enum</ref></type>
+        <definition>config_type_enum config_type</definition>
+        <argsstring></argsstring>
+        <name>config_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="30" column="18" bodyfile="openfdem_general.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_general__structure_1a8a67c7017e529cc321157c5fde38acfb" prot="public" static="no" mutable="no">
+        <type><ref refid="openfdem__enum_8h_1ae912e9094d0670dd188b0ff695051de8" kindref="member">config_module_enum</ref></type>
+        <definition>config_module_enum config_module</definition>
+        <argsstring></argsstring>
+        <name>config_module</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="31" column="20" bodyfile="openfdem_general.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_general__structure_1a600f0a9319314bf1ad20d2ed3c791281" prot="public" static="no" mutable="no">
+        <type>short</type>
+        <definition>short config_GBM</definition>
+        <argsstring></argsstring>
+        <name>config_GBM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="32" column="7" bodyfile="openfdem_general.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_general__structure_1a57e53b8a712a42752a18173c91f68f2d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int config_large</definition>
+        <argsstring></argsstring>
+        <name>config_large</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="33" column="5" bodyfile="openfdem_general.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_general__structure_1a53e9736e5ecdc8f4d5106061c318d6b3" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long NowStep</definition>
+        <argsstring></argsstring>
+        <name>NowStep</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="34" column="7" bodyfile="openfdem_general.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_general__structure_1a196d67a28d43df29b88896f5de2c2e6d" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char RunTime[256]</definition>
+        <argsstring>[256]</argsstring>
+        <name>RunTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="35" column="7" bodyfile="openfdem_general.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_general__structure_1aaf62315da6fe278e1a9b55323d2b76e3" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char InputFileName[256]</definition>
+        <argsstring>[256]</argsstring>
+        <name>InputFileName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="36" column="7" bodyfile="openfdem_general.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_general__structure_1a642b99c161076c2e518da025eef0064f" prot="public" static="no" mutable="no">
+        <type>FILE *</type>
+        <definition>FILE* InputFile</definition>
+        <argsstring></argsstring>
+        <name>InputFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="37" column="6" bodyfile="openfdem_general.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_general__structure_1aea01f2c1926d25ffadf9063d5e0deadf" prot="public" static="no" mutable="no">
+        <type>FILE *</type>
+        <definition>FILE * CheckFile</definition>
+        <argsstring></argsstring>
+        <name>CheckFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="37" column="17" bodyfile="openfdem_general.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_general__structure_1afc64be46469960db99c334e29a0def48" prot="public" static="no" mutable="no">
+        <type>FILE *</type>
+        <definition>FILE* FilePointer[10]</definition>
+        <argsstring>[10]</argsstring>
+        <name>FilePointer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="38" column="6" bodyfile="openfdem_general.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_general__structure_1a31d34d545695a34edef1f77c4024a3d5" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long FileID</definition>
+        <argsstring></argsstring>
+        <name>FileID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="39" column="7" bodyfile="openfdem_general.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_general__structure_1abc3707b03bfdb46874af86a1dc71a66b" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long debug</definition>
+        <argsstring></argsstring>
+        <name>debug</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="40" column="7" bodyfile="openfdem_general.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_general__structure_1aab6984dc853ea134ccc5848195ff0fd4" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char save_path[300]</definition>
+        <argsstring>[300]</argsstring>
+        <name>save_path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="41" column="7" bodyfile="openfdem_general.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_general__structure_1a9d32f32cc64fe640ba1e5550bc24f029" prot="public" static="no" mutable="no">
+        <type>short</type>
+        <definition>short save_file_flag</definition>
+        <argsstring></argsstring>
+        <name>save_file_flag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="42" column="8" bodyfile="openfdem_general.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_general__structure_1a886d16ed260fb94e5a85c765cf88eac7" prot="public" static="no" mutable="no">
+        <type><ref refid="structof__vector" kindref="compound">of_vector</ref></type>
+        <definition>of_vector gravity</definition>
+        <argsstring></argsstring>
+        <name>gravity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="43" column="13" bodyfile="openfdem_general.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_general__structure_1acc5d75f4f6f7b1875a35dbc96ffe80e7" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double TimeStep</definition>
+        <argsstring></argsstring>
+        <name>TimeStep</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="45" column="9" bodyfile="openfdem_general.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_general__structure_1a97c3740ec89c07312dec51a06d2a4865" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double CurrentTime</definition>
+        <argsstring></argsstring>
+        <name>CurrentTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="46" column="9" bodyfile="openfdem_general.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_general__structure_1a52a5a80e92c5a90f1206c3551cd27ec8" prot="public" static="no" mutable="no">
+        <type><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref></type>
+        <definition>Real global_damp</definition>
+        <argsstring></argsstring>
+        <name>global_damp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="47" column="9" bodyfile="openfdem_general.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_general__structure_1a436f0d10fe1dd347e8656759ba46a82e" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long ShowTimeInterval</definition>
+        <argsstring></argsstring>
+        <name>ShowTimeInterval</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="49" column="7" bodyfile="openfdem_general.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_general__structure_1ac384fb07705b6cbd0e4dccdf0ca6ee5e" prot="public" static="no" mutable="no">
+        <type>short</type>
+        <definition>short save_flag</definition>
+        <argsstring></argsstring>
+        <name>save_flag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="51" column="7" bodyfile="openfdem_general.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_general__structure_1a8acfffabc85bf2547ab109311dcafe45" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char save_filename[300]</definition>
+        <argsstring>[300]</argsstring>
+        <name>save_filename</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="52" column="6" bodyfile="openfdem_general.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_general__structure_1aa2ca20e991f6bb72914a6deb6e0a8ec1" prot="public" static="no" mutable="no">
+        <type>short</type>
+        <definition>short thread</definition>
+        <argsstring></argsstring>
+        <name>thread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="53" column="7" bodyfile="openfdem_general.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_general__structure_1aebb315ebaa581a4c46c0f73dca914ce8" prot="public" static="no" mutable="no">
+        <type><ref refid="structenergy__type" kindref="compound">energy_type</ref></type>
+        <definition>energy_type energy</definition>
+        <argsstring></argsstring>
+        <name>energy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="54" column="13" bodyfile="openfdem_general.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_general__structure_1aac41d033b3b8212b7ac445299578248c" prot="public" static="no" mutable="no">
+        <type><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref></type>
+        <definition>Real kinetic_ratio</definition>
+        <argsstring></argsstring>
+        <name>kinetic_ratio</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="55" column="6" bodyfile="openfdem_general.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_general__structure_1ae4b9bfd96fcbef8f79df38a1a3339f7d" prot="public" static="no" mutable="no">
+        <type><ref refid="structsolver__base" kindref="compound">solver_base</ref></type>
+        <definition>solver_base solver</definition>
+        <argsstring></argsstring>
+        <name>solver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="56" column="13" bodyfile="openfdem_general.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>solver_base</label>
+        <link refid="structsolver__base"/>
+      </node>
+      <node id="1">
+        <label>General_structure</label>
+        <link refid="struct_general__structure"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>gravity</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>energy</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>solver</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>of_vector</label>
+        <link refid="structof__vector"/>
+      </node>
+      <node id="3">
+        <label>energy_type</label>
+        <link refid="structenergy__type"/>
+      </node>
+    </collaborationgraph>
+    <location file="openfdem_general.h" line="27" column="1" bodyfile="openfdem_general.h" bodystart="28" bodyend="57"/>
+    <listofallmembers>
+      <member refid="struct_general__structure_1aea01f2c1926d25ffadf9063d5e0deadf" prot="public" virt="non-virtual"><scope>General_structure</scope><name>CheckFile</name></member>
+      <member refid="struct_general__structure_1a600f0a9319314bf1ad20d2ed3c791281" prot="public" virt="non-virtual"><scope>General_structure</scope><name>config_GBM</name></member>
+      <member refid="struct_general__structure_1a57e53b8a712a42752a18173c91f68f2d" prot="public" virt="non-virtual"><scope>General_structure</scope><name>config_large</name></member>
+      <member refid="struct_general__structure_1a8a67c7017e529cc321157c5fde38acfb" prot="public" virt="non-virtual"><scope>General_structure</scope><name>config_module</name></member>
+      <member refid="struct_general__structure_1a1e1e662e21d41c5274cf9b0ea249132d" prot="public" virt="non-virtual"><scope>General_structure</scope><name>config_type</name></member>
+      <member refid="struct_general__structure_1a97c3740ec89c07312dec51a06d2a4865" prot="public" virt="non-virtual"><scope>General_structure</scope><name>CurrentTime</name></member>
+      <member refid="struct_general__structure_1abc3707b03bfdb46874af86a1dc71a66b" prot="public" virt="non-virtual"><scope>General_structure</scope><name>debug</name></member>
+      <member refid="struct_general__structure_1aebb315ebaa581a4c46c0f73dca914ce8" prot="public" virt="non-virtual"><scope>General_structure</scope><name>energy</name></member>
+      <member refid="struct_general__structure_1a31d34d545695a34edef1f77c4024a3d5" prot="public" virt="non-virtual"><scope>General_structure</scope><name>FileID</name></member>
+      <member refid="struct_general__structure_1afc64be46469960db99c334e29a0def48" prot="public" virt="non-virtual"><scope>General_structure</scope><name>FilePointer</name></member>
+      <member refid="struct_general__structure_1a52a5a80e92c5a90f1206c3551cd27ec8" prot="public" virt="non-virtual"><scope>General_structure</scope><name>global_damp</name></member>
+      <member refid="struct_general__structure_1a886d16ed260fb94e5a85c765cf88eac7" prot="public" virt="non-virtual"><scope>General_structure</scope><name>gravity</name></member>
+      <member refid="struct_general__structure_1a642b99c161076c2e518da025eef0064f" prot="public" virt="non-virtual"><scope>General_structure</scope><name>InputFile</name></member>
+      <member refid="struct_general__structure_1aaf62315da6fe278e1a9b55323d2b76e3" prot="public" virt="non-virtual"><scope>General_structure</scope><name>InputFileName</name></member>
+      <member refid="struct_general__structure_1aac41d033b3b8212b7ac445299578248c" prot="public" virt="non-virtual"><scope>General_structure</scope><name>kinetic_ratio</name></member>
+      <member refid="struct_general__structure_1a53e9736e5ecdc8f4d5106061c318d6b3" prot="public" virt="non-virtual"><scope>General_structure</scope><name>NowStep</name></member>
+      <member refid="struct_general__structure_1a196d67a28d43df29b88896f5de2c2e6d" prot="public" virt="non-virtual"><scope>General_structure</scope><name>RunTime</name></member>
+      <member refid="struct_general__structure_1a9d32f32cc64fe640ba1e5550bc24f029" prot="public" virt="non-virtual"><scope>General_structure</scope><name>save_file_flag</name></member>
+      <member refid="struct_general__structure_1a8acfffabc85bf2547ab109311dcafe45" prot="public" virt="non-virtual"><scope>General_structure</scope><name>save_filename</name></member>
+      <member refid="struct_general__structure_1ac384fb07705b6cbd0e4dccdf0ca6ee5e" prot="public" virt="non-virtual"><scope>General_structure</scope><name>save_flag</name></member>
+      <member refid="struct_general__structure_1aab6984dc853ea134ccc5848195ff0fd4" prot="public" virt="non-virtual"><scope>General_structure</scope><name>save_path</name></member>
+      <member refid="struct_general__structure_1a436f0d10fe1dd347e8656759ba46a82e" prot="public" virt="non-virtual"><scope>General_structure</scope><name>ShowTimeInterval</name></member>
+      <member refid="struct_general__structure_1ae4b9bfd96fcbef8f79df38a1a3339f7d" prot="public" virt="non-virtual"><scope>General_structure</scope><name>solver</name></member>
+      <member refid="struct_general__structure_1aa2ca20e991f6bb72914a6deb6e0a8ec1" prot="public" virt="non-virtual"><scope>General_structure</scope><name>thread</name></member>
+      <member refid="struct_general__structure_1acc5d75f4f6f7b1875a35dbc96ffe80e7" prot="public" virt="non-virtual"><scope>General_structure</scope><name>TimeStep</name></member>
+      <member refid="struct_general__structure_1a7885dbdd04f90ee3c5e7df29d143ee3c" prot="public" virt="non-virtual"><scope>General_structure</scope><name>TotalStep</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

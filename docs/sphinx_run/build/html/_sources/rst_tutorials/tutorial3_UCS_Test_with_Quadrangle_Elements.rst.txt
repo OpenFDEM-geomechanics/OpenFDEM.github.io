@@ -1,0 +1,56 @@
+Tutorial 3: Create Uniaxial Compression Test with Quadrangle Element
+########################################################################
+
+By default, triangle elements will be used in the mesh and model. However, OpenFDEM also supports 
+the quadrangle elements. 
+
+==================================
+1.0 Code
+==================================
+
+To run the model with quadrangle elements, users just need to add the following line after setting 
+up the mesh size and before creating the mesh.
+
+.. code-block::
+
+    of.geometry.recombine 'rock' 
+
+
+
+==================================
+2.0 Run the Program
+==================================
+
+When the program runs, the mesh of the model will look like this.
+
+.. figure:: ../../images/Gmsh/UCS_test_quad.png
+    :alt: Uniaxial Compression Test Mesh with Quadrangle Elements
+    :align: center
+    :scale: 60%
+
+    Figure 1: Uniaxial Compression Test Mesh with Quadrangle Elements
+
+|
+
+The program will also show the mesh has quadrilateral elements.
+
+.. figure:: ../../images/Command/UCS_Quad.PNG
+    :alt: Uniaxial Compression Test Mesh with Quadrangle Elements
+    :align: center
+    :scale: 60%
+
+    Figure 2: Uniaxial Compression Test Mesh with Quadrangle Elements
+
+|
+
+==================================
+3.0 Full Script
+==================================
+- `UCS_test_quad.of`_ (click to download from GitHub)
+
+.. _UCS_test_quad.of: https://github.com/OpenFDEM-geomechanics/Examples/blob/main/CreateUniaxialCompressionTestwithQuadrangleElement/runme.of
+
+    .. literalinclude:: ../../../src/examples/CreateUniaxialCompressionTestwithQuadrangleElement/runme.of
+        :lines: 37-109
+        :emphasize-lines: 26-27
+

@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="push__contact__materials_8h" kind="file" language="C++">
+    <compoundname>push_contact_materials.h</compoundname>
+    <includes local="yes">../../../io/parser.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>../../../io/parser.h</label>
+      </node>
+      <node id="1">
+        <label>/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat_contact/push_contact_materials.h</label>
+        <link refid="push__contact__materials_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="push__contact__materials_8h_1a2195fb1baffa83ac1663a0f8e0a409f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void push_contact_materials</definition>
+        <argsstring>(General general, Solidmat solidmat, Contact contact, char *keyword)</argsstring>
+        <name>push_contact_materials</name>
+        <param>
+          <type>General</type>
+          <declname>general</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__mat_8h_1a10eec44786d5659964548a8edabef182" kindref="member">Solidmat</ref></type>
+          <declname>solidmat</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__solid__contact_8h_1a33b34b0b5e26b260dc771b8cdc178eb6" kindref="member">Contact</ref></type>
+          <declname>contact</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>keyword</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat_contact/push_contact_materials.h" line="6" column="6" declfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat_contact/push_contact_materials.h" declline="6" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_OPENFDEM_SOLID_MAT_PUSH_CONTACT_MATERIALS_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_OPENFDEM_SOLID_MAT_PUSH_CONTACT_MATERIALS_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../../io/parser.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="push__contact__materials_8h_1a2195fb1baffa83ac1663a0f8e0a409f1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="push__contact__materials_8h_1a2195fb1baffa83ac1663a0f8e0a409f1" kindref="member">push_contact_materials</ref>(General<sp/>general,<sp/><ref refid="struct_solid__mat__structure" kindref="compound">Solidmat</ref><sp/>solidmat,<sp/><ref refid="struct_contact__structure" kindref="compound">Contact</ref><sp/>contact,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>keyword);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>!_OPENFDEM_SOLID_MAT_PUSH_CONTACT_MATERIALS_</highlight></codeline>
+    </programlisting>
+    <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat_contact/push_contact_materials.h"/>
+  </compounddef>
+</doxygen>

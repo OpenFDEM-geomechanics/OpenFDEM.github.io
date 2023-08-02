@@ -1,0 +1,13 @@
+Tutorial : Pressure Method
+###############################
+
+**Runtime**: ~2 hours on i9 8-core Windows 10 Machine
+
+Full Tutorial Script
+=======================
+
+To run the model, save your text file with the `.of` extension. Rebuild the openfdem solution and drag your
+`.of` file into the `OpenFDEM.exe`. It will automatically run and save the outputs. 
+
+..  literalinclude:: ../../../src/test/pressure_method/pressure_method.of
+    :lines: 28-80

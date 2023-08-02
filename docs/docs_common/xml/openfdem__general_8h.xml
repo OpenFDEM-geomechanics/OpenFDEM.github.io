@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="openfdem__general_8h" kind="file" language="C++">
+    <compoundname>openfdem_general.h</compoundname>
+    <includes refid="openfdem__commom_8h" local="yes">openfdem_commom.h</includes>
+    <includedby refid="openfdem__tools_8h" local="yes">openfdem_tools.h</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="9">
+        <label>openfdem_enum.h</label>
+        <link refid="openfdem__enum_8h"/>
+      </node>
+      <node id="2">
+        <label>openfdem_commom.h</label>
+        <link refid="openfdem__commom_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>openfdem_message.h</label>
+        <link refid="openfdem__message_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>limits.h</label>
+      </node>
+      <node id="5">
+        <label>string.h</label>
+      </node>
+      <node id="7">
+        <label>signal.h</label>
+      </node>
+      <node id="1">
+        <label>openfdem_general.h</label>
+        <link refid="openfdem__general_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>openfdem_struct.h</label>
+        <link refid="openfdem__struct_8h"/>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>openfdem_tools.h</label>
+        <link refid="openfdem__tools_8h"/>
+      </node>
+      <node id="1">
+        <label>openfdem_general.h</label>
+        <link refid="openfdem__general_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structenergy__type" prot="public">energy_type</innerclass>
+    <innerclass refid="structsolver__base" prot="public">solver_base</innerclass>
+    <innerclass refid="struct_general__structure" prot="public">General_structure</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="openfdem__general_8h_1a7c262346c166dd2efb8d134d43f37b4d" prot="public" static="no">
+        <type>struct <ref refid="struct_general__structure" kindref="compound">General_structure</ref> *</type>
+        <definition>typedef struct General_structure* General</definition>
+        <argsstring></argsstring>
+        <name>General</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="26" column="33" bodyfile="openfdem_general.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>file<sp/>StructureDefinition.h<sp/><sp/>OPFDEM<sp/>data<sp/>base<sp/>description<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_OPENFDEM_STRUCTURE_GENERAL_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_OPENFDEM_STRUCTURE_GENERAL_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="openfdem__commom_8h" kindref="compound">openfdem_commom.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="structenergy__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7" refid="structenergy__type_1a7d79443f2999a6e25f2da44cb823525c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref><sp/><ref refid="structenergy__type_1a7d79443f2999a6e25f2da44cb823525c" kindref="member">external_work</ref>;</highlight></codeline>
+<codeline lineno="8" refid="structenergy__type_1aa5a9ec4fa82f97b2fdbe2e74048a5e7c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref><sp/><ref refid="structenergy__type_1aa5a9ec4fa82f97b2fdbe2e74048a5e7c" kindref="member">internal_energy</ref>;</highlight></codeline>
+<codeline lineno="9" refid="structenergy__type_1a944a81c904252c23f10c825a5bbd49c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref><sp/><ref refid="structenergy__type_1a944a81c904252c23f10c825a5bbd49c4" kindref="member">gravity_energy</ref>;</highlight></codeline>
+<codeline lineno="10" refid="structenergy__type_1a5bf6633ec393fe6f574d77f46ee87714" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref><sp/><ref refid="structenergy__type_1a5bf6633ec393fe6f574d77f46ee87714" kindref="member">kinetic_energy</ref>;</highlight></codeline>
+<codeline lineno="11" refid="structenergy__type_1a1d7926047566cebf53a2dc18eaf04ada" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref><sp/><ref refid="structenergy__type_1a1d7926047566cebf53a2dc18eaf04ada" kindref="member">damping_energy</ref>;</highlight></codeline>
+<codeline lineno="12" refid="structenergy__type_1a28a5f8e86978a4ee2e2367e9cecf6c16" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref><sp/><ref refid="structenergy__type_1a28a5f8e86978a4ee2e2367e9cecf6c16" kindref="member">absorbing_energy</ref>;</highlight></codeline>
+<codeline lineno="13" refid="structenergy__type_1a242361f186234e7ea6d3d3b0f3a2d9dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref><sp/><ref refid="structenergy__type_1a242361f186234e7ea6d3d3b0f3a2d9dd" kindref="member">contact_energy</ref>;</highlight></codeline>
+<codeline lineno="14" refid="structenergy__type_1aaa16389224efa0fe55da45ec55413948" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref><sp/><ref refid="structenergy__type_1aaa16389224efa0fe55da45ec55413948" kindref="member">contact_nenergy</ref>;</highlight></codeline>
+<codeline lineno="15" refid="structenergy__type_1a6025dde206c140844469770801c00f87" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref><sp/><ref refid="structenergy__type_1a6025dde206c140844469770801c00f87" kindref="member">element_energy</ref>;</highlight></codeline>
+<codeline lineno="16" refid="structenergy__type_1a8d43a6a8121b8b8db16d5c80b589ba1e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref><sp/><ref refid="structenergy__type_1a8d43a6a8121b8b8db16d5c80b589ba1e" kindref="member">cohesive_energy</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}<sp/><ref refid="structenergy__type" kindref="compound">energy_type</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="structsolver__base" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20" refid="structsolver__base_1aedcea0717bffab7f7390cb19029a0f7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="openfdem__struct_8h_1a26ff0e0ab71ea1ed8bac401c56ed2242" kindref="member">UInt</ref><sp/><ref refid="structsolver__base_1aedcea0717bffab7f7390cb19029a0f7b" kindref="member">last_node_n</ref>;</highlight></codeline>
+<codeline lineno="21" refid="structsolver__base_1a3768f53ee8ac302d4698aa6074973c7a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="openfdem__struct_8h_1a26ff0e0ab71ea1ed8bac401c56ed2242" kindref="member">UInt</ref><sp/><ref refid="structsolver__base_1a3768f53ee8ac302d4698aa6074973c7a" kindref="member">last_ele_n</ref>;</highlight></codeline>
+<codeline lineno="22" refid="structsolver__base_1a0e83a0217e20c13a51d2af9b9588b5e0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="openfdem__struct_8h_1a26ff0e0ab71ea1ed8bac401c56ed2242" kindref="member">UInt</ref><sp/><ref refid="structsolver__base_1a0e83a0217e20c13a51d2af9b9588b5e0" kindref="member">last_cohele_n</ref>;</highlight></codeline>
+<codeline lineno="23" refid="structsolver__base_1a5ad1eab5b7a631c43c15fe58c6075a90" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="openfdem__struct_8h_1a26ff0e0ab71ea1ed8bac401c56ed2242" kindref="member">UInt</ref><sp/><ref refid="structsolver__base_1a5ad1eab5b7a631c43c15fe58c6075a90" kindref="member">run_times</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}<sp/><ref refid="structsolver__base" kindref="compound">solver_base</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="openfdem__general_8h_1a7c262346c166dd2efb8d134d43f37b4d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_general__structure" kindref="compound">General_structure</ref>*<sp/><ref refid="openfdem__general_8h_1a7c262346c166dd2efb8d134d43f37b4d" kindref="member">General</ref>;</highlight></codeline>
+<codeline lineno="27" refid="struct_general__structure" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_general__structure" kindref="compound">General_structure</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29" refid="struct_general__structure_1a7885dbdd04f90ee3c5e7df29d143ee3c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><ref refid="struct_general__structure_1a7885dbdd04f90ee3c5e7df29d143ee3c" kindref="member">TotalStep</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*$<sp/>maximum<sp/>number<sp/>of<sp/>time<sp/>steps<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="struct_general__structure_1a1e1e662e21d41c5274cf9b0ea249132d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="openfdem__enum_8h_1a7b4ce13363fe4f0be5abc2a77a751dd3" kindref="member">config_type_enum</ref><sp/><ref refid="struct_general__structure_1a1e1e662e21d41c5274cf9b0ea249132d" kindref="member">config_type</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//*$<sp/>plane<sp/>stress<sp/>or<sp/>plane<sp/>strain,<sp/>default<sp/>plane<sp/>stress</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="struct_general__structure_1a8a67c7017e529cc321157c5fde38acfb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="openfdem__enum_8h_1ae912e9094d0670dd188b0ff695051de8" kindref="member">config_module_enum</ref><sp/><ref refid="struct_general__structure_1a8a67c7017e529cc321157c5fde38acfb" kindref="member">config_module</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//*$<sp/>module<sp/>type<sp/>mechanical,<sp/>hydro,<sp/>thermal,<sp/>blast<sp/>default:mechanical</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="struct_general__structure_1a600f0a9319314bf1ad20d2ed3c791281" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="struct_general__structure_1a600f0a9319314bf1ad20d2ed3c791281" kindref="member">config_GBM</ref>;</highlight></codeline>
+<codeline lineno="33" refid="struct_general__structure_1a57e53b8a712a42752a18173c91f68f2d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_general__structure_1a57e53b8a712a42752a18173c91f68f2d" kindref="member">config_large</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>large<sp/>deformation<sp/>for<sp/>soften,<sp/>default<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="struct_general__structure_1a53e9736e5ecdc8f4d5106061c318d6b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_general__structure_1a53e9736e5ecdc8f4d5106061c318d6b3" kindref="member">NowStep</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>current<sp/>number<sp/>of<sp/>time<sp/>steps<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="struct_general__structure_1a196d67a28d43df29b88896f5de2c2e6d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_general__structure_1a196d67a28d43df29b88896f5de2c2e6d" kindref="member">RunTime</ref>[256];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>run<sp/>time<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="struct_general__structure_1aaf62315da6fe278e1a9b55323d2b76e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_general__structure_1aaf62315da6fe278e1a9b55323d2b76e3" kindref="member">InputFileName</ref>[256];<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>input<sp/>file<sp/>name,<sp/>no<sp/>more<sp/>than<sp/>256<sp/>including<sp/>directory<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="struct_general__structure_1aea01f2c1926d25ffadf9063d5e0deadf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE*<sp/><ref refid="struct_general__structure_1a642b99c161076c2e518da025eef0064f" kindref="member">InputFile</ref>,<sp/>*<sp/><ref refid="struct_general__structure_1aea01f2c1926d25ffadf9063d5e0deadf" kindref="member">CheckFile</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Input<sp/>file<sp/>default:Null,<sp/>Temp<sp/>file<sp/>name,<sp/>default:Null<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="struct_general__structure_1afc64be46469960db99c334e29a0def48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE*<sp/><ref refid="struct_general__structure_1afc64be46469960db99c334e29a0def48" kindref="member">FilePointer</ref>[10];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>input<sp/>FilePointer&apos;<sp/>pointer<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="struct_general__structure_1a31d34d545695a34edef1f77c4024a3d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_general__structure_1a31d34d545695a34edef1f77c4024a3d5" kindref="member">FileID</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>ID<sp/>of<sp/>the<sp/>current<sp/>input<sp/>file<sp/><sp/>default:<sp/>0<sp/>no<sp/>more<sp/>than<sp/>10<sp/>files<sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="struct_general__structure_1abc3707b03bfdb46874af86a1dc71a66b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_general__structure_1abc3707b03bfdb46874af86a1dc71a66b" kindref="member">debug</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>flag<sp/>of<sp/>writting<sp/>checkfile<sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="struct_general__structure_1aab6984dc853ea134ccc5848195ff0fd4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_general__structure_1aab6984dc853ea134ccc5848195ff0fd4" kindref="member">save_path</ref>[300];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>save<sp/>path<sp/>set<sp/>by<sp/>the<sp/>usr<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="struct_general__structure_1a9d32f32cc64fe640ba1e5550bc24f029" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="struct_general__structure_1a9d32f32cc64fe640ba1e5550bc24f029" kindref="member">save_file_flag</ref>;</highlight></codeline>
+<codeline lineno="43" refid="struct_general__structure_1a886d16ed260fb94e5a85c765cf88eac7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structof__vector" kindref="compound">of_vector</ref><sp/><sp/><sp/><ref refid="struct_general__structure_1a886d16ed260fb94e5a85c765cf88eac7" kindref="member">gravity</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*$<sp/>[2]<sp/>gravity<sp/>x<sp/>y<sp/>(default:<sp/>0.0<sp/>0.0)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="struct_general__structure_1acc5d75f4f6f7b1875a35dbc96ffe80e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_general__structure_1acc5d75f4f6f7b1875a35dbc96ffe80e7" kindref="member">TimeStep</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*$<sp/>current<sp/>time<sp/>step<sp/>size<sp/><sp/>(default:<sp/>0.0)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="struct_general__structure_1a97c3740ec89c07312dec51a06d2a4865" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_general__structure_1a97c3740ec89c07312dec51a06d2a4865" kindref="member">CurrentTime</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>current<sp/>time<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(default:<sp/>0.0)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="struct_general__structure_1a52a5a80e92c5a90f1206c3551cd27ec8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref><sp/><sp/><sp/><sp/><ref refid="struct_general__structure_1a52a5a80e92c5a90f1206c3551cd27ec8" kindref="member">global_damp</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>global<sp/>damping<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="struct_general__structure_1a436f0d10fe1dd347e8656759ba46a82e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><ref refid="struct_general__structure_1a436f0d10fe1dd347e8656759ba46a82e" kindref="member">ShowTimeInterval</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*$<sp/>show<sp/>time<sp/>frequency.<sp/>(default:<sp/>500)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="struct_general__structure_1ac384fb07705b6cbd0e4dccdf0ca6ee5e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="struct_general__structure_1ac384fb07705b6cbd0e4dccdf0ca6ee5e" kindref="member">save_flag</ref>;</highlight></codeline>
+<codeline lineno="52" refid="struct_general__structure_1a8acfffabc85bf2547ab109311dcafe45" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_general__structure_1a8acfffabc85bf2547ab109311dcafe45" kindref="member">save_filename</ref>[300];</highlight></codeline>
+<codeline lineno="53" refid="struct_general__structure_1aa2ca20e991f6bb72914a6deb6e0a8ec1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="struct_general__structure_1aa2ca20e991f6bb72914a6deb6e0a8ec1" kindref="member">thread</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>flag<sp/>of<sp/>turning<sp/>on<sp/>CPU<sp/>parallel<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="struct_general__structure_1aebb315ebaa581a4c46c0f73dca914ce8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structenergy__type" kindref="compound">energy_type</ref><sp/><ref refid="struct_general__structure_1aebb315ebaa581a4c46c0f73dca914ce8" kindref="member">energy</ref>;</highlight></codeline>
+<codeline lineno="55" refid="struct_general__structure_1aac41d033b3b8212b7ac445299578248c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref><sp/><ref refid="struct_general__structure_1aac41d033b3b8212b7ac445299578248c" kindref="member">kinetic_ratio</ref>;</highlight></codeline>
+<codeline lineno="56" refid="struct_general__structure_1ae4b9bfd96fcbef8f79df38a1a3339f7d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsolver__base" kindref="compound">solver_base</ref><sp/><ref refid="struct_general__structure_1ae4b9bfd96fcbef8f79df38a1a3339f7d" kindref="member">solver</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>!_OPENFDEM_STRUCTURE_GENERAL_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="openfdem_general.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="push__element__boudary_8c" kind="file" language="C++">
+    <compoundname>push_element_boudary.c</compoundname>
+    <includes local="yes">../../io/parser/parser_boudary.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>boudary/push_element_boudary.c</label>
+        <link refid="push__element__boudary_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../../io/parser/parser_boudary.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="push__element__boudary_8c_1a25d16c1eb06141fab29921d91b8a7d68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void push_element_boudary</definition>
+        <argsstring>(General general, Boudary boudary, Element element, UInt type)</argsstring>
+        <name>push_element_boudary</name>
+        <param>
+          <type>General</type>
+          <declname>general</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__boundary_8h_1a46c9ed01abc40da05d649718dcf1f738" kindref="member">Boudary</ref></type>
+          <declname>boudary</declname>
+        </param>
+        <param>
+          <type>Element</type>
+          <declname>element</declname>
+        </param>
+        <param>
+          <type>UInt</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boudary/push_element_boudary.c" line="3" column="6" bodyfile="boudary/push_element_boudary.c" bodystart="3" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;../../io/parser/parser_boudary.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="push__element__boudary_8c_1a25d16c1eb06141fab29921d91b8a7d68" kindref="member">push_element_boudary</ref>(General<sp/>general,<sp/><ref refid="struct_boundary__structure" kindref="compound">Boudary</ref><sp/>boudary,<sp/>Element<sp/>element,<sp/>UInt<sp/>type)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>UInt<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bn_ele<sp/>=<sp/>boudary-&gt;<ref refid="struct_boundary__structure_1a64083f51b32163fed34acdd386e4fedb" kindref="member">n_ele</ref>;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structboudary__ele__type" kindref="compound">boudary_ele_type</ref>*<sp/>bele<sp/><sp/><sp/>=<sp/>boudary-&gt;<ref refid="struct_boundary__structure_1ab10960d7d3d40c6a91033132c0512a37" kindref="member">ele</ref>;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>Real<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bn_ele<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bele<sp/>=<sp/>(<ref refid="structboudary__ele__type" kindref="compound">boudary_ele_type</ref>*)malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structboudary__ele__type" kindref="compound">boudary_ele_type</ref>));</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bele<sp/>=<sp/>(<ref refid="structboudary__ele__type" kindref="compound">boudary_ele_type</ref>*)realloc(bele,<sp/>(bn_ele<sp/>+<sp/>1)<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structboudary__ele__type" kindref="compound">boudary_ele_type</ref>));</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>bele[bn_ele].<ref refid="structboudary__ele__type_1ab4edaa939d5469abd0e3b312d5dcbd1c" kindref="member">size</ref><sp/>=<sp/>element-&gt;e_num;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>bele[bn_ele].<ref refid="structboudary__ele__type_1af0395c3a03c2623ae05642ecdd0fbab8" kindref="member">ele</ref><sp/><sp/>=<sp/>(UInt*)malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(UInt)<sp/>*<sp/>element-&gt;e_num);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>bele[bn_ele].<ref refid="structboudary__ele__type_1a7bb5e40c10df6a41df64bda1f4bb3e26" kindref="member">tag</ref><sp/><sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)<sp/>*<sp/>100);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(UInt<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>element-&gt;e_num;<sp/>i++)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bele[bn_ele].ele[i]<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(type)<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:<sp/>bele[bn_ele].<ref refid="structboudary__ele__type_1a2c02d5d4974aa91518675ab1d667e17b" kindref="member">type</ref><sp/>=<sp/>STRESS;<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:<sp/>bele[bn_ele].<ref refid="structboudary__ele__type_1a2c02d5d4974aa91518675ab1d667e17b" kindref="member">type</ref><sp/>=<sp/>GRADIENT_X;<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>2:<sp/>bele[bn_ele].<ref refid="structboudary__ele__type_1a2c02d5d4974aa91518675ab1d667e17b" kindref="member">type</ref><sp/>=<sp/>GRADIENT_Y;<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:<sp/>dump_message(</highlight><highlight class="stringliteral">&quot;Error:<sp/>unrecognised<sp/>boudary<sp/>type.&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>Parse_double(general-&gt;InputFile,<sp/>&amp;value);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>bele[bn_ele].<ref refid="structboudary__ele__type_1a7e65ab819e0717c931d8e052b6f4976c" kindref="member">xx</ref><sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>Parse_double(general-&gt;InputFile,<sp/>&amp;value);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>bele[bn_ele].<ref refid="structboudary__ele__type_1a124420f8d64e46bf72f288c1a8852601" kindref="member">xy</ref><sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>Parse_double(general-&gt;InputFile,<sp/>&amp;value);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>bele[bn_ele].<ref refid="structboudary__ele__type_1a2bdf6fba07771d98b9558f145295d559" kindref="member">yy</ref><sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>bn_ele++;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>boudary-&gt;<ref refid="struct_boundary__structure_1a64083f51b32163fed34acdd386e4fedb" kindref="member">n_ele</ref><sp/>=<sp/>bn_ele;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(boudary-&gt;<ref refid="struct_boundary__structure_1ab10960d7d3d40c6a91033132c0512a37" kindref="member">ele</ref><sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boudary-&gt;<ref refid="struct_boundary__structure_1ab10960d7d3d40c6a91033132c0512a37" kindref="member">ele</ref><sp/>=<sp/>(<ref refid="structboudary__ele__type" kindref="compound">boudary_ele_type</ref>*)malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structboudary__ele__type" kindref="compound">boudary_ele_type</ref>));</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>boudary-&gt;<ref refid="struct_boundary__structure_1ab10960d7d3d40c6a91033132c0512a37" kindref="member">ele</ref><sp/>=<sp/>bele;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="boudary/push_element_boudary.c"/>
+  </compounddef>
+</doxygen>

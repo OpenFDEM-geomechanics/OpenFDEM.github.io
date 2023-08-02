@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="initialize_8c" kind="file" language="C++">
+    <compoundname>initialize.c</compoundname>
+    <includes refid="initialize_8h" local="yes">initialize.h</includes>
+    <includes local="yes">../../common/openfdem_math.h</includes>
+    <includes refid="solver__initialize_8h" local="yes">solver_initialize.h</includes>
+    <includes local="yes">../../common/openfdem_time.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>boudary/openfdem_boundary.h</label>
+        <link refid="openfdem__boundary_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>../solid/solid_mechanics_contact/openfdem_solid_contact.h</label>
+      </node>
+      <node id="9">
+        <label>../../common/openfdem_enum.h</label>
+      </node>
+      <node id="20">
+        <label>solver_initialize.h</label>
+        <link refid="solver__initialize_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>../solid/openfdem_nodal.h</label>
+      </node>
+      <node id="5">
+        <label>../io/dumper/openfdem_history.h</label>
+      </node>
+      <node id="12">
+        <label>../solid/solid_mechanics_cohesive/DFN/openfdem_DFN.h</label>
+      </node>
+      <node id="3">
+        <label>../openfdem.h</label>
+        <link refid="openfdem_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>initialize/initialize.c</label>
+        <link refid="initialize_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>initialize.h</label>
+        <link refid="initialize_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>../../common/openfdem_commom.h</label>
+      </node>
+      <node id="11">
+        <label>../mesh/group/openfdem_group.h</label>
+      </node>
+      <node id="19">
+        <label>../../common/openfdem_math.h</label>
+      </node>
+      <node id="17">
+        <label>../solid/solid_mechanics_cohesive/sesmic/openfdem_sesmic.h</label>
+      </node>
+      <node id="13">
+        <label>../solid/solid_mechanics/openfdem_solid.h</label>
+      </node>
+      <node id="4">
+        <label>../common/openfdem_general.h</label>
+      </node>
+      <node id="14">
+        <label>../solid/solid_mechanics_cohesive/openfdem_solid_cohesive.h</label>
+      </node>
+      <node id="21">
+        <label>../../common/openfdem_time.h</label>
+      </node>
+      <node id="16">
+        <label>../solid/materials/openfdem_mat.h</label>
+      </node>
+      <node id="18">
+        <label>../geometry/openfdem_geometry.h</label>
+      </node>
+      <node id="6">
+        <label>../mesh/openfdem_mesh_insert.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="initialize_8c_1aafdaffe0d680d93ae645e22b8d25f680" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initialize</definition>
+        <argsstring>(Openfdem openfdem, char *input_file_name)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type><ref refid="openfdem_8h_1ae9eb6c46c16ca89df8f85b6463ca7ee7" kindref="member">Openfdem</ref></type>
+          <declname>openfdem</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>input_file_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="initialize/initialize.c" line="7" column="6" bodyfile="initialize/initialize.c" bodystart="7" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>File<sp/><sp/>Openfdem_io.c<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="initialize_8h" kindref="compound">initialize.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../common/openfdem_math.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="solver__initialize_8h" kindref="compound">solver_initialize.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../common/openfdem_time.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="initialize_8c_1aafdaffe0d680d93ae645e22b8d25f680" kindref="member">initialize</ref>(<ref refid="struct_open_f_d_e_m__structure" kindref="compound">Openfdem</ref><sp/>openfdem,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>input_file_name)</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>General<sp/>general<sp/>=<sp/>&amp;(openfdem-&gt;<ref refid="struct_open_f_d_e_m__structure_1a5931164798490264817af416acbdb73d" kindref="member">general</ref>);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>Element<sp/>element<sp/>=<sp/>&amp;(openfdem-&gt;<ref refid="struct_open_f_d_e_m__structure_1a0fcf7bfa67d9455bc7adac09fec26cc8" kindref="member">element</ref>);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>Cohelement<sp/><sp/>cohelement<sp/>=<sp/>&amp;(openfdem-&gt;<ref refid="struct_open_f_d_e_m__structure_1a127741ba6a1f0c1c4bdcdc6570e77418" kindref="member">cohelement</ref>);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>Contact<sp/>contact<sp/>=<sp/>&amp;(openfdem-&gt;<ref refid="struct_open_f_d_e_m__structure_1a9e9be939de15abdeb132637e0bf7c357" kindref="member">contact</ref>);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>Nodal<sp/>nodal<sp/>=<sp/>&amp;(openfdem-&gt;<ref refid="struct_open_f_d_e_m__structure_1a6880fa5e75dbd732e222b9b20772c956" kindref="member">nodal</ref>);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>Solidmat<sp/>solidmat<sp/>=<sp/>&amp;(openfdem-&gt;<ref refid="struct_open_f_d_e_m__structure_1a89fc3c6f0384d0495663ed306c511933" kindref="member">solidmat</ref>);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(general-&gt;solver.run_times<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dump_message_keyword(</highlight><highlight class="stringliteral">&quot;All<sp/>parameters<sp/>have<sp/>checked,<sp/>sucessfully<sp/>input<sp/>job:<sp/>&quot;</highlight><highlight class="normal">,<sp/>input_file_name);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>openfdem_date_time(general-&gt;RunTime);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>openfdem_stamp_time();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="node__initialize_8c_1a0cd6d90554c5fe31b11e2300ea0cfc32" kindref="member">nodal_initialize</ref>(general,<sp/>nodal,<sp/><sp/>element,<sp/>cohelement);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ele__initialize_8c_1a44a0137c641280077584642f232f2e42" kindref="member">ele_initialize</ref>(element,<sp/>general);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="coh__initialize_8c_1abe01c051cc6fcaa15c44eef743ae24ea" kindref="member">coh_initialize</ref>(cohelement,<sp/>solidmat,<sp/>general);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(general-&gt;solver.run_times<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="general__initialize_8c_1a594acf694c327ee2b355f391f2bcc6a2" kindref="member">general_initialize</ref>(general);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="contact__initialize_8c_1aed556a7cf91e649c22ea1bb659596bd3" kindref="member">contact_initialize</ref>(element,<sp/>contact);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>general-&gt;solver.last_node_n<sp/>=<sp/>nodal-&gt;n_num;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>general-&gt;solver.last_ele_n<sp/>=<sp/>element-&gt;e_num;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>general-&gt;solver.last_cohele_n<sp/>=<sp/>cohelement-&gt;cohe_num;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="initialize/initialize.c"/>
+  </compounddef>
+</doxygen>

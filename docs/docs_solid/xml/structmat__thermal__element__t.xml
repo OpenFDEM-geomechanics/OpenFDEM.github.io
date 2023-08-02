@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="structmat__thermal__element__t" kind="struct" language="C++" prot="public">
+    <compoundname>mat_thermal_element_t</compoundname>
+    <includes refid="openfdem__mat_8h" local="no">openfdem_mat.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmat__thermal__element__t_1a5703c90f968131cddafc67fba71ce362" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real conductivity</definition>
+        <argsstring></argsstring>
+        <name>conductivity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/openfdem_mat.h" line="59" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/openfdem_mat.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmat__thermal__element__t_1afe582b35d3f1aea4dc633104853cbfc7" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real specific_heat</definition>
+        <argsstring></argsstring>
+        <name>specific_heat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/openfdem_mat.h" line="60" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/openfdem_mat.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmat__thermal__element__t_1a8256a273a54ebbe747ebd3baef0bfe79" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real expansion</definition>
+        <argsstring></argsstring>
+        <name>expansion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/openfdem_mat.h" line="61" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/openfdem_mat.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/openfdem_mat.h" line="58" column="1" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/openfdem_mat.h" bodystart="58" bodyend="62"/>
+    <listofallmembers>
+      <member refid="structmat__thermal__element__t_1a5703c90f968131cddafc67fba71ce362" prot="public" virt="non-virtual"><scope>mat_thermal_element_t</scope><name>conductivity</name></member>
+      <member refid="structmat__thermal__element__t_1a8256a273a54ebbe747ebd3baef0bfe79" prot="public" virt="non-virtual"><scope>mat_thermal_element_t</scope><name>expansion</name></member>
+      <member refid="structmat__thermal__element__t_1afe582b35d3f1aea4dc633104853cbfc7" prot="public" virt="non-virtual"><scope>mat_thermal_element_t</scope><name>specific_heat</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

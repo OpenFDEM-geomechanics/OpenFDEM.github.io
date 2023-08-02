@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="openfdem__solid__contact_8h" kind="file" language="C++">
+    <compoundname>openfdem_solid_contact.h</compoundname>
+    <includes local="yes">../../common/openfdem_struct.h</includes>
+    <includes local="yes">../../common/openfdem_commom.h</includes>
+    <includedby refid="contact__add__list__from__cohesive_8h" local="yes">/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/contact_add_list_from_cohesive.h</includedby>
+    <includedby refid="get__potentional__contact__couple_8h" local="yes">/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/get_potentional_contact_couple.h</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>../../common/openfdem_commom.h</label>
+      </node>
+      <node id="2">
+        <label>../../common/openfdem_struct.h</label>
+      </node>
+      <node id="1">
+        <label>/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/openfdem_solid_contact.h</label>
+        <link refid="openfdem__solid__contact_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/contact_add_list_from_cohesive.h</label>
+        <link refid="contact__add__list__from__cohesive_8h"/>
+      </node>
+      <node id="3">
+        <label>/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/get_potentional_contact_couple.h</label>
+        <link refid="get__potentional__contact__couple_8h"/>
+      </node>
+      <node id="1">
+        <label>/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/openfdem_solid_contact.h</label>
+        <link refid="openfdem__solid__contact_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structcontact__type" prot="public">contact_type</innerclass>
+    <innerclass refid="struct_contact__structure" prot="public">Contact_structure</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="openfdem__solid__contact_8h_1a33b34b0b5e26b260dc771b8cdc178eb6" prot="public" static="no">
+        <type>struct <ref refid="struct_contact__structure" kindref="compound">Contact_structure</ref> *</type>
+        <definition>typedef struct Contact_structure* Contact</definition>
+        <argsstring></argsstring>
+        <name>Contact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/openfdem_solid_contact.h" line="21" column="33" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/openfdem_solid_contact.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>file<sp/>StructureDefinition.h<sp/><sp/>OPFDEM<sp/>data<sp/>base<sp/>description<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_OPENFDEM_STRUCTURE_CONTACT_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_OPENFDEM_STRUCTURE_CONTACT_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../common/openfdem_struct.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../common/openfdem_commom.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="structcontact__type" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="structcontact__type_1a87229c94446404e2843d198c8a04cdac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>UInt<sp/><ref refid="structcontact__type_1a87229c94446404e2843d198c8a04cdac" kindref="member">con_n</ref>;</highlight></codeline>
+<codeline lineno="12" refid="structcontact__type_1a61c716b1393b81ac4a6e43bf44d9ebbb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Int<sp/><ref refid="structcontact__type_1a61c716b1393b81ac4a6e43bf44d9ebbb" kindref="member">head</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>-1<sp/>is<sp/>full<sp/>occupied<sp/>otherwise<sp/>is<sp/>the<sp/>head<sp/>of<sp/>subcontact<sp/>id<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="structcontact__type_1a6b23f8246a30b3e4d14bdc526539aa05" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Int*<sp/><ref refid="structcontact__type_1a6b23f8246a30b3e4d14bdc526539aa05" kindref="member">hold</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>[con_n]<sp/>hold<sp/>to<sp/>store<sp/>adjustable<sp/>array:<sp/>default<sp/>-2,<sp/>first<sp/>free<sp/>-1,<sp/>occupied<sp/>&gt;<sp/>-1<sp/>*/</highlight><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="14" refid="structcontact__type_1acf06c7ca957b4b918412cc86aad5e85d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Real*<sp/>sliding_distance[6];<sp/><sp/></highlight><highlight class="comment">/*<sp/>[con_n]<sp/>contact<sp/>sliding<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="structcontact__type_1af534b6a8ec3ea73e230a34d750158ee8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">*<sp/>sliding_state[6];<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>[con_n]<sp/>sliding<sp/>state<sp/>in<sp/>history,<sp/>only<sp/>for<sp/>dynamic<sp/>friction*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="structcontact__type_1aeb5ec02d03575c511d7cfafc980a1b85" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Int*<sp/><ref refid="structcontact__type_1aeb5ec02d03575c511d7cfafc980a1b85" kindref="member">target</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>[con_n]<sp/>target<sp/>element<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="structcontact__type_1adb1cd69935a36c9326ada27c10983260" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">*<sp/><ref refid="structcontact__type_1adb1cd69935a36c9326ada27c10983260" kindref="member">type</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>[con_n]<sp/>contact<sp/>type:<sp/>0-&gt;<sp/>edge-vertex<sp/>type;<sp/>1-&gt;<sp/>edge-edge<sp/>type*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="structcontact__type_1a5134e98b1ce2d281dd1edb621f4b8a28" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">*<sp/><ref refid="structcontact__type_1a5134e98b1ce2d281dd1edb621f4b8a28" kindref="member">slip_flag</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>[con_n]<sp/>slip<sp/>flag<sp/>from<sp/>cohesive<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}<sp/><ref refid="structcontact__type" kindref="compound">contact_type</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="openfdem__solid__contact_8h_1a33b34b0b5e26b260dc771b8cdc178eb6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_contact__structure" kindref="compound">Contact_structure</ref>*<sp/><ref refid="openfdem__solid__contact_8h_1a33b34b0b5e26b260dc771b8cdc178eb6" kindref="member">Contact</ref>;</highlight></codeline>
+<codeline lineno="22" refid="struct_contact__structure" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_contact__structure" kindref="compound">Contact_structure</ref></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24" refid="struct_contact__structure_1af33896ecf2bb06d80258f1f6d70b4a55" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>UInt<sp/><sp/><sp/><sp/><ref refid="struct_contact__structure_1af33896ecf2bb06d80258f1f6d70b4a55" kindref="member">n_contact</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*$<sp/>maximum<sp/>possible<sp/>number<sp/>of<sp/>contacting<sp/>couples,<sp/>default:<sp/>100000,<sp/>int<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="struct_contact__structure_1a6524566cafe51c9e9b0f5428fbab01ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal">*<sp/><ref refid="struct_contact__structure_1a6524566cafe51c9e9b0f5428fbab01ef" kindref="member">potentional_contact_element</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>[element-&gt;e_num]<sp/>default<sp/>0<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="struct_contact__structure_1a5bb0360a4f5103a4b188447adcd3abdf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structcontact__type" kindref="compound">contact_type</ref>*<sp/><ref refid="struct_contact__structure_1a5bb0360a4f5103a4b188447adcd3abdf" kindref="member">con</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28" refid="struct_contact__structure_1a665e659bf0472642283abf3de9f77b29" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Int<sp/><ref refid="struct_contact__structure_1a665e659bf0472642283abf3de9f77b29" kindref="member">detection_count</ref>;</highlight></codeline>
+<codeline lineno="29" refid="struct_contact__structure_1a35605c0e56c8435868473a33281a00e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Int<sp/><ref refid="struct_contact__structure_1a35605c0e56c8435868473a33281a00e5" kindref="member">contact_count</ref>;</highlight></codeline>
+<codeline lineno="30" refid="struct_contact__structure_1a5796d69629102c4f080d2f10caa97071" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>contact_detection<sp/><ref refid="struct_contact__structure_1a5796d69629102c4f080d2f10caa97071" kindref="member">detection</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>contact<sp/>detection<sp/>method<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="struct_contact__structure_1a586509c49ff7b1c94667cf02ae123250" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>contact_force<sp/><ref refid="struct_contact__structure_1a586509c49ff7b1c94667cf02ae123250" kindref="member">force_model</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0<sp/>default<sp/>munjiza<sp/>method,<sp/>1<sp/>new<sp/>method<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="struct_contact__structure_1ac13aafa5cec3a3e581e5ed5a45b95727" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Real<sp/><sp/><sp/><sp/><ref refid="struct_contact__structure_1ac13aafa5cec3a3e581e5ed5a45b95727" kindref="member">contact_trigger</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>travel<sp/>since<sp/>last<sp/>detection,read<sp/>from<sp/>function,default:<sp/>200<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="struct_contact__structure_1a068630376de057759c65bc2505b4a3af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Real<sp/><sp/><sp/><sp/><ref refid="struct_contact__structure_1a068630376de057759c65bc2505b4a3af" kindref="member">contact_buffer</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*$<sp/>buffer<sp/>zone<sp/>size,<sp/>in<sp/>element<sp/>size<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="struct_contact__structure_1ae00a685baf3cf86a3087ee63cb6dfb25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Real<sp/><ref refid="struct_contact__structure_1ae00a685baf3cf86a3087ee63cb6dfb25" kindref="member">fn</ref>;</highlight></codeline>
+<codeline lineno="35" refid="struct_contact__structure_1a20552ef27168a899bae6dfedaa2a965e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Real<sp/><ref refid="struct_contact__structure_1a20552ef27168a899bae6dfedaa2a965e" kindref="member">fs</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>!_OPENFDEM_STRUCTURE_CONTACT_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/openfdem_solid_contact.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_b5aa54d3c34adc2b5a1876613dfb7e39" kind="dir">
+    <compoundname>solid_mechanics_cohesive/sesmic</compoundname>
+    <innerfile refid="openfdem__sesmic_8h">openfdem_sesmic.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="solid_mechanics_cohesive/sesmic/"/>
+  </compounddef>
+</doxygen>

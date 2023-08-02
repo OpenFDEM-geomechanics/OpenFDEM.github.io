@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="openfdem__io__binary_8h" kind="file" language="C++">
+    <compoundname>openfdem_io_binary.h</compoundname>
+    <includes local="yes">../solve/openfdem.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>../solve/openfdem.h</label>
+      </node>
+      <node id="1">
+        <label>openfdem_io_binary.h</label>
+        <link refid="openfdem__io__binary_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="openfdem__io__binary_8h_1a9f13493c899dc95fb4fb944fb454264a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void openfdem_save_binary</definition>
+        <argsstring>(char *filename, struct OpenFDEM_structure openfdem)</argsstring>
+        <name>openfdem_save_binary</name>
+        <param>
+          <type>char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>struct OpenFDEM_structure</type>
+          <declname>openfdem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>filename openfdem_math.c</para>
+<para>author Xiaofeng Li <ulink url="mailto:xfli@whrsm.ac.cn">xfli@whrsm.ac.cn</ulink></para>
+<para>date creation: Fri Jun 18 2010 date last modification: Tue Sep 29 2020</para>
+<para>function: common math</para>
+<sect1 id="openfdem__time_8h_1LICENSE">
+<title>LICENSE</title>
+<para>This library is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation; either version 2.1 of the License, or (at your option) any later version.</para>
+<para>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details. </para>
+</sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_io_binary.h" line="30" column="6" declfile="openfdem_io_binary.h" declline="30" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__io__binary_8h_1abc396d9c716e0d426022599ce7360816" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void openfdem_restore_binary</definition>
+        <argsstring>(char *filename, struct OpenFDEM_structure openfdem)</argsstring>
+        <name>openfdem_restore_binary</name>
+        <param>
+          <type>char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>struct OpenFDEM_structure</type>
+          <declname>openfdem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_io_binary.h" line="32" column="6" declfile="openfdem_io_binary.h" declline="32" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_OPENFDEM_IO_BINARY_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_OPENFDEM_IO_BINARY_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../solve/openfdem.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="openfdem__io__binary_8h_1a9f13493c899dc95fb4fb944fb454264a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="openfdem__io__binary_8h_1a9f13493c899dc95fb4fb944fb454264a" kindref="member">openfdem_save_binary</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><sp/>OpenFDEM_structure<sp/>openfdem);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="openfdem__io__binary_8h_1abc396d9c716e0d426022599ce7360816" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="openfdem__io__binary_8h_1abc396d9c716e0d426022599ce7360816" kindref="member">openfdem_restore_binary</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><sp/>OpenFDEM_structure<sp/>openfdem);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>!_OPENFDEM_IO_BINARY_</highlight></codeline>
+    </programlisting>
+    <location file="openfdem_io_binary.h"/>
+  </compounddef>
+</doxygen>

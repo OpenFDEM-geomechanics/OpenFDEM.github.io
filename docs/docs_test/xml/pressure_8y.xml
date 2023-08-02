@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="pressure_8y" kind="file" language="C++">
+    <compoundname>pressure.y</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#general<sp/>comments<sp/>of<sp/>this<sp/>input<sp/>file!<sp/></highlight></codeline>
+<codeline><highlight class="normal">of.new</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">of.geometry.square<sp/>&apos;rock&apos;<sp/>0<sp/>1<sp/>0<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">of.geometry.cut.circle<sp/>&apos;hole&apos;<sp/>&apos;rock&apos;<sp/>0.5<sp/>0.5<sp/>0.1<sp/>70</highlight></codeline>
+<codeline><highlight class="normal">of.geometry.mesh.size<sp/>&apos;all&apos;<sp/>0.02</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">of.geometry.mesh<sp/>delaunay</highlight></codeline>
+<codeline><highlight class="normal">of.mesh.insert<sp/>&apos;all&apos;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">of.mat.element<sp/>&apos;all&apos;<sp/>ELASTIC<sp/>den<sp/>2000<sp/>E<sp/>30e9<sp/>v<sp/>0.3<sp/>damp<sp/>0.9</highlight></codeline>
+<codeline><highlight class="normal">of.mat.cohesive<sp/>&apos;all&apos;<sp/>EM<sp/>ten<sp/>10e6<sp/>coh<sp/>20e6<sp/>fric<sp/>0.3<sp/>GI<sp/>20<sp/>GII<sp/>40<sp/></highlight></codeline>
+<codeline><highlight class="normal">of.mat.contact<sp/>&apos;all&apos;<sp/>MC<sp/>fric<sp/>0.3</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">of.damp.global<sp/>0.7</highlight></codeline>
+<codeline><highlight class="normal">of.group.element.circle<sp/>&apos;excavation&apos;<sp/>0.5<sp/>0.5<sp/>0.1</highlight></codeline>
+<codeline><highlight class="normal">of.group.nodal.plane<sp/>&apos;bottom&apos;<sp/>0.0<sp/>0.0<sp/>1.0<sp/>0.0</highlight></codeline>
+<codeline><highlight class="normal">of.group.nodal.plane<sp/>&apos;up&apos;<sp/>0.0<sp/>1.0<sp/>1.0<sp/>1.0</highlight></codeline>
+<codeline><highlight class="normal">of.group.nodal.plane<sp/>&apos;left&apos;<sp/>0.0<sp/>0.0<sp/>0.0<sp/>1.0</highlight></codeline>
+<codeline><highlight class="normal">of.group.nodal.plane<sp/>&apos;right&apos;<sp/>1.0<sp/>0.0<sp/>1.0<sp/>1.0</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">of.history.pv.interval<sp/>500</highlight></codeline>
+<codeline><highlight class="normal">of.history.pv.field<sp/>all</highlight></codeline>
+<codeline><highlight class="normal">of.history.pv.fracture<sp/>all</highlight></codeline>
+<codeline><highlight class="normal">of.history.pv.cohesive<sp/>all</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">of.boundary.pressure.normal<sp/>&apos;bottom&apos;<sp/>15e6</highlight></codeline>
+<codeline><highlight class="normal">of.boundary.pressure.normal<sp/>&apos;up&apos;<sp/>15e6</highlight></codeline>
+<codeline><highlight class="normal">of.boundary.pressure.normal<sp/>&apos;left&apos;<sp/>5e6</highlight></codeline>
+<codeline><highlight class="normal">of.boundary.pressure.normal<sp/>&apos;right&apos;<sp/>5e6</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">of.step<sp/>100000</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">of.boundary.excavation<sp/>&apos;excavation&apos;</highlight></codeline>
+<codeline><highlight class="normal">of.step<sp/>500000</highlight></codeline>
+<codeline><highlight class="normal">of.stop</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+    </programlisting>
+    <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/test/insitustress/pressure.y"/>
+  </compounddef>
+</doxygen>

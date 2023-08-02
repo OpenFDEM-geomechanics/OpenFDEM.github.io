@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structenergy__type" kind="struct" language="C++" prot="public">
+    <compoundname>energy_type</compoundname>
+    <includes refid="openfdem__general_8h" local="no">openfdem_general.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structenergy__type_1a7d79443f2999a6e25f2da44cb823525c" prot="public" static="no" mutable="no">
+        <type><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref></type>
+        <definition>Real external_work</definition>
+        <argsstring></argsstring>
+        <name>external_work</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="7" column="6" bodyfile="openfdem_general.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structenergy__type_1aa5a9ec4fa82f97b2fdbe2e74048a5e7c" prot="public" static="no" mutable="no">
+        <type><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref></type>
+        <definition>Real internal_energy</definition>
+        <argsstring></argsstring>
+        <name>internal_energy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="8" column="6" bodyfile="openfdem_general.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structenergy__type_1a944a81c904252c23f10c825a5bbd49c4" prot="public" static="no" mutable="no">
+        <type><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref></type>
+        <definition>Real gravity_energy</definition>
+        <argsstring></argsstring>
+        <name>gravity_energy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="9" column="6" bodyfile="openfdem_general.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structenergy__type_1a5bf6633ec393fe6f574d77f46ee87714" prot="public" static="no" mutable="no">
+        <type><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref></type>
+        <definition>Real kinetic_energy</definition>
+        <argsstring></argsstring>
+        <name>kinetic_energy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="10" column="6" bodyfile="openfdem_general.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structenergy__type_1a1d7926047566cebf53a2dc18eaf04ada" prot="public" static="no" mutable="no">
+        <type><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref></type>
+        <definition>Real damping_energy</definition>
+        <argsstring></argsstring>
+        <name>damping_energy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="11" column="6" bodyfile="openfdem_general.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structenergy__type_1a28a5f8e86978a4ee2e2367e9cecf6c16" prot="public" static="no" mutable="no">
+        <type><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref></type>
+        <definition>Real absorbing_energy</definition>
+        <argsstring></argsstring>
+        <name>absorbing_energy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="12" column="6" bodyfile="openfdem_general.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structenergy__type_1a242361f186234e7ea6d3d3b0f3a2d9dd" prot="public" static="no" mutable="no">
+        <type><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref></type>
+        <definition>Real contact_energy</definition>
+        <argsstring></argsstring>
+        <name>contact_energy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="13" column="6" bodyfile="openfdem_general.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structenergy__type_1aaa16389224efa0fe55da45ec55413948" prot="public" static="no" mutable="no">
+        <type><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref></type>
+        <definition>Real contact_nenergy</definition>
+        <argsstring></argsstring>
+        <name>contact_nenergy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="14" column="6" bodyfile="openfdem_general.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structenergy__type_1a6025dde206c140844469770801c00f87" prot="public" static="no" mutable="no">
+        <type><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref></type>
+        <definition>Real element_energy</definition>
+        <argsstring></argsstring>
+        <name>element_energy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="15" column="6" bodyfile="openfdem_general.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structenergy__type_1a8d43a6a8121b8b8db16d5c80b589ba1e" prot="public" static="no" mutable="no">
+        <type><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref></type>
+        <definition>Real cohesive_energy</definition>
+        <argsstring></argsstring>
+        <name>cohesive_energy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="16" column="6" bodyfile="openfdem_general.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="openfdem_general.h" line="6" column="1" bodyfile="openfdem_general.h" bodystart="6" bodyend="17"/>
+    <listofallmembers>
+      <member refid="structenergy__type_1a28a5f8e86978a4ee2e2367e9cecf6c16" prot="public" virt="non-virtual"><scope>energy_type</scope><name>absorbing_energy</name></member>
+      <member refid="structenergy__type_1a8d43a6a8121b8b8db16d5c80b589ba1e" prot="public" virt="non-virtual"><scope>energy_type</scope><name>cohesive_energy</name></member>
+      <member refid="structenergy__type_1a242361f186234e7ea6d3d3b0f3a2d9dd" prot="public" virt="non-virtual"><scope>energy_type</scope><name>contact_energy</name></member>
+      <member refid="structenergy__type_1aaa16389224efa0fe55da45ec55413948" prot="public" virt="non-virtual"><scope>energy_type</scope><name>contact_nenergy</name></member>
+      <member refid="structenergy__type_1a1d7926047566cebf53a2dc18eaf04ada" prot="public" virt="non-virtual"><scope>energy_type</scope><name>damping_energy</name></member>
+      <member refid="structenergy__type_1a6025dde206c140844469770801c00f87" prot="public" virt="non-virtual"><scope>energy_type</scope><name>element_energy</name></member>
+      <member refid="structenergy__type_1a7d79443f2999a6e25f2da44cb823525c" prot="public" virt="non-virtual"><scope>energy_type</scope><name>external_work</name></member>
+      <member refid="structenergy__type_1a944a81c904252c23f10c825a5bbd49c4" prot="public" virt="non-virtual"><scope>energy_type</scope><name>gravity_energy</name></member>
+      <member refid="structenergy__type_1aa5a9ec4fa82f97b2fdbe2e74048a5e7c" prot="public" virt="non-virtual"><scope>energy_type</scope><name>internal_energy</name></member>
+      <member refid="structenergy__type_1a5bf6633ec393fe6f574d77f46ee87714" prot="public" virt="non-virtual"><scope>energy_type</scope><name>kinetic_energy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

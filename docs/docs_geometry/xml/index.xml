@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.2" xml:lang="en-US">
+  <compound refid="structgeo__curve__type" kind="struct"><name>geo_curve_type</name>
+    <member refid="structgeo__curve__type_1a69c10e7cc243f2a29fd63e7cebaa18c6" kind="variable"><name>n_line</name></member>
+    <member refid="structgeo__curve__type_1a4484019599ee1e91ad0602c63cdfab9a" kind="variable"><name>line</name></member>
+  </compound>
+  <compound refid="structgeo__group__type" kind="struct"><name>geo_group_type</name>
+    <member refid="structgeo__group__type_1a7bb5e40c10df6a41df64bda1f4bb3e26" kind="variable"><name>tag</name></member>
+    <member refid="structgeo__group__type_1a439227feff9d7f55384e8780cfc2eb82" kind="variable"><name>size</name></member>
+    <member refid="structgeo__group__type_1a43a1d2286bbb11edc0c83ec8588dd81d" kind="variable"><name>line_size</name></member>
+    <member refid="structgeo__group__type_1a8911fbf6bb4f415d909d4d853951fb69" kind="variable"><name>new_dfn_size</name></member>
+    <member refid="structgeo__group__type_1a249af15d8db761707a936222aa812000" kind="variable"><name>embed_id</name></member>
+    <member refid="structgeo__group__type_1a3baa70ec5aa9904400db2d0d171965d1" kind="variable"><name>nodes</name></member>
+    <member refid="structgeo__group__type_1a7fab614ffcc2243527b1708a8f51413c" kind="variable"><name>lines</name></member>
+    <member refid="structgeo__group__type_1ab7065a9c98649b87d2e5b8697c9f6653" kind="variable"><name>new_dfn</name></member>
+  </compound>
+  <compound refid="structgeo__line__type" kind="struct"><name>geo_line_type</name>
+    <member refid="structgeo__line__type_1a443519726cbe3c4f2b2fe1d42ce2fd2f" kind="variable"><name>group</name></member>
+    <member refid="structgeo__line__type_1a5af46ae509897be4d3fc85b0a66a9b85" kind="variable"><name>embed</name></member>
+    <member refid="structgeo__line__type_1a249af15d8db761707a936222aa812000" kind="variable"><name>embed_id</name></member>
+    <member refid="structgeo__line__type_1adb59b30b743ea4c3e94d6eab9a707e98" kind="variable"><name>node_1</name></member>
+    <member refid="structgeo__line__type_1a4694cfb4f513f9569d393754d43aadca" kind="variable"><name>node_2</name></member>
+  </compound>
+  <compound refid="structgeo__node__type" kind="struct"><name>geo_node_type</name>
+    <member refid="structgeo__node__type_1ac2e288ebffee7f8ca19c46021f4d38f0" kind="variable"><name>x</name></member>
+    <member refid="structgeo__node__type_1a18279dd4d4460f2130f7a45358c14ffa" kind="variable"><name>y</name></member>
+    <member refid="structgeo__node__type_1a2c288eb0239f736aeab2f219f89465b3" kind="variable"><name>z</name></member>
+    <member refid="structgeo__node__type_1a03832aeb7bafb1c4edbdad1d751c0ce1" kind="variable"><name>mesh_size</name></member>
+  </compound>
+  <compound refid="structgeo__surface__type" kind="struct"><name>geo_surface_type</name>
+    <member refid="structgeo__surface__type_1a7bb5e40c10df6a41df64bda1f4bb3e26" kind="variable"><name>tag</name></member>
+    <member refid="structgeo__surface__type_1a249af15d8db761707a936222aa812000" kind="variable"><name>embed_id</name></member>
+    <member refid="structgeo__surface__type_1a203cad6c1d156c5b13542a9d43d5c1c8" kind="variable"><name>n_curve</name></member>
+    <member refid="structgeo__surface__type_1a5af46ae509897be4d3fc85b0a66a9b85" kind="variable"><name>embed</name></member>
+    <member refid="structgeo__surface__type_1a0835cab529b42eb94a7edc7c488d3176" kind="variable"><name>curve</name></member>
+  </compound>
+  <compound refid="struct_geometry__structure" kind="struct"><name>Geometry_structure</name>
+    <member refid="struct_geometry__structure_1a2a4bf87da850c2a946589606b2e33157" kind="variable"><name>x0</name></member>
+    <member refid="struct_geometry__structure_1a9f8ab274622c752bf9c42239dbfcaa57" kind="variable"><name>x1</name></member>
+    <member refid="struct_geometry__structure_1a3cb46d6ef5dc4a7a7f9d9ea878a0416f" kind="variable"><name>y0</name></member>
+    <member refid="struct_geometry__structure_1ae5fa2dd3f8ae2b7ab94fa7763814de8a" kind="variable"><name>y1</name></member>
+    <member refid="struct_geometry__structure_1a1031e2d9442cf1ca3e2940e55915002f" kind="variable"><name>node_num</name></member>
+    <member refid="struct_geometry__structure_1a7661b5d028be7f8997cef563e3890fd9" kind="variable"><name>line_num</name></member>
+    <member refid="struct_geometry__structure_1af7dec937890d29a2a14bf3319c80f434" kind="variable"><name>curve_num</name></member>
+    <member refid="struct_geometry__structure_1a0c03902411c5ca887f80f8ee24755127" kind="variable"><name>surface_num</name></member>
+    <member refid="struct_geometry__structure_1a79a0708d6232a4da8bd2ec61d25d03c8" kind="variable"><name>group_num</name></member>
+    <member refid="struct_geometry__structure_1aed4a04a50a15bbcae42f888d2d924456" kind="variable"><name>mesh_size</name></member>
+    <member refid="struct_geometry__structure_1a53bc379b42af1f82cf34cc212e775ff9" kind="variable"><name>min_size</name></member>
+    <member refid="struct_geometry__structure_1ad869241cf9e4fbd49c1f149ea3a133d7" kind="variable"><name>node</name></member>
+    <member refid="struct_geometry__structure_1a7d5092b4f53228e0064319cc026a6ed5" kind="variable"><name>line</name></member>
+    <member refid="struct_geometry__structure_1a36787e03f34e0f0455b65e39fc46446f" kind="variable"><name>curve</name></member>
+    <member refid="struct_geometry__structure_1a29ef6353b8c7d59dff7813922153780b" kind="variable"><name>surface</name></member>
+    <member refid="struct_geometry__structure_1ad8fca796901e5346ec8d05e91328c3f6" kind="variable"><name>group</name></member>
+  </compound>
+  <compound refid="openfdem__geometry_8h" kind="file"><name>openfdem_geometry.h</name>
+    <member refid="openfdem__geometry_8h_1ab67dd7104bf7c8eb317017e007ddd41f" kind="typedef"><name>Geometry</name></member>
+  </compound>
+  <compound refid="push__geometry_8h" kind="file"><name>push_geometry.h</name>
+    <member refid="push__geometry_8h_1aa07129431ef93c15740a4fb4e83da73b" kind="function"><name>push_geometry_square</name></member>
+    <member refid="push__geometry_8h_1a38b023073fd75a8da3b28b0e4d03a75c" kind="function"><name>push_geometry_polygon</name></member>
+    <member refid="push__geometry_8h_1adbac6c8305a4f9ffa4360ced7691947b" kind="function"><name>push_geometry_table</name></member>
+    <member refid="push__geometry_8h_1a2664cd9e9936a8e3bbf83fae7533e138" kind="function"><name>push_geometry_circle</name></member>
+    <member refid="push__geometry_8h_1addc6a9d4bc9884e5c1e1312ad993cb66" kind="function"><name>push_geometry_ellipse</name></member>
+    <member refid="push__geometry_8h_1a5e3ba05cf9613e1c1b78c1fef4c4eaff" kind="function"><name>push_geometry_arc</name></member>
+    <member refid="push__geometry_8h_1a175a65591d8eaefd14c1b2da7c98ff40" kind="function"><name>push_geometry_joint</name></member>
+    <member refid="push__geometry_8h_1aa1dbfb2710de7d5f6babaf126206d05f" kind="function"><name>push_geometry_jset</name></member>
+    <member refid="push__geometry_8h_1acaa9f483cdd49bba0d5c18c48a9e2996" kind="function"><name>push_geometry_DFN</name></member>
+    <member refid="push__geometry_8h_1a32bc329ffd2294fb10e1cfbd01ca584b" kind="function"><name>get_geo_node_group_square</name></member>
+    <member refid="push__geometry_8h_1a927a2a2c87ae4a5fd227faed8d7c916e" kind="function"><name>get_geo_node_group_square_on</name></member>
+    <member refid="push__geometry_8h_1ac6aba3d06d8410e27f57e7a4023565ca" kind="function"><name>get_geo_node_group_plane_left</name></member>
+    <member refid="push__geometry_8h_1af441b90f6f1a7ada53ee965b48c458a7" kind="function"><name>get_geo_node_group_plane_right</name></member>
+    <member refid="push__geometry_8h_1abbb6383a4b58b84f2875ccb060135fce" kind="function"><name>get_geo_node_group_plane</name></member>
+    <member refid="push__geometry_8h_1a124baa24e3c7da6b8b9b87d83267672c" kind="function"><name>get_geo_node_group_circle_inner</name></member>
+    <member refid="push__geometry_8h_1a56dfe8db99e6cdb7782873189abd089b" kind="function"><name>get_geo_node_group_circle_outer</name></member>
+    <member refid="push__geometry_8h_1a8a39077d1432c29ee432d910c8055df8" kind="function"><name>get_geo_node_group_circle</name></member>
+    <member refid="push__geometry_8h_1a64b81c7be3fc8fc70239bf9aaf04bb79" kind="function"><name>push_mesh_size</name></member>
+    <member refid="push__geometry_8h_1a8ead1f3fe95d0f4ce5792397d0ca2d7e" kind="function"><name>gmsh_api</name></member>
+    <member refid="push__geometry_8h_1a60f13669103c0495e905b6bb7f82a65b" kind="function"><name>geometry_free</name></member>
+    <member refid="push__geometry_8h_1a7c40e38ee8bb79f423463a011c81bf51" kind="function"><name>push_geometry_rdfns</name></member>
+  </compound>
+  <compound refid="dir_405fd32de3649961a5f009c7a3fe84df" kind="dir"><name>/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src</name>
+  </compound>
+</doxygenindex>

@@ -1,0 +1,198 @@
+Create Uniaxial Compression Test
+########################################
+Uniaxial compression test is one of the most fundamental tests that will be used to get the material properties 
+from the experimental stress-strain curve.
+
+.. figure:: ../../images/Desmos/UCS.png
+    :alt: Geometry of the uniaxial compression test
+    :align: center
+    :scale: 80%
+
+    Figure 1: Geometry of the uniaxial compression strength test
+
+|
+
+==================================
+1.0 Main Steps
+==================================
+
+#. Initialize the model.
+#. Create the geometry and the mesh
+#. Assign material properties.
+#. Create the group and assign boundary conditions.
+#. Set the outputs.
+
+==================================
+2.0 Codes
+==================================
+Please note that, all the setting in the example is based on the developer's computer. You may need to change 
+these setting based on your own conditions.
+
+To start with programming, create a new empty text file (later add the `.of` extension). Begin writing the following commands:
+
+-------------------------------------------------------------------
+2.1 Initialize the model
+-------------------------------------------------------------------
+#. Create a new run and clean up the old memories.
+    .. literalinclude:: ../../../src/examples/CreateUniaxialCompressionTest/runme.of
+        :lines: 39
+#. Set up the folder name to save your results. Here the folder name is set to be “result”.
+    .. literalinclude:: ../../../src/examples/CreateUniaxialCompressionTest/runme.of
+        :lines: 43
+#. Set the interval of logging in the log file. This example uses the default interval 2000 steps.
+    .. literalinclude:: ../../../src/examples/CreateUniaxialCompressionTest/runme.of
+        :lines: 46
+#. Set the number of cores to be used for running this model.
+    .. warning::
+        In this example, 15 cores will be used for running. To prevent the crushing of your computer, please 
+        check your computer to fill in the number of cores you want to use from your computer. To check the number 
+        of cores your computer has, you can go Task Manager > Performance > CPU > Cores. If nothing is set here, 
+        serial computing will be used.
+    .. literalinclude:: ../../../src/examples/CreateUniaxialCompressionTest/runme.of
+        :lines: 50
+
+-------------------------------------------------------------------
+2.2 Create the geometry and the mesh
+-------------------------------------------------------------------
+#. See Figure 1 for the UCS test setup and draw the corresponding geometry.
+    .. note::
+        The following three methods can be used to create the geometry:
+            1. xmin x_minvalue  xmax x_maxvalue  ymin y_minvalue  ymax y_maxvalue
+            2. x [minvalue, maxvalue] y [minvalue, maxvalue]
+            3. [x_minvalue, x_maxvalue, y_minvalue, y_maxvalue]
+            
+        This example used all three methods for demonstration. Users may choose any format to create geometris.
+    .. literalinclude:: ../../../src/examples/CreateUniaxialCompressionTest/runme.of
+        :lines: 55, 57, 59
+#. Set the mesh size of the geometry and insert cohesive interfaces.
+    .. literalinclude:: ../../../src/examples/CreateUniaxialCompressionTest/runme.of
+        :lines: 61, 65, 68
+
+-------------------------------------------------------------------
+2.3 Assign Material Properties
+-------------------------------------------------------------------
+#. Set the material properties. For this test, the example uses the elastic constitutive model and assigned material for CZM and contact.
+    .. literalinclude:: ../../../src/examples/CreateUniaxialCompressionTest/runme.of
+        :lines: 72, 74, 76
+
+-------------------------------------------------------------------
+2.4 Create Groups and Assign Boundary Conditions
+-------------------------------------------------------------------
+#. Group the nodes to prepare for the next step.
+    .. literalinclude:: ../../../src/examples/CreateUniaxialCompressionTest/runme.of
+        :lines: 81-82
+#. Assign the nodal boundaries. For uniaxial test, top and bottom platens are moving toward the sample the compress the sample, so platens are not moving in the x direction and moving with 0.05 m/s in the y direction.
+    .. literalinclude:: ../../../src/examples/CreateUniaxialCompressionTest/runme.of
+        :lines: 86-87
+
+-------------------------------------------------------------------
+2.5 Set the Outputs
+-------------------------------------------------------------------
+#. Set the output interval to be every 5000 steps and output all fields variables and fracture variables. Control the output interval to a reasonable size could shorten the computation time but get a good understanding of the model.
+    .. literalinclude:: ../../../src/examples/CreateUniaxialCompressionTest/runme.of
+        :lines: 91, 93-94
+#. Timestep can be fixed to 5e-9 in this example to accelerate the calculation in this example, but the default time step is recommended to use.
+    .. literalinclude:: ../../../src/examples/CreateUniaxialCompressionTest/runme.of
+        :lines: 100
+#. The program will run 500000 steps in total. In other words, it will output 60 files for reference.
+    .. literalinclude:: ../../../src/examples/CreateUniaxialCompressionTest/runme.of
+        :lines: 102
+#. Finalize the model and clear all the temporary memories.
+    .. literalinclude:: ../../../src/examples/CreateUniaxialCompressionTest/runme.of
+        :lines: 104
+#. Save the notepad and double click the .of file to run the program.
+
+==================================
+3.0 Run the Program
+==================================
+When you run the program, you can first check the mesh that was created by Gmsh as shown in Figure 2. If the mesh has a good quality, you can close the window to continue run the program.
+
+.. figure:: ../../images/Gmsh/UCS_test.png
+    :alt: Mesh of the sample
+    :align: center
+    :scale: 80%
+
+    Figure 2: Mesh created by Gmsh
+
+|
+
+The mesh is using triangle elements.
+
+.. figure:: ../../images/Command/UCS_T3.png
+    :alt: Triangle elements
+    :align: center
+    :scale: 80%
+
+    Figure 3: Check the mesh setting from command window
+
+|
+
+Material properties you set on step 3.7 will be shown on the screen. You can confirm it while the program just starts to run.
+
+.. figure:: ../../images/Command/UCS_Material.png
+    :alt: Material assignment
+    :align: center
+    :scale: 55%
+
+    Figure 4: Check the material assignment from command window
+
+|
+
+Furthermore, node boundaries are shown at the header of the program.
+
+.. figure:: ../../images/Command/UCS_bondaries.PNG
+    :alt: Boundary information
+    :align: center
+    :scale: 55% 
+
+    Figure 5: Check the boundary information from command window   
+
+|
+
+Global timestep is shown here.
+
+.. figure:: ../../images/Command/UCS_timesteps.png
+    :alt: Timesteps
+    :align: center
+    :scale: 55%
+
+    Figure 6: Check the timesteps from command window   
+
+|
+
+Start to run the program. Results are logged for every 2000 steps.
+
+.. figure:: ../../images/Command/UCS_run.png
+    :alt: Start to run the program
+    :align: center
+    :scale: 55%
+
+    Figure 7: Start to run the program
+
+|
+
+==================================
+4.0 Results
+==================================
+The stress and displacement results here are for reference.
+
+
+
+==================================
+5.0 Full Script
+==================================
+
+- `UCS_test.of`_ (click to download from Gitlab)
+
+.. _UCS_test.of: http://geogroup.utoronto.ca:9191/gitlab/xiaofeng.li/openfdem_solver/-/blob/main/openfdem%20src/src/test/UCS%20by%20gmsh/example_UCS.geo
+
+    .. literalinclude:: ../../../src/examples/CreateUniaxialCompressionTest/runme.of
+        :lines: 36-104
+
+
+
+
+
+
+
+

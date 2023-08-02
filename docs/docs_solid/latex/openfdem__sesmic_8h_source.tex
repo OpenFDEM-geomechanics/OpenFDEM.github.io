@@ -1,0 +1,30 @@
+\hypertarget{openfdem__sesmic_8h_source}{}\doxysection{openfdem\+\_\+sesmic.\+h}
+\label{openfdem__sesmic_8h_source}\index{/Users/ekaterinaossetchkina/CProjects/openfdem\_solver/openfdem src/src/solid/solid\_mechanics\_cohesive/sesmic/openfdem\_sesmic.h@{/Users/ekaterinaossetchkina/CProjects/openfdem\_solver/openfdem src/src/solid/solid\_mechanics\_cohesive/sesmic/openfdem\_sesmic.h}}
+\mbox{\hyperlink{openfdem__sesmic_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* file StructureDefinition.h  OPFDEM data base description */}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#ifndef \_OPENFDEM\_STRUCTURE\_SESMIC\_}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#define \_OPENFDEM\_STRUCTURE\_SESMIC\_}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{15 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{16     Real \mbox{\hyperlink{structae__type_a33447f96f00d708dd345d6eb79c95d41}{time}};}
+\DoxyCodeLine{17     Real \mbox{\hyperlink{structae__type_a56aeb9eee647d8c929a011a59de85060}{win\_time}};}
+\DoxyCodeLine{18     Real \mbox{\hyperlink{structae__type_a987619bded1129f41cde7f69d186bcb3}{win\_kinetic}};}
+\DoxyCodeLine{19     Real \mbox{\hyperlink{structae__type_ac89131097011516f99d838765bc29776}{kinetic}};}
+\DoxyCodeLine{20     Real \mbox{\hyperlink{structae__type_a5f5bc31fc9db8238af896bec88491bc9}{magnitue}};}
+\DoxyCodeLine{21     UInt \mbox{\hyperlink{structae__type_aaca16c96f43b7c4d55119bcdd9367993}{coele}};  \textcolor{comment}{//link to cohsive element}}
+\DoxyCodeLine{22 \} \mbox{\hyperlink{structae__type}{ae\_type}};}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_seismic__structure}{Seismic\_structure}}* \mbox{\hyperlink{openfdem__sesmic_8h_a8c7e3c7bb8d8e2e49aecc14d78fbb769}{Seismic}};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{35 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_seismic__structure}{Seismic\_structure}}}
+\DoxyCodeLine{36 \{   UInt  \mbox{\hyperlink{struct_seismic__structure_af53cf0cd3c3c5544139081f986383fa8}{method}};               \textcolor{comment}{/*\$ flag for using alternative monitoring (=1: use), default: 0   1 use window detection method; 2 use the  instantaneous moment   */}}
+\DoxyCodeLine{37     Real  \mbox{\hyperlink{struct_seismic__structure_a903a0f30f4c8b928cb708416b9e12b87}{window}};    \textcolor{comment}{/*\$ maximum duration of monitoring window                 */}}
+\DoxyCodeLine{38     UInt \mbox{\hyperlink{struct_seismic__structure_a9a78e8b7ed8f17a742580423d3c6ed8a}{ae\_num}};}
+\DoxyCodeLine{39     \mbox{\hyperlink{structae__type}{ae\_type}}* \mbox{\hyperlink{struct_seismic__structure_ac6449077c66a159ebeb7e2a554be01cc}{ae}};}
+\DoxyCodeLine{40 \};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// !\_OPENFDEM\_STRUCTURE\_SESMIC\_}}
+\DoxyCodeLine{43 }
+
+\end{DoxyCode}

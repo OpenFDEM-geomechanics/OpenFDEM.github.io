@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="solid__mechanics__transverse__triangle_8h" kind="file" language="C++">
+    <compoundname>solid_mechanics_transverse_triangle.h</compoundname>
+    <includes local="yes">../../solve/openfdem.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>../../solve/openfdem.h</label>
+      </node>
+      <node id="1">
+        <label>/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics/solid_mechanics_transverse_triangle.h</label>
+        <link refid="solid__mechanics__transverse__triangle_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="solid__mechanics__transverse__triangle_8h_1a092d2727f55d06996a5c52aa4c74942e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Solid_mechanics_transverse_triangle</definition>
+        <argsstring>(Element element, Solidmat solidmat, General general, UInt elementid, Nodal nodal)</argsstring>
+        <name>Solid_mechanics_transverse_triangle</name>
+        <param>
+          <type><ref refid="openfdem__solid_8h_1af26d43ea4cd21d871010e3de16a6109d" kindref="member">Element</ref></type>
+          <declname>element</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__mat_8h_1a10eec44786d5659964548a8edabef182" kindref="member">Solidmat</ref></type>
+          <declname>solidmat</declname>
+        </param>
+        <param>
+          <type>General</type>
+          <declname>general</declname>
+        </param>
+        <param>
+          <type>UInt</type>
+          <declname>elementid</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__nodal_8h_1a1df4c8cbf146294a06506197ddb4349a" kindref="member">Nodal</ref></type>
+          <declname>nodal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics/solid_mechanics_transverse_triangle.h" line="8" column="6" declfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics/solid_mechanics_transverse_triangle.h" declline="8" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"><sp/></highlight><highlight class="comment">/*<sp/>File<sp/><sp/><sp/>Openfdem_force_update.c<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_OPENFDEM_SOLID_MECHANICS_TRANSVERSE_TRIANGLE_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_OPENFDEM_SOLID_MECHANICS_TRANSVERSE_TRIANGLE_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../solve/openfdem.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="solid__mechanics__transverse__triangle_8h_1a092d2727f55d06996a5c52aa4c74942e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="solid__mechanics__transverse__triangle_8h_1a092d2727f55d06996a5c52aa4c74942e" kindref="member">Solid_mechanics_transverse_triangle</ref>(<sp/><sp/></highlight><highlight class="comment">/*<sp/>small<sp/>strain<sp/>elastic<sp/>triangle<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_element__structure" kindref="compound">Element</ref><sp/>element,<sp/><ref refid="struct_solid__mat__structure" kindref="compound">Solidmat</ref><sp/>solidmat,<sp/>General<sp/>general,<sp/>UInt<sp/>elementid,</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_nodal__structure" kindref="compound">Nodal</ref><sp/>nodal</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>!_OPENFDEM_SOLID_MECHANICS_TRANSVERSE_TRIANGLE_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics/solid_mechanics_transverse_triangle.h"/>
+  </compounddef>
+</doxygen>

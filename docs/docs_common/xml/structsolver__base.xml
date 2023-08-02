@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structsolver__base" kind="struct" language="C++" prot="public">
+    <compoundname>solver_base</compoundname>
+    <includes refid="openfdem__general_8h" local="no">openfdem_general.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsolver__base_1aedcea0717bffab7f7390cb19029a0f7b" prot="public" static="no" mutable="no">
+        <type><ref refid="openfdem__struct_8h_1a26ff0e0ab71ea1ed8bac401c56ed2242" kindref="member">UInt</ref></type>
+        <definition>UInt last_node_n</definition>
+        <argsstring></argsstring>
+        <name>last_node_n</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="20" column="6" bodyfile="openfdem_general.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsolver__base_1a3768f53ee8ac302d4698aa6074973c7a" prot="public" static="no" mutable="no">
+        <type><ref refid="openfdem__struct_8h_1a26ff0e0ab71ea1ed8bac401c56ed2242" kindref="member">UInt</ref></type>
+        <definition>UInt last_ele_n</definition>
+        <argsstring></argsstring>
+        <name>last_ele_n</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="21" column="6" bodyfile="openfdem_general.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsolver__base_1a0e83a0217e20c13a51d2af9b9588b5e0" prot="public" static="no" mutable="no">
+        <type><ref refid="openfdem__struct_8h_1a26ff0e0ab71ea1ed8bac401c56ed2242" kindref="member">UInt</ref></type>
+        <definition>UInt last_cohele_n</definition>
+        <argsstring></argsstring>
+        <name>last_cohele_n</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="22" column="6" bodyfile="openfdem_general.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsolver__base_1a5ad1eab5b7a631c43c15fe58c6075a90" prot="public" static="no" mutable="no">
+        <type><ref refid="openfdem__struct_8h_1a26ff0e0ab71ea1ed8bac401c56ed2242" kindref="member">UInt</ref></type>
+        <definition>UInt run_times</definition>
+        <argsstring></argsstring>
+        <name>run_times</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_general.h" line="23" column="6" bodyfile="openfdem_general.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="openfdem_general.h" line="19" column="1" bodyfile="openfdem_general.h" bodystart="19" bodyend="24"/>
+    <listofallmembers>
+      <member refid="structsolver__base_1a0e83a0217e20c13a51d2af9b9588b5e0" prot="public" virt="non-virtual"><scope>solver_base</scope><name>last_cohele_n</name></member>
+      <member refid="structsolver__base_1a3768f53ee8ac302d4698aa6074973c7a" prot="public" virt="non-virtual"><scope>solver_base</scope><name>last_ele_n</name></member>
+      <member refid="structsolver__base_1aedcea0717bffab7f7390cb19029a0f7b" prot="public" virt="non-virtual"><scope>solver_base</scope><name>last_node_n</name></member>
+      <member refid="structsolver__base_1a5ad1eab5b7a631c43c15fe58c6075a90" prot="public" virt="non-virtual"><scope>solver_base</scope><name>run_times</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

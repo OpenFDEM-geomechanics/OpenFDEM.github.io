@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="structcontact__type" kind="struct" language="C++" prot="public">
+    <compoundname>contact_type</compoundname>
+    <includes refid="openfdem__solid__contact_8h" local="no">openfdem_solid_contact.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcontact__type_1a87229c94446404e2843d198c8a04cdac" prot="public" static="no" mutable="no">
+        <type>UInt</type>
+        <definition>UInt con_n</definition>
+        <argsstring></argsstring>
+        <name>con_n</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/openfdem_solid_contact.h" line="11" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/openfdem_solid_contact.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontact__type_1a61c716b1393b81ac4a6e43bf44d9ebbb" prot="public" static="no" mutable="no">
+        <type>Int</type>
+        <definition>Int head</definition>
+        <argsstring></argsstring>
+        <name>head</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/openfdem_solid_contact.h" line="12" column="5" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/openfdem_solid_contact.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontact__type_1a6b23f8246a30b3e4d14bdc526539aa05" prot="public" static="no" mutable="no">
+        <type>Int *</type>
+        <definition>Int* hold</definition>
+        <argsstring></argsstring>
+        <name>hold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/openfdem_solid_contact.h" line="13" column="5" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/openfdem_solid_contact.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontact__type_1acf06c7ca957b4b918412cc86aad5e85d" prot="public" static="no" mutable="no">
+        <type>Real *</type>
+        <definition>Real* sliding_distance[6]</definition>
+        <argsstring>[6]</argsstring>
+        <name>sliding_distance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/openfdem_solid_contact.h" line="14" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/openfdem_solid_contact.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontact__type_1af534b6a8ec3ea73e230a34d750158ee8" prot="public" static="no" mutable="no">
+        <type>short *</type>
+        <definition>short* sliding_state[6]</definition>
+        <argsstring>[6]</argsstring>
+        <name>sliding_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/openfdem_solid_contact.h" line="15" column="7" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/openfdem_solid_contact.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontact__type_1aeb5ec02d03575c511d7cfafc980a1b85" prot="public" static="no" mutable="no">
+        <type>Int *</type>
+        <definition>Int* target</definition>
+        <argsstring></argsstring>
+        <name>target</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/openfdem_solid_contact.h" line="16" column="5" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/openfdem_solid_contact.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontact__type_1adb1cd69935a36c9326ada27c10983260" prot="public" static="no" mutable="no">
+        <type>short *</type>
+        <definition>short* type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/openfdem_solid_contact.h" line="17" column="7" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/openfdem_solid_contact.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcontact__type_1a5134e98b1ce2d281dd1edb621f4b8a28" prot="public" static="no" mutable="no">
+        <type>short *</type>
+        <definition>short* slip_flag</definition>
+        <argsstring></argsstring>
+        <name>slip_flag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/openfdem_solid_contact.h" line="18" column="7" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/openfdem_solid_contact.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/openfdem_solid_contact.h" line="9" column="1" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/openfdem_solid_contact.h" bodystart="9" bodyend="19"/>
+    <listofallmembers>
+      <member refid="structcontact__type_1a87229c94446404e2843d198c8a04cdac" prot="public" virt="non-virtual"><scope>contact_type</scope><name>con_n</name></member>
+      <member refid="structcontact__type_1a61c716b1393b81ac4a6e43bf44d9ebbb" prot="public" virt="non-virtual"><scope>contact_type</scope><name>head</name></member>
+      <member refid="structcontact__type_1a6b23f8246a30b3e4d14bdc526539aa05" prot="public" virt="non-virtual"><scope>contact_type</scope><name>hold</name></member>
+      <member refid="structcontact__type_1acf06c7ca957b4b918412cc86aad5e85d" prot="public" virt="non-virtual"><scope>contact_type</scope><name>sliding_distance</name></member>
+      <member refid="structcontact__type_1af534b6a8ec3ea73e230a34d750158ee8" prot="public" virt="non-virtual"><scope>contact_type</scope><name>sliding_state</name></member>
+      <member refid="structcontact__type_1a5134e98b1ce2d281dd1edb621f4b8a28" prot="public" virt="non-virtual"><scope>contact_type</scope><name>slip_flag</name></member>
+      <member refid="structcontact__type_1aeb5ec02d03575c511d7cfafc980a1b85" prot="public" virt="non-virtual"><scope>contact_type</scope><name>target</name></member>
+      <member refid="structcontact__type_1adb1cd69935a36c9326ada27c10983260" prot="public" virt="non-virtual"><scope>contact_type</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

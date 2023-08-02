@@ -1,0 +1,123 @@
+\hypertarget{openfdem__message_8h}{}\doxysection{openfdem\+\_\+message.\+h File Reference}
+\label{openfdem__message_8h}\index{openfdem\_message.h@{openfdem\_message.h}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{openfdem__message_8h_aaadd709519253eb98630b90a9508bb78}{Parse\+\_\+int}}(file,  x)~\{fscanf((file),\char`\"{}\%ld\char`\"{},((x)));\}
+\item 
+\#define \mbox{\hyperlink{openfdem__message_8h_ab6f5e66570130d1825298ace278b30ee}{Parse\+\_\+double}}(file,  x)~\{fscanf((file),\char`\"{}\%le\char`\"{},((x)));\}
+\item 
+\#define \mbox{\hyperlink{openfdem__message_8h_a92a7f031d57b3b70a0b87e045a56194e}{parse\+\_\+keyword}}(file,  x)~\{fscanf((file),\char`\"{}\%s\char`\"{},((x)));\}
+\item 
+\#define \mbox{\hyperlink{openfdem__message_8h_a6d4e34f3389d20725d1e2ce9f03e8dca}{Dump\+\_\+int}}(file,  x,  ndigit)~fprintf((file),(Int\+String\mbox{[}(ndigit)\mbox{]}),((x)));
+\item 
+\#define \mbox{\hyperlink{openfdem__message_8h_a6fdeed3b50d00dbd9b1900e0e75fe75b}{Dump\+\_\+double}}(file,  x,  ndigit)~fprintf((file),(Double\+String\mbox{[}((ndigit))\mbox{]}),(x));
+\item 
+\#define \mbox{\hyperlink{openfdem__message_8h_a03f3b55fbf24a53a66d5bc9731bcbecb}{dump\+\_\+string}}(file,  x)~\{fprintf((file),\char`\"{}\%s\char`\"{},(x));\}
+\item 
+\#define \mbox{\hyperlink{openfdem__message_8h_a6682ca6b5ec2e7bc5a38bbcba68f9696}{Dump\+\_\+statement}}(file,  x,  ndigit)~\{fprintf((file),(Char\+String\mbox{[}(ndigit)\mbox{]}),(x));\};
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{openfdem__message_8h_ac59fe315507b8fbec235cb32e31ccf6c}{dump\+\_\+message}} (char $\ast$c1)
+\item 
+void \mbox{\hyperlink{openfdem__message_8h_ae1d49ec5624757466f01b399ff39d9bc}{dump\+\_\+message\+\_\+keyword}} (char $\ast$c1, char $\ast$c2)
+\item 
+void \mbox{\hyperlink{openfdem__message_8h_a3909092e2e38f731a3babe15c106233e}{check\+\_\+parse\+\_\+status}} (FILE $\ast$checkfile, char $\ast$keyword)
+\item 
+void \mbox{\hyperlink{openfdem__message_8h_a79282509116fdde9eebf6a06b5a2d95d}{dump\+\_\+message\+\_\+mat}} (char $\ast$c1, int c2)
+\item 
+void \mbox{\hyperlink{openfdem__message_8h_a5c5d6763ea30cc913e708dfc0ee65e54}{dump\+\_\+message\+\_\+group}} (int n1, char $\ast$c1, char $\ast$c2)
+\item 
+void \mbox{\hyperlink{openfdem__message_8h_aade87e5c136db1457c5800dc6085379c}{dump\+\_\+message\+\_\+type2}} (int c2, char $\ast$c1)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{openfdem__message_8h_a6fdeed3b50d00dbd9b1900e0e75fe75b}\label{openfdem__message_8h_a6fdeed3b50d00dbd9b1900e0e75fe75b}} 
+\index{openfdem\_message.h@{openfdem\_message.h}!Dump\_double@{Dump\_double}}
+\index{Dump\_double@{Dump\_double}!openfdem\_message.h@{openfdem\_message.h}}
+\doxysubsubsection{\texorpdfstring{Dump\_double}{Dump\_double}}
+{\footnotesize\ttfamily \#define Dump\+\_\+double(\begin{DoxyParamCaption}\item[{}]{file,  }\item[{}]{x,  }\item[{}]{ndigit }\end{DoxyParamCaption})~fprintf((file),(Double\+String\mbox{[}((ndigit))\mbox{]}),(x));}
+
+\mbox{\Hypertarget{openfdem__message_8h_a6d4e34f3389d20725d1e2ce9f03e8dca}\label{openfdem__message_8h_a6d4e34f3389d20725d1e2ce9f03e8dca}} 
+\index{openfdem\_message.h@{openfdem\_message.h}!Dump\_int@{Dump\_int}}
+\index{Dump\_int@{Dump\_int}!openfdem\_message.h@{openfdem\_message.h}}
+\doxysubsubsection{\texorpdfstring{Dump\_int}{Dump\_int}}
+{\footnotesize\ttfamily \#define Dump\+\_\+int(\begin{DoxyParamCaption}\item[{}]{file,  }\item[{}]{x,  }\item[{}]{ndigit }\end{DoxyParamCaption})~fprintf((file),(Int\+String\mbox{[}(ndigit)\mbox{]}),((x)));}
+
+\mbox{\Hypertarget{openfdem__message_8h_a6682ca6b5ec2e7bc5a38bbcba68f9696}\label{openfdem__message_8h_a6682ca6b5ec2e7bc5a38bbcba68f9696}} 
+\index{openfdem\_message.h@{openfdem\_message.h}!Dump\_statement@{Dump\_statement}}
+\index{Dump\_statement@{Dump\_statement}!openfdem\_message.h@{openfdem\_message.h}}
+\doxysubsubsection{\texorpdfstring{Dump\_statement}{Dump\_statement}}
+{\footnotesize\ttfamily \#define Dump\+\_\+statement(\begin{DoxyParamCaption}\item[{}]{file,  }\item[{}]{x,  }\item[{}]{ndigit }\end{DoxyParamCaption})~\{fprintf((file),(Char\+String\mbox{[}(ndigit)\mbox{]}),(x));\};}
+
+\mbox{\Hypertarget{openfdem__message_8h_a03f3b55fbf24a53a66d5bc9731bcbecb}\label{openfdem__message_8h_a03f3b55fbf24a53a66d5bc9731bcbecb}} 
+\index{openfdem\_message.h@{openfdem\_message.h}!dump\_string@{dump\_string}}
+\index{dump\_string@{dump\_string}!openfdem\_message.h@{openfdem\_message.h}}
+\doxysubsubsection{\texorpdfstring{dump\_string}{dump\_string}}
+{\footnotesize\ttfamily \#define dump\+\_\+string(\begin{DoxyParamCaption}\item[{}]{file,  }\item[{}]{x }\end{DoxyParamCaption})~\{fprintf((file),\char`\"{}\%s\char`\"{},(x));\}}
+
+\mbox{\Hypertarget{openfdem__message_8h_ab6f5e66570130d1825298ace278b30ee}\label{openfdem__message_8h_ab6f5e66570130d1825298ace278b30ee}} 
+\index{openfdem\_message.h@{openfdem\_message.h}!Parse\_double@{Parse\_double}}
+\index{Parse\_double@{Parse\_double}!openfdem\_message.h@{openfdem\_message.h}}
+\doxysubsubsection{\texorpdfstring{Parse\_double}{Parse\_double}}
+{\footnotesize\ttfamily \#define Parse\+\_\+double(\begin{DoxyParamCaption}\item[{}]{file,  }\item[{}]{x }\end{DoxyParamCaption})~\{fscanf((file),\char`\"{}\%le\char`\"{},((x)));\}}
+
+\mbox{\Hypertarget{openfdem__message_8h_aaadd709519253eb98630b90a9508bb78}\label{openfdem__message_8h_aaadd709519253eb98630b90a9508bb78}} 
+\index{openfdem\_message.h@{openfdem\_message.h}!Parse\_int@{Parse\_int}}
+\index{Parse\_int@{Parse\_int}!openfdem\_message.h@{openfdem\_message.h}}
+\doxysubsubsection{\texorpdfstring{Parse\_int}{Parse\_int}}
+{\footnotesize\ttfamily \#define Parse\+\_\+int(\begin{DoxyParamCaption}\item[{}]{file,  }\item[{}]{x }\end{DoxyParamCaption})~\{fscanf((file),\char`\"{}\%ld\char`\"{},((x)));\}}
+
+\mbox{\Hypertarget{openfdem__message_8h_a92a7f031d57b3b70a0b87e045a56194e}\label{openfdem__message_8h_a92a7f031d57b3b70a0b87e045a56194e}} 
+\index{openfdem\_message.h@{openfdem\_message.h}!parse\_keyword@{parse\_keyword}}
+\index{parse\_keyword@{parse\_keyword}!openfdem\_message.h@{openfdem\_message.h}}
+\doxysubsubsection{\texorpdfstring{parse\_keyword}{parse\_keyword}}
+{\footnotesize\ttfamily \#define parse\+\_\+keyword(\begin{DoxyParamCaption}\item[{}]{file,  }\item[{}]{x }\end{DoxyParamCaption})~\{fscanf((file),\char`\"{}\%s\char`\"{},((x)));\}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{openfdem__message_8h_a3909092e2e38f731a3babe15c106233e}\label{openfdem__message_8h_a3909092e2e38f731a3babe15c106233e}} 
+\index{openfdem\_message.h@{openfdem\_message.h}!check\_parse\_status@{check\_parse\_status}}
+\index{check\_parse\_status@{check\_parse\_status}!openfdem\_message.h@{openfdem\_message.h}}
+\doxysubsubsection{\texorpdfstring{check\_parse\_status()}{check\_parse\_status()}}
+{\footnotesize\ttfamily void check\+\_\+parse\+\_\+status (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{checkfile,  }\item[{char $\ast$}]{keyword }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__message_8h_ac59fe315507b8fbec235cb32e31ccf6c}\label{openfdem__message_8h_ac59fe315507b8fbec235cb32e31ccf6c}} 
+\index{openfdem\_message.h@{openfdem\_message.h}!dump\_message@{dump\_message}}
+\index{dump\_message@{dump\_message}!openfdem\_message.h@{openfdem\_message.h}}
+\doxysubsubsection{\texorpdfstring{dump\_message()}{dump\_message()}}
+{\footnotesize\ttfamily void dump\+\_\+message (\begin{DoxyParamCaption}\item[{char $\ast$}]{c1 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__message_8h_a5c5d6763ea30cc913e708dfc0ee65e54}\label{openfdem__message_8h_a5c5d6763ea30cc913e708dfc0ee65e54}} 
+\index{openfdem\_message.h@{openfdem\_message.h}!dump\_message\_group@{dump\_message\_group}}
+\index{dump\_message\_group@{dump\_message\_group}!openfdem\_message.h@{openfdem\_message.h}}
+\doxysubsubsection{\texorpdfstring{dump\_message\_group()}{dump\_message\_group()}}
+{\footnotesize\ttfamily void dump\+\_\+message\+\_\+group (\begin{DoxyParamCaption}\item[{int}]{n1,  }\item[{char $\ast$}]{c1,  }\item[{char $\ast$}]{c2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__message_8h_ae1d49ec5624757466f01b399ff39d9bc}\label{openfdem__message_8h_ae1d49ec5624757466f01b399ff39d9bc}} 
+\index{openfdem\_message.h@{openfdem\_message.h}!dump\_message\_keyword@{dump\_message\_keyword}}
+\index{dump\_message\_keyword@{dump\_message\_keyword}!openfdem\_message.h@{openfdem\_message.h}}
+\doxysubsubsection{\texorpdfstring{dump\_message\_keyword()}{dump\_message\_keyword()}}
+{\footnotesize\ttfamily void dump\+\_\+message\+\_\+keyword (\begin{DoxyParamCaption}\item[{char $\ast$}]{c1,  }\item[{char $\ast$}]{c2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__message_8h_a79282509116fdde9eebf6a06b5a2d95d}\label{openfdem__message_8h_a79282509116fdde9eebf6a06b5a2d95d}} 
+\index{openfdem\_message.h@{openfdem\_message.h}!dump\_message\_mat@{dump\_message\_mat}}
+\index{dump\_message\_mat@{dump\_message\_mat}!openfdem\_message.h@{openfdem\_message.h}}
+\doxysubsubsection{\texorpdfstring{dump\_message\_mat()}{dump\_message\_mat()}}
+{\footnotesize\ttfamily void dump\+\_\+message\+\_\+mat (\begin{DoxyParamCaption}\item[{char $\ast$}]{c1,  }\item[{int}]{c2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__message_8h_aade87e5c136db1457c5800dc6085379c}\label{openfdem__message_8h_aade87e5c136db1457c5800dc6085379c}} 
+\index{openfdem\_message.h@{openfdem\_message.h}!dump\_message\_type2@{dump\_message\_type2}}
+\index{dump\_message\_type2@{dump\_message\_type2}!openfdem\_message.h@{openfdem\_message.h}}
+\doxysubsubsection{\texorpdfstring{dump\_message\_type2()}{dump\_message\_type2()}}
+{\footnotesize\ttfamily void dump\+\_\+message\+\_\+type2 (\begin{DoxyParamCaption}\item[{int}]{c2,  }\item[{char $\ast$}]{c1 }\end{DoxyParamCaption})}
+

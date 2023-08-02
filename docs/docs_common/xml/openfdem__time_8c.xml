@@ -1,0 +1,391 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="openfdem__time_8c" kind="file" language="C++">
+    <compoundname>openfdem_time.c</compoundname>
+    <includes refid="openfdem__time_8h" local="yes">openfdem_time.h</includes>
+    <includes refid="openfdem__commom_8h" local="yes">openfdem_commom.h</includes>
+    <includes local="no">time.h</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="11">
+        <label>openfdem_enum.h</label>
+        <link refid="openfdem__enum_8h"/>
+      </node>
+      <node id="4">
+        <label>openfdem_commom.h</label>
+        <link refid="openfdem__commom_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>openfdem_message.h</label>
+        <link refid="openfdem__message_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>limits.h</label>
+      </node>
+      <node id="3">
+        <label>../solve/openfdem.h</label>
+      </node>
+      <node id="7">
+        <label>string.h</label>
+      </node>
+      <node id="9">
+        <label>signal.h</label>
+      </node>
+      <node id="13">
+        <label>time.h</label>
+      </node>
+      <node id="1">
+        <label>openfdem_time.c</label>
+        <link refid="openfdem__time_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>openfdem_time.h</label>
+        <link refid="openfdem__time_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>openfdem_struct.h</label>
+        <link refid="openfdem__struct_8h"/>
+      </node>
+      <node id="6">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="openfdem__time_8c_1ac1c7bc76dbfd8378fc96541a6243afd1" prot="public" static="no">
+        <name>TIME_SIZE</name>
+        <initializer>20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_time.c" line="31" column="9"/>
+      </memberdef>
+      <memberdef kind="define" id="openfdem__time_8c_1ac1c7bc76dbfd8378fc96541a6243afd1" prot="public" static="no">
+        <name>TIME_SIZE</name>
+        <initializer>40</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_time.c" line="52" column="9"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="openfdem__time_8c_1a18ddb3dd432f2e2a091b9f6f94754e3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void openfdem_date_time</definition>
+        <argsstring>(char *date_time)</argsstring>
+        <name>openfdem_date_time</name>
+        <param>
+          <type>char *</type>
+          <declname>date_time</declname>
+        </param>
+        <briefdescription>
+<para>filename <ref refid="openfdem__time_8c" kindref="compound">openfdem_time.c</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+<para>author Xiaofeng Li <ulink url="mailto:xfli@whrsm.ac.cn">xfli@whrsm.ac.cn</ulink></para>
+<para>date creation: Fri Jun 18 2010 date last modification: Tue Sep 29 2020</para>
+<para>function: time</para>
+<sect1 id="openfdem__tools_8h_1LICENSE">
+<title>LICENSE</title>
+<para>This library is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation; either version 2.1 of the License, or (at your option) any later version.</para>
+<para>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details. </para>
+</sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_time.c" line="29" column="6" bodyfile="openfdem_time.c" bodystart="29" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__time_8c_1a4c4ffdb1e5a1e0596f1524921e21f060" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void openfdem_stamp_time</definition>
+        <argsstring>(void)</argsstring>
+        <name>openfdem_stamp_time</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_time.c" line="50" column="6" bodyfile="openfdem_time.c" bodystart="50" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__time_8c_1a1b07d3af954eb77a4117b65eebb4ddfc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double openfdem_time_count</definition>
+        <argsstring>()</argsstring>
+        <name>openfdem_time_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_time.c" line="69" column="8" bodyfile="openfdem_time.c" bodystart="69" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="openfdem__time_8c_1a682fd84081777a662402eee63be7c422" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Openfdem_show_time</definition>
+        <argsstring>(General general, Nodal nodal, Contact contact)</argsstring>
+        <name>Openfdem_show_time</name>
+        <param>
+          <type><ref refid="openfdem__general_8h_1a7c262346c166dd2efb8d134d43f37b4d" kindref="member">General</ref></type>
+          <declname>general</declname>
+        </param>
+        <param>
+          <type>Nodal</type>
+          <declname>nodal</declname>
+        </param>
+        <param>
+          <type>Contact</type>
+          <declname>contact</declname>
+        </param>
+        <briefdescription>
+<para>filename <ref refid="openfdem__time_8h" kindref="compound">openfdem_time.h</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+<para>author Xiaofeng Li <ulink url="mailto:xfli@whrsm.ac.cn">xfli@whrsm.ac.cn</ulink></para>
+<para>date creation: Fri Jun 18 2010 date last modification: Tue Sep 29 2020</para>
+<para>function: time</para>
+<sect1 id="openfdem__tools_8h_1LICENSE">
+<title>LICENSE</title>
+<para>This library is free software; you can redistribute it and/or <linebreak/>
+ modify it under the terms of the GNU Lesser General Public <linebreak/>
+ License as published by the Free Software Foundation; either <linebreak/>
+ version 2.1 of the License, or (at your option) any later version. <linebreak/>
+</para>
+<para>This program is distributed in the hope that it will be useful, <linebreak/>
+ but WITHOUT ANY WARRANTY; without even the implied warranty of <linebreak/>
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU <linebreak/>
+ Lesser General Public License for more details. <linebreak/>
+ </para>
+</sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_time.c" line="95" column="6" bodyfile="openfdem_time.c" bodystart="95" bodyend="194"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="openfdem__time_8h" kindref="compound">openfdem_time.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="openfdem__commom_8h" kindref="compound">openfdem_commom.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="openfdem__time_8c_1a18ddb3dd432f2e2a091b9f6f94754e3b" kindref="member">openfdem_date_time</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>date_time)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TIME_SIZE<sp/>20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>time_t<sp/>rawtime;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">tm*<sp/>timeinfo;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>timebuffer[<ref refid="openfdem__time_8c_1ac1c7bc76dbfd8378fc96541a6243afd1" kindref="member">TIME_SIZE</ref>];</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>time(&amp;rawtime);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>timeinfo<sp/>=<sp/>localtime(&amp;rawtime);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>len<sp/>=<sp/>strftime(timebuffer,<sp/><ref refid="openfdem__time_8c_1ac1c7bc76dbfd8378fc96541a6243afd1" kindref="member">TIME_SIZE</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%d-%m-%Y<sp/>%X&quot;</highlight><highlight class="normal">,<sp/>timeinfo);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(len<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcpy(timebuffer,<sp/></highlight><highlight class="stringliteral">&quot;\0&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>strcpy(date_time,<sp/>timebuffer);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>TIME_SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>openfdem_stamp_time<sp/>prints<sp/>the<sp/>current<sp/>YMDHMS<sp/>date<sp/>as<sp/>a<sp/>time<sp/>stamp.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="openfdem__time_8c_1a4c4ffdb1e5a1e0596f1524921e21f060" kindref="member">openfdem_stamp_time</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TIME_SIZE<sp/>40</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>time_t<sp/>rawtime;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">tm*<sp/>timeinfo;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>timebuffer[<ref refid="openfdem__time_8c_1ac1c7bc76dbfd8378fc96541a6243afd1" kindref="member">TIME_SIZE</ref>];</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>time(&amp;rawtime);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>timeinfo<sp/>=<sp/>localtime(&amp;rawtime);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>len<sp/>=<sp/>strftime(timebuffer,<sp/><ref refid="openfdem__time_8c_1ac1c7bc76dbfd8378fc96541a6243afd1" kindref="member">TIME_SIZE</ref>,<sp/></highlight><highlight class="stringliteral">&quot;%d<sp/>%B<sp/>%Y<sp/>%I:%M:%S<sp/>%p&quot;</highlight><highlight class="normal">,<sp/>timeinfo);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(len<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcpy(timebuffer,<sp/></highlight><highlight class="stringliteral">&quot;\0&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%s\n&quot;</highlight><highlight class="normal">,<sp/>timebuffer);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>TIME_SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="openfdem__time_8c_1a1b07d3af954eb77a4117b65eebb4ddfc" kindref="member">openfdem_time_count</ref>()</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>idtime<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>clock_t<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>timeinit,<sp/>timelast;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>clock_t<sp/>timecurrent;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>runtime<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>runtime<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(idtime<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timeinit<sp/>=<sp/>clock();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timelast<sp/>=<sp/>timeinit;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>idtime<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">(runtime);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>timecurrent<sp/>=<sp/>clock();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(timecurrent<sp/>&lt;<sp/>timelast)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Error:<sp/>invoking<sp/>time<sp/>function.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>runtime<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">(runtime);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>runtime<sp/>=<sp/>((double)(timecurrent<sp/>-<sp/>timeinit))<sp/>/<sp/>((</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">)CLOCKS_PER_SEC);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>timelast<sp/>=<sp/>timecurrent;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">(runtime);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="openfdem__time_8c_1a682fd84081777a662402eee63be7c422" kindref="member">Openfdem_show_time</ref>(<ref refid="struct_general__structure" kindref="compound">General</ref><sp/>general,<sp/>Nodal<sp/>nodal,<sp/>Contact<sp/>contact)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>idtime<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE*<sp/>fileptr<sp/>=<sp/><ref refid="openfdem__commom_8h_1ace5d16511ddcfcce938c2a0e577eaa27" kindref="member">FileNull</ref>,<sp/>*<sp/>CheckFile<sp/>=<sp/><ref refid="openfdem__commom_8h_1ace5d16511ddcfcce938c2a0e577eaa27" kindref="member">FileNull</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>date_time[300];</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>run_time,<sp/>current_time;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>NowStep,<sp/>ShowTimeInterval,<sp/>il;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>CheckFile<sp/>=<sp/>general-&gt;<ref refid="struct_general__structure_1aea01f2c1926d25ffadf9063d5e0deadf" kindref="member">CheckFile</ref>;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>NowStep<sp/>=<sp/>general-&gt;<ref refid="struct_general__structure_1a53e9736e5ecdc8f4d5106061c318d6b3" kindref="member">NowStep</ref>;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>current_time<sp/>=<sp/>general-&gt;<ref refid="struct_general__structure_1a97c3740ec89c07312dec51a06d2a4865" kindref="member">CurrentTime</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>ShowTimeInterval<sp/>=<sp/>general-&gt;<ref refid="struct_general__structure_1a436f0d10fe1dd347e8656759ba46a82e" kindref="member">ShowTimeInterval</ref>;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(idtime<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>idtime<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(il<sp/>=<sp/>0;<sp/>il<sp/>&lt;<sp/>2;<sp/>il++)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(il<sp/>%<sp/>2<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fileptr<sp/>=<sp/>stdout;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a6682ca6b5ec2e7bc5a38bbcba68f9696" kindref="member">Dump_statement</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;Step&quot;</highlight><highlight class="normal">,<sp/>8);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a6682ca6b5ec2e7bc5a38bbcba68f9696" kindref="member">Dump_statement</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;Physical<sp/>model<sp/>time&quot;</highlight><highlight class="normal">,<sp/>25);<sp/><sp/></highlight><highlight class="comment">//space<sp/>number</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a6682ca6b5ec2e7bc5a38bbcba68f9696" kindref="member">Dump_statement</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;Unbalance<sp/>force<sp/>(N)&quot;</highlight><highlight class="normal">,<sp/>22);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a6682ca6b5ec2e7bc5a38bbcba68f9696" kindref="member">Dump_statement</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;Kinetic<sp/>ratio&quot;</highlight><highlight class="normal">,<sp/>20);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a6682ca6b5ec2e7bc5a38bbcba68f9696" kindref="member">Dump_statement</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;Run<sp/>time&quot;</highlight><highlight class="normal">,<sp/>15);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a03f3b55fbf24a53a66d5bc9731bcbecb" kindref="member">dump_string</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>dumper<sp/>to<sp/>log<sp/>file<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fileptr<sp/>=<sp/>CheckFile;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a6682ca6b5ec2e7bc5a38bbcba68f9696" kindref="member">Dump_statement</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;Step&quot;</highlight><highlight class="normal">,<sp/>8);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a6682ca6b5ec2e7bc5a38bbcba68f9696" kindref="member">Dump_statement</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;Physical<sp/>model<sp/>time&quot;</highlight><highlight class="normal">,<sp/>25);<sp/><sp/></highlight><highlight class="comment">//space<sp/>number</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a6682ca6b5ec2e7bc5a38bbcba68f9696" kindref="member">Dump_statement</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;Unbalance<sp/>force<sp/>(N)&quot;</highlight><highlight class="normal">,<sp/>22);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a6682ca6b5ec2e7bc5a38bbcba68f9696" kindref="member">Dump_statement</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;Element<sp/>force<sp/>(N)&quot;</highlight><highlight class="normal">,<sp/>22);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a6682ca6b5ec2e7bc5a38bbcba68f9696" kindref="member">Dump_statement</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;Cohesive<sp/>force<sp/>(N)&quot;</highlight><highlight class="normal">,<sp/>22);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a6682ca6b5ec2e7bc5a38bbcba68f9696" kindref="member">Dump_statement</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;Contact<sp/>force<sp/>(N)&quot;</highlight><highlight class="normal">,<sp/>22);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a6682ca6b5ec2e7bc5a38bbcba68f9696" kindref="member">Dump_statement</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;Element<sp/>energy(J)&quot;</highlight><highlight class="normal">,<sp/>22);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a6682ca6b5ec2e7bc5a38bbcba68f9696" kindref="member">Dump_statement</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;Cohesive<sp/>energy(J)&quot;</highlight><highlight class="normal">,<sp/>24);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a6682ca6b5ec2e7bc5a38bbcba68f9696" kindref="member">Dump_statement</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;Contact<sp/>energy(J)&quot;</highlight><highlight class="normal">,<sp/>24);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a6682ca6b5ec2e7bc5a38bbcba68f9696" kindref="member">Dump_statement</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;Kinetic<sp/>ratio&quot;</highlight><highlight class="normal">,<sp/>20);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a6682ca6b5ec2e7bc5a38bbcba68f9696" kindref="member">Dump_statement</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;count&quot;</highlight><highlight class="normal">,<sp/>8);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a6682ca6b5ec2e7bc5a38bbcba68f9696" kindref="member">Dump_statement</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;contact<sp/>count&quot;</highlight><highlight class="normal">,<sp/>16);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a6682ca6b5ec2e7bc5a38bbcba68f9696" kindref="member">Dump_statement</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;Run<sp/>time&quot;</highlight><highlight class="normal">,<sp/>15);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a03f3b55fbf24a53a66d5bc9731bcbecb" kindref="member">dump_string</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(NowStep<sp/>%<sp/>ShowTimeInterval<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(il<sp/>=<sp/>0;<sp/>il<sp/>&lt;<sp/>2;<sp/>il++)</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(il<sp/>%<sp/>2<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fileptr<sp/>=<sp/>stdout;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__time_8c_1a18ddb3dd432f2e2a091b9f6f94754e3b" kindref="member">openfdem_date_time</ref>(date_time);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>run_time<sp/>=<sp/><ref refid="openfdem__time_8c_1a1b07d3af954eb77a4117b65eebb4ddfc" kindref="member">openfdem_time_count</ref>();</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a6d4e34f3389d20725d1e2ce9f03e8dca" kindref="member">Dump_int</ref>(fileptr,<sp/>general-&gt;<ref refid="struct_general__structure_1a53e9736e5ecdc8f4d5106061c318d6b3" kindref="member">NowStep</ref>,<sp/>8);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/>%20.7e&quot;</highlight><highlight class="normal">,<sp/>current_time);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a03f3b55fbf24a53a66d5bc9731bcbecb" kindref="member">dump_string</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a03f3b55fbf24a53a66d5bc9731bcbecb" kindref="member">dump_string</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a03f3b55fbf24a53a66d5bc9731bcbecb" kindref="member">dump_string</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;%18.7e&quot;</highlight><highlight class="normal">,<sp/>nodal-&gt;unbalance_force);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a03f3b55fbf24a53a66d5bc9731bcbecb" kindref="member">dump_string</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;%20.7e&quot;</highlight><highlight class="normal">,<sp/>general-&gt;<ref refid="struct_general__structure_1aac41d033b3b8212b7ac445299578248c" kindref="member">kinetic_ratio</ref>);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;%15.3f&quot;</highlight><highlight class="normal">,<sp/>run_time);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a03f3b55fbf24a53a66d5bc9731bcbecb" kindref="member">dump_string</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fileptr<sp/>=<sp/>CheckFile;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__time_8c_1a18ddb3dd432f2e2a091b9f6f94754e3b" kindref="member">openfdem_date_time</ref>(date_time);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>run_time<sp/>=<sp/><ref refid="openfdem__time_8c_1a1b07d3af954eb77a4117b65eebb4ddfc" kindref="member">openfdem_time_count</ref>();</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a6d4e34f3389d20725d1e2ce9f03e8dca" kindref="member">Dump_int</ref>(fileptr,<sp/>general-&gt;<ref refid="struct_general__structure_1a53e9736e5ecdc8f4d5106061c318d6b3" kindref="member">NowStep</ref>,<sp/>8);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/>%20.7e&quot;</highlight><highlight class="normal">,<sp/>current_time);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a03f3b55fbf24a53a66d5bc9731bcbecb" kindref="member">dump_string</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;%20.7e&quot;</highlight><highlight class="normal">,<sp/>nodal-&gt;unbalance_force);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a03f3b55fbf24a53a66d5bc9731bcbecb" kindref="member">dump_string</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;%20.7e&quot;</highlight><highlight class="normal">,<sp/>nodal-&gt;element_maximuum_unbalance_force);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a03f3b55fbf24a53a66d5bc9731bcbecb" kindref="member">dump_string</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;%20.7e&quot;</highlight><highlight class="normal">,<sp/>nodal-&gt;cohesive_maximuum_unbalance_force);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a03f3b55fbf24a53a66d5bc9731bcbecb" kindref="member">dump_string</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;%20.7e&quot;</highlight><highlight class="normal">,<sp/>nodal-&gt;contact_maximuum_unbalance_force);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a03f3b55fbf24a53a66d5bc9731bcbecb" kindref="member">dump_string</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;%20.7e&quot;</highlight><highlight class="normal">,<sp/>general-&gt;<ref refid="struct_general__structure_1aebb315ebaa581a4c46c0f73dca914ce8" kindref="member">energy</ref>.<ref refid="structenergy__type_1a6025dde206c140844469770801c00f87" kindref="member">element_energy</ref>);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a03f3b55fbf24a53a66d5bc9731bcbecb" kindref="member">dump_string</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;%20.7e&quot;</highlight><highlight class="normal">,<sp/>general-&gt;<ref refid="struct_general__structure_1aebb315ebaa581a4c46c0f73dca914ce8" kindref="member">energy</ref>.<ref refid="structenergy__type_1a8d43a6a8121b8b8db16d5c80b589ba1e" kindref="member">cohesive_energy</ref>);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a03f3b55fbf24a53a66d5bc9731bcbecb" kindref="member">dump_string</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;%20.7e&quot;</highlight><highlight class="normal">,<sp/>general-&gt;<ref refid="struct_general__structure_1aebb315ebaa581a4c46c0f73dca914ce8" kindref="member">energy</ref>.<ref refid="structenergy__type_1a242361f186234e7ea6d3d3b0f3a2d9dd" kindref="member">contact_energy</ref><sp/>+<sp/>general-&gt;<ref refid="struct_general__structure_1aebb315ebaa581a4c46c0f73dca914ce8" kindref="member">energy</ref>.<ref refid="structenergy__type_1aaa16389224efa0fe55da45ec55413948" kindref="member">contact_nenergy</ref>);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a03f3b55fbf24a53a66d5bc9731bcbecb" kindref="member">dump_string</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;%20.7e&quot;</highlight><highlight class="normal">,<sp/>general-&gt;<ref refid="struct_general__structure_1aac41d033b3b8212b7ac445299578248c" kindref="member">kinetic_ratio</ref>);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a6d4e34f3389d20725d1e2ce9f03e8dca" kindref="member">Dump_int</ref>(fileptr,<sp/>contact-&gt;detection_count,<sp/>8);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a6d4e34f3389d20725d1e2ce9f03e8dca" kindref="member">Dump_int</ref>(fileptr,<sp/>contact-&gt;contact_count,<sp/>16);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;%15.3f&quot;</highlight><highlight class="normal">,<sp/>run_time);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="openfdem__message_8h_1a03f3b55fbf24a53a66d5bc9731bcbecb" kindref="member">dump_string</ref>(fileptr,<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="openfdem_time.c"/>
+  </compounddef>
+</doxygen>

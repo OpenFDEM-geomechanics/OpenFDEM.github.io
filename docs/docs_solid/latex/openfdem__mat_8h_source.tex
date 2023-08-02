@@ -1,0 +1,91 @@
+\hypertarget{openfdem__mat_8h_source}{}\doxysection{openfdem\+\_\+mat.\+h}
+\label{openfdem__mat_8h_source}\index{/Users/ekaterinaossetchkina/CProjects/openfdem\_solver/openfdem src/src/solid/materials/openfdem\_mat.h@{/Users/ekaterinaossetchkina/CProjects/openfdem\_solver/openfdem src/src/solid/materials/openfdem\_mat.h}}
+\mbox{\hyperlink{openfdem__mat_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* file StructureDefinition.h  OPFDEM data base description */}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#ifndef \_OPENFDEM\_STRUCTURE\_MAT\_}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#define \_OPENFDEM\_STRUCTURE\_MAT\_}}
+\DoxyCodeLine{4 \textcolor{comment}{//local includes}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}../../common/openfdem\_enum.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{openfdem__solid__materials_8h}{solid\_mat/openfdem\_solid\_materials.h}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{openfdem__solid__cohesive__materials_8h}{solid\_mat\_cohesive/openfdem\_solid\_cohesive\_materials.h}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{openfdem__solid__contact__materials_8h}{solid\_mat\_contact/openfdem\_solid\_contact\_materials.h}}"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{11     \textcolor{keywordtype}{char}* \mbox{\hyperlink{structmat__element__t_a7bb5e40c10df6a41df64bda1f4bb3e26}{tag}};    \textcolor{comment}{// element group name}}
+\DoxyCodeLine{12     element\_cons \mbox{\hyperlink{structmat__element__t_ab7d2c2ff27ff51d56eb332cb487653a6}{cons}};   \textcolor{comment}{//material type}}
+\DoxyCodeLine{13     \mbox{\hyperlink{unionany__mat__type}{any\_mat\_type}}* \mbox{\hyperlink{structmat__element__t_a0ab0303cb2396b3ad2dad522c5d893d2}{mat}};   \textcolor{comment}{//material pointer}}
+\DoxyCodeLine{14     Real \mbox{\hyperlink{structmat__element__t_a40cb5b4cd1114f92e20d24963e7d3d88}{damp}};  \textcolor{comment}{// default 0.0}}
+\DoxyCodeLine{15 \} \mbox{\hyperlink{structmat__element__t}{mat\_element\_t}};}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{18     \textcolor{keywordtype}{char}* \mbox{\hyperlink{structmat__cohelement__t_a7bb5e40c10df6a41df64bda1f4bb3e26}{tag}};   \textcolor{comment}{// cohesive element name}}
+\DoxyCodeLine{19     cohelement\_cons \mbox{\hyperlink{structmat__cohelement__t_af10a9fa01cb90333299f9aedd0e4a181}{cons}};   \textcolor{comment}{//cohesive material type}}
+\DoxyCodeLine{20     \mbox{\hyperlink{unionany__cohmat__type}{any\_cohmat\_type}}* \mbox{\hyperlink{structmat__cohelement__t_aadcf8147cd78389b6a462bde83e7bec9}{mat}}; \textcolor{comment}{// material pointer}}
+\DoxyCodeLine{21 \} \mbox{\hyperlink{structmat__cohelement__t}{mat\_cohelement\_t}};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{24     Int \mbox{\hyperlink{structmat__contact__t_a2dc8f2cfc67d378bef0c75efc2db58c4}{emat1}};   \textcolor{comment}{//element mat 1}}
+\DoxyCodeLine{25     Int \mbox{\hyperlink{structmat__contact__t_a0b1920255d1a91c3415da2a8108d73ad}{emat2}}; \textcolor{comment}{// element mat 2}}
+\DoxyCodeLine{26     contact\_cons \mbox{\hyperlink{structmat__contact__t_a2e688ba90e704fac8234c9f35f2cf9b3}{cons}};  \textcolor{comment}{// contact material type}}
+\DoxyCodeLine{27     \mbox{\hyperlink{unionany__conmat__type}{any\_conmat\_type}}* \mbox{\hyperlink{structmat__contact__t_ac81ac1fe4334de17c8832e9150d09729}{mat}};}
+\DoxyCodeLine{28 \} \mbox{\hyperlink{structmat__contact__t}{mat\_contact\_t}};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{31     Real \mbox{\hyperlink{structmat__fluid__t_abef76d23cdd90539c6c86a2b2d9464c7}{den}};}
+\DoxyCodeLine{32     Real \mbox{\hyperlink{structmat__fluid__t_a5d7cb337a3333abe2f960670b298726c}{bulk}};}
+\DoxyCodeLine{33     Real \mbox{\hyperlink{structmat__fluid__t_a404f172beb17eefbf4ef1474eda566f6}{viscosity}};}
+\DoxyCodeLine{34     Real \mbox{\hyperlink{structmat__fluid__t_ae59d62a3789d18b36ed7e18dc8e29191}{cohesion}};}
+\DoxyCodeLine{35 \} \mbox{\hyperlink{structmat__fluid__t}{mat\_fluid\_t}};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{38     Real \mbox{\hyperlink{structmat__fluid__element__t_abf649a082274df7d94ce93381a0711e8}{permiability}};}
+\DoxyCodeLine{39     Real \mbox{\hyperlink{structmat__fluid__element__t_ab4823e7f4d871add02a9268f0f58cd9d}{Biot\_modulus}};}
+\DoxyCodeLine{40     Real \mbox{\hyperlink{structmat__fluid__element__t_ace6c825f176b604b466baeb77aaeb1f2}{Biot\_c}};}
+\DoxyCodeLine{41 \} \mbox{\hyperlink{structmat__fluid__element__t}{mat\_fluid\_element\_t}};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{44     Real \mbox{\hyperlink{structmat__fluid__cohesive__t_ac238c569010091dda420a6756e600bd0}{a\_0}};}
+\DoxyCodeLine{45     Real \mbox{\hyperlink{structmat__fluid__cohesive__t_a4b1dbdfad30caa50294a98e916f32337}{a\_min}};}
+\DoxyCodeLine{46     Real \mbox{\hyperlink{structmat__fluid__cohesive__t_a0c1333c4dd5b97cc457a78f315b7f541}{para\_exp}};}
+\DoxyCodeLine{47     Real \mbox{\hyperlink{structmat__fluid__cohesive__t_a393cce5e4d949c844e1adad78ea6fdc7}{para\_b}};}
+\DoxyCodeLine{48 \} \mbox{\hyperlink{structmat__fluid__cohesive__t}{mat\_fluid\_cohesive\_t}};}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{51     Real \mbox{\hyperlink{structmat__gas__t_a1acf479191915abde27735538dc3e420}{initial\_den}};}
+\DoxyCodeLine{52     Real \mbox{\hyperlink{structmat__gas__t_aa2738666517200656d038ea29a1d2451}{initial\_bulk}};}
+\DoxyCodeLine{53     Real \mbox{\hyperlink{structmat__gas__t_abf649a082274df7d94ce93381a0711e8}{permiability}};}
+\DoxyCodeLine{54     Real \mbox{\hyperlink{structmat__gas__t_a34ed25845d2259c437e08a99cd7cc2d3}{constant\_B}};}
+\DoxyCodeLine{55     Real \mbox{\hyperlink{structmat__gas__t_ab7eeb7bf31a421bd2f657cd118290d6c}{alpha}};}
+\DoxyCodeLine{56 \} \mbox{\hyperlink{structmat__gas__t}{mat\_gas\_t}};}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{59     Real \mbox{\hyperlink{structmat__thermal__element__t_a5703c90f968131cddafc67fba71ce362}{conductivity}};}
+\DoxyCodeLine{60     Real \mbox{\hyperlink{structmat__thermal__element__t_afe582b35d3f1aea4dc633104853cbfc7}{specific\_heat}};}
+\DoxyCodeLine{61     Real \mbox{\hyperlink{structmat__thermal__element__t_a8256a273a54ebbe747ebd3baef0bfe79}{expansion}};}
+\DoxyCodeLine{62 \} \mbox{\hyperlink{structmat__thermal__element__t}{mat\_thermal\_element\_t}};}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 \textcolor{comment}{/* OPFDEM Module Properties -\/ Elements */}}
+\DoxyCodeLine{65 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_solid__mat__structure}{Solid\_mat\_structure}}* \mbox{\hyperlink{openfdem__mat_8h_a10eec44786d5659964548a8edabef182}{Solidmat}};}
+\DoxyCodeLine{66 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_solid__mat__structure}{Solid\_mat\_structure}}}
+\DoxyCodeLine{67 \{}
+\DoxyCodeLine{68     UInt \mbox{\hyperlink{struct_solid__mat__structure_a9bf222653a1caf69f238a56ea88c1178}{n\_mat}};                    \textcolor{comment}{// element material number}}
+\DoxyCodeLine{69     UInt \mbox{\hyperlink{struct_solid__mat__structure_a5c97443b78faecc0f0d70a809f84ea96}{n\_cohmat}};              \textcolor{comment}{// cohesive element material number}}
+\DoxyCodeLine{70     UInt \mbox{\hyperlink{struct_solid__mat__structure_ae99b5d79ab15d9787ee2c280000e5e80}{n\_conmat}};              \textcolor{comment}{// contact material number}}
+\DoxyCodeLine{71     UInt \mbox{\hyperlink{struct_solid__mat__structure_ad3c71f72c9b63044c6ab704d429626d1}{n\_hydro\_mat}};}
+\DoxyCodeLine{72     UInt \mbox{\hyperlink{struct_solid__mat__structure_a303f264ab98e07bc9e91e133fbb432ea}{n\_hydro\_coh}};}
+\DoxyCodeLine{73     UInt \mbox{\hyperlink{struct_solid__mat__structure_a105f9ce6188981764ea2f90ba5bf48fb}{n\_thermal\_mat}};}
+\DoxyCodeLine{74     \mbox{\hyperlink{structmat__element__t}{mat\_element\_t}}* \mbox{\hyperlink{struct_solid__mat__structure_abd0efe4abcf7d9df0896b53186177ae5}{elemat}};               \textcolor{comment}{// element material array}}
+\DoxyCodeLine{75     \mbox{\hyperlink{structmat__cohelement__t}{mat\_cohelement\_t}}* \mbox{\hyperlink{struct_solid__mat__structure_aa4d8920cccd2705cc2d8d8de0033b1fd}{cohelemat}};       \textcolor{comment}{// cohesive element material array}}
+\DoxyCodeLine{76     \mbox{\hyperlink{structmat__contact__t}{mat\_contact\_t}}* \mbox{\hyperlink{struct_solid__mat__structure_a73d221d7bb8b8305657cd03245be6d4c}{conmat}};               \textcolor{comment}{// contact material array}}
+\DoxyCodeLine{77     \mbox{\hyperlink{structmat__fluid__t}{mat\_fluid\_t}} \mbox{\hyperlink{struct_solid__mat__structure_a53674d5727a3e21c87d5e4a606bf9888}{water}};}
+\DoxyCodeLine{78     \mbox{\hyperlink{structmat__gas__t}{mat\_gas\_t}} \mbox{\hyperlink{struct_solid__mat__structure_ac1f0a6c41ddcbfcf1be8452ce952743f}{gas}};}
+\DoxyCodeLine{79     \mbox{\hyperlink{structmat__fluid__element__t}{mat\_fluid\_element\_t}}* \mbox{\hyperlink{struct_solid__mat__structure_aaec2fe55ba11624e15c0d52ffbb43c6a}{hydro\_ele}};  \textcolor{comment}{/* material for fluid element */}}
+\DoxyCodeLine{80     \mbox{\hyperlink{structmat__fluid__cohesive__t}{mat\_fluid\_cohesive\_t}}* \mbox{\hyperlink{struct_solid__mat__structure_a4e6b79eb8fa1f4cdfed781e56d7086de}{hydro\_coh}}; \textcolor{comment}{/* material for fluid cohesive element */}}
+\DoxyCodeLine{81     \mbox{\hyperlink{structmat__thermal__element__t}{mat\_thermal\_element\_t}}* \mbox{\hyperlink{struct_solid__mat__structure_af7546ea4a9748260a9cca6a4c8fe383f}{thermal\_ele}};}
+\DoxyCodeLine{82     \textcolor{keywordtype}{short} \mbox{\hyperlink{struct_solid__mat__structure_a8d2a0a1f6edc2897e4c6e225e6389d6c}{hysteretic\_flag}};   \textcolor{comment}{/* flag for hysteretic loading default is 0 */}}
+\DoxyCodeLine{83 \};}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// !\_OPENFDEM\_STRUCTURE\_MAT\_}}
+
+\end{DoxyCode}

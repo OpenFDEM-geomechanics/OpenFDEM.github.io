@@ -1,0 +1,71 @@
+\hypertarget{openfdem__solid__cohesive_8h_source}{}\doxysection{openfdem\+\_\+solid\+\_\+cohesive.\+h}
+\label{openfdem__solid__cohesive_8h_source}\index{/Users/ekaterinaossetchkina/CProjects/openfdem\_solver/openfdem src/src/solid/solid\_mechanics\_cohesive/openfdem\_solid\_cohesive.h@{/Users/ekaterinaossetchkina/CProjects/openfdem\_solver/openfdem src/src/solid/solid\_mechanics\_cohesive/openfdem\_solid\_cohesive.h}}
+\mbox{\hyperlink{openfdem__solid__cohesive_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* file StructureDefinition.h  OPFDEM data base description */}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#ifndef \_OPENFDEM\_STRUCTURE\_SOLID\_COHESIVE\_}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#define \_OPENFDEM\_STRUCTURE\_SOLID\_COHESIVE\_}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}../../common/openfdem\_struct.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}../../common/openfdem\_commom.h"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{9     Real \mbox{\hyperlink{structcohelement__type_ac2e288ebffee7f8ca19c46021f4d38f0}{x}};}
+\DoxyCodeLine{10     Real \mbox{\hyperlink{structcohelement__type_a18279dd4d4460f2130f7a45358c14ffa}{y}};}
+\DoxyCodeLine{11     UInt \mbox{\hyperlink{structcohelement__type_abdc03d35cad4b39f082215c818e84067}{matid}};  \textcolor{comment}{// cohesive material ID  default: 0}}
+\DoxyCodeLine{12     UInt \mbox{\hyperlink{structcohelement__type_a8cc01f8e17cd811e88c606d0d2c84443}{n\_node}};  \textcolor{comment}{// node number}}
+\DoxyCodeLine{13     cohelement\_enum \mbox{\hyperlink{structcohelement__type_ae1a5a61bfde4644f6a426771f14ccaf7}{state}}; \textcolor{comment}{// 0 intact, 1 damage, 2 broken  default: INTACT}}
+\DoxyCodeLine{14     Int \mbox{\hyperlink{structcohelement__type_a5e4bef6c41be7b81703206ecdc28d05c}{stater}};   \textcolor{comment}{//pointer to state target  default: -\/1}}
+\DoxyCodeLine{15     DFN\_enum \mbox{\hyperlink{structcohelement__type_a54bef7175afe32a833e2d17674269bf2}{dfn}}; \textcolor{comment}{//0 DFN\_COHESIVE, 1 DFN\_BROKEN, }}
+\DoxyCodeLine{16     UInt* \mbox{\hyperlink{structcohelement__type_a025bb5e0f05dda7a3fdb3bfc276eed51}{nodes}};  \textcolor{comment}{// node list}}
+\DoxyCodeLine{17     UInt* \mbox{\hyperlink{structcohelement__type_af0395c3a03c2623ae05642ecdd0fbab8}{ele}};    \textcolor{comment}{// couple element}}
+\DoxyCodeLine{18     UInt* \mbox{\hyperlink{structcohelement__type_a1029173ec3710aebe49db015c30abc87}{edge}};   \textcolor{comment}{// edge id of the cohesive element on ele\_1 and ele\_2, i is edge i; }}
+\DoxyCodeLine{19     of\_fracture \mbox{\hyperlink{structcohelement__type_ab0f5f41ff1ce800af8d2e366bd3e1dde}{damage}};}
+\DoxyCodeLine{20     Real \mbox{\hyperlink{structcohelement__type_a6ccecf169e044f4f450c9464a7b78234}{energy}};}
+\DoxyCodeLine{21     Real \mbox{\hyperlink{structcohelement__type_aa4b45bf6cc9ca433ffa5ebd5e0425218}{area}};}
+\DoxyCodeLine{22     UInt \mbox{\hyperlink{structcohelement__type_aa32846f20565c7b149e6921d1cccf178}{old\_map}};}
+\DoxyCodeLine{23 \} \mbox{\hyperlink{structcohelement__type}{cohelement\_type}};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{    }
+\DoxyCodeLine{26     Real \mbox{\hyperlink{structfracture__type_a33447f96f00d708dd345d6eb79c95d41}{time}};}
+\DoxyCodeLine{27     Real \mbox{\hyperlink{structfracture__type_aac1eda0d5c805f405c197137935d2431}{length}};}
+\DoxyCodeLine{28     Real \mbox{\hyperlink{structfracture__type_a6ccecf169e044f4f450c9464a7b78234}{energy}};}
+\DoxyCodeLine{29     Real \mbox{\hyperlink{structfracture__type_a8ef1d85fc5ad9cfd0d7a9932a773f3d5}{type}};  \textcolor{comment}{//1.0 mode I; 2.0 mode II, 3.0 mixed mode; 4.0 Broken DFN, 5.0 Excavation }}
+\DoxyCodeLine{30     UInt \mbox{\hyperlink{structfracture__type_aaca16c96f43b7c4d55119bcdd9367993}{coele}};}
+\DoxyCodeLine{31 \} \mbox{\hyperlink{structfracture__type}{fracture\_type}};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{34     Real \mbox{\hyperlink{structdamage__type_a33447f96f00d708dd345d6eb79c95d41}{time}};}
+\DoxyCodeLine{35     Real \mbox{\hyperlink{structdamage__type_aac1eda0d5c805f405c197137935d2431}{length}};}
+\DoxyCodeLine{36     Real \mbox{\hyperlink{structdamage__type_a8ef1d85fc5ad9cfd0d7a9932a773f3d5}{type}};}
+\DoxyCodeLine{37     UInt \mbox{\hyperlink{structdamage__type_aaca16c96f43b7c4d55119bcdd9367993}{coele}};}
+\DoxyCodeLine{38 \} \mbox{\hyperlink{structdamage__type}{damage\_type}};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_coh__element__structure}{Coh\_element\_structure}}* \mbox{\hyperlink{openfdem__solid__cohesive_8h_a1d2cbf2eacc8a3866c7d87e7227d8b22}{Cohelement}};}
+\DoxyCodeLine{41 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_coh__element__structure}{Coh\_element\_structure}}}
+\DoxyCodeLine{42 \{}
+\DoxyCodeLine{43     \mbox{\hyperlink{structcohelement__type}{cohelement\_type}}* \mbox{\hyperlink{struct_coh__element__structure_a5c6b14a4ceedd3ac04927d5d6c28811c}{cohele}};         \textcolor{comment}{/* [cohe\_num] cohesive element structure */}}
+\DoxyCodeLine{44     UInt      \mbox{\hyperlink{struct_coh__element__structure_af9606282b3f52144a66174c964f90276}{cohe\_num}};               \textcolor{comment}{/* actual number of elements,  e\_num changes after mesh */}    }
+\DoxyCodeLine{45     UInt \mbox{\hyperlink{struct_coh__element__structure_a80193df8b9932c62675d2fe19fa19047}{cohe\_ini\_num}};                \textcolor{comment}{/* number of elements at the beginning             */}}
+\DoxyCodeLine{46     UInt \mbox{\hyperlink{struct_coh__element__structure_aa507b7f44f62c008c8ef3469790fb7b5}{broken\_num}};                \textcolor{comment}{/* number of broken joint elements                 */}}
+\DoxyCodeLine{47     UInt \mbox{\hyperlink{struct_coh__element__structure_a712d20657457fcafebcfa92db415ae41}{damage\_num}};                  \textcolor{comment}{/* number of joint elements softened                     */}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49     Real* \mbox{\hyperlink{struct_coh__element__structure_a7120752a4cab5f9bffe10a901358819b}{shear\_strength}};             \textcolor{comment}{/* [cohe\_num]  shear strength at joint (Mohr-\/Coulomb)    calculate from function, initial cohesion  */}}
+\DoxyCodeLine{50     }
+\DoxyCodeLine{51     of\_vectorn* \mbox{\hyperlink{struct_coh__element__structure_a890a78a37fd0f846537e71d3c07a33b7}{force}};                \textcolor{comment}{/* [cohe\_num] -\/normal and shear force                 */}}
+\DoxyCodeLine{52     of\_vectorn* \mbox{\hyperlink{struct_coh__element__structure_abb3610c697984e45dee0299f7f62a731}{dis}};                  \textcolor{comment}{/* [cohe\_num] -\/opening and sliding                */}}
+\DoxyCodeLine{53     of\_vectorn* \mbox{\hyperlink{struct_coh__element__structure_ae24ae4e980cbd8497639b605e977e117}{vel}};                  \textcolor{comment}{/* [cohe\_num] -\/opening and sliding velocity                */}}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55     \mbox{\hyperlink{structfracture__type}{fracture\_type}}* \mbox{\hyperlink{struct_coh__element__structure_afe0f9edbe6f66564715f726200141559}{fracture}};         \textcolor{comment}{/* [broken\_num] -\/ fractured cohesive element structure */}}
+\DoxyCodeLine{56     \mbox{\hyperlink{structdamage__type}{damage\_type}}* \mbox{\hyperlink{struct_coh__element__structure_a0f84170e9924eb7aa2fa7c35f26fd5fb}{damage}};             \textcolor{comment}{/* [damage\_num] -\/ damaged cohesive element structure */}}
+\DoxyCodeLine{57     Real* \mbox{\hyperlink{struct_coh__element__structure_a18fcef7a83145e7064d42153c7d759a2}{het\_value}};                 \textcolor{comment}{/* [cohe\_num]   -\/gauss random value for hetergenous materials */}}
+\DoxyCodeLine{58     of\_vectorn* \mbox{\hyperlink{struct_coh__element__structure_ae33b257f1357efcf954345d03ccfc9ea}{DIF\_0}};               \textcolor{comment}{/* [cohe\_num]   -\/strain rate in line 0-\/3 */}}
+\DoxyCodeLine{59     of\_vectorn* \mbox{\hyperlink{struct_coh__element__structure_a490aa069f2904ab3edc720cade586cc5}{DIF\_1}};               \textcolor{comment}{/* [cohe\_num]   -\/strain rate in line 1-\/2 */}}
+\DoxyCodeLine{60     of\_vectorn* \mbox{\hyperlink{struct_coh__element__structure_a42e554fbb76aea3a0a1038222df56bef}{DIF\_2}};               \textcolor{comment}{/* [cohe\_num]   -\/strain rate in line gauss point 3 */}}
+\DoxyCodeLine{61     Int* \mbox{\hyperlink{struct_coh__element__structure_add3b4993211d87a281765bd06798be40}{flag}};}
+\DoxyCodeLine{62 \};}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// !\_OPENFDEM\_STRUCTURE\_SOLID\_COHESIVE\_}}
+
+\end{DoxyCode}

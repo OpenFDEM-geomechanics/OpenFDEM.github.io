@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="dir_e07fd9742148accfa692ff6a0f43f706" kind="dir">
+    <compoundname>/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/test/insitustress</compoundname>
+    <innerfile refid="insitu_8y">insitu.y</innerfile>
+    <innerfile refid="pressure_8y">pressure.y</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/test/insitustress/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="structsolid__rigid__t" kind="struct" language="C++" prot="public">
+    <compoundname>solid_rigid_t</compoundname>
+    <includes refid="openfdem__solid__materials_8h" local="no">openfdem_solid_materials.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsolid__rigid__t_1abef76d23cdd90539c6c86a2b2d9464c7" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real den</definition>
+        <argsstring></argsstring>
+        <name>den</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" line="50" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" line="49" column="1" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" bodystart="49" bodyend="51"/>
+    <listofallmembers>
+      <member refid="structsolid__rigid__t_1abef76d23cdd90539c6c86a2b2d9464c7" prot="public" virt="non-virtual"><scope>solid_rigid_t</scope><name>den</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

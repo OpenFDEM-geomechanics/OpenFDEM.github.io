@@ -1,0 +1,28 @@
+Group
+===============================
+
+.. toctree::
+   :maxdepth: 1
+
+   Group/of.group.nodal
+   Group/of.group.edge
+   Group/of.group.element
+   Group/of.group.cohelement
+   Group/of.group.nodal.from.element
+   Group/of.group.edge.from.element
+   Group/of.group.edge.from.cohelement
+   Group/of.group.edge.from.dfn
+   Group/of.group.cohelement.from.dfn
+   Group/of.group.cohelement.from.gbm
+   Group/of.group.nodal.bool.union
+   Group/of.group.nodal.bool.intersect
+   Group/of.group.nodal.bool.subtract
+   Group/of.group.edge.bool.union
+   Group/of.group.edge.bool.intersect
+   Group/of.group.edge.bool.subtract
+   Group/of.group.element.bool.union
+   Group/of.group.element.bool.intersect
+   Group/of.group.element.bool.subtract
+   Group/of.group.cohelement.bool.union
+   Group/of.group.cohelement.bool.intersect
+   Group/of.group.cohelement.bool.subtract

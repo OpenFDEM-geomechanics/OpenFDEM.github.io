@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="dir_e81af4ee5e6fc1590a17e7cae26fba59" kind="dir">
+    <compoundname>/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials</compoundname>
+    <innerdir refid="dir_a52adaed127d9b3fb3d4d778be5f8f1a">/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat</innerdir>
+    <innerdir refid="dir_31f8a0d726c67363714ce61d26265f6e">/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat_cohesive</innerdir>
+    <innerdir refid="dir_2759c28df2662a33338ed1690b037d7f">/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat_contact</innerdir>
+    <innerfile refid="openfdem__mat_8h">openfdem_mat.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,283 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="openfdem__math_8h" kind="file" language="C++">
+    <compoundname>openfdem_math.h</compoundname>
+    <includes local="no">math.h</includes>
+    <includes refid="openfdem__struct_8h" local="yes">openfdem_struct.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>openfdem_math.h</label>
+        <link refid="openfdem__math_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>math.h</label>
+      </node>
+      <node id="3">
+        <label>openfdem_struct.h</label>
+        <link refid="openfdem__struct_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="openfdem__math_8h_1a1c3cd1f701496920e85783ab2c45a159" prot="public" static="no">
+        <name>Openfdem_pos_epsilon</name>
+        <initializer>1.0e-10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>filename <ref refid="openfdem__math_8h" kindref="compound">openfdem_math.h</ref></para>
+<para>author Xiaofeng Li <ulink url="mailto:xfli@whrsm.ac.cn">xfli@whrsm.ac.cn</ulink></para>
+<para>date creation: Fri Jun 18 2010 date last modification: Tue Sep 29 2020</para>
+<para>function: common math</para>
+<sect1 id="openfdem__time_8h_1LICENSE">
+<title>LICENSE</title>
+<para>This library is free software; you can redistribute it and/or <linebreak/>
+ modify it under the terms of the GNU Lesser General Public <linebreak/>
+ License as published by the Free Software Foundation; either <linebreak/>
+ version 2.1 of the License, or (at your option) any later version. <linebreak/>
+</para>
+<para>This program is distributed in the hope that it will be useful, <linebreak/>
+ but WITHOUT ANY WARRANTY; without even the implied warranty of <linebreak/>
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU <linebreak/>
+ Lesser General Public License for more details. <linebreak/>
+ </para>
+</sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_math.h" line="32" column="9" bodyfile="openfdem_math.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="openfdem__math_8h_1ad272669589cc5dd9d18988723e51aa81" prot="public" static="no">
+        <name>Openfdem_neg_epsilon</name>
+        <initializer>-1.0e-10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_math.h" line="33" column="9" bodyfile="openfdem_math.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="openfdem__math_8h_1a457312609698c77a2ca5ffe8e0e8baa4" prot="public" static="no">
+        <name>Openfdem_max_value</name>
+        <initializer>1.0e+15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_math.h" line="34" column="9" bodyfile="openfdem_math.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="openfdem__math_8h_1a177f2ea9c4d6a4c1ce020e89a5d22de9" prot="public" static="no">
+        <name>Openfdem_PI</name>
+        <initializer>3.1415926535897932384626</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_math.h" line="35" column="9" bodyfile="openfdem_math.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="openfdem__math_8h_1aa66c3ec9bf5bf4d4b095c4c924dbe5ae" prot="public" static="no">
+        <name>Openfdem_e</name>
+        <initializer>2.71828182845904523536</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_math.h" line="36" column="9" bodyfile="openfdem_math.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="openfdem__math_8h_1a7f623151881846637509bd369e58244b" prot="public" static="no">
+        <name>Openfdem_double_abs</name>
+        <param><defname>x</defname></param>
+        <initializer>(((x)&lt;0.0)?-(x):(x))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_math.h" line="40" column="9" bodyfile="openfdem_math.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="openfdem__math_8h_1a17d8a5029d74bdce2b1a241c9f2e9569" prot="public" static="no">
+        <name>Openfdem_max</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <initializer>(((x)&lt;(y))?(y):(x))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_math.h" line="41" column="9" bodyfile="openfdem_math.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="openfdem__math_8h_1aaf6ff4470ae0ebf55b07c39502da80cc" prot="public" static="no">
+        <name>Openfdem_min</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <initializer>(((x)&gt;(y))?(y):(x))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_math.h" line="42" column="9" bodyfile="openfdem_math.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="openfdem__math_8h_1a731f81f3e9dc3e88c7b8aaf64bf7cdb5" prot="public" static="no">
+        <name>Openfdem_sign</name>
+        <param><defname>x</defname></param>
+        <initializer>((x&gt;0)?(1.0):(-1.0))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_math.h" line="43" column="9" bodyfile="openfdem_math.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="openfdem__math_8h_1ae6f36dcd59da9c393274382bf1d6465f" prot="public" static="no">
+        <name>Matrix2Inverse</name>
+        <param><defname>m</defname></param>
+        <param><defname>minv</defname></param>
+        <param><defname>det</defname></param>
+        <initializer>      {  det=m[0][0]*m[1][1]-m[1][0]*m[0][1]; \
+         minv[0][0]= m[1][1]/det; minv[1][0]=-m[1][0]/det;\
+         minv[0][1]=-m[0][1]/det; minv[1][1]= m[0][0]/det;\
+    }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_math.h" line="45" column="9" bodyfile="openfdem_math.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="openfdem__math_8h_1ae92237c4f4a876637f757b8519e28287" prot="public" static="no">
+        <name>Vector2DotProduct</name>
+        <param><defname>s</defname></param>
+        <param><defname>x1</defname></param>
+        <param><defname>y1</defname></param>
+        <param><defname>x2</defname></param>
+        <param><defname>y2</defname></param>
+        <initializer>{(s)=((x1)*(x2))+((y1)*(y2));}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_math.h" line="51" column="9" bodyfile="openfdem_math.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="openfdem__math_8h_1a68e80d2f9f990d332507bb4d1a512ea6" prot="public" static="no">
+        <name>Vector2Normalize</name>
+        <param><defname>s</defname></param>
+        <param><defname>x1</defname></param>
+        <param><defname>y1</defname></param>
+        <initializer>              {(s)=sqrt((x1)*(x1)+(y1)*(y1));   \
+              if((s)&gt;<ref refid="openfdem__math_8h_1a1c3cd1f701496920e85783ab2c45a159" kindref="member">Openfdem_pos_epsilon</ref>)(x1)=(x1)/(s);  \
+              if((s)&gt;<ref refid="openfdem__math_8h_1a1c3cd1f701496920e85783ab2c45a159" kindref="member">Openfdem_pos_epsilon</ref>)(y1)=(y1)/(s);  }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_math.h" line="53" column="9" bodyfile="openfdem_math.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="openfdem__math_8h_1afffb91b480a1e064c9c01088db874cf8" prot="public" static="no">
+        <name>Vector2Cro</name>
+        <param><defname>s</defname></param>
+        <param><defname>x1</defname></param>
+        <param><defname>y1</defname></param>
+        <param><defname>x2</defname></param>
+        <param><defname>y2</defname></param>
+        <initializer>{s=(x1*y2)-(y1*x2);}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_math.h" line="58" column="9" bodyfile="openfdem_math.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="openfdem__math_8h_1a2eb80041993d033038788ae24f4cb902" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref></type>
+        <definition>Real random_normal</definition>
+        <argsstring>(Real mu, Real sigma)</argsstring>
+        <name>random_normal</name>
+        <param>
+          <type><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref></type>
+          <declname>mu</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref></type>
+          <declname>sigma</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_math.h" line="60" column="6" declfile="openfdem_math.h" declline="60" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>OPENFDEM_COMMOM_MATH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OPENFDEM_COMMOM_MATH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="openfdem__struct_8h" kindref="compound">openfdem_struct.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//Define<sp/>the<sp/>constant<sp/>variables<sp/>in<sp/>OpenFDEM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="openfdem__math_8h_1a1c3cd1f701496920e85783ab2c45a159" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Openfdem_pos_epsilon<sp/>1.0e-10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="openfdem__math_8h_1ad272669589cc5dd9d18988723e51aa81" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Openfdem_neg_epsilon<sp/>-1.0e-10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="openfdem__math_8h_1a457312609698c77a2ca5ffe8e0e8baa4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Openfdem_max_value<sp/>1.0e+15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="openfdem__math_8h_1a177f2ea9c4d6a4c1ce020e89a5d22de9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Openfdem_PI<sp/>3.1415926535897932384626</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="openfdem__math_8h_1aa66c3ec9bf5bf4d4b095c4c924dbe5ae" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Openfdem_e<sp/>2.71828182845904523536</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//Define</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="openfdem__math_8h_1a7f623151881846637509bd369e58244b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Openfdem_double_abs(x)<sp/>(((x)&lt;0.0)?-(x):(x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="openfdem__math_8h_1a17d8a5029d74bdce2b1a241c9f2e9569" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Openfdem_max(x,y)<sp/>(((x)&lt;(y))?(y):(x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="openfdem__math_8h_1aaf6ff4470ae0ebf55b07c39502da80cc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Openfdem_min(x,y)<sp/>(((x)&gt;(y))?(y):(x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="openfdem__math_8h_1a731f81f3e9dc3e88c7b8aaf64bf7cdb5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Openfdem_sign(x)<sp/>((x&gt;0)?(1.0):(-1.0))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="openfdem__math_8h_1ae6f36dcd59da9c393274382bf1d6465f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Matrix2Inverse(m,minv,det)\</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>det=m[0][0]*m[1][1]-m[1][0]*m[0][1];<sp/>\</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>minv[0][0]=<sp/>m[1][1]/det;<sp/>minv[1][0]=-m[1][0]/det;\</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>minv[0][1]=-m[0][1]/det;<sp/>minv[1][1]=<sp/>m[0][0]/det;\</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="openfdem__math_8h_1ae92237c4f4a876637f757b8519e28287" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Vector2DotProduct(s,x1,y1,x2,y2)<sp/>{(s)=((x1)*(x2))+((y1)*(y2));}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="openfdem__math_8h_1a68e80d2f9f990d332507bb4d1a512ea6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Vector2Normalize(s,x1,y1)<sp/>\</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{(s)=sqrt((x1)*(x1)+(y1)*(y1));<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if((s)&gt;Openfdem_pos_epsilon)(x1)=(x1)/(s);<sp/><sp/>\</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if((s)&gt;Openfdem_pos_epsilon)(y1)=(y1)/(s);<sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="openfdem__math_8h_1afffb91b480a1e064c9c01088db874cf8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Vector2Cro(s,x1,y1,x2,y2){s=(x1*y2)-(y1*x2);}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="openfdem__math_8h_1a2eb80041993d033038788ae24f4cb902" refkind="member"><highlight class="normal"><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref><sp/><ref refid="openfdem__math_8h_1a2eb80041993d033038788ae24f4cb902" kindref="member">random_normal</ref>(<ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref><sp/>mu,<sp/><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref><sp/>sigma);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>!OPENFDEM_COMMOM_MATH</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="openfdem_math.h"/>
+  </compounddef>
+</doxygen>

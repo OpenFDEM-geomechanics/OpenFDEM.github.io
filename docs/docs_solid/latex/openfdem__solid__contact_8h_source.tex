@@ -1,0 +1,45 @@
+\hypertarget{openfdem__solid__contact_8h_source}{}\doxysection{openfdem\+\_\+solid\+\_\+contact.\+h}
+\label{openfdem__solid__contact_8h_source}\index{/Users/ekaterinaossetchkina/CProjects/openfdem\_solver/openfdem src/src/solid/solid\_mechanics\_contact/openfdem\_solid\_contact.h@{/Users/ekaterinaossetchkina/CProjects/openfdem\_solver/openfdem src/src/solid/solid\_mechanics\_contact/openfdem\_solid\_contact.h}}
+\mbox{\hyperlink{openfdem__solid__contact_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* file StructureDefinition.h  OPFDEM data base description */}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#ifndef \_OPENFDEM\_STRUCTURE\_CONTACT\_}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#define \_OPENFDEM\_STRUCTURE\_CONTACT\_}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}../../common/openfdem\_struct.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}../../common/openfdem\_commom.h"{}}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11     UInt \mbox{\hyperlink{structcontact__type_a87229c94446404e2843d198c8a04cdac}{con\_n}};}
+\DoxyCodeLine{12     Int \mbox{\hyperlink{structcontact__type_a61c716b1393b81ac4a6e43bf44d9ebbb}{head}};                   \textcolor{comment}{/* -\/1 is full occupied otherwise is the head of subcontact id */}}
+\DoxyCodeLine{13     Int* \mbox{\hyperlink{structcontact__type_a6b23f8246a30b3e4d14bdc526539aa05}{hold}};                  \textcolor{comment}{/* [con\_n] hold to store adjustable array: default -\/2, first free -\/1, occupied > -\/1 */}  }
+\DoxyCodeLine{14     Real* sliding\_distance[6];  \textcolor{comment}{/* [con\_n] contact sliding */}}
+\DoxyCodeLine{15     \textcolor{keywordtype}{short}* sliding\_state[6];    \textcolor{comment}{/* [con\_n] sliding state in history, only for dynamic friction*/}}
+\DoxyCodeLine{16     Int* \mbox{\hyperlink{structcontact__type_aeb5ec02d03575c511d7cfafc980a1b85}{target}};              \textcolor{comment}{/* [con\_n] target element */}}
+\DoxyCodeLine{17     \textcolor{keywordtype}{short}* \mbox{\hyperlink{structcontact__type_adb1cd69935a36c9326ada27c10983260}{type}};                \textcolor{comment}{/* [con\_n] contact type: 0-\/> edge-\/vertex type; 1-\/> edge-\/edge type*/}}
+\DoxyCodeLine{18     \textcolor{keywordtype}{short}* \mbox{\hyperlink{structcontact__type_a5134e98b1ce2d281dd1edb621f4b8a28}{slip\_flag}};          \textcolor{comment}{/* [con\_n] slip flag from cohesive */}}
+\DoxyCodeLine{19 \} \mbox{\hyperlink{structcontact__type}{contact\_type}};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_contact__structure}{Contact\_structure}}* \mbox{\hyperlink{openfdem__solid__contact_8h_a33b34b0b5e26b260dc771b8cdc178eb6}{Contact}};}
+\DoxyCodeLine{22 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_contact__structure}{Contact\_structure}}}
+\DoxyCodeLine{23 \{}
+\DoxyCodeLine{24     UInt    \mbox{\hyperlink{struct_contact__structure_af33896ecf2bb06d80258f1f6d70b4a55}{n\_contact}};                 \textcolor{comment}{/*\$ maximum possible number of contacting couples, default: 100000, int */}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \textcolor{keywordtype}{short}* \mbox{\hyperlink{struct_contact__structure_a6524566cafe51c9e9b0f5428fbab01ef}{potentional\_contact\_element}};      \textcolor{comment}{/* [element-\/>e\_num] default 0 */}}
+\DoxyCodeLine{27     \mbox{\hyperlink{structcontact__type}{contact\_type}}* \mbox{\hyperlink{struct_contact__structure_a5bb0360a4f5103a4b188447adcd3abdf}{con}};                       }
+\DoxyCodeLine{28     Int \mbox{\hyperlink{struct_contact__structure_a665e659bf0472642283abf3de9f77b29}{detection\_count}};}
+\DoxyCodeLine{29     Int \mbox{\hyperlink{struct_contact__structure_a35605c0e56c8435868473a33281a00e5}{contact\_count}};}
+\DoxyCodeLine{30     contact\_detection \mbox{\hyperlink{struct_contact__structure_a5796d69629102c4f080d2f10caa97071}{detection}};           \textcolor{comment}{/* contact detection method */}}
+\DoxyCodeLine{31     contact\_force \mbox{\hyperlink{struct_contact__structure_a586509c49ff7b1c94667cf02ae123250}{force\_model}};               \textcolor{comment}{/* 0 default munjiza method, 1 new method */}}
+\DoxyCodeLine{32     Real    \mbox{\hyperlink{struct_contact__structure_ac13aafa5cec3a3e581e5ed5a45b95727}{contact\_trigger}};             \textcolor{comment}{/* travel since last detection,read from function,default: 200              */}}
+\DoxyCodeLine{33     Real    \mbox{\hyperlink{struct_contact__structure_a068630376de057759c65bc2505b4a3af}{contact\_buffer}};                   \textcolor{comment}{/*\$ buffer zone size, in element size             */}}
+\DoxyCodeLine{34     Real \mbox{\hyperlink{struct_contact__structure_ae00a685baf3cf86a3087ee63cb6dfb25}{fn}};}
+\DoxyCodeLine{35     Real \mbox{\hyperlink{struct_contact__structure_a20552ef27168a899bae6dfedaa2a965e}{fs}};}
+\DoxyCodeLine{36 \};}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// !\_OPENFDEM\_STRUCTURE\_CONTACT\_}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 }
+
+\end{DoxyCode}

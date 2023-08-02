@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="reinitialize___real__cohelement__array_8c" kind="file" language="C++">
+    <compoundname>reinitialize_Real_cohelement_array.c</compoundname>
+    <includes refid="solver__initialize_8h" local="yes">solver_initialize.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>boudary/openfdem_boundary.h</label>
+        <link refid="openfdem__boundary_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>../solid/solid_mechanics_contact/openfdem_solid_contact.h</label>
+      </node>
+      <node id="9">
+        <label>../../common/openfdem_enum.h</label>
+      </node>
+      <node id="2">
+        <label>solver_initialize.h</label>
+        <link refid="solver__initialize_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>../solid/openfdem_nodal.h</label>
+      </node>
+      <node id="5">
+        <label>../io/dumper/openfdem_history.h</label>
+      </node>
+      <node id="12">
+        <label>../solid/solid_mechanics_cohesive/DFN/openfdem_DFN.h</label>
+      </node>
+      <node id="3">
+        <label>../openfdem.h</label>
+        <link refid="openfdem_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>../../common/openfdem_commom.h</label>
+      </node>
+      <node id="11">
+        <label>../mesh/group/openfdem_group.h</label>
+      </node>
+      <node id="17">
+        <label>../solid/solid_mechanics_cohesive/sesmic/openfdem_sesmic.h</label>
+      </node>
+      <node id="13">
+        <label>../solid/solid_mechanics/openfdem_solid.h</label>
+      </node>
+      <node id="4">
+        <label>../common/openfdem_general.h</label>
+      </node>
+      <node id="14">
+        <label>../solid/solid_mechanics_cohesive/openfdem_solid_cohesive.h</label>
+      </node>
+      <node id="16">
+        <label>../solid/materials/openfdem_mat.h</label>
+      </node>
+      <node id="18">
+        <label>../geometry/openfdem_geometry.h</label>
+      </node>
+      <node id="6">
+        <label>../mesh/openfdem_mesh_insert.h</label>
+      </node>
+      <node id="1">
+        <label>initialize/reinitialize_Real_cohelement_array.c</label>
+        <link refid="reinitialize___real__cohelement__array_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="reinitialize___real__cohelement__array_8c_1af5b00fef2e0374ac11381ac477416788" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Real *</type>
+        <definition>Real* reinitialize_Real_cohelement_array</definition>
+        <argsstring>(Real *array, UInt size_old, Cohelement cohelement, Real d0)</argsstring>
+        <name>reinitialize_Real_cohelement_array</name>
+        <param>
+          <type>Real *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>UInt</type>
+          <declname>size_old</declname>
+        </param>
+        <param>
+          <type>Cohelement</type>
+          <declname>cohelement</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>d0</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="initialize/reinitialize_Real_cohelement_array.c" line="4" column="6" bodyfile="initialize/reinitialize_Real_cohelement_array.c" bodystart="4" bodyend="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>File<sp/><sp/>Openfdem_io.c<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="solver__initialize_8h" kindref="compound">solver_initialize.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">Real*<sp/><ref refid="reinitialize___real__cohelement__array_8c_1af5b00fef2e0374ac11381ac477416788" kindref="member">reinitialize_Real_cohelement_array</ref>(Real*<sp/>array,<sp/>UInt<sp/>size_old,<sp/>Cohelement<sp/>cohelement,<sp/>Real<sp/>d0)</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size_old<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array<sp/>=<sp/>(Real*)malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(Real)<sp/>*<sp/>cohelement-&gt;cohe_num);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(UInt<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>cohelement-&gt;cohe_num;<sp/>i++)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array[i]<sp/>=<sp/>d0;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array<sp/>=<sp/>(Real*)realloc(array,<sp/>cohelement-&gt;cohe_num<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(Real));</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(UInt<sp/>i<sp/>=<sp/>size_old;<sp/>i<sp/>&lt;<sp/>cohelement-&gt;cohe_num;<sp/>i++)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array[i]<sp/>=<sp/>array[cohelement-&gt;cohele[i].old_map];</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>array;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="initialize/reinitialize_Real_cohelement_array.c"/>
+  </compounddef>
+</doxygen>

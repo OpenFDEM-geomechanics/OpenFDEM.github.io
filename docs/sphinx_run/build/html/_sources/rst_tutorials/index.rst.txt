@@ -1,0 +1,126 @@
+Tutorials
+===================================
+
+.. toctree::
+   :maxdepth: 1
+
+   tutorial0_Geometry
+   tutorial1_UCS_Test
+   tutorial2_UCS_with_Gmsh
+   tutorial3_UCS_Test_with_Quadrangle_Elements
+   tutorial4_BD_Test
+   tutorial5_In_Situ_Stress
+   tutorial6_Hydro_Seepage
+   tutorial7_Hydro_Fracture_Flow
+   tutorial8_Thermal_Flux
+   tutorial9_GBM
+   tutorial10_Phase_Field
+   tutorialA_Paraview
+
+
+Create the Geometry
+-----------------------------------------
+|
+
+.. grid:: 2
+   
+   .. grid-item-card:: tutorial0_Geometry
+      :img-top: ../../images/Desmos/UCS.png
+      :link: tutorial0_Geometry
+      :link-type: doc
+
+
+Lab Tests
+-----------------------------------------
+|
+
+.. grid:: 2
+   
+   .. grid-item-card:: tutorial1_UCS_Test
+      :img-top: ../../images/Desmos/UCS.png
+      :link: tutorial1_UCS_Test
+      :link-type: doc
+
+   .. grid-item-card:: tutorial2_UCS_with_Gmsh
+      :img-top: ../../images/Desmos/UCS.png
+      :link: tutorial2_UCS_with_Gmsh
+      :link-type: doc
+
+.. grid:: 2
+
+   .. grid-item-card:: tutorial3_UCS_Test_with_Quadrangle_Elements
+      :img-top: ../../images/Desmos/UCS.png
+      :link: tutorial3_UCS_Test_with_Quadrangle_Elements
+      :link-type: doc
+
+   .. grid-item-card:: tutorial4_BD_Test
+      :img-top: ../../images/Desmos/BD_Test.png
+      :link: tutorial4_BD_Test
+      :link-type: doc
+
+Excavation
+-----------------------------------------
+|
+
+.. grid:: 2
+   
+   .. grid-item-card:: tutorial5_In_Situ_Stress
+      :img-top: ../../images/Desmos/Apply_Insitu_Stress.png
+      :link: tutorial5_In_Situ_Stress
+      :link-type: doc
+
+
+Hydro Module
+-----------------------------------------
+|
+
+.. grid:: 2
+   
+   .. grid-item-card:: tutorial6_Hydro_Seepage
+      :img-top: ../../images/Desmos/Hydro.png
+      :link: tutorial6_Hydro_Seepage
+      :link-type: doc
+
+   
+   .. grid-item-card:: tutorial7_Hydro_Fracture_Flow
+      :img-top: ../../images/Desmos/Hydro.png
+      :link: tutorial7_Hydro_Fracture_Flow
+      :link-type: doc
+
+
+
+Thermal Module
+-----------------------------------------
+|
+
+.. grid:: 2
+   
+   .. grid-item-card:: tutorial8_Thermal_Flux
+      :img-top: ../../images/Desmos/Thermal.png
+      :link: tutorial8_Thermal_Flux
+      :link-type: doc
+
+
+GBM
+-----------------------------------------
+|
+
+.. grid:: 2
+   
+   .. grid-item-card:: tutorial9_GBM
+      :img-top: ../../images/Desmos/UCS.png
+      :link: tutorial9_GBM
+      :link-type: doc
+
+
+Phase Field
+-----------------------------------------
+|
+
+.. grid:: 2
+   
+   .. grid-item-card:: tutorial10_Phase_Field
+      :img-top: ../../images/Desmos/Phase_Field.png
+      :link: tutorial10_Phase_Field
+      :link-type: doc
+

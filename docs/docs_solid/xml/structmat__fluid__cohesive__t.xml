@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="structmat__fluid__cohesive__t" kind="struct" language="C++" prot="public">
+    <compoundname>mat_fluid_cohesive_t</compoundname>
+    <includes refid="openfdem__mat_8h" local="no">openfdem_mat.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmat__fluid__cohesive__t_1ac238c569010091dda420a6756e600bd0" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real a_0</definition>
+        <argsstring></argsstring>
+        <name>a_0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/openfdem_mat.h" line="44" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/openfdem_mat.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmat__fluid__cohesive__t_1a4b1dbdfad30caa50294a98e916f32337" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real a_min</definition>
+        <argsstring></argsstring>
+        <name>a_min</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/openfdem_mat.h" line="45" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/openfdem_mat.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmat__fluid__cohesive__t_1a0c1333c4dd5b97cc457a78f315b7f541" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real para_exp</definition>
+        <argsstring></argsstring>
+        <name>para_exp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/openfdem_mat.h" line="46" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/openfdem_mat.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmat__fluid__cohesive__t_1a393cce5e4d949c844e1adad78ea6fdc7" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real para_b</definition>
+        <argsstring></argsstring>
+        <name>para_b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/openfdem_mat.h" line="47" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/openfdem_mat.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/openfdem_mat.h" line="43" column="1" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/openfdem_mat.h" bodystart="43" bodyend="48"/>
+    <listofallmembers>
+      <member refid="structmat__fluid__cohesive__t_1ac238c569010091dda420a6756e600bd0" prot="public" virt="non-virtual"><scope>mat_fluid_cohesive_t</scope><name>a_0</name></member>
+      <member refid="structmat__fluid__cohesive__t_1a4b1dbdfad30caa50294a98e916f32337" prot="public" virt="non-virtual"><scope>mat_fluid_cohesive_t</scope><name>a_min</name></member>
+      <member refid="structmat__fluid__cohesive__t_1a393cce5e4d949c844e1adad78ea6fdc7" prot="public" virt="non-virtual"><scope>mat_fluid_cohesive_t</scope><name>para_b</name></member>
+      <member refid="structmat__fluid__cohesive__t_1a0c1333c4dd5b97cc457a78f315b7f541" prot="public" virt="non-virtual"><scope>mat_fluid_cohesive_t</scope><name>para_exp</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

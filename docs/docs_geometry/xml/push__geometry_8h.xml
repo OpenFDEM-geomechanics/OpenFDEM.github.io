@@ -1,0 +1,663 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="push__geometry_8h" kind="file" language="C++">
+    <compoundname>push_geometry.h</compoundname>
+    <includes local="yes">../io/parser/parser_geometry.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>../io/parser/parser_geometry.h</label>
+      </node>
+      <node id="1">
+        <label>/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h</label>
+        <link refid="push__geometry_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="push__geometry_8h_1aa07129431ef93c15740a4fb4e83da73b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void push_geometry_square</definition>
+        <argsstring>(General general, Geometry geometry, int embed_flag)</argsstring>
+        <name>push_geometry_square</name>
+        <param>
+          <type>General</type>
+          <declname>general</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__geometry_8h_1ab67dd7104bf7c8eb317017e007ddd41f" kindref="member">Geometry</ref></type>
+          <declname>geometry</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>embed_flag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" line="6" column="6" declfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" declline="6" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="push__geometry_8h_1a38b023073fd75a8da3b28b0e4d03a75c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void push_geometry_polygon</definition>
+        <argsstring>(General general, Geometry geometry, int embed_flag)</argsstring>
+        <name>push_geometry_polygon</name>
+        <param>
+          <type>General</type>
+          <declname>general</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__geometry_8h_1ab67dd7104bf7c8eb317017e007ddd41f" kindref="member">Geometry</ref></type>
+          <declname>geometry</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>embed_flag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" line="8" column="6" declfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" declline="8" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="push__geometry_8h_1adbac6c8305a4f9ffa4360ced7691947b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void push_geometry_table</definition>
+        <argsstring>(General general, Geometry geometry, int embed_flag)</argsstring>
+        <name>push_geometry_table</name>
+        <param>
+          <type>General</type>
+          <declname>general</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__geometry_8h_1ab67dd7104bf7c8eb317017e007ddd41f" kindref="member">Geometry</ref></type>
+          <declname>geometry</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>embed_flag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" line="10" column="6" declfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" declline="10" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="push__geometry_8h_1a2664cd9e9936a8e3bbf83fae7533e138" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void push_geometry_circle</definition>
+        <argsstring>(General general, Geometry geometry, int embed_flag)</argsstring>
+        <name>push_geometry_circle</name>
+        <param>
+          <type>General</type>
+          <declname>general</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__geometry_8h_1ab67dd7104bf7c8eb317017e007ddd41f" kindref="member">Geometry</ref></type>
+          <declname>geometry</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>embed_flag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" line="12" column="6" declfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" declline="12" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="push__geometry_8h_1addc6a9d4bc9884e5c1e1312ad993cb66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void push_geometry_ellipse</definition>
+        <argsstring>(General general, Geometry geometry, int embed_flag)</argsstring>
+        <name>push_geometry_ellipse</name>
+        <param>
+          <type>General</type>
+          <declname>general</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__geometry_8h_1ab67dd7104bf7c8eb317017e007ddd41f" kindref="member">Geometry</ref></type>
+          <declname>geometry</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>embed_flag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" line="14" column="6" declfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" declline="14" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="push__geometry_8h_1a5e3ba05cf9613e1c1b78c1fef4c4eaff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void push_geometry_arc</definition>
+        <argsstring>(General general, Geometry geometry)</argsstring>
+        <name>push_geometry_arc</name>
+        <param>
+          <type>General</type>
+          <declname>general</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__geometry_8h_1ab67dd7104bf7c8eb317017e007ddd41f" kindref="member">Geometry</ref></type>
+          <declname>geometry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" line="16" column="6" declfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" declline="16" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="push__geometry_8h_1a175a65591d8eaefd14c1b2da7c98ff40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void push_geometry_joint</definition>
+        <argsstring>(General general, Geometry geometry)</argsstring>
+        <name>push_geometry_joint</name>
+        <param>
+          <type>General</type>
+          <declname>general</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__geometry_8h_1ab67dd7104bf7c8eb317017e007ddd41f" kindref="member">Geometry</ref></type>
+          <declname>geometry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" line="18" column="6" declfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" declline="18" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="push__geometry_8h_1aa1dbfb2710de7d5f6babaf126206d05f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void push_geometry_jset</definition>
+        <argsstring>(General general, Geometry geometry)</argsstring>
+        <name>push_geometry_jset</name>
+        <param>
+          <type>General</type>
+          <declname>general</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__geometry_8h_1ab67dd7104bf7c8eb317017e007ddd41f" kindref="member">Geometry</ref></type>
+          <declname>geometry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" line="20" column="6" declfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" declline="20" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="push__geometry_8h_1acaa9f483cdd49bba0d5c18c48a9e2996" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void push_geometry_DFN</definition>
+        <argsstring>(General general, Geometry geometry)</argsstring>
+        <name>push_geometry_DFN</name>
+        <param>
+          <type>General</type>
+          <declname>general</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__geometry_8h_1ab67dd7104bf7c8eb317017e007ddd41f" kindref="member">Geometry</ref></type>
+          <declname>geometry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" line="22" column="6" declfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" declline="22" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="push__geometry_8h_1a32bc329ffd2294fb10e1cfbd01ca584b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void get_geo_node_group_square</definition>
+        <argsstring>(Geometry geometry, char *tag, double x_lef, double x_rig, double y_bot, double y_top)</argsstring>
+        <name>get_geo_node_group_square</name>
+        <param>
+          <type><ref refid="openfdem__geometry_8h_1ab67dd7104bf7c8eb317017e007ddd41f" kindref="member">Geometry</ref></type>
+          <declname>geometry</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x_lef</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x_rig</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y_bot</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y_top</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" line="24" column="6" declfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" declline="24" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="push__geometry_8h_1a927a2a2c87ae4a5fd227faed8d7c916e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void get_geo_node_group_square_on</definition>
+        <argsstring>(Geometry geometry, char *tag, double x_lef, double x_rig, double y_bot, double y_top)</argsstring>
+        <name>get_geo_node_group_square_on</name>
+        <param>
+          <type><ref refid="openfdem__geometry_8h_1ab67dd7104bf7c8eb317017e007ddd41f" kindref="member">Geometry</ref></type>
+          <declname>geometry</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x_lef</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x_rig</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y_bot</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y_top</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" line="26" column="6" declfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" declline="26" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="push__geometry_8h_1ac6aba3d06d8410e27f57e7a4023565ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void get_geo_node_group_plane_left</definition>
+        <argsstring>(Geometry geometry, char *tag, double x1, double y1, double x2, double y2)</argsstring>
+        <name>get_geo_node_group_plane_left</name>
+        <param>
+          <type><ref refid="openfdem__geometry_8h_1ab67dd7104bf7c8eb317017e007ddd41f" kindref="member">Geometry</ref></type>
+          <declname>geometry</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x2</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" line="28" column="6" declfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" declline="28" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="push__geometry_8h_1af441b90f6f1a7ada53ee965b48c458a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void get_geo_node_group_plane_right</definition>
+        <argsstring>(Geometry geometry, char *tag, double x1, double y1, double x2, double y2)</argsstring>
+        <name>get_geo_node_group_plane_right</name>
+        <param>
+          <type><ref refid="openfdem__geometry_8h_1ab67dd7104bf7c8eb317017e007ddd41f" kindref="member">Geometry</ref></type>
+          <declname>geometry</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x2</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" line="30" column="6" declfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" declline="30" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="push__geometry_8h_1abbb6383a4b58b84f2875ccb060135fce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void get_geo_node_group_plane</definition>
+        <argsstring>(Geometry geometry, char *tag, double x1, double y1, double x2, double y2)</argsstring>
+        <name>get_geo_node_group_plane</name>
+        <param>
+          <type><ref refid="openfdem__geometry_8h_1ab67dd7104bf7c8eb317017e007ddd41f" kindref="member">Geometry</ref></type>
+          <declname>geometry</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x2</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" line="32" column="6" declfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" declline="32" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="push__geometry_8h_1a124baa24e3c7da6b8b9b87d83267672c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void get_geo_node_group_circle_inner</definition>
+        <argsstring>(Geometry geometry, char *tag, double x0, double y0, double radius)</argsstring>
+        <name>get_geo_node_group_circle_inner</name>
+        <param>
+          <type><ref refid="openfdem__geometry_8h_1ab67dd7104bf7c8eb317017e007ddd41f" kindref="member">Geometry</ref></type>
+          <declname>geometry</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x0</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y0</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>radius</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" line="34" column="6" declfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" declline="34" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="push__geometry_8h_1a56dfe8db99e6cdb7782873189abd089b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void get_geo_node_group_circle_outer</definition>
+        <argsstring>(Geometry geometry, char *tag, double x0, double y0, double radius)</argsstring>
+        <name>get_geo_node_group_circle_outer</name>
+        <param>
+          <type><ref refid="openfdem__geometry_8h_1ab67dd7104bf7c8eb317017e007ddd41f" kindref="member">Geometry</ref></type>
+          <declname>geometry</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x0</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y0</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>radius</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" line="36" column="6" declfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" declline="36" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="push__geometry_8h_1a8a39077d1432c29ee432d910c8055df8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void get_geo_node_group_circle</definition>
+        <argsstring>(Geometry geometry, char *tag, double x0, double y0, double radius)</argsstring>
+        <name>get_geo_node_group_circle</name>
+        <param>
+          <type><ref refid="openfdem__geometry_8h_1ab67dd7104bf7c8eb317017e007ddd41f" kindref="member">Geometry</ref></type>
+          <declname>geometry</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x0</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y0</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>radius</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" line="38" column="6" declfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" declline="38" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="push__geometry_8h_1a64b81c7be3fc8fc70239bf9aaf04bb79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void push_mesh_size</definition>
+        <argsstring>(Geometry geometry, General general, char *keyword)</argsstring>
+        <name>push_mesh_size</name>
+        <param>
+          <type><ref refid="openfdem__geometry_8h_1ab67dd7104bf7c8eb317017e007ddd41f" kindref="member">Geometry</ref></type>
+          <declname>geometry</declname>
+        </param>
+        <param>
+          <type>General</type>
+          <declname>general</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>keyword</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" line="40" column="6" declfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" declline="40" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="push__geometry_8h_1a8ead1f3fe95d0f4ce5792397d0ca2d7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gmsh_api</definition>
+        <argsstring>(Openfdem openfdem, Geometry geometry, char **argv, char *keyword, int write_flag)</argsstring>
+        <name>gmsh_api</name>
+        <param>
+          <type>Openfdem</type>
+          <declname>openfdem</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__geometry_8h_1ab67dd7104bf7c8eb317017e007ddd41f" kindref="member">Geometry</ref></type>
+          <declname>geometry</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>keyword</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>write_flag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" line="42" column="6" declfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" declline="42" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="push__geometry_8h_1a60f13669103c0495e905b6bb7f82a65b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void geometry_free</definition>
+        <argsstring>(Geometry geometry)</argsstring>
+        <name>geometry_free</name>
+        <param>
+          <type><ref refid="openfdem__geometry_8h_1ab67dd7104bf7c8eb317017e007ddd41f" kindref="member">Geometry</ref></type>
+          <declname>geometry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" line="44" column="6" declfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" declline="44" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="push__geometry_8h_1a7c40e38ee8bb79f423463a011c81bf51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void push_geometry_rdfns</definition>
+        <argsstring>(General general, Geometry geometry)</argsstring>
+        <name>push_geometry_rdfns</name>
+        <param>
+          <type>General</type>
+          <declname>general</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__geometry_8h_1ab67dd7104bf7c8eb317017e007ddd41f" kindref="member">Geometry</ref></type>
+          <declname>geometry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" line="46" column="6" declfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h" declline="46" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>OPENFDEM_PUSH_GEOMETRY_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OPENFDEM_PUSH_GEOMETRY_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../io/parser/parser_geometry.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="push__geometry_8h_1aa07129431ef93c15740a4fb4e83da73b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="push__geometry_8h_1aa07129431ef93c15740a4fb4e83da73b" kindref="member">push_geometry_square</ref>(General<sp/>general,<sp/><ref refid="struct_geometry__structure" kindref="compound">Geometry</ref><sp/>geometry,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>embed_flag);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="push__geometry_8h_1a38b023073fd75a8da3b28b0e4d03a75c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="push__geometry_8h_1a38b023073fd75a8da3b28b0e4d03a75c" kindref="member">push_geometry_polygon</ref>(General<sp/>general,<sp/><ref refid="struct_geometry__structure" kindref="compound">Geometry</ref><sp/>geometry,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>embed_flag);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="push__geometry_8h_1adbac6c8305a4f9ffa4360ced7691947b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="push__geometry_8h_1adbac6c8305a4f9ffa4360ced7691947b" kindref="member">push_geometry_table</ref>(General<sp/>general,<sp/><ref refid="struct_geometry__structure" kindref="compound">Geometry</ref><sp/>geometry,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>embed_flag);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="push__geometry_8h_1a2664cd9e9936a8e3bbf83fae7533e138" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="push__geometry_8h_1a2664cd9e9936a8e3bbf83fae7533e138" kindref="member">push_geometry_circle</ref>(General<sp/>general,<sp/><ref refid="struct_geometry__structure" kindref="compound">Geometry</ref><sp/>geometry,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>embed_flag);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="push__geometry_8h_1addc6a9d4bc9884e5c1e1312ad993cb66" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="push__geometry_8h_1addc6a9d4bc9884e5c1e1312ad993cb66" kindref="member">push_geometry_ellipse</ref>(General<sp/>general,<sp/><ref refid="struct_geometry__structure" kindref="compound">Geometry</ref><sp/>geometry,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>embed_flag);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="push__geometry_8h_1a5e3ba05cf9613e1c1b78c1fef4c4eaff" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="push__geometry_8h_1a5e3ba05cf9613e1c1b78c1fef4c4eaff" kindref="member">push_geometry_arc</ref>(General<sp/>general,<sp/><ref refid="struct_geometry__structure" kindref="compound">Geometry</ref><sp/>geometry);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="push__geometry_8h_1a175a65591d8eaefd14c1b2da7c98ff40" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="push__geometry_8h_1a175a65591d8eaefd14c1b2da7c98ff40" kindref="member">push_geometry_joint</ref>(General<sp/>general,<sp/><ref refid="struct_geometry__structure" kindref="compound">Geometry</ref><sp/>geometry);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="push__geometry_8h_1aa1dbfb2710de7d5f6babaf126206d05f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="push__geometry_8h_1aa1dbfb2710de7d5f6babaf126206d05f" kindref="member">push_geometry_jset</ref>(General<sp/>general,<sp/><ref refid="struct_geometry__structure" kindref="compound">Geometry</ref><sp/>geometry);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="push__geometry_8h_1acaa9f483cdd49bba0d5c18c48a9e2996" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="push__geometry_8h_1acaa9f483cdd49bba0d5c18c48a9e2996" kindref="member">push_geometry_DFN</ref>(General<sp/>general,<sp/><ref refid="struct_geometry__structure" kindref="compound">Geometry</ref><sp/>geometry);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="push__geometry_8h_1a32bc329ffd2294fb10e1cfbd01ca584b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="push__geometry_8h_1a32bc329ffd2294fb10e1cfbd01ca584b" kindref="member">get_geo_node_group_square</ref>(<ref refid="struct_geometry__structure" kindref="compound">Geometry</ref><sp/>geometry,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>tag,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x_lef,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x_rig,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y_bot,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y_top);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="push__geometry_8h_1a927a2a2c87ae4a5fd227faed8d7c916e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="push__geometry_8h_1a927a2a2c87ae4a5fd227faed8d7c916e" kindref="member">get_geo_node_group_square_on</ref>(<ref refid="struct_geometry__structure" kindref="compound">Geometry</ref><sp/>geometry,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>tag,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x_lef,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x_rig,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y_bot,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y_top);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="push__geometry_8h_1ac6aba3d06d8410e27f57e7a4023565ca" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="push__geometry_8h_1ac6aba3d06d8410e27f57e7a4023565ca" kindref="member">get_geo_node_group_plane_left</ref>(<ref refid="struct_geometry__structure" kindref="compound">Geometry</ref><sp/>geometry,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>tag,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x1,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y1,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x2,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y2);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="push__geometry_8h_1af441b90f6f1a7ada53ee965b48c458a7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="push__geometry_8h_1af441b90f6f1a7ada53ee965b48c458a7" kindref="member">get_geo_node_group_plane_right</ref>(<ref refid="struct_geometry__structure" kindref="compound">Geometry</ref><sp/>geometry,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>tag,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x1,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y1,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x2,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y2);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="push__geometry_8h_1abbb6383a4b58b84f2875ccb060135fce" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="push__geometry_8h_1abbb6383a4b58b84f2875ccb060135fce" kindref="member">get_geo_node_group_plane</ref>(<ref refid="struct_geometry__structure" kindref="compound">Geometry</ref><sp/>geometry,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>tag,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x1,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y1,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x2,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y2);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="push__geometry_8h_1a124baa24e3c7da6b8b9b87d83267672c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="push__geometry_8h_1a124baa24e3c7da6b8b9b87d83267672c" kindref="member">get_geo_node_group_circle_inner</ref>(<ref refid="struct_geometry__structure" kindref="compound">Geometry</ref><sp/>geometry,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>tag,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>radius);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="push__geometry_8h_1a56dfe8db99e6cdb7782873189abd089b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="push__geometry_8h_1a56dfe8db99e6cdb7782873189abd089b" kindref="member">get_geo_node_group_circle_outer</ref>(<ref refid="struct_geometry__structure" kindref="compound">Geometry</ref><sp/>geometry,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>tag,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>radius);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="push__geometry_8h_1a8a39077d1432c29ee432d910c8055df8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="push__geometry_8h_1a8a39077d1432c29ee432d910c8055df8" kindref="member">get_geo_node_group_circle</ref>(<ref refid="struct_geometry__structure" kindref="compound">Geometry</ref><sp/>geometry,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>tag,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>radius);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="push__geometry_8h_1a64b81c7be3fc8fc70239bf9aaf04bb79" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="push__geometry_8h_1a64b81c7be3fc8fc70239bf9aaf04bb79" kindref="member">push_mesh_size</ref>(<ref refid="struct_geometry__structure" kindref="compound">Geometry</ref><sp/>geometry,<sp/>General<sp/>general,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>keyword);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="push__geometry_8h_1a8ead1f3fe95d0f4ce5792397d0ca2d7e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="push__geometry_8h_1a8ead1f3fe95d0f4ce5792397d0ca2d7e" kindref="member">gmsh_api</ref>(Openfdem<sp/>openfdem,<sp/><ref refid="struct_geometry__structure" kindref="compound">Geometry</ref><sp/>geometry,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>keyword,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>write_flag);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="push__geometry_8h_1a60f13669103c0495e905b6bb7f82a65b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="push__geometry_8h_1a60f13669103c0495e905b6bb7f82a65b" kindref="member">geometry_free</ref>(<ref refid="struct_geometry__structure" kindref="compound">Geometry</ref><sp/>geometry);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="push__geometry_8h_1a7c40e38ee8bb79f423463a011c81bf51" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="push__geometry_8h_1a7c40e38ee8bb79f423463a011c81bf51" kindref="member">push_geometry_rdfns</ref>(General<sp/>general,<sp/><ref refid="struct_geometry__structure" kindref="compound">Geometry</ref><sp/>geometry);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>!OPENFDEM_PUSH_GEOMETRY_</highlight></codeline>
+    </programlisting>
+    <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/push_geometry.h"/>
+  </compounddef>
+</doxygen>

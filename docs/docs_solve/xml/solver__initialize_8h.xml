@@ -1,0 +1,327 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="solver__initialize_8h" kind="file" language="C++">
+    <compoundname>solver_initialize.h</compoundname>
+    <includes refid="openfdem_8h" local="yes">../openfdem.h</includes>
+    <incdepgraph>
+      <node id="7">
+        <label>boudary/openfdem_boundary.h</label>
+        <link refid="openfdem__boundary_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>../solid/solid_mechanics_contact/openfdem_solid_contact.h</label>
+      </node>
+      <node id="8">
+        <label>../../common/openfdem_enum.h</label>
+      </node>
+      <node id="1">
+        <label>initialize/solver_initialize.h</label>
+        <link refid="solver__initialize_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>../solid/openfdem_nodal.h</label>
+      </node>
+      <node id="4">
+        <label>../io/dumper/openfdem_history.h</label>
+      </node>
+      <node id="11">
+        <label>../solid/solid_mechanics_cohesive/DFN/openfdem_DFN.h</label>
+      </node>
+      <node id="2">
+        <label>../openfdem.h</label>
+        <link refid="openfdem_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>../../common/openfdem_commom.h</label>
+      </node>
+      <node id="10">
+        <label>../mesh/group/openfdem_group.h</label>
+      </node>
+      <node id="16">
+        <label>../solid/solid_mechanics_cohesive/sesmic/openfdem_sesmic.h</label>
+      </node>
+      <node id="12">
+        <label>../solid/solid_mechanics/openfdem_solid.h</label>
+      </node>
+      <node id="3">
+        <label>../common/openfdem_general.h</label>
+      </node>
+      <node id="13">
+        <label>../solid/solid_mechanics_cohesive/openfdem_solid_cohesive.h</label>
+      </node>
+      <node id="15">
+        <label>../solid/materials/openfdem_mat.h</label>
+      </node>
+      <node id="17">
+        <label>../geometry/openfdem_geometry.h</label>
+      </node>
+      <node id="5">
+        <label>../mesh/openfdem_mesh_insert.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="solver__initialize_8h_1a594acf694c327ee2b355f391f2bcc6a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void general_initialize</definition>
+        <argsstring>(General general)</argsstring>
+        <name>general_initialize</name>
+        <param>
+          <type>General</type>
+          <declname>general</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="initialize/solver_initialize.h" line="8" column="6" declfile="initialize/solver_initialize.h" declline="8" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="solver__initialize_8h_1a0cd6d90554c5fe31b11e2300ea0cfc32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nodal_initialize</definition>
+        <argsstring>(General general, Nodal nodal, Element element, Cohelement cohelement)</argsstring>
+        <name>nodal_initialize</name>
+        <param>
+          <type>General</type>
+          <declname>general</declname>
+        </param>
+        <param>
+          <type>Nodal</type>
+          <declname>nodal</declname>
+        </param>
+        <param>
+          <type>Element</type>
+          <declname>element</declname>
+        </param>
+        <param>
+          <type>Cohelement</type>
+          <declname>cohelement</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="initialize/solver_initialize.h" line="10" column="6" declfile="initialize/solver_initialize.h" declline="10" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="solver__initialize_8h_1a44a0137c641280077584642f232f2e42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ele_initialize</definition>
+        <argsstring>(Element element, General general)</argsstring>
+        <name>ele_initialize</name>
+        <param>
+          <type>Element</type>
+          <declname>element</declname>
+        </param>
+        <param>
+          <type>General</type>
+          <declname>general</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="initialize/solver_initialize.h" line="12" column="6" declfile="initialize/solver_initialize.h" declline="12" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="solver__initialize_8h_1abe01c051cc6fcaa15c44eef743ae24ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void coh_initialize</definition>
+        <argsstring>(Cohelement cohelement, Solidmat solidmat, General general)</argsstring>
+        <name>coh_initialize</name>
+        <param>
+          <type>Cohelement</type>
+          <declname>cohelement</declname>
+        </param>
+        <param>
+          <type>Solidmat</type>
+          <declname>solidmat</declname>
+        </param>
+        <param>
+          <type>General</type>
+          <declname>general</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="initialize/solver_initialize.h" line="14" column="6" declfile="initialize/solver_initialize.h" declline="14" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="solver__initialize_8h_1aed556a7cf91e649c22ea1bb659596bd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void contact_initialize</definition>
+        <argsstring>(Element element, Contact contact)</argsstring>
+        <name>contact_initialize</name>
+        <param>
+          <type>Element</type>
+          <declname>element</declname>
+        </param>
+        <param>
+          <type>Contact</type>
+          <declname>contact</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="initialize/solver_initialize.h" line="16" column="6" declfile="initialize/solver_initialize.h" declline="16" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="solver__initialize_8h_1a58b006edca43de40b23740c8dc492451" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Int *</type>
+        <definition>Int* reinitialize_Int_node_array</definition>
+        <argsstring>(Int *array, UInt size_old, Nodal nodal, Int d0)</argsstring>
+        <name>reinitialize_Int_node_array</name>
+        <param>
+          <type>Int *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>UInt</type>
+          <declname>size_old</declname>
+        </param>
+        <param>
+          <type>Nodal</type>
+          <declname>nodal</declname>
+        </param>
+        <param>
+          <type>Int</type>
+          <declname>d0</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="initialize/solver_initialize.h" line="18" column="5" declfile="initialize/solver_initialize.h" declline="18" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="solver__initialize_8h_1a28e5b3ecf7681fa0a7d446dffcdc6d79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Real *</type>
+        <definition>Real* reinitialize_Real_node_array</definition>
+        <argsstring>(Real *array, UInt size_old, Nodal nodal, Real d0)</argsstring>
+        <name>reinitialize_Real_node_array</name>
+        <param>
+          <type>Real *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>UInt</type>
+          <declname>size_old</declname>
+        </param>
+        <param>
+          <type>Nodal</type>
+          <declname>nodal</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>d0</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="initialize/solver_initialize.h" line="20" column="6" declfile="initialize/solver_initialize.h" declline="20" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="solver__initialize_8h_1af5b00fef2e0374ac11381ac477416788" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Real *</type>
+        <definition>Real* reinitialize_Real_cohelement_array</definition>
+        <argsstring>(Real *array, UInt size_old, Cohelement cohelement, Real d0)</argsstring>
+        <name>reinitialize_Real_cohelement_array</name>
+        <param>
+          <type>Real *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type>UInt</type>
+          <declname>size_old</declname>
+        </param>
+        <param>
+          <type>Cohelement</type>
+          <declname>cohelement</declname>
+        </param>
+        <param>
+          <type>Real</type>
+          <declname>d0</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="initialize/solver_initialize.h" line="22" column="6" declfile="initialize/solver_initialize.h" declline="22" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>File<sp/><sp/>Openfdem_io.c<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_OPENFDEM_SOLVER_INITIALIZE_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_OPENFDEM_SOLVER_INITIALIZE_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../openfdem.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//void<sp/>openfdem_solver_initialize(Openfdem<sp/>openfdem);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="solver__initialize_8h_1a594acf694c327ee2b355f391f2bcc6a2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="solver__initialize_8h_1a594acf694c327ee2b355f391f2bcc6a2" kindref="member">general_initialize</ref>(General<sp/>general);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="solver__initialize_8h_1a0cd6d90554c5fe31b11e2300ea0cfc32" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="solver__initialize_8h_1a0cd6d90554c5fe31b11e2300ea0cfc32" kindref="member">nodal_initialize</ref>(General<sp/>general,<sp/>Nodal<sp/>nodal,<sp/>Element<sp/>element,<sp/>Cohelement<sp/>cohelement);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="solver__initialize_8h_1a44a0137c641280077584642f232f2e42" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="solver__initialize_8h_1a44a0137c641280077584642f232f2e42" kindref="member">ele_initialize</ref>(Element<sp/>element,<sp/>General<sp/>general);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="solver__initialize_8h_1abe01c051cc6fcaa15c44eef743ae24ea" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="solver__initialize_8h_1abe01c051cc6fcaa15c44eef743ae24ea" kindref="member">coh_initialize</ref>(Cohelement<sp/><sp/>cohelement,<sp/>Solidmat<sp/>solidmat,<sp/>General<sp/>general);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="solver__initialize_8h_1aed556a7cf91e649c22ea1bb659596bd3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="solver__initialize_8h_1aed556a7cf91e649c22ea1bb659596bd3" kindref="member">contact_initialize</ref>(Element<sp/>element,<sp/>Contact<sp/>contact);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="solver__initialize_8h_1a58b006edca43de40b23740c8dc492451" refkind="member"><highlight class="normal">Int*<sp/><ref refid="solver__initialize_8h_1a58b006edca43de40b23740c8dc492451" kindref="member">reinitialize_Int_node_array</ref>(Int*<sp/>array,<sp/>UInt<sp/>size_old,<sp/>Nodal<sp/>nodal,<sp/>Int<sp/>d0);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="solver__initialize_8h_1a28e5b3ecf7681fa0a7d446dffcdc6d79" refkind="member"><highlight class="normal">Real*<sp/><ref refid="solver__initialize_8h_1a28e5b3ecf7681fa0a7d446dffcdc6d79" kindref="member">reinitialize_Real_node_array</ref>(Real*<sp/>array,<sp/>UInt<sp/>size_old,<sp/>Nodal<sp/>nodal,<sp/>Real<sp/>d0);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="solver__initialize_8h_1af5b00fef2e0374ac11381ac477416788" refkind="member"><highlight class="normal">Real*<sp/><ref refid="solver__initialize_8h_1af5b00fef2e0374ac11381ac477416788" kindref="member">reinitialize_Real_cohelement_array</ref>(Real*<sp/>array,<sp/>UInt<sp/>size_old,<sp/>Cohelement<sp/>cohelement,<sp/>Real<sp/>d0);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>!_OPENFDEM_SOLVER_INITIALIZE_</highlight></codeline>
+    </programlisting>
+    <location file="initialize/solver_initialize.h"/>
+  </compounddef>
+</doxygen>

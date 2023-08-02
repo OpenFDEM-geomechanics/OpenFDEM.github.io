@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="contact__add__list__from__cohesive_8h" kind="file" language="C++">
+    <compoundname>contact_add_list_from_cohesive.h</compoundname>
+    <includes refid="openfdem__solid__contact_8h" local="yes">../../solid/solid_mechanics_contact/openfdem_solid_contact.h</includes>
+    <includes local="yes">../../common/openfdem_math.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>../../common/openfdem_commom.h</label>
+      </node>
+      <node id="5">
+        <label>../../common/openfdem_math.h</label>
+      </node>
+      <node id="3">
+        <label>../../common/openfdem_struct.h</label>
+      </node>
+      <node id="1">
+        <label>/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/contact_add_list_from_cohesive.h</label>
+        <link refid="contact__add__list__from__cohesive_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../../solid/solid_mechanics_contact/openfdem_solid_contact.h</label>
+        <link refid="openfdem__solid__contact_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="contact__add__list__from__cohesive_8h_1aafeff9a8df7a88c93ea8ac7d01c252ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void contact_add_list_from_cohesive</definition>
+        <argsstring>(Contact contact, UInt ielem, UInt jelem, short slip)</argsstring>
+        <name>contact_add_list_from_cohesive</name>
+        <param>
+          <type><ref refid="openfdem__solid__contact_8h_1a33b34b0b5e26b260dc771b8cdc178eb6" kindref="member">Contact</ref></type>
+          <declname>contact</declname>
+        </param>
+        <param>
+          <type>UInt</type>
+          <declname>ielem</declname>
+        </param>
+        <param>
+          <type>UInt</type>
+          <declname>jelem</declname>
+        </param>
+        <param>
+          <type>short</type>
+          <declname>slip</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/contact_add_list_from_cohesive.h" line="7" column="6" declfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/contact_add_list_from_cohesive.h" declline="7" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="contact__add__list__from__cohesive_8h_1aac4d066bf540148cf3c56bc3d0964a4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void malloc_contact</definition>
+        <argsstring>(Contact contact, UInt ielem, UInt jelem)</argsstring>
+        <name>malloc_contact</name>
+        <param>
+          <type><ref refid="openfdem__solid__contact_8h_1a33b34b0b5e26b260dc771b8cdc178eb6" kindref="member">Contact</ref></type>
+          <declname>contact</declname>
+        </param>
+        <param>
+          <type>UInt</type>
+          <declname>ielem</declname>
+        </param>
+        <param>
+          <type>UInt</type>
+          <declname>jelem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/contact_add_list_from_cohesive.h" line="10" column="6" declfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/contact_add_list_from_cohesive.h" declline="10" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="contact__add__list__from__cohesive_8h_1a886a482d085666f1a064322666acb3a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void realloc_contact</definition>
+        <argsstring>(Contact contact, UInt ielem, UInt jelem)</argsstring>
+        <name>realloc_contact</name>
+        <param>
+          <type><ref refid="openfdem__solid__contact_8h_1a33b34b0b5e26b260dc771b8cdc178eb6" kindref="member">Contact</ref></type>
+          <declname>contact</declname>
+        </param>
+        <param>
+          <type>UInt</type>
+          <declname>ielem</declname>
+        </param>
+        <param>
+          <type>UInt</type>
+          <declname>jelem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/contact_add_list_from_cohesive.h" line="13" column="6" declfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/contact_add_list_from_cohesive.h" declline="13" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_OPENFDEM_CONTACT_ADD_LIST_FROM_COHESIVE_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_OPENFDEM_CONTACT_ADD_LIST_FROM_COHESIVE_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../solid/solid_mechanics_contact/openfdem_solid_contact.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../common/openfdem_math.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="contact__add__list__from__cohesive_8h_1aafeff9a8df7a88c93ea8ac7d01c252ff" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="contact__add__list__from__cohesive_8h_1aafeff9a8df7a88c93ea8ac7d01c252ff" kindref="member">contact_add_list_from_cohesive</ref>(</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_contact__structure" kindref="compound">Contact</ref><sp/>contact,<sp/>UInt<sp/>ielem,<sp/>UInt<sp/>jelem,<sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>slip);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="contact__add__list__from__cohesive_8h_1aac4d066bf540148cf3c56bc3d0964a4d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="contact__add__list__from__cohesive_8h_1aac4d066bf540148cf3c56bc3d0964a4d" kindref="member">malloc_contact</ref>(</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_contact__structure" kindref="compound">Contact</ref><sp/>contact,<sp/>UInt<sp/>ielem,<sp/>UInt<sp/>jelem);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="contact__add__list__from__cohesive_8h_1a886a482d085666f1a064322666acb3a0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="contact__add__list__from__cohesive_8h_1a886a482d085666f1a064322666acb3a0" kindref="member">realloc_contact</ref>(</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_contact__structure" kindref="compound">Contact</ref><sp/>contact,<sp/>UInt<sp/>ielem,<sp/>UInt<sp/>jelem);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>!_OPENFDEM_CONTACT_ADD_LIST_FROM_COHESIVE_</highlight></codeline>
+    </programlisting>
+    <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/contact_add_list_from_cohesive.h"/>
+  </compounddef>
+</doxygen>

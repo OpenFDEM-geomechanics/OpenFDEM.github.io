@@ -1,0 +1,403 @@
+User Guide
+===================================
+
+.. toctree::
+   :maxdepth: 1
+   
+   general
+   blast
+   boundary
+   DFN
+   FEM
+   geometry
+   group
+   mesh
+   material
+   history
+
+The input commands are started from the topmost class ``openfdem.`` which can also be 
+shortened as ``of.``. In this tutorial, ``of.`` will be used for simplification.
+
+
+General
+--------------------------------------
+
++--------------------------------------------------------+-----------------------------------------------------------------------------+
+| Function                                               | Description                                                                 |
++========================================================+=============================================================================+
+| :doc:`of.console.interval<General/of.console.interval>`| Set the interval to show the results printed on the console screen.         |
++--------------------------------------------------------+-----------------------------------------------------------------------------+
+| :doc:`of.damp.global<General/of.damp.global>`          | Set the global damping value to slow down the loading velocity.             |
++--------------------------------------------------------+-----------------------------------------------------------------------------+
+| :doc:`of.finalize<General/of.finalize>`                | Clear all the memory after the last run                                     |
++--------------------------------------------------------+-----------------------------------------------------------------------------+
+| :doc:`of.import<General/of.import>`                    | Import the file.                                                            |
++--------------------------------------------------------+-----------------------------------------------------------------------------+
+| :doc:`of.import.table<General/of.import.table>`        | Import the table.                                                           |
++--------------------------------------------------------+-----------------------------------------------------------------------------+
+| :doc:`of.log.interval<General/of.log.interval>`        | Set the interval to print the results in .log file.                         |
++--------------------------------------------------------+-----------------------------------------------------------------------------+
+| :doc:`of.new<General/of.new>`                          | Clear all old memory and start a new run                                    |
++--------------------------------------------------------+-----------------------------------------------------------------------------+
+| :doc:`of.restore<General/of.restore>`                  | Restore the model and rerun the data.                                       |
++--------------------------------------------------------+-----------------------------------------------------------------------------+
+| :doc:`of.save<General/of.save>`                        | Save the model and make it possible to be restored.                         |
++--------------------------------------------------------+-----------------------------------------------------------------------------+
+| :doc:`of.save.FEM<General/of.save.FEM>`                | Save the FEM results after in-situ stress equilibrium is reached.           |
++--------------------------------------------------------+-----------------------------------------------------------------------------+
+| :doc:`of.set.config<General/of.set.config>`            | Choose the plane stress or plane strain for the 2D problems.                |
++--------------------------------------------------------+-----------------------------------------------------------------------------+
+| :doc:`of.set.contact<General/of.set.contact>`          | Set the model with contact detection and contact forces computation or not. |
++--------------------------------------------------------+-----------------------------------------------------------------------------+
+| :doc:`of.set.debug<General/of.set.debug>`              | Turn on the debug mode.                                                     |
++--------------------------------------------------------+-----------------------------------------------------------------------------+
+| :doc:`of.set.GBM<General/of.set.GBM>`                  | Assign the number of groups for minerals in GBM model.                      |
++--------------------------------------------------------+-----------------------------------------------------------------------------+
+| :doc:`of.set.gravity<General/of.set.gravity>`          | Add the gravity in the model.                                               |
++--------------------------------------------------------+-----------------------------------------------------------------------------+
+| :doc:`of.set.large<General/of.set.large>`              | Set the flag of large deformation for the kinematics.                       |
++--------------------------------------------------------+-----------------------------------------------------------------------------+
+| :doc:`of.set.massscale<General/of.set.massscale>`      | Set the mass scale value to lump the nodal mass and give a larger timestep. |
++--------------------------------------------------------+-----------------------------------------------------------------------------+
+| :doc:`of.set.module<General/of.set.module>`            | Set the flags of different modules.                                         |
++--------------------------------------------------------+-----------------------------------------------------------------------------+
+| :doc:`of.set.omp<General/of.set.omp>`                  | Assign the number of cores used for CPU parallelization.                    |
++--------------------------------------------------------+-----------------------------------------------------------------------------+
+| :doc:`of.set.result<General/of.set.result>`            | Set the path to store the result files.                                     |
++--------------------------------------------------------+-----------------------------------------------------------------------------+
+| :doc:`of.set.rgbm<General/of.set.rgbm>`                | Assign the number of groups for minerals to create the realistic GBM model. |
++--------------------------------------------------------+-----------------------------------------------------------------------------+
+| :doc:`of.solve<General/of.solve>`                      | Assign the mechanical ratio as the iteration threshold to exit the running. |
++--------------------------------------------------------+-----------------------------------------------------------------------------+
+| :doc:`of.step<General/of.step>`                        | Assign the cycle steps for the current run.                                 |
++--------------------------------------------------------+-----------------------------------------------------------------------------+
+| :doc:`of.timestep<General/of.timestep>`                | Set the user-defined timestep.                                              |
++--------------------------------------------------------+-----------------------------------------------------------------------------+
+
+
+Blast
+--------------------------------------------
++---------------------------------------------------+------------------------------------------------------------------+
+| Function                                          | Description                                                      |
++===================================================+==================================================================+
+|:doc:`of.blast.position<Blast/of.blast.position>`  | Create a blast borehole by its center and radius.                |
++---------------------------------------------------+------------------------------------------------------------------+
+
+Boundary Conditions
+----------------------------------------------
+
++------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
+| Function                                                                           | Description                                                                       |
++====================================================================================+===================================================================================+
+| :doc:`of.boundary.nodal.force<Boundary/of.boundary.nodal.force>`                   | Create nodal force boundaries on nodal groups.                                    |
++------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
+| :doc:`of.boundary.nodal.velocity<Boundary/of.boundary.nodal.velocity>`             | Create the nodal velocity boundary on the nodal groups.                           |
++------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
+| :doc:`of.boundary.nodal.inivelocity<Boundary/of.boundary.nodal.inivelocity>`       | Create the initial velocity boundaries on the nodal groups.                       |
++------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
+| :doc:`of.boundary.nodal.acceleration<Boundary/of.boundary.nodal.acceleration>`     | Create the acceleration boundary on the nodal groups.                             |
++------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
+| :doc:`of.boundary.nodal.clear<Boundary/of.boundary.nodal.clear>`                   | Delete the nodal boundaries defined before. Directly set the nodal groups.        |
++------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
+| :doc:`of.boundary.edge.force<Boundary/of.boundary.edge.force>`                     | Create the edge force boundary on the edge groups.                                |
++------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
+| :doc:`of.boundary.edge.velocity<Boundary/of.boundary.edge.velocity>`               | Create the edge velocity boundary on the edge groups.                             |
++------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
+| :doc:`of.boundary.edge.inivelocity<Boundary/of.boundary.edge.inivelocity>`         | Create the initial velocity boundaries on the edge groups.                        |
++------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
+| :doc:`of.boundary.edge.acceleration<Boundary/of.boundary.edge.acceleration>`       | Create the acceleration boundary on the edge groups.                              |
++------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
+| :doc:`of.boundary.edge.clear<Boundary/of.boundary.edge.clear>`                     | Delete the edge boundaries defined before.                                        |
++------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
+| :doc:`of.boundary.element.stress<Boundary/of.boundary.element.stress>`             | Create the in-situ stress on the assigned element groups.                         |
++------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
+| :doc:`of.boundary.element.stress.xgrad<Boundary/of.boundary.element.stress.xgrad>` | Create the in-situ stress gradient in x direction on the assigned element groups. |
++------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
+| :doc:`of.boundary.element.stress.ygrad<Boundary/of.boundary.element.stress.ygrad>` | Create the in-situ stress gradient in y direction on the assigned element groups. |
++------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
+| :doc:`of.boundary.element.clear<Boundary/of.boundary.element.clear>`               | Delete the element boundaries defined before. Directly set the element groups.    |
++------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
+| :doc:`of.boundary.blast<Boundary/of.boundary.blast>`                               | Create the blast borehole boundaries from the table.                              |
++------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
+
+
+
+DFN
+--------------------------------
+
++-----------------------------------------------------+-------------------------------------------------------------------+
+| Function                                            | Description                                                       |
++=====================================================+===================================================================+
+| :doc:`of.DFN.connectivity<DFN/of.DFN.connectivity>` | Create DFN by knowing its node id.                                |
++-----------------------------------------------------+-------------------------------------------------------------------+
+| :doc:`of.DFN.group<DFN/of.DFN.group>`               | Create DFN groups by knowing the dfn id.                          |
++-----------------------------------------------------+-------------------------------------------------------------------+
+| :doc:`of.DFN.cohesive<DFN/of.DFN.cohesive>`         | Set the DFN as initial cohesive by groups.                        |
++-----------------------------------------------------+-------------------------------------------------------------------+
+| :doc:`of.DFN.broken<DFN/of.DFN.broken>`             | Set the DFN as initial broken fractures by groups.                |
++-----------------------------------------------------+-------------------------------------------------------------------+
+
+
+FEM
+-----------------------------------
++-----------------------------------------------------------------------------------+---------------------------------------------------------------------------+
+| Function                                                                          | Description                                                               |
++===================================================================================+===========================================================================+
+| :doc:`of.import.FEM.nodal.coord<FEM/of.import.FEM.nodal.coord>`                   | Import the nodal by knowing node count and initial coordinates.           |
++-----------------------------------------------------------------------------------+---------------------------------------------------------------------------+
+| :doc:`of.import.FEM.nodal.coord0<FEM/of.import.FEM.nodal.coord0>`                 | Import the nodal by knowing node count and initial coordinates.           |
++-----------------------------------------------------------------------------------+---------------------------------------------------------------------------+
+| :doc:`of.import.FEM.nodal.velocity<FEM/of.import.FEM.nodal.velocity>`             | Import the nodal velocities by knowing node count and initial velocities. |
++-----------------------------------------------------------------------------------+---------------------------------------------------------------------------+
+| :doc:`of.import.FEM.nodal.groups<FEM/of.import.FEM.nodal.groups>`                 | Import the nodal groups.                                                  |
++-----------------------------------------------------------------------------------+---------------------------------------------------------------------------+
+| :doc:`of.import.FEM.edge.groups<FEM/of.import.FEM.edge.groups>`                   | Import the edge groups.                                                   |
++-----------------------------------------------------------------------------------+---------------------------------------------------------------------------+
+| :doc:`of.import.FEM.element.groups<FEM/of.import.FEM.element.groups>`             | Import the element groups.                                                |
++-----------------------------------------------------------------------------------+---------------------------------------------------------------------------+
+| :doc:`of.import.FEM.element.connectivity<FEM/of.import.FEM.element.connectivity>` | Import the element connectivity.                                          |
++-----------------------------------------------------------------------------------+---------------------------------------------------------------------------+
+
+
+
+Geometry
+-------------------------------
+
++-------------------------------------------------------------------------+-----------------------------------------------------------------+
+| Function                                                                | Description                                                     |
++=========================================================================+=================================================================+
+| :doc:`of.geometry.square<Geometry/of.geometry.square>`                  | create a rectangular object                                     |
++-------------------------------------------------------------------------+-----------------------------------------------------------------+
+| :doc:`of.geometry.cut.square<Geometry/of.geometry.cut.square>`          | cut the rectangle from the existing geometry                    |
++-------------------------------------------------------------------------+-----------------------------------------------------------------+
+| :doc:`of.geometry.remove.square<Geometry/of.geometry.remove.square>`    | remove the rectangle from the existing geometry                 |
++-------------------------------------------------------------------------+-----------------------------------------------------------------+
+| :doc:`of.geometry.cir<Geometry/of.geometry.circle>`                     | create a circle object                                          |
++-------------------------------------------------------------------------+-----------------------------------------------------------------+
+| :doc:`of.geometry.cut.circle<Geometry/of.geometry.cut.circle>`          | cut the circle from the existing geometry                       |
++-------------------------------------------------------------------------+-----------------------------------------------------------------+
+| :doc:`of.geometry.remove.circle<Geometry/of.geometry.remove.circle>`    | remove the circle from the existing geometry                    |
++-------------------------------------------------------------------------+-----------------------------------------------------------------+
+| :doc:`of.geometry.ellip<Geometry/of.geometry.ellipse>`                  | create a ellipse object                                         |
++-------------------------------------------------------------------------+-----------------------------------------------------------------+
+| :doc:`of.geometry.cut.ellipse<Geometry/of.geometry.cut.ellipse>`        | cut the ellipse from the existing geometry                      |
++-------------------------------------------------------------------------+-----------------------------------------------------------------+
+| :doc:`of.geometry.remove.ellipse<Geometry/of.geometry.remove.ellipse>`  | remove the ellipse from the existing geometry                   |
++-------------------------------------------------------------------------+-----------------------------------------------------------------+
+| :doc:`of.geometry.polyg<Geometry/of.geometry.polygon>`                  | create a polygon object                                         |
++-------------------------------------------------------------------------+-----------------------------------------------------------------+
+| :doc:`of.geometry.cut.polygon<Geometry/of.geometry.cut.polygon>`        | cut the polygon from the existing geometry                      |
++-------------------------------------------------------------------------+-----------------------------------------------------------------+
+| :doc:`of.geometry.remove.polygon<Geometry/of.geometry.remove.polygon>`  | remove the polygon from the existing geometry                   |
++-------------------------------------------------------------------------+-----------------------------------------------------------------+
+| :doc:`of.geometry.t<Geometry/of.geometry.table>`                        | create an object based on the data in the table                 |
++-------------------------------------------------------------------------+-----------------------------------------------------------------+
+| :doc:`of.geometry.cut.table<Geometry/of.geometry.cut.table>`            | cut the object from the existing geometry                       |
++-------------------------------------------------------------------------+-----------------------------------------------------------------+
+| :doc:`of.geometry.remove.table<Geometry/of.geometry.remove.table>`      | remove the object from the existing geometry                    |
++-------------------------------------------------------------------------+-----------------------------------------------------------------+
+| :doc:`of.geometry.domain<Geometry/of.geometry.domain>`                  | Range of the geometry.                                          |
++-------------------------------------------------------------------------+-----------------------------------------------------------------+
+| :doc:`of.geometry.cut.joint<Geometry/of.geometry.cut.joint>`            | Cut a joint in an object.                                       |
++-------------------------------------------------------------------------+-----------------------------------------------------------------+
+| :doc:`of.geometry.cut.jset<Geometry/of.geometry.cut.jset>`              | Cut joint sets by assigning the dip, space, trace and gap of    |
+|                                                                         | the joints.                                                     |
++-------------------------------------------------------------------------+-----------------------------------------------------------------+
+| :doc:`of.geometry.cut.DFN<Geometry/of.geometry.cut.DFN>`                | Cut DFN sets by assigning the dip, length, threshold method     |
+|                                                                         | of the joints.                                                  |
++-------------------------------------------------------------------------+-----------------------------------------------------------------+
+| :doc:`of.geometry.cut.arc<Geometry/of.geometry.cut.arc>`                | Create an arc.                                                  |
++-------------------------------------------------------------------------+-----------------------------------------------------------------+
+| :doc:`of.geometry.minsize<Geometry/of.geometry.minsize>`                | Set the minsize to delete the bad segments for jsets and dfns.  |
++-------------------------------------------------------------------------+-----------------------------------------------------------------+
+| :doc:`of.geometry.minangle<Geometry/of.geometry.minangle>`              | Set the minangle to delete the bad segments for jsets and dfns. |
++-------------------------------------------------------------------------+-----------------------------------------------------------------+
+| :doc:`of.geometry.iteration<Geometry/of.geometry.iteration>`            | Set the iteration to converge the generation of jsets and dfns. |
++-------------------------------------------------------------------------+-----------------------------------------------------------------+
+| :doc:`of.geometry.group<Geometry/of.geometry.group>`                    | Set group of the points in gmsh to set the new mesh size.       |
++-------------------------------------------------------------------------+-----------------------------------------------------------------+
+| :doc:`of.geometry.mesh.size<Geometry/of.geometry.mesh.size>`            | Set the mesh size to the tags.                                  |
++-------------------------------------------------------------------------+-----------------------------------------------------------------+
+| :doc:`of.geometry.recombine<Geometry/of.geometry.recombine>`            | Generate quadrangle element.                                    |
++-------------------------------------------------------------------------+-----------------------------------------------------------------+
+| :doc:`of.geometry.mesh<Geometry/of.geometry.mesh>`                      | Set the method to create mesh.                                  |
++-------------------------------------------------------------------------+-----------------------------------------------------------------+
+| :doc:`of.geometry.mesh.write<Geometry/of.geometry.mesh.write>`          | Export the mesh file.                                           |
++-------------------------------------------------------------------------+-----------------------------------------------------------------+
+
+
+Group
+------------------------------------------------------
+
++-------------------------------------------------------------------------------------+-------------------------------------+
+| Function                                                                            | Description                         |
++=====================================================================================+=====================================+
+| :doc:`of.group.nodal<Group/of.group.nodal>`                                         | Set the group of nodals in mesh.    |
++-------------------------------------------------------------------------------------+-------------------------------------+
+| :doc:`of.group.edge<Group/of.group.edge>`                                           | Set the group of edges in mesh.     |
++-------------------------------------------------------------------------------------+-------------------------------------+
+| :doc:`of.group.element<Group/of.group.element>`                                     | Set the group of elements in mesh.  |
++-------------------------------------------------------------------------------------+-------------------------------------+
+| :doc:`of.group.cohelement<Group/of.group.cohelement>`                               | Set the group of cohesive elements  |
+|                                                                                     | in mesh.                            |
++-------------------------------------------------------------------------------------+-------------------------------------+
+| :doc:`of.group.nodal.from.element<Group/of.group.nodal.from.element>`               | Inherit the nodal group from their  |
+|                                                                                     | parent elements                     |
++-------------------------------------------------------------------------------------+-------------------------------------+
+| :doc:`of.group.edge.from.element<Group/of.group.edge.from.element>`                 | Inherit the edge group from their   |
+|                                                                                     | parent elements                     |
++-------------------------------------------------------------------------------------+-------------------------------------+
+| :doc:`of.group.edge.from.cohelement<Group/of.group.edge.from.cohelement>`           | Inherit the edge group from their   |
+|                                                                                     | parent cohelements                  |
++-------------------------------------------------------------------------------------+-------------------------------------+
+| :doc:`of.group.edge.from.dfn<Group/of.group.edge.from.dfn>`                         | Inherit the edge group from DFN     |
+|                                                                                     | tags                                |
++-------------------------------------------------------------------------------------+-------------------------------------+
+| :doc:`of.group.cohelement.from.dfn<Group/of.group.cohelement.from.dfn>`             | Inherit the cohelement group from   |
+|                                                                                     | DFN tags                            |
++-------------------------------------------------------------------------------------+-------------------------------------+
+| :doc:`of.group.cohelement.from.gbm<Group/of.group.cohelement.from.gbm>`             | Create the cohesive element groups  |
+|                                                                                     | if they are located between the     |
+|                                                                                     | target element tags.                |
++-------------------------------------------------------------------------------------+-------------------------------------+
+| :doc:`of.group.nodal.bool.union<Group/of.group.nodal.bool.union>`                   | Get the bool union of the second -  |
+|                                                                                     | last nodal groups and store them    |
+|                                                                                     | into the first tags.                |
++-------------------------------------------------------------------------------------+-------------------------------------+
+| :doc:`of.group.nodal.bool.intersect<Group/of.group.nodal.bool.intersect>`           | Get the bool intersect of the       |
+|                                                                                     | second - last nodal groups and      |
+|                                                                                     | store them into the first tags.     |
++-------------------------------------------------------------------------------------+-------------------------------------+
+| :doc:`of.group.nodal.bool.subtract<Group/of.group.nodal.bool.subtract>`             | Get the bool subtract of the second |
+|                                                                                     | to other- last nodal groups and     |
+|                                                                                     | store them into the first tags.     |
++-------------------------------------------------------------------------------------+-------------------------------------+
+| :doc:`of.group.edge.bool.union<Group/of.group.edge.bool.union>`                     | Get the bool union of the second -  |
+|                                                                                     | last edge groups and store them     |
+|                                                                                     | into the first tags.                |
++-------------------------------------------------------------------------------------+-------------------------------------+
+| :doc:`of.group.edge.bool.intersect<Group/of.group.edge.bool.intersect>`             | Get the bool intersect of the       |
+|                                                                                     | second - last edge groups and store |
+|                                                                                     | them into the first tags.           |
++-------------------------------------------------------------------------------------+-------------------------------------+
+| :doc:`of.group.edge.bool.subtract<Group/of.group.edge.bool.subtract>`               | Get the bool subtract of the second |
+|                                                                                     | to other- last edge groups and      |
+|                                                                                     | store them into the first tags.     |
++-------------------------------------------------------------------------------------+-------------------------------------+
+| :doc:`of.group.element.bool.union<Group/of.group.element.bool.union>`               | Get the bool union of the second -  |
+|                                                                                     | last element groups and store them  |
+|                                                                                     | into the first tags.                |
++-------------------------------------------------------------------------------------+-------------------------------------+
+| :doc:`of.group.element.bool.intersect<Group/of.group.element.bool.intersect>`       | Get the bool intersect of the       |
+|                                                                                     | second - last element groups and    |
+|                                                                                     | store them into the first tags.     |
++-------------------------------------------------------------------------------------+-------------------------------------+
+| :doc:`of.group.element.bool.subtract<Group/of.group.element.bool.subtract>`         | Get the bool subtract of the second |
+|                                                                                     | to other- last element groups       |
+|                                                                                     | and store them into the first tags. |
++-------------------------------------------------------------------------------------+-------------------------------------+
+| :doc:`of.group.cohelement.bool.union<Group/of.group.cohelement.bool.union>`         | Get the bool union of the second -  |
+|                                                                                     | last cohesive element groups and    |
+|                                                                                     | store them into the first tags.     |
++-------------------------------------------------------------------------------------+-------------------------------------+
+| :doc:`of.group.cohelement.bool.intersect<Group/of.group.cohelement.bool.intersect>` | Get the bool intersect of the       |
+|                                                                                     | second - last cohelement groups and |
+|                                                                                     | store them into the first tags.     |
++-------------------------------------------------------------------------------------+-------------------------------------+
+| :doc:`of.group.cohelement.bool.subtract<Group/of.group.cohelement.bool.subtract>`   | Get the bool subtract of the second |
+|                                                                                     | to other- last cohelement groups    |
+|                                                                                     | and store them into the first tags. |
++-------------------------------------------------------------------------------------+-------------------------------------+
+
+
+
+Mesh
+-----------------------------------
+
++---------------------------------------------------+---------------------------------------------------------------------+
+| Function                                          | Description                                                         |
++===================================================+=====================================================================+
+| :doc:`of.mesh.insert<Mesh/of.mesh.insert>`        | Insert cohesive in the target element groups.                       |
++---------------------------------------------------+---------------------------------------------------------------------+
+| :doc:`of.mesh.insert.dfn<Mesh/of.mesh.insert.dfn>`| Insert cohesive only on a dfn plane, the dfn should cross the block.|
++---------------------------------------------------+---------------------------------------------------------------------+
+| :doc:`of.mesh.voronoi<Mesh/of.mesh.voronoi>`      | Change the delaunay element to Voronoi element.                     |
++---------------------------------------------------+---------------------------------------------------------------------+
+| :doc:`of.mesh.split<Mesh/of.mesh.split>`          | Insert contacts within the element tags and no cohesive elements    |
+|                                                   | will be created.                                                    |
++---------------------------------------------------+---------------------------------------------------------------------+
+| :doc:`of.mesh.bary<Mesh/of.mesh.bary>`            | Refine the target element groups using bary separation scheme.      |
++---------------------------------------------------+---------------------------------------------------------------------+
+| :doc:`of.mesh.RG<Mesh/of.mesh.RG>`                | Refine the target element groups using RG separation scheme.        |
++---------------------------------------------------+---------------------------------------------------------------------+
+| :doc:`of.mesh.RGB<Mesh/of.mesh.RGB>`              | Refine the target element groups using RGB separation scheme.       |
++---------------------------------------------------+---------------------------------------------------------------------+
+| :doc:`of.mesh.NVB<Mesh/of.mesh.NVB>`              | Refine the target element groups using NVB separation scheme.       |
++---------------------------------------------------+---------------------------------------------------------------------+
+| :doc:`of.mesh.baryGB<Mesh/of.mesh.baryGB>`        | Refine the target element groups using baryGB separation scheme.    |
++---------------------------------------------------+---------------------------------------------------------------------+
+
+
+Material
+-----------------------------------------
+
++--------------------------------------------------------------+-----------------------------------------+
+| Function                                                     | Description                             |
++==============================================================+=========================================+
+| :doc:`of.mat.element<Material/of.mat.element>`               | Assign the material parameters to the   |
+|                                                              | target element groups.                  |
++--------------------------------------------------------------+-----------------------------------------+
+| :doc:`of.mat.cohesive<Material/of.mat.cohesive>`             | Assign the material parameters to the   |
+|                                                              | target cohesive element groups.         |
++--------------------------------------------------------------+-----------------------------------------+
+| :doc:`of.mat.contact<Material/of.mat.contact>`               | Assign the material parameters to the   |
+|                                                              | target element group pairs.             |
++--------------------------------------------------------------+-----------------------------------------+
+| :doc:`of.mat.hydro.matrix<Material/of.mat.hydro.matrix>`     | Contact the developer for more          |
+|                                                              | information.                            |
++--------------------------------------------------------------+-----------------------------------------+
+| :doc:`of.mat.hydro.fracture<Material/of.mat.hydro.fracture>` | Contact the developer for more          |
+|                                                              | information.                            |
++--------------------------------------------------------------+-----------------------------------------+
+| :doc:`of.mat.mpm.fluid<Material/of.mat.mpm.fluid>`           | Contact the developer for more          |
+|                                                              | information.                            |
++--------------------------------------------------------------+-----------------------------------------+
+| :doc:`of.mat.mpm.solid<Material/of.mat.mpm.solid>`           | Contact the developer for more          |
+|                                                              | information.                            |
++--------------------------------------------------------------+-----------------------------------------+
+| :doc:`of.mat.hydro.fluid<Material/of.mat.hydro.fluid>`       | Contact the developer for more          |
+|                                                              | information.                            |
++--------------------------------------------------------------+-----------------------------------------+
+| :doc:`of.mat.hydro.gas<Material/of.mat.hydro.gas>`           | Contact the developer for more          |
+|                                                              | information.                            |
++--------------------------------------------------------------+-----------------------------------------+
+| :doc:`of.mat.nonlocal<Material/of.mat.nonlocal>`             | Contact the developer for more          |
+|                                                              | information.                            |
++--------------------------------------------------------------+-----------------------------------------+
+| :doc:`of.mat.thermal<Material/of.mat.thermal>`               | Contact the developer for more          |
+|                                                              | information.                            |
++--------------------------------------------------------------+-----------------------------------------+
+
+
+
+History
+--------------------------------------------
+
++---------------------------------------------------------------------------------+-----------------------------------------------+
+| Function                                                                        | Description                                   |
++=================================================================================+===============================================+
+| :doc:`of.history.pv.interval<History/of.history.pv.interval>`                   | Set the result writing intervals.             |
++---------------------------------------------------------------------------------+-----------------------------------------------+
+| :doc:`of.history.pv.dynamic.interval<History/of.history.pv.dynamic.interval>`   | Set the dynamic result writing intervals by   |
+|                                                                                 | the increasing broken CZM.                    |
++---------------------------------------------------------------------------------+-----------------------------------------------+
+| :doc:`of.history.pv.field<History/of.history.pv.field>`                         | Export field results.                         |
++---------------------------------------------------------------------------------+-----------------------------------------------+
+| :doc:`of.history.pv.fracture<History/of.history.pv.fracture>`                   | Export fracture results.                      |
++---------------------------------------------------------------------------------+-----------------------------------------------+
+| :doc:`of.history.pv.cohesive<History/of.history.pv.cohesive>`                   | Export cohesive results.                      |
++---------------------------------------------------------------------------------+-----------------------------------------------+
+| :doc:`of.history.pv.damage<History/of.history.pv.damage>`                       | Export damage results.                        |
++---------------------------------------------------------------------------------+-----------------------------------------------+
+| :doc:`of.history.pv.ae<History/of.history.pv.ae>`                               | Export ae results.                            |
++---------------------------------------------------------------------------------+-----------------------------------------------+

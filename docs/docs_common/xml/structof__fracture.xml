@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structof__fracture" kind="struct" language="C++" prot="public">
+    <compoundname>of_fracture</compoundname>
+    <includes refid="openfdem__struct_8h" local="no">openfdem_struct.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structof__fracture_1ad01545dd29abf5eb2e4c3e5a4f9db506" prot="public" static="no" mutable="no">
+        <type><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref></type>
+        <definition>Real I</definition>
+        <argsstring></argsstring>
+        <name>I</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_struct.h" line="64" column="6" bodyfile="openfdem_struct.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structof__fracture_1a6f8d67bf7b6592ae423e87420983f098" prot="public" static="no" mutable="no">
+        <type><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref></type>
+        <definition>Real II</definition>
+        <argsstring></argsstring>
+        <name>II</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_struct.h" line="65" column="6" bodyfile="openfdem_struct.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structof__fracture_1a0c84414b319058e73d8c5f2089ad1c0a" prot="public" static="no" mutable="no">
+        <type><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref></type>
+        <definition>Real III</definition>
+        <argsstring></argsstring>
+        <name>III</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_struct.h" line="66" column="6" bodyfile="openfdem_struct.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="openfdem_struct.h" line="62" column="1" bodyfile="openfdem_struct.h" bodystart="63" bodyend="67"/>
+    <listofallmembers>
+      <member refid="structof__fracture_1ad01545dd29abf5eb2e4c3e5a4f9db506" prot="public" virt="non-virtual"><scope>of_fracture</scope><name>I</name></member>
+      <member refid="structof__fracture_1a6f8d67bf7b6592ae423e87420983f098" prot="public" virt="non-virtual"><scope>of_fracture</scope><name>II</name></member>
+      <member refid="structof__fracture_1a0c84414b319058e73d8c5f2089ad1c0a" prot="public" virt="non-virtual"><scope>of_fracture</scope><name>III</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

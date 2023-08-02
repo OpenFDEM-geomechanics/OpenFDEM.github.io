@@ -1,0 +1,50 @@
+\hypertarget{openfdem__tools_8h}{}\doxysection{openfdem\+\_\+tools.\+h File Reference}
+\label{openfdem__tools_8h}\index{openfdem\_tools.h@{openfdem\_tools.h}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}openfdem\+\_\+struct.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../solid/solid\+\_\+mechanics\+\_\+cohesive/openfdem\+\_\+solid\+\_\+cohesive.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../solid/solid\+\_\+mechanics\+\_\+cohesive/sesmic/openfdem\+\_\+sesmic.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../solid/openfdem\+\_\+nodal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../common/openfdem\+\_\+general.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+fracture\+\_\+type $\ast$ \mbox{\hyperlink{openfdem__tools_8h_abf777839782e2fda16e5882fb49fbb14}{realloc\+\_\+fracture\+\_\+structure}} (fracture\+\_\+type $\ast$array, \mbox{\hyperlink{openfdem__struct_8h_a26ff0e0ab71ea1ed8bac401c56ed2242}{UInt}} size)
+\item 
+damage\+\_\+type $\ast$ \mbox{\hyperlink{openfdem__tools_8h_af743496ad845e62c23dac01ddaea5c54}{realloc\+\_\+damage\+\_\+structure}} (damage\+\_\+type $\ast$array, \mbox{\hyperlink{openfdem__struct_8h_a26ff0e0ab71ea1ed8bac401c56ed2242}{UInt}} size)
+\item 
+ae\+\_\+type $\ast$ \mbox{\hyperlink{openfdem__tools_8h_ad241ef8bba6e42797a76a505600054d5}{realloc\+\_\+ae\+\_\+structure}} (ae\+\_\+type $\ast$array, \mbox{\hyperlink{openfdem__struct_8h_a26ff0e0ab71ea1ed8bac401c56ed2242}{UInt}} size)
+\item 
+void \mbox{\hyperlink{openfdem__tools_8h_a5b0419d452d83dde98db55773d7dc938}{parse\+\_\+node}} (FILE $\ast$fileptr, long max\+\_\+size, long actual\+\_\+size, node\+\_\+type $\ast$$\ast$d1aray, \mbox{\hyperlink{openfdem__general_8h_a7c262346c166dd2efb8d134d43f37b4d}{General}} general)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{openfdem__tools_8h_a5b0419d452d83dde98db55773d7dc938}\label{openfdem__tools_8h_a5b0419d452d83dde98db55773d7dc938}} 
+\index{openfdem\_tools.h@{openfdem\_tools.h}!parse\_node@{parse\_node}}
+\index{parse\_node@{parse\_node}!openfdem\_tools.h@{openfdem\_tools.h}}
+\doxysubsubsection{\texorpdfstring{parse\_node()}{parse\_node()}}
+{\footnotesize\ttfamily void parse\+\_\+node (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{fileptr,  }\item[{long}]{max\+\_\+size,  }\item[{long}]{actual\+\_\+size,  }\item[{node\+\_\+type $\ast$$\ast$}]{d1aray,  }\item[{\mbox{\hyperlink{openfdem__general_8h_a7c262346c166dd2efb8d134d43f37b4d}{General}}}]{general }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__tools_8h_ad241ef8bba6e42797a76a505600054d5}\label{openfdem__tools_8h_ad241ef8bba6e42797a76a505600054d5}} 
+\index{openfdem\_tools.h@{openfdem\_tools.h}!realloc\_ae\_structure@{realloc\_ae\_structure}}
+\index{realloc\_ae\_structure@{realloc\_ae\_structure}!openfdem\_tools.h@{openfdem\_tools.h}}
+\doxysubsubsection{\texorpdfstring{realloc\_ae\_structure()}{realloc\_ae\_structure()}}
+{\footnotesize\ttfamily ae\+\_\+type$\ast$ realloc\+\_\+ae\+\_\+structure (\begin{DoxyParamCaption}\item[{ae\+\_\+type $\ast$}]{array,  }\item[{\mbox{\hyperlink{openfdem__struct_8h_a26ff0e0ab71ea1ed8bac401c56ed2242}{UInt}}}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__tools_8h_af743496ad845e62c23dac01ddaea5c54}\label{openfdem__tools_8h_af743496ad845e62c23dac01ddaea5c54}} 
+\index{openfdem\_tools.h@{openfdem\_tools.h}!realloc\_damage\_structure@{realloc\_damage\_structure}}
+\index{realloc\_damage\_structure@{realloc\_damage\_structure}!openfdem\_tools.h@{openfdem\_tools.h}}
+\doxysubsubsection{\texorpdfstring{realloc\_damage\_structure()}{realloc\_damage\_structure()}}
+{\footnotesize\ttfamily damage\+\_\+type$\ast$ realloc\+\_\+damage\+\_\+structure (\begin{DoxyParamCaption}\item[{damage\+\_\+type $\ast$}]{array,  }\item[{\mbox{\hyperlink{openfdem__struct_8h_a26ff0e0ab71ea1ed8bac401c56ed2242}{UInt}}}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__tools_8h_abf777839782e2fda16e5882fb49fbb14}\label{openfdem__tools_8h_abf777839782e2fda16e5882fb49fbb14}} 
+\index{openfdem\_tools.h@{openfdem\_tools.h}!realloc\_fracture\_structure@{realloc\_fracture\_structure}}
+\index{realloc\_fracture\_structure@{realloc\_fracture\_structure}!openfdem\_tools.h@{openfdem\_tools.h}}
+\doxysubsubsection{\texorpdfstring{realloc\_fracture\_structure()}{realloc\_fracture\_structure()}}
+{\footnotesize\ttfamily fracture\+\_\+type$\ast$ realloc\+\_\+fracture\+\_\+structure (\begin{DoxyParamCaption}\item[{fracture\+\_\+type $\ast$}]{array,  }\item[{\mbox{\hyperlink{openfdem__struct_8h_a26ff0e0ab71ea1ed8bac401c56ed2242}{UInt}}}]{size }\end{DoxyParamCaption})}
+

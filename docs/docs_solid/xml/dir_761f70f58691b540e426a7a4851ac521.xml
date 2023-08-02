@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="dir_761f70f58691b540e426a7a4851ac521" kind="dir">
+    <compoundname>/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid</compoundname>
+    <innerdir refid="dir_e81af4ee5e6fc1590a17e7cae26fba59">/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials</innerdir>
+    <innerdir refid="dir_9320e9ee2475925fe05d812bc3aab0f7">/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics</innerdir>
+    <innerdir refid="dir_5f19070b54483d8419e80d7eab154ea6">/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_cohesive</innerdir>
+    <innerdir refid="dir_ca9f9f2b7a0864b8fcaa571a45414361">/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact</innerdir>
+    <innerfile refid="openfdem__nodal_8h">openfdem_nodal.h</innerfile>
+    <innerfile refid="solid__mechanics_8h">solid_mechanics.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/"/>
+  </compounddef>
+</doxygen>

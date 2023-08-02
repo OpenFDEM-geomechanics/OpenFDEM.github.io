@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_c447efec3883b04136867ae1f18d02b1" kind="dir">
+    <compoundname>solid_mechanics_cohesive/DFN</compoundname>
+    <innerfile refid="openfdem___d_f_n_8h">openfdem_DFN.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="solid_mechanics_cohesive/DFN/"/>
+  </compounddef>
+</doxygen>

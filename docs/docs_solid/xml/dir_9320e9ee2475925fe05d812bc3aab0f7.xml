@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="dir_9320e9ee2475925fe05d812bc3aab0f7" kind="dir">
+    <compoundname>/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics</compoundname>
+    <innerfile refid="openfdem__solid_8h">openfdem_solid.h</innerfile>
+    <innerfile refid="solid__mechanics__elastic__triangle_8h">solid_mechanics_elastic_triangle.h</innerfile>
+    <innerfile refid="solid__mechanics__soften__triangle_8h">solid_mechanics_soften_triangle.h</innerfile>
+    <innerfile refid="solid__mechanics__transverse__triangle_8h">solid_mechanics_transverse_triangle.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics/"/>
+  </compounddef>
+</doxygen>

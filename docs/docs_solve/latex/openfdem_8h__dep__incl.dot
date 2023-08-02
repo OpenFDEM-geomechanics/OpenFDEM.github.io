@@ -1,0 +1,56 @@
+digraph "openfdem.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="openfdem.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="initialize/coh_initialize.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$coh__initialize_8c.html",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="initialize/contact\l_initialize.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$contact__initialize_8c.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="initialize/ele_initialize.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ele__initialize_8c.html",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="initialize/general\l_initialize.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$general__initialize_8c.html",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="initialize/initialize.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$initialize_8h.html",tooltip=" "];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="initialize/initialize.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$initialize_8c.html",tooltip=" "];
+  Node6 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="openfdem.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$openfdem_8c.html",tooltip=" "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="initialize/node_initialize.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$node__initialize_8c.html",tooltip=" "];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="initialize/solver_initialize.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$solver__initialize_8h.html",tooltip=" "];
+  Node10 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="initialize/reinitialize\l_Int_node_array.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$reinitialize___int__node__array_8c.html",tooltip=" "];
+  Node10 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="initialize/reinitialize\l_Real_cohelement_array.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$reinitialize___real__cohelement__array_8c.html",tooltip=" "];
+  Node10 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="initialize/reinitialize\l_Real_node_array.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$reinitialize___real__node__array_8c.html",tooltip=" "];
+  Node10 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="solver.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$solver_8h.html",tooltip=" "];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="boudary/boudary_body\l_force.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$boudary__body__force_8c.html",tooltip=" "];
+  Node14 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="boudary/boudary_element\l_insitu_force.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$boudary__element__insitu__force_8c.html",tooltip=" "];
+  Node14 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node17 [label="boudary/boudary_nodal\l_force.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$boudary__nodal__force_8c.html",tooltip=" "];
+  Node14 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node18 [label="boudary/boudary_nodal\l_velocity.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$boudary__nodal__velocity_8c.html",tooltip=" "];
+  Node14 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node19 [label="solver.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$solver_8c.html",tooltip=" "];
+  Node14 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node20 [label="solver_large_deformation.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$solver__large__deformation_8c.html",tooltip=" "];
+  Node14 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node21 [label="solver_rigid.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$solver__rigid_8c.html",tooltip=" "];
+  Node1 -> Node22 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node22 [label="solver_large_deformation.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$solver__large__deformation_8h.html",tooltip=" "];
+  Node22 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node22 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node22 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}

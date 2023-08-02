@@ -1,0 +1,899 @@
+\hypertarget{openfdem__enum_8h}{}\doxysection{openfdem\+\_\+enum.\+h File Reference}
+\label{openfdem__enum_8h}\index{openfdem\_enum.h@{openfdem\_enum.h}}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{openfdem__enum_8h_a7b4ce13363fe4f0be5abc2a77a751dd3}{config\+\_\+type\+\_\+enum}} \{ \mbox{\hyperlink{openfdem__enum_8h_a7b4ce13363fe4f0be5abc2a77a751dd3ac9ab923436e1462fb407261d33f3f863}{CONFIG\+\_\+\+NONE}}
+, \mbox{\hyperlink{openfdem__enum_8h_a7b4ce13363fe4f0be5abc2a77a751dd3a97a7020dce2dc057f25660e3f6e98f8e}{PLANESTRESS}}
+, \mbox{\hyperlink{openfdem__enum_8h_a7b4ce13363fe4f0be5abc2a77a751dd3a4e70dc2adb3033d440df5cd656674da7}{PLANESTRAIN}}
+ \}
+\item 
+enum \mbox{\hyperlink{openfdem__enum_8h_ab46c000c67e9cea07e57043d102b24ad}{mesh\+\_\+enum}} \{ \newline
+\mbox{\hyperlink{openfdem__enum_8h_ab46c000c67e9cea07e57043d102b24adaa15c451953b2d2a93403afe786930d0f}{INSERT}}
+, \mbox{\hyperlink{openfdem__enum_8h_ab46c000c67e9cea07e57043d102b24ada7cf1f5924560c2c48f72f6e1a462e9c9}{SPLIT}}
+, \mbox{\hyperlink{openfdem__enum_8h_ab46c000c67e9cea07e57043d102b24ada2a3af26538ff37561fb8b9c9ce2bf5f0}{REMESH3}}
+, \mbox{\hyperlink{openfdem__enum_8h_ab46c000c67e9cea07e57043d102b24adaa0a413f8e69bb3099e2d04f74743a780}{REMESH4}}
+, \newline
+\mbox{\hyperlink{openfdem__enum_8h_ab46c000c67e9cea07e57043d102b24ada5a72ba4a50442c9dc766a9f97cd3f21a}{REMESH6}}
+, \mbox{\hyperlink{openfdem__enum_8h_ab46c000c67e9cea07e57043d102b24ada9d9226d9994439f6bcd2ca11840053a5}{IMPLICIT}}
+ \}
+\item 
+enum \mbox{\hyperlink{openfdem__enum_8h_a5d0dcae7c37e7bc434a8ddc0ef8ba442}{boundary\+\_\+fluid\+\_\+enum}} \{ \newline
+\mbox{\hyperlink{openfdem__enum_8h_a5d0dcae7c37e7bc434a8ddc0ef8ba442a062fd2d0e585a32ade55dbc04cffe47a}{POREPRESSURE}}
+, \mbox{\hyperlink{openfdem__enum_8h_a5d0dcae7c37e7bc434a8ddc0ef8ba442a87ace8cfba0c31bee769ff81f25d3051}{WATER\+\_\+\+LEVEL}}
+, \mbox{\hyperlink{openfdem__enum_8h_a5d0dcae7c37e7bc434a8ddc0ef8ba442a86426522c91b417229c899ae35258a46}{PRESSURE}}
+, \mbox{\hyperlink{openfdem__enum_8h_a5d0dcae7c37e7bc434a8ddc0ef8ba442ab1998da3a9a5f1b771e99989227065c7}{FLOW}}
+, \newline
+\mbox{\hyperlink{openfdem__enum_8h_a5d0dcae7c37e7bc434a8ddc0ef8ba442a1b1be17341c66f9b6429341ff91c3f97}{IMPERMABLE}}
+ \}
+\item 
+enum \mbox{\hyperlink{openfdem__enum_8h_a34d7cec24e73f173cf2f2010b8107f90}{boundary\+\_\+thermal\+\_\+enum}} \{ \newline
+\mbox{\hyperlink{openfdem__enum_8h_a34d7cec24e73f173cf2f2010b8107f90a5ca83be6c7a094217b1a9f21f2294851}{INI\+\_\+\+TEMPERATURE}}
+, \mbox{\hyperlink{openfdem__enum_8h_a34d7cec24e73f173cf2f2010b8107f90ac4ae6787ff1d8b2d1cf0ae9aa696e56c}{TEMPERATURE}}
+, \mbox{\hyperlink{openfdem__enum_8h_a34d7cec24e73f173cf2f2010b8107f90a718e0728cf596ce66dfc59137a21a626}{CONVECTION}}
+, \mbox{\hyperlink{openfdem__enum_8h_a34d7cec24e73f173cf2f2010b8107f90aa76c44edb76686fa1bbda9ebe69c7857}{FLUX}}
+, \newline
+\mbox{\hyperlink{openfdem__enum_8h_a34d7cec24e73f173cf2f2010b8107f90a4a560d5b4b4a2348f25919515afdb7c4}{RADIATION}}
+, \mbox{\hyperlink{openfdem__enum_8h_a34d7cec24e73f173cf2f2010b8107f90a0159491ea913604389155db907e0d1c0}{SOURCE}}
+ \}
+\item 
+enum \mbox{\hyperlink{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0b}{boundary\+\_\+node\+\_\+enum}} \{ \newline
+\mbox{\hyperlink{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba2a4d3752e9aa5f28fc2dacb0f948de06}{FORCE}}
+, \mbox{\hyperlink{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba97cf6c79644e75bb490620cf506dd541}{FORCE\+\_\+X}}
+, \mbox{\hyperlink{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba2dbf300dba725e2e690358c6e15e4bfd}{FORCE\+\_\+Y}}
+, \mbox{\hyperlink{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba52747a70f1917d227fb19ded90da348d}{VEL}}
+, \newline
+\mbox{\hyperlink{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba1e2dd8880c21d4c0ba91ee4c6eaacdfc}{VEL\+\_\+X}}
+, \mbox{\hyperlink{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba185a4cfe7a1ee8cf78960646a938a4c4}{VEL\+\_\+Y}}
+, \mbox{\hyperlink{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba660a9a439cf15c03408ec03be2a11c28}{INIVEL}}
+, \mbox{\hyperlink{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0baa8c445c8df45956c7ca3a0bb42dd7ca2}{INIVEL\+\_\+X}}
+, \newline
+\mbox{\hyperlink{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba3bb92b21b0ba352f2ed2f8bf638d7a48}{INIVEL\+\_\+Y}}
+, \mbox{\hyperlink{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0bafc7d1a468c4e3fcec4251b16befc02a3}{VISCOUS}}
+, \mbox{\hyperlink{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba4516d3614d0d3b2c35dea8a554f5f85b}{VISCOUS\+\_\+X}}
+, \mbox{\hyperlink{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba813e8f2e24ae6cba40d85b472c31d760}{VISCOUS\+\_\+Y}}
+, \newline
+\mbox{\hyperlink{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba11db0c836ba3cf1c58641fc109ffe566}{ACCEL}}
+, \mbox{\hyperlink{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0bad359882a2a593b11d1d88172d10e4438}{ACCEL\+\_\+X}}
+, \mbox{\hyperlink{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba4909e8a02baf061df6ada43569b58bfb}{ACCEL\+\_\+Y}}
+, \mbox{\hyperlink{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba1bfec9a60e85bdc58f44feb171a757fa}{FORCE\+\_\+\+LOCAL}}
+, \newline
+\mbox{\hyperlink{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0baeb49ca1b75537f44eb35e6e249508749}{FORCE\+\_\+\+LOCAL\+\_\+X}}
+, \mbox{\hyperlink{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba99ae08e5dec49b4a1e845c2167187f7e}{FORCE\+\_\+\+LOCAL\+\_\+Y}}
+, \mbox{\hyperlink{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba1dc6141fe6ccf9d55edcc73086be47b1}{VEL\+\_\+\+LOCAL}}
+, \mbox{\hyperlink{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba5c52f500a74292af8772864e1f5e2979}{VEL\+\_\+\+LOCAL\+\_\+X}}
+, \newline
+\mbox{\hyperlink{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba74df4dc443ffbb04d52b8325665890a2}{VEL\+\_\+\+LOCAL\+\_\+Y}}
+, \mbox{\hyperlink{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba56ca95060b85b86e63deef33f68d68d1}{INIVEL\+\_\+\+LOCAL}}
+, \mbox{\hyperlink{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0baf9dfda59982438997b01dcc404addf4e}{INIVEL\+\_\+\+LOCAL\+\_\+X}}
+, \mbox{\hyperlink{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba1090b5ed2ecf81d45cbc4750eda049fd}{INIVEL\+\_\+\+LOCAL\+\_\+Y}}
+, \newline
+\mbox{\hyperlink{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0bafd4da15f9d8c487e85a175a94e0a2b69}{ACCEL\+\_\+\+LOCAL}}
+, \mbox{\hyperlink{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0bac7ec89242fe7445c1726dbebb6f29c70}{ACCEL\+\_\+\+LOCAL\+\_\+X}}
+, \mbox{\hyperlink{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0baae599ead7aa229473e78a7d9ada57790}{ACCEL\+\_\+\+LOCAL\+\_\+Y}}
+, \mbox{\hyperlink{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba50d1448013c6f17125caee18aa418af7}{NORMAL}}
+, \newline
+\mbox{\hyperlink{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0bae6a520c7a7ca170fc99afd708e425a4c}{SHEAR}}
+ \}
+\item 
+enum \mbox{\hyperlink{openfdem__enum_8h_a1ef3ddb6111f924f570bc66dec0ef2d3}{cohelement\+\_\+enum}} \{ \mbox{\hyperlink{openfdem__enum_8h_a1ef3ddb6111f924f570bc66dec0ef2d3ac255cc5561bd9d1f74da25f6628f40ee}{INTACT}}
+, \mbox{\hyperlink{openfdem__enum_8h_a1ef3ddb6111f924f570bc66dec0ef2d3aa481f681683f03d1742f0e30de6328e5}{DAMAGE}}
+, \mbox{\hyperlink{openfdem__enum_8h_a1ef3ddb6111f924f570bc66dec0ef2d3aeb30bf699a39ea2cb5819381461ee54d}{BROKEN}}
+ \}
+\item 
+enum \mbox{\hyperlink{openfdem__enum_8h_aa02a7146073f5f8e2c1cd8691b98890b}{DFN\+\_\+enum}} \{ \mbox{\hyperlink{openfdem__enum_8h_aa02a7146073f5f8e2c1cd8691b98890ba993775af88288a7f474bc0f8c7290b69}{NDFN}}
+, \mbox{\hyperlink{openfdem__enum_8h_aa02a7146073f5f8e2c1cd8691b98890ba1301d399572155612b78391a142788c4}{DFN\+\_\+\+COHESIVE}}
+, \mbox{\hyperlink{openfdem__enum_8h_aa02a7146073f5f8e2c1cd8691b98890bab31fbc16512297e64c431ac351fa8b34}{DFN\+\_\+\+BROKEN}}
+ \}
+\item 
+enum \mbox{\hyperlink{openfdem__enum_8h_a5d53889fcfb1193fb4572ac69a3a908b}{boundary\+\_\+element\+\_\+enum}} \{ \mbox{\hyperlink{openfdem__enum_8h_a5d53889fcfb1193fb4572ac69a3a908baef2af9c9f93ee0601e976c52dfeac4b6}{STRESS}}
+, \mbox{\hyperlink{openfdem__enum_8h_a5d53889fcfb1193fb4572ac69a3a908bad853ee77b7a4e20d6298660a85479b3d}{GRADIENT\+\_\+X}}
+, \mbox{\hyperlink{openfdem__enum_8h_a5d53889fcfb1193fb4572ac69a3a908bad51ea2a6b470ad47944146455d3ca6b7}{GRADIENT\+\_\+Y}}
+ \}
+\item 
+enum \mbox{\hyperlink{openfdem__enum_8h_ae912e9094d0670dd188b0ff695051de8}{config\+\_\+module\+\_\+enum}} \{ \newline
+\mbox{\hyperlink{openfdem__enum_8h_ae912e9094d0670dd188b0ff695051de8a33221bfc1f61a163ba18c52de47c83db}{MECHANICAL}}
+, \mbox{\hyperlink{openfdem__enum_8h_ae912e9094d0670dd188b0ff695051de8a0570af3f89657ca7e8f1c6b7b738d272}{HYDRO}}
+, \mbox{\hyperlink{openfdem__enum_8h_ae912e9094d0670dd188b0ff695051de8a8673e191c8b1151cc508b4a1946e0972}{THERMAL}}
+, \mbox{\hyperlink{openfdem__enum_8h_ae912e9094d0670dd188b0ff695051de8abac2e106fb67b0a4a0d8baaa966e3a0f}{BLAST}}
+, \newline
+\mbox{\hyperlink{openfdem__enum_8h_ae912e9094d0670dd188b0ff695051de8a7547201baf1bc42390df89bafdf839c6}{BLAST\+\_\+\+HYDRO}}
+, \mbox{\hyperlink{openfdem__enum_8h_ae912e9094d0670dd188b0ff695051de8aaac65e0072e6ff1f4c3209d2fdd8730a}{DYNAMIC}}
+ \}
+\item 
+enum \mbox{\hyperlink{openfdem__enum_8h_ab931b042fe7727a9ee2ea1c8eee81000}{element\+\_\+cons}} \{ \newline
+\mbox{\hyperlink{openfdem__enum_8h_ab931b042fe7727a9ee2ea1c8eee81000a1fad81d9726af9493b2aac52d6a16786}{ELASTIC}}
+, \mbox{\hyperlink{openfdem__enum_8h_ab931b042fe7727a9ee2ea1c8eee81000a43358c4fff77d7d5712da6d4f6d9b8e7}{RIGID}}
+, \mbox{\hyperlink{openfdem__enum_8h_ab931b042fe7727a9ee2ea1c8eee81000a78e99c4c380813bf00e83b8d60e13376}{SOFTEN}}
+, \mbox{\hyperlink{openfdem__enum_8h_ab931b042fe7727a9ee2ea1c8eee81000a6ce703f9cc47a7a2c52df9d397e0c149}{TRANSVERSE}}
+, \newline
+\mbox{\hyperlink{openfdem__enum_8h_ab931b042fe7727a9ee2ea1c8eee81000a8e15ed3aa6ccc02e22b283c8bd0b4096}{MC}}
+, \mbox{\hyperlink{openfdem__enum_8h_ab931b042fe7727a9ee2ea1c8eee81000ad7952717003d90fc1d54ccecbcbfa00a}{DP}}
+, \mbox{\hyperlink{openfdem__enum_8h_ab931b042fe7727a9ee2ea1c8eee81000a4af5fe82e7a2c651d3a04f3d5aa2bef7}{OTHERS}}
+ \}
+\item 
+enum \mbox{\hyperlink{openfdem__enum_8h_a2c36155ac0e634b21c2a2fa711a09d68}{cohelement\+\_\+cons}} \{ \newline
+\mbox{\hyperlink{openfdem__enum_8h_a2c36155ac0e634b21c2a2fa711a09d68ade94e945da01248a88736dfd542e6a95}{COH\+\_\+\+EM}}
+, \mbox{\hyperlink{openfdem__enum_8h_a2c36155ac0e634b21c2a2fa711a09d68a7c5e2ec8939ffb253b82ee25dbc5bb5c}{COH\+\_\+\+EM\+\_\+\+FRIC}}
+, \mbox{\hyperlink{openfdem__enum_8h_a2c36155ac0e634b21c2a2fa711a09d68aaaca9011993d735336c87943f5bde718}{COH\+\_\+\+LINEAR}}
+, \mbox{\hyperlink{openfdem__enum_8h_a2c36155ac0e634b21c2a2fa711a09d68abf6e73ba5c7a4af63354bb2bda66edd6}{COH\+\_\+\+OP}}
+, \newline
+\mbox{\hyperlink{openfdem__enum_8h_a2c36155ac0e634b21c2a2fa711a09d68a9e1d303925b2e3fd2803583a4c3d1b82}{COH\+\_\+\+BB}}
+, \mbox{\hyperlink{openfdem__enum_8h_a2c36155ac0e634b21c2a2fa711a09d68a31fb73d390f091e17eae7f87b3ed55a8}{COH\+\_\+\+EM\+\_\+\+HET}}
+, \mbox{\hyperlink{openfdem__enum_8h_a2c36155ac0e634b21c2a2fa711a09d68a91dc871a2b7e28f8ab7fab3d8b88b559}{COH\+\_\+\+EM\+\_\+\+ANI}}
+, \mbox{\hyperlink{openfdem__enum_8h_a2c36155ac0e634b21c2a2fa711a09d68ab67da817eb9e0815665110036fe7ec76}{COH\+\_\+\+EM\+\_\+\+DYNAMIC}}
+, \newline
+\mbox{\hyperlink{openfdem__enum_8h_a2c36155ac0e634b21c2a2fa711a09d68ab4fcf85960ff0afcaee0d4c73f5fd397}{COH\+\_\+\+OTHERS}}
+ \}
+\item 
+enum \mbox{\hyperlink{openfdem__enum_8h_a26b8b4d2ce9caab88a42565837e6e892}{contact\+\_\+cons}} \{ \newline
+\mbox{\hyperlink{openfdem__enum_8h_a26b8b4d2ce9caab88a42565837e6e892a952333424868c6302ad7f2eb0fc0bfc6}{CON\+\_\+\+MC}}
+, \mbox{\hyperlink{openfdem__enum_8h_a26b8b4d2ce9caab88a42565837e6e892a424d83fb08b2b9e691539c458d518cfc}{CON\+\_\+\+DYNAMIC\+\_\+\+MC}}
+, \mbox{\hyperlink{openfdem__enum_8h_a26b8b4d2ce9caab88a42565837e6e892aec074feed881878bf8e7a59f42e4ef52}{CON\+\_\+\+HERTZ}}
+, \mbox{\hyperlink{openfdem__enum_8h_a26b8b4d2ce9caab88a42565837e6e892aba59516df53713cf30b4159578b984db}{CON\+\_\+\+BB}}
+, \newline
+\mbox{\hyperlink{openfdem__enum_8h_a26b8b4d2ce9caab88a42565837e6e892a31b501ede8707d104357c4c398797cb9}{CON\+\_\+\+FRICTION}}
+, \mbox{\hyperlink{openfdem__enum_8h_a26b8b4d2ce9caab88a42565837e6e892a1ccbdfc0573b43de9e7c7611129804ee}{CON\+\_\+\+OTHERS}}
+ \}
+\item 
+enum \mbox{\hyperlink{openfdem__enum_8h_ad699abbd613784ea9d6177e0d82c901a}{contact\+\_\+detection}} \{ \mbox{\hyperlink{openfdem__enum_8h_ad699abbd613784ea9d6177e0d82c901aaddfa6c9a7a43167c5cee56f1883cad88}{LIG}}
+, \mbox{\hyperlink{openfdem__enum_8h_ad699abbd613784ea9d6177e0d82c901aac7f967336cf52e6cd7600d5e37f87106}{NBS}}
+, \mbox{\hyperlink{openfdem__enum_8h_ad699abbd613784ea9d6177e0d82c901aa6cde048d01f2b370aa96f3618e6712aa}{m\+NBS}}
+, \mbox{\hyperlink{openfdem__enum_8h_ad699abbd613784ea9d6177e0d82c901aa03be5fc53a9d77a64ff24f85a7784a7b}{CELL}}
+ \}
+\item 
+enum \mbox{\hyperlink{openfdem__enum_8h_afa07d0c0b34130444606a1d00d755ec2}{contact\+\_\+force}} \{ \mbox{\hyperlink{openfdem__enum_8h_afa07d0c0b34130444606a1d00d755ec2a36490305a2aca02e47b8448b538f9930}{DEFAULT\+\_\+\+MUNJIZA}}
+, \mbox{\hyperlink{openfdem__enum_8h_afa07d0c0b34130444606a1d00d755ec2ab84cc086dafd9d25acb957b0df4bcd6c}{LIG\+\_\+F}}
+ \}
+\item 
+enum \mbox{\hyperlink{openfdem__enum_8h_a4b19f615f24fafa8e2d1b58665cfd384}{random\+\_\+method}} \{ \newline
+\mbox{\hyperlink{openfdem__enum_8h_a4b19f615f24fafa8e2d1b58665cfd384ad36aa08c93c04b9233db9d18e558bb46}{RANDOM\+\_\+\+NULL}}
+, \mbox{\hyperlink{openfdem__enum_8h_a4b19f615f24fafa8e2d1b58665cfd384a97e2e84c5cf6b4d9059538452db9e072}{RANDOM\+\_\+\+CONSTANT}}
+, \mbox{\hyperlink{openfdem__enum_8h_a4b19f615f24fafa8e2d1b58665cfd384a1346fc6abba8f95f3654ced60a957aec}{RANDOM\+\_\+\+GAUSSE}}
+, \mbox{\hyperlink{openfdem__enum_8h_a4b19f615f24fafa8e2d1b58665cfd384a54fcdac7d16f8b994d4be4e7af95e8e0}{RANDOM\+\_\+\+UNIFORM}}
+, \newline
+\mbox{\hyperlink{openfdem__enum_8h_a4b19f615f24fafa8e2d1b58665cfd384a5524e270a8f38c9e082a4694751b1efa}{RANDOM\+\_\+\+EXPONENTINAL}}
+, \mbox{\hyperlink{openfdem__enum_8h_a4b19f615f24fafa8e2d1b58665cfd384a9f1a128d9464b64aed1123b60671bfff}{RANDOM\+\_\+\+LOG\+\_\+\+NORMAL}}
+, \mbox{\hyperlink{openfdem__enum_8h_a4b19f615f24fafa8e2d1b58665cfd384a945b5d089d4a90a58d286916f2cc5b35}{RANDOM\+\_\+\+POWER}}
+, \mbox{\hyperlink{openfdem__enum_8h_a4b19f615f24fafa8e2d1b58665cfd384a42b0f72979d2f034d709f541f34c48d0}{RANDOM\+\_\+\+FISHER}}
+ \}
+\item 
+enum \mbox{\hyperlink{openfdem__enum_8h_a54509f18ea735b28c53d7b21491fca12}{his\+\_\+nodal\+\_\+t}} \{ \newline
+\mbox{\hyperlink{openfdem__enum_8h_a54509f18ea735b28c53d7b21491fca12a356dbb2a53afae425f7d8cd13d5cafd3}{HIS\+\_\+\+DIS}}
+, \mbox{\hyperlink{openfdem__enum_8h_a54509f18ea735b28c53d7b21491fca12ade6662c6724f9b2de3400e5f094634e5}{HIS\+\_\+\+VEL}}
+, \mbox{\hyperlink{openfdem__enum_8h_a54509f18ea735b28c53d7b21491fca12a082572538b3b50c021f37693e8e7a695}{HIS\+\_\+\+FOR}}
+, \mbox{\hyperlink{openfdem__enum_8h_a54509f18ea735b28c53d7b21491fca12a5f25cc281d5c1ecde1a85d33f5b09ce3}{HIS\+\_\+\+FLUID\+\_\+P}}
+, \newline
+\mbox{\hyperlink{openfdem__enum_8h_a54509f18ea735b28c53d7b21491fca12a9e1b4c7bbbfdebfbb8bfc0d5f4fbe9b4}{HIS\+\_\+\+FRAC\+\_\+P}}
+, \mbox{\hyperlink{openfdem__enum_8h_a54509f18ea735b28c53d7b21491fca12a50e8401afc4b577dfb0422489975a3d6}{HIS\+\_\+\+MATRIX\+\_\+P}}
+, \mbox{\hyperlink{openfdem__enum_8h_a54509f18ea735b28c53d7b21491fca12a35ae102a9258e368f56a41ca44a99c06}{HIS\+\_\+\+TEMP}}
+ \}
+\item 
+enum \mbox{\hyperlink{openfdem__enum_8h_a23a6c72c7e89125769f9b8b884868a34}{his\+\_\+ele\+\_\+t}} \{ \mbox{\hyperlink{openfdem__enum_8h_a23a6c72c7e89125769f9b8b884868a34a8ce4cb219b1584093cdde02c48fc81b7}{HIS\+\_\+\+STRESS}}
+, \mbox{\hyperlink{openfdem__enum_8h_a23a6c72c7e89125769f9b8b884868a34a997e11d17073559e3d4b30e4234a2848}{HIS\+\_\+\+STRAIN}}
+, \mbox{\hyperlink{openfdem__enum_8h_a23a6c72c7e89125769f9b8b884868a34a21462f68dc681f42451b01975a810624}{HIS\+\_\+\+STRAIN\+\_\+R}}
+, \mbox{\hyperlink{openfdem__enum_8h_a23a6c72c7e89125769f9b8b884868a34a393b9d33abb41f356d2a33b62e27bb18}{HIS\+\_\+\+PLASTIC}}
+ \}
+\item 
+enum \mbox{\hyperlink{openfdem__enum_8h_a9d0dadd7e40e230c1293f8eb056b309c}{his\+\_\+cohele\+\_\+t}} \{ \mbox{\hyperlink{openfdem__enum_8h_a9d0dadd7e40e230c1293f8eb056b309ca43cee81cf93d5990f95cfc33c115b1ec}{HIS\+\_\+\+COH\+\_\+\+DIS}}
+, \mbox{\hyperlink{openfdem__enum_8h_a9d0dadd7e40e230c1293f8eb056b309ca26d6d1adc1b4b22a4a5d46ef1d78747f}{HIS\+\_\+\+COH\+\_\+\+FOR}}
+, \mbox{\hyperlink{openfdem__enum_8h_a9d0dadd7e40e230c1293f8eb056b309ca91f7a89b5a581b4e29d917c452d04838}{HIS\+\_\+\+COH\+\_\+\+VEL}}
+, \mbox{\hyperlink{openfdem__enum_8h_a9d0dadd7e40e230c1293f8eb056b309cac7f10c3ce8384a1314fb56167aa7b2c7}{HIS\+\_\+\+COH\+\_\+\+SHEAR}}
+ \}
+\item 
+enum \mbox{\hyperlink{openfdem__enum_8h_aed44610b9b35b9d7732248706509a057}{his\+\_\+contact\+\_\+t}} \{ \mbox{\hyperlink{openfdem__enum_8h_aed44610b9b35b9d7732248706509a057a1ee862b64c84d4464df8561129ac15d9}{HIS\+\_\+\+CON\+\_\+\+DIS}}
+, \mbox{\hyperlink{openfdem__enum_8h_aed44610b9b35b9d7732248706509a057a10195310dfe54d309e4d30d25b21194c}{HIS\+\_\+\+CON\+\_\+\+FOR}}
+, \mbox{\hyperlink{openfdem__enum_8h_aed44610b9b35b9d7732248706509a057a749e0c3dccba01223889cf8ffdc30ca0}{HIS\+\_\+\+CON\+\_\+\+VEL}}
+ \}
+\item 
+enum \mbox{\hyperlink{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069}{his\+\_\+general\+\_\+t}} \{ \newline
+\mbox{\hyperlink{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a807612bec53173d7283b9e7c1352744c}{HIS\+\_\+\+TIME}}
+, \mbox{\hyperlink{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069ad3d70c5b82995f52e0cc300be1975027}{HIS\+\_\+\+CYCLE}}
+, \mbox{\hyperlink{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a42270b37806b283e73da6808c2a42abf}{HIS\+\_\+\+N\+\_\+\+FRACTURE}}
+, \mbox{\hyperlink{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a05f7841c2bb1efcac6a721a26b267385}{HIS\+\_\+\+N\+\_\+\+DAMAGE}}
+, \newline
+\mbox{\hyperlink{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a3ce35ad5cf10fe2f96e5b1bd8bf072d4}{HIS\+\_\+\+N\+\_\+\+AE}}
+, \mbox{\hyperlink{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a7a521e737421326f64e1fd3575e99a9d}{HIS\+\_\+\+ENERGY\+\_\+\+KINETIC}}
+, \mbox{\hyperlink{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a0273bc074196733293420958d4e3962c}{HIS\+\_\+\+ENERGY\+\_\+\+ELEMENT\+\_\+\+STRAIN}}
+, \mbox{\hyperlink{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a431e018509017f2c32ecb9b2985e3790}{HIS\+\_\+\+ENERGY\+\_\+\+FRACTURE}}
+, \newline
+\mbox{\hyperlink{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a8bbf2dce1e45d0fd7f855198a4fbc78d}{HIS\+\_\+\+ENERGY\+\_\+\+AE}}
+, \mbox{\hyperlink{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a123a2fa3c5a826f49db79d7dc78c8a69}{HIS\+\_\+\+ENERGY\+\_\+\+DAMP}}
+, \mbox{\hyperlink{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a5c3391f4e5853e70e6704eb79df9c7fc}{HIS\+\_\+\+ENERGY\+\_\+\+SLIP}}
+, \mbox{\hyperlink{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a9b69597dbd35ea588ea3a9efb75f603f}{HIS\+\_\+\+ENERGY\+\_\+\+PLASTIC}}
+, \newline
+\mbox{\hyperlink{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a2f52516b84bc2bdea35f09107897ecd0}{HIS\+\_\+\+UNBALANCE\+\_\+\+FORCE}}
+, \mbox{\hyperlink{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069adafd3d79cb69d88bee0e5055e6a27b3f}{HIST\+\_\+\+ENERGY\+\_\+\+RATIO}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{openfdem__enum_8h_a5d53889fcfb1193fb4572ac69a3a908b}\label{openfdem__enum_8h_a5d53889fcfb1193fb4572ac69a3a908b}} 
+\index{openfdem\_enum.h@{openfdem\_enum.h}!boundary\_element\_enum@{boundary\_element\_enum}}
+\index{boundary\_element\_enum@{boundary\_element\_enum}!openfdem\_enum.h@{openfdem\_enum.h}}
+\doxysubsubsection{\texorpdfstring{boundary\_element\_enum}{boundary\_element\_enum}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{openfdem__enum_8h_a5d53889fcfb1193fb4572ac69a3a908b}{boundary\+\_\+element\+\_\+enum}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STRESS@{STRESS}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!STRESS@{STRESS}}}\mbox{\Hypertarget{openfdem__enum_8h_a5d53889fcfb1193fb4572ac69a3a908baef2af9c9f93ee0601e976c52dfeac4b6}\label{openfdem__enum_8h_a5d53889fcfb1193fb4572ac69a3a908baef2af9c9f93ee0601e976c52dfeac4b6}} 
+STRESS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GRADIENT\_X@{GRADIENT\_X}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!GRADIENT\_X@{GRADIENT\_X}}}\mbox{\Hypertarget{openfdem__enum_8h_a5d53889fcfb1193fb4572ac69a3a908bad853ee77b7a4e20d6298660a85479b3d}\label{openfdem__enum_8h_a5d53889fcfb1193fb4572ac69a3a908bad853ee77b7a4e20d6298660a85479b3d}} 
+GRADIENT\+\_\+X&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GRADIENT\_Y@{GRADIENT\_Y}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!GRADIENT\_Y@{GRADIENT\_Y}}}\mbox{\Hypertarget{openfdem__enum_8h_a5d53889fcfb1193fb4572ac69a3a908bad51ea2a6b470ad47944146455d3ca6b7}\label{openfdem__enum_8h_a5d53889fcfb1193fb4572ac69a3a908bad51ea2a6b470ad47944146455d3ca6b7}} 
+GRADIENT\+\_\+Y&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{openfdem__enum_8h_a5d0dcae7c37e7bc434a8ddc0ef8ba442}\label{openfdem__enum_8h_a5d0dcae7c37e7bc434a8ddc0ef8ba442}} 
+\index{openfdem\_enum.h@{openfdem\_enum.h}!boundary\_fluid\_enum@{boundary\_fluid\_enum}}
+\index{boundary\_fluid\_enum@{boundary\_fluid\_enum}!openfdem\_enum.h@{openfdem\_enum.h}}
+\doxysubsubsection{\texorpdfstring{boundary\_fluid\_enum}{boundary\_fluid\_enum}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{openfdem__enum_8h_a5d0dcae7c37e7bc434a8ddc0ef8ba442}{boundary\+\_\+fluid\+\_\+enum}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{POREPRESSURE@{POREPRESSURE}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!POREPRESSURE@{POREPRESSURE}}}\mbox{\Hypertarget{openfdem__enum_8h_a5d0dcae7c37e7bc434a8ddc0ef8ba442a062fd2d0e585a32ade55dbc04cffe47a}\label{openfdem__enum_8h_a5d0dcae7c37e7bc434a8ddc0ef8ba442a062fd2d0e585a32ade55dbc04cffe47a}} 
+POREPRESSURE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WATER\_LEVEL@{WATER\_LEVEL}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!WATER\_LEVEL@{WATER\_LEVEL}}}\mbox{\Hypertarget{openfdem__enum_8h_a5d0dcae7c37e7bc434a8ddc0ef8ba442a87ace8cfba0c31bee769ff81f25d3051}\label{openfdem__enum_8h_a5d0dcae7c37e7bc434a8ddc0ef8ba442a87ace8cfba0c31bee769ff81f25d3051}} 
+WATER\+\_\+\+LEVEL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PRESSURE@{PRESSURE}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!PRESSURE@{PRESSURE}}}\mbox{\Hypertarget{openfdem__enum_8h_a5d0dcae7c37e7bc434a8ddc0ef8ba442a86426522c91b417229c899ae35258a46}\label{openfdem__enum_8h_a5d0dcae7c37e7bc434a8ddc0ef8ba442a86426522c91b417229c899ae35258a46}} 
+PRESSURE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FLOW@{FLOW}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!FLOW@{FLOW}}}\mbox{\Hypertarget{openfdem__enum_8h_a5d0dcae7c37e7bc434a8ddc0ef8ba442ab1998da3a9a5f1b771e99989227065c7}\label{openfdem__enum_8h_a5d0dcae7c37e7bc434a8ddc0ef8ba442ab1998da3a9a5f1b771e99989227065c7}} 
+FLOW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IMPERMABLE@{IMPERMABLE}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!IMPERMABLE@{IMPERMABLE}}}\mbox{\Hypertarget{openfdem__enum_8h_a5d0dcae7c37e7bc434a8ddc0ef8ba442a1b1be17341c66f9b6429341ff91c3f97}\label{openfdem__enum_8h_a5d0dcae7c37e7bc434a8ddc0ef8ba442a1b1be17341c66f9b6429341ff91c3f97}} 
+IMPERMABLE&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0b}\label{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0b}} 
+\index{openfdem\_enum.h@{openfdem\_enum.h}!boundary\_node\_enum@{boundary\_node\_enum}}
+\index{boundary\_node\_enum@{boundary\_node\_enum}!openfdem\_enum.h@{openfdem\_enum.h}}
+\doxysubsubsection{\texorpdfstring{boundary\_node\_enum}{boundary\_node\_enum}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0b}{boundary\+\_\+node\+\_\+enum}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FORCE@{FORCE}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!FORCE@{FORCE}}}\mbox{\Hypertarget{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba2a4d3752e9aa5f28fc2dacb0f948de06}\label{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba2a4d3752e9aa5f28fc2dacb0f948de06}} 
+FORCE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FORCE\_X@{FORCE\_X}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!FORCE\_X@{FORCE\_X}}}\mbox{\Hypertarget{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba97cf6c79644e75bb490620cf506dd541}\label{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba97cf6c79644e75bb490620cf506dd541}} 
+FORCE\+\_\+X&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FORCE\_Y@{FORCE\_Y}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!FORCE\_Y@{FORCE\_Y}}}\mbox{\Hypertarget{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba2dbf300dba725e2e690358c6e15e4bfd}\label{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba2dbf300dba725e2e690358c6e15e4bfd}} 
+FORCE\+\_\+Y&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VEL@{VEL}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!VEL@{VEL}}}\mbox{\Hypertarget{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba52747a70f1917d227fb19ded90da348d}\label{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba52747a70f1917d227fb19ded90da348d}} 
+VEL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VEL\_X@{VEL\_X}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!VEL\_X@{VEL\_X}}}\mbox{\Hypertarget{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba1e2dd8880c21d4c0ba91ee4c6eaacdfc}\label{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba1e2dd8880c21d4c0ba91ee4c6eaacdfc}} 
+VEL\+\_\+X&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VEL\_Y@{VEL\_Y}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!VEL\_Y@{VEL\_Y}}}\mbox{\Hypertarget{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba185a4cfe7a1ee8cf78960646a938a4c4}\label{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba185a4cfe7a1ee8cf78960646a938a4c4}} 
+VEL\+\_\+Y&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INIVEL@{INIVEL}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!INIVEL@{INIVEL}}}\mbox{\Hypertarget{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba660a9a439cf15c03408ec03be2a11c28}\label{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba660a9a439cf15c03408ec03be2a11c28}} 
+INIVEL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INIVEL\_X@{INIVEL\_X}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!INIVEL\_X@{INIVEL\_X}}}\mbox{\Hypertarget{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0baa8c445c8df45956c7ca3a0bb42dd7ca2}\label{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0baa8c445c8df45956c7ca3a0bb42dd7ca2}} 
+INIVEL\+\_\+X&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INIVEL\_Y@{INIVEL\_Y}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!INIVEL\_Y@{INIVEL\_Y}}}\mbox{\Hypertarget{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba3bb92b21b0ba352f2ed2f8bf638d7a48}\label{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba3bb92b21b0ba352f2ed2f8bf638d7a48}} 
+INIVEL\+\_\+Y&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VISCOUS@{VISCOUS}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!VISCOUS@{VISCOUS}}}\mbox{\Hypertarget{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0bafc7d1a468c4e3fcec4251b16befc02a3}\label{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0bafc7d1a468c4e3fcec4251b16befc02a3}} 
+VISCOUS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VISCOUS\_X@{VISCOUS\_X}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!VISCOUS\_X@{VISCOUS\_X}}}\mbox{\Hypertarget{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba4516d3614d0d3b2c35dea8a554f5f85b}\label{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba4516d3614d0d3b2c35dea8a554f5f85b}} 
+VISCOUS\+\_\+X&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VISCOUS\_Y@{VISCOUS\_Y}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!VISCOUS\_Y@{VISCOUS\_Y}}}\mbox{\Hypertarget{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba813e8f2e24ae6cba40d85b472c31d760}\label{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba813e8f2e24ae6cba40d85b472c31d760}} 
+VISCOUS\+\_\+Y&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ACCEL@{ACCEL}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!ACCEL@{ACCEL}}}\mbox{\Hypertarget{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba11db0c836ba3cf1c58641fc109ffe566}\label{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba11db0c836ba3cf1c58641fc109ffe566}} 
+ACCEL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ACCEL\_X@{ACCEL\_X}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!ACCEL\_X@{ACCEL\_X}}}\mbox{\Hypertarget{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0bad359882a2a593b11d1d88172d10e4438}\label{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0bad359882a2a593b11d1d88172d10e4438}} 
+ACCEL\+\_\+X&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ACCEL\_Y@{ACCEL\_Y}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!ACCEL\_Y@{ACCEL\_Y}}}\mbox{\Hypertarget{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba4909e8a02baf061df6ada43569b58bfb}\label{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba4909e8a02baf061df6ada43569b58bfb}} 
+ACCEL\+\_\+Y&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FORCE\_LOCAL@{FORCE\_LOCAL}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!FORCE\_LOCAL@{FORCE\_LOCAL}}}\mbox{\Hypertarget{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba1bfec9a60e85bdc58f44feb171a757fa}\label{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba1bfec9a60e85bdc58f44feb171a757fa}} 
+FORCE\+\_\+\+LOCAL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FORCE\_LOCAL\_X@{FORCE\_LOCAL\_X}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!FORCE\_LOCAL\_X@{FORCE\_LOCAL\_X}}}\mbox{\Hypertarget{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0baeb49ca1b75537f44eb35e6e249508749}\label{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0baeb49ca1b75537f44eb35e6e249508749}} 
+FORCE\+\_\+\+LOCAL\+\_\+X&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FORCE\_LOCAL\_Y@{FORCE\_LOCAL\_Y}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!FORCE\_LOCAL\_Y@{FORCE\_LOCAL\_Y}}}\mbox{\Hypertarget{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba99ae08e5dec49b4a1e845c2167187f7e}\label{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba99ae08e5dec49b4a1e845c2167187f7e}} 
+FORCE\+\_\+\+LOCAL\+\_\+Y&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VEL\_LOCAL@{VEL\_LOCAL}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!VEL\_LOCAL@{VEL\_LOCAL}}}\mbox{\Hypertarget{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba1dc6141fe6ccf9d55edcc73086be47b1}\label{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba1dc6141fe6ccf9d55edcc73086be47b1}} 
+VEL\+\_\+\+LOCAL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VEL\_LOCAL\_X@{VEL\_LOCAL\_X}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!VEL\_LOCAL\_X@{VEL\_LOCAL\_X}}}\mbox{\Hypertarget{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba5c52f500a74292af8772864e1f5e2979}\label{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba5c52f500a74292af8772864e1f5e2979}} 
+VEL\+\_\+\+LOCAL\+\_\+X&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VEL\_LOCAL\_Y@{VEL\_LOCAL\_Y}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!VEL\_LOCAL\_Y@{VEL\_LOCAL\_Y}}}\mbox{\Hypertarget{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba74df4dc443ffbb04d52b8325665890a2}\label{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba74df4dc443ffbb04d52b8325665890a2}} 
+VEL\+\_\+\+LOCAL\+\_\+Y&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INIVEL\_LOCAL@{INIVEL\_LOCAL}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!INIVEL\_LOCAL@{INIVEL\_LOCAL}}}\mbox{\Hypertarget{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba56ca95060b85b86e63deef33f68d68d1}\label{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba56ca95060b85b86e63deef33f68d68d1}} 
+INIVEL\+\_\+\+LOCAL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INIVEL\_LOCAL\_X@{INIVEL\_LOCAL\_X}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!INIVEL\_LOCAL\_X@{INIVEL\_LOCAL\_X}}}\mbox{\Hypertarget{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0baf9dfda59982438997b01dcc404addf4e}\label{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0baf9dfda59982438997b01dcc404addf4e}} 
+INIVEL\+\_\+\+LOCAL\+\_\+X&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INIVEL\_LOCAL\_Y@{INIVEL\_LOCAL\_Y}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!INIVEL\_LOCAL\_Y@{INIVEL\_LOCAL\_Y}}}\mbox{\Hypertarget{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba1090b5ed2ecf81d45cbc4750eda049fd}\label{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba1090b5ed2ecf81d45cbc4750eda049fd}} 
+INIVEL\+\_\+\+LOCAL\+\_\+Y&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ACCEL\_LOCAL@{ACCEL\_LOCAL}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!ACCEL\_LOCAL@{ACCEL\_LOCAL}}}\mbox{\Hypertarget{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0bafd4da15f9d8c487e85a175a94e0a2b69}\label{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0bafd4da15f9d8c487e85a175a94e0a2b69}} 
+ACCEL\+\_\+\+LOCAL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ACCEL\_LOCAL\_X@{ACCEL\_LOCAL\_X}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!ACCEL\_LOCAL\_X@{ACCEL\_LOCAL\_X}}}\mbox{\Hypertarget{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0bac7ec89242fe7445c1726dbebb6f29c70}\label{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0bac7ec89242fe7445c1726dbebb6f29c70}} 
+ACCEL\+\_\+\+LOCAL\+\_\+X&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ACCEL\_LOCAL\_Y@{ACCEL\_LOCAL\_Y}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!ACCEL\_LOCAL\_Y@{ACCEL\_LOCAL\_Y}}}\mbox{\Hypertarget{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0baae599ead7aa229473e78a7d9ada57790}\label{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0baae599ead7aa229473e78a7d9ada57790}} 
+ACCEL\+\_\+\+LOCAL\+\_\+Y&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NORMAL@{NORMAL}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!NORMAL@{NORMAL}}}\mbox{\Hypertarget{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba50d1448013c6f17125caee18aa418af7}\label{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0ba50d1448013c6f17125caee18aa418af7}} 
+NORMAL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHEAR@{SHEAR}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!SHEAR@{SHEAR}}}\mbox{\Hypertarget{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0bae6a520c7a7ca170fc99afd708e425a4c}\label{openfdem__enum_8h_ac8b3117aaa9ac75991454ae36655ef0bae6a520c7a7ca170fc99afd708e425a4c}} 
+SHEAR&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{openfdem__enum_8h_a34d7cec24e73f173cf2f2010b8107f90}\label{openfdem__enum_8h_a34d7cec24e73f173cf2f2010b8107f90}} 
+\index{openfdem\_enum.h@{openfdem\_enum.h}!boundary\_thermal\_enum@{boundary\_thermal\_enum}}
+\index{boundary\_thermal\_enum@{boundary\_thermal\_enum}!openfdem\_enum.h@{openfdem\_enum.h}}
+\doxysubsubsection{\texorpdfstring{boundary\_thermal\_enum}{boundary\_thermal\_enum}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{openfdem__enum_8h_a34d7cec24e73f173cf2f2010b8107f90}{boundary\+\_\+thermal\+\_\+enum}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INI\_TEMPERATURE@{INI\_TEMPERATURE}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!INI\_TEMPERATURE@{INI\_TEMPERATURE}}}\mbox{\Hypertarget{openfdem__enum_8h_a34d7cec24e73f173cf2f2010b8107f90a5ca83be6c7a094217b1a9f21f2294851}\label{openfdem__enum_8h_a34d7cec24e73f173cf2f2010b8107f90a5ca83be6c7a094217b1a9f21f2294851}} 
+INI\+\_\+\+TEMPERATURE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEMPERATURE@{TEMPERATURE}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!TEMPERATURE@{TEMPERATURE}}}\mbox{\Hypertarget{openfdem__enum_8h_a34d7cec24e73f173cf2f2010b8107f90ac4ae6787ff1d8b2d1cf0ae9aa696e56c}\label{openfdem__enum_8h_a34d7cec24e73f173cf2f2010b8107f90ac4ae6787ff1d8b2d1cf0ae9aa696e56c}} 
+TEMPERATURE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CONVECTION@{CONVECTION}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!CONVECTION@{CONVECTION}}}\mbox{\Hypertarget{openfdem__enum_8h_a34d7cec24e73f173cf2f2010b8107f90a718e0728cf596ce66dfc59137a21a626}\label{openfdem__enum_8h_a34d7cec24e73f173cf2f2010b8107f90a718e0728cf596ce66dfc59137a21a626}} 
+CONVECTION&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FLUX@{FLUX}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!FLUX@{FLUX}}}\mbox{\Hypertarget{openfdem__enum_8h_a34d7cec24e73f173cf2f2010b8107f90aa76c44edb76686fa1bbda9ebe69c7857}\label{openfdem__enum_8h_a34d7cec24e73f173cf2f2010b8107f90aa76c44edb76686fa1bbda9ebe69c7857}} 
+FLUX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RADIATION@{RADIATION}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!RADIATION@{RADIATION}}}\mbox{\Hypertarget{openfdem__enum_8h_a34d7cec24e73f173cf2f2010b8107f90a4a560d5b4b4a2348f25919515afdb7c4}\label{openfdem__enum_8h_a34d7cec24e73f173cf2f2010b8107f90a4a560d5b4b4a2348f25919515afdb7c4}} 
+RADIATION&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOURCE@{SOURCE}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!SOURCE@{SOURCE}}}\mbox{\Hypertarget{openfdem__enum_8h_a34d7cec24e73f173cf2f2010b8107f90a0159491ea913604389155db907e0d1c0}\label{openfdem__enum_8h_a34d7cec24e73f173cf2f2010b8107f90a0159491ea913604389155db907e0d1c0}} 
+SOURCE&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{openfdem__enum_8h_a2c36155ac0e634b21c2a2fa711a09d68}\label{openfdem__enum_8h_a2c36155ac0e634b21c2a2fa711a09d68}} 
+\index{openfdem\_enum.h@{openfdem\_enum.h}!cohelement\_cons@{cohelement\_cons}}
+\index{cohelement\_cons@{cohelement\_cons}!openfdem\_enum.h@{openfdem\_enum.h}}
+\doxysubsubsection{\texorpdfstring{cohelement\_cons}{cohelement\_cons}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{openfdem__enum_8h_a2c36155ac0e634b21c2a2fa711a09d68}{cohelement\+\_\+cons}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{COH\_EM@{COH\_EM}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!COH\_EM@{COH\_EM}}}\mbox{\Hypertarget{openfdem__enum_8h_a2c36155ac0e634b21c2a2fa711a09d68ade94e945da01248a88736dfd542e6a95}\label{openfdem__enum_8h_a2c36155ac0e634b21c2a2fa711a09d68ade94e945da01248a88736dfd542e6a95}} 
+COH\+\_\+\+EM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{COH\_EM\_FRIC@{COH\_EM\_FRIC}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!COH\_EM\_FRIC@{COH\_EM\_FRIC}}}\mbox{\Hypertarget{openfdem__enum_8h_a2c36155ac0e634b21c2a2fa711a09d68a7c5e2ec8939ffb253b82ee25dbc5bb5c}\label{openfdem__enum_8h_a2c36155ac0e634b21c2a2fa711a09d68a7c5e2ec8939ffb253b82ee25dbc5bb5c}} 
+COH\+\_\+\+EM\+\_\+\+FRIC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{COH\_LINEAR@{COH\_LINEAR}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!COH\_LINEAR@{COH\_LINEAR}}}\mbox{\Hypertarget{openfdem__enum_8h_a2c36155ac0e634b21c2a2fa711a09d68aaaca9011993d735336c87943f5bde718}\label{openfdem__enum_8h_a2c36155ac0e634b21c2a2fa711a09d68aaaca9011993d735336c87943f5bde718}} 
+COH\+\_\+\+LINEAR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{COH\_OP@{COH\_OP}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!COH\_OP@{COH\_OP}}}\mbox{\Hypertarget{openfdem__enum_8h_a2c36155ac0e634b21c2a2fa711a09d68abf6e73ba5c7a4af63354bb2bda66edd6}\label{openfdem__enum_8h_a2c36155ac0e634b21c2a2fa711a09d68abf6e73ba5c7a4af63354bb2bda66edd6}} 
+COH\+\_\+\+OP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{COH\_BB@{COH\_BB}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!COH\_BB@{COH\_BB}}}\mbox{\Hypertarget{openfdem__enum_8h_a2c36155ac0e634b21c2a2fa711a09d68a9e1d303925b2e3fd2803583a4c3d1b82}\label{openfdem__enum_8h_a2c36155ac0e634b21c2a2fa711a09d68a9e1d303925b2e3fd2803583a4c3d1b82}} 
+COH\+\_\+\+BB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{COH\_EM\_HET@{COH\_EM\_HET}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!COH\_EM\_HET@{COH\_EM\_HET}}}\mbox{\Hypertarget{openfdem__enum_8h_a2c36155ac0e634b21c2a2fa711a09d68a31fb73d390f091e17eae7f87b3ed55a8}\label{openfdem__enum_8h_a2c36155ac0e634b21c2a2fa711a09d68a31fb73d390f091e17eae7f87b3ed55a8}} 
+COH\+\_\+\+EM\+\_\+\+HET&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{COH\_EM\_ANI@{COH\_EM\_ANI}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!COH\_EM\_ANI@{COH\_EM\_ANI}}}\mbox{\Hypertarget{openfdem__enum_8h_a2c36155ac0e634b21c2a2fa711a09d68a91dc871a2b7e28f8ab7fab3d8b88b559}\label{openfdem__enum_8h_a2c36155ac0e634b21c2a2fa711a09d68a91dc871a2b7e28f8ab7fab3d8b88b559}} 
+COH\+\_\+\+EM\+\_\+\+ANI&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{COH\_EM\_DYNAMIC@{COH\_EM\_DYNAMIC}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!COH\_EM\_DYNAMIC@{COH\_EM\_DYNAMIC}}}\mbox{\Hypertarget{openfdem__enum_8h_a2c36155ac0e634b21c2a2fa711a09d68ab67da817eb9e0815665110036fe7ec76}\label{openfdem__enum_8h_a2c36155ac0e634b21c2a2fa711a09d68ab67da817eb9e0815665110036fe7ec76}} 
+COH\+\_\+\+EM\+\_\+\+DYNAMIC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{COH\_OTHERS@{COH\_OTHERS}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!COH\_OTHERS@{COH\_OTHERS}}}\mbox{\Hypertarget{openfdem__enum_8h_a2c36155ac0e634b21c2a2fa711a09d68ab4fcf85960ff0afcaee0d4c73f5fd397}\label{openfdem__enum_8h_a2c36155ac0e634b21c2a2fa711a09d68ab4fcf85960ff0afcaee0d4c73f5fd397}} 
+COH\+\_\+\+OTHERS&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{openfdem__enum_8h_a1ef3ddb6111f924f570bc66dec0ef2d3}\label{openfdem__enum_8h_a1ef3ddb6111f924f570bc66dec0ef2d3}} 
+\index{openfdem\_enum.h@{openfdem\_enum.h}!cohelement\_enum@{cohelement\_enum}}
+\index{cohelement\_enum@{cohelement\_enum}!openfdem\_enum.h@{openfdem\_enum.h}}
+\doxysubsubsection{\texorpdfstring{cohelement\_enum}{cohelement\_enum}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{openfdem__enum_8h_a1ef3ddb6111f924f570bc66dec0ef2d3}{cohelement\+\_\+enum}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INTACT@{INTACT}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!INTACT@{INTACT}}}\mbox{\Hypertarget{openfdem__enum_8h_a1ef3ddb6111f924f570bc66dec0ef2d3ac255cc5561bd9d1f74da25f6628f40ee}\label{openfdem__enum_8h_a1ef3ddb6111f924f570bc66dec0ef2d3ac255cc5561bd9d1f74da25f6628f40ee}} 
+INTACT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DAMAGE@{DAMAGE}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!DAMAGE@{DAMAGE}}}\mbox{\Hypertarget{openfdem__enum_8h_a1ef3ddb6111f924f570bc66dec0ef2d3aa481f681683f03d1742f0e30de6328e5}\label{openfdem__enum_8h_a1ef3ddb6111f924f570bc66dec0ef2d3aa481f681683f03d1742f0e30de6328e5}} 
+DAMAGE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BROKEN@{BROKEN}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!BROKEN@{BROKEN}}}\mbox{\Hypertarget{openfdem__enum_8h_a1ef3ddb6111f924f570bc66dec0ef2d3aeb30bf699a39ea2cb5819381461ee54d}\label{openfdem__enum_8h_a1ef3ddb6111f924f570bc66dec0ef2d3aeb30bf699a39ea2cb5819381461ee54d}} 
+BROKEN&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{openfdem__enum_8h_ae912e9094d0670dd188b0ff695051de8}\label{openfdem__enum_8h_ae912e9094d0670dd188b0ff695051de8}} 
+\index{openfdem\_enum.h@{openfdem\_enum.h}!config\_module\_enum@{config\_module\_enum}}
+\index{config\_module\_enum@{config\_module\_enum}!openfdem\_enum.h@{openfdem\_enum.h}}
+\doxysubsubsection{\texorpdfstring{config\_module\_enum}{config\_module\_enum}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{openfdem__enum_8h_ae912e9094d0670dd188b0ff695051de8}{config\+\_\+module\+\_\+enum}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MECHANICAL@{MECHANICAL}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!MECHANICAL@{MECHANICAL}}}\mbox{\Hypertarget{openfdem__enum_8h_ae912e9094d0670dd188b0ff695051de8a33221bfc1f61a163ba18c52de47c83db}\label{openfdem__enum_8h_ae912e9094d0670dd188b0ff695051de8a33221bfc1f61a163ba18c52de47c83db}} 
+MECHANICAL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HYDRO@{HYDRO}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HYDRO@{HYDRO}}}\mbox{\Hypertarget{openfdem__enum_8h_ae912e9094d0670dd188b0ff695051de8a0570af3f89657ca7e8f1c6b7b738d272}\label{openfdem__enum_8h_ae912e9094d0670dd188b0ff695051de8a0570af3f89657ca7e8f1c6b7b738d272}} 
+HYDRO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{THERMAL@{THERMAL}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!THERMAL@{THERMAL}}}\mbox{\Hypertarget{openfdem__enum_8h_ae912e9094d0670dd188b0ff695051de8a8673e191c8b1151cc508b4a1946e0972}\label{openfdem__enum_8h_ae912e9094d0670dd188b0ff695051de8a8673e191c8b1151cc508b4a1946e0972}} 
+THERMAL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BLAST@{BLAST}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!BLAST@{BLAST}}}\mbox{\Hypertarget{openfdem__enum_8h_ae912e9094d0670dd188b0ff695051de8abac2e106fb67b0a4a0d8baaa966e3a0f}\label{openfdem__enum_8h_ae912e9094d0670dd188b0ff695051de8abac2e106fb67b0a4a0d8baaa966e3a0f}} 
+BLAST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BLAST\_HYDRO@{BLAST\_HYDRO}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!BLAST\_HYDRO@{BLAST\_HYDRO}}}\mbox{\Hypertarget{openfdem__enum_8h_ae912e9094d0670dd188b0ff695051de8a7547201baf1bc42390df89bafdf839c6}\label{openfdem__enum_8h_ae912e9094d0670dd188b0ff695051de8a7547201baf1bc42390df89bafdf839c6}} 
+BLAST\+\_\+\+HYDRO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DYNAMIC@{DYNAMIC}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!DYNAMIC@{DYNAMIC}}}\mbox{\Hypertarget{openfdem__enum_8h_ae912e9094d0670dd188b0ff695051de8aaac65e0072e6ff1f4c3209d2fdd8730a}\label{openfdem__enum_8h_ae912e9094d0670dd188b0ff695051de8aaac65e0072e6ff1f4c3209d2fdd8730a}} 
+DYNAMIC&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{openfdem__enum_8h_a7b4ce13363fe4f0be5abc2a77a751dd3}\label{openfdem__enum_8h_a7b4ce13363fe4f0be5abc2a77a751dd3}} 
+\index{openfdem\_enum.h@{openfdem\_enum.h}!config\_type\_enum@{config\_type\_enum}}
+\index{config\_type\_enum@{config\_type\_enum}!openfdem\_enum.h@{openfdem\_enum.h}}
+\doxysubsubsection{\texorpdfstring{config\_type\_enum}{config\_type\_enum}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{openfdem__enum_8h_a7b4ce13363fe4f0be5abc2a77a751dd3}{config\+\_\+type\+\_\+enum}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CONFIG\_NONE@{CONFIG\_NONE}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!CONFIG\_NONE@{CONFIG\_NONE}}}\mbox{\Hypertarget{openfdem__enum_8h_a7b4ce13363fe4f0be5abc2a77a751dd3ac9ab923436e1462fb407261d33f3f863}\label{openfdem__enum_8h_a7b4ce13363fe4f0be5abc2a77a751dd3ac9ab923436e1462fb407261d33f3f863}} 
+CONFIG\+\_\+\+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PLANESTRESS@{PLANESTRESS}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!PLANESTRESS@{PLANESTRESS}}}\mbox{\Hypertarget{openfdem__enum_8h_a7b4ce13363fe4f0be5abc2a77a751dd3a97a7020dce2dc057f25660e3f6e98f8e}\label{openfdem__enum_8h_a7b4ce13363fe4f0be5abc2a77a751dd3a97a7020dce2dc057f25660e3f6e98f8e}} 
+PLANESTRESS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PLANESTRAIN@{PLANESTRAIN}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!PLANESTRAIN@{PLANESTRAIN}}}\mbox{\Hypertarget{openfdem__enum_8h_a7b4ce13363fe4f0be5abc2a77a751dd3a4e70dc2adb3033d440df5cd656674da7}\label{openfdem__enum_8h_a7b4ce13363fe4f0be5abc2a77a751dd3a4e70dc2adb3033d440df5cd656674da7}} 
+PLANESTRAIN&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{openfdem__enum_8h_a26b8b4d2ce9caab88a42565837e6e892}\label{openfdem__enum_8h_a26b8b4d2ce9caab88a42565837e6e892}} 
+\index{openfdem\_enum.h@{openfdem\_enum.h}!contact\_cons@{contact\_cons}}
+\index{contact\_cons@{contact\_cons}!openfdem\_enum.h@{openfdem\_enum.h}}
+\doxysubsubsection{\texorpdfstring{contact\_cons}{contact\_cons}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{openfdem__enum_8h_a26b8b4d2ce9caab88a42565837e6e892}{contact\+\_\+cons}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CON\_MC@{CON\_MC}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!CON\_MC@{CON\_MC}}}\mbox{\Hypertarget{openfdem__enum_8h_a26b8b4d2ce9caab88a42565837e6e892a952333424868c6302ad7f2eb0fc0bfc6}\label{openfdem__enum_8h_a26b8b4d2ce9caab88a42565837e6e892a952333424868c6302ad7f2eb0fc0bfc6}} 
+CON\+\_\+\+MC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CON\_DYNAMIC\_MC@{CON\_DYNAMIC\_MC}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!CON\_DYNAMIC\_MC@{CON\_DYNAMIC\_MC}}}\mbox{\Hypertarget{openfdem__enum_8h_a26b8b4d2ce9caab88a42565837e6e892a424d83fb08b2b9e691539c458d518cfc}\label{openfdem__enum_8h_a26b8b4d2ce9caab88a42565837e6e892a424d83fb08b2b9e691539c458d518cfc}} 
+CON\+\_\+\+DYNAMIC\+\_\+\+MC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CON\_HERTZ@{CON\_HERTZ}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!CON\_HERTZ@{CON\_HERTZ}}}\mbox{\Hypertarget{openfdem__enum_8h_a26b8b4d2ce9caab88a42565837e6e892aec074feed881878bf8e7a59f42e4ef52}\label{openfdem__enum_8h_a26b8b4d2ce9caab88a42565837e6e892aec074feed881878bf8e7a59f42e4ef52}} 
+CON\+\_\+\+HERTZ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CON\_BB@{CON\_BB}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!CON\_BB@{CON\_BB}}}\mbox{\Hypertarget{openfdem__enum_8h_a26b8b4d2ce9caab88a42565837e6e892aba59516df53713cf30b4159578b984db}\label{openfdem__enum_8h_a26b8b4d2ce9caab88a42565837e6e892aba59516df53713cf30b4159578b984db}} 
+CON\+\_\+\+BB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CON\_FRICTION@{CON\_FRICTION}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!CON\_FRICTION@{CON\_FRICTION}}}\mbox{\Hypertarget{openfdem__enum_8h_a26b8b4d2ce9caab88a42565837e6e892a31b501ede8707d104357c4c398797cb9}\label{openfdem__enum_8h_a26b8b4d2ce9caab88a42565837e6e892a31b501ede8707d104357c4c398797cb9}} 
+CON\+\_\+\+FRICTION&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CON\_OTHERS@{CON\_OTHERS}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!CON\_OTHERS@{CON\_OTHERS}}}\mbox{\Hypertarget{openfdem__enum_8h_a26b8b4d2ce9caab88a42565837e6e892a1ccbdfc0573b43de9e7c7611129804ee}\label{openfdem__enum_8h_a26b8b4d2ce9caab88a42565837e6e892a1ccbdfc0573b43de9e7c7611129804ee}} 
+CON\+\_\+\+OTHERS&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{openfdem__enum_8h_ad699abbd613784ea9d6177e0d82c901a}\label{openfdem__enum_8h_ad699abbd613784ea9d6177e0d82c901a}} 
+\index{openfdem\_enum.h@{openfdem\_enum.h}!contact\_detection@{contact\_detection}}
+\index{contact\_detection@{contact\_detection}!openfdem\_enum.h@{openfdem\_enum.h}}
+\doxysubsubsection{\texorpdfstring{contact\_detection}{contact\_detection}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{openfdem__enum_8h_ad699abbd613784ea9d6177e0d82c901a}{contact\+\_\+detection}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LIG@{LIG}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!LIG@{LIG}}}\mbox{\Hypertarget{openfdem__enum_8h_ad699abbd613784ea9d6177e0d82c901aaddfa6c9a7a43167c5cee56f1883cad88}\label{openfdem__enum_8h_ad699abbd613784ea9d6177e0d82c901aaddfa6c9a7a43167c5cee56f1883cad88}} 
+LIG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NBS@{NBS}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!NBS@{NBS}}}\mbox{\Hypertarget{openfdem__enum_8h_ad699abbd613784ea9d6177e0d82c901aac7f967336cf52e6cd7600d5e37f87106}\label{openfdem__enum_8h_ad699abbd613784ea9d6177e0d82c901aac7f967336cf52e6cd7600d5e37f87106}} 
+NBS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{mNBS@{mNBS}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!mNBS@{mNBS}}}\mbox{\Hypertarget{openfdem__enum_8h_ad699abbd613784ea9d6177e0d82c901aa6cde048d01f2b370aa96f3618e6712aa}\label{openfdem__enum_8h_ad699abbd613784ea9d6177e0d82c901aa6cde048d01f2b370aa96f3618e6712aa}} 
+m\+NBS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CELL@{CELL}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!CELL@{CELL}}}\mbox{\Hypertarget{openfdem__enum_8h_ad699abbd613784ea9d6177e0d82c901aa03be5fc53a9d77a64ff24f85a7784a7b}\label{openfdem__enum_8h_ad699abbd613784ea9d6177e0d82c901aa03be5fc53a9d77a64ff24f85a7784a7b}} 
+CELL&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{openfdem__enum_8h_afa07d0c0b34130444606a1d00d755ec2}\label{openfdem__enum_8h_afa07d0c0b34130444606a1d00d755ec2}} 
+\index{openfdem\_enum.h@{openfdem\_enum.h}!contact\_force@{contact\_force}}
+\index{contact\_force@{contact\_force}!openfdem\_enum.h@{openfdem\_enum.h}}
+\doxysubsubsection{\texorpdfstring{contact\_force}{contact\_force}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{openfdem__enum_8h_afa07d0c0b34130444606a1d00d755ec2}{contact\+\_\+force}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFAULT\_MUNJIZA@{DEFAULT\_MUNJIZA}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!DEFAULT\_MUNJIZA@{DEFAULT\_MUNJIZA}}}\mbox{\Hypertarget{openfdem__enum_8h_afa07d0c0b34130444606a1d00d755ec2a36490305a2aca02e47b8448b538f9930}\label{openfdem__enum_8h_afa07d0c0b34130444606a1d00d755ec2a36490305a2aca02e47b8448b538f9930}} 
+DEFAULT\+\_\+\+MUNJIZA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LIG\_F@{LIG\_F}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!LIG\_F@{LIG\_F}}}\mbox{\Hypertarget{openfdem__enum_8h_afa07d0c0b34130444606a1d00d755ec2ab84cc086dafd9d25acb957b0df4bcd6c}\label{openfdem__enum_8h_afa07d0c0b34130444606a1d00d755ec2ab84cc086dafd9d25acb957b0df4bcd6c}} 
+LIG\+\_\+F&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{openfdem__enum_8h_aa02a7146073f5f8e2c1cd8691b98890b}\label{openfdem__enum_8h_aa02a7146073f5f8e2c1cd8691b98890b}} 
+\index{openfdem\_enum.h@{openfdem\_enum.h}!DFN\_enum@{DFN\_enum}}
+\index{DFN\_enum@{DFN\_enum}!openfdem\_enum.h@{openfdem\_enum.h}}
+\doxysubsubsection{\texorpdfstring{DFN\_enum}{DFN\_enum}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{openfdem__enum_8h_aa02a7146073f5f8e2c1cd8691b98890b}{DFN\+\_\+enum}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NDFN@{NDFN}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!NDFN@{NDFN}}}\mbox{\Hypertarget{openfdem__enum_8h_aa02a7146073f5f8e2c1cd8691b98890ba993775af88288a7f474bc0f8c7290b69}\label{openfdem__enum_8h_aa02a7146073f5f8e2c1cd8691b98890ba993775af88288a7f474bc0f8c7290b69}} 
+NDFN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DFN\_COHESIVE@{DFN\_COHESIVE}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!DFN\_COHESIVE@{DFN\_COHESIVE}}}\mbox{\Hypertarget{openfdem__enum_8h_aa02a7146073f5f8e2c1cd8691b98890ba1301d399572155612b78391a142788c4}\label{openfdem__enum_8h_aa02a7146073f5f8e2c1cd8691b98890ba1301d399572155612b78391a142788c4}} 
+DFN\+\_\+\+COHESIVE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DFN\_BROKEN@{DFN\_BROKEN}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!DFN\_BROKEN@{DFN\_BROKEN}}}\mbox{\Hypertarget{openfdem__enum_8h_aa02a7146073f5f8e2c1cd8691b98890bab31fbc16512297e64c431ac351fa8b34}\label{openfdem__enum_8h_aa02a7146073f5f8e2c1cd8691b98890bab31fbc16512297e64c431ac351fa8b34}} 
+DFN\+\_\+\+BROKEN&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{openfdem__enum_8h_ab931b042fe7727a9ee2ea1c8eee81000}\label{openfdem__enum_8h_ab931b042fe7727a9ee2ea1c8eee81000}} 
+\index{openfdem\_enum.h@{openfdem\_enum.h}!element\_cons@{element\_cons}}
+\index{element\_cons@{element\_cons}!openfdem\_enum.h@{openfdem\_enum.h}}
+\doxysubsubsection{\texorpdfstring{element\_cons}{element\_cons}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{openfdem__enum_8h_ab931b042fe7727a9ee2ea1c8eee81000}{element\+\_\+cons}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ELASTIC@{ELASTIC}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!ELASTIC@{ELASTIC}}}\mbox{\Hypertarget{openfdem__enum_8h_ab931b042fe7727a9ee2ea1c8eee81000a1fad81d9726af9493b2aac52d6a16786}\label{openfdem__enum_8h_ab931b042fe7727a9ee2ea1c8eee81000a1fad81d9726af9493b2aac52d6a16786}} 
+ELASTIC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RIGID@{RIGID}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!RIGID@{RIGID}}}\mbox{\Hypertarget{openfdem__enum_8h_ab931b042fe7727a9ee2ea1c8eee81000a43358c4fff77d7d5712da6d4f6d9b8e7}\label{openfdem__enum_8h_ab931b042fe7727a9ee2ea1c8eee81000a43358c4fff77d7d5712da6d4f6d9b8e7}} 
+RIGID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOFTEN@{SOFTEN}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!SOFTEN@{SOFTEN}}}\mbox{\Hypertarget{openfdem__enum_8h_ab931b042fe7727a9ee2ea1c8eee81000a78e99c4c380813bf00e83b8d60e13376}\label{openfdem__enum_8h_ab931b042fe7727a9ee2ea1c8eee81000a78e99c4c380813bf00e83b8d60e13376}} 
+SOFTEN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TRANSVERSE@{TRANSVERSE}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!TRANSVERSE@{TRANSVERSE}}}\mbox{\Hypertarget{openfdem__enum_8h_ab931b042fe7727a9ee2ea1c8eee81000a6ce703f9cc47a7a2c52df9d397e0c149}\label{openfdem__enum_8h_ab931b042fe7727a9ee2ea1c8eee81000a6ce703f9cc47a7a2c52df9d397e0c149}} 
+TRANSVERSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MC@{MC}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!MC@{MC}}}\mbox{\Hypertarget{openfdem__enum_8h_ab931b042fe7727a9ee2ea1c8eee81000a8e15ed3aa6ccc02e22b283c8bd0b4096}\label{openfdem__enum_8h_ab931b042fe7727a9ee2ea1c8eee81000a8e15ed3aa6ccc02e22b283c8bd0b4096}} 
+MC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DP@{DP}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!DP@{DP}}}\mbox{\Hypertarget{openfdem__enum_8h_ab931b042fe7727a9ee2ea1c8eee81000ad7952717003d90fc1d54ccecbcbfa00a}\label{openfdem__enum_8h_ab931b042fe7727a9ee2ea1c8eee81000ad7952717003d90fc1d54ccecbcbfa00a}} 
+DP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OTHERS@{OTHERS}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!OTHERS@{OTHERS}}}\mbox{\Hypertarget{openfdem__enum_8h_ab931b042fe7727a9ee2ea1c8eee81000a4af5fe82e7a2c651d3a04f3d5aa2bef7}\label{openfdem__enum_8h_ab931b042fe7727a9ee2ea1c8eee81000a4af5fe82e7a2c651d3a04f3d5aa2bef7}} 
+OTHERS&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{openfdem__enum_8h_a9d0dadd7e40e230c1293f8eb056b309c}\label{openfdem__enum_8h_a9d0dadd7e40e230c1293f8eb056b309c}} 
+\index{openfdem\_enum.h@{openfdem\_enum.h}!his\_cohele\_t@{his\_cohele\_t}}
+\index{his\_cohele\_t@{his\_cohele\_t}!openfdem\_enum.h@{openfdem\_enum.h}}
+\doxysubsubsection{\texorpdfstring{his\_cohele\_t}{his\_cohele\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{openfdem__enum_8h_a9d0dadd7e40e230c1293f8eb056b309c}{his\+\_\+cohele\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIS\_COH\_DIS@{HIS\_COH\_DIS}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIS\_COH\_DIS@{HIS\_COH\_DIS}}}\mbox{\Hypertarget{openfdem__enum_8h_a9d0dadd7e40e230c1293f8eb056b309ca43cee81cf93d5990f95cfc33c115b1ec}\label{openfdem__enum_8h_a9d0dadd7e40e230c1293f8eb056b309ca43cee81cf93d5990f95cfc33c115b1ec}} 
+HIS\+\_\+\+COH\+\_\+\+DIS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIS\_COH\_FOR@{HIS\_COH\_FOR}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIS\_COH\_FOR@{HIS\_COH\_FOR}}}\mbox{\Hypertarget{openfdem__enum_8h_a9d0dadd7e40e230c1293f8eb056b309ca26d6d1adc1b4b22a4a5d46ef1d78747f}\label{openfdem__enum_8h_a9d0dadd7e40e230c1293f8eb056b309ca26d6d1adc1b4b22a4a5d46ef1d78747f}} 
+HIS\+\_\+\+COH\+\_\+\+FOR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIS\_COH\_VEL@{HIS\_COH\_VEL}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIS\_COH\_VEL@{HIS\_COH\_VEL}}}\mbox{\Hypertarget{openfdem__enum_8h_a9d0dadd7e40e230c1293f8eb056b309ca91f7a89b5a581b4e29d917c452d04838}\label{openfdem__enum_8h_a9d0dadd7e40e230c1293f8eb056b309ca91f7a89b5a581b4e29d917c452d04838}} 
+HIS\+\_\+\+COH\+\_\+\+VEL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIS\_COH\_SHEAR@{HIS\_COH\_SHEAR}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIS\_COH\_SHEAR@{HIS\_COH\_SHEAR}}}\mbox{\Hypertarget{openfdem__enum_8h_a9d0dadd7e40e230c1293f8eb056b309cac7f10c3ce8384a1314fb56167aa7b2c7}\label{openfdem__enum_8h_a9d0dadd7e40e230c1293f8eb056b309cac7f10c3ce8384a1314fb56167aa7b2c7}} 
+HIS\+\_\+\+COH\+\_\+\+SHEAR&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{openfdem__enum_8h_aed44610b9b35b9d7732248706509a057}\label{openfdem__enum_8h_aed44610b9b35b9d7732248706509a057}} 
+\index{openfdem\_enum.h@{openfdem\_enum.h}!his\_contact\_t@{his\_contact\_t}}
+\index{his\_contact\_t@{his\_contact\_t}!openfdem\_enum.h@{openfdem\_enum.h}}
+\doxysubsubsection{\texorpdfstring{his\_contact\_t}{his\_contact\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{openfdem__enum_8h_aed44610b9b35b9d7732248706509a057}{his\+\_\+contact\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIS\_CON\_DIS@{HIS\_CON\_DIS}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIS\_CON\_DIS@{HIS\_CON\_DIS}}}\mbox{\Hypertarget{openfdem__enum_8h_aed44610b9b35b9d7732248706509a057a1ee862b64c84d4464df8561129ac15d9}\label{openfdem__enum_8h_aed44610b9b35b9d7732248706509a057a1ee862b64c84d4464df8561129ac15d9}} 
+HIS\+\_\+\+CON\+\_\+\+DIS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIS\_CON\_FOR@{HIS\_CON\_FOR}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIS\_CON\_FOR@{HIS\_CON\_FOR}}}\mbox{\Hypertarget{openfdem__enum_8h_aed44610b9b35b9d7732248706509a057a10195310dfe54d309e4d30d25b21194c}\label{openfdem__enum_8h_aed44610b9b35b9d7732248706509a057a10195310dfe54d309e4d30d25b21194c}} 
+HIS\+\_\+\+CON\+\_\+\+FOR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIS\_CON\_VEL@{HIS\_CON\_VEL}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIS\_CON\_VEL@{HIS\_CON\_VEL}}}\mbox{\Hypertarget{openfdem__enum_8h_aed44610b9b35b9d7732248706509a057a749e0c3dccba01223889cf8ffdc30ca0}\label{openfdem__enum_8h_aed44610b9b35b9d7732248706509a057a749e0c3dccba01223889cf8ffdc30ca0}} 
+HIS\+\_\+\+CON\+\_\+\+VEL&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{openfdem__enum_8h_a23a6c72c7e89125769f9b8b884868a34}\label{openfdem__enum_8h_a23a6c72c7e89125769f9b8b884868a34}} 
+\index{openfdem\_enum.h@{openfdem\_enum.h}!his\_ele\_t@{his\_ele\_t}}
+\index{his\_ele\_t@{his\_ele\_t}!openfdem\_enum.h@{openfdem\_enum.h}}
+\doxysubsubsection{\texorpdfstring{his\_ele\_t}{his\_ele\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{openfdem__enum_8h_a23a6c72c7e89125769f9b8b884868a34}{his\+\_\+ele\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIS\_STRESS@{HIS\_STRESS}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIS\_STRESS@{HIS\_STRESS}}}\mbox{\Hypertarget{openfdem__enum_8h_a23a6c72c7e89125769f9b8b884868a34a8ce4cb219b1584093cdde02c48fc81b7}\label{openfdem__enum_8h_a23a6c72c7e89125769f9b8b884868a34a8ce4cb219b1584093cdde02c48fc81b7}} 
+HIS\+\_\+\+STRESS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIS\_STRAIN@{HIS\_STRAIN}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIS\_STRAIN@{HIS\_STRAIN}}}\mbox{\Hypertarget{openfdem__enum_8h_a23a6c72c7e89125769f9b8b884868a34a997e11d17073559e3d4b30e4234a2848}\label{openfdem__enum_8h_a23a6c72c7e89125769f9b8b884868a34a997e11d17073559e3d4b30e4234a2848}} 
+HIS\+\_\+\+STRAIN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIS\_STRAIN\_R@{HIS\_STRAIN\_R}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIS\_STRAIN\_R@{HIS\_STRAIN\_R}}}\mbox{\Hypertarget{openfdem__enum_8h_a23a6c72c7e89125769f9b8b884868a34a21462f68dc681f42451b01975a810624}\label{openfdem__enum_8h_a23a6c72c7e89125769f9b8b884868a34a21462f68dc681f42451b01975a810624}} 
+HIS\+\_\+\+STRAIN\+\_\+R&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIS\_PLASTIC@{HIS\_PLASTIC}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIS\_PLASTIC@{HIS\_PLASTIC}}}\mbox{\Hypertarget{openfdem__enum_8h_a23a6c72c7e89125769f9b8b884868a34a393b9d33abb41f356d2a33b62e27bb18}\label{openfdem__enum_8h_a23a6c72c7e89125769f9b8b884868a34a393b9d33abb41f356d2a33b62e27bb18}} 
+HIS\+\_\+\+PLASTIC&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069}\label{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069}} 
+\index{openfdem\_enum.h@{openfdem\_enum.h}!his\_general\_t@{his\_general\_t}}
+\index{his\_general\_t@{his\_general\_t}!openfdem\_enum.h@{openfdem\_enum.h}}
+\doxysubsubsection{\texorpdfstring{his\_general\_t}{his\_general\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069}{his\+\_\+general\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIS\_TIME@{HIS\_TIME}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIS\_TIME@{HIS\_TIME}}}\mbox{\Hypertarget{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a807612bec53173d7283b9e7c1352744c}\label{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a807612bec53173d7283b9e7c1352744c}} 
+HIS\+\_\+\+TIME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIS\_CYCLE@{HIS\_CYCLE}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIS\_CYCLE@{HIS\_CYCLE}}}\mbox{\Hypertarget{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069ad3d70c5b82995f52e0cc300be1975027}\label{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069ad3d70c5b82995f52e0cc300be1975027}} 
+HIS\+\_\+\+CYCLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIS\_N\_FRACTURE@{HIS\_N\_FRACTURE}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIS\_N\_FRACTURE@{HIS\_N\_FRACTURE}}}\mbox{\Hypertarget{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a42270b37806b283e73da6808c2a42abf}\label{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a42270b37806b283e73da6808c2a42abf}} 
+HIS\+\_\+\+N\+\_\+\+FRACTURE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIS\_N\_DAMAGE@{HIS\_N\_DAMAGE}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIS\_N\_DAMAGE@{HIS\_N\_DAMAGE}}}\mbox{\Hypertarget{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a05f7841c2bb1efcac6a721a26b267385}\label{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a05f7841c2bb1efcac6a721a26b267385}} 
+HIS\+\_\+\+N\+\_\+\+DAMAGE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIS\_N\_AE@{HIS\_N\_AE}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIS\_N\_AE@{HIS\_N\_AE}}}\mbox{\Hypertarget{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a3ce35ad5cf10fe2f96e5b1bd8bf072d4}\label{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a3ce35ad5cf10fe2f96e5b1bd8bf072d4}} 
+HIS\+\_\+\+N\+\_\+\+AE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIS\_ENERGY\_KINETIC@{HIS\_ENERGY\_KINETIC}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIS\_ENERGY\_KINETIC@{HIS\_ENERGY\_KINETIC}}}\mbox{\Hypertarget{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a7a521e737421326f64e1fd3575e99a9d}\label{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a7a521e737421326f64e1fd3575e99a9d}} 
+HIS\+\_\+\+ENERGY\+\_\+\+KINETIC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIS\_ENERGY\_ELEMENT\_STRAIN@{HIS\_ENERGY\_ELEMENT\_STRAIN}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIS\_ENERGY\_ELEMENT\_STRAIN@{HIS\_ENERGY\_ELEMENT\_STRAIN}}}\mbox{\Hypertarget{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a0273bc074196733293420958d4e3962c}\label{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a0273bc074196733293420958d4e3962c}} 
+HIS\+\_\+\+ENERGY\+\_\+\+ELEMENT\+\_\+\+STRAIN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIS\_ENERGY\_FRACTURE@{HIS\_ENERGY\_FRACTURE}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIS\_ENERGY\_FRACTURE@{HIS\_ENERGY\_FRACTURE}}}\mbox{\Hypertarget{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a431e018509017f2c32ecb9b2985e3790}\label{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a431e018509017f2c32ecb9b2985e3790}} 
+HIS\+\_\+\+ENERGY\+\_\+\+FRACTURE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIS\_ENERGY\_AE@{HIS\_ENERGY\_AE}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIS\_ENERGY\_AE@{HIS\_ENERGY\_AE}}}\mbox{\Hypertarget{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a8bbf2dce1e45d0fd7f855198a4fbc78d}\label{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a8bbf2dce1e45d0fd7f855198a4fbc78d}} 
+HIS\+\_\+\+ENERGY\+\_\+\+AE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIS\_ENERGY\_DAMP@{HIS\_ENERGY\_DAMP}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIS\_ENERGY\_DAMP@{HIS\_ENERGY\_DAMP}}}\mbox{\Hypertarget{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a123a2fa3c5a826f49db79d7dc78c8a69}\label{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a123a2fa3c5a826f49db79d7dc78c8a69}} 
+HIS\+\_\+\+ENERGY\+\_\+\+DAMP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIS\_ENERGY\_SLIP@{HIS\_ENERGY\_SLIP}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIS\_ENERGY\_SLIP@{HIS\_ENERGY\_SLIP}}}\mbox{\Hypertarget{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a5c3391f4e5853e70e6704eb79df9c7fc}\label{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a5c3391f4e5853e70e6704eb79df9c7fc}} 
+HIS\+\_\+\+ENERGY\+\_\+\+SLIP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIS\_ENERGY\_PLASTIC@{HIS\_ENERGY\_PLASTIC}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIS\_ENERGY\_PLASTIC@{HIS\_ENERGY\_PLASTIC}}}\mbox{\Hypertarget{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a9b69597dbd35ea588ea3a9efb75f603f}\label{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a9b69597dbd35ea588ea3a9efb75f603f}} 
+HIS\+\_\+\+ENERGY\+\_\+\+PLASTIC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIS\_UNBALANCE\_FORCE@{HIS\_UNBALANCE\_FORCE}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIS\_UNBALANCE\_FORCE@{HIS\_UNBALANCE\_FORCE}}}\mbox{\Hypertarget{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a2f52516b84bc2bdea35f09107897ecd0}\label{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069a2f52516b84bc2bdea35f09107897ecd0}} 
+HIS\+\_\+\+UNBALANCE\+\_\+\+FORCE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIST\_ENERGY\_RATIO@{HIST\_ENERGY\_RATIO}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIST\_ENERGY\_RATIO@{HIST\_ENERGY\_RATIO}}}\mbox{\Hypertarget{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069adafd3d79cb69d88bee0e5055e6a27b3f}\label{openfdem__enum_8h_ac5290105ed4740d486c73a3b1d077069adafd3d79cb69d88bee0e5055e6a27b3f}} 
+HIST\+\_\+\+ENERGY\+\_\+\+RATIO&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{openfdem__enum_8h_a54509f18ea735b28c53d7b21491fca12}\label{openfdem__enum_8h_a54509f18ea735b28c53d7b21491fca12}} 
+\index{openfdem\_enum.h@{openfdem\_enum.h}!his\_nodal\_t@{his\_nodal\_t}}
+\index{his\_nodal\_t@{his\_nodal\_t}!openfdem\_enum.h@{openfdem\_enum.h}}
+\doxysubsubsection{\texorpdfstring{his\_nodal\_t}{his\_nodal\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{openfdem__enum_8h_a54509f18ea735b28c53d7b21491fca12}{his\+\_\+nodal\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIS\_DIS@{HIS\_DIS}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIS\_DIS@{HIS\_DIS}}}\mbox{\Hypertarget{openfdem__enum_8h_a54509f18ea735b28c53d7b21491fca12a356dbb2a53afae425f7d8cd13d5cafd3}\label{openfdem__enum_8h_a54509f18ea735b28c53d7b21491fca12a356dbb2a53afae425f7d8cd13d5cafd3}} 
+HIS\+\_\+\+DIS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIS\_VEL@{HIS\_VEL}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIS\_VEL@{HIS\_VEL}}}\mbox{\Hypertarget{openfdem__enum_8h_a54509f18ea735b28c53d7b21491fca12ade6662c6724f9b2de3400e5f094634e5}\label{openfdem__enum_8h_a54509f18ea735b28c53d7b21491fca12ade6662c6724f9b2de3400e5f094634e5}} 
+HIS\+\_\+\+VEL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIS\_FOR@{HIS\_FOR}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIS\_FOR@{HIS\_FOR}}}\mbox{\Hypertarget{openfdem__enum_8h_a54509f18ea735b28c53d7b21491fca12a082572538b3b50c021f37693e8e7a695}\label{openfdem__enum_8h_a54509f18ea735b28c53d7b21491fca12a082572538b3b50c021f37693e8e7a695}} 
+HIS\+\_\+\+FOR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIS\_FLUID\_P@{HIS\_FLUID\_P}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIS\_FLUID\_P@{HIS\_FLUID\_P}}}\mbox{\Hypertarget{openfdem__enum_8h_a54509f18ea735b28c53d7b21491fca12a5f25cc281d5c1ecde1a85d33f5b09ce3}\label{openfdem__enum_8h_a54509f18ea735b28c53d7b21491fca12a5f25cc281d5c1ecde1a85d33f5b09ce3}} 
+HIS\+\_\+\+FLUID\+\_\+P&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIS\_FRAC\_P@{HIS\_FRAC\_P}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIS\_FRAC\_P@{HIS\_FRAC\_P}}}\mbox{\Hypertarget{openfdem__enum_8h_a54509f18ea735b28c53d7b21491fca12a9e1b4c7bbbfdebfbb8bfc0d5f4fbe9b4}\label{openfdem__enum_8h_a54509f18ea735b28c53d7b21491fca12a9e1b4c7bbbfdebfbb8bfc0d5f4fbe9b4}} 
+HIS\+\_\+\+FRAC\+\_\+P&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIS\_MATRIX\_P@{HIS\_MATRIX\_P}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIS\_MATRIX\_P@{HIS\_MATRIX\_P}}}\mbox{\Hypertarget{openfdem__enum_8h_a54509f18ea735b28c53d7b21491fca12a50e8401afc4b577dfb0422489975a3d6}\label{openfdem__enum_8h_a54509f18ea735b28c53d7b21491fca12a50e8401afc4b577dfb0422489975a3d6}} 
+HIS\+\_\+\+MATRIX\+\_\+P&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIS\_TEMP@{HIS\_TEMP}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!HIS\_TEMP@{HIS\_TEMP}}}\mbox{\Hypertarget{openfdem__enum_8h_a54509f18ea735b28c53d7b21491fca12a35ae102a9258e368f56a41ca44a99c06}\label{openfdem__enum_8h_a54509f18ea735b28c53d7b21491fca12a35ae102a9258e368f56a41ca44a99c06}} 
+HIS\+\_\+\+TEMP&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{openfdem__enum_8h_ab46c000c67e9cea07e57043d102b24ad}\label{openfdem__enum_8h_ab46c000c67e9cea07e57043d102b24ad}} 
+\index{openfdem\_enum.h@{openfdem\_enum.h}!mesh\_enum@{mesh\_enum}}
+\index{mesh\_enum@{mesh\_enum}!openfdem\_enum.h@{openfdem\_enum.h}}
+\doxysubsubsection{\texorpdfstring{mesh\_enum}{mesh\_enum}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{openfdem__enum_8h_ab46c000c67e9cea07e57043d102b24ad}{mesh\+\_\+enum}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INSERT@{INSERT}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!INSERT@{INSERT}}}\mbox{\Hypertarget{openfdem__enum_8h_ab46c000c67e9cea07e57043d102b24adaa15c451953b2d2a93403afe786930d0f}\label{openfdem__enum_8h_ab46c000c67e9cea07e57043d102b24adaa15c451953b2d2a93403afe786930d0f}} 
+INSERT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPLIT@{SPLIT}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!SPLIT@{SPLIT}}}\mbox{\Hypertarget{openfdem__enum_8h_ab46c000c67e9cea07e57043d102b24ada7cf1f5924560c2c48f72f6e1a462e9c9}\label{openfdem__enum_8h_ab46c000c67e9cea07e57043d102b24ada7cf1f5924560c2c48f72f6e1a462e9c9}} 
+SPLIT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{REMESH3@{REMESH3}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!REMESH3@{REMESH3}}}\mbox{\Hypertarget{openfdem__enum_8h_ab46c000c67e9cea07e57043d102b24ada2a3af26538ff37561fb8b9c9ce2bf5f0}\label{openfdem__enum_8h_ab46c000c67e9cea07e57043d102b24ada2a3af26538ff37561fb8b9c9ce2bf5f0}} 
+REMESH3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{REMESH4@{REMESH4}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!REMESH4@{REMESH4}}}\mbox{\Hypertarget{openfdem__enum_8h_ab46c000c67e9cea07e57043d102b24adaa0a413f8e69bb3099e2d04f74743a780}\label{openfdem__enum_8h_ab46c000c67e9cea07e57043d102b24adaa0a413f8e69bb3099e2d04f74743a780}} 
+REMESH4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{REMESH6@{REMESH6}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!REMESH6@{REMESH6}}}\mbox{\Hypertarget{openfdem__enum_8h_ab46c000c67e9cea07e57043d102b24ada5a72ba4a50442c9dc766a9f97cd3f21a}\label{openfdem__enum_8h_ab46c000c67e9cea07e57043d102b24ada5a72ba4a50442c9dc766a9f97cd3f21a}} 
+REMESH6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IMPLICIT@{IMPLICIT}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!IMPLICIT@{IMPLICIT}}}\mbox{\Hypertarget{openfdem__enum_8h_ab46c000c67e9cea07e57043d102b24ada9d9226d9994439f6bcd2ca11840053a5}\label{openfdem__enum_8h_ab46c000c67e9cea07e57043d102b24ada9d9226d9994439f6bcd2ca11840053a5}} 
+IMPLICIT&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{openfdem__enum_8h_a4b19f615f24fafa8e2d1b58665cfd384}\label{openfdem__enum_8h_a4b19f615f24fafa8e2d1b58665cfd384}} 
+\index{openfdem\_enum.h@{openfdem\_enum.h}!random\_method@{random\_method}}
+\index{random\_method@{random\_method}!openfdem\_enum.h@{openfdem\_enum.h}}
+\doxysubsubsection{\texorpdfstring{random\_method}{random\_method}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{openfdem__enum_8h_a4b19f615f24fafa8e2d1b58665cfd384}{random\+\_\+method}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RANDOM\_NULL@{RANDOM\_NULL}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!RANDOM\_NULL@{RANDOM\_NULL}}}\mbox{\Hypertarget{openfdem__enum_8h_a4b19f615f24fafa8e2d1b58665cfd384ad36aa08c93c04b9233db9d18e558bb46}\label{openfdem__enum_8h_a4b19f615f24fafa8e2d1b58665cfd384ad36aa08c93c04b9233db9d18e558bb46}} 
+RANDOM\+\_\+\+NULL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RANDOM\_CONSTANT@{RANDOM\_CONSTANT}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!RANDOM\_CONSTANT@{RANDOM\_CONSTANT}}}\mbox{\Hypertarget{openfdem__enum_8h_a4b19f615f24fafa8e2d1b58665cfd384a97e2e84c5cf6b4d9059538452db9e072}\label{openfdem__enum_8h_a4b19f615f24fafa8e2d1b58665cfd384a97e2e84c5cf6b4d9059538452db9e072}} 
+RANDOM\+\_\+\+CONSTANT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RANDOM\_GAUSSE@{RANDOM\_GAUSSE}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!RANDOM\_GAUSSE@{RANDOM\_GAUSSE}}}\mbox{\Hypertarget{openfdem__enum_8h_a4b19f615f24fafa8e2d1b58665cfd384a1346fc6abba8f95f3654ced60a957aec}\label{openfdem__enum_8h_a4b19f615f24fafa8e2d1b58665cfd384a1346fc6abba8f95f3654ced60a957aec}} 
+RANDOM\+\_\+\+GAUSSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RANDOM\_UNIFORM@{RANDOM\_UNIFORM}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!RANDOM\_UNIFORM@{RANDOM\_UNIFORM}}}\mbox{\Hypertarget{openfdem__enum_8h_a4b19f615f24fafa8e2d1b58665cfd384a54fcdac7d16f8b994d4be4e7af95e8e0}\label{openfdem__enum_8h_a4b19f615f24fafa8e2d1b58665cfd384a54fcdac7d16f8b994d4be4e7af95e8e0}} 
+RANDOM\+\_\+\+UNIFORM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RANDOM\_EXPONENTINAL@{RANDOM\_EXPONENTINAL}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!RANDOM\_EXPONENTINAL@{RANDOM\_EXPONENTINAL}}}\mbox{\Hypertarget{openfdem__enum_8h_a4b19f615f24fafa8e2d1b58665cfd384a5524e270a8f38c9e082a4694751b1efa}\label{openfdem__enum_8h_a4b19f615f24fafa8e2d1b58665cfd384a5524e270a8f38c9e082a4694751b1efa}} 
+RANDOM\+\_\+\+EXPONENTINAL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RANDOM\_LOG\_NORMAL@{RANDOM\_LOG\_NORMAL}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!RANDOM\_LOG\_NORMAL@{RANDOM\_LOG\_NORMAL}}}\mbox{\Hypertarget{openfdem__enum_8h_a4b19f615f24fafa8e2d1b58665cfd384a9f1a128d9464b64aed1123b60671bfff}\label{openfdem__enum_8h_a4b19f615f24fafa8e2d1b58665cfd384a9f1a128d9464b64aed1123b60671bfff}} 
+RANDOM\+\_\+\+LOG\+\_\+\+NORMAL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RANDOM\_POWER@{RANDOM\_POWER}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!RANDOM\_POWER@{RANDOM\_POWER}}}\mbox{\Hypertarget{openfdem__enum_8h_a4b19f615f24fafa8e2d1b58665cfd384a945b5d089d4a90a58d286916f2cc5b35}\label{openfdem__enum_8h_a4b19f615f24fafa8e2d1b58665cfd384a945b5d089d4a90a58d286916f2cc5b35}} 
+RANDOM\+\_\+\+POWER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RANDOM\_FISHER@{RANDOM\_FISHER}!openfdem\_enum.h@{openfdem\_enum.h}}\index{openfdem\_enum.h@{openfdem\_enum.h}!RANDOM\_FISHER@{RANDOM\_FISHER}}}\mbox{\Hypertarget{openfdem__enum_8h_a4b19f615f24fafa8e2d1b58665cfd384a42b0f72979d2f034d709f541f34c48d0}\label{openfdem__enum_8h_a4b19f615f24fafa8e2d1b58665cfd384a42b0f72979d2f034d709f541f34c48d0}} 
+RANDOM\+\_\+\+FISHER&\\
+\hline
+
+\end{DoxyEnumFields}

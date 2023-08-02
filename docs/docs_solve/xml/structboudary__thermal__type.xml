@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structboudary__thermal__type" kind="struct" language="C++" prot="public">
+    <compoundname>boudary_thermal_type</compoundname>
+    <includes refid="openfdem__boundary_8h" local="no">openfdem_boundary.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structboudary__thermal__type_1a7bb5e40c10df6a41df64bda1f4bb3e26" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* tag</definition>
+        <argsstring></argsstring>
+        <name>tag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boudary/openfdem_boundary.h" line="56" column="6" bodyfile="boudary/openfdem_boundary.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structboudary__thermal__type_1aeab0caa1ce74832247826e2b382a9f7f" prot="public" static="no" mutable="no">
+        <type>boundary_thermal_enum</type>
+        <definition>boundary_thermal_enum type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boudary/openfdem_boundary.h" line="57" column="23" bodyfile="boudary/openfdem_boundary.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structboudary__thermal__type_1abd5746c9a8c4bf217e5294c6c702559b" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boudary/openfdem_boundary.h" line="58" column="6" bodyfile="boudary/openfdem_boundary.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structboudary__thermal__type_1a5228a8c068ba9176fb8ae3d6e61fc7c1" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real T</definition>
+        <argsstring></argsstring>
+        <name>T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boudary/openfdem_boundary.h" line="59" column="6" bodyfile="boudary/openfdem_boundary.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structboudary__thermal__type_1adcccd0b12fd7d0ed57f8c7fb3f9cae83" prot="public" static="no" mutable="no">
+        <type>Int</type>
+        <definition>Int table</definition>
+        <argsstring></argsstring>
+        <name>table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boudary/openfdem_boundary.h" line="60" column="5" bodyfile="boudary/openfdem_boundary.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structboudary__thermal__type_1ab4edaa939d5469abd0e3b312d5dcbd1c" prot="public" static="no" mutable="no">
+        <type>UInt</type>
+        <definition>UInt size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boudary/openfdem_boundary.h" line="61" column="6" bodyfile="boudary/openfdem_boundary.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structboudary__thermal__type_1a7b70dfb97ab7a8a3940c84b74b4077b1" prot="public" static="no" mutable="no">
+        <type>UInt *</type>
+        <definition>UInt* node</definition>
+        <argsstring></argsstring>
+        <name>node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="boudary/openfdem_boundary.h" line="62" column="6" bodyfile="boudary/openfdem_boundary.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="boudary/openfdem_boundary.h" line="55" column="1" bodyfile="boudary/openfdem_boundary.h" bodystart="55" bodyend="63"/>
+    <listofallmembers>
+      <member refid="structboudary__thermal__type_1a7b70dfb97ab7a8a3940c84b74b4077b1" prot="public" virt="non-virtual"><scope>boudary_thermal_type</scope><name>node</name></member>
+      <member refid="structboudary__thermal__type_1ab4edaa939d5469abd0e3b312d5dcbd1c" prot="public" virt="non-virtual"><scope>boudary_thermal_type</scope><name>size</name></member>
+      <member refid="structboudary__thermal__type_1a5228a8c068ba9176fb8ae3d6e61fc7c1" prot="public" virt="non-virtual"><scope>boudary_thermal_type</scope><name>T</name></member>
+      <member refid="structboudary__thermal__type_1adcccd0b12fd7d0ed57f8c7fb3f9cae83" prot="public" virt="non-virtual"><scope>boudary_thermal_type</scope><name>table</name></member>
+      <member refid="structboudary__thermal__type_1a7bb5e40c10df6a41df64bda1f4bb3e26" prot="public" virt="non-virtual"><scope>boudary_thermal_type</scope><name>tag</name></member>
+      <member refid="structboudary__thermal__type_1aeab0caa1ce74832247826e2b382a9f7f" prot="public" virt="non-virtual"><scope>boudary_thermal_type</scope><name>type</name></member>
+      <member refid="structboudary__thermal__type_1abd5746c9a8c4bf217e5294c6c702559b" prot="public" virt="non-virtual"><scope>boudary_thermal_type</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

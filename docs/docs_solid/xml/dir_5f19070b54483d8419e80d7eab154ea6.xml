@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="dir_5f19070b54483d8419e80d7eab154ea6" kind="dir">
+    <compoundname>/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_cohesive</compoundname>
+    <innerdir refid="dir_cf5619cc4bb61c74cf3d406871d04ad9">/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_cohesive/DFN</innerdir>
+    <innerdir refid="dir_3b5df89472a557cc413aed3075f6c55a">/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_cohesive/sesmic</innerdir>
+    <innerfile refid="openfdem__solid__cohesive_8h">openfdem_solid_cohesive.h</innerfile>
+    <innerfile refid="solid__mechanics__cohesive__4__node___e_m_8h">solid_mechanics_cohesive_4_node_EM.h</innerfile>
+    <innerfile refid="solid__mechanics__cohesive__4__node___e_m__anisotropic_8h">solid_mechanics_cohesive_4_node_EM_anisotropic.h</innerfile>
+    <innerfile refid="solid__mechanics__cohesive__4__node___e_m__hetero_8h">solid_mechanics_cohesive_4_node_EM_hetero.h</innerfile>
+    <innerfile refid="solid__mechanics__cohesive__4__node__linear_8h">solid_mechanics_cohesive_4_node_linear.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_cohesive/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="structsolid__transverse__t" kind="struct" language="C++" prot="public">
+    <compoundname>solid_transverse_t</compoundname>
+    <includes refid="openfdem__solid__materials_8h" local="no">openfdem_solid_materials.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsolid__transverse__t_1a1bfdc5293066da13dd33822a34ceeee4" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real E_x</definition>
+        <argsstring></argsstring>
+        <name>E_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" line="54" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsolid__transverse__t_1ac9f8f73d3b87650e2571fe1b6ebf04bf" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real E_y</definition>
+        <argsstring></argsstring>
+        <name>E_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" line="55" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsolid__transverse__t_1abef76d23cdd90539c6c86a2b2d9464c7" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real den</definition>
+        <argsstring></argsstring>
+        <name>den</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" line="56" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsolid__transverse__t_1a52583b276283782378d4cf7bfb8866c7" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real v_xy</definition>
+        <argsstring></argsstring>
+        <name>v_xy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" line="57" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsolid__transverse__t_1a86edb4cc4c4b33c1137c00a4fb37368a" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real v_yx</definition>
+        <argsstring></argsstring>
+        <name>v_yx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" line="58" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsolid__transverse__t_1a2195b706c3b8de0b5adb9ccb58eeb4d4" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real G</definition>
+        <argsstring></argsstring>
+        <name>G</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" line="59" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" line="53" column="1" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/materials/solid_mat/openfdem_solid_materials.h" bodystart="53" bodyend="60"/>
+    <listofallmembers>
+      <member refid="structsolid__transverse__t_1abef76d23cdd90539c6c86a2b2d9464c7" prot="public" virt="non-virtual"><scope>solid_transverse_t</scope><name>den</name></member>
+      <member refid="structsolid__transverse__t_1a1bfdc5293066da13dd33822a34ceeee4" prot="public" virt="non-virtual"><scope>solid_transverse_t</scope><name>E_x</name></member>
+      <member refid="structsolid__transverse__t_1ac9f8f73d3b87650e2571fe1b6ebf04bf" prot="public" virt="non-virtual"><scope>solid_transverse_t</scope><name>E_y</name></member>
+      <member refid="structsolid__transverse__t_1a2195b706c3b8de0b5adb9ccb58eeb4d4" prot="public" virt="non-virtual"><scope>solid_transverse_t</scope><name>G</name></member>
+      <member refid="structsolid__transverse__t_1a52583b276283782378d4cf7bfb8866c7" prot="public" virt="non-virtual"><scope>solid_transverse_t</scope><name>v_xy</name></member>
+      <member refid="structsolid__transverse__t_1a86edb4cc4c4b33c1137c00a4fb37368a" prot="public" virt="non-virtual"><scope>solid_transverse_t</scope><name>v_yx</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

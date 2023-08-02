@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structof__vectorn" kind="struct" language="C++" prot="public">
+    <compoundname>of_vectorn</compoundname>
+    <includes refid="openfdem__struct_8h" local="no">openfdem_struct.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structof__vectorn_1ad9734a44902f9ef4926e4542ca707581" prot="public" static="no" mutable="no">
+        <type><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref></type>
+        <definition>Real normal</definition>
+        <argsstring></argsstring>
+        <name>normal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_struct.h" line="36" column="6" bodyfile="openfdem_struct.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structof__vectorn_1a310ba3fd84c68c8ddfe68def2767c8e6" prot="public" static="no" mutable="no">
+        <type><ref refid="openfdem__struct_8h_1a060b837c3b4486ee35317744156f3da2" kindref="member">Real</ref></type>
+        <definition>Real shear</definition>
+        <argsstring></argsstring>
+        <name>shear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="openfdem_struct.h" line="37" column="6" bodyfile="openfdem_struct.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="openfdem_struct.h" line="34" column="1" bodyfile="openfdem_struct.h" bodystart="35" bodyend="38"/>
+    <listofallmembers>
+      <member refid="structof__vectorn_1ad9734a44902f9ef4926e4542ca707581" prot="public" virt="non-virtual"><scope>of_vectorn</scope><name>normal</name></member>
+      <member refid="structof__vectorn_1a310ba3fd84c68c8ddfe68def2767c8e6" prot="public" virt="non-virtual"><scope>of_vectorn</scope><name>shear</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

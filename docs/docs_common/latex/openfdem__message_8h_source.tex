@@ -1,0 +1,57 @@
+\hypertarget{openfdem__message_8h_source}{}\doxysection{openfdem\+\_\+message.\+h}
+\label{openfdem__message_8h_source}\index{E:/openfdem\_solver/openfdem src/src/common/openfdem\_message.h@{E:/openfdem\_solver/openfdem src/src/common/openfdem\_message.h}}
+\mbox{\hyperlink{openfdem__message_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#ifndef \_OPENFDEM\_MESSAGE\_}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#define \_OPENFDEM\_MESSAGE\_}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#include <limits.h>}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#include <signal.h>}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{keyword}{static} \textcolor{keywordtype}{char}* DoubleString[20] =}
+\DoxyCodeLine{36 \{ \textcolor{stringliteral}{"{}\%le"{}}     ,\textcolor{stringliteral}{"{}\%+1.0le"{}} ,\textcolor{stringliteral}{"{}\%+2.0le"{}} ,\textcolor{stringliteral}{"{}\%+3.0le"{}} ,\textcolor{stringliteral}{"{}\%+4.0le"{}} ,\textcolor{stringliteral}{"{}\%+5.0le"{}} ,}
+\DoxyCodeLine{37   \textcolor{stringliteral}{"{}\%+6.0le"{}} ,\textcolor{stringliteral}{"{}\%+7.0le"{}} ,\textcolor{stringliteral}{"{}\%+8.1le"{}} ,\textcolor{stringliteral}{"{}\%+9.2le"{}} ,\textcolor{stringliteral}{"{}\%+10.3le"{}},}
+\DoxyCodeLine{38   \textcolor{stringliteral}{"{}\%+11.4le"{}},\textcolor{stringliteral}{"{}\%+12.5le"{}},\textcolor{stringliteral}{"{}\%+13.6le"{}},\textcolor{stringliteral}{"{}\%+14.7le"{}},\textcolor{stringliteral}{"{}\%+15.8le"{}},}
+\DoxyCodeLine{39   \textcolor{stringliteral}{"{}\%+16.9le"{}},\textcolor{stringliteral}{"{}\%+17.10le"{}},\textcolor{stringliteral}{"{}\%+18.11le"{}},\textcolor{stringliteral}{"{}\%+19.12le"{}}}
+\DoxyCodeLine{40 \};}
+\DoxyCodeLine{41 \textcolor{keyword}{static} \textcolor{keywordtype}{char}* IntString[20] =}
+\DoxyCodeLine{42 \{ \textcolor{stringliteral}{"{}\%ld"{}},\textcolor{stringliteral}{"{}\%1ld"{}},\textcolor{stringliteral}{"{}\%2ld"{}},\textcolor{stringliteral}{"{}\%3ld"{}},\textcolor{stringliteral}{"{}\%4ld"{}},\textcolor{stringliteral}{"{}\%5ld"{}},\textcolor{stringliteral}{"{}\%6ld"{}},\textcolor{stringliteral}{"{}\%7ld"{}},\textcolor{stringliteral}{"{}\%8ld"{}},\textcolor{stringliteral}{"{}\%9ld"{}},}
+\DoxyCodeLine{43  \textcolor{stringliteral}{"{}\%10ld"{}},\textcolor{stringliteral}{"{}\%11ld"{}},\textcolor{stringliteral}{"{}\%12ld"{}},\textcolor{stringliteral}{"{}\%13ld"{}},\textcolor{stringliteral}{"{}\%14ld"{}},}
+\DoxyCodeLine{44  \textcolor{stringliteral}{"{}\%15ld"{}},\textcolor{stringliteral}{"{}\%16ld"{}} ,\textcolor{stringliteral}{"{}\%17ld"{}},\textcolor{stringliteral}{"{}\%18ld"{}},\textcolor{stringliteral}{"{}\%19ld"{}}}
+\DoxyCodeLine{45 \};}
+\DoxyCodeLine{46 \textcolor{keyword}{static} \textcolor{keywordtype}{char}* CharString[30] =}
+\DoxyCodeLine{47 \{ \textcolor{stringliteral}{"{}\%s"{}}, \textcolor{stringliteral}{"{}\%1s"{}}, \textcolor{stringliteral}{"{}\%2s"{}}, \textcolor{stringliteral}{"{}\%3s"{}}, \textcolor{stringliteral}{"{}\%4s"{}}, \textcolor{stringliteral}{"{}\%5s"{}}, \textcolor{stringliteral}{"{}\%6s"{}}, \textcolor{stringliteral}{"{}\%7s"{}}, \textcolor{stringliteral}{"{}\%8s"{}}, \textcolor{stringliteral}{"{}\%9s"{}}, \textcolor{stringliteral}{"{}\%10s"{}},}
+\DoxyCodeLine{48  \textcolor{stringliteral}{"{}\%11s"{}}, \textcolor{stringliteral}{"{}\%12s"{}}, \textcolor{stringliteral}{"{}\%13s"{}}, \textcolor{stringliteral}{"{}\%14s"{}}, \textcolor{stringliteral}{"{}\%15s"{}}, \textcolor{stringliteral}{"{}\%16s"{}}, \textcolor{stringliteral}{"{}\%17s"{}}, \textcolor{stringliteral}{"{}\%18s"{}}, \textcolor{stringliteral}{"{}\%19s"{}}, \textcolor{stringliteral}{"{}\%20s"{}},}
+\DoxyCodeLine{49  \textcolor{stringliteral}{"{}\%21s"{}}, \textcolor{stringliteral}{"{}\%22s"{}}, \textcolor{stringliteral}{"{}\%23s"{}}, \textcolor{stringliteral}{"{}\%24s"{}}, \textcolor{stringliteral}{"{}\%25s"{}}, \textcolor{stringliteral}{"{}\%26s"{}}, \textcolor{stringliteral}{"{}\%27s"{}}, \textcolor{stringliteral}{"{}\%28s"{}}, \textcolor{stringliteral}{"{}\%29s"{}}}
+\DoxyCodeLine{50 \};}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#define Parse\_int(file,x)\{fscanf((file),"{}\%ld"{}},((x)));\}}
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#define Parse\_double(file,x)\{fscanf((file),"{}\%le"{}},((x)));\}}
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#define parse\_keyword(file,x)\{fscanf((file),"{}\%s"{}},((x)));\}}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#define Dump\_int(file,x,ndigit)fprintf((file),(IntString[(ndigit)]),((x)));}}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#define Dump\_double(file,x,ndigit) fprintf((file),(DoubleString[((ndigit))]),(x));}}
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#define dump\_string(file,x)\{fprintf((file),"{}\%s"{}},(x));\}}
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#define Dump\_statement(file, x, ndigit)\{fprintf((file),(CharString[(ndigit)]),(x));\};}}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 \textcolor{keywordtype}{void} \mbox{\hyperlink{openfdem__message_8h_ac59fe315507b8fbec235cb32e31ccf6c}{dump\_message}}(\textcolor{keywordtype}{char}* c1);  \textcolor{comment}{// print message out to screen}}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \textcolor{keywordtype}{void} \mbox{\hyperlink{openfdem__message_8h_ae1d49ec5624757466f01b399ff39d9bc}{dump\_message\_keyword}}(\textcolor{keywordtype}{char}* c1, \textcolor{keywordtype}{char}* c2);  \textcolor{comment}{// print message out to screen}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 \textcolor{keywordtype}{void} \mbox{\hyperlink{openfdem__message_8h_a3909092e2e38f731a3babe15c106233e}{check\_parse\_status}}(FILE* checkfile, \textcolor{keywordtype}{char}* keyword);}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 \textcolor{keywordtype}{void} \mbox{\hyperlink{openfdem__message_8h_a79282509116fdde9eebf6a06b5a2d95d}{dump\_message\_mat}}(\textcolor{keywordtype}{char}* c1, \textcolor{keywordtype}{int} c2);  \textcolor{comment}{// print message out to screen}}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71 \textcolor{keywordtype}{void} \mbox{\hyperlink{openfdem__message_8h_a5c5d6763ea30cc913e708dfc0ee65e54}{dump\_message\_group}}(\textcolor{keywordtype}{int} n1, \textcolor{keywordtype}{char}* c1, \textcolor{keywordtype}{char}* c2);}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 \textcolor{keywordtype}{void} \mbox{\hyperlink{openfdem__message_8h_aade87e5c136db1457c5800dc6085379c}{dump\_message\_type2}}(\textcolor{keywordtype}{int} c2, \textcolor{keywordtype}{char}* c1);  \textcolor{comment}{// print message out to screen}}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// !\_OPENFDEM\_MESSAGE\_}}
+
+\end{DoxyCode}

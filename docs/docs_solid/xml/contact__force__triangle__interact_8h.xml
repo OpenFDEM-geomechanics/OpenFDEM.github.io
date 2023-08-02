@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="contact__force__triangle__interact_8h" kind="file" language="C++">
+    <compoundname>contact_force_triangle_interact.h</compoundname>
+    <includes local="yes">../../solve/openfdem.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>../../solve/openfdem.h</label>
+      </node>
+      <node id="1">
+        <label>/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/contact_force_triangle_interact.h</label>
+        <link refid="contact__force__triangle__interact_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="contact__force__triangle__interact_8h_1a70c02917a8fa359c496cf048c331121e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Contact_force_triangle</definition>
+        <argsstring>(General general, Element element, Solidmat solidmat, UInt conmat, Contact contact, Nodal nodal)</argsstring>
+        <name>Contact_force_triangle</name>
+        <param>
+          <type>General</type>
+          <declname>general</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__solid_8h_1af26d43ea4cd21d871010e3de16a6109d" kindref="member">Element</ref></type>
+          <declname>element</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__mat_8h_1a10eec44786d5659964548a8edabef182" kindref="member">Solidmat</ref></type>
+          <declname>solidmat</declname>
+        </param>
+        <param>
+          <type>UInt</type>
+          <declname>conmat</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__solid__contact_8h_1a33b34b0b5e26b260dc771b8cdc178eb6" kindref="member">Contact</ref></type>
+          <declname>contact</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__nodal_8h_1a1df4c8cbf146294a06506197ddb4349a" kindref="member">Nodal</ref></type>
+          <declname>nodal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/contact_force_triangle_interact.h" line="6" column="6" declfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/contact_force_triangle_interact.h" declline="6" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="contact__force__triangle__interact_8h_1a1f3421c2b898c52f76ec75f308747d62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Contact_force_triangle_LIG</definition>
+        <argsstring>(General general, Element element, Solidmat solidmat, UInt conmat, Contact contact, Nodal nodal)</argsstring>
+        <name>Contact_force_triangle_LIG</name>
+        <param>
+          <type>General</type>
+          <declname>general</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__solid_8h_1af26d43ea4cd21d871010e3de16a6109d" kindref="member">Element</ref></type>
+          <declname>element</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__mat_8h_1a10eec44786d5659964548a8edabef182" kindref="member">Solidmat</ref></type>
+          <declname>solidmat</declname>
+        </param>
+        <param>
+          <type>UInt</type>
+          <declname>conmat</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__solid__contact_8h_1a33b34b0b5e26b260dc771b8cdc178eb6" kindref="member">Contact</ref></type>
+          <declname>contact</declname>
+        </param>
+        <param>
+          <type><ref refid="openfdem__nodal_8h_1a1df4c8cbf146294a06506197ddb4349a" kindref="member">Nodal</ref></type>
+          <declname>nodal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/contact_force_triangle_interact.h" line="12" column="6" declfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/contact_force_triangle_interact.h" declline="12" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>File<sp/><sp/><sp/>Openfdem_contact_force.c<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_OPENFDEM_CONTACT_FORCE_TRUANGLE_INTERACT_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_OPENFDEM_CONTACT_FORCE_TRUANGLE_INTERACT_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../solve/openfdem.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="contact__force__triangle__interact_8h_1a70c02917a8fa359c496cf048c331121e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="contact__force__triangle__interact_8h_1a70c02917a8fa359c496cf048c331121e" kindref="member">Contact_force_triangle</ref>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Triangle<sp/>to<sp/>Triangle<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>General<sp/>general,<sp/><ref refid="struct_element__structure" kindref="compound">Element</ref><sp/>element,<sp/><ref refid="struct_solid__mat__structure" kindref="compound">Solidmat</ref><sp/>solidmat,<sp/>UInt<sp/>conmat,</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_contact__structure" kindref="compound">Contact</ref><sp/>contact,</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_nodal__structure" kindref="compound">Nodal</ref><sp/>nodal</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="contact__force__triangle__interact_8h_1a1f3421c2b898c52f76ec75f308747d62" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="contact__force__triangle__interact_8h_1a1f3421c2b898c52f76ec75f308747d62" kindref="member">Contact_force_triangle_LIG</ref>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Triangle<sp/>to<sp/>Triangle<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>General<sp/>general,<sp/><ref refid="struct_element__structure" kindref="compound">Element</ref><sp/>element,<sp/><ref refid="struct_solid__mat__structure" kindref="compound">Solidmat</ref><sp/>solidmat,<sp/>UInt<sp/>conmat,</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_contact__structure" kindref="compound">Contact</ref><sp/>contact,</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_nodal__structure" kindref="compound">Nodal</ref><sp/>nodal</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>!_OPENFDEM_CONTACT_FORCE_TRUANGLE_INTERACT_</highlight></codeline>
+    </programlisting>
+    <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_contact/contact_force_triangle_interact.h"/>
+  </compounddef>
+</doxygen>

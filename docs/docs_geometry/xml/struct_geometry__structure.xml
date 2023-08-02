@@ -1,0 +1,281 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="struct_geometry__structure" kind="struct" language="C++" prot="public">
+    <compoundname>Geometry_structure</compoundname>
+    <includes refid="openfdem__geometry_8h" local="no">openfdem_geometry.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_geometry__structure_1a2a4bf87da850c2a946589606b2e33157" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real x0</definition>
+        <argsstring></argsstring>
+        <name>x0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" line="49" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_geometry__structure_1a9f8ab274622c752bf9c42239dbfcaa57" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real x1</definition>
+        <argsstring></argsstring>
+        <name>x1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" line="50" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_geometry__structure_1a3cb46d6ef5dc4a7a7f9d9ea878a0416f" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real y0</definition>
+        <argsstring></argsstring>
+        <name>y0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" line="51" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_geometry__structure_1ae5fa2dd3f8ae2b7ab94fa7763814de8a" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real y1</definition>
+        <argsstring></argsstring>
+        <name>y1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" line="52" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_geometry__structure_1a1031e2d9442cf1ca3e2940e55915002f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int node_num</definition>
+        <argsstring></argsstring>
+        <name>node_num</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" line="53" column="5" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_geometry__structure_1a7661b5d028be7f8997cef563e3890fd9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int line_num</definition>
+        <argsstring></argsstring>
+        <name>line_num</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" line="54" column="5" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_geometry__structure_1af7dec937890d29a2a14bf3319c80f434" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int curve_num</definition>
+        <argsstring></argsstring>
+        <name>curve_num</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" line="55" column="5" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_geometry__structure_1a0c03902411c5ca887f80f8ee24755127" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int surface_num</definition>
+        <argsstring></argsstring>
+        <name>surface_num</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" line="56" column="5" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_geometry__structure_1a79a0708d6232a4da8bd2ec61d25d03c8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int group_num</definition>
+        <argsstring></argsstring>
+        <name>group_num</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" line="57" column="5" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_geometry__structure_1aed4a04a50a15bbcae42f888d2d924456" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double mesh_size</definition>
+        <argsstring></argsstring>
+        <name>mesh_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" line="58" column="8" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_geometry__structure_1a53bc379b42af1f82cf34cc212e775ff9" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double min_size</definition>
+        <argsstring></argsstring>
+        <name>min_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" line="59" column="8" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_geometry__structure_1ad869241cf9e4fbd49c1f149ea3a133d7" prot="public" static="no" mutable="no">
+        <type><ref refid="structgeo__node__type" kindref="compound">geo_node_type</ref> *</type>
+        <definition>geo_node_type* node</definition>
+        <argsstring></argsstring>
+        <name>node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" line="60" column="15" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_geometry__structure_1a7d5092b4f53228e0064319cc026a6ed5" prot="public" static="no" mutable="no">
+        <type><ref refid="structgeo__line__type" kindref="compound">geo_line_type</ref> *</type>
+        <definition>geo_line_type* line</definition>
+        <argsstring></argsstring>
+        <name>line</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" line="61" column="15" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_geometry__structure_1a36787e03f34e0f0455b65e39fc46446f" prot="public" static="no" mutable="no">
+        <type><ref refid="structgeo__curve__type" kindref="compound">geo_curve_type</ref> *</type>
+        <definition>geo_curve_type* curve</definition>
+        <argsstring></argsstring>
+        <name>curve</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" line="62" column="16" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_geometry__structure_1a29ef6353b8c7d59dff7813922153780b" prot="public" static="no" mutable="no">
+        <type><ref refid="structgeo__surface__type" kindref="compound">geo_surface_type</ref> *</type>
+        <definition>geo_surface_type* surface</definition>
+        <argsstring></argsstring>
+        <name>surface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" line="63" column="18" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_geometry__structure_1ad8fca796901e5346ec8d05e91328c3f6" prot="public" static="no" mutable="no">
+        <type><ref refid="structgeo__group__type" kindref="compound">geo_group_type</ref> *</type>
+        <definition>geo_group_type* group</definition>
+        <argsstring></argsstring>
+        <name>group</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" line="64" column="16" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Geometry_structure</label>
+        <link refid="struct_geometry__structure"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>node</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>line</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>curve</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>surface</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>group</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>geo_curve_type</label>
+        <link refid="structgeo__curve__type"/>
+      </node>
+      <node id="6">
+        <label>geo_group_type</label>
+        <link refid="structgeo__group__type"/>
+      </node>
+      <node id="3">
+        <label>geo_line_type</label>
+        <link refid="structgeo__line__type"/>
+      </node>
+      <node id="2">
+        <label>geo_node_type</label>
+        <link refid="structgeo__node__type"/>
+      </node>
+      <node id="5">
+        <label>geo_surface_type</label>
+        <link refid="structgeo__surface__type"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" line="47" column="1" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/geometry/openfdem_geometry.h" bodystart="48" bodyend="65"/>
+    <listofallmembers>
+      <member refid="struct_geometry__structure_1a36787e03f34e0f0455b65e39fc46446f" prot="public" virt="non-virtual"><scope>Geometry_structure</scope><name>curve</name></member>
+      <member refid="struct_geometry__structure_1af7dec937890d29a2a14bf3319c80f434" prot="public" virt="non-virtual"><scope>Geometry_structure</scope><name>curve_num</name></member>
+      <member refid="struct_geometry__structure_1ad8fca796901e5346ec8d05e91328c3f6" prot="public" virt="non-virtual"><scope>Geometry_structure</scope><name>group</name></member>
+      <member refid="struct_geometry__structure_1a79a0708d6232a4da8bd2ec61d25d03c8" prot="public" virt="non-virtual"><scope>Geometry_structure</scope><name>group_num</name></member>
+      <member refid="struct_geometry__structure_1a7d5092b4f53228e0064319cc026a6ed5" prot="public" virt="non-virtual"><scope>Geometry_structure</scope><name>line</name></member>
+      <member refid="struct_geometry__structure_1a7661b5d028be7f8997cef563e3890fd9" prot="public" virt="non-virtual"><scope>Geometry_structure</scope><name>line_num</name></member>
+      <member refid="struct_geometry__structure_1aed4a04a50a15bbcae42f888d2d924456" prot="public" virt="non-virtual"><scope>Geometry_structure</scope><name>mesh_size</name></member>
+      <member refid="struct_geometry__structure_1a53bc379b42af1f82cf34cc212e775ff9" prot="public" virt="non-virtual"><scope>Geometry_structure</scope><name>min_size</name></member>
+      <member refid="struct_geometry__structure_1ad869241cf9e4fbd49c1f149ea3a133d7" prot="public" virt="non-virtual"><scope>Geometry_structure</scope><name>node</name></member>
+      <member refid="struct_geometry__structure_1a1031e2d9442cf1ca3e2940e55915002f" prot="public" virt="non-virtual"><scope>Geometry_structure</scope><name>node_num</name></member>
+      <member refid="struct_geometry__structure_1a29ef6353b8c7d59dff7813922153780b" prot="public" virt="non-virtual"><scope>Geometry_structure</scope><name>surface</name></member>
+      <member refid="struct_geometry__structure_1a0c03902411c5ca887f80f8ee24755127" prot="public" virt="non-virtual"><scope>Geometry_structure</scope><name>surface_num</name></member>
+      <member refid="struct_geometry__structure_1a2a4bf87da850c2a946589606b2e33157" prot="public" virt="non-virtual"><scope>Geometry_structure</scope><name>x0</name></member>
+      <member refid="struct_geometry__structure_1a9f8ab274622c752bf9c42239dbfcaa57" prot="public" virt="non-virtual"><scope>Geometry_structure</scope><name>x1</name></member>
+      <member refid="struct_geometry__structure_1a3cb46d6ef5dc4a7a7f9d9ea878a0416f" prot="public" virt="non-virtual"><scope>Geometry_structure</scope><name>y0</name></member>
+      <member refid="struct_geometry__structure_1ae5fa2dd3f8ae2b7ab94fa7763814de8a" prot="public" virt="non-virtual"><scope>Geometry_structure</scope><name>y1</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

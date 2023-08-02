@@ -1,0 +1,62 @@
+Tutorial 2: UCS model from Gmsh
+#######################################
+
+OpenFDEM also allows users to import common mesh files such as .inp files, .msh files, and .geo files to run the model. 
+This example will review how to setup a uniaxial compressive test example with output from Gmsh software. 
+
+**Runtime**: <10 min on i9 8-core Windows 10 Machine
+
+Expected tutorial output (visualized in ParaView):
+
+.. image:: ../../images/ucs_example.png
+  :width: 800
+  :alt: UCS Example Image
+  :align: center
+
+.. note::
+   OpenFDEM supports four main mesh pre-processing approaches:
+
+   1. A user defined command in OpenFDEM to create mesh automatically
+   2. Importing a ``.geo`` file
+   3. Importing a ``.msh`` file 
+   4. Mesh developed from other commercial softwares, including ``.inp``, ``.dxf``, ``.fdem``, ``.tess`` (for grain-based model only) and ``.jpg`` (for grain-based module and DFN module only).
+
+
+==================================
+1.0 Tutorial Prerequistes
+==================================
+The following files are needed to follow along the tutorial:
+
+- `Job-3.inp`_ (click to download from GitHub)
+
+.. _Job-3.inp: https://github.com/OpenFDEM-geomechanics/Examples/blob/main/CreateUniaxialCompressionTestfromInputMesh/Job-3.inp
+
+
+==================================
+2.0 Codes
+==================================
+
+1. OpenFDEM supports various common mesh file format such as .inp files, .msh files, and .geo files. In this example, 
+“Job-3.inp” file in the folder will be imported to the model, which has the same mesh as the first unconfined compression 
+test example. 
+
+.. literalinclude:: ../../../src/examples/CreateUniaxialCompressionTestfromInputMesh/runme.of
+   :lines: 54
+
+2. Given input file was exported from ABAQUS without assigning groups, so users need to group elements manually here.
+
+.. literalinclude:: ../../../src/examples/CreateUniaxialCompressionTestfromInputMesh/runme.of
+   :lines: 58-60
+
+==================================
+3.0 Full Script
+==================================
+
+- `UCS_test_Gmsh.of`_ (click to download from GitHub)
+
+.. _UCS_test_Gmsh.of: https://github.com/OpenFDEM-geomechanics/Examples/blob/main/CreateUniaxialCompressionTestfromInputMesh/runme.of
+
+
+.. literalinclude:: ../../../src/examples/CreateUniaxialCompressionTestfromInputMesh/runme.of
+   :lines: 37-101
+   :emphasize-lines: 17-18

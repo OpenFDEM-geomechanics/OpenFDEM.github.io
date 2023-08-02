@@ -1,0 +1,160 @@
+\hypertarget{openfdem__math_8h}{}\doxysection{openfdem\+\_\+math.\+h File Reference}
+\label{openfdem__math_8h}\index{openfdem\_math.h@{openfdem\_math.h}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}openfdem\+\_\+struct.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{openfdem__math_8h_a1c3cd1f701496920e85783ab2c45a159}{Openfdem\+\_\+pos\+\_\+epsilon}}~1.\+0e-\/10
+\item 
+\#define \mbox{\hyperlink{openfdem__math_8h_ad272669589cc5dd9d18988723e51aa81}{Openfdem\+\_\+neg\+\_\+epsilon}}~-\/1.\+0e-\/10
+\item 
+\#define \mbox{\hyperlink{openfdem__math_8h_a457312609698c77a2ca5ffe8e0e8baa4}{Openfdem\+\_\+max\+\_\+value}}~1.\+0e+15
+\item 
+\#define \mbox{\hyperlink{openfdem__math_8h_a177f2ea9c4d6a4c1ce020e89a5d22de9}{Openfdem\+\_\+\+PI}}~3.\+1415926535897932384626
+\item 
+\#define \mbox{\hyperlink{openfdem__math_8h_aa66c3ec9bf5bf4d4b095c4c924dbe5ae}{Openfdem\+\_\+e}}~2.\+71828182845904523536
+\item 
+\#define \mbox{\hyperlink{openfdem__math_8h_a7f623151881846637509bd369e58244b}{Openfdem\+\_\+double\+\_\+abs}}(x)~(((x)$<$0.\+0)?-\/(x)\+:(x))
+\item 
+\#define \mbox{\hyperlink{openfdem__math_8h_a17d8a5029d74bdce2b1a241c9f2e9569}{Openfdem\+\_\+max}}(x,  y)~(((x)$<$(y))?(y)\+:(x))
+\item 
+\#define \mbox{\hyperlink{openfdem__math_8h_aaf6ff4470ae0ebf55b07c39502da80cc}{Openfdem\+\_\+min}}(x,  y)~(((x)$>$(y))?(y)\+:(x))
+\item 
+\#define \mbox{\hyperlink{openfdem__math_8h_a731f81f3e9dc3e88c7b8aaf64bf7cdb5}{Openfdem\+\_\+sign}}(x)~((x$>$0)?(1.\+0)\+:(-\/1.\+0))
+\item 
+\#define \mbox{\hyperlink{openfdem__math_8h_ae6f36dcd59da9c393274382bf1d6465f}{Matrix2\+Inverse}}(m,  minv,  det)
+\item 
+\#define \mbox{\hyperlink{openfdem__math_8h_ae92237c4f4a876637f757b8519e28287}{Vector2\+Dot\+Product}}(s,  x1,  y1,  x2,  y2)~\{(s)=((x1)$\ast$(x2))+((y1)$\ast$(y2));\}
+\item 
+\#define \mbox{\hyperlink{openfdem__math_8h_a68e80d2f9f990d332507bb4d1a512ea6}{Vector2\+Normalize}}(s,  x1,  y1)
+\item 
+\#define \mbox{\hyperlink{openfdem__math_8h_afffb91b480a1e064c9c01088db874cf8}{Vector2\+Cro}}(s,  x1,  y1,  x2,  y2)~\{s=(x1$\ast$y2)-\/(y1$\ast$x2);\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{openfdem__struct_8h_a060b837c3b4486ee35317744156f3da2}{Real}} \mbox{\hyperlink{openfdem__math_8h_a2eb80041993d033038788ae24f4cb902}{random\+\_\+normal}} (\mbox{\hyperlink{openfdem__struct_8h_a060b837c3b4486ee35317744156f3da2}{Real}} mu, \mbox{\hyperlink{openfdem__struct_8h_a060b837c3b4486ee35317744156f3da2}{Real}} sigma)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{openfdem__math_8h_ae6f36dcd59da9c393274382bf1d6465f}\label{openfdem__math_8h_ae6f36dcd59da9c393274382bf1d6465f}} 
+\index{openfdem\_math.h@{openfdem\_math.h}!Matrix2Inverse@{Matrix2Inverse}}
+\index{Matrix2Inverse@{Matrix2Inverse}!openfdem\_math.h@{openfdem\_math.h}}
+\doxysubsubsection{\texorpdfstring{Matrix2Inverse}{Matrix2Inverse}}
+{\footnotesize\ttfamily \#define Matrix2\+Inverse(\begin{DoxyParamCaption}\item[{}]{m,  }\item[{}]{minv,  }\item[{}]{det }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{      \{  det=m[0][0]*m[1][1]-\/m[1][0]*m[0][1]; \(\backslash\)}
+\DoxyCodeLine{         minv[0][0]= m[1][1]/det; minv[1][0]=-\/m[1][0]/det;\(\backslash\)}
+\DoxyCodeLine{         minv[0][1]=-\/m[0][1]/det; minv[1][1]= m[0][0]/det;\(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{openfdem__math_8h_a7f623151881846637509bd369e58244b}\label{openfdem__math_8h_a7f623151881846637509bd369e58244b}} 
+\index{openfdem\_math.h@{openfdem\_math.h}!Openfdem\_double\_abs@{Openfdem\_double\_abs}}
+\index{Openfdem\_double\_abs@{Openfdem\_double\_abs}!openfdem\_math.h@{openfdem\_math.h}}
+\doxysubsubsection{\texorpdfstring{Openfdem\_double\_abs}{Openfdem\_double\_abs}}
+{\footnotesize\ttfamily \#define Openfdem\+\_\+double\+\_\+abs(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(((x)$<$0.\+0)?-\/(x)\+:(x))}
+
+\mbox{\Hypertarget{openfdem__math_8h_aa66c3ec9bf5bf4d4b095c4c924dbe5ae}\label{openfdem__math_8h_aa66c3ec9bf5bf4d4b095c4c924dbe5ae}} 
+\index{openfdem\_math.h@{openfdem\_math.h}!Openfdem\_e@{Openfdem\_e}}
+\index{Openfdem\_e@{Openfdem\_e}!openfdem\_math.h@{openfdem\_math.h}}
+\doxysubsubsection{\texorpdfstring{Openfdem\_e}{Openfdem\_e}}
+{\footnotesize\ttfamily \#define Openfdem\+\_\+e~2.\+71828182845904523536}
+
+\mbox{\Hypertarget{openfdem__math_8h_a17d8a5029d74bdce2b1a241c9f2e9569}\label{openfdem__math_8h_a17d8a5029d74bdce2b1a241c9f2e9569}} 
+\index{openfdem\_math.h@{openfdem\_math.h}!Openfdem\_max@{Openfdem\_max}}
+\index{Openfdem\_max@{Openfdem\_max}!openfdem\_math.h@{openfdem\_math.h}}
+\doxysubsubsection{\texorpdfstring{Openfdem\_max}{Openfdem\_max}}
+{\footnotesize\ttfamily \#define Openfdem\+\_\+max(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~(((x)$<$(y))?(y)\+:(x))}
+
+\mbox{\Hypertarget{openfdem__math_8h_a457312609698c77a2ca5ffe8e0e8baa4}\label{openfdem__math_8h_a457312609698c77a2ca5ffe8e0e8baa4}} 
+\index{openfdem\_math.h@{openfdem\_math.h}!Openfdem\_max\_value@{Openfdem\_max\_value}}
+\index{Openfdem\_max\_value@{Openfdem\_max\_value}!openfdem\_math.h@{openfdem\_math.h}}
+\doxysubsubsection{\texorpdfstring{Openfdem\_max\_value}{Openfdem\_max\_value}}
+{\footnotesize\ttfamily \#define Openfdem\+\_\+max\+\_\+value~1.\+0e+15}
+
+\mbox{\Hypertarget{openfdem__math_8h_aaf6ff4470ae0ebf55b07c39502da80cc}\label{openfdem__math_8h_aaf6ff4470ae0ebf55b07c39502da80cc}} 
+\index{openfdem\_math.h@{openfdem\_math.h}!Openfdem\_min@{Openfdem\_min}}
+\index{Openfdem\_min@{Openfdem\_min}!openfdem\_math.h@{openfdem\_math.h}}
+\doxysubsubsection{\texorpdfstring{Openfdem\_min}{Openfdem\_min}}
+{\footnotesize\ttfamily \#define Openfdem\+\_\+min(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~(((x)$>$(y))?(y)\+:(x))}
+
+\mbox{\Hypertarget{openfdem__math_8h_ad272669589cc5dd9d18988723e51aa81}\label{openfdem__math_8h_ad272669589cc5dd9d18988723e51aa81}} 
+\index{openfdem\_math.h@{openfdem\_math.h}!Openfdem\_neg\_epsilon@{Openfdem\_neg\_epsilon}}
+\index{Openfdem\_neg\_epsilon@{Openfdem\_neg\_epsilon}!openfdem\_math.h@{openfdem\_math.h}}
+\doxysubsubsection{\texorpdfstring{Openfdem\_neg\_epsilon}{Openfdem\_neg\_epsilon}}
+{\footnotesize\ttfamily \#define Openfdem\+\_\+neg\+\_\+epsilon~-\/1.\+0e-\/10}
+
+\mbox{\Hypertarget{openfdem__math_8h_a177f2ea9c4d6a4c1ce020e89a5d22de9}\label{openfdem__math_8h_a177f2ea9c4d6a4c1ce020e89a5d22de9}} 
+\index{openfdem\_math.h@{openfdem\_math.h}!Openfdem\_PI@{Openfdem\_PI}}
+\index{Openfdem\_PI@{Openfdem\_PI}!openfdem\_math.h@{openfdem\_math.h}}
+\doxysubsubsection{\texorpdfstring{Openfdem\_PI}{Openfdem\_PI}}
+{\footnotesize\ttfamily \#define Openfdem\+\_\+\+PI~3.\+1415926535897932384626}
+
+\mbox{\Hypertarget{openfdem__math_8h_a1c3cd1f701496920e85783ab2c45a159}\label{openfdem__math_8h_a1c3cd1f701496920e85783ab2c45a159}} 
+\index{openfdem\_math.h@{openfdem\_math.h}!Openfdem\_pos\_epsilon@{Openfdem\_pos\_epsilon}}
+\index{Openfdem\_pos\_epsilon@{Openfdem\_pos\_epsilon}!openfdem\_math.h@{openfdem\_math.h}}
+\doxysubsubsection{\texorpdfstring{Openfdem\_pos\_epsilon}{Openfdem\_pos\_epsilon}}
+{\footnotesize\ttfamily \#define Openfdem\+\_\+pos\+\_\+epsilon~1.\+0e-\/10}
+
+filename \mbox{\hyperlink{openfdem__math_8h}{openfdem\+\_\+math.\+h}}
+
+author Xiaofeng Li \href{mailto:xfli@whrsm.ac.cn}{\texttt{ xfli@whrsm.\+ac.\+cn}}
+
+date creation\+: Fri Jun 18 2010 date last modification\+: Tue Sep 29 2020
+
+function\+: common math\hypertarget{openfdem__time_8h_LICENSE}{}\doxysubsection{LICENSE}\label{openfdem__time_8h_LICENSE}
+This library is free software; you can redistribute it and/or ~\newline
+ modify it under the terms of the GNU Lesser General Public ~\newline
+ License as published by the Free Software Foundation; either ~\newline
+ version 2.\+1 of the License, or (at your option) any later version. ~\newline
+
+
+This program is distributed in the hope that it will be useful, ~\newline
+ but WITHOUT ANY WARRANTY; without even the implied warranty of ~\newline
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU ~\newline
+ Lesser General Public License for more details. ~\newline
+ \mbox{\Hypertarget{openfdem__math_8h_a731f81f3e9dc3e88c7b8aaf64bf7cdb5}\label{openfdem__math_8h_a731f81f3e9dc3e88c7b8aaf64bf7cdb5}} 
+\index{openfdem\_math.h@{openfdem\_math.h}!Openfdem\_sign@{Openfdem\_sign}}
+\index{Openfdem\_sign@{Openfdem\_sign}!openfdem\_math.h@{openfdem\_math.h}}
+\doxysubsubsection{\texorpdfstring{Openfdem\_sign}{Openfdem\_sign}}
+{\footnotesize\ttfamily \#define Openfdem\+\_\+sign(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~((x$>$0)?(1.\+0)\+:(-\/1.\+0))}
+
+\mbox{\Hypertarget{openfdem__math_8h_afffb91b480a1e064c9c01088db874cf8}\label{openfdem__math_8h_afffb91b480a1e064c9c01088db874cf8}} 
+\index{openfdem\_math.h@{openfdem\_math.h}!Vector2Cro@{Vector2Cro}}
+\index{Vector2Cro@{Vector2Cro}!openfdem\_math.h@{openfdem\_math.h}}
+\doxysubsubsection{\texorpdfstring{Vector2Cro}{Vector2Cro}}
+{\footnotesize\ttfamily \#define Vector2\+Cro(\begin{DoxyParamCaption}\item[{}]{s,  }\item[{}]{x1,  }\item[{}]{y1,  }\item[{}]{x2,  }\item[{}]{y2 }\end{DoxyParamCaption})~\{s=(x1$\ast$y2)-\/(y1$\ast$x2);\}}
+
+\mbox{\Hypertarget{openfdem__math_8h_ae92237c4f4a876637f757b8519e28287}\label{openfdem__math_8h_ae92237c4f4a876637f757b8519e28287}} 
+\index{openfdem\_math.h@{openfdem\_math.h}!Vector2DotProduct@{Vector2DotProduct}}
+\index{Vector2DotProduct@{Vector2DotProduct}!openfdem\_math.h@{openfdem\_math.h}}
+\doxysubsubsection{\texorpdfstring{Vector2DotProduct}{Vector2DotProduct}}
+{\footnotesize\ttfamily \#define Vector2\+Dot\+Product(\begin{DoxyParamCaption}\item[{}]{s,  }\item[{}]{x1,  }\item[{}]{y1,  }\item[{}]{x2,  }\item[{}]{y2 }\end{DoxyParamCaption})~\{(s)=((x1)$\ast$(x2))+((y1)$\ast$(y2));\}}
+
+\mbox{\Hypertarget{openfdem__math_8h_a68e80d2f9f990d332507bb4d1a512ea6}\label{openfdem__math_8h_a68e80d2f9f990d332507bb4d1a512ea6}} 
+\index{openfdem\_math.h@{openfdem\_math.h}!Vector2Normalize@{Vector2Normalize}}
+\index{Vector2Normalize@{Vector2Normalize}!openfdem\_math.h@{openfdem\_math.h}}
+\doxysubsubsection{\texorpdfstring{Vector2Normalize}{Vector2Normalize}}
+{\footnotesize\ttfamily \#define Vector2\+Normalize(\begin{DoxyParamCaption}\item[{}]{s,  }\item[{}]{x1,  }\item[{}]{y1 }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{              \{(s)=sqrt((x1)*(x1)+(y1)*(y1));   \(\backslash\)}
+\DoxyCodeLine{              if((s)>\mbox{\hyperlink{openfdem__math_8h_a1c3cd1f701496920e85783ab2c45a159}{Openfdem\_pos\_epsilon}})(x1)=(x1)/(s);  \(\backslash\)}
+\DoxyCodeLine{              if((s)>\mbox{\hyperlink{openfdem__math_8h_a1c3cd1f701496920e85783ab2c45a159}{Openfdem\_pos\_epsilon}})(y1)=(y1)/(s);  \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{openfdem__math_8h_a2eb80041993d033038788ae24f4cb902}\label{openfdem__math_8h_a2eb80041993d033038788ae24f4cb902}} 
+\index{openfdem\_math.h@{openfdem\_math.h}!random\_normal@{random\_normal}}
+\index{random\_normal@{random\_normal}!openfdem\_math.h@{openfdem\_math.h}}
+\doxysubsubsection{\texorpdfstring{random\_normal()}{random\_normal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{openfdem__struct_8h_a060b837c3b4486ee35317744156f3da2}{Real}} random\+\_\+normal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{openfdem__struct_8h_a060b837c3b4486ee35317744156f3da2}{Real}}}]{mu,  }\item[{\mbox{\hyperlink{openfdem__struct_8h_a060b837c3b4486ee35317744156f3da2}{Real}}}]{sigma }\end{DoxyParamCaption})}
+

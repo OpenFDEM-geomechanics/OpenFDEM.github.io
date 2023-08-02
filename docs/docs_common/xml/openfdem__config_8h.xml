@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="en-US">
+  <compounddef id="openfdem__config_8h" kind="file" language="C++">
+    <compoundname>openfdem_config.h</compoundname>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="openfdem__config_8h_1a19094d058834e4fe43f0b6ffdd1734bc" prot="public" static="no">
+        <name>PRG_VERSION</name>
+        <initializer>&quot;OpenFDEM version 3.6&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/openfdem_solver/openfdem src/src/common/openfdem_config.h" line="1" column="9" bodyfile="E:/openfdem_solver/openfdem src/src/common/openfdem_config.h" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="openfdem__config_8h_1a8f1de68c210b4fe8b9064b8b53686a51" prot="public" static="no">
+        <name>OPENFDEM_WEBSITE</name>
+        <initializer>&quot;OpenFDEM website https://xiaofengli-uoft.github.io/Mainpage/&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/openfdem_solver/openfdem src/src/common/openfdem_config.h" line="2" column="9" bodyfile="E:/openfdem_solver/openfdem src/src/common/openfdem_config.h" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="openfdem__config_8h_1aaf689a017b445451105ac513ed85ea06" prot="public" static="no">
+        <name>OPENFDEM_COTACT</name>
+        <initializer>&quot;OpenFDEM email xfli@whrsm.ac.cn&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/openfdem_solver/openfdem src/src/common/openfdem_config.h" line="3" column="9" bodyfile="E:/openfdem_solver/openfdem src/src/common/openfdem_config.h" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="openfdem__config_8h_1a6a78f3ad9be56ab6befccb8585f2db39" prot="public" static="no">
+        <name>OPENFDEM_COPYRIGHT</name>
+        <initializer>&quot;Copyright (C) 2017-2022 Xiaofeng Li&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/openfdem_solver/openfdem src/src/common/openfdem_config.h" line="4" column="9" bodyfile="E:/openfdem_solver/openfdem src/src/common/openfdem_config.h" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="openfdem__config_8h_1a933af0b64d4ec5cba7a8587c530ded6e" prot="public" static="no">
+        <name>HOST_TYPE</name>
+        <initializer>&quot;AMD64-Windows&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/openfdem_solver/openfdem src/src/common/openfdem_config.h" line="5" column="9" bodyfile="E:/openfdem_solver/openfdem src/src/common/openfdem_config.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="openfdem__config_8h_1ae25012cc7ee431dc374184592cbac91a" prot="public" static="no">
+        <name>HOST_NAME</name>
+        <initializer>&quot;DREAMER-PC&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/openfdem_solver/openfdem src/src/common/openfdem_config.h" line="6" column="9" bodyfile="E:/openfdem_solver/openfdem src/src/common/openfdem_config.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="openfdem__config_8h_1a0b7197d04b47ccc49ad76ffd91322050" prot="public" static="no">
+        <name>PRG_HEADER</name>
+        <initializer>&quot;\**                                                                                     **\n\**                                                                                     **\n\**              ____                   ______ _____  ______ __  __                     **\n\**             / __ \\                 |  ____|  __ \\|  ____|  \\/  |                    **\n\**            | |  | |_ __   ___ _ __ | |__  | |  | | |__  | \\  / |                    **\n\**            | |  | | &apos;_ \\ / _ \\ &apos;_ \\|  __| | |  | |  __| | |\\/| |                    **\n\**            | |__| | |_) |  __/ | | | |    | |__| | |____| |  | |                    **\n\**             \\____/| .__/ \\___|_| |_|_|    |_____/|______|_|  |_|                    **\n\**                   | |                     OpenFree Finite Element                   **\n\**                   |_|                         and Discrete Element Method Solver    **\n\**                                                                                     **&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/openfdem_solver/openfdem src/src/common/openfdem_config.h" line="19" column="9" bodyfile="E:/openfdem_solver/openfdem src/src/common/openfdem_config.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="openfdem__config_8h_1a19094d058834e4fe43f0b6ffdd1734bc" refkind="member"><highlight class="preprocessor">#define<sp/>PRG_VERSION<sp/>&quot;OpenFDEM<sp/>version<sp/>3.6&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="openfdem__config_8h_1a8f1de68c210b4fe8b9064b8b53686a51" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OPENFDEM_WEBSITE<sp/>&quot;OpenFDEM<sp/>website<sp/>https://xiaofengli-uoft.github.io/Mainpage/&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="openfdem__config_8h_1aaf689a017b445451105ac513ed85ea06" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OPENFDEM_COTACT<sp/>&quot;OpenFDEM<sp/>email<sp/>xfli@whrsm.ac.cn&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="openfdem__config_8h_1a6a78f3ad9be56ab6befccb8585f2db39" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OPENFDEM_COPYRIGHT<sp/>&quot;Copyright<sp/>(C)<sp/>2017-2022<sp/>Xiaofeng<sp/>Li&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="5" refid="openfdem__config_8h_1a933af0b64d4ec5cba7a8587c530ded6e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HOST_TYPE<sp/>&quot;AMD64-Windows&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="openfdem__config_8h_1ae25012cc7ee431dc374184592cbac91a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HOST_NAME<sp/>&quot;DREAMER-PC&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="openfdem__config_8h_1a0b7197d04b47ccc49ad76ffd91322050" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRG_HEADER<sp/>&quot;\</highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**\n\</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**\n\</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>____<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>______<sp/>_____<sp/><sp/>______<sp/>__<sp/><sp/>__<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**\n\</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/<sp/>__<sp/>\\<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/>____|<sp/><sp/>__<sp/>\\|<sp/><sp/>____|<sp/><sp/>\\/<sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**\n\</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>|<sp/><sp/>|<sp/>|_<sp/>__<sp/><sp/><sp/>___<sp/>_<sp/>__<sp/>|<sp/>|__<sp/><sp/>|<sp/>|<sp/><sp/>|<sp/>|<sp/>|__<sp/><sp/>|<sp/>\\<sp/><sp/>/<sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**\n\</highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>|<sp/><sp/>|<sp/>|<sp/>&apos;_<sp/>\\<sp/>/<sp/>_<sp/>\\<sp/>&apos;_<sp/>\\|<sp/><sp/>__|<sp/>|<sp/>|<sp/><sp/>|<sp/>|<sp/><sp/>__|<sp/>|<sp/>|\\/|<sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**\n\</highlight></codeline>
+<codeline lineno="15"><highlight class="preprocessor">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>|__|<sp/>|<sp/>|_)<sp/>|<sp/><sp/>__/<sp/>|<sp/>|<sp/>|<sp/>|<sp/><sp/><sp/><sp/>|<sp/>|__|<sp/>|<sp/>|____|<sp/>|<sp/><sp/>|<sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**\n\</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\\____/|<sp/>.__/<sp/>\\___|_|<sp/>|_|_|<sp/><sp/><sp/><sp/>|_____/|______|_|<sp/><sp/>|_|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**\n\</highlight></codeline>
+<codeline lineno="17"><highlight class="preprocessor">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OpenFree<sp/>Finite<sp/>Element<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**\n\</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|_|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>and<sp/>Discrete<sp/>Element<sp/>Method<sp/>Solver<sp/><sp/><sp/><sp/>**\n\</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>**&quot;</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="E:/openfdem_solver/openfdem src/src/common/openfdem_config.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,374 @@
+\hypertarget{openfdem__commom_8h}{}\doxysection{openfdem\+\_\+commom.\+h File Reference}
+\label{openfdem__commom_8h}\index{openfdem\_commom.h@{openfdem\_commom.h}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}openfdem\+\_\+message.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}openfdem\+\_\+enum.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}openfdem\+\_\+struct.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{openfdem__commom_8h_ace5d16511ddcfcce938c2a0e577eaa27}{File\+Null}}~((FILE$\ast$)NULL)
+\item 
+\#define \mbox{\hyperlink{openfdem__commom_8h_a6eb0a185bcaad3f0aca1180139d65615}{Char2\+DNull}}~((char $\ast$$\ast$)NULL)
+\item 
+\#define \mbox{\hyperlink{openfdem__commom_8h_a7b9da6389c9fd8ae161aca291c470b5c}{Double1\+DNull}}~((double$\ast$)NULL)
+\item 
+\#define \mbox{\hyperlink{openfdem__commom_8h_a33a0b45fdf98646f43688c0e276ea58c}{Double2\+DNull}}~((double$\ast$$\ast$)NULL)
+\item 
+\#define \mbox{\hyperlink{openfdem__commom_8h_a302a79e79b0ab226620f524e971e5bd3}{Double3\+DNull}}~((double$\ast$$\ast$$\ast$)NULL)
+\item 
+\#define \mbox{\hyperlink{openfdem__commom_8h_ae645df46a063f9058c909eaa025a5ce4}{Int1\+DNull}}~((long$\ast$)NULL)
+\item 
+\#define \mbox{\hyperlink{openfdem__commom_8h_a880e86f6ad7544fd1005362977f9554e}{Int2\+DNull}}~((long$\ast$$\ast$)NULL)
+\item 
+\#define \mbox{\hyperlink{openfdem__commom_8h_a10df2a33cf7a4f64536570dd71fa2388}{Edge2\+Length}}(l,  x1,  y1,  x2,  y2)~\{l=sqrt((x1-\/x2)$\ast$(x1-\/x2)+(y1-\/y2)$\ast$(y1-\/y2));\}
+\item 
+\#define \mbox{\hyperlink{openfdem__commom_8h_a1afca53d8f6cdecf198d8b56659b9e8d}{V2\+Darea}}(s,  l1,  l2,  l3)~\{s=0.\+5$\ast$(l1+l2+l3);s=sqrt(s$\ast$(s-\/l1)$\ast$(s-\/l2)$\ast$(s-\/l3));\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{openfdem__commom_8h_af665cf923dfc77c52e48dd74d2e4b0e3}{get\+\_\+filename\+\_\+no\+\_\+path}} (char $\ast$return\+\_\+string, char $\ast$input\+\_\+string)
+\item 
+void \mbox{\hyperlink{openfdem__commom_8h_a2e9397c17229b54bd1c975a3113817eb}{get\+\_\+path}} (char $\ast$return\+\_\+string, char $\ast$input\+\_\+string)
+\item 
+void \mbox{\hyperlink{openfdem__commom_8h_af76155db7f59aaa192f71cb60cba22bf}{parse\+\_\+string}} (FILE $\ast$Input\+File, char $\ast$string)
+\item 
+void \mbox{\hyperlink{openfdem__commom_8h_a261da189fde53df5cc9cd97f43d53385}{get\+\_\+filename\+\_\+no\+\_\+suffix}} (char $\ast$return\+\_\+string, char $\ast$input\+\_\+string)
+\item 
+void \mbox{\hyperlink{openfdem__commom_8h_a98630ddb729d88fab94e9fee4ce88e7d}{get\+\_\+suffix}} (char $\ast$return\+\_\+string, char $\ast$input\+\_\+string)
+\item 
+void \mbox{\hyperlink{openfdem__commom_8h_ae99538b7a858821ae21d6ea432192455}{strip\+\_\+ext}} (char $\ast$fname)
+\item 
+double $\ast$ \mbox{\hyperlink{openfdem__commom_8h_a9fb67a9b32c39c75beeb77d6f6ecdbf0}{malloc\+\_\+1\+D\+\_\+double\+\_\+array}} (long m1)
+\item 
+double $\ast$ \mbox{\hyperlink{openfdem__commom_8h_a8f14e1fb10db366742b22c28eb480c23}{initialize\+\_\+1\+D\+\_\+double\+\_\+array}} (long m1, double dini)
+\item 
+double $\ast$$\ast$ \mbox{\hyperlink{openfdem__commom_8h_a775d41b3e9fccb53efa5ed050f9006a5}{malloc\+\_\+2\+D\+\_\+double\+\_\+array}} (long m2, long m1)
+\item 
+double $\ast$$\ast$ \mbox{\hyperlink{openfdem__commom_8h_a135d4d0bce0649a5fccdf6b70df4fc2a}{initialize\+\_\+2\+D\+\_\+double\+\_\+array}} (long m2, long m1, double dini)
+\item 
+double $\ast$$\ast$$\ast$ \mbox{\hyperlink{openfdem__commom_8h_a7421b6d81d94fc5929920dc4bfc7836a}{malloc\+\_\+3\+D\+\_\+double\+\_\+array}} (long m3, long m2, long m1)
+\item 
+double $\ast$$\ast$$\ast$ \mbox{\hyperlink{openfdem__commom_8h_a17dbcbf772a2abfab531a7b5232bbfcd}{initialize\+\_\+3\+D\+\_\+double\+\_\+array}} (long m3, long m2, long m1, double dini)
+\item 
+long $\ast$ \mbox{\hyperlink{openfdem__commom_8h_aa0fd612d2737f61a0e4fb3ea9eac1152}{malloc\+\_\+1\+D\+\_\+int\+\_\+array}} (long m1)
+\item 
+long $\ast$ \mbox{\hyperlink{openfdem__commom_8h_a949156108abf19843c73d35073f3b93b}{initialize\+\_\+1\+D\+\_\+int\+\_\+array}} (\mbox{\hyperlink{openfdem__struct_8h_a91adff1610bdf681555a8f2e330dc963}{Int}} m1, \mbox{\hyperlink{openfdem__struct_8h_a91adff1610bdf681555a8f2e330dc963}{Int}} iini)
+\item 
+\mbox{\hyperlink{openfdem__struct_8h_a26ff0e0ab71ea1ed8bac401c56ed2242}{UInt}} $\ast$ \mbox{\hyperlink{openfdem__commom_8h_a3ea49b16ac7c8f615eae074a829494fe}{initialize\+\_\+1\+D\+\_\+\+UInt\+\_\+array}} (\mbox{\hyperlink{openfdem__struct_8h_a26ff0e0ab71ea1ed8bac401c56ed2242}{UInt}} m1, \mbox{\hyperlink{openfdem__struct_8h_a26ff0e0ab71ea1ed8bac401c56ed2242}{UInt}} iini)
+\item 
+long $\ast$$\ast$ \mbox{\hyperlink{openfdem__commom_8h_acb9b2b8f3672919f95a07c99e60c7fca}{malloc\+\_\+2\+D\+\_\+int\+\_\+array}} (long m2, long m1)
+\item 
+long $\ast$$\ast$ \mbox{\hyperlink{openfdem__commom_8h_aed43181f659652b1528b8d258d7ea0cf}{initialize\+\_\+2\+D\+\_\+int\+\_\+array}} (long m2, long m1, long iini)
+\item 
+void \mbox{\hyperlink{openfdem__commom_8h_a44a50ebc6e050a1160c98c980db6fa29}{parse\+\_\+1\+D\+\_\+double\+\_\+array}} (FILE $\ast$fileptr, double initial\+\_\+double, long max\+\_\+size, long actual\+\_\+size, double $\ast$$\ast$d1aray)
+\item 
+void \mbox{\hyperlink{openfdem__commom_8h_aa939a2ce8f595ac5670aadd09d943f9d}{parse\+\_\+2\+D\+\_\+double\+\_\+array}} (FILE $\ast$fileptr, double initial\+\_\+double, long max\+\_\+size1, long max\+\_\+size2, long read\+\_\+way, long actual\+\_\+size1, long actual\+\_\+size2, double $\ast$$\ast$$\ast$d2aray)
+\item 
+void \mbox{\hyperlink{openfdem__commom_8h_a5540f08e627f982a13199cf206c20557}{parse\+\_\+3\+D\+\_\+double\+\_\+array}} (FILE $\ast$fileptr, double dinit, long n1, long n2, long n3, double $\ast$$\ast$$\ast$$\ast$d3aray)
+\item 
+void \mbox{\hyperlink{openfdem__commom_8h_a95d44e1e0c04b6ad91d43e2ef8c8ccea}{parse\+\_\+1\+D\+\_\+int\+\_\+array}} (FILE $\ast$fileptr, long initial\+\_\+int, long max\+\_\+size, long actual\+\_\+size, long $\ast$$\ast$i1aray)
+\item 
+void \mbox{\hyperlink{openfdem__commom_8h_a3a509d6e6dc5c08180d922fb9cbb03fe}{parse\+\_\+2\+D\+\_\+int\+\_\+array}} (FILE $\ast$fileptr, long initial\+\_\+int, long max\+\_\+size1, long max\+\_\+size2, long read\+\_\+way, long actual\+\_\+size1, long actual\+\_\+size2, long $\ast$$\ast$$\ast$i2aray)
+\item 
+void \mbox{\hyperlink{openfdem__commom_8h_a08956be0fb422d6ef15e2d0d20a38664}{get\+\_\+vector\+\_\+unit}} (double $\ast$e1x, double $\ast$e1y, double rx, double ry)
+\item 
+void \mbox{\hyperlink{openfdem__commom_8h_a41bdfd2cdd985bb1accdb397d85623c0}{get\+\_\+vector\+\_\+rotated}} (double $\ast$e1x, double $\ast$e1y, double e2x, double e2y)
+\item 
+void \mbox{\hyperlink{openfdem__commom_8h_af173a450ad4cc4ab481cdd7baa9359eb}{get\+\_\+vector\+\_\+global\+\_\+to\+\_\+local}} (double $\ast$u, double $\ast$v, double rx, double ry, double e1x, double e1y, double e2x, double e2y)
+\item 
+int \mbox{\hyperlink{openfdem__commom_8h_a51b7a5723a0ddff629684fd44c348522}{openfdem\+\_\+run\+\_\+usr\+\_\+break}} (double dctime, long ncstep, long mcstep)
+\item 
+long \mbox{\hyperlink{openfdem__commom_8h_af7f1202c194c5b481913c1462d0d78e5}{get\+\_\+line\+\_\+current\+\_\+position}} (FILE $\ast$fileptr)
+\item 
+void \mbox{\hyperlink{openfdem__commom_8h_afa541b0a975a6787ce700def1480026c}{create\+\_\+result\+\_\+store\+\_\+folder}} (char $\ast$Result\+\_\+store\+\_\+folder)
+\item 
+void \mbox{\hyperlink{openfdem__commom_8h_ab96946f187e9d673ae894f7d5de3f34f}{NULL\+\_\+vector}} (\mbox{\hyperlink{structof__vector}{of\+\_\+vector}} $\ast$d1aray)
+\item 
+void \mbox{\hyperlink{openfdem__commom_8h_a40c0b3bf8e49a1f4384b6e09fa394f68}{parse\+\_\+vector}} (FILE $\ast$fileptr, double dinit, \mbox{\hyperlink{structof__vector}{of\+\_\+vector}} $\ast$d1aray)
+\item 
+void \mbox{\hyperlink{openfdem__commom_8h_aad351edf42fca5614e7ad3a7b9152910}{parse\+\_\+1\+D\+\_\+vector}} (FILE $\ast$fileptr, double dinit, long max\+\_\+size, long actual\+\_\+size, \mbox{\hyperlink{structof__vector}{of\+\_\+vector}} $\ast$$\ast$d1aray)
+\item 
+\mbox{\hyperlink{structof__tensor}{of\+\_\+tensor}} $\ast$ \mbox{\hyperlink{openfdem__commom_8h_a947d1a55deeab18a67ecfd434e44f387}{initialize\+\_\+1\+D\+\_\+tensor}} (unsigned int size, double double\+\_\+ini)
+\item 
+\mbox{\hyperlink{structof__tensor}{of\+\_\+tensor}} $\ast$ \mbox{\hyperlink{openfdem__commom_8h_a209a0c132db108f6d825d6cd9909480e}{parse\+\_\+1\+D\+\_\+tensor}} (FILE $\ast$fileptr, \mbox{\hyperlink{openfdem__struct_8h_a26ff0e0ab71ea1ed8bac401c56ed2242}{UInt}} size, \mbox{\hyperlink{openfdem__struct_8h_a060b837c3b4486ee35317744156f3da2}{Real}} double\+\_\+ini)
+\item 
+\mbox{\hyperlink{openfdem__struct_8h_a26ff0e0ab71ea1ed8bac401c56ed2242}{UInt}} $\ast$ \mbox{\hyperlink{openfdem__commom_8h_a2c972d77af801a1f8cea61f684c7b515}{realloc\+\_\+\+UInt\+\_\+array}} (\mbox{\hyperlink{openfdem__struct_8h_a26ff0e0ab71ea1ed8bac401c56ed2242}{UInt}} $\ast$array, \mbox{\hyperlink{openfdem__struct_8h_a26ff0e0ab71ea1ed8bac401c56ed2242}{UInt}} size)
+\item 
+int $\ast$ \mbox{\hyperlink{openfdem__commom_8h_a7b41dba21c77adeae6dd90f7cc038066}{realloc\+\_\+\+Int\+\_\+array}} (int $\ast$array, int size)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{openfdem__commom_8h_a6eb0a185bcaad3f0aca1180139d65615}\label{openfdem__commom_8h_a6eb0a185bcaad3f0aca1180139d65615}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!Char2DNull@{Char2DNull}}
+\index{Char2DNull@{Char2DNull}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{Char2DNull}{Char2DNull}}
+{\footnotesize\ttfamily \#define Char2\+DNull~((char $\ast$$\ast$)NULL)}
+
+\mbox{\Hypertarget{openfdem__commom_8h_a7b9da6389c9fd8ae161aca291c470b5c}\label{openfdem__commom_8h_a7b9da6389c9fd8ae161aca291c470b5c}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!Double1DNull@{Double1DNull}}
+\index{Double1DNull@{Double1DNull}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{Double1DNull}{Double1DNull}}
+{\footnotesize\ttfamily \#define Double1\+DNull~((double$\ast$)NULL)}
+
+\mbox{\Hypertarget{openfdem__commom_8h_a33a0b45fdf98646f43688c0e276ea58c}\label{openfdem__commom_8h_a33a0b45fdf98646f43688c0e276ea58c}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!Double2DNull@{Double2DNull}}
+\index{Double2DNull@{Double2DNull}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{Double2DNull}{Double2DNull}}
+{\footnotesize\ttfamily \#define Double2\+DNull~((double$\ast$$\ast$)NULL)}
+
+\mbox{\Hypertarget{openfdem__commom_8h_a302a79e79b0ab226620f524e971e5bd3}\label{openfdem__commom_8h_a302a79e79b0ab226620f524e971e5bd3}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!Double3DNull@{Double3DNull}}
+\index{Double3DNull@{Double3DNull}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{Double3DNull}{Double3DNull}}
+{\footnotesize\ttfamily \#define Double3\+DNull~((double$\ast$$\ast$$\ast$)NULL)}
+
+\mbox{\Hypertarget{openfdem__commom_8h_a10df2a33cf7a4f64536570dd71fa2388}\label{openfdem__commom_8h_a10df2a33cf7a4f64536570dd71fa2388}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!Edge2Length@{Edge2Length}}
+\index{Edge2Length@{Edge2Length}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{Edge2Length}{Edge2Length}}
+{\footnotesize\ttfamily \#define Edge2\+Length(\begin{DoxyParamCaption}\item[{}]{l,  }\item[{}]{x1,  }\item[{}]{y1,  }\item[{}]{x2,  }\item[{}]{y2 }\end{DoxyParamCaption})~\{l=sqrt((x1-\/x2)$\ast$(x1-\/x2)+(y1-\/y2)$\ast$(y1-\/y2));\}}
+
+\mbox{\Hypertarget{openfdem__commom_8h_ace5d16511ddcfcce938c2a0e577eaa27}\label{openfdem__commom_8h_ace5d16511ddcfcce938c2a0e577eaa27}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!FileNull@{FileNull}}
+\index{FileNull@{FileNull}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{FileNull}{FileNull}}
+{\footnotesize\ttfamily \#define File\+Null~((FILE$\ast$)NULL)}
+
+\mbox{\Hypertarget{openfdem__commom_8h_ae645df46a063f9058c909eaa025a5ce4}\label{openfdem__commom_8h_ae645df46a063f9058c909eaa025a5ce4}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!Int1DNull@{Int1DNull}}
+\index{Int1DNull@{Int1DNull}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{Int1DNull}{Int1DNull}}
+{\footnotesize\ttfamily \#define Int1\+DNull~((long$\ast$)NULL)}
+
+\mbox{\Hypertarget{openfdem__commom_8h_a880e86f6ad7544fd1005362977f9554e}\label{openfdem__commom_8h_a880e86f6ad7544fd1005362977f9554e}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!Int2DNull@{Int2DNull}}
+\index{Int2DNull@{Int2DNull}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{Int2DNull}{Int2DNull}}
+{\footnotesize\ttfamily \#define Int2\+DNull~((long$\ast$$\ast$)NULL)}
+
+\mbox{\Hypertarget{openfdem__commom_8h_a1afca53d8f6cdecf198d8b56659b9e8d}\label{openfdem__commom_8h_a1afca53d8f6cdecf198d8b56659b9e8d}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!V2Darea@{V2Darea}}
+\index{V2Darea@{V2Darea}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{V2Darea}{V2Darea}}
+{\footnotesize\ttfamily \#define V2\+Darea(\begin{DoxyParamCaption}\item[{}]{s,  }\item[{}]{l1,  }\item[{}]{l2,  }\item[{}]{l3 }\end{DoxyParamCaption})~\{s=0.\+5$\ast$(l1+l2+l3);s=sqrt(s$\ast$(s-\/l1)$\ast$(s-\/l2)$\ast$(s-\/l3));\}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{openfdem__commom_8h_afa541b0a975a6787ce700def1480026c}\label{openfdem__commom_8h_afa541b0a975a6787ce700def1480026c}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!create\_result\_store\_folder@{create\_result\_store\_folder}}
+\index{create\_result\_store\_folder@{create\_result\_store\_folder}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{create\_result\_store\_folder()}{create\_result\_store\_folder()}}
+{\footnotesize\ttfamily void create\+\_\+result\+\_\+store\+\_\+folder (\begin{DoxyParamCaption}\item[{char $\ast$}]{Result\+\_\+store\+\_\+folder }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_af665cf923dfc77c52e48dd74d2e4b0e3}\label{openfdem__commom_8h_af665cf923dfc77c52e48dd74d2e4b0e3}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!get\_filename\_no\_path@{get\_filename\_no\_path}}
+\index{get\_filename\_no\_path@{get\_filename\_no\_path}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{get\_filename\_no\_path()}{get\_filename\_no\_path()}}
+{\footnotesize\ttfamily void get\+\_\+filename\+\_\+no\+\_\+path (\begin{DoxyParamCaption}\item[{char $\ast$}]{return\+\_\+string,  }\item[{char $\ast$}]{input\+\_\+string }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_a261da189fde53df5cc9cd97f43d53385}\label{openfdem__commom_8h_a261da189fde53df5cc9cd97f43d53385}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!get\_filename\_no\_suffix@{get\_filename\_no\_suffix}}
+\index{get\_filename\_no\_suffix@{get\_filename\_no\_suffix}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{get\_filename\_no\_suffix()}{get\_filename\_no\_suffix()}}
+{\footnotesize\ttfamily void get\+\_\+filename\+\_\+no\+\_\+suffix (\begin{DoxyParamCaption}\item[{char $\ast$}]{return\+\_\+string,  }\item[{char $\ast$}]{input\+\_\+string }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_af7f1202c194c5b481913c1462d0d78e5}\label{openfdem__commom_8h_af7f1202c194c5b481913c1462d0d78e5}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!get\_line\_current\_position@{get\_line\_current\_position}}
+\index{get\_line\_current\_position@{get\_line\_current\_position}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{get\_line\_current\_position()}{get\_line\_current\_position()}}
+{\footnotesize\ttfamily long get\+\_\+line\+\_\+current\+\_\+position (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{fileptr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_a2e9397c17229b54bd1c975a3113817eb}\label{openfdem__commom_8h_a2e9397c17229b54bd1c975a3113817eb}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!get\_path@{get\_path}}
+\index{get\_path@{get\_path}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{get\_path()}{get\_path()}}
+{\footnotesize\ttfamily void get\+\_\+path (\begin{DoxyParamCaption}\item[{char $\ast$}]{return\+\_\+string,  }\item[{char $\ast$}]{input\+\_\+string }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_a98630ddb729d88fab94e9fee4ce88e7d}\label{openfdem__commom_8h_a98630ddb729d88fab94e9fee4ce88e7d}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!get\_suffix@{get\_suffix}}
+\index{get\_suffix@{get\_suffix}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{get\_suffix()}{get\_suffix()}}
+{\footnotesize\ttfamily void get\+\_\+suffix (\begin{DoxyParamCaption}\item[{char $\ast$}]{return\+\_\+string,  }\item[{char $\ast$}]{input\+\_\+string }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_af173a450ad4cc4ab481cdd7baa9359eb}\label{openfdem__commom_8h_af173a450ad4cc4ab481cdd7baa9359eb}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!get\_vector\_global\_to\_local@{get\_vector\_global\_to\_local}}
+\index{get\_vector\_global\_to\_local@{get\_vector\_global\_to\_local}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{get\_vector\_global\_to\_local()}{get\_vector\_global\_to\_local()}}
+{\footnotesize\ttfamily void get\+\_\+vector\+\_\+global\+\_\+to\+\_\+local (\begin{DoxyParamCaption}\item[{double $\ast$}]{u,  }\item[{double $\ast$}]{v,  }\item[{double}]{rx,  }\item[{double}]{ry,  }\item[{double}]{e1x,  }\item[{double}]{e1y,  }\item[{double}]{e2x,  }\item[{double}]{e2y }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_a41bdfd2cdd985bb1accdb397d85623c0}\label{openfdem__commom_8h_a41bdfd2cdd985bb1accdb397d85623c0}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!get\_vector\_rotated@{get\_vector\_rotated}}
+\index{get\_vector\_rotated@{get\_vector\_rotated}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{get\_vector\_rotated()}{get\_vector\_rotated()}}
+{\footnotesize\ttfamily void get\+\_\+vector\+\_\+rotated (\begin{DoxyParamCaption}\item[{double $\ast$}]{e1x,  }\item[{double $\ast$}]{e1y,  }\item[{double}]{e2x,  }\item[{double}]{e2y }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_a08956be0fb422d6ef15e2d0d20a38664}\label{openfdem__commom_8h_a08956be0fb422d6ef15e2d0d20a38664}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!get\_vector\_unit@{get\_vector\_unit}}
+\index{get\_vector\_unit@{get\_vector\_unit}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{get\_vector\_unit()}{get\_vector\_unit()}}
+{\footnotesize\ttfamily void get\+\_\+vector\+\_\+unit (\begin{DoxyParamCaption}\item[{double $\ast$}]{e1x,  }\item[{double $\ast$}]{e1y,  }\item[{double}]{rx,  }\item[{double}]{ry }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_a8f14e1fb10db366742b22c28eb480c23}\label{openfdem__commom_8h_a8f14e1fb10db366742b22c28eb480c23}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!initialize\_1D\_double\_array@{initialize\_1D\_double\_array}}
+\index{initialize\_1D\_double\_array@{initialize\_1D\_double\_array}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{initialize\_1D\_double\_array()}{initialize\_1D\_double\_array()}}
+{\footnotesize\ttfamily double$\ast$ initialize\+\_\+1\+D\+\_\+double\+\_\+array (\begin{DoxyParamCaption}\item[{long}]{m1,  }\item[{double}]{dini }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_a949156108abf19843c73d35073f3b93b}\label{openfdem__commom_8h_a949156108abf19843c73d35073f3b93b}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!initialize\_1D\_int\_array@{initialize\_1D\_int\_array}}
+\index{initialize\_1D\_int\_array@{initialize\_1D\_int\_array}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{initialize\_1D\_int\_array()}{initialize\_1D\_int\_array()}}
+{\footnotesize\ttfamily long$\ast$ initialize\+\_\+1\+D\+\_\+int\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{openfdem__struct_8h_a91adff1610bdf681555a8f2e330dc963}{Int}}}]{m1,  }\item[{\mbox{\hyperlink{openfdem__struct_8h_a91adff1610bdf681555a8f2e330dc963}{Int}}}]{iini }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_a947d1a55deeab18a67ecfd434e44f387}\label{openfdem__commom_8h_a947d1a55deeab18a67ecfd434e44f387}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!initialize\_1D\_tensor@{initialize\_1D\_tensor}}
+\index{initialize\_1D\_tensor@{initialize\_1D\_tensor}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{initialize\_1D\_tensor()}{initialize\_1D\_tensor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structof__tensor}{of\+\_\+tensor}}$\ast$ initialize\+\_\+1\+D\+\_\+tensor (\begin{DoxyParamCaption}\item[{unsigned int}]{size,  }\item[{double}]{double\+\_\+ini }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_a3ea49b16ac7c8f615eae074a829494fe}\label{openfdem__commom_8h_a3ea49b16ac7c8f615eae074a829494fe}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!initialize\_1D\_UInt\_array@{initialize\_1D\_UInt\_array}}
+\index{initialize\_1D\_UInt\_array@{initialize\_1D\_UInt\_array}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{initialize\_1D\_UInt\_array()}{initialize\_1D\_UInt\_array()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{openfdem__struct_8h_a26ff0e0ab71ea1ed8bac401c56ed2242}{UInt}}$\ast$ initialize\+\_\+1\+D\+\_\+\+UInt\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{openfdem__struct_8h_a26ff0e0ab71ea1ed8bac401c56ed2242}{UInt}}}]{m1,  }\item[{\mbox{\hyperlink{openfdem__struct_8h_a26ff0e0ab71ea1ed8bac401c56ed2242}{UInt}}}]{iini }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_a135d4d0bce0649a5fccdf6b70df4fc2a}\label{openfdem__commom_8h_a135d4d0bce0649a5fccdf6b70df4fc2a}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!initialize\_2D\_double\_array@{initialize\_2D\_double\_array}}
+\index{initialize\_2D\_double\_array@{initialize\_2D\_double\_array}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{initialize\_2D\_double\_array()}{initialize\_2D\_double\_array()}}
+{\footnotesize\ttfamily double$\ast$$\ast$ initialize\+\_\+2\+D\+\_\+double\+\_\+array (\begin{DoxyParamCaption}\item[{long}]{m2,  }\item[{long}]{m1,  }\item[{double}]{dini }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_aed43181f659652b1528b8d258d7ea0cf}\label{openfdem__commom_8h_aed43181f659652b1528b8d258d7ea0cf}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!initialize\_2D\_int\_array@{initialize\_2D\_int\_array}}
+\index{initialize\_2D\_int\_array@{initialize\_2D\_int\_array}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{initialize\_2D\_int\_array()}{initialize\_2D\_int\_array()}}
+{\footnotesize\ttfamily long$\ast$$\ast$ initialize\+\_\+2\+D\+\_\+int\+\_\+array (\begin{DoxyParamCaption}\item[{long}]{m2,  }\item[{long}]{m1,  }\item[{long}]{iini }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_a17dbcbf772a2abfab531a7b5232bbfcd}\label{openfdem__commom_8h_a17dbcbf772a2abfab531a7b5232bbfcd}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!initialize\_3D\_double\_array@{initialize\_3D\_double\_array}}
+\index{initialize\_3D\_double\_array@{initialize\_3D\_double\_array}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{initialize\_3D\_double\_array()}{initialize\_3D\_double\_array()}}
+{\footnotesize\ttfamily double$\ast$$\ast$$\ast$ initialize\+\_\+3\+D\+\_\+double\+\_\+array (\begin{DoxyParamCaption}\item[{long}]{m3,  }\item[{long}]{m2,  }\item[{long}]{m1,  }\item[{double}]{dini }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_a9fb67a9b32c39c75beeb77d6f6ecdbf0}\label{openfdem__commom_8h_a9fb67a9b32c39c75beeb77d6f6ecdbf0}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!malloc\_1D\_double\_array@{malloc\_1D\_double\_array}}
+\index{malloc\_1D\_double\_array@{malloc\_1D\_double\_array}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{malloc\_1D\_double\_array()}{malloc\_1D\_double\_array()}}
+{\footnotesize\ttfamily double$\ast$ malloc\+\_\+1\+D\+\_\+double\+\_\+array (\begin{DoxyParamCaption}\item[{long}]{m1 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_aa0fd612d2737f61a0e4fb3ea9eac1152}\label{openfdem__commom_8h_aa0fd612d2737f61a0e4fb3ea9eac1152}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!malloc\_1D\_int\_array@{malloc\_1D\_int\_array}}
+\index{malloc\_1D\_int\_array@{malloc\_1D\_int\_array}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{malloc\_1D\_int\_array()}{malloc\_1D\_int\_array()}}
+{\footnotesize\ttfamily long$\ast$ malloc\+\_\+1\+D\+\_\+int\+\_\+array (\begin{DoxyParamCaption}\item[{long}]{m1 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_a775d41b3e9fccb53efa5ed050f9006a5}\label{openfdem__commom_8h_a775d41b3e9fccb53efa5ed050f9006a5}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!malloc\_2D\_double\_array@{malloc\_2D\_double\_array}}
+\index{malloc\_2D\_double\_array@{malloc\_2D\_double\_array}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{malloc\_2D\_double\_array()}{malloc\_2D\_double\_array()}}
+{\footnotesize\ttfamily double$\ast$$\ast$ malloc\+\_\+2\+D\+\_\+double\+\_\+array (\begin{DoxyParamCaption}\item[{long}]{m2,  }\item[{long}]{m1 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_acb9b2b8f3672919f95a07c99e60c7fca}\label{openfdem__commom_8h_acb9b2b8f3672919f95a07c99e60c7fca}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!malloc\_2D\_int\_array@{malloc\_2D\_int\_array}}
+\index{malloc\_2D\_int\_array@{malloc\_2D\_int\_array}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{malloc\_2D\_int\_array()}{malloc\_2D\_int\_array()}}
+{\footnotesize\ttfamily long$\ast$$\ast$ malloc\+\_\+2\+D\+\_\+int\+\_\+array (\begin{DoxyParamCaption}\item[{long}]{m2,  }\item[{long}]{m1 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_a7421b6d81d94fc5929920dc4bfc7836a}\label{openfdem__commom_8h_a7421b6d81d94fc5929920dc4bfc7836a}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!malloc\_3D\_double\_array@{malloc\_3D\_double\_array}}
+\index{malloc\_3D\_double\_array@{malloc\_3D\_double\_array}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{malloc\_3D\_double\_array()}{malloc\_3D\_double\_array()}}
+{\footnotesize\ttfamily double$\ast$$\ast$$\ast$ malloc\+\_\+3\+D\+\_\+double\+\_\+array (\begin{DoxyParamCaption}\item[{long}]{m3,  }\item[{long}]{m2,  }\item[{long}]{m1 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_ab96946f187e9d673ae894f7d5de3f34f}\label{openfdem__commom_8h_ab96946f187e9d673ae894f7d5de3f34f}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!NULL\_vector@{NULL\_vector}}
+\index{NULL\_vector@{NULL\_vector}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{NULL\_vector()}{NULL\_vector()}}
+{\footnotesize\ttfamily void NULL\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structof__vector}{of\+\_\+vector}} $\ast$}]{d1aray }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_a51b7a5723a0ddff629684fd44c348522}\label{openfdem__commom_8h_a51b7a5723a0ddff629684fd44c348522}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!openfdem\_run\_usr\_break@{openfdem\_run\_usr\_break}}
+\index{openfdem\_run\_usr\_break@{openfdem\_run\_usr\_break}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{openfdem\_run\_usr\_break()}{openfdem\_run\_usr\_break()}}
+{\footnotesize\ttfamily int openfdem\+\_\+run\+\_\+usr\+\_\+break (\begin{DoxyParamCaption}\item[{double}]{dctime,  }\item[{long}]{ncstep,  }\item[{long}]{mcstep }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_a44a50ebc6e050a1160c98c980db6fa29}\label{openfdem__commom_8h_a44a50ebc6e050a1160c98c980db6fa29}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!parse\_1D\_double\_array@{parse\_1D\_double\_array}}
+\index{parse\_1D\_double\_array@{parse\_1D\_double\_array}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{parse\_1D\_double\_array()}{parse\_1D\_double\_array()}}
+{\footnotesize\ttfamily void parse\+\_\+1\+D\+\_\+double\+\_\+array (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{fileptr,  }\item[{double}]{initial\+\_\+double,  }\item[{long}]{max\+\_\+size,  }\item[{long}]{actual\+\_\+size,  }\item[{double $\ast$$\ast$}]{d1aray }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_a95d44e1e0c04b6ad91d43e2ef8c8ccea}\label{openfdem__commom_8h_a95d44e1e0c04b6ad91d43e2ef8c8ccea}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!parse\_1D\_int\_array@{parse\_1D\_int\_array}}
+\index{parse\_1D\_int\_array@{parse\_1D\_int\_array}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{parse\_1D\_int\_array()}{parse\_1D\_int\_array()}}
+{\footnotesize\ttfamily void parse\+\_\+1\+D\+\_\+int\+\_\+array (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{fileptr,  }\item[{long}]{initial\+\_\+int,  }\item[{long}]{max\+\_\+size,  }\item[{long}]{actual\+\_\+size,  }\item[{long $\ast$$\ast$}]{i1aray }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_a209a0c132db108f6d825d6cd9909480e}\label{openfdem__commom_8h_a209a0c132db108f6d825d6cd9909480e}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!parse\_1D\_tensor@{parse\_1D\_tensor}}
+\index{parse\_1D\_tensor@{parse\_1D\_tensor}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{parse\_1D\_tensor()}{parse\_1D\_tensor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structof__tensor}{of\+\_\+tensor}}$\ast$ parse\+\_\+1\+D\+\_\+tensor (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{fileptr,  }\item[{\mbox{\hyperlink{openfdem__struct_8h_a26ff0e0ab71ea1ed8bac401c56ed2242}{UInt}}}]{size,  }\item[{\mbox{\hyperlink{openfdem__struct_8h_a060b837c3b4486ee35317744156f3da2}{Real}}}]{double\+\_\+ini }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_aad351edf42fca5614e7ad3a7b9152910}\label{openfdem__commom_8h_aad351edf42fca5614e7ad3a7b9152910}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!parse\_1D\_vector@{parse\_1D\_vector}}
+\index{parse\_1D\_vector@{parse\_1D\_vector}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{parse\_1D\_vector()}{parse\_1D\_vector()}}
+{\footnotesize\ttfamily void parse\+\_\+1\+D\+\_\+vector (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{fileptr,  }\item[{double}]{dinit,  }\item[{long}]{max\+\_\+size,  }\item[{long}]{actual\+\_\+size,  }\item[{\mbox{\hyperlink{structof__vector}{of\+\_\+vector}} $\ast$$\ast$}]{d1aray }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_aa939a2ce8f595ac5670aadd09d943f9d}\label{openfdem__commom_8h_aa939a2ce8f595ac5670aadd09d943f9d}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!parse\_2D\_double\_array@{parse\_2D\_double\_array}}
+\index{parse\_2D\_double\_array@{parse\_2D\_double\_array}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{parse\_2D\_double\_array()}{parse\_2D\_double\_array()}}
+{\footnotesize\ttfamily void parse\+\_\+2\+D\+\_\+double\+\_\+array (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{fileptr,  }\item[{double}]{initial\+\_\+double,  }\item[{long}]{max\+\_\+size1,  }\item[{long}]{max\+\_\+size2,  }\item[{long}]{read\+\_\+way,  }\item[{long}]{actual\+\_\+size1,  }\item[{long}]{actual\+\_\+size2,  }\item[{double $\ast$$\ast$$\ast$}]{d2aray }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_a3a509d6e6dc5c08180d922fb9cbb03fe}\label{openfdem__commom_8h_a3a509d6e6dc5c08180d922fb9cbb03fe}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!parse\_2D\_int\_array@{parse\_2D\_int\_array}}
+\index{parse\_2D\_int\_array@{parse\_2D\_int\_array}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{parse\_2D\_int\_array()}{parse\_2D\_int\_array()}}
+{\footnotesize\ttfamily void parse\+\_\+2\+D\+\_\+int\+\_\+array (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{fileptr,  }\item[{long}]{initial\+\_\+int,  }\item[{long}]{max\+\_\+size1,  }\item[{long}]{max\+\_\+size2,  }\item[{long}]{read\+\_\+way,  }\item[{long}]{actual\+\_\+size1,  }\item[{long}]{actual\+\_\+size2,  }\item[{long $\ast$$\ast$$\ast$}]{i2aray }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_a5540f08e627f982a13199cf206c20557}\label{openfdem__commom_8h_a5540f08e627f982a13199cf206c20557}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!parse\_3D\_double\_array@{parse\_3D\_double\_array}}
+\index{parse\_3D\_double\_array@{parse\_3D\_double\_array}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{parse\_3D\_double\_array()}{parse\_3D\_double\_array()}}
+{\footnotesize\ttfamily void parse\+\_\+3\+D\+\_\+double\+\_\+array (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{fileptr,  }\item[{double}]{dinit,  }\item[{long}]{n1,  }\item[{long}]{n2,  }\item[{long}]{n3,  }\item[{double $\ast$$\ast$$\ast$$\ast$}]{d3aray }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_af76155db7f59aaa192f71cb60cba22bf}\label{openfdem__commom_8h_af76155db7f59aaa192f71cb60cba22bf}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!parse\_string@{parse\_string}}
+\index{parse\_string@{parse\_string}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{parse\_string()}{parse\_string()}}
+{\footnotesize\ttfamily void parse\+\_\+string (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{Input\+File,  }\item[{char $\ast$}]{string }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_a40c0b3bf8e49a1f4384b6e09fa394f68}\label{openfdem__commom_8h_a40c0b3bf8e49a1f4384b6e09fa394f68}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!parse\_vector@{parse\_vector}}
+\index{parse\_vector@{parse\_vector}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{parse\_vector()}{parse\_vector()}}
+{\footnotesize\ttfamily void parse\+\_\+vector (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{fileptr,  }\item[{double}]{dinit,  }\item[{\mbox{\hyperlink{structof__vector}{of\+\_\+vector}} $\ast$}]{d1aray }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_a7b41dba21c77adeae6dd90f7cc038066}\label{openfdem__commom_8h_a7b41dba21c77adeae6dd90f7cc038066}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!realloc\_Int\_array@{realloc\_Int\_array}}
+\index{realloc\_Int\_array@{realloc\_Int\_array}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{realloc\_Int\_array()}{realloc\_Int\_array()}}
+{\footnotesize\ttfamily int$\ast$ realloc\+\_\+\+Int\+\_\+array (\begin{DoxyParamCaption}\item[{int $\ast$}]{array,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_a2c972d77af801a1f8cea61f684c7b515}\label{openfdem__commom_8h_a2c972d77af801a1f8cea61f684c7b515}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!realloc\_UInt\_array@{realloc\_UInt\_array}}
+\index{realloc\_UInt\_array@{realloc\_UInt\_array}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{realloc\_UInt\_array()}{realloc\_UInt\_array()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{openfdem__struct_8h_a26ff0e0ab71ea1ed8bac401c56ed2242}{UInt}}$\ast$ realloc\+\_\+\+UInt\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{openfdem__struct_8h_a26ff0e0ab71ea1ed8bac401c56ed2242}{UInt}} $\ast$}]{array,  }\item[{\mbox{\hyperlink{openfdem__struct_8h_a26ff0e0ab71ea1ed8bac401c56ed2242}{UInt}}}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{openfdem__commom_8h_ae99538b7a858821ae21d6ea432192455}\label{openfdem__commom_8h_ae99538b7a858821ae21d6ea432192455}} 
+\index{openfdem\_commom.h@{openfdem\_commom.h}!strip\_ext@{strip\_ext}}
+\index{strip\_ext@{strip\_ext}!openfdem\_commom.h@{openfdem\_commom.h}}
+\doxysubsubsection{\texorpdfstring{strip\_ext()}{strip\_ext()}}
+{\footnotesize\ttfamily void strip\+\_\+ext (\begin{DoxyParamCaption}\item[{char $\ast$}]{fname }\end{DoxyParamCaption})}
+

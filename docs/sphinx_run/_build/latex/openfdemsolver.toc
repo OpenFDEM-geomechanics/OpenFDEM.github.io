@@ -1,0 +1,369 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}What is OpenFDEM}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Post\sphinxhyphen {}Processing}{5}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Third\sphinxhyphen {}Party Packages Used in OpenFDEM}{5}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Documentation}{6}{section.1.3}%
+\contentsline {chapter}{\numberline {2}System Requirements}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Build Requirements}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Post\sphinxhyphen {}Processing}{7}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Implicit Static/Non\sphinxhyphen {}Linear Solvers}{7}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Quick Start for Developers}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Source Code Download}{9}{section.3.1}%
+\contentsline {section}{\numberline {3.2}System Requirements}{9}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Copyright}{11}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Tutorials}{13}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Tutorial 0: Create Geometry}{13}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}1.0 Main Steps}{14}{subsection.5.1.1}%
+\contentsline {section}{\numberline {5.2}Tutorial 1: Create Uniaxial Compression Test (UCS)}{14}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}1.0 Main Steps}{15}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}2.0 Codes}{15}{subsection.5.2.2}%
+\contentsline {subsubsection}{2.1 Initialize the model}{15}{subsubsection*.3}%
+\contentsline {subsubsection}{2.2 Create the geometry and the mesh}{15}{subsubsection*.4}%
+\contentsline {subsubsection}{2.3 Assign Material Properties}{16}{subsubsection*.5}%
+\contentsline {subsubsection}{2.4 Create Groups and Assign Boundary Conditions}{16}{subsubsection*.6}%
+\contentsline {subsubsection}{2.5 Set the Outputs}{16}{subsubsection*.7}%
+\contentsline {subsection}{\numberline {5.2.3}3.0 Run the Program}{17}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}4.0 Results}{19}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}5.0 Full Script}{19}{subsection.5.2.5}%
+\contentsline {section}{\numberline {5.3}Tutorial 2: UCS model from Gmsh}{21}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}1.0 Tutorial Prerequistes}{22}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}2.0 Codes}{22}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}3.0 Full Script}{22}{subsection.5.3.3}%
+\contentsline {section}{\numberline {5.4}Tutorial 3: Create Uniaxial Compression Test with Quadrangle Element}{24}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}1.0 Code}{24}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}2.0 Run the Program}{24}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}3.0 Full Script}{24}{subsection.5.4.3}%
+\contentsline {section}{\numberline {5.5}Tutorial 4: Brazilian Disc Test}{27}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}1.0 Tutorial Prerequistes}{27}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}2.0 Main Steps}{29}{subsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.5.3}3.0 Codes}{29}{subsection.5.5.3}%
+\contentsline {subsubsection}{3.1 Initialize the model}{29}{subsubsection*.8}%
+\contentsline {subsubsection}{3.2 Import the geometry and the mesh}{29}{subsubsection*.9}%
+\contentsline {subsubsection}{3.3 Assign Material Properties}{30}{subsubsection*.10}%
+\contentsline {subsubsection}{3.4 Create Groups and Assign Boundary Conditions}{30}{subsubsection*.11}%
+\contentsline {subsubsection}{3.5 Set the Outputs}{31}{subsubsection*.12}%
+\contentsline {subsection}{\numberline {5.5.4}4.0 Run the Program}{31}{subsection.5.5.4}%
+\contentsline {subsection}{\numberline {5.5.5}5.0 Results}{31}{subsection.5.5.5}%
+\contentsline {subsection}{\numberline {5.5.6}6.0 Full Script}{31}{subsection.5.5.6}%
+\contentsline {section}{\numberline {5.6}Tutorial 5: Apply In\sphinxhyphen {}situ Stress}{34}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}1.0 Main Steps}{34}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}2.0 Codes}{35}{subsection.5.6.2}%
+\contentsline {subsubsection}{2.1 Initialize the model}{35}{subsubsection*.13}%
+\contentsline {subsubsection}{2.2 Create the geometry and the mesh}{35}{subsubsection*.14}%
+\contentsline {subsubsection}{2.3 Assign Material Properties}{36}{subsubsection*.15}%
+\contentsline {subsubsection}{2.4 Group the Edges}{36}{subsubsection*.16}%
+\contentsline {subsubsection}{2.5 Assign Boundary Conditions}{36}{subsubsection*.17}%
+\contentsline {subsubsection}{2.6 Set the Outputs}{36}{subsubsection*.18}%
+\contentsline {subsection}{\numberline {5.6.3}3.0 Run the Program}{37}{subsection.5.6.3}%
+\contentsline {subsection}{\numberline {5.6.4}4.0 Results}{37}{subsection.5.6.4}%
+\contentsline {subsection}{\numberline {5.6.5}5.0 Full Script}{39}{subsection.5.6.5}%
+\contentsline {section}{\numberline {5.7}Tutorial 6: Hydro Seepage}{41}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}1.0 Main Steps}{41}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}2.0 Codes}{41}{subsection.5.7.2}%
+\contentsline {subsubsection}{2.1 Initialize the model}{42}{subsubsection*.19}%
+\contentsline {subsubsection}{2.2 Create the geometry and the mesh}{42}{subsubsection*.20}%
+\contentsline {subsubsection}{2.3 Assign Material Properties}{42}{subsubsection*.21}%
+\contentsline {subsubsection}{2.4 Create Groups and Assign Boundary Conditions}{43}{subsubsection*.22}%
+\contentsline {subsubsection}{2.5 Set the Outputs}{43}{subsubsection*.23}%
+\contentsline {subsection}{\numberline {5.7.3}3.0 Run the Program}{44}{subsection.5.7.3}%
+\contentsline {subsection}{\numberline {5.7.4}4.0 Results}{45}{subsection.5.7.4}%
+\contentsline {subsection}{\numberline {5.7.5}5.0 Full Script}{45}{subsection.5.7.5}%
+\contentsline {section}{\numberline {5.8}Tutorial 7: Hydro Fracture Flow}{46}{section.5.8}%
+\contentsline {subsection}{\numberline {5.8.1}1.0 Code}{47}{subsection.5.8.1}%
+\contentsline {subsection}{\numberline {5.8.2}2.0 Run the Program}{47}{subsection.5.8.2}%
+\contentsline {subsection}{\numberline {5.8.3}3.0 Results}{49}{subsection.5.8.3}%
+\contentsline {subsection}{\numberline {5.8.4}4.0 Full Script}{49}{subsection.5.8.4}%
+\contentsline {section}{\numberline {5.9}Tutorial 8: Thermal Flux}{50}{section.5.9}%
+\contentsline {subsection}{\numberline {5.9.1}1.0 Main Steps}{51}{subsection.5.9.1}%
+\contentsline {subsection}{\numberline {5.9.2}2.0 Codes}{51}{subsection.5.9.2}%
+\contentsline {subsubsection}{2.1 Initialize the model}{51}{subsubsection*.24}%
+\contentsline {subsubsection}{2.2 Create the geometry and the mesh}{51}{subsubsection*.25}%
+\contentsline {subsubsection}{2.3 Assign Material and Thermal Properties}{52}{subsubsection*.26}%
+\contentsline {subsubsection}{2.4 Create Groups and Assign Boundary Conditions}{52}{subsubsection*.27}%
+\contentsline {subsubsection}{2.5 Set the Outputs}{53}{subsubsection*.28}%
+\contentsline {subsection}{\numberline {5.9.3}3.0 Run the Program}{53}{subsection.5.9.3}%
+\contentsline {subsection}{\numberline {5.9.4}4.0 Results}{55}{subsection.5.9.4}%
+\contentsline {subsection}{\numberline {5.9.5}5.0 Full Script}{55}{subsection.5.9.5}%
+\contentsline {section}{\numberline {5.10}Tutorial 9: Grain\sphinxhyphen {}based Model (GBM)}{57}{section.5.10}%
+\contentsline {subsection}{\numberline {5.10.1}1.0 Tutorial Prerequistes}{57}{subsection.5.10.1}%
+\contentsline {subsection}{\numberline {5.10.2}2.0 Main Steps}{57}{subsection.5.10.2}%
+\contentsline {subsection}{\numberline {5.10.3}3.0 Codes}{58}{subsection.5.10.3}%
+\contentsline {subsubsection}{3.1 Initialize the model}{58}{subsubsection*.29}%
+\contentsline {subsubsection}{3.2 Import the geometry and the mesh}{59}{subsubsection*.30}%
+\contentsline {subsubsection}{3.3 Assign Material and Thermal Properties}{59}{subsubsection*.31}%
+\contentsline {subsubsection}{3.4 Create Groups and Assign Boundary Conditions}{60}{subsubsection*.32}%
+\contentsline {subsubsection}{3.5 Set the Outputs}{60}{subsubsection*.33}%
+\contentsline {subsection}{\numberline {5.10.4}4.0 Run the Program}{61}{subsection.5.10.4}%
+\contentsline {subsection}{\numberline {5.10.5}5.0 Results}{63}{subsection.5.10.5}%
+\contentsline {subsection}{\numberline {5.10.6}6.0 Full Script}{63}{subsection.5.10.6}%
+\contentsline {section}{\numberline {5.11}Tutorial 10: Phase Field}{65}{section.5.11}%
+\contentsline {subsection}{\numberline {5.11.1}1.0 Main Steps}{65}{subsection.5.11.1}%
+\contentsline {subsection}{\numberline {5.11.2}2.0 Codes}{65}{subsection.5.11.2}%
+\contentsline {subsubsection}{2.1 Initialize the model}{67}{subsubsection*.34}%
+\contentsline {subsubsection}{2.2 Create the geometry and the mesh}{67}{subsubsection*.35}%
+\contentsline {subsubsection}{2.3 Assign Material and Thermal Properties}{68}{subsubsection*.36}%
+\contentsline {subsubsection}{2.4 Create Groups and Assign Boundary Conditions}{68}{subsubsection*.37}%
+\contentsline {subsubsection}{2.5 Set the Outputs}{68}{subsubsection*.38}%
+\contentsline {subsection}{\numberline {5.11.3}3.0 Run the Program}{69}{subsection.5.11.3}%
+\contentsline {subsection}{\numberline {5.11.4}4.0 Results}{71}{subsection.5.11.4}%
+\contentsline {subsection}{\numberline {5.11.5}5.0 Full Script}{71}{subsection.5.11.5}%
+\contentsline {section}{\numberline {5.12}Create the Geometry}{73}{section.5.12}%
+\contentsline {section}{\numberline {5.13}Lab Tests}{75}{section.5.13}%
+\contentsline {section}{\numberline {5.14}Excavation}{79}{section.5.14}%
+\contentsline {section}{\numberline {5.15}Hydro Module}{80}{section.5.15}%
+\contentsline {section}{\numberline {5.16}Thermal Module}{80}{section.5.16}%
+\contentsline {section}{\numberline {5.17}GBM}{81}{section.5.17}%
+\contentsline {section}{\numberline {5.18}Phase Field}{82}{section.5.18}%
+\contentsline {chapter}{\numberline {6}User Guide}{83}{chapter.6}%
+\contentsline {section}{\numberline {6.1}General}{83}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}of.console.interval}{83}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}of.damp.global}{83}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}of.finalize}{84}{subsection.6.1.3}%
+\contentsline {subsection}{\numberline {6.1.4}of.import}{84}{subsection.6.1.4}%
+\contentsline {subsection}{\numberline {6.1.5}of.import.table}{84}{subsection.6.1.5}%
+\contentsline {subsection}{\numberline {6.1.6}of.log.interval}{85}{subsection.6.1.6}%
+\contentsline {subsection}{\numberline {6.1.7}of.new}{85}{subsection.6.1.7}%
+\contentsline {subsection}{\numberline {6.1.8}of.restore}{86}{subsection.6.1.8}%
+\contentsline {subsection}{\numberline {6.1.9}of.save}{86}{subsection.6.1.9}%
+\contentsline {subsection}{\numberline {6.1.10}of.save.FEM}{86}{subsection.6.1.10}%
+\contentsline {subsection}{\numberline {6.1.11}of.set.config}{87}{subsection.6.1.11}%
+\contentsline {subsection}{\numberline {6.1.12}of.set.contact}{87}{subsection.6.1.12}%
+\contentsline {subsection}{\numberline {6.1.13}of.set.debug}{87}{subsection.6.1.13}%
+\contentsline {subsection}{\numberline {6.1.14}of.set.GBM}{88}{subsection.6.1.14}%
+\contentsline {subsection}{\numberline {6.1.15}of.set.gravity}{88}{subsection.6.1.15}%
+\contentsline {subsection}{\numberline {6.1.16}of.set.large}{89}{subsection.6.1.16}%
+\contentsline {subsection}{\numberline {6.1.17}of.set.massscale}{89}{subsection.6.1.17}%
+\contentsline {subsection}{\numberline {6.1.18}of.set.module}{89}{subsection.6.1.18}%
+\contentsline {subsection}{\numberline {6.1.19}of.set.omp}{90}{subsection.6.1.19}%
+\contentsline {subsection}{\numberline {6.1.20}of.set.result}{90}{subsection.6.1.20}%
+\contentsline {subsection}{\numberline {6.1.21}of.set.rgbm}{91}{subsection.6.1.21}%
+\contentsline {subsection}{\numberline {6.1.22}of.solve}{91}{subsection.6.1.22}%
+\contentsline {subsection}{\numberline {6.1.23}of.step}{92}{subsection.6.1.23}%
+\contentsline {subsection}{\numberline {6.1.24}of.timestep}{92}{subsection.6.1.24}%
+\contentsline {section}{\numberline {6.2}Blast}{93}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}of.blast.position}{93}{subsection.6.2.1}%
+\contentsline {subsubsection}{Example:}{93}{subsubsection*.39}%
+\contentsline {section}{\numberline {6.3}Boundary}{93}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}of.boundary.nodal.force}{93}{subsection.6.3.1}%
+\contentsline {subsubsection}{Example:}{94}{subsubsection*.40}%
+\contentsline {subsection}{\numberline {6.3.2}of.boundary.nodal.velocity}{94}{subsection.6.3.2}%
+\contentsline {subsubsection}{Example:}{95}{subsubsection*.41}%
+\contentsline {subsection}{\numberline {6.3.3}of.boundary.nodal.inivelocity}{95}{subsection.6.3.3}%
+\contentsline {subsubsection}{Example:}{95}{subsubsection*.42}%
+\contentsline {subsection}{\numberline {6.3.4}of.boundary.nodal.acceleration}{95}{subsection.6.3.4}%
+\contentsline {subsubsection}{Example:}{96}{subsubsection*.43}%
+\contentsline {subsection}{\numberline {6.3.5}of.boundary.nodal.clear}{96}{subsection.6.3.5}%
+\contentsline {subsubsection}{Example:}{96}{subsubsection*.44}%
+\contentsline {subsection}{\numberline {6.3.6}of.boundary.edge.force}{96}{subsection.6.3.6}%
+\contentsline {subsubsection}{Example:}{97}{subsubsection*.45}%
+\contentsline {subsection}{\numberline {6.3.7}of.boundary.edge.velocity}{97}{subsection.6.3.7}%
+\contentsline {subsubsection}{Example:}{97}{subsubsection*.46}%
+\contentsline {subsection}{\numberline {6.3.8}of.boundary.edge.inivelocity}{97}{subsection.6.3.8}%
+\contentsline {subsubsection}{Example:}{98}{subsubsection*.47}%
+\contentsline {subsection}{\numberline {6.3.9}of.boundary.edge.acceleration}{98}{subsection.6.3.9}%
+\contentsline {subsubsection}{Example:}{98}{subsubsection*.48}%
+\contentsline {subsection}{\numberline {6.3.10}of.boundary.edge.clear}{98}{subsection.6.3.10}%
+\contentsline {subsubsection}{Example:}{99}{subsubsection*.49}%
+\contentsline {subsection}{\numberline {6.3.11}of.boundary.element.stress}{99}{subsection.6.3.11}%
+\contentsline {subsubsection}{Example:}{99}{subsubsection*.50}%
+\contentsline {subsection}{\numberline {6.3.12}of.boundary.element.stress.xgrad}{99}{subsection.6.3.12}%
+\contentsline {subsubsection}{Example:}{100}{subsubsection*.51}%
+\contentsline {subsection}{\numberline {6.3.13}of.boundary.element.stress.ygrad}{100}{subsection.6.3.13}%
+\contentsline {subsubsection}{Example:}{100}{subsubsection*.52}%
+\contentsline {subsection}{\numberline {6.3.14}of.boundary.element.clear}{100}{subsection.6.3.14}%
+\contentsline {subsubsection}{Example:}{101}{subsubsection*.53}%
+\contentsline {subsection}{\numberline {6.3.15}of.boundary.blast}{101}{subsection.6.3.15}%
+\contentsline {subsubsection}{Example:}{101}{subsubsection*.54}%
+\contentsline {section}{\numberline {6.4}DFN}{101}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}of.DFN.connectivity}{101}{subsection.6.4.1}%
+\contentsline {subsubsection}{Example:}{101}{subsubsection*.55}%
+\contentsline {subsection}{\numberline {6.4.2}of.DFN.group}{102}{subsection.6.4.2}%
+\contentsline {subsubsection}{Example:}{102}{subsubsection*.56}%
+\contentsline {subsection}{\numberline {6.4.3}of.DFN.cohesive}{102}{subsection.6.4.3}%
+\contentsline {subsubsection}{Example:}{102}{subsubsection*.57}%
+\contentsline {subsection}{\numberline {6.4.4}of.DFN.broken}{102}{subsection.6.4.4}%
+\contentsline {subsubsection}{Example:}{103}{subsubsection*.58}%
+\contentsline {section}{\numberline {6.5}FEM}{103}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}of.import.FEM.nodal.coord}{103}{subsection.6.5.1}%
+\contentsline {subsubsection}{Example:}{103}{subsubsection*.59}%
+\contentsline {subsection}{\numberline {6.5.2}of.import.FEM.nodal.coord0}{103}{subsection.6.5.2}%
+\contentsline {subsubsection}{Example:}{104}{subsubsection*.60}%
+\contentsline {subsection}{\numberline {6.5.3}of.import.FEM.nodal.velocity}{104}{subsection.6.5.3}%
+\contentsline {subsubsection}{Example:}{104}{subsubsection*.61}%
+\contentsline {subsection}{\numberline {6.5.4}of.import.FEM.nodal.groups}{104}{subsection.6.5.4}%
+\contentsline {subsubsection}{Example:}{105}{subsubsection*.62}%
+\contentsline {subsection}{\numberline {6.5.5}of.import.FEM.edge.groups}{105}{subsection.6.5.5}%
+\contentsline {subsubsection}{Example:}{105}{subsubsection*.63}%
+\contentsline {subsection}{\numberline {6.5.6}of.import.FEM.element.groups}{105}{subsection.6.5.6}%
+\contentsline {subsubsection}{Example:}{106}{subsubsection*.64}%
+\contentsline {subsection}{\numberline {6.5.7}of.import.FEM.element.connectivity}{106}{subsection.6.5.7}%
+\contentsline {subsubsection}{Example:}{106}{subsubsection*.65}%
+\contentsline {section}{\numberline {6.6}Geometry}{106}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}of.geometry.square}{106}{subsection.6.6.1}%
+\contentsline {subsubsection}{Example:}{107}{subsubsection*.66}%
+\contentsline {subsection}{\numberline {6.6.2}of.geometry.cut.square}{107}{subsection.6.6.2}%
+\contentsline {subsubsection}{Example:}{108}{subsubsection*.67}%
+\contentsline {subsection}{\numberline {6.6.3}of.geometry.remove.square}{109}{subsection.6.6.3}%
+\contentsline {subsubsection}{Example:}{109}{subsubsection*.68}%
+\contentsline {subsection}{\numberline {6.6.4}of.geometry.circle}{109}{subsection.6.6.4}%
+\contentsline {subsubsection}{Example:}{110}{subsubsection*.69}%
+\contentsline {subsection}{\numberline {6.6.5}of.geometry.cut.circle}{110}{subsection.6.6.5}%
+\contentsline {subsubsection}{Example:}{111}{subsubsection*.70}%
+\contentsline {subsection}{\numberline {6.6.6}of.geometry.remove.circle}{111}{subsection.6.6.6}%
+\contentsline {subsubsection}{Example:}{111}{subsubsection*.71}%
+\contentsline {subsection}{\numberline {6.6.7}of.geometry.ellipse}{111}{subsection.6.6.7}%
+\contentsline {subsubsection}{Example:}{112}{subsubsection*.72}%
+\contentsline {subsection}{\numberline {6.6.8}of.geometry.cut.ellipse}{112}{subsection.6.6.8}%
+\contentsline {subsubsection}{Example:}{112}{subsubsection*.73}%
+\contentsline {subsection}{\numberline {6.6.9}of.geometry.remove.ellipse}{112}{subsection.6.6.9}%
+\contentsline {subsubsection}{Example:}{113}{subsubsection*.74}%
+\contentsline {subsection}{\numberline {6.6.10}of.geometry.polygon}{113}{subsection.6.6.10}%
+\contentsline {subsubsection}{Example:}{113}{subsubsection*.75}%
+\contentsline {subsection}{\numberline {6.6.11}of.geometry.cut.polygon}{113}{subsection.6.6.11}%
+\contentsline {subsubsection}{Example:}{114}{subsubsection*.76}%
+\contentsline {subsection}{\numberline {6.6.12}of.geometry.remove.polygon}{114}{subsection.6.6.12}%
+\contentsline {subsubsection}{Example:}{114}{subsubsection*.77}%
+\contentsline {subsection}{\numberline {6.6.13}of.geometry.table}{114}{subsection.6.6.13}%
+\contentsline {subsubsection}{Example:}{115}{subsubsection*.78}%
+\contentsline {subsection}{\numberline {6.6.14}of.geometry.cut.table}{115}{subsection.6.6.14}%
+\contentsline {subsubsection}{Example:}{115}{subsubsection*.79}%
+\contentsline {subsection}{\numberline {6.6.15}of.geometry.remove.table}{115}{subsection.6.6.15}%
+\contentsline {subsubsection}{Example:}{116}{subsubsection*.80}%
+\contentsline {subsection}{\numberline {6.6.16}of.geometry.domain}{116}{subsection.6.6.16}%
+\contentsline {subsubsection}{Example:}{116}{subsubsection*.81}%
+\contentsline {subsection}{\numberline {6.6.17}of.geometry.cut.joint}{116}{subsection.6.6.17}%
+\contentsline {subsubsection}{Example:}{116}{subsubsection*.82}%
+\contentsline {subsection}{\numberline {6.6.18}of.geometry.cut.jset}{117}{subsection.6.6.18}%
+\contentsline {subsubsection}{Example:}{117}{subsubsection*.83}%
+\contentsline {subsection}{\numberline {6.6.19}of.geometry.cut.DFN}{118}{subsection.6.6.19}%
+\contentsline {subsubsection}{Example:}{118}{subsubsection*.84}%
+\contentsline {subsection}{\numberline {6.6.20}of.geometry.cut.arc}{119}{subsection.6.6.20}%
+\contentsline {subsubsection}{Example:}{119}{subsubsection*.85}%
+\contentsline {subsection}{\numberline {6.6.21}of.geometry.minsize}{119}{subsection.6.6.21}%
+\contentsline {subsubsection}{Example:}{119}{subsubsection*.86}%
+\contentsline {subsection}{\numberline {6.6.22}of.geometry.minangle}{120}{subsection.6.6.22}%
+\contentsline {subsubsection}{Example:}{120}{subsubsection*.87}%
+\contentsline {subsection}{\numberline {6.6.23}of.geometry.iteration}{120}{subsection.6.6.23}%
+\contentsline {subsubsection}{Example:}{120}{subsubsection*.88}%
+\contentsline {subsection}{\numberline {6.6.24}of.geometry.group}{120}{subsection.6.6.24}%
+\contentsline {subsubsection}{Example:}{121}{subsubsection*.89}%
+\contentsline {subsection}{\numberline {6.6.25}of.geometry.mesh.size}{121}{subsection.6.6.25}%
+\contentsline {subsubsection}{Example:}{121}{subsubsection*.90}%
+\contentsline {subsection}{\numberline {6.6.26}of.geometry.recombine}{122}{subsection.6.6.26}%
+\contentsline {subsubsection}{Example:}{122}{subsubsection*.91}%
+\contentsline {subsection}{\numberline {6.6.27}of.geometry.mesh}{122}{subsection.6.6.27}%
+\contentsline {subsubsection}{Example:}{122}{subsubsection*.92}%
+\contentsline {subsection}{\numberline {6.6.28}of.geometry.mesh.write}{122}{subsection.6.6.28}%
+\contentsline {subsubsection}{Example:}{123}{subsubsection*.93}%
+\contentsline {section}{\numberline {6.7}Group}{123}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}of.group.nodal}{123}{subsection.6.7.1}%
+\contentsline {subsubsection}{Example:}{124}{subsubsection*.94}%
+\contentsline {subsection}{\numberline {6.7.2}of.group.edge}{124}{subsection.6.7.2}%
+\contentsline {subsubsection}{Example:}{125}{subsubsection*.95}%
+\contentsline {subsection}{\numberline {6.7.3}of.group.element}{125}{subsection.6.7.3}%
+\contentsline {subsubsection}{Example:}{126}{subsubsection*.96}%
+\contentsline {subsection}{\numberline {6.7.4}of.group.cohelement}{126}{subsection.6.7.4}%
+\contentsline {subsubsection}{Example:}{127}{subsubsection*.97}%
+\contentsline {subsection}{\numberline {6.7.5}of.group.nodal.from.element}{127}{subsection.6.7.5}%
+\contentsline {subsubsection}{Example:}{127}{subsubsection*.98}%
+\contentsline {subsection}{\numberline {6.7.6}of.group.edge.from.element}{127}{subsection.6.7.6}%
+\contentsline {subsubsection}{Example:}{128}{subsubsection*.99}%
+\contentsline {subsection}{\numberline {6.7.7}of.group.edge.from.cohcohelement}{128}{subsection.6.7.7}%
+\contentsline {subsubsection}{Example:}{128}{subsubsection*.100}%
+\contentsline {subsection}{\numberline {6.7.8}of.group.edge.from.dfn}{128}{subsection.6.7.8}%
+\contentsline {subsubsection}{Example:}{129}{subsubsection*.101}%
+\contentsline {subsection}{\numberline {6.7.9}of.group.cohelement.from.dfn}{129}{subsection.6.7.9}%
+\contentsline {subsubsection}{Example:}{129}{subsubsection*.102}%
+\contentsline {subsection}{\numberline {6.7.10}of.group.cohelement.from.gbm}{129}{subsection.6.7.10}%
+\contentsline {subsubsection}{Example:}{130}{subsubsection*.103}%
+\contentsline {subsection}{\numberline {6.7.11}of.group.nodal.bool.union}{130}{subsection.6.7.11}%
+\contentsline {subsubsection}{Example:}{130}{subsubsection*.104}%
+\contentsline {subsection}{\numberline {6.7.12}of.group.nodal.bool.intersect}{130}{subsection.6.7.12}%
+\contentsline {subsubsection}{Example:}{130}{subsubsection*.105}%
+\contentsline {subsection}{\numberline {6.7.13}of.group.nodal.bool.subtract}{131}{subsection.6.7.13}%
+\contentsline {subsubsection}{Example:}{131}{subsubsection*.106}%
+\contentsline {subsection}{\numberline {6.7.14}of.group.edge.bool.union}{131}{subsection.6.7.14}%
+\contentsline {subsubsection}{Example:}{131}{subsubsection*.107}%
+\contentsline {subsection}{\numberline {6.7.15}of.group.edge.bool.intersect}{131}{subsection.6.7.15}%
+\contentsline {subsubsection}{Example:}{132}{subsubsection*.108}%
+\contentsline {subsection}{\numberline {6.7.16}of.group.edge.bool.subtract}{132}{subsection.6.7.16}%
+\contentsline {subsubsection}{Example:}{132}{subsubsection*.109}%
+\contentsline {subsection}{\numberline {6.7.17}of.group.element.bool.union}{132}{subsection.6.7.17}%
+\contentsline {subsubsection}{Example:}{133}{subsubsection*.110}%
+\contentsline {subsection}{\numberline {6.7.18}of.group.element.bool.intersect}{133}{subsection.6.7.18}%
+\contentsline {subsubsection}{Example:}{133}{subsubsection*.111}%
+\contentsline {subsection}{\numberline {6.7.19}of.group.element.bool.subtract}{133}{subsection.6.7.19}%
+\contentsline {subsubsection}{Example:}{133}{subsubsection*.112}%
+\contentsline {subsection}{\numberline {6.7.20}of.group.cohelement.bool.union}{134}{subsection.6.7.20}%
+\contentsline {subsubsection}{Example:}{134}{subsubsection*.113}%
+\contentsline {subsection}{\numberline {6.7.21}of.group.cohelement.bool.intersect}{134}{subsection.6.7.21}%
+\contentsline {subsubsection}{Example:}{134}{subsubsection*.114}%
+\contentsline {subsection}{\numberline {6.7.22}of.group.cohelement.bool.subtract}{134}{subsection.6.7.22}%
+\contentsline {subsubsection}{Example:}{135}{subsubsection*.115}%
+\contentsline {section}{\numberline {6.8}Mesh}{135}{section.6.8}%
+\contentsline {subsection}{\numberline {6.8.1}of.mesh.insert}{135}{subsection.6.8.1}%
+\contentsline {subsubsection}{Example:}{135}{subsubsection*.116}%
+\contentsline {subsection}{\numberline {6.8.2}of.mesh.insert.dfn}{135}{subsection.6.8.2}%
+\contentsline {subsubsection}{Example:}{136}{subsubsection*.117}%
+\contentsline {subsection}{\numberline {6.8.3}of.mesh.voronoi}{136}{subsection.6.8.3}%
+\contentsline {subsubsection}{Example:}{136}{subsubsection*.118}%
+\contentsline {subsection}{\numberline {6.8.4}of.mesh.split}{136}{subsection.6.8.4}%
+\contentsline {subsubsection}{Example:}{136}{subsubsection*.119}%
+\contentsline {subsection}{\numberline {6.8.5}of.mesh.bary}{136}{subsection.6.8.5}%
+\contentsline {subsubsection}{Example:}{137}{subsubsection*.120}%
+\contentsline {subsection}{\numberline {6.8.6}of.mesh.RG}{137}{subsection.6.8.6}%
+\contentsline {subsubsection}{Example:}{137}{subsubsection*.121}%
+\contentsline {subsection}{\numberline {6.8.7}of.mesh.RGB}{137}{subsection.6.8.7}%
+\contentsline {subsubsection}{Example:}{137}{subsubsection*.122}%
+\contentsline {subsection}{\numberline {6.8.8}of.mesh.NVB}{137}{subsection.6.8.8}%
+\contentsline {subsubsection}{Example:}{138}{subsubsection*.123}%
+\contentsline {subsection}{\numberline {6.8.9}of.mesh.baryGB}{138}{subsection.6.8.9}%
+\contentsline {subsubsection}{Example:}{138}{subsubsection*.124}%
+\contentsline {section}{\numberline {6.9}Material}{138}{section.6.9}%
+\contentsline {subsection}{\numberline {6.9.1}of.mat.element}{138}{subsection.6.9.1}%
+\contentsline {subsubsection}{Example:}{140}{subsubsection*.125}%
+\contentsline {subsection}{\numberline {6.9.2}of.mat.cohesive}{141}{subsection.6.9.2}%
+\contentsline {subsubsection}{Example:}{142}{subsubsection*.126}%
+\contentsline {subsection}{\numberline {6.9.3}of.mat.contact}{142}{subsection.6.9.3}%
+\contentsline {subsubsection}{Example:}{144}{subsubsection*.127}%
+\contentsline {subsection}{\numberline {6.9.4}of.mat.hydro.matrix}{144}{subsection.6.9.4}%
+\contentsline {subsection}{\numberline {6.9.5}of.mat.hydro.fracture}{144}{subsection.6.9.5}%
+\contentsline {subsection}{\numberline {6.9.6}of.mat.mpm.fluid}{144}{subsection.6.9.6}%
+\contentsline {subsection}{\numberline {6.9.7}of.mat.mpm.solid}{144}{subsection.6.9.7}%
+\contentsline {subsection}{\numberline {6.9.8}of.mat.hydro.fluid}{144}{subsection.6.9.8}%
+\contentsline {subsection}{\numberline {6.9.9}of.mat.hydro.gas}{144}{subsection.6.9.9}%
+\contentsline {subsection}{\numberline {6.9.10}of.mat.nonlocal}{144}{subsection.6.9.10}%
+\contentsline {subsection}{\numberline {6.9.11}of.mat.thermal}{144}{subsection.6.9.11}%
+\contentsline {section}{\numberline {6.10}History}{145}{section.6.10}%
+\contentsline {subsection}{\numberline {6.10.1}of.history.pv.interval}{145}{subsection.6.10.1}%
+\contentsline {subsubsection}{Example:}{145}{subsubsection*.128}%
+\contentsline {subsection}{\numberline {6.10.2}of.history.pv.dynamic.interval}{145}{subsection.6.10.2}%
+\contentsline {subsubsection}{Example:}{145}{subsubsection*.129}%
+\contentsline {subsection}{\numberline {6.10.3}of.history.pv.field}{145}{subsection.6.10.3}%
+\contentsline {subsubsection}{Example:}{146}{subsubsection*.130}%
+\contentsline {subsection}{\numberline {6.10.4}of.history.pv.fracture}{146}{subsection.6.10.4}%
+\contentsline {subsubsection}{Example:}{147}{subsubsection*.131}%
+\contentsline {subsection}{\numberline {6.10.5}of.history.pv.cohesive}{147}{subsection.6.10.5}%
+\contentsline {subsubsection}{Example:}{147}{subsubsection*.132}%
+\contentsline {subsection}{\numberline {6.10.6}of.history.pv.damage}{147}{subsection.6.10.6}%
+\contentsline {subsubsection}{Example:}{148}{subsubsection*.133}%
+\contentsline {subsection}{\numberline {6.10.7}of.history.pv.ae}{148}{subsection.6.10.7}%
+\contentsline {subsubsection}{Example:}{148}{subsubsection*.134}%
+\contentsline {section}{\numberline {6.11}General}{148}{section.6.11}%
+\contentsline {section}{\numberline {6.12}Blast}{149}{section.6.12}%
+\contentsline {section}{\numberline {6.13}Boundary Conditions}{150}{section.6.13}%
+\contentsline {section}{\numberline {6.14}DFN}{150}{section.6.14}%
+\contentsline {section}{\numberline {6.15}FEM}{150}{section.6.15}%
+\contentsline {section}{\numberline {6.16}Geometry}{151}{section.6.16}%
+\contentsline {section}{\numberline {6.17}Group}{152}{section.6.17}%
+\contentsline {section}{\numberline {6.18}Mesh}{153}{section.6.18}%
+\contentsline {section}{\numberline {6.19}Material}{153}{section.6.19}%
+\contentsline {section}{\numberline {6.20}History}{153}{section.6.20}%
+\contentsline {chapter}{\numberline {7}Common class}{155}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Geometry class}{161}{chapter.8}%
+\contentsline {section}{\numberline {8.1}LICENSE}{175}{section.8.1}%
+\contentsline {section}{\numberline {8.2}LICENSE}{175}{section.8.2}%
+\contentsline {section}{\numberline {8.3}LICENSE}{177}{section.8.3}%
+\contentsline {section}{\numberline {8.4}LICENSE}{178}{section.8.4}%
+\contentsline {chapter}{\numberline {9}Solid class}{179}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Index}{205}{chapter.10}%

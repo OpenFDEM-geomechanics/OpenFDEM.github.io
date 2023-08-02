@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="structae__type" kind="struct" language="C++" prot="public">
+    <compoundname>ae_type</compoundname>
+    <includes refid="openfdem__sesmic_8h" local="no">openfdem_sesmic.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structae__type_1a33447f96f00d708dd345d6eb79c95d41" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real time</definition>
+        <argsstring></argsstring>
+        <name>time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_cohesive/sesmic/openfdem_sesmic.h" line="16" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_cohesive/sesmic/openfdem_sesmic.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structae__type_1a56aeb9eee647d8c929a011a59de85060" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real win_time</definition>
+        <argsstring></argsstring>
+        <name>win_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_cohesive/sesmic/openfdem_sesmic.h" line="17" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_cohesive/sesmic/openfdem_sesmic.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structae__type_1a987619bded1129f41cde7f69d186bcb3" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real win_kinetic</definition>
+        <argsstring></argsstring>
+        <name>win_kinetic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_cohesive/sesmic/openfdem_sesmic.h" line="18" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_cohesive/sesmic/openfdem_sesmic.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structae__type_1ac89131097011516f99d838765bc29776" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real kinetic</definition>
+        <argsstring></argsstring>
+        <name>kinetic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_cohesive/sesmic/openfdem_sesmic.h" line="19" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_cohesive/sesmic/openfdem_sesmic.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structae__type_1a5f5bc31fc9db8238af896bec88491bc9" prot="public" static="no" mutable="no">
+        <type>Real</type>
+        <definition>Real magnitue</definition>
+        <argsstring></argsstring>
+        <name>magnitue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_cohesive/sesmic/openfdem_sesmic.h" line="20" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_cohesive/sesmic/openfdem_sesmic.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structae__type_1aaca16c96f43b7c4d55119bcdd9367993" prot="public" static="no" mutable="no">
+        <type>UInt</type>
+        <definition>UInt coele</definition>
+        <argsstring></argsstring>
+        <name>coele</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_cohesive/sesmic/openfdem_sesmic.h" line="21" column="6" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_cohesive/sesmic/openfdem_sesmic.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>this structure is responsible for... </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>win_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>win_kinetic</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting filename=".c"><codeline><highlight class="normal"><ref refid="structae__type" kindref="compound">ae_type</ref>(5,6,7,magnitude=9)</highlight></codeline>
+</programlisting> </para>
+    </detaileddescription>
+    <location file="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_cohesive/sesmic/openfdem_sesmic.h" line="15" column="1" bodyfile="/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem src/src/solid/solid_mechanics_cohesive/sesmic/openfdem_sesmic.h" bodystart="15" bodyend="22"/>
+    <listofallmembers>
+      <member refid="structae__type_1aaca16c96f43b7c4d55119bcdd9367993" prot="public" virt="non-virtual"><scope>ae_type</scope><name>coele</name></member>
+      <member refid="structae__type_1ac89131097011516f99d838765bc29776" prot="public" virt="non-virtual"><scope>ae_type</scope><name>kinetic</name></member>
+      <member refid="structae__type_1a5f5bc31fc9db8238af896bec88491bc9" prot="public" virt="non-virtual"><scope>ae_type</scope><name>magnitue</name></member>
+      <member refid="structae__type_1a33447f96f00d708dd345d6eb79c95d41" prot="public" virt="non-virtual"><scope>ae_type</scope><name>time</name></member>
+      <member refid="structae__type_1a987619bded1129f41cde7f69d186bcb3" prot="public" virt="non-virtual"><scope>ae_type</scope><name>win_kinetic</name></member>
+      <member refid="structae__type_1a56aeb9eee647d8c929a011a59de85060" prot="public" virt="non-virtual"><scope>ae_type</scope><name>win_time</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
