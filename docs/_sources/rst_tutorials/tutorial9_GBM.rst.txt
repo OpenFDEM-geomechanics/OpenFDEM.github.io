@@ -1,4 +1,4 @@
-Tutorial 9: Grain-based Model (GBM)
+Grain-based Model (GBM), interface with ``Neper``
 ########################################
 Grain based modeling on UCS test.
 
@@ -12,15 +12,15 @@ Grain based modeling on UCS test.
 |
 
 ==================================
-1.0 Tutorial Prerequistes
+1 Tutorial Prerequistes
 ==================================
 The following files are needed to follow along the tutorial:
 
-- `Job-1.inp`_ (click to download from GitHub gist)
+- `Job-1.inp`_ (click to download from GitHub)
 
-.. _Job-1.inp: = https://github.com/OpenFDEM-geomechanics/Examples/blob/main/GBM/Job-1.inp
+.. _Job-1.inp: = https://github.com/OpenFDEM-geomechanics/Examples/tree/main/GBM/Job-1.inp
 ==================================
-2.0 Main Steps
+2 Main Steps
 ==================================
 
 #. Initialize the model.
@@ -30,7 +30,7 @@ The following files are needed to follow along the tutorial:
 #. Set the outputs.
 
 ==================================
-3.0 Codes
+3 Codes
 ==================================
 Please note that, all the setting in the example is based on the developer's computer. You may need to change 
 these setting based on your own conditions.
@@ -41,15 +41,15 @@ To start with programming, create a new empty text file (later add the `.of` ext
 3.1 Initialize the model
 -------------------------------------------------------------------
 #. Create a new run and clean up the old memories.
-    .. literalinclude:: ../../../src/examples/GBM/runme.of
+    .. literalinclude:: examples/GBM/runme.of
         :lines: 39
 
 #. Turn on GBM module
-    .. literalinclude:: ../../../src/examples/GBM/runme.of
+    .. literalinclude:: examples/GBM/runme.of
         :lines: 40
 
 #. Set up the folder name to save your results. Here the folder name is set to be “result”.
-    .. literalinclude:: ../../../src/examples/GBM/runme.of
+    .. literalinclude:: examples/GBM/runme.of
         :lines: 44
 
 #. Set the number of cores to be used for running this model.
@@ -58,87 +58,87 @@ To start with programming, create a new empty text file (later add the `.of` ext
         check your computer to fill in the number of cores you want to use from your computer. To check the number 
         of cores your computer has, you can go Task Manager > Performance > CPU > Cores. If nothing is set here, 
         serial computing will be used.
-    .. literalinclude:: ../../../src/examples/GBM/runme.of
+    .. literalinclude:: examples/GBM/runme.of
         :lines: 48
 
 -------------------------------------------------------------------
 3.2 Import the geometry and the mesh
 -------------------------------------------------------------------
 #. Import the geometry
-    .. literalinclude:: ../../../src/examples/GBM/runme.of
+    .. literalinclude:: examples/GBM/runme.of
         :lines: 51
 #. 
-    .. literalinclude:: ../../../src/examples/GBM/runme.of
+    .. literalinclude:: examples/GBM/runme.of
         :lines: 53
 #. Group the elements.
-    .. literalinclude:: ../../../src/examples/GBM/runme.of
+    .. literalinclude:: examples/GBM/runme.of
         :lines: 54-56
 #. Insert cohesive elements
-    .. literalinclude:: ../../../src/examples/GBM/runme.of
+    .. literalinclude:: examples/GBM/runme.of
         :lines: 59
 #. Group cohesive elements
-    .. literalinclude:: ../../../src/examples/GBM/runme.of
+    .. literalinclude:: examples/GBM/runme.of
         :lines: 62-67
 
 -------------------------------------------------------------------
 3.3 Assign Material and Thermal Properties
 -------------------------------------------------------------------
 #. Set the material properties of minerals and platens.
-    .. literalinclude:: ../../../src/examples/GBM/runme.of
+    .. literalinclude:: examples/GBM/runme.of
         :lines: 70-72, 74-75
 #. Assign materials for CZM.
-    .. literalinclude:: ../../../src/examples/GBM/runme.of
+    .. literalinclude:: examples/GBM/runme.of
         :lines: 78-83
 #. Assign materials for contact.
-    .. literalinclude:: ../../../src/examples/GBM/runme.of
+    .. literalinclude:: examples/GBM/runme.of
         :lines: 86-92
 
 -------------------------------------------------------------------
 3.4 Create Groups and Assign Boundary Conditions
 -------------------------------------------------------------------
 #. Group the nodals to prepare for the next step.
-    .. literalinclude:: ../../../src/examples/GBM/runme.of
+    .. literalinclude:: examples/GBM/runme.of
         :lines: 95-96
 #. Assign the nodal boundaries. In this model, top, bottom and right boundaries are fixed in both x and y directions.
-    .. literalinclude:: ../../../src/examples/GBM/runme.of
+    .. literalinclude:: examples/GBM/runme.of
         :lines: 100-101
 
 -------------------------------------------------------------------
 3.5 Set the Outputs
 -------------------------------------------------------------------
 #. Set the output interval to be every 500 steps and output all fields variables and fracture variables. Control the output interval to a reasonable size could shorten the computation time but get a good understanding of the model.
-    .. literalinclude:: ../../../src/examples/GBM/runme.of
+    .. literalinclude:: examples/GBM/runme.of
         :lines: 105-107
 #. The program will run 10000000 steps in total. In other words, it will output 10 files for reference.
-    .. literalinclude:: ../../../src/examples/GBM/runme.of
+    .. literalinclude:: examples/GBM/runme.of
         :lines: 111
 #. Finalize the model and clear all the temporary memories.
-    .. literalinclude:: ../../../src/examples/GBM/runme.of
+    .. literalinclude:: examples/GBM/runme.of
         :lines: 113
 #. Save the notepad and double click the .of file to run the program.
 
 ==================================
-4.0 Run the Program
+4 Run the Program
 ==================================
 Wait for updates.
 
 ==================================
-5.0 Results
+5 Results
 ==================================
 Wait for updates.
 
 
 
 ==================================
-6.0 Full Script
+6 Full Script
 ==================================
 
 - `GBM.of`_ (click to download from GitHub)
 
-.. _GBM.of: https://github.com/OpenFDEM-geomechanics/Examples/blob/main/GBM/runme.of
+.. _GBM.of: https://github.com/OpenFDEM-geomechanics/Examples/blob/main/GBM/Job-1.inp
 
-    .. literalinclude:: ../../../src/examples/GBM/runme.of
-        :lines: 37-113
+.. literalinclude:: examples/GBM/runme.of
+    :lines: 37-113
 
 
 

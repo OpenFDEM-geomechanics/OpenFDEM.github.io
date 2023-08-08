@@ -1,7 +1,7 @@
 Mathematics behind the Hybrid Continuum-Discontinuum Method
 #######################################################################
 
-In this paper, the following conventions are assumed for the notations:
+In this document, the following conventions are assumed for the notations:
 (a) Gibbs notation is employed for tensor algebra and the order is
 denoted by the number of underdots (e.g.
 :math:`\underset{˙}{\mathbf{u}} = u_{i}\mathbf{e}_{\mathbf{i}}`,\ :math:`\underset{¨}{\mathbf{\sigma}} = \sigma_{ij}\mathbf{e}_{\mathbf{i}} \otimes \mathbf{e}_{\mathbf{j}}`);

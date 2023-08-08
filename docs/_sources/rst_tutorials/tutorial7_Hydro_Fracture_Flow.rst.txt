@@ -1,4 +1,4 @@
-Tutorial 7: Hydro Fracture Flow
+Water flowing in rock dam, fracture flow
 ########################################
 This tutorial will continue the hydro seepage model in tutorial 6 with discrete elements.
 
@@ -12,12 +12,12 @@ This tutorial will continue the hydro seepage model in tutorial 6 with discrete 
 |
 
 ==================================
-1.0 Code
+1 Code
 ==================================
 Based on the code in tutorial 6, fracture flow parameters will be add to model the hydro fracture.
 
 #. To include the discrete elements, joint elements are added to the model after create the mesh.
-    .. literalinclude:: ../../../src/examples/HydroFractureFlow/runme.of
+    .. literalinclude:: examples/HydroFractureFlow/runme.of
         :lines: 55
 #. Assign the material properties to CZM.
     +---------------------------------------------+------------------------+
@@ -30,7 +30,7 @@ Based on the code in tutorial 6, fracture flow parameters will be add to model t
     | friction                                    | 0.5                    |
     +---------------------------------------------+------------------------+
 
-    .. literalinclude:: ../../../src/examples/HydroFractureFlow/runme.of
+    .. literalinclude:: examples/HydroFractureFlow/runme.of
         :lines: 60
 #. Set fracture flow parameters
     +---------------------------------------------+------------------------+
@@ -58,11 +58,11 @@ Based on the code in tutorial 6, fracture flow parameters will be add to model t
     +---------------------------------------------+------------------------+
     | b                                           | 1.0                    |
     +---------------------------------------------+------------------------+
-    .. literalinclude:: ../../../src/examples/HydroFractureFlow/runme.of
+    .. literalinclude:: examples/HydroFractureFlow/runme.of
         :lines: 63-64
 
 ==================================
-2.0 Run the Program
+2 Run the Program
 ==================================
 Hydro module, Fracture flow module and CZM module are on to model the hydro fracture flow.
 
@@ -96,23 +96,23 @@ Hydro boundary conditions.
 |
 
 ==================================
-3.0 Results
+3 Results
 ==================================
 Wait for updates.
 
 
 
 ==================================
-4.0 Full Script
+4 Full Script
 ==================================
 
 - `Hydro_Fracture_Flow.of`_ (click to download from GitHub)
 
 .. _Hydro_Fracture_Flow.of: https://github.com/OpenFDEM-geomechanics/Examples/blob/main/HydroFractureFlow/runme.of
 
-    .. literalinclude:: ../../../src/examples/HydroFractureFlow/runme.of
-        :lines: 37-96
-        :emphasize-lines: 19, 24, 27-28
+.. literalinclude:: examples/HydroFractureFlow/runme.of
+    :lines: 37-96
+    :emphasize-lines: 19, 24, 27-28
 
 
 

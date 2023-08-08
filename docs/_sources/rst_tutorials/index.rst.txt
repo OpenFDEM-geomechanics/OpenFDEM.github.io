@@ -15,10 +15,9 @@ Tutorials
    tutorial8_Thermal_Flux
    tutorial9_GBM
    tutorial10_Phase_Field
-   tutorialA_Paraview
 
 
-Create the Geometry
+How to create a geometry
 -----------------------------------------
 |
 
@@ -30,7 +29,7 @@ Create the Geometry
       :link-type: doc
 
 
-Lab Tests
+Benchmark tests
 -----------------------------------------
 |
 
@@ -58,7 +57,7 @@ Lab Tests
       :link: tutorial4_BD_Test
       :link-type: doc
 
-Excavation
+How to excavate a tunnel
 -----------------------------------------
 |
 
@@ -70,7 +69,7 @@ Excavation
       :link-type: doc
 
 
-Hydro Module
+Rocks fractured by water
 -----------------------------------------
 |
 
@@ -89,7 +88,7 @@ Hydro Module
 
 
 
-Thermal Module
+Thermal transportation in rock
 -----------------------------------------
 |
 
@@ -101,7 +100,7 @@ Thermal Module
       :link-type: doc
 
 
-GBM
+Grain based model
 -----------------------------------------
 |
 

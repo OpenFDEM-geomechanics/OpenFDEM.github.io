@@ -1,0 +1,42 @@
+Call for papers
+===========================================================
+|
+I would like to invite you to submit a contribution to a featured journal issue on FDEM that will be published on **JRMGE** (IF = 7.3, ranking 2/41 in Engineering and geological) in 2024.
+https://www.sciencedirect.com/journal/journal-of-rock-mechanics-and-geotechnical-engineering.
+
+The combined hybrid finite-discrete element method (FDEM) is widely used for modeling fracturing and fragmentation processes in brittle materials such as rock and concrete. The intrinsic advantage of FDEM derives by its ability to combine continuum mechanics formulations, such as finite strain-based deformability and non-linear fracture mechanics, with discrete element method, allowing the seamless transition from a continuum to a discontinuum model. FDEM allows to model multiple crack initiation, propagation and nucleation at micro scale to fractures or fragments at macro scale. These advances promote the applications of FDEM in geomechanics, energy storage, geothermal energy extraction, rock engineering, oil and gas exploration and mining. In recent decades, the FDEM has matured into a more general-purpose numerical method, covering mechanical, hydraulic, thermal and chemical coupling, that can be used to tackle increasingly more complex multiphase, multiphysics and multiscale problems.  
+ 
+
+This Special Issue aims to highlight the new advances and future developments of combined finite-discrete element method or continuum-discontinuum method, for fracturing and fragmentation in geomechanics, underground energy storage, nuclear waste disposal, enhanced geothermal system, civil engineering or mining. All the papers on this special issue will be open access and free. 
+ 
+
+The main topic includes but not limited to:
+
+    - Multiscale, multiphase, and multiphysics modeling of fracture and fragmentation in rock mechanics and rock engineering
+    - New advances and future developments of combined finite-discrete element method
+    - High-Performance computing application and large-scale modelling in combined finite-discrete element method
+    - Novel contact algorithms for high efficiency and accuracy
+    - Hydraulic fracturing and fluid transportation modelling in energy storage or fractured reservoirs
+    - THM(C) coupling in enhanced geothermal systems (EGS), underground hydrogen storage (UHS), nuclear waste disposal and CO2 storage
+    - Computational fluid dynamics and fluid-solid interaction for rock fracturing modelling
+    - Artificial intelligence and machine learning technique in combined finite-discrete element method
+
+You are invited to submit your manuscript at any time before the submission deadline. For any inquiries about the appropriateness of contribution topics, please contact Dr. Xiaofeng Li via xiaofeng.li@utoronto.ca.
+
+Guest Editors
+-------------------------
+
+Dr. Giovanni Grasselli
+    | Department of Civil & Mineral Engineering
+    | University of Toronto, Toronto, CA, Canada
+    | Email: giovanni.grasselli@utoronto.ca  
+   
+Dr. Haibo Li
+    | Institute of Rock and Soil Mechanics
+    | Chinese Academy of Sciences, Wuhan, China
+    | Email: hbli@whrsm.ac.cn  
+
+Dr. Xiaofeng Li
+    | Department of Civil & Mineral Engineering
+    | University of Toronto, Toronto, CA, Canada
+    | Email: xiaofeng.li@utoronto.ca  

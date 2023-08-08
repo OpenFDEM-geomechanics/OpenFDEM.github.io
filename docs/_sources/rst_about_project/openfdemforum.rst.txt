@@ -1,0 +1,3 @@
+Forum_
+======
+.. _Forum: https://github.com/OpenFDEM-geomechanics/OpenFDEM.github.io/discussions 

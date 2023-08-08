@@ -1,17 +1,9 @@
-Common class
-###########################
+Developer Document
+===================================
 
-.. doxygenindex::
-        :project: OpenFDEM_common
-		
-Geometry class
-###########################
+.. toctree::
+   :maxdepth: 1
 
-.. doxygenindex::
-        :project: OpenFDEM_geometry
-
-Solid class
-###########################
-
-.. doxygenindex::
-        :project: OpenFDEM_solid
+   commonclass
+   geometryclass
+   solidclass

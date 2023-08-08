@@ -1,0 +1,70 @@
+NotePad++ and Syntax Highlighting
+========================================================
+
+.. raw:: html
+
+    <style> .red {color:#FF0000; font-weight:bold;} </style>
+    <style> .blue {color:#0000FF; font-weight:bold;} </style>
+    <style> .yellow {color:#FF8000; font-weight:bold;} </style>
+    <style> .green {color:#009300; font-weight:bold;} </style>
+    <style> .purple {color:#8000FF; font-weight:bold;} </style>
+    <style> .grey {color:#808080; font-weight:bold;} </style>
+
+
+.. role:: red
+.. role:: blue
+.. role:: yellow
+.. role:: green
+.. role:: purple
+.. role:: grey
+
+
+A syntax highlighting template file is designed and provided for users to improve the readability of the input file. This template file can be imported into NotePad++ and highlights all the keywords reserved in OpenFDEM. If NotePad++ is not installed in your computer, you can download this opensource software from https://notepad-plus-plus.org/ and install the package on your computer. To import the template file, you can
+
+- go to Language > User Defined Language > Define your language.
+.. figure:: ../../images/Notepad++/fdem.png
+    :alt: Steps to import the [fdem.xml] script
+    :align: center
+    :scale: 50%
+
+    Figure 1: Steps to import the [fdem.xml] script
+
+- Import and select fdem.xml in the installation directory.
+.. figure:: ../../images/Notepad++/User_Defined.png
+    :alt: NotePad++ User Defined Language Setting and Keywords
+    :align: center
+    :scale: 80%
+
+    Figure 2: NotePad++ User Defined Language Setting and Keywords
+
+- Then select the current language as [fdem] in the list after importing. You may need to restart the program to see the implementation.
+
+
+
+The content in the input file when opened in NotePad++ will be shown in different colors. By default,
+
+.. figure:: ../../images/Notepad++/syntax_highlight.png
+    :alt: Example input file opened in NotePad++ showing the various commands/syntax
+    :align: center
+    :scale: 50%
+
+    Figure 3: Example input file opened in NotePad++ showing the various commands/syntax
+
+- **[Black bold lines]**: main command implemented in OpenFDEM, for example, of.set.omp
+- :blue:`[Blue characters]`: are the number of input parameters such as [0.0, 0.0]. OpenFDEM is case-insensitive and the character of quotation, double quotations, comma and brackets will be omitted during the parsing. However, by default it is highly recommended to use double quotations [""] for a string, single quotations [''] for characters and brackets and commas to represent points. For example [x, y] is written as [0.0, 0.3]. The parsing logic of OpenFDEM is to read the keywords line by line. Each command or parameter should be separated by a whitespace.
+- :red:`[Red characters]`: for example, “MyResult” is a user-defined tag. This type of tags is used for the group names of different nodes, edges, elements, cohesive elements, contacts and entities. Group tags are extremely important in OpenFDEM because they are used to assign different materials and boundary conditions. There are several rules for the tags:
+    - rule 1: Tags are case-insensitive.
+    - rule 2: Whitespaces are not allowed in tags, because the whitespaces are considered as delimiters between different parameters. 
+    - rule 3: Never use the same tags for the same entities. For example, do not assign two instances of groups for elements that carry the same name, for example “rock” and “rock”. Although the kernel can run smoothly, ParaView will not recognize cells having the same tags. In OpenFDEM, the group tags can be assigned to nodes, edges, elements, cohesive elements, contacts (not recommended) and geometry nodes (to assign mesh size).
+    - rule 4: Never use a tag with the name “default” for any entity groups, because “default” is a reserved keyword meaning the entire entities. For example, if you assign the material to a group of “default”, that means all elements in the model will be assigned as elastic material.
+    - rule 5: The ordering sequence of the tags matters. For example, in the text below, the first tag means the tag assigned to a newly created joint, and the second tag means cut the joint in an object which has the tag of “plate”. The syntax will raise an error if 'plate' in inserted before 'refineLine'.
+
+- :yellow:`[Yellow characters]`: are keywords the identify the  module name and material types, for example, [dynamic], [elastic] shown in Fig. 3.5.
+- :green:`[Green characters]`: keywords of material parameters. For example [den], [damp], please note that some mistakes will happen in the script as shown in line 67, because NotePad++ uses the prefix mode, some keywords may have highlights conflict with other keywords which are shorter than them.
+- :purple:`[Purple characters]`: are boundary keywords, for example [x], [y]. [normal], [shear]
+- :grey:`[Grey characters]`: are comments. OpenFDEM uses the same comment style as python, # and '''''' can be used in the input data files to comment selected text regions. Shortcut keys Ctrl + K can be used for comment and Ctrl + Q can be used for uncomment . There are a few rules that should be followed:
+    - rule 1: the text regions comprised between ''' and ''' pairs is ignored, this symbol is used when you want to comment several lines, but be sure to add it in pairs.
+    - rule 2: the rest of a line after # is ignored, this symbol is used to comment one line. Please note that the # can be used at the end of keyword, but not in front of the command.
+
+Black characters that are not bold are incorrect keywords or keywords misspelled from those predefined in the fdem syntax. For the second case, you can check your keywords in the command list or try to rerun your model. OpenFDEM will pop out an error message when it meets any unrecognized keywords and prints the corresponding error. 
+

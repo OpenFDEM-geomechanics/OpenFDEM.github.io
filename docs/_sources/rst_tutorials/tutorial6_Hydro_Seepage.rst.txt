@@ -1,6 +1,6 @@
-Tutorial 6: Hydro Seepage
+Water flowing in rock dam, seepage flow
 ########################################
-Tutorial 6 and 7 will present the numercial method to solve hydraulic fracture on a dam model in both finite element method (FEM) and finite-discrete element method (FDEM).
+Tutorial 6 and 7 will present the numercial method to solve hydraulic fracture on a dam model in both finite element method (FEM) and finite-discrete element method (FDEM). The model in these two tutorials is based on the paper `"Combined Finite-Discrete Element Method for Simulation of Hydraulic Fracturing" <https://doi.org/10.1007/s00603-015-0816-9>`_.
 
 .. figure:: ../../images/Desmos/Hydro.png
     :alt: Geometry of a Dam Model
@@ -12,7 +12,7 @@ Tutorial 6 and 7 will present the numercial method to solve hydraulic fracture o
 |
 
 ==================================
-1.0 Main Steps
+1 Main Steps
 ==================================
 
 #. Initialize the model.
@@ -23,7 +23,7 @@ Tutorial 6 and 7 will present the numercial method to solve hydraulic fracture o
 #. Set the outputs.
 
 ==================================
-2.0 Codes
+2 Codes
 ==================================
 Please note that, all the setting in the example is based on the developer's computer. You may need to change 
 these setting based on your own conditions.
@@ -34,11 +34,11 @@ To start with programming, create a new empty text file (later add the `.of` ext
 2.1 Initialize the model
 -------------------------------------------------------------------
 #. Create a new run and clean up the old memories.
-    .. literalinclude:: ../../../src/examples/HydroSeepage/runme.of
+    .. literalinclude:: examples/HydroSeepage/runme.of
         :lines: 39
 
 #. Set up the folder name to save your results. Here the folder name is set to be “result”.
-    .. literalinclude:: ../../../src/examples/HydroSeepage/runme.of
+    .. literalinclude:: examples/HydroSeepage/runme.of
         :lines: 43
 
 #. Set the number of cores to be used for running this model.
@@ -47,17 +47,17 @@ To start with programming, create a new empty text file (later add the `.of` ext
         check your computer to fill in the number of cores you want to use from your computer. To check the number 
         of cores your computer has, you can go Task Manager > Performance > CPU > Cores. If nothing is set here, 
         serial computing will be used.
-    .. literalinclude:: ../../../src/examples/HydroSeepage/runme.of
+    .. literalinclude:: examples/HydroSeepage/runme.of
         :lines: 47
 
 -------------------------------------------------------------------
 2.2 Create the geometry and the mesh
 -------------------------------------------------------------------
 #. See Figure 1 for the dam model and draw the corresponding geometry.
-    .. literalinclude:: ../../../src/examples/HydroSeepage/runme.of
+    .. literalinclude:: examples/HydroSeepage/runme.of
         :lines: 50
 #. Set the mesh size of the geometry.
-    .. literalinclude:: ../../../src/examples/HydroSeepage/runme.of
+    .. literalinclude:: examples/HydroSeepage/runme.of
         :lines: 52-53
 
 -------------------------------------------------------------------
@@ -97,47 +97,47 @@ To start with programming, create a new empty text file (later add the `.of` ext
 
 
 #. Set the material properties. For this test, the example uses the elastic constitutive model and assigned material for CZM and contact.
-    .. literalinclude:: ../../../src/examples/HydroSeepage/runme.of
+    .. literalinclude:: examples/HydroSeepage/runme.of
         :lines: 56-57
 #. Set the hydraulic properties.
-    .. literalinclude:: ../../../src/examples/HydroSeepage/runme.of
+    .. literalinclude:: examples/HydroSeepage/runme.of
         :lines: 60
 
 -------------------------------------------------------------------
 2.4 Create Groups and Assign Boundary Conditions
 -------------------------------------------------------------------
 #. Group the nodes to prepare for the next step.
-    .. literalinclude:: ../../../src/examples/HydroSeepage/runme.of
+    .. literalinclude:: examples/HydroSeepage/runme.of
         :lines: 65-68
 #. Assign the nodal boundaries. Fix the bottom of the model.
-    .. literalinclude:: ../../../src/examples/HydroSeepage/runme.of
+    .. literalinclude:: examples/HydroSeepage/runme.of
         :lines: 72
 #. Assign the water level based on Figure 1. Water at the 0.0 m from the top of the dam on the left side of the dam and 3.0 m deep from the top of the dam on the right side of the dam.
-    .. literalinclude:: ../../../src/examples/HydroSeepage/runme.of
+    .. literalinclude:: examples/HydroSeepage/runme.of
         :lines: 73-74
 
 -------------------------------------------------------------------
 2.5 Set the Outputs
 -------------------------------------------------------------------
 #. Set the output interval to be every 6000 steps and output all fields variables and fracture variables. Control the output interval to a reasonable size could shorten the computation time but get a good understanding of the model.
-    .. literalinclude:: ../../../src/examples/HydroSeepage/runme.of
+    .. literalinclude:: examples/HydroSeepage/runme.of
         :lines: 78-80
 #. In this model, only hydro module is considered in the calculation. ???????
-    .. literalinclude:: ../../../src/examples/HydroSeepage/runme.of
+    .. literalinclude:: examples/HydroSeepage/runme.of
         :lines: 78-80
 #. Timestep for hydraulic calculation can be fixed to 1e-8 in this example.
-    .. literalinclude:: ../../../src/examples/HydroSeepage/runme.of
+    .. literalinclude:: examples/HydroSeepage/runme.of
         :lines: 88
 #. The program will run 60000 steps in total. In other words, it will output 10 files for reference.
-    .. literalinclude:: ../../../src/examples/HydroSeepage/runme.of
+    .. literalinclude:: examples/HydroSeepage/runme.of
         :lines: 90
 #. Finalize the model and clear all the temporary memories.
-    .. literalinclude:: ../../../src/examples/HydroSeepage/runme.of
+    .. literalinclude:: examples/HydroSeepage/runme.of
         :lines: 92
 #. Save the notepad and double click the .of file to run the program.
 
 ==================================
-3.0 Run the Program
+3 Run the Program
 ==================================
 Hydro module and matrix flow module are on to model the hydro seepage.
 
@@ -171,22 +171,22 @@ Hydro boundary conditions.
 |
 
 ==================================
-4.0 Results
+4 Results
 ==================================
 Wait for updates.
 
 
 
 ==================================
-5.0 Full Script
+5 Full Script
 ==================================
 
 - `Hydro_Seepage.of`_ (click to download from GitHub)
 
 .. _Hydro_Seepage.of: https://github.com/OpenFDEM-geomechanics/Examples/blob/main/HydroSeepage/runme.of
 
-    .. literalinclude:: ../../../src/examples/HydroSeepage/runme.of
-        :lines: 37-92
+.. literalinclude:: examples/HydroSeepage/runme.of
+    :lines: 37-92
 
 
 

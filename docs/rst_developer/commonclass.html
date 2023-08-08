@@ -1,0 +1,910 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Geometry class" href="geometryclass.html" /><link rel="prev" title="Developer Document" href="developer.html" />
+
+    <!-- Generated with Sphinx 5.3.0 and Furo 2023.07.26 -->
+        <title>Common class - OpenFDEM</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=369552022d0b975c8e74270ce6eabe0fb7978f24" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<div class="announcement">
+  <aside class="announcement-content">
+     Call for papers for <a href='https://www.sciencedirect.com/journal/journal-of-rock-mechanics-and-geotechnical-engineering'>Journal of Rock Mechanics and Geotechnical Engineering!</a> 
+  </aside>
+</div>
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand"><strong>OpenFDEM</strong></div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  
+  <span class="sidebar-brand-text"><strong>OpenFDEM</strong></span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst_about_project/intro.html">What is OpenFDEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst_about_project/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst_about_project/started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst_about_project/Changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst_about_project/copyrights.html">Copyright</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rst_about_project/Blog.html">Blogs</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Blogs</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rst_about_project/Blogs/20230804_Call_for_Paper.html">Call for papers</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Theory</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst_theory/Solid_FEM_Engine.html">Solid FEM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst_theory/Solid_Cohesive_Mechanics.html">Solid Cohesive Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst_theory/Contact_Mechanics.html">Contact Mechanics</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rst_theory/Fluid_Transport_Theory.html">Fluid Transport</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Fluid Transport</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rst_theory/Fracture_Fluid_Theory.html">Fracture Fluid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst_theory/Porous_Fluid_Theory.html">Porous Fluid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst_theory/Two_Phase_Fluid_Theory.html">Two Phase Fluid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst_theory/Gas_Flow_Theory.html">Gas Flow</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rst_theory/Thermal_Transfer_Theory.html">Thermal Transfer</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Thermal Transfer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rst_theory/Matrix_Thermal.html">Matrix Thermal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst_theory/Fracture_Heat_Resistance.html">Fracture Heat Resistance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst_theory/Contact_Thermal.html">Contact Thermal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst_theory/Thermal_Hydromechanical_Chemical_Couple.html">Thermal-Hydromechanical (Chemical) Couple</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rst_theory/Phase_Field.html">Phase Field</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rst_theory/Particle_Discrete_Element_Method.html">Particle Discrete Element Method (pDEM)</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Particle Discrete Element Method (pDEM)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rst_theory/Rigid_Particle_DEM.html">Rigid Particle DEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst_theory/Irregular_Deformable_Cluster_DEM.html">Irregular Deformable Cluster DEM</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rst_theory/Mesh_Adaptive_Analysis.html">Mesh Adaptive Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Mesh Adaptive Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rst_theory/Local_Adaptive_Mesh_Refinement.html">Local Adaptive Mesh Refinement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst_theory/Global_Adaptive_Mesh_Refinement.html">Global Adaptive Mesh Refinement</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rst_tutorials/index.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Tutorials</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rst_tutorials/tutorial0_Geometry.html">How to create a geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst_tutorials/tutorial1_UCS_Test.html">Quick start with Uniaxial Compression Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst_tutorials/tutorial2_UCS_with_Gmsh.html">Create a model from imported mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst_tutorials/tutorial3_UCS_Test_with_Quadrangle_Elements.html">How to use higher-order element</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst_tutorials/tutorial4_BD_Test.html">Quick start with Brazilian Disc Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst_tutorials/tutorial5_In_Situ_Stress.html">Tutorial 5: Apply In-situ Stress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst_tutorials/tutorial6_Hydro_Seepage.html">Tutorial 6: Hydro Seepage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst_tutorials/tutorial7_Hydro_Fracture_Flow.html">Tutorial 7: Hydro Fracture Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst_tutorials/tutorial8_Thermal_Flux.html">Tutorial 8: Thermal Flux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst_tutorials/tutorial9_GBM.html">Tutorial 9: Grain-based Model (GBM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst_tutorials/tutorial10_Phase_Field.html">Tutorial 10: Phase Field</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rst_tutorials/tutorialA_Paraview.html">Post-Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst_tutorials/tutorialB_Notepad%2B%2B.html">NotePad++ and Syntax Highlighting</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Manual</span></p>
+<ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rst_user_guide/index.html">User Manual</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of User Manual</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/general.html">General</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of General</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.console.interval.html">of.console.interval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.damp.global.html">of.damp.global</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.finalize.html">of.finalize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.import.html">of.import</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.import.table.html">of.import.table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.log.interval.html">of.log.interval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.new.html">of.new</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.restore.html">of.restore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.save.html">of.save</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.save.FEM.html">of.save.FEM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.config.html">of.set.config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.contact.html">of.set.contact</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.debug.html">of.set.debug</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.GBM.html">of.set.GBM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.gravity.html">of.set.gravity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.large.html">of.set.large</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.massscale.html">of.set.massscale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.module.html">of.set.module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.omp.html">of.set.omp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.result.html">of.set.result</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.rgbm.html">of.set.rgbm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.solve.html">of.solve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.step.html">of.step</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.timestep.html">of.timestep</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/blast.html">Blast</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Blast</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Blast/of.blast.position.html">of.blast.position</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/boundary.html">Boundary</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of Boundary</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.force.html">of.boundary.nodal.force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.velocity.html">of.boundary.nodal.velocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.inivelocity.html">of.boundary.nodal.inivelocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.acceleration.html">of.boundary.nodal.acceleration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.clear.html">of.boundary.nodal.clear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.force.html">of.boundary.edge.force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.velocity.html">of.boundary.edge.velocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.inivelocity.html">of.boundary.edge.inivelocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.acceleration.html">of.boundary.edge.acceleration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.clear.html">of.boundary.edge.clear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.stress.html">of.boundary.element.stress</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.stress.xgrad.html">of.boundary.element.stress.xgrad</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.stress.ygrad.html">of.boundary.element.stress.ygrad</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.clear.html">of.boundary.element.clear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.blast.html">of.boundary.blast</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/DFN.html">DFN</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of DFN</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/DFN/of.DFN.connectivity.html">of.DFN.connectivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/DFN/of.DFN.group.html">of.DFN.group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/DFN/of.DFN.cohesive.html">of.DFN.cohesive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/DFN/of.DFN.broken.html">of.DFN.broken</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/FEM.html">FEM</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of FEM</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.coord.html">of.import.FEM.nodal.coord</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.coord0.html">of.import.FEM.nodal.coord0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.velocity.html">of.import.FEM.nodal.velocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.groups.html">of.import.FEM.nodal.groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.edge.groups.html">of.import.FEM.edge.groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.element.groups.html">of.import.FEM.element.groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.element.connectivity.html">of.import.FEM.element.connectivity</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/geometry.html">Geometry</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of Geometry</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.square.html">of.geometry.square</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.square.html">of.geometry.cut.square</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.remove.square.html">of.geometry.remove.square</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.circle.html">of.geometry.circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.circle.html">of.geometry.cut.circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.remove.circle.html">of.geometry.remove.circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.ellipse.html">of.geometry.ellipse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.ellipse.html">of.geometry.cut.ellipse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.remove.ellipse.html">of.geometry.remove.ellipse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.polygon.html">of.geometry.polygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.polygon.html">of.geometry.cut.polygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.remove.polygon.html">of.geometry.remove.polygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.table.html">of.geometry.table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.table.html">of.geometry.cut.table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.remove.table.html">of.geometry.remove.table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.domain.html">of.geometry.domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.joint.html">of.geometry.cut.joint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.jset.html">of.geometry.cut.jset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.DFN.html">of.geometry.cut.DFN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.arc.html">of.geometry.cut.arc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.minsize.html">of.geometry.minsize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.minangle.html">of.geometry.minangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.iteration.html">of.geometry.iteration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.group.html">of.geometry.group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.mesh.size.html">of.geometry.mesh.size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.recombine.html">of.geometry.recombine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.mesh.html">of.geometry.mesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.mesh.write.html">of.geometry.mesh.write</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/group.html">Group</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of Group</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.html">of.group.nodal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.html">of.group.edge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.element.html">of.group.element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.html">of.group.cohelement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.from.element.html">of.group.nodal.from.element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.from.element.html">of.group.edge.from.element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.from.cohelement.html">of.group.edge.from.cohcohelement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.from.dfn.html">of.group.edge.from.dfn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.from.dfn.html">of.group.cohelement.from.dfn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.from.gbm.html">of.group.cohelement.from.gbm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.bool.union.html">of.group.nodal.bool.union</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.bool.intersect.html">of.group.nodal.bool.intersect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.bool.subtract.html">of.group.nodal.bool.subtract</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.bool.union.html">of.group.edge.bool.union</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.bool.intersect.html">of.group.edge.bool.intersect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.bool.subtract.html">of.group.edge.bool.subtract</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.element.bool.union.html">of.group.element.bool.union</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.element.bool.intersect.html">of.group.element.bool.intersect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.element.bool.subtract.html">of.group.element.bool.subtract</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.bool.union.html">of.group.cohelement.bool.union</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.bool.intersect.html">of.group.cohelement.bool.intersect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.bool.subtract.html">of.group.cohelement.bool.subtract</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/mesh.html">Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.insert.html">of.mesh.insert</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.insert.dfn.html">of.mesh.insert.dfn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.voronoi.html">of.mesh.voronoi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.split.html">of.mesh.split</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.bary.html">of.mesh.bary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.RG.html">of.mesh.RG</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.RGB.html">of.mesh.RGB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.NVB.html">of.mesh.NVB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.baryGB.html">of.mesh.baryGB</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/material.html">Material</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle navigation of Material</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.element.html">of.mat.element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.cohesive.html">of.mat.cohesive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.contact.html">of.mat.contact</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.hydro.matrix.html">of.mat.hydro.matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.hydro.fracture.html">of.mat.hydro.fracture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.mpm.fluid.html">of.mat.mpm.fluid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.mpm.solid.html">of.mat.mpm.solid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.hydro.fluid.html">of.mat.hydro.fluid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.hydro.gas.html">of.mat.hydro.gas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.nonlocal.html">of.mat.nonlocal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.thermal.html">of.mat.thermal</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/history.html">History</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle navigation of History</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.interval.html">of.history.pv.interval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.dynamic.interval.html">of.history.pv.dynamic.interval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.field.html">of.history.pv.field</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.fracture.html">of.history.pv.fracture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.cohesive.html">of.history.pv.cohesive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.damage.html">of.history.pv.damage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.ae.html">of.history.pv.ae</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="developer.html">Developer Document</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle navigation of Developer Document</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Common class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometryclass.html">Geometry class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solidclass.html">Solid class</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About Us</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst_about_project/contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst_about_project/collaborator.html">Collaborating</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst_about_project/openfdemforum.html">Forum</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="appendix.html">Index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst_about_project/publication.html">Publications</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="common-class">
+<h1>Common class<a class="headerlink" href="#common-class" title="Permalink to this heading">#</a></h1>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv414geo_curve_type">
+<span id="_CPPv314geo_curve_type"></span><span id="_CPPv214geo_curve_type"></span><span id="geo_curve_type"></span><span class="target" id="structgeo__curve__type"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">geo_curve_type</span></span></span><a class="headerlink" href="#_CPPv414geo_curve_type" title="Permalink to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;<a class="reference internal" href="#openfdem__geometry_8h"><span class="std std-ref">openfdem_geometry.h</span></a>&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14geo_curve_type6n_lineE">
+<span id="_CPPv3N14geo_curve_type6n_lineE"></span><span id="_CPPv2N14geo_curve_type6n_lineE"></span><span id="geo_curve_type::n_line__i"></span><span class="target" id="structgeo__curve__type_1a69c10e7cc243f2a29fd63e7cebaa18c6"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">n_line</span></span></span><a class="headerlink" href="#_CPPv4N14geo_curve_type6n_lineE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14geo_curve_type4lineE">
+<span id="_CPPv3N14geo_curve_type4lineE"></span><span id="_CPPv2N14geo_curve_type4lineE"></span><span id="geo_curve_type::line__iP"></span><span class="target" id="structgeo__curve__type_1a4484019599ee1e91ad0602c63cdfab9a"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">line</span></span></span><a class="headerlink" href="#_CPPv4N14geo_curve_type4lineE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv414geo_group_type">
+<span id="_CPPv314geo_group_type"></span><span id="_CPPv214geo_group_type"></span><span id="geo_group_type"></span><span class="target" id="structgeo__group__type"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">geo_group_type</span></span></span><a class="headerlink" href="#_CPPv414geo_group_type" title="Permalink to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;<a class="reference internal" href="#openfdem__geometry_8h"><span class="std std-ref">openfdem_geometry.h</span></a>&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14geo_group_type3tagE">
+<span id="_CPPv3N14geo_group_type3tagE"></span><span id="_CPPv2N14geo_group_type3tagE"></span><span id="geo_group_type::tag__cP"></span><span class="target" id="structgeo__group__type_1a7bb5e40c10df6a41df64bda1f4bb3e26"></span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">tag</span></span></span><a class="headerlink" href="#_CPPv4N14geo_group_type3tagE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14geo_group_type4sizeE">
+<span id="_CPPv3N14geo_group_type4sizeE"></span><span id="_CPPv2N14geo_group_type4sizeE"></span><span id="geo_group_type::size__i"></span><span class="target" id="structgeo__group__type_1a439227feff9d7f55384e8780cfc2eb82"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">size</span></span></span><a class="headerlink" href="#_CPPv4N14geo_group_type4sizeE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14geo_group_type9line_sizeE">
+<span id="_CPPv3N14geo_group_type9line_sizeE"></span><span id="_CPPv2N14geo_group_type9line_sizeE"></span><span id="geo_group_type::line_size__i"></span><span class="target" id="structgeo__group__type_1a43a1d2286bbb11edc0c83ec8588dd81d"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">line_size</span></span></span><a class="headerlink" href="#_CPPv4N14geo_group_type9line_sizeE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14geo_group_type12new_dfn_sizeE">
+<span id="_CPPv3N14geo_group_type12new_dfn_sizeE"></span><span id="_CPPv2N14geo_group_type12new_dfn_sizeE"></span><span id="geo_group_type::new_dfn_size__i"></span><span class="target" id="structgeo__group__type_1a8911fbf6bb4f415d909d4d853951fb69"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">new_dfn_size</span></span></span><a class="headerlink" href="#_CPPv4N14geo_group_type12new_dfn_sizeE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14geo_group_type8embed_idE">
+<span id="_CPPv3N14geo_group_type8embed_idE"></span><span id="_CPPv2N14geo_group_type8embed_idE"></span><span id="geo_group_type::embed_id__i"></span><span class="target" id="structgeo__group__type_1a249af15d8db761707a936222aa812000"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">embed_id</span></span></span><a class="headerlink" href="#_CPPv4N14geo_group_type8embed_idE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14geo_group_type5nodesE">
+<span id="_CPPv3N14geo_group_type5nodesE"></span><span id="_CPPv2N14geo_group_type5nodesE"></span><span id="geo_group_type::nodes__iP"></span><span class="target" id="structgeo__group__type_1a3baa70ec5aa9904400db2d0d171965d1"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">nodes</span></span></span><a class="headerlink" href="#_CPPv4N14geo_group_type5nodesE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14geo_group_type5linesE">
+<span id="_CPPv3N14geo_group_type5linesE"></span><span id="_CPPv2N14geo_group_type5linesE"></span><span id="geo_group_type::lines__iP"></span><span class="target" id="structgeo__group__type_1a7fab614ffcc2243527b1708a8f51413c"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">lines</span></span></span><a class="headerlink" href="#_CPPv4N14geo_group_type5linesE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14geo_group_type7new_dfnE">
+<span id="_CPPv3N14geo_group_type7new_dfnE"></span><span id="_CPPv2N14geo_group_type7new_dfnE"></span><span id="geo_group_type::new_dfn__iP"></span><span class="target" id="structgeo__group__type_1ab7065a9c98649b87d2e5b8697c9f6653"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">new_dfn</span></span></span><a class="headerlink" href="#_CPPv4N14geo_group_type7new_dfnE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv413geo_line_type">
+<span id="_CPPv313geo_line_type"></span><span id="_CPPv213geo_line_type"></span><span id="geo_line_type"></span><span class="target" id="structgeo__line__type"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">geo_line_type</span></span></span><a class="headerlink" href="#_CPPv413geo_line_type" title="Permalink to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;<a class="reference internal" href="#openfdem__geometry_8h"><span class="std std-ref">openfdem_geometry.h</span></a>&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13geo_line_type5groupE">
+<span id="_CPPv3N13geo_line_type5groupE"></span><span id="_CPPv2N13geo_line_type5groupE"></span><span id="geo_line_type::group__cP"></span><span class="target" id="structgeo__line__type_1a443519726cbe3c4f2b2fe1d42ce2fd2f"></span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">group</span></span></span><a class="headerlink" href="#_CPPv4N13geo_line_type5groupE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13geo_line_type5embedE">
+<span id="_CPPv3N13geo_line_type5embedE"></span><span id="_CPPv2N13geo_line_type5embedE"></span><span id="geo_line_type::embed__i"></span><span class="target" id="structgeo__line__type_1a5af46ae509897be4d3fc85b0a66a9b85"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">embed</span></span></span><a class="headerlink" href="#_CPPv4N13geo_line_type5embedE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13geo_line_type8embed_idE">
+<span id="_CPPv3N13geo_line_type8embed_idE"></span><span id="_CPPv2N13geo_line_type8embed_idE"></span><span id="geo_line_type::embed_id__i"></span><span class="target" id="structgeo__line__type_1a249af15d8db761707a936222aa812000"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">embed_id</span></span></span><a class="headerlink" href="#_CPPv4N13geo_line_type8embed_idE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13geo_line_type6node_1E">
+<span id="_CPPv3N13geo_line_type6node_1E"></span><span id="_CPPv2N13geo_line_type6node_1E"></span><span id="geo_line_type::node_1__i"></span><span class="target" id="structgeo__line__type_1adb59b30b743ea4c3e94d6eab9a707e98"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">node_1</span></span></span><a class="headerlink" href="#_CPPv4N13geo_line_type6node_1E" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13geo_line_type6node_2E">
+<span id="_CPPv3N13geo_line_type6node_2E"></span><span id="_CPPv2N13geo_line_type6node_2E"></span><span id="geo_line_type::node_2__i"></span><span class="target" id="structgeo__line__type_1a4694cfb4f513f9569d393754d43aadca"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">node_2</span></span></span><a class="headerlink" href="#_CPPv4N13geo_line_type6node_2E" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv413geo_node_type">
+<span id="_CPPv313geo_node_type"></span><span id="_CPPv213geo_node_type"></span><span id="geo_node_type"></span><span class="target" id="structgeo__node__type"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">geo_node_type</span></span></span><a class="headerlink" href="#_CPPv413geo_node_type" title="Permalink to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;<a class="reference internal" href="#openfdem__geometry_8h"><span class="std std-ref">openfdem_geometry.h</span></a>&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13geo_node_type1xE">
+<span id="_CPPv3N13geo_node_type1xE"></span><span id="_CPPv2N13geo_node_type1xE"></span><span id="geo_node_type::x__Real"></span><span class="target" id="structgeo__node__type_1ac2e288ebffee7f8ca19c46021f4d38f0"></span><span class="n"><span class="pre">Real</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">x</span></span></span><a class="headerlink" href="#_CPPv4N13geo_node_type1xE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13geo_node_type1yE">
+<span id="_CPPv3N13geo_node_type1yE"></span><span id="_CPPv2N13geo_node_type1yE"></span><span id="geo_node_type::y__Real"></span><span class="target" id="structgeo__node__type_1a18279dd4d4460f2130f7a45358c14ffa"></span><span class="n"><span class="pre">Real</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">y</span></span></span><a class="headerlink" href="#_CPPv4N13geo_node_type1yE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13geo_node_type1zE">
+<span id="_CPPv3N13geo_node_type1zE"></span><span id="_CPPv2N13geo_node_type1zE"></span><span id="geo_node_type::z__Real"></span><span class="target" id="structgeo__node__type_1a2c288eb0239f736aeab2f219f89465b3"></span><span class="n"><span class="pre">Real</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">z</span></span></span><a class="headerlink" href="#_CPPv4N13geo_node_type1zE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13geo_node_type9mesh_sizeE">
+<span id="_CPPv3N13geo_node_type9mesh_sizeE"></span><span id="_CPPv2N13geo_node_type9mesh_sizeE"></span><span id="geo_node_type::mesh_size__Real"></span><span class="target" id="structgeo__node__type_1a03832aeb7bafb1c4edbdad1d751c0ce1"></span><span class="n"><span class="pre">Real</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mesh_size</span></span></span><a class="headerlink" href="#_CPPv4N13geo_node_type9mesh_sizeE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv416geo_surface_type">
+<span id="_CPPv316geo_surface_type"></span><span id="_CPPv216geo_surface_type"></span><span id="geo_surface_type"></span><span class="target" id="structgeo__surface__type"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">geo_surface_type</span></span></span><a class="headerlink" href="#_CPPv416geo_surface_type" title="Permalink to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;<a class="reference internal" href="#openfdem__geometry_8h"><span class="std std-ref">openfdem_geometry.h</span></a>&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16geo_surface_type3tagE">
+<span id="_CPPv3N16geo_surface_type3tagE"></span><span id="_CPPv2N16geo_surface_type3tagE"></span><span id="geo_surface_type::tag__cP"></span><span class="target" id="structgeo__surface__type_1a7bb5e40c10df6a41df64bda1f4bb3e26"></span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">tag</span></span></span><a class="headerlink" href="#_CPPv4N16geo_surface_type3tagE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16geo_surface_type8embed_idE">
+<span id="_CPPv3N16geo_surface_type8embed_idE"></span><span id="_CPPv2N16geo_surface_type8embed_idE"></span><span id="geo_surface_type::embed_id__i"></span><span class="target" id="structgeo__surface__type_1a249af15d8db761707a936222aa812000"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">embed_id</span></span></span><a class="headerlink" href="#_CPPv4N16geo_surface_type8embed_idE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16geo_surface_type7n_curveE">
+<span id="_CPPv3N16geo_surface_type7n_curveE"></span><span id="_CPPv2N16geo_surface_type7n_curveE"></span><span id="geo_surface_type::n_curve__i"></span><span class="target" id="structgeo__surface__type_1a203cad6c1d156c5b13542a9d43d5c1c8"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">n_curve</span></span></span><a class="headerlink" href="#_CPPv4N16geo_surface_type7n_curveE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16geo_surface_type5embedE">
+<span id="_CPPv3N16geo_surface_type5embedE"></span><span id="_CPPv2N16geo_surface_type5embedE"></span><span id="geo_surface_type::embed__i"></span><span class="target" id="structgeo__surface__type_1a5af46ae509897be4d3fc85b0a66a9b85"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">embed</span></span></span><a class="headerlink" href="#_CPPv4N16geo_surface_type5embedE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N16geo_surface_type5curveE">
+<span id="_CPPv3N16geo_surface_type5curveE"></span><span id="_CPPv2N16geo_surface_type5curveE"></span><span id="geo_surface_type::curve__iP"></span><span class="target" id="structgeo__surface__type_1a0835cab529b42eb94a7edc7c488d3176"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">curve</span></span></span><a class="headerlink" href="#_CPPv4N16geo_surface_type5curveE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv418Geometry_structure">
+<span id="_CPPv318Geometry_structure"></span><span id="_CPPv218Geometry_structure"></span><span id="Geometry_structure"></span><span class="target" id="struct_geometry__structure"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Geometry_structure</span></span></span><a class="headerlink" href="#_CPPv418Geometry_structure" title="Permalink to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;<a class="reference internal" href="#openfdem__geometry_8h"><span class="std std-ref">openfdem_geometry.h</span></a>&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18Geometry_structure2x0E">
+<span id="_CPPv3N18Geometry_structure2x0E"></span><span id="_CPPv2N18Geometry_structure2x0E"></span><span id="Geometry_structure::x0__Real"></span><span class="target" id="struct_geometry__structure_1a2a4bf87da850c2a946589606b2e33157"></span><span class="n"><span class="pre">Real</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">x0</span></span></span><a class="headerlink" href="#_CPPv4N18Geometry_structure2x0E" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18Geometry_structure2x1E">
+<span id="_CPPv3N18Geometry_structure2x1E"></span><span id="_CPPv2N18Geometry_structure2x1E"></span><span id="Geometry_structure::x1__Real"></span><span class="target" id="struct_geometry__structure_1a9f8ab274622c752bf9c42239dbfcaa57"></span><span class="n"><span class="pre">Real</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">x1</span></span></span><a class="headerlink" href="#_CPPv4N18Geometry_structure2x1E" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18Geometry_structure2y0E">
+<span id="_CPPv3N18Geometry_structure2y0E"></span><span id="_CPPv2N18Geometry_structure2y0E"></span><span id="Geometry_structure::y0__Real"></span><span class="target" id="struct_geometry__structure_1a3cb46d6ef5dc4a7a7f9d9ea878a0416f"></span><span class="n"><span class="pre">Real</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">y0</span></span></span><a class="headerlink" href="#_CPPv4N18Geometry_structure2y0E" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18Geometry_structure2y1E">
+<span id="_CPPv3N18Geometry_structure2y1E"></span><span id="_CPPv2N18Geometry_structure2y1E"></span><span id="Geometry_structure::y1__Real"></span><span class="target" id="struct_geometry__structure_1ae5fa2dd3f8ae2b7ab94fa7763814de8a"></span><span class="n"><span class="pre">Real</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">y1</span></span></span><a class="headerlink" href="#_CPPv4N18Geometry_structure2y1E" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18Geometry_structure8node_numE">
+<span id="_CPPv3N18Geometry_structure8node_numE"></span><span id="_CPPv2N18Geometry_structure8node_numE"></span><span id="Geometry_structure::node_num__i"></span><span class="target" id="struct_geometry__structure_1a1031e2d9442cf1ca3e2940e55915002f"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">node_num</span></span></span><a class="headerlink" href="#_CPPv4N18Geometry_structure8node_numE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18Geometry_structure8line_numE">
+<span id="_CPPv3N18Geometry_structure8line_numE"></span><span id="_CPPv2N18Geometry_structure8line_numE"></span><span id="Geometry_structure::line_num__i"></span><span class="target" id="struct_geometry__structure_1a7661b5d028be7f8997cef563e3890fd9"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">line_num</span></span></span><a class="headerlink" href="#_CPPv4N18Geometry_structure8line_numE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18Geometry_structure9curve_numE">
+<span id="_CPPv3N18Geometry_structure9curve_numE"></span><span id="_CPPv2N18Geometry_structure9curve_numE"></span><span id="Geometry_structure::curve_num__i"></span><span class="target" id="struct_geometry__structure_1af7dec937890d29a2a14bf3319c80f434"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">curve_num</span></span></span><a class="headerlink" href="#_CPPv4N18Geometry_structure9curve_numE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18Geometry_structure11surface_numE">
+<span id="_CPPv3N18Geometry_structure11surface_numE"></span><span id="_CPPv2N18Geometry_structure11surface_numE"></span><span id="Geometry_structure::surface_num__i"></span><span class="target" id="struct_geometry__structure_1a0c03902411c5ca887f80f8ee24755127"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">surface_num</span></span></span><a class="headerlink" href="#_CPPv4N18Geometry_structure11surface_numE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18Geometry_structure9group_numE">
+<span id="_CPPv3N18Geometry_structure9group_numE"></span><span id="_CPPv2N18Geometry_structure9group_numE"></span><span id="Geometry_structure::group_num__i"></span><span class="target" id="struct_geometry__structure_1a79a0708d6232a4da8bd2ec61d25d03c8"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">group_num</span></span></span><a class="headerlink" href="#_CPPv4N18Geometry_structure9group_numE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18Geometry_structure9mesh_sizeE">
+<span id="_CPPv3N18Geometry_structure9mesh_sizeE"></span><span id="_CPPv2N18Geometry_structure9mesh_sizeE"></span><span id="Geometry_structure::mesh_size__double"></span><span class="target" id="struct_geometry__structure_1aed4a04a50a15bbcae42f888d2d924456"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mesh_size</span></span></span><a class="headerlink" href="#_CPPv4N18Geometry_structure9mesh_sizeE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18Geometry_structure8min_sizeE">
+<span id="_CPPv3N18Geometry_structure8min_sizeE"></span><span id="_CPPv2N18Geometry_structure8min_sizeE"></span><span id="Geometry_structure::min_size__double"></span><span class="target" id="struct_geometry__structure_1a53bc379b42af1f82cf34cc212e775ff9"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">min_size</span></span></span><a class="headerlink" href="#_CPPv4N18Geometry_structure8min_sizeE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18Geometry_structure4nodeE">
+<span id="_CPPv3N18Geometry_structure4nodeE"></span><span id="_CPPv2N18Geometry_structure4nodeE"></span><span id="Geometry_structure::node__geo_node_typeP"></span><span class="target" id="struct_geometry__structure_1ad869241cf9e4fbd49c1f149ea3a133d7"></span><a class="reference internal" href="#_CPPv413geo_node_type" title="geo_node_type"><span class="n"><span class="pre">geo_node_type</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">node</span></span></span><a class="headerlink" href="#_CPPv4N18Geometry_structure4nodeE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18Geometry_structure4lineE">
+<span id="_CPPv3N18Geometry_structure4lineE"></span><span id="_CPPv2N18Geometry_structure4lineE"></span><span id="Geometry_structure::line__geo_line_typeP"></span><span class="target" id="struct_geometry__structure_1a7d5092b4f53228e0064319cc026a6ed5"></span><a class="reference internal" href="#_CPPv413geo_line_type" title="geo_line_type"><span class="n"><span class="pre">geo_line_type</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">line</span></span></span><a class="headerlink" href="#_CPPv4N18Geometry_structure4lineE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18Geometry_structure5curveE">
+<span id="_CPPv3N18Geometry_structure5curveE"></span><span id="_CPPv2N18Geometry_structure5curveE"></span><span id="Geometry_structure::curve__geo_curve_typeP"></span><span class="target" id="struct_geometry__structure_1a36787e03f34e0f0455b65e39fc46446f"></span><a class="reference internal" href="#_CPPv414geo_curve_type" title="geo_curve_type"><span class="n"><span class="pre">geo_curve_type</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">curve</span></span></span><a class="headerlink" href="#_CPPv4N18Geometry_structure5curveE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18Geometry_structure7surfaceE">
+<span id="_CPPv3N18Geometry_structure7surfaceE"></span><span id="_CPPv2N18Geometry_structure7surfaceE"></span><span id="Geometry_structure::surface__geo_surface_typeP"></span><span class="target" id="struct_geometry__structure_1a29ef6353b8c7d59dff7813922153780b"></span><a class="reference internal" href="#_CPPv416geo_surface_type" title="geo_surface_type"><span class="n"><span class="pre">geo_surface_type</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">surface</span></span></span><a class="headerlink" href="#_CPPv4N18Geometry_structure7surfaceE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18Geometry_structure5groupE">
+<span id="_CPPv3N18Geometry_structure5groupE"></span><span id="_CPPv2N18Geometry_structure5groupE"></span><span id="Geometry_structure::group__geo_group_typeP"></span><span class="target" id="struct_geometry__structure_1ad8fca796901e5346ec8d05e91328c3f6"></span><a class="reference internal" href="#_CPPv414geo_group_type" title="geo_group_type"><span class="n"><span class="pre">geo_group_type</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">group</span></span></span><a class="headerlink" href="#_CPPv4N18Geometry_structure5groupE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="openfdem__geometry_8h"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">openfdem_geometry.h</span></span></dt>
+<dd><div class="docutils container">
+<em>#include “../common/openfdem_struct.h”</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-typedefs">Typedefs</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv48Geometry">
+<span id="_CPPv38Geometry"></span><span id="_CPPv28Geometry"></span><span id="Geometry"></span><span class="target" id="openfdem__geometry_8h_1ab67dd7104bf7c8eb317017e007ddd41f"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv418Geometry_structure" title="Geometry_structure"><span class="n"><span class="pre">Geometry_structure</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">Geometry</span></span></span><a class="headerlink" href="#_CPPv48Geometry" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="push__geometry_8h"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">push_geometry.h</span></span></dt>
+<dd><div class="docutils container">
+<em>#include “../io/parser/parser_geometry.h”</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420push_geometry_square7General8Geometryi">
+<span id="_CPPv320push_geometry_square7General8Geometryi"></span><span id="_CPPv220push_geometry_square7General8Geometryi"></span><span id="push_geometry_square__General.Geometry.i"></span><span class="target" id="push__geometry_8h_1aa07129431ef93c15740a4fb4e83da73b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">push_geometry_square</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="geometryclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="#_CPPv48Geometry" title="Geometry"><span class="n"><span class="pre">Geometry</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">geometry</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">embed_flag</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420push_geometry_square7General8Geometryi" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv421push_geometry_polygon7General8Geometryi">
+<span id="_CPPv321push_geometry_polygon7General8Geometryi"></span><span id="_CPPv221push_geometry_polygon7General8Geometryi"></span><span id="push_geometry_polygon__General.Geometry.i"></span><span class="target" id="push__geometry_8h_1a38b023073fd75a8da3b28b0e4d03a75c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">push_geometry_polygon</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="geometryclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="#_CPPv48Geometry" title="Geometry"><span class="n"><span class="pre">Geometry</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">geometry</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">embed_flag</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421push_geometry_polygon7General8Geometryi" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv419push_geometry_table7General8Geometryi">
+<span id="_CPPv319push_geometry_table7General8Geometryi"></span><span id="_CPPv219push_geometry_table7General8Geometryi"></span><span id="push_geometry_table__General.Geometry.i"></span><span class="target" id="push__geometry_8h_1adbac6c8305a4f9ffa4360ced7691947b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">push_geometry_table</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="geometryclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="#_CPPv48Geometry" title="Geometry"><span class="n"><span class="pre">Geometry</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">geometry</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">embed_flag</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419push_geometry_table7General8Geometryi" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420push_geometry_circle7General8Geometryi">
+<span id="_CPPv320push_geometry_circle7General8Geometryi"></span><span id="_CPPv220push_geometry_circle7General8Geometryi"></span><span id="push_geometry_circle__General.Geometry.i"></span><span class="target" id="push__geometry_8h_1a2664cd9e9936a8e3bbf83fae7533e138"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">push_geometry_circle</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="geometryclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="#_CPPv48Geometry" title="Geometry"><span class="n"><span class="pre">Geometry</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">geometry</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">embed_flag</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420push_geometry_circle7General8Geometryi" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv421push_geometry_ellipse7General8Geometryi">
+<span id="_CPPv321push_geometry_ellipse7General8Geometryi"></span><span id="_CPPv221push_geometry_ellipse7General8Geometryi"></span><span id="push_geometry_ellipse__General.Geometry.i"></span><span class="target" id="push__geometry_8h_1addc6a9d4bc9884e5c1e1312ad993cb66"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">push_geometry_ellipse</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="geometryclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="#_CPPv48Geometry" title="Geometry"><span class="n"><span class="pre">Geometry</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">geometry</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">embed_flag</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421push_geometry_ellipse7General8Geometryi" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv417push_geometry_arc7General8Geometry">
+<span id="_CPPv317push_geometry_arc7General8Geometry"></span><span id="_CPPv217push_geometry_arc7General8Geometry"></span><span id="push_geometry_arc__General.Geometry"></span><span class="target" id="push__geometry_8h_1a5e3ba05cf9613e1c1b78c1fef4c4eaff"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">push_geometry_arc</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="geometryclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="#_CPPv48Geometry" title="Geometry"><span class="n"><span class="pre">Geometry</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">geometry</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417push_geometry_arc7General8Geometry" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv419push_geometry_joint7General8Geometry">
+<span id="_CPPv319push_geometry_joint7General8Geometry"></span><span id="_CPPv219push_geometry_joint7General8Geometry"></span><span id="push_geometry_joint__General.Geometry"></span><span class="target" id="push__geometry_8h_1a175a65591d8eaefd14c1b2da7c98ff40"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">push_geometry_joint</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="geometryclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="#_CPPv48Geometry" title="Geometry"><span class="n"><span class="pre">Geometry</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">geometry</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419push_geometry_joint7General8Geometry" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv418push_geometry_jset7General8Geometry">
+<span id="_CPPv318push_geometry_jset7General8Geometry"></span><span id="_CPPv218push_geometry_jset7General8Geometry"></span><span id="push_geometry_jset__General.Geometry"></span><span class="target" id="push__geometry_8h_1aa1dbfb2710de7d5f6babaf126206d05f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">push_geometry_jset</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="geometryclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="#_CPPv48Geometry" title="Geometry"><span class="n"><span class="pre">Geometry</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">geometry</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418push_geometry_jset7General8Geometry" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv417push_geometry_DFN7General8Geometry">
+<span id="_CPPv317push_geometry_DFN7General8Geometry"></span><span id="_CPPv217push_geometry_DFN7General8Geometry"></span><span id="push_geometry_DFN__General.Geometry"></span><span class="target" id="push__geometry_8h_1acaa9f483cdd49bba0d5c18c48a9e2996"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">push_geometry_DFN</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="geometryclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="#_CPPv48Geometry" title="Geometry"><span class="n"><span class="pre">Geometry</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">geometry</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417push_geometry_DFN7General8Geometry" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv425get_geo_node_group_square8GeometryPcdddd">
+<span id="_CPPv325get_geo_node_group_square8GeometryPcdddd"></span><span id="_CPPv225get_geo_node_group_square8GeometryPcdddd"></span><span id="get_geo_node_group_square__Geometry.cP.double.double.double.double"></span><span class="target" id="push__geometry_8h_1a32bc329ffd2294fb10e1cfbd01ca584b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_geo_node_group_square</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Geometry" title="Geometry"><span class="n"><span class="pre">Geometry</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">geometry</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">tag</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">x_lef</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">x_rig</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">y_bot</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">y_top</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425get_geo_node_group_square8GeometryPcdddd" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv428get_geo_node_group_square_on8GeometryPcdddd">
+<span id="_CPPv328get_geo_node_group_square_on8GeometryPcdddd"></span><span id="_CPPv228get_geo_node_group_square_on8GeometryPcdddd"></span><span id="get_geo_node_group_square_on__Geometry.cP.double.double.double.double"></span><span class="target" id="push__geometry_8h_1a927a2a2c87ae4a5fd227faed8d7c916e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_geo_node_group_square_on</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Geometry" title="Geometry"><span class="n"><span class="pre">Geometry</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">geometry</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">tag</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">x_lef</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">x_rig</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">y_bot</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">y_top</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428get_geo_node_group_square_on8GeometryPcdddd" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv429get_geo_node_group_plane_left8GeometryPcdddd">
+<span id="_CPPv329get_geo_node_group_plane_left8GeometryPcdddd"></span><span id="_CPPv229get_geo_node_group_plane_left8GeometryPcdddd"></span><span id="get_geo_node_group_plane_left__Geometry.cP.double.double.double.double"></span><span class="target" id="push__geometry_8h_1ac6aba3d06d8410e27f57e7a4023565ca"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_geo_node_group_plane_left</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Geometry" title="Geometry"><span class="n"><span class="pre">Geometry</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">geometry</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">tag</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">x1</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">y1</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">x2</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">y2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429get_geo_node_group_plane_left8GeometryPcdddd" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv430get_geo_node_group_plane_right8GeometryPcdddd">
+<span id="_CPPv330get_geo_node_group_plane_right8GeometryPcdddd"></span><span id="_CPPv230get_geo_node_group_plane_right8GeometryPcdddd"></span><span id="get_geo_node_group_plane_right__Geometry.cP.double.double.double.double"></span><span class="target" id="push__geometry_8h_1af441b90f6f1a7ada53ee965b48c458a7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_geo_node_group_plane_right</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Geometry" title="Geometry"><span class="n"><span class="pre">Geometry</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">geometry</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">tag</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">x1</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">y1</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">x2</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">y2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv430get_geo_node_group_plane_right8GeometryPcdddd" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv424get_geo_node_group_plane8GeometryPcdddd">
+<span id="_CPPv324get_geo_node_group_plane8GeometryPcdddd"></span><span id="_CPPv224get_geo_node_group_plane8GeometryPcdddd"></span><span id="get_geo_node_group_plane__Geometry.cP.double.double.double.double"></span><span class="target" id="push__geometry_8h_1abbb6383a4b58b84f2875ccb060135fce"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_geo_node_group_plane</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Geometry" title="Geometry"><span class="n"><span class="pre">Geometry</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">geometry</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">tag</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">x1</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">y1</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">x2</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">y2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv424get_geo_node_group_plane8GeometryPcdddd" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv431get_geo_node_group_circle_inner8GeometryPcddd">
+<span id="_CPPv331get_geo_node_group_circle_inner8GeometryPcddd"></span><span id="_CPPv231get_geo_node_group_circle_inner8GeometryPcddd"></span><span id="get_geo_node_group_circle_inner__Geometry.cP.double.double.double"></span><span class="target" id="push__geometry_8h_1a124baa24e3c7da6b8b9b87d83267672c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_geo_node_group_circle_inner</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Geometry" title="Geometry"><span class="n"><span class="pre">Geometry</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">geometry</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">tag</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">x0</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">y0</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">radius</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv431get_geo_node_group_circle_inner8GeometryPcddd" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv431get_geo_node_group_circle_outer8GeometryPcddd">
+<span id="_CPPv331get_geo_node_group_circle_outer8GeometryPcddd"></span><span id="_CPPv231get_geo_node_group_circle_outer8GeometryPcddd"></span><span id="get_geo_node_group_circle_outer__Geometry.cP.double.double.double"></span><span class="target" id="push__geometry_8h_1a56dfe8db99e6cdb7782873189abd089b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_geo_node_group_circle_outer</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Geometry" title="Geometry"><span class="n"><span class="pre">Geometry</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">geometry</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">tag</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">x0</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">y0</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">radius</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv431get_geo_node_group_circle_outer8GeometryPcddd" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv425get_geo_node_group_circle8GeometryPcddd">
+<span id="_CPPv325get_geo_node_group_circle8GeometryPcddd"></span><span id="_CPPv225get_geo_node_group_circle8GeometryPcddd"></span><span id="get_geo_node_group_circle__Geometry.cP.double.double.double"></span><span class="target" id="push__geometry_8h_1a8a39077d1432c29ee432d910c8055df8"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_geo_node_group_circle</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Geometry" title="Geometry"><span class="n"><span class="pre">Geometry</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">geometry</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">tag</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">x0</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">y0</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">radius</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425get_geo_node_group_circle8GeometryPcddd" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv414push_mesh_size8Geometry7GeneralPc">
+<span id="_CPPv314push_mesh_size8Geometry7GeneralPc"></span><span id="_CPPv214push_mesh_size8Geometry7GeneralPc"></span><span id="push_mesh_size__Geometry.General.cP"></span><span class="target" id="push__geometry_8h_1a64b81c7be3fc8fc70239bf9aaf04bb79"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">push_mesh_size</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Geometry" title="Geometry"><span class="n"><span class="pre">Geometry</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">geometry</span></span>, <a class="reference internal" href="geometryclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">keyword</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414push_mesh_size8Geometry7GeneralPc" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv48gmsh_api8Openfdem8GeometryPPcPci">
+<span id="_CPPv38gmsh_api8Openfdem8GeometryPPcPci"></span><span id="_CPPv28gmsh_api8Openfdem8GeometryPPcPci"></span><span id="gmsh_api__Openfdem.Geometry.cPP.cP.i"></span><span class="target" id="push__geometry_8h_1a8ead1f3fe95d0f4ce5792397d0ca2d7e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gmsh_api</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Openfdem</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">openfdem</span></span>, <a class="reference internal" href="#_CPPv48Geometry" title="Geometry"><span class="n"><span class="pre">Geometry</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">geometry</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">argv</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">keyword</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">write_flag</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv48gmsh_api8Openfdem8GeometryPPcPci" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv413geometry_free8Geometry">
+<span id="_CPPv313geometry_free8Geometry"></span><span id="_CPPv213geometry_free8Geometry"></span><span id="geometry_free__Geometry"></span><span class="target" id="push__geometry_8h_1a60f13669103c0495e905b6bb7f82a65b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">geometry_free</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48Geometry" title="Geometry"><span class="n"><span class="pre">Geometry</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">geometry</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413geometry_free8Geometry" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv419push_geometry_rdfns7General8Geometry">
+<span id="_CPPv319push_geometry_rdfns7General8Geometry"></span><span id="_CPPv219push_geometry_rdfns7General8Geometry"></span><span id="push_geometry_rdfns__General.Geometry"></span><span class="target" id="push__geometry_8h_1a7c40e38ee8bb79f423463a011c81bf51"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">push_geometry_rdfns</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="geometryclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="#_CPPv48Geometry" title="Geometry"><span class="n"><span class="pre">Geometry</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">geometry</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419push_geometry_rdfns7General8Geometry" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="dir_405fd32de3649961a5f009c7a3fe84df"></span><em><span class="pre">dir</span></em> <span class="sig-name descname"><span class="pre">/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem</span> <span class="pre">src/src/geometry</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="dir_68267d1309a1af8e8297ef4c3efbcdba"></span><em><span class="pre">dir</span></em> <span class="sig-name descname"><span class="pre">/Users/ekaterinaossetchkina/CProjects/openfdem_solver/openfdem</span> <span class="pre">src/src</span></span></dt>
+<dd></dd></dl>
+
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="geometryclass.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Geometry class</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="developer.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Developer Document</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, OpenFDEM Developer Group
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              <a class="muted-link " href="https://github.com/OpenFDEM-geomechanics/OpenFDEM" aria-label="GitHub">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+            </a>
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/scripts/furo.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    </body>
+</html>

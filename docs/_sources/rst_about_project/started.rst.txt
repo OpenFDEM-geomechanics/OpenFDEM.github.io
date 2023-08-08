@@ -1,4 +1,4 @@
-Quick Start for Developers
+Getting started
 ===========================
 
 This is the source code of C/C++ based OpenFDEM project developed by Dr. Xiaofeng Li, 

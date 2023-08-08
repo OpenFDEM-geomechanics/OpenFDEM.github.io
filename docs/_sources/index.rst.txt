@@ -4,85 +4,163 @@
    contain the root `toctree` directive.
 
 
-Welcome to the OpenFDEM Website
-===================================
+.. raw:: html
 
-*KEYWORD COMMANDS TUTORIAL MANUAL*
+    <style> .red {color:#F64A8A; font-weight:bold;} </style>
+    <style> .blue {color:#4169E1; font-weight:bold;} </style>
+
+.. role:: red
+.. role:: blue
+
+OpenFDEM 
+==================================================
+
+*Open-Source Finite and Discrete Element Solver*
 
 Copyright (©) 2017 - 2023 by Dr. Xiaofeng Li.
 
-About OpenFDEM
+.. raw:: html
+
+   <div style="height: 5px;"></div>
+
+What is OpenFDEM
 ----------------
 
-**OpenFDEM** aims to be a free and object-oriented finite and discrete element solver for solving multiscale, multiphase and multiphysics (3M) problems 
-that can be operated on various platforms, such as Linux, Unix and Windows (95/98/NT/2000/XP) systems. The applications are, but not limited to, mechanical, 
-thermal and fluid problems. The program is also optimized from design to algorithm to boost the computation speed. This project started from 2018 when 
-I was a PhD candidate in Monash University, and the very basic version was finished in 2020 when I graduated from Institute of Rock 
-and Soil Mechanics, China Academy of Science. After that, I turned to a full-time developer and co-PI of this project in University of Toronto since September 
-in 2021, under the supervision of Professor Giovanni Grasselli. More details about OpenFDEM were presented in the Global FDEM workshop "FDEM-2022-Modeling 
-innovations and numerical experiments in geomechanics" which held in Toronto on December 9, 2022. The recording of this workshop can be found 
-at https://geogroup.utoronto.ca/global-fdem-2022/.
+.. raw:: html
 
-.. image:: ../images/landslide.gif
+   <div style="height: 5px;"></div>
+
+**OpenFDEM** is an open-source and object-oriented finite and discrete element solver for solving diverse **multiscale, 
+multiphase and multiphysics** (3M) problems accurately with high performance computations. Its applications include but 
+are not limited to mechanical, thermal and fluid dynamics. OpenFDEM also provides a wide range of flexibility in 
+geometry, mesh and material modules. ``OpenFDEM`` is constructed by C++, and can be operated with an extensive Python C++ interface.
+
+``OpenFDEM`` is free (first stage) and open-source (second stage) under GNU license and can be used even in comercial softwares as it is before properly get the copyright from
+the developer. 
+
+
+.. image:: ../images/Introduction/landslide.gif
   :alt: landslide gif 
 
-.. image:: ../images/elementshape.png
-  :alt: Element Shape
-
-.. image:: ../images/AMR.gif
-  :alt: AMR Gif
   
-Website:
 
-- https://openfdem.com/
-- https://geogroup.utoronto.ca/ 
-- https://xiaofengli-uoft.github.io/Mainpage
+Call for papers
+----------------
 
-Global FDEM workshop 2022 reports->@
+.. raw:: html
 
-- https://geogroup.utoronto.ca/global-fdem-2022/
+   <div style="height: 5px;"></div>
 
-Special issue of Combined Finite-Discrete Element Modelling in Rock Mechanics and Rock Engineering ->@
+.. image:: ../images/Introduction/special_issue.png
+  :alt: special_issue png
 
-- http://www.jrmge.cn/newscontent-4-135.html
+|
 
-Xiaofeng Li,
-Giovanni Grasselli
-University of Toronto 
 
-Contents
-----------
+I would like to invite you to submit a contribution to a featured journal issue on FDEM that will be published on **JRMGE** (IF = 7.3, ranking 2/41 in Engineering and geological) in 2024.
 
+
+https://www.sciencedirect.com/journal/journal-of-rock-mechanics-and-geotechnical-engineering.
+
+The combined hybrid finite-discrete element method (FDEM) is widely used for modeling fracturing and fragmentation processes in brittle materials such as rock and concrete. The intrinsic advantage of FDEM derives by its ability to combine continuum mechanics formulations, such as finite strain-based deformability and non-linear fracture mechanics, with discrete element method, allowing the seamless transition from a continuum to a discontinuum model. FDEM allows to model multiple crack initiation, propagation and nucleation at micro scale to fractures or fragments at macro scale. These advances promote the applications of FDEM in geomechanics, energy storage, geothermal energy extraction, rock engineering, oil and gas exploration and mining. In recent decades, the FDEM has matured into a more general-purpose numerical method, covering mechanical, hydraulic, thermal and chemical coupling, that can be used to tackle increasingly more complex multiphase, multiphysics and multiscale problems.  
+ 
+
+This **Special Issue** aims to highlight the new advances and future developments of combined finite-discrete element method or continuum-discontinuum method, 
+for fracturing and fragmentation in geomechanics, underground energy storage, nuclear waste disposal, enhanced geothermal system, civil engineering or mining. 
+All the papers on this special issue will be **open access and free**. 
+ 
+
+The main topic includes but not limited to:
+
+    - Multiscale, multiphase, and multiphysics modeling of fracture and fragmentation in rock mechanics and rock engineering
+    - New advances and future developments of combined finite-discrete element method
+    - High-Performance computing application and large-scale modelling in combined finite-discrete element method
+    - Novel contact algorithms for high efficiency and accuracy
+    - Hydraulic fracturing and fluid transportation modelling in energy storage or fractured reservoirs
+    - THM(C) coupling in enhanced geothermal systems (EGS), underground hydrogen storage (UHS), nuclear waste disposal and CO2 storage
+    - Computational fluid dynamics and fluid-solid interaction for rock fracturing modelling
+    - Artificial intelligence and machine learning technique in combined finite-discrete element method
+
+You are invited to submit your manuscript at any time before the submission deadline. For any inquiries about the appropriateness of contribution topics, please contact Dr. Xiaofeng Li via xiaofeng.li@utoronto.ca.
+
+Guest Editors
+~~~~~~~~~~~~~
+
+Dr. Giovanni Grasselli
+    | Department of Civil & Mineral Engineering
+    | University of Toronto, Toronto, CA, Canada
+    | Email: giovanni.grasselli@utoronto.ca  
+   
+Dr. Haibo Li
+    | Institute of Rock and Soil Mechanics
+    | Chinese Academy of Sciences, Wuhan, China
+    | Email: hbli@whrsm.ac.cn  
+
+Dr. Xiaofeng Li
+    | Department of Civil & Mineral Engineering
+    | University of Toronto, Toronto, CA, Canada
+    | Email: xiaofeng.li@utoronto.ca  
+
+|
 .. toctree::
    :maxdepth: 1
    :caption: Contents:
 
    rst_about_project/intro
-   rst_about_project/contact
-   rst_about_project/requirements
+   rst_about_project/installation
    rst_about_project/started
+   rst_about_project/Changelog
    rst_about_project/copyrights
-   rst_about_project/collaborator
-   rst_about_project/publication
+   rst_about_project/Blog
+
 
 .. toctree::
    :maxdepth: 1
-   :caption: Documentation
+   :caption: Theory
    
-   rst_theory/index
+   rst_theory/Solid_FEM_Engine
+   rst_theory/Solid_Cohesive_Mechanics
+   rst_theory/Contact_Mechanics
+   rst_theory/Fluid_Transport_Theory
+   rst_theory/Thermal_Transfer_Theory
+   rst_theory/Phase_Field 
+   rst_theory/Particle_Discrete_Element_Method
+   rst_theory/Mesh_Adaptive_Analysis
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Tutorials
+   
    rst_tutorials/index
+   rst_tutorials/tutorialA_Paraview
+   rst_tutorials/tutorialB_Notepad++
+
+.. toctree::
+   :maxdepth: 1
+   :caption: User Manual
+
    rst_user_guide/index
+   rst_developer/developer
+
+   
+
+  
 
 .. toctree::
    :maxdepth: 2
-   :caption: Developer Documents:
+   :caption: About Us
 
-   rst_developer/developer
+   rst_about_project/contact
+   rst_about_project/collaborator
+   OpenFDEM Forum <https://github.com/OpenFDEM-geomechanics/OpenFDEM.github.io/discussions> 
 
 .. toctree::
+   :maxdepth: 1
    :caption: Appendix
 
    rst_developer/appendix
+   rst_about_project/publication
 
 
 
