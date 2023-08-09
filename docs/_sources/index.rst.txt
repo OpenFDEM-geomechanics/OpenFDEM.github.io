@@ -19,9 +19,6 @@ OpenFDEM
 
 Copyright (©) 2017 - 2023 by Dr. Xiaofeng Li.
 
-.. raw:: html
-
-   <div style="height: 5px;"></div>
 
 What is OpenFDEM
 ----------------
@@ -30,12 +27,12 @@ What is OpenFDEM
 
    <div style="height: 5px;"></div>
 
-**OpenFDEM** is an open-source and object-oriented finite and discrete element solver for solving diverse **multiscale, 
+**OpenFDEM** is an open-source(free) and object-oriented finite and discrete element solver for solving diverse **multiscale, 
 multiphase and multiphysics** (3M) problems accurately with high performance computations. Its applications include but 
 are not limited to mechanical, thermal and fluid dynamics. OpenFDEM also provides a wide range of flexibility in 
 geometry, mesh and material modules. ``OpenFDEM`` is constructed by C++, and can be operated with an extensive Python C++ interface.
 
-``OpenFDEM`` is free (first stage) and open-source (second stage) under GNU license and can be used even in comercial softwares as it is before properly get the copyright from
+``OpenFDEM`` is open-free (first stage) or open-source (second stage) under GNU license and can be used even in comercial softwares as it is before properly get the copyright from
 the developer. 
 
 
@@ -72,14 +69,14 @@ All the papers on this special issue will be **open access and free**.
 
 The main topic includes but not limited to:
 
-    - Multiscale, multiphase, and multiphysics modeling of fracture and fragmentation in rock mechanics and rock engineering
-    - New advances and future developments of combined finite-discrete element method
-    - High-Performance computing application and large-scale modelling in combined finite-discrete element method
-    - Novel contact algorithms for high efficiency and accuracy
-    - Hydraulic fracturing and fluid transportation modelling in energy storage or fractured reservoirs
-    - THM(C) coupling in enhanced geothermal systems (EGS), underground hydrogen storage (UHS), nuclear waste disposal and CO2 storage
-    - Computational fluid dynamics and fluid-solid interaction for rock fracturing modelling
-    - Artificial intelligence and machine learning technique in combined finite-discrete element method
+- Multiscale, multiphase, and multiphysics modeling of fracture and fragmentation in rock mechanics and rock engineering
+- New advances and future developments of combined finite-discrete element method
+- High-Performance computing application and large-scale modelling in combined finite-discrete element method
+- Novel contact algorithms for high efficiency and accuracy
+- Hydraulic fracturing and fluid transportation modelling in energy storage or fractured reservoirs
+- THM(C) coupling in enhanced geothermal systems (EGS), underground hydrogen storage (UHS), nuclear waste disposal and CO2 storage
+- Computational fluid dynamics and fluid-solid interaction for rock fracturing modelling
+- Artificial intelligence and machine learning technique in combined finite-discrete element method
 
 You are invited to submit your manuscript at any time before the submission deadline. For any inquiries about the appropriateness of contribution topics, please contact Dr. Xiaofeng Li via xiaofeng.li@utoronto.ca.
 
@@ -103,64 +100,37 @@ Dr. Xiaofeng Li
 
 |
 .. toctree::
-   :maxdepth: 1
-   :caption: Contents:
+   :maxdepth: 2
 
-   rst_about_project/intro
-   rst_about_project/installation
-   rst_about_project/started
-   rst_about_project/Changelog
-   rst_about_project/copyrights
-   rst_about_project/Blog
+   rst_about_introduction/index
 
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Theory
-   
-   rst_theory/Solid_FEM_Engine
-   rst_theory/Solid_Cohesive_Mechanics
-   rst_theory/Contact_Mechanics
-   rst_theory/Fluid_Transport_Theory
-   rst_theory/Thermal_Transfer_Theory
-   rst_theory/Phase_Field 
-   rst_theory/Particle_Discrete_Element_Method
-   rst_theory/Mesh_Adaptive_Analysis
-
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Tutorials
-   
-   rst_tutorials/index
-   rst_tutorials/tutorialA_Paraview
-   rst_tutorials/tutorialB_Notepad++
-
-.. toctree::
-   :maxdepth: 1
-   :caption: User Manual
-
-   rst_user_guide/index
-   rst_developer/developer
-
-   
-
-  
 
 .. toctree::
    :maxdepth: 2
-   :caption: About Us
-
-   rst_about_project/contact
-   rst_about_project/collaborator
-   OpenFDEM Forum <https://github.com/OpenFDEM-geomechanics/OpenFDEM.github.io/discussions> 
+   
+   rst_theory/index
 
 .. toctree::
-   :maxdepth: 1
-   :caption: Appendix
+   :maxdepth: 2
+   
+   rst_tutorials/index
 
-   rst_developer/appendix
-   rst_about_project/publication
+
+.. toctree::
+   :maxdepth: 2
+
+   rst_user_guide/index 
+
+.. toctree::
+   :maxdepth: 2
+
+   rst_about_us/index
+
+.. toctree::
+   :maxdepth: 2
+
+   rst_appendix/index
+   
 
 
 

@@ -1,6 +1,7 @@
-Tunnel Excavation under `In-situ` Stress
+Tunnel excavation under `In-situ` stress
 ########################################
-In-situ stress is applied to model the original state of the rock before excavation or disturbtion. 
+In-situ stress is an important issue that significantly influence the damage distribution and surrounding rock stability in underground excavation.
+In this example, we will show how to create the excavation model, how to get stress equlibrium before excavation and how to use step-by-step excavation in OpenFDEM.
 
 .. figure:: ../../images/Desmos/Apply_Insitu_Stress.png
     :alt: Geometry of the Rock and Excavation
@@ -21,16 +22,18 @@ In-situ stress is applied to model the original state of the rock before excavat
 #. Assign material properties
 #. Assign boundaries
 #. Setup output
-#. Execute model
+#. Run model
 
 
 ==================================
 2 Codes
 ==================================
-Please note that, all the setting in the example is based on the developer's computer. You may need to change 
-these setting based on your own conditions.
+.. warning::
 
-To start with programming, create a new empty text file (later add the `.of` extension). Begin writing the following commands:
+    Please note that, all the setting in the example is based on the developer's computer. You may need to change 
+    these details based on your own environment.
+
+To start with programming, create a new empty input file or copy it from the existing examples (later add the ``.of`` extension). Begin writing the following commands:
 
 -------------------------------------------------------------------
 2.1 Initialize the model
@@ -45,33 +48,31 @@ To start with programming, create a new empty text file (later add the `.of` ext
 .. literalinclude:: examples/ApplyInsituStress/runme.of
     :lines: 43
 
-3. Set the number of cores to be used for running this model.
+3. Set the number of cores to be used for running this model in parallelization.
 
-.. warning::
-    In this example, 15 cores will be used for running. To prevent the crushing of your computer, please 
-    check your computer to fill in the number of cores you want to use from your computer. To check the number 
-    of cores your computer has, you can go Task Manager > Performance > CPU > Cores. If nothing is set here, 
-    serial computing will be used.
 .. literalinclude:: examples/ApplyInsituStress/runme.of
     :lines: 47
 
 -------------------------------------------------------------------
 2.2 Create the geometry and the mesh
 -------------------------------------------------------------------
-#. See Figure 1, we will create a square rock model with a 0.05 m radius hole at the center of the rock.  
-    .. note::
-        Circles in OpenFDEM are defined by four values: x coordinate, y coordinate, radius and the number of segments. Users can define a circle by entering **[x_value y_value radius #_of_segements]**.         
+1. See Figure 1, we will create a square rock model with a 0.05 m radius hole at the center of the rock.  
 
-    .. literalinclude:: examples/ApplyInsituStress/runme.of
-        :lines: 51-52
+.. seealso::
+    Circles in OpenFDEM are defined by four parameters: x coordinate, y coordinate, radius and the number of segments. Users can define a circle by entering **[x_value y_value radius #_of_segements]**.         
 
-#. Set the mesh size and the default method to create the mesh
-    .. literalinclude:: examples/ApplyInsituStress/runme.of
-        :lines: 54-55
+.. literalinclude:: examples/ApplyInsituStress/runme.of
+    :lines: 51-52
 
-#. Group the elements which will be excavated later.
-    .. literalinclude:: examples/ApplyInsituStress/runme.of
-        :lines: 57
+2. Set the mesh size and the `default` method to create the mesh
+
+.. literalinclude:: examples/ApplyInsituStress/runme.of
+    :lines: 54-55
+
+3. Group the elements which will be excavated.
+
+.. literalinclude:: examples/ApplyInsituStress/runme.of
+    :lines: 57
 
 -------------------------------------------------------------------
 2.3 Assign Material Properties
@@ -106,72 +107,87 @@ The material properties of this model is shown as the table below:
     Check :doc:`element materal<../rst_user_guide/Material/of.mat.element>`, and :doc:`contact materal<../rst_user_guide/Material/of.mat.contact>` to see more materials.
 
 Set the material properties as shown below.
-    .. literalinclude:: examples/ApplyInsituStress/runme.of
-        :lines: 61,63
+
+.. literalinclude:: examples/ApplyInsituStress/runme.of
+    :lines: 61,63
 
 -------------------------------------------------------------------
 2.4 Group the Edges
 -------------------------------------------------------------------
-Group the four boundaries of the model for applying the in-situ stresses and boundary conditions later.
-    .. literalinclude:: examples/ApplyInsituStress/runme.of
-        :lines: 68-71
+Group the four boundaries of the model for applying the `in-situ` stress and boundary conditions.
+
+.. literalinclude:: examples/ApplyInsituStress/runme.of
+    :lines: 68-71
 
 -------------------------------------------------------------------
 2.5 Assign Boundary Conditions
 -------------------------------------------------------------------
-#. For this example, 30 MPa compressive stress in the xx direction and 5 MPa compressive stresses in the yy direction are assigned to the rock.
-    .. literalinclude:: examples/ApplyInsituStress/runme.of
-        :lines: 75
+1. For this example, 30 MPa compressive stress in the `xx` direction and 5 MPa compressive stresses in the `yy` direction are assigned to the rock.
 
-#. To quickly balance the model, absorbing boundary conditions are assigned to four boundaries in the model.
-    .. literalinclude:: examples/ApplyInsituStress/runme.of
-        :lines: 78-81
+.. literalinclude:: examples/ApplyInsituStress/runme.of
+    :lines: 75
+
+2. To quickly balance the model, absorbing boundary conditions are assigned to four boundaries in the model.
+
+.. literalinclude:: examples/ApplyInsituStress/runme.of
+    :lines: 78-81
 
 -------------------------------------------------------------------
 2.6 Set the Outputs
 -------------------------------------------------------------------
-#. Set the output interval to be every 2000 steps and output all fields variables and fracture variables. Control the output interval to a reasonable size could shorten the computation time but get a good understanding of the model.
-    .. literalinclude:: examples/ApplyInsituStress/runme.of
-        :lines: 85, 87-88
-#. In this step, model will first achieve the equilibrium without excavation under in-situ stresses state. The result of velocity or kinematic ratio should be less than 1e-5.
-    .. literalinclude:: examples/ApplyInsituStress/runme.of
-        :lines: 95
-#. Insert CZM after achieve the equlibrium of in-situ stresses
-    +---------------------------------------------+------------------------+
-    | Parameter                                   | Value                  |
-    +=============================================+========================+
-    | **Cohesive Material Properties**            |                        |
-    +---------------------------------------------+------------------------+
-    | model                                       | EM                     |
-    +---------------------------------------------+------------------------+
-    | tension (Pa)                                | 1e6                    |
-    +---------------------------------------------+------------------------+
-    | cohesion (Pa)                               | 20e6                   |
-    +---------------------------------------------+------------------------+
-    | friction                                    | 0.8                    |
-    +---------------------------------------------+------------------------+
-    | GI (:math:`J/m^2`)                          | 2                      |
-    +---------------------------------------------+------------------------+
-    | GII (:math:`J/m^2`)                         | 40                     |
-    +---------------------------------------------+------------------------+
-    .. literalinclude:: examples/ApplyInsituStress/runme.of
-        :lines: 98-99
-#. One step excavation. Remove the elements in the "excavation" group.
-    .. literalinclude:: examples/ApplyInsituStress/runme.of
-        :lines: 100
-#. Clear the absorbing boundaries
-    .. literalinclude:: examples/ApplyInsituStress/runme.of
-        :lines: 103-106
-#. Add pressures at the external boundaries
-    .. literalinclude:: examples/ApplyInsituStress/runme.of
-        :lines: 109-112
-#. The program will run 500000 steps in total. In other words, it will output 25 files for reference.
-    .. literalinclude:: examples/ApplyInsituStress/runme.of
-        :lines: 115
-#. Finalize the model and clear all the temporary memories.
-    .. literalinclude:: examples/ApplyInsituStress/runme.of
-        :lines: 118
-#. Save the notepad and double click the .of file to run the program.
+1. Set the output interval to be every 2000 steps and output all fields variables and fracture variables. 
+
+.. literalinclude:: examples/ApplyInsituStress/runme.of
+    :lines: 85, 87-88
+2. In this step, model will first achieve the equilibrium without excavation under `in-situ` stresses state. The result of velocity or kinematic ratio should be less than 0.00001.
+
+.. literalinclude:: examples/ApplyInsituStress/runme.of
+    :lines: 95
+3. Insert CZM after achieve the equlibrium of in-situ stresses
+
++---------------------------------------------+------------------------+
+| Parameter                                   | Value                  |
++=============================================+========================+
+| **Cohesive Material Properties**            |                        |
++---------------------------------------------+------------------------+
+| model                                       | EM                     |
++---------------------------------------------+------------------------+
+| tension (Pa)                                | 1e6                    |
++---------------------------------------------+------------------------+
+| cohesion (Pa)                               | 20e6                   |
++---------------------------------------------+------------------------+
+| friction                                    | 0.8                    |
++---------------------------------------------+------------------------+
+| GI (:math:`J/m^2`)                          | 2                      |
++---------------------------------------------+------------------------+
+| GII (:math:`J/m^2`)                         | 40                     |
++---------------------------------------------+------------------------+
+.. literalinclude:: examples/ApplyInsituStress/runme.of
+    :lines: 98-99
+4. One step excavation method. Remove the elements in the "excavation" group.
+
+.. literalinclude:: examples/ApplyInsituStress/runme.of
+    :lines: 100
+5. Clear the absorbing boundaries
+
+.. literalinclude:: examples/ApplyInsituStress/runme.of
+    :lines: 103-106
+
+6. Add pressures at the external boundaries
+
+.. literalinclude:: examples/ApplyInsituStress/runme.of
+    :lines: 109-112
+7. The program will run 500000 steps in total. In other words, it will output 25 files for reference.
+
+.. literalinclude:: examples/ApplyInsituStress/runme.of
+    :lines: 115
+
+8. Finalize the model and clear all the temporary memories.
+
+.. literalinclude:: examples/ApplyInsituStress/runme.of
+    :lines: 118
+
+9. Save the notepad and double click the .of file to run the program.
 
 ==================================
 3 Run the Program

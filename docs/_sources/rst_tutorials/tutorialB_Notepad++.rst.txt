@@ -19,9 +19,11 @@ NotePad++ and Syntax Highlighting
 .. role:: grey
 
 
-A syntax highlighting template file is designed and provided for users to improve the readability of the input file. This template file can be imported into NotePad++ and highlights all the keywords reserved in OpenFDEM. If NotePad++ is not installed in your computer, you can download this opensource software from https://notepad-plus-plus.org/ and install the package on your computer. To import the template file, you can
+A syntax highlighting template file is designed and provided for users to improve the readability of the input file. 
+This template file can be imported into ``NotePad++`` and highlights all the keywords reserved in OpenFDEM. 
+If ``NotePad++`` is not installed in your computer, you can download this `free software <https://notepad-plus-plus.org/>`_ and install the package on your computer. To import the template file, you can
 
-- go to Language > User Defined Language > Define your language.
+- go to :guilabel:`Language` > :guilabel:`User Defined Language` > :guilabel:`Define your language`.
 .. figure:: ../../images/Notepad++/fdem.png
     :alt: Steps to import the [fdem.xml] script
     :align: center
@@ -29,7 +31,7 @@ A syntax highlighting template file is designed and provided for users to improv
 
     Figure 1: Steps to import the [fdem.xml] script
 
-- Import and select fdem.xml in the installation directory.
+- Import and select ``fdem.xml`` in the installation directory.
 .. figure:: ../../images/Notepad++/User_Defined.png
     :alt: NotePad++ User Defined Language Setting and Keywords
     :align: center
@@ -37,11 +39,11 @@ A syntax highlighting template file is designed and provided for users to improv
 
     Figure 2: NotePad++ User Defined Language Setting and Keywords
 
-- Then select the current language as [fdem] in the list after importing. You may need to restart the program to see the implementation.
+- Then select the current language as **fdem** in the list after importing. You may need to restart the program to see the implementation.
 
 
 
-The content in the input file when opened in NotePad++ will be shown in different colors. By default,
+The content in the input file when opened in ``NotePad++`` will be shown in different colors. By default,
 
 .. figure:: ../../images/Notepad++/syntax_highlight.png
     :alt: Example input file opened in NotePad++ showing the various commands/syntax

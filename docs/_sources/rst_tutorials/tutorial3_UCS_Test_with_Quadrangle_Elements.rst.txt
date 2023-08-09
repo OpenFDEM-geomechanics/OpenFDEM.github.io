@@ -8,7 +8,7 @@ the quadratic triangle, quadrangle elements, quadratic quadrangle element and re
 1 Code
 ==================================
 
-To run the model with quadrangle elements, users just need to add the following line after setting 
+To run the model with quadrangle elements, users only need to add the following line after setting 
 up the mesh size and before creating the mesh.
 
 .. code-block::

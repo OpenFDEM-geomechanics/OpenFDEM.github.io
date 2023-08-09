@@ -1,0 +1,44 @@
+Publications
+###############
+
+Here is a tentative list of the outcomes (journal papers and books) from OpenFDEM project. If you think your
+work should be listed here, please `contact us <xfli@whrsm.ac.cn>`_.
+
+
+2022
+-----
+- Wang B, Li H, Xing H, et al. *Modelling of gas-driven fracturing and fragmentation in liquid CO2 blasting using finite-discrete element method*. **Engineering Analysis with Boundary Elements**, 2022, 144: 409-421.
+
+2021
+----
+- Li X F, Li H B, Zhao J. *Transgranular fracturing of crystalline rocks and its influence on rock strengths: Insights from a grain-scale continuum–discontinuum approach*. **Computer Methods in Applied Mechanics and Engineering**, 2021, 373: 113462.
+- Wang B, Li H, Shao Z, et al. *Investigating the mechanism of rock fracturing induced by high-pressure gas blasting with a hybrid continuum-discontinuum method*. **Computers and Geotechnics**, 2021, 140: 104445.
+
+2020
+----
+- Li X F, Li H B, Liu L W, et al. *I*nvestigating the crack initiation and propagation mechanism in brittle rocks using grain-based finite-discrete element method*. **International Journal of Rock Mechanics and Mining Sciences**, 2020, 127: 104219.
+
+2019
+----
+- Li X F, Li H B, Zhao J. *The role of transgranular capability in grain-based modelling of crystalline rocks*. **Computers and Geotechnics**, 2019, 110: 161-183.
+
+
+Other Selected Papers
+---------------
+
+Here is a list of representative outcomes for the FDEM method, those will help you quickly understand what is the FDEM.
+
+- Munjiza, Antonio A. *The combined finite-discrete element method*. **John Wiley & Sons**, 2004.
+
+- Munjiza A A, Knight E E, Rougier E. *Computational mechanics of discontinua*. **John Wiley & Sons**, 2011.
+
+- Mahabadi O K, Lisjak A, Munjiza A, et al. *Y-Geo: new combined finite-discrete element numerical code for geomechanical applications*. **International Journal of Geomechanics**, 2012, 12(6): 676-688.
+
+- Knight E E, Rougier E, Lei Z, et al. *HOSS: an implementation of the combined finite-discrete element method*. **Computational Particle Mechanics**, 2020, 7: 765-787.
+
+- Mahabadi O K, Grasselli G, Munjiza A. *Y-GUI: A graphical user interface and pre-processor for the combined finite-discrete element code, Y2D, incorporating material heterogeneity*. **Computers & Geosciences**, 2010, 36(2): 241-252.
+
+- Fukuda D, Mohammadnejad M, Liu H, et al. *Development of a GPGPU‐parallelized hybrid finite‐discrete element method for modeling rock fracture*. **International journal for numerical and analytical methods in geomechanics**, 2019, 43(10): 1797-1824.
+
+- Yan C, Xie X, Ren Y, et al. *A FDEM-based 2D coupled thermal-hydro-mechanical model for multiphysical simulation of rock fracturing*. **International Journal of Rock Mechanics and Mining Sciences**, 2022, 149: 104964.
+

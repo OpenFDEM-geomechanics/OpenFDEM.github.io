@@ -2,7 +2,13 @@ Theory
 ===================================
 
 .. toctree::
-   :maxdepth: 1
-
-   theory2
-
+   :maxdepth: 2
+  
+   Solid_FEM_Engine
+   Solid_Cohesive_Mechanics
+   Contact_Mechanics
+   Fluid_Transport_Theory
+   Thermal_Transfer_Theory
+   Phase_Field 
+   Particle_Discrete_Element_Method
+   Mesh_Adaptive_Analysis

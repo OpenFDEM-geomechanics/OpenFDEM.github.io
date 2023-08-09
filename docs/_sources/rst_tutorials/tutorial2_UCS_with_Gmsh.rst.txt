@@ -1,15 +1,15 @@
-Create a model from imported mesh
+Create model from imported mesh
 #######################################
 
-OpenFDEM also allows users to import common mesh files such as ``.inp`` files, ``.msh`` files, and ``.geo`` files to run the model. 
+OpenFDEM supports users to import standard mesh files such as ``.inp`` files, ``.msh`` files, and ``.geo`` files to run the model. 
 This example will review how to setup a uniaxial compressive test example with output from ``Gmsh`` software. 
 
-**Runtime**: <10 min on i9 8-core Windows 10 Machine
+**Runtime**: < 10 min on i9 8-core Windows 10 Machine
 
 Expected tutorial output (visualized in ``ParaView``):
 
-.. image:: ../../images/ucs_example.png
-  :width: 800
+.. image:: ../../images/User_Guide/ucs_example.png 
+  :scale: 30%
   :alt: UCS Example Image
   :align: center
 
@@ -36,7 +36,7 @@ The following files are needed to follow along the tutorial:
 2 Codes
 ==================================
 
-1. OpenFDEM supports various common mesh file format such as .inp files, .msh files, and .geo files. In this example, 
+1. OpenFDEM supports various common mesh file format such as ``.inp`` files, ``.msh`` files, and ``.geo`` files. In this example, 
 “Job-3.inp” file in the folder will be imported to the model, which has the same mesh as the first unconfined compression 
 test example. 
 

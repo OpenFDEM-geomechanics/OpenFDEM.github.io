@@ -1,6 +1,6 @@
-Water flowing in rock dam, fracture flow
+Water flowing in rock dam - fracture flow
 ########################################
-This tutorial will continue the hydro seepage model in tutorial 6 with discrete elements.
+This tutorial will continue the hydro seepage model in tutorial 6 with discrete elements. The hydro flowing is considered only on the cohesive interfaces.
 
 .. figure:: ../../images/Desmos/Hydro.png
     :alt: Geometry of the uniaxial compression test
@@ -16,55 +16,60 @@ This tutorial will continue the hydro seepage model in tutorial 6 with discrete 
 ==================================
 Based on the code in tutorial 6, fracture flow parameters will be add to model the hydro fracture.
 
-#. To include the discrete elements, joint elements are added to the model after create the mesh.
-    .. literalinclude:: examples/HydroFractureFlow/runme.of
-        :lines: 55
-#. Assign the material properties to CZM.
-    +---------------------------------------------+------------------------+
-    | Parameter                                   | Value                  |
-    +=============================================+========================+
-    | **Contact Material Properties**             |                        |
-    +---------------------------------------------+------------------------+
-    | model                                       | MC                     |
-    +---------------------------------------------+------------------------+
-    | friction                                    | 0.5                    |
-    +---------------------------------------------+------------------------+
+1. To include the discrete elements, joint elements are added to the model after create the mesh.
 
-    .. literalinclude:: examples/HydroFractureFlow/runme.of
-        :lines: 60
-#. Set fracture flow parameters
-    +---------------------------------------------+------------------------+
-    | Parameter                                   | Value                  |
-    +=============================================+========================+
-    | **Hydro fluid material**                    |                        |
-    +---------------------------------------------+------------------------+
-    | density (:math:`kg/m^3`)                    | 1000.0                 |
-    +---------------------------------------------+------------------------+
-    | K (Pa)                                      | 20e9                   |
-    +---------------------------------------------+------------------------+
-    | viscosity (Pa)                              | 1e-3                   |
-    +---------------------------------------------+------------------------+
-    |                                             |                        |
-    +---------------------------------------------+------------------------+
-    | **Hydro Fracture material**                 |                        |
-    +---------------------------------------------+------------------------+
-    | a0 (m)                                      | 1e-4                   |
-    +---------------------------------------------+------------------------+
-    | amin (m)                                    | 1e-4                   |
-    +---------------------------------------------+------------------------+
-    | amax (m)                                    | 3e-4                   |
-    +---------------------------------------------+------------------------+
-    | power                                       | 3.0                    |
-    +---------------------------------------------+------------------------+
-    | b                                           | 1.0                    |
-    +---------------------------------------------+------------------------+
-    .. literalinclude:: examples/HydroFractureFlow/runme.of
-        :lines: 63-64
+.. literalinclude:: examples/HydroFractureFlow/runme.of
+    :lines: 55
+
+2. Assign the material properties to CZM.
+
++---------------------------------------------+------------------------+
+| Parameter                                   | Value                  |
++=============================================+========================+
+| **Contact Material Properties**             |                        |
++---------------------------------------------+------------------------+
+| model                                       | MC                     |
++---------------------------------------------+------------------------+
+| friction                                    | 0.5                    |
++---------------------------------------------+------------------------+
+
+.. literalinclude:: examples/HydroFractureFlow/runme.of
+    :lines: 60
+
+3. Set fracture flow parameters
+
++---------------------------------------------+------------------------+
+| Parameter                                   | Value                  |
++=============================================+========================+
+| **Hydro fluid material**                    |                        |
++---------------------------------------------+------------------------+
+| density (:math:`kg/m^3`)                    | 1000.0                 |
++---------------------------------------------+------------------------+
+| K (Pa)                                      | 20e9                   |
++---------------------------------------------+------------------------+
+| viscosity (Pa)                              | 1e-3                   |
++---------------------------------------------+------------------------+
+|                                             |                        |
++---------------------------------------------+------------------------+
+| **Hydro Fracture material**                 |                        |
++---------------------------------------------+------------------------+
+| a0 (m)                                      | 1e-4                   |
++---------------------------------------------+------------------------+
+| amin (m)                                    | 1e-4                   |
++---------------------------------------------+------------------------+
+| amax (m)                                    | 3e-4                   |
++---------------------------------------------+------------------------+
+| power                                       | 3.0                    |
++---------------------------------------------+------------------------+
+| b                                           | 1.0                    |
++---------------------------------------------+------------------------+
+.. literalinclude:: examples/HydroFractureFlow/runme.of
+    :lines: 63-64
 
 ==================================
 2 Run the Program
 ==================================
-Hydro module, Fracture flow module and CZM module are on to model the hydro fracture flow.
+1. Hydro module, Fracture flow module and CZM module are on to model the hydro fracture flow.
 
 .. figure:: ../../images/Command/Hydro_Fracture_Modulus.PNG
     :alt: Applied Modules
@@ -73,8 +78,7 @@ Hydro module, Fracture flow module and CZM module are on to model the hydro frac
 
     Figure 2: Applied Modules
 
-|
-Contact material, hydro fracture material and hydro fluid material are include in the modeling.
+2. Contact material, hydro fracture material and hydro fluid material are include in the modeling.
 
 .. figure:: ../../images/Command/Hydro_Fracture_Material.PNG
     :alt: Hydro Fracture Materials
@@ -83,8 +87,7 @@ Contact material, hydro fracture material and hydro fluid material are include i
 
     Figure 3: Hydro Fracture Materials
 
-|
-Hydro boundary conditions.
+3. Hydro boundary conditions.
 
 .. figure:: ../../images/Command/Hydro_BC.PNG
     :alt: Hydro Boundary Conditions
@@ -93,7 +96,6 @@ Hydro boundary conditions.
 
     Figure 4: Hydro Boundary Conditions
 
-|
 
 ==================================
 3 Results

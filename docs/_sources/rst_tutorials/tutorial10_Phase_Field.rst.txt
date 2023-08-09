@@ -1,7 +1,6 @@
 Phase Field
 ########################################
-Uniaxial compression test is one of the most fundamental tests that will be used to get the material properties 
-from the experimental stress-strain curve.
+
 
 .. figure:: ../../images/Desmos/Phase_Field.png
     :alt: Geometry of the phase field model
@@ -33,86 +32,109 @@ To start with programming, create a new empty text file (later add the `.of` ext
 -------------------------------------------------------------------
 2.1 Initialize the model
 -------------------------------------------------------------------
-#. Create a new run and clean up the old memories.
-    .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-        :lines: 39
+1. Create a new run and clean up the old memories.
 
-#. Set up the folder name to save your results. Here the folder name is set to be “result”.
-    .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-        :lines: 43
+.. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
+    :lines: 39
 
-#. Turn off the contact
-    .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-        :lines: 46
+2. Set up the folder name to save your results. Here the folder name is set to be “result”.
 
-#. Set the minangle to delete the bad segments for joints and DFNs.
-    .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-        :lines: 49
+.. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
+    :lines: 43
 
-#. Set the number of cores to be used for running this model.
-    .. warning::
-        In this example, 15 cores will be used for running. To prevent the crushing of your computer, please 
-        check your computer to fill in the number of cores you want to use from your computer. To check the number 
-        of cores your computer has, you can go Task Manager > Performance > CPU > Cores. If nothing is set here, 
-        serial computing will be used.
-    .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-        :lines: 53
+3. Turn off the contact module, no contacts will be considered in this simulation.
+
+.. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
+    :lines: 46
+
+4. Set the minangle to delete the bad segments for joints and DFNs.
+
+.. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
+    :lines: 49
+
+5. Set the number of cores to be used for running this model.
+
+.. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
+    :lines: 53
 
 -------------------------------------------------------------------
 2.2 Create the geometry and the mesh
 -------------------------------------------------------------------
-#. See Figur 1 to create a polygon with 9 points.
-    .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-        :lines: 56-65
-#. Cut the joints in the plate.
-    .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-        :lines: 68
-#. Group the geometries.
-    .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-        :lines: 70-71
-#. Set different mesh size for different group of geometries.
-    .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-        :lines: 73-76
-#. Create the mesh.
-    .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-        :lines: 78
-#. Group the elements in a mesh.
-    .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-        :lines: 80
+1. See Figur 1 to create a polygon with 9 points.
+
+.. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
+    :lines: 56-65
+
+2. Cut the joints in the plate.
+
+.. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
+    :lines: 68
+
+3. Group the geometries.
+
+.. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
+    :lines: 70-71
+
+4. Set different mesh size for different group of geometries.
+
+.. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
+    :lines: 73-76
+
+5. Create the mesh.
+
+.. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
+    :lines: 78
+
+6. Group the elements in a mesh.
+
+.. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
+    :lines: 80
 
 -------------------------------------------------------------------
 2.3 Assign Material and Thermal Properties
 -------------------------------------------------------------------
-#. Set the material properties.
-    .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-        :lines: 84-85
-#. Assign materials contacts.
-    .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-        :lines: 87
+1. Set the material properties.
+
+.. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
+    :lines: 84-85
+
+2. Assign materials contacts.
+
+.. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
+    :lines: 87
 
 -------------------------------------------------------------------
 2.4 Create Groups and Assign Boundary Conditions
 -------------------------------------------------------------------
-#. Group the nodes to prepare for the next step.
-    .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-        :lines: 90-91
-#. Assign the pressure boundary conditions.
-    .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-        :lines: 98-99
+1. Group the nodes to prepare for the next step.
+
+.. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
+    :lines: 90-91
+
+2. Assign the pressure boundary conditions.
+
+.. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
+    :lines: 98-99
 
 -------------------------------------------------------------------
 2.5 Set the Outputs
 -------------------------------------------------------------------
-#. Set the output interval to be every 2000 steps and output all fields variables and fracture variables. Control the output interval to a reasonable size could shorten the computation time but get a good understanding of the model.
-    .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-        :lines: 103-104
-#. The program will run 100000 steps in total. In other words, it will output 10 files for reference.
-    .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-        :lines: 108
-#. Finalize the model and clear all the temporary memories.
-    .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-        :lines: 110
-#. Save the notepad and double click the .of file to run the program.
+1. Set the output interval to be every 2000 steps and output all fields variables and fracture variables. Control the output interval to a reasonable size could shorten the computation time but get a good understanding of the model.
+
+.. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
+    :lines: 103-104
+
+2. The program will run 100000 steps in total. In other words, it will output 10 files for reference.
+
+.. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
+    :lines: 108
+
+3. Finalize the model and clear all the temporary memories.
+
+.. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
+    :lines: 110
+    
+4. Save the notepad and double click the .of file to run the program.
 
 ==================================
 3 Run the Program

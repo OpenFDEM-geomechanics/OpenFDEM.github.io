@@ -1,13 +1,23 @@
-Grain-based Model (GBM), interface with ``Neper``
+Grain-based model (GBM), interface with ``Neper``
 ########################################
-Grain based modeling on UCS test.
 
-.. figure:: ../../images/Desmos/UCS.png
+.. raw:: html
+
+    <style> .red {color:#F64A8A; } </style>
+    <style> .blue {color:#4169E1; font-weight:bold;} </style>
+
+.. role:: red
+.. role:: blue
+
+Grain based modeling for UCS example. The grain-based model is constructed by the Voronoi tessellations fron ``Neper`` <https://neper.info/>,  ``.geo``  or ``.inp`` files can be directly imported by OpenFDEM and each tessellation will be created into
+a individual physcial group. The user can regroup those tessellations into different minerals by assigning the area ratio, OpenFDEM will create those mineral groups by random to approach the predesigned mineral distributions.
+
+.. figure:: ../../images/User_Guide/grainbasedmodel.png
     :alt: Geometry of the uniaxial compression test
     :align: center
-    :scale: 60%
+    :scale: 30%
 
-    Figure 1: Geometry of the uniaxial compression strength test
+    Figure 1: Mineral distribution in UCS sample
 
 |
 
@@ -18,7 +28,8 @@ The following files are needed to follow along the tutorial:
 
 - `Job-1.inp`_ (click to download from GitHub)
 
-.. _Job-1.inp: = https://github.com/OpenFDEM-geomechanics/Examples/tree/main/GBM/Job-1.inp
+.. _Job-1.inp:  https://github.com/OpenFDEM-geomechanics/Examples/tree/main/GBM/Job-1.inp
+
 ==================================
 2 Main Steps
 ==================================
@@ -32,90 +43,131 @@ The following files are needed to follow along the tutorial:
 ==================================
 3 Codes
 ==================================
-Please note that, all the setting in the example is based on the developer's computer. You may need to change 
-these setting based on your own conditions.
+.. warning::
 
-To start with programming, create a new empty text file (later add the `.of` extension). Begin writing the following commands:
+    Please note that, all the setting in the example is based on the developer's computer. You may need to change 
+    these details based on your own environment.
+
+To start with programming, create a new empty input file or copy it from the existing examples (later add the ``.of`` extension). Begin writing the following commands:
 
 -------------------------------------------------------------------
 3.1 Initialize the model
 -------------------------------------------------------------------
-#. Create a new run and clean up the old memories.
-    .. literalinclude:: examples/GBM/runme.of
-        :lines: 39
+1. Create a new run and clean up the old memories.
 
-#. Turn on GBM module
-    .. literalinclude:: examples/GBM/runme.of
-        :lines: 40
+.. literalinclude:: examples/GBM/runme.of
+    :lines: 39
 
-#. Set up the folder name to save your results. Here the folder name is set to be “result”.
-    .. literalinclude:: examples/GBM/runme.of
-        :lines: 44
+2. Turn on GBM module.
 
-#. Set the number of cores to be used for running this model.
-    .. warning::
-        In this example, 15 cores will be used for running. To prevent the crushing of your computer, please 
-        check your computer to fill in the number of cores you want to use from your computer. To check the number 
-        of cores your computer has, you can go Task Manager > Performance > CPU > Cores. If nothing is set here, 
-        serial computing will be used.
-    .. literalinclude:: examples/GBM/runme.of
-        :lines: 48
+.. literalinclude:: examples/GBM/runme.of
+    :lines: 40
+
+3. Set up the folder name to save your results. Here the folder name is set to be “result”.
+
+.. literalinclude:: examples/GBM/runme.of
+    :lines: 44
+
+4. Set the number of cores to be used for running this model.
+
+.. warning::
+    In the default example, 15 cores will be used for running. To prevent the heavy burden of your computer, please 
+    check your computer to change core number you want to use. To check the configuration of your computer, you can go
+
+    Windows: 
+        Task Manager > Performance > CPU > Cores
+
+    Linux: 
+        lscpu
+
+        lscpu | egrep 'Model name|Socket|Thread|NUMA|CPU\(s\)'
+
+        lscpu -p
+
+    The cores will be printed on the console when you start a new run, you can also check the information from OpenFDEM kernel itself.
+
+    If nothing is set here, serial computing will be used by default.
+.. literalinclude:: examples/GBM/runme.of
+    :lines: 48
 
 -------------------------------------------------------------------
 3.2 Import the geometry and the mesh
 -------------------------------------------------------------------
-#. Import the geometry
-    .. literalinclude:: examples/GBM/runme.of
-        :lines: 51
-#. 
-    .. literalinclude:: examples/GBM/runme.of
-        :lines: 53
-#. Group the elements.
-    .. literalinclude:: examples/GBM/runme.of
-        :lines: 54-56
-#. Insert cohesive elements
-    .. literalinclude:: examples/GBM/runme.of
-        :lines: 59
-#. Group cohesive elements
-    .. literalinclude:: examples/GBM/runme.of
-        :lines: 62-67
+1. Import the mesh file from ``Neper``.
+
+.. literalinclude:: examples/GBM/runme.of
+    :lines: 51
+
+2. Regroup the tessellations to three mineral groups, each group is controlled by the area ratio.
+
+.. literalinclude:: examples/GBM/runme.of
+    :lines: 53
+
+3. Create ``object:element`` groups for platens and sample.
+
+.. literalinclude:: examples/GBM/runme.of
+    :lines: 54-56
+
+4. Insert cohesive interface in rock sample only.
+
+.. literalinclude:: examples/GBM/runme.of
+    :lines: 59
+
+5. Create ``object:cohesive`` groups for the interfaces, those groups will be assigned different material properties.
+
+.. literalinclude:: examples/GBM/runme.of
+    :lines: 62-67
 
 -------------------------------------------------------------------
 3.3 Assign Material and Thermal Properties
 -------------------------------------------------------------------
-#. Set the material properties of minerals and platens.
-    .. literalinclude:: examples/GBM/runme.of
-        :lines: 70-72, 74-75
-#. Assign materials for CZM.
-    .. literalinclude:: examples/GBM/runme.of
-        :lines: 78-83
-#. Assign materials for contact.
-    .. literalinclude:: examples/GBM/runme.of
-        :lines: 86-92
+1. Set the material properties of minerals and platens.
+
+.. literalinclude:: examples/GBM/runme.of
+    :lines: 70-72, 74-75
+
+2. Assign different materials for cohesive interfaces.
+
+.. literalinclude:: examples/GBM/runme.of
+    :lines: 78-83
+
+3. Assign different materials for contact.
+
+.. literalinclude:: examples/GBM/runme.of
+    :lines: 86-92
 
 -------------------------------------------------------------------
 3.4 Create Groups and Assign Boundary Conditions
 -------------------------------------------------------------------
-#. Group the nodals to prepare for the next step.
-    .. literalinclude:: examples/GBM/runme.of
-        :lines: 95-96
-#. Assign the nodal boundaries. In this model, top, bottom and right boundaries are fixed in both x and y directions.
-    .. literalinclude:: examples/GBM/runme.of
-        :lines: 100-101
+1. Create ``object::node`` groups.
+
+.. literalinclude:: examples/GBM/runme.of
+    :lines: 95-96
+
+2. Assign the nodal boundaries. In this model, top, bottom and right boundaries are fixed in both *x* and *y* directions.
+
+.. literalinclude:: examples/GBM/runme.of
+    :lines: 100-101
 
 -------------------------------------------------------------------
 3.5 Set the Outputs
 -------------------------------------------------------------------
-#. Set the output interval to be every 500 steps and output all fields variables and fracture variables. Control the output interval to a reasonable size could shorten the computation time but get a good understanding of the model.
-    .. literalinclude:: examples/GBM/runme.of
-        :lines: 105-107
-#. The program will run 10000000 steps in total. In other words, it will output 10 files for reference.
-    .. literalinclude:: examples/GBM/runme.of
-        :lines: 111
-#. Finalize the model and clear all the temporary memories.
-    .. literalinclude:: examples/GBM/runme.of
-        :lines: 113
-#. Save the notepad and double click the .of file to run the program.
+1. Set the output interval to be every 500 steps and output all fields variables and fracture variables. 
+
+.. literalinclude:: examples/GBM/runme.of
+    :lines: 105-107
+
+2. The program will run 10000000 steps in total.
+
+.. literalinclude:: examples/GBM/runme.of
+    :lines: 111
+
+3. Finalize the model and clear all the temporary memories.
+
+.. literalinclude:: examples/GBM/runme.of
+    :lines: 113
+
+4. Save the notepad and double click the .of file to run the program.
 
 ==================================
 4 Run the Program

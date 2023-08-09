@@ -1,6 +1,7 @@
-Quick start with Brazilian Disc Test
+Quick start with Brazilian disc test
 ########################################
-Brazilian disc test is an indirect test method for assessing the tensile strength. 
+Brazilian Disc Test is a geotechnical laboratory test for indirect measurement of tensile strength of rocks. Due to its simplicity and efficiencly, 
+it is amonst the most commonly used laboratoory tesing methods in geotechnical investigation in rocks. It is also used as a benchmark test for calibrating the tensile behaviour of rocks in FDEM.
 
 .. figure:: ../../images/Desmos/BD_Test.png
     :alt: Geometry of the Brazilian disc test
@@ -31,24 +32,27 @@ The following files are needed to follow along the tutorial:
 #. Create the group
 #. Assign boundary conditions.
 #. Set the outputs.
+#. Run.
 
 ==================================
 3 Codes
 ==================================
-Please note that, all the setting in the example is based on the developer's computer. You may need to change 
-these setting based on your own conditions.
+.. warning::
 
-To start with programming, create a new empty text file (later add the `.of` extension). Begin writing the following commands:
+    Please note that, all the setting in the example is based on the developer's computer. You may need to change 
+    these details based on your own environment.
+
+To start with runing, create a new empty text file (later add the `.of` extension). Begin writing the following commands:
 
 -------------------------------------------------------------------
 3.1 Initialize the model
 -------------------------------------------------------------------
-1. Create a new run and clean up the old memories.
+1. Create a new run and clean up the dirty memories in heap, it is not mandatory but strongly recommended.
 
 .. literalinclude:: examples/CreateBrazilianDiscTest/runme.of
     :lines: 39
 
-2. Set up the folder name to save your results. Here the folder name is set to be “result”.
+2. Set up the path to save your results. Here the folder is set to be “result”.
 
 .. literalinclude:: examples/CreateBrazilianDiscTest/runme.of
     :lines: 43
@@ -57,10 +61,21 @@ To start with programming, create a new empty text file (later add the `.of` ext
 3. Set the number of cores to be used for running this model.
 
 .. warning::
-    In this example, 15 cores will be used for running. To prevent the crushing of your computer, please 
-    check your computer to fill in the number of cores you want to use from your computer. To check the number 
-    of cores your computer has, you can go Task Manager > Performance > CPU > Cores. If nothing is set here, 
-    serial computing will be used.
+    In the default example, 15 cores will be used for running. To prevent the heavy burden of your computer, please 
+    check your computer to change core number you want to use. To check the configuration of your computer, you can go
+
+    Windows: 
+        Task Manager > Performance > CPU > Cores
+
+    Linux: 
+        lscpu
+
+        lscpu | egrep 'Model name|Socket|Thread|NUMA|CPU\(s\)'
+
+        lscpu -p
+
+    The cores will be printed on the console when you start a new run, you can also check the information from OpenFDEM kernel itself.
+
 .. literalinclude:: examples/CreateBrazilianDiscTest/runme.of
     :lines: 47
 
@@ -160,7 +175,7 @@ The material properties of this model is shown as the table below:
 .. literalinclude:: examples/CreateBrazilianDiscTest/runme.of
     :lines: 74-75
 
-2. Assign the nodal boundaries. For uniaxial test, top and bottom platens are moving toward the sample the compress the sample, so platens are not moving in the x direction and moving with 0.05 m/s in the y direction.
+2. Assign the nodal boundaries. In this example, platens are fixed in the `x` direction and moving with 0.005 m/s in `y` direction.
 
 .. literalinclude:: examples/CreateBrazilianDiscTest/runme.of
     :lines: 79-80
@@ -168,22 +183,25 @@ The material properties of this model is shown as the table below:
 -------------------------------------------------------------------
 3.5 Set the Outputs
 -------------------------------------------------------------------
-1. Set the output interval to be every 50000 steps and output all fields variables and fracture variables. Control the output interval to a reasonable size could shorten the computation time but get a good understanding of the model.
+1. Set the output interval to be every 2000 steps and output all fields variables and fracture variables.
 
 .. literalinclude:: examples/CreateBrazilianDiscTest/runme.of
     :lines: 84, 86-87
 
-2. The program will run 500000 steps in total. In other words, it will output 10 files for reference.
+-------------------------------------------------------------------
+3.6 Run
+-------------------------------------------------------------------
+1. The program will run 500000 steps to terminate the model. 
 
 .. literalinclude:: examples/CreateBrazilianDiscTest/runme.of
     :lines: 91
 
-3. Finalize the model and clear all the temporary memories.
+2. Finalize the model and clear all the temporary memories.
 
 .. literalinclude:: examples/CreateBrazilianDiscTest/runme.of
     :lines: 93
-    
-4. Save the notepad and double click the .of file to run the program.
+
+3. Save the notepad and double click the ``.of`` file to run the program.
 
 ==================================
 4 Run the Program

@@ -1,8 +1,8 @@
-Quick start with Uniaxial Compression Test
+Quick start with uniaxial compression test
 ############################################################
-Uniaxial compression test is one of the benchmark tests that can be used to obtain the material properties 
+Uniaxial compression test (UCS) is one of the benchmark tests that can be used to obtain the material properties 
 in the labratory. It is also used as the most common simulation to calibrate the material
-properties in FDEM and DEM. In this model, the sample is compressed by two rigid platens and the interaction between platens and
+properties in FDEM or DEM. In this model, the sample is compressed by two rigid platens and the force interaction between platens and
 rock sample is realized by contacts. 
 
 .. figure:: ../../images/Desmos/UCS.png
@@ -23,51 +23,67 @@ rock sample is realized by contacts.
 #. Assign material properties.
 #. Create groups and assign boundary condition.
 #. Set the outputs.
+#. Run
 
 ==================================
 2 Codes
 ==================================
-Please note that, all the setting in the example is based on the developer's computer. You may need to change 
-these setting based on your own conditions.
+.. warning::
 
-To start with programming, create a new empty text file (later add the ``.of`` extension). Begin writing the following commands:
+    Please note that, all the setting in the example is based on the developer's computer. You may need to change 
+    these details based on your own environment.
+
+To start with programming, create a new empty input file or copy it from the existing examples (later add the ``.of`` extension). Begin writing the following commands:
 
 -------------------------------------------------------------------
 2.1 Initialize the model
 -------------------------------------------------------------------
 
-1. Create a new run and clean up the old memories.
+1. Create a new run and clean up the dirty memories in heap, it is not mandatory but strongly recommended.
 
 .. literalinclude:: examples/CreateUniaxialCompressionTest/runme.of
     :lines: 39
 
-2. Set up the folder name to save your results. Here the folder name is set to be “CurrentPath/result”.
+2. Set up the path to save your results. Here the path is set to be “`currentPath`/result”.
 
 .. note::
-    By default, the filed results (VTK, VTP) will be saved in "Result" folder in the same folder with ``.of`` file. OpenFDEM will automatically create the folder if it is absent.
+    By default, the field results (``VTK``, ``VTP``) will be saved in "MyResult" folder in the same path with ``.of`` file. OpenFDEM kernel will automatically create the folder if it is absent.
 
 .. literalinclude:: examples/CreateUniaxialCompressionTest/runme.of
     :lines: 43
 
-3. Set the interval of logging in the log file. This example uses the default interval 2000 steps. ``.log`` file will be useful to help user figure out the running error, and can be used as a tool to debug.
+3. Set the interval of logging in the ``.log`` file. This example uses the default interval 2000 steps. ``.log`` file will be useful to help user figure out the running error, and can be used as a tool to debug.
 
 .. literalinclude:: examples/CreateUniaxialCompressionTest/runme.of
     :lines: 46
 
-4. Set the number of cores to be used for running this model.
+4. Set the CPU parallelization to boost your runs.
 
 .. warning::
-    In this example, 15 cores will be used for running. To prevent the crushing of your computer, please 
-    check your computer to fill in the number of cores you want to use from your computer. To check the number 
-    of cores your computer has, you can go Task Manager > Performance > CPU > Cores. If nothing is set here, 
-    serial computing will be used.
+    In the default example, 15 cores will be used for running. To prevent the heavy burden of your computer, please 
+    check your computer to change core number you want to use. To check the configuration of your computer, you can go
+
+    Windows: 
+        Task Manager > Performance > CPU > Cores
+
+    Linux: 
+        lscpu
+
+        lscpu | egrep 'Model name|Socket|Thread|NUMA|CPU\(s\)'
+
+        lscpu -p
+
+    The cores will be printed on the console when you start a new run, you can also check the information from OpenFDEM kernel itself.
+
+    If nothing is set here, serial computing will be used by default.
 .. literalinclude:: examples/CreateUniaxialCompressionTest/runme.of
     :lines: 50
 
 -------------------------------------------------------------------
 2.2 Create the geometry and the mesh
 -------------------------------------------------------------------
-1. See Figure 1 for the UCS test setup and draw the corresponding geometry.
+1. See Figure 1 for the UCS model and create the geometries. This model can be assembeld by three retangulars, the implemented objects OpenFDEM can create include square(rectangular), circle, ellipse, polygon(arbitary shape), Voronoi tessellations,
+line, etc.
 
 .. note::
     The following three methods can be used to create the geometry:
@@ -75,12 +91,17 @@ To start with programming, create a new empty text file (later add the ``.of`` e
         2. x [minvalue, maxvalue] y [minvalue, maxvalue]
         3. [x_minvalue, x_maxvalue, y_minvalue, y_maxvalue] (brackets are indispensable)
         
-    This example used all three methods for demonstration. Users may choose any format to create geometris.
+    This example used three methods to creat a entity. Users may choose any format to create geometris.
 .. literalinclude:: examples/CreateUniaxialCompressionTest/runme.of
     :lines: 55, 57, 59
 
-2. Set the mesh size of the geometry and insert cohesive interfaces.
+2. Define the mesh size geometry and insert cohesive interfaces. You can define a global size on the points in your geometry, it is able to refine some specific parts, assign a smaller mesh size on the point 
+groups you want to refine after your assign the global mesh size.
 
+.. seealso::
+    OpenFDEM is flexible to insert cohesive interfaces only in the objects you want to. For the example at here, the platens are regarded as elastic or rigid in which the breakage will not happen. 
+    You can insert cohesive interfaces only in `rock` physical group to boost the calculation speed to some extent.
+    
 .. literalinclude:: examples/CreateUniaxialCompressionTest/runme.of
     :lines: 61, 65, 68
 
@@ -88,7 +109,7 @@ To start with programming, create a new empty text file (later add the ``.of`` e
 2.3 Assign Material Properties
 -------------------------------------------------------------------
 
-The material properties of this model is shown as the table below:
+The material properties of the rock is shown as the table below:
 
 +---------------------------------------------+------------------------+
 |Parameter                                    |Value                   |
@@ -132,13 +153,13 @@ The material properties of this model is shown as the table below:
 
 
 
-.. note::
+.. seealso::
     Check :doc:`element materal<../rst_user_guide/Material/of.mat.element>`, :doc:`cohesive materal<../rst_user_guide/Material/of.mat.cohesive>`, :doc:`contact materal<../rst_user_guide/Material/of.mat.contact>` to see more materials.
 
-1. Set the material properties. For this test, the example uses the elastic constitutive model and assigned material for CZM and contact. 
+1. Assign material properties. In this example, elastic material is assigned for the matrix element and Evans_Marathe cohesive law is for CZM, the contact uses Mohr-Coulomb slip by default. 
 
-.. note::
-    The tag *default* is a group keyword specially designed for the OpenFDEM kernel, it means the whole physical objects in this model, therefore, it is illegal to use this word as the user-defined group tags.
+.. warning::
+    The tag *default* is a default keyword implemented in the OpenFDEM kernel, it means the whole physical objects in this model. It will be illegal to use this tag as the name of user-defined physical group.
 
 .. literalinclude:: examples/CreateUniaxialCompressionTest/runme.of
     :lines: 72, 74, 76
@@ -146,12 +167,12 @@ The material properties of this model is shown as the table below:
 -------------------------------------------------------------------
 2.4 Create Groups and Assign Boundary Conditions
 -------------------------------------------------------------------
-1. Group the nodes to prepare for the next step.
+1. Group the nodes.
 
 .. literalinclude:: examples/CreateUniaxialCompressionTest/runme.of
     :lines: 81-82
 
-2. Assign the nodal boundaries. For uniaxial test, top and bottom platens are moving toward the sample the compress the sample, so platens are not moving in the x direction and moving with 0.05 m/s in the `y` direction.
+2. Assign the nodal boundaries. In this example, top and bottom platens are moving toward to compress the sample, platens are fixed in the `x` direction and moving with 0.05 m/s in the `y` direction.
 
 .. literalinclude:: examples/CreateUniaxialCompressionTest/runme.of
     :lines: 86-87
@@ -159,27 +180,32 @@ The material properties of this model is shown as the table below:
 -------------------------------------------------------------------
 2.5 Set the Outputs
 -------------------------------------------------------------------
-1. Set the output interval to be every 50000 steps and output all fields variables and fracture variables. Control the output interval to a reasonable size could shorten the computation time but get a good understanding of the model.
+1. Set the result writting interval and the field variables you want to dumper. `default` means the all variables during the calculation will be exported, that will result in
+huge size for the storage and at the cost of computation efficiency. Control the output interval to a reasonable size could shorten the computation time.
 
 .. literalinclude:: examples/CreateUniaxialCompressionTest/runme.of
     :lines: 91, 93-94
 
-2. Timestep can be fixed to 5e-9 in this example to accelerate the calculation in this example, but the default time step is recommended to use.
+2. Timestep can be fixed to 5e-9 in this example to accelerate the calculation in this example, but the default time step is recommended to use. Mass scaling can save you a lot time to some extent, but check the stability of the calculation
+is always a necessary for the explict integration. User-defined timestep is allowable only if you are rather familiar with the method you are using. 
 
 .. literalinclude:: examples/CreateUniaxialCompressionTest/runme.of
     :lines: 100
 
-3. The program will run 500000 steps in total. In other words, it will output 10 files for reference.
+-------------------------------------------------------------------
+2.6 Run
+-------------------------------------------------------------------
+1. The program will run 500000 steps in total. In other words, it will output 10 files for reference.
 
 .. literalinclude:: examples/CreateUniaxialCompressionTest/runme.of
     :lines: 102
 
-3. Finalize the model and clear all the temporary memories.
+2. Finalize the model and clear all the temporary memories.
 
 .. literalinclude:: examples/CreateUniaxialCompressionTest/runme.of
     :lines: 104
 
-4. Save the notepad and double click the .of file to run the program.
+3. Save the notepad and double click the .of file to run the program.
 
 ==================================
 3 Run the Program

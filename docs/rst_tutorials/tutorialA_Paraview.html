@@ -1,447 +1,459 @@
-<!doctype html>
-<html class="no-js" lang="en">
-  <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="NotePad++ and Syntax Highlighting" href="tutorialB_Notepad%2B%2B.html" /><link rel="prev" title="Tutorial 10: Phase Field" href="tutorial10_Phase_Field.html" />
 
-    <!-- Generated with Sphinx 5.3.0 and Furo 2023.07.26 -->
-        <title>Post-Processing - OpenFDEM</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=369552022d0b975c8e74270ce6eabe0fb7978f24" />
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Post-Processing &#8212; &lt;strong&gt;OpenFDEM&lt;/strong&gt;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
-    
-    
-
-
-<style>
-  body {
-    --color-code-background: #f8f8f8;
-  --color-code-foreground: black;
   
-  }
-  @media not print {
-    body[data-theme="dark"] {
-      --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'rst_tutorials/tutorialA_Paraview';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="NotePad++ and Syntax Highlighting" href="tutorialB_Notepad%2B%2B.html" />
+    <link rel="prev" title="Phase Field" href="tutorial10_Phase_Field.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
   
-    }
-    @media (prefers-color-scheme: dark) {
-      body:not([data-theme="light"]) {
-        --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
   
-      }
-    }
-  }
-</style></head>
-  <body>
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">Call for papers for <a href='https://www.sciencedirect.com/journal/journal-of-rock-mechanics-and-geotechnical-engineering'>Journal of Rock Mechanics and Geotechnical Engineering!</a></div>
+  </div>
+
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
     
-    <script>
-      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
-    </script>
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title"><strong>OpenFDEM</strong></p>
+  
+</a></div>
     
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_about_introduction/index.html">
+                        Introduction
+                      </a>
+                    </li>
+                
 
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-  <symbol id="svg-toc" viewBox="0 0 24 24">
-    <title>Contents</title>
-    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
-      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
-    </svg>
-  </symbol>
-  <symbol id="svg-menu" viewBox="0 0 24 24">
-    <title>Menu</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
-      <line x1="3" y1="12" x2="21" y2="12"></line>
-      <line x1="3" y1="6" x2="21" y2="6"></line>
-      <line x1="3" y1="18" x2="21" y2="18"></line>
-    </svg>
-  </symbol>
-  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
-    <title>Expand</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
-      <polyline points="9 18 15 12 9 6"></polyline>
-    </svg>
-  </symbol>
-  <symbol id="svg-sun" viewBox="0 0 24 24">
-    <title>Light mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
-      <circle cx="12" cy="12" r="5"></circle>
-      <line x1="12" y1="1" x2="12" y2="3"></line>
-      <line x1="12" y1="21" x2="12" y2="23"></line>
-      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-      <line x1="1" y1="12" x2="3" y2="12"></line>
-      <line x1="21" y1="12" x2="23" y2="12"></line>
-      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-    </svg>
-  </symbol>
-  <symbol id="svg-moon" viewBox="0 0 24 24">
-    <title>Dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
-    </svg>
-  </symbol>
-  <symbol id="svg-sun-half" viewBox="0 0 24 24">
-    <title>Auto light/dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-      <circle cx="12" cy="12" r="9" />
-      <path d="M13 12h5" />
-      <path d="M13 15h4" />
-      <path d="M13 18h1" />
-      <path d="M13 9h4" />
-      <path d="M13 6h1" />
-    </svg>
-  </symbol>
-</svg>
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_theory/index.html">
+                        Theory
+                      </a>
+                    </li>
+                
 
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
-<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
-<label class="overlay sidebar-overlay" for="__navigation">
-  <div class="visually-hidden">Hide navigation sidebar</div>
-</label>
-<label class="overlay toc-overlay" for="__toc">
-  <div class="visually-hidden">Hide table of contents sidebar</div>
-</label>
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
 
-<div class="announcement">
-  <aside class="announcement-content">
-     Call for papers for <a href='https://www.sciencedirect.com/journal/journal-of-rock-mechanics-and-geotechnical-engineering'>Journal of Rock Mechanics and Geotechnical Engineering!</a> 
-  </aside>
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_user_guide/index.html">
+                        User Manual
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_about_us/index.html">
+                        About Us
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_appendix/index.html">
+                        Appendix
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
 </div>
 
-<div class="page">
-  <header class="mobile-header">
-    <div class="header-left">
-      <label class="nav-overlay-icon" for="__navigation">
-        <div class="visually-hidden">Toggle site navigation sidebar</div>
-        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
-      </label>
-    </div>
-    <div class="header-center">
-      <a href="../index.html"><div class="brand"><strong>OpenFDEM</strong></div></a>
-    </div>
-    <div class="header-right">
-      <div class="theme-toggle-container theme-toggle-header">
-        <button class="theme-toggle">
-          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
-          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
-          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
-          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
-        </button>
-      </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
-        <div class="visually-hidden">Toggle table of contents sidebar</div>
-        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
-      </label>
-    </div>
-  </header>
-  <aside class="sidebar-drawer">
-    <div class="sidebar-container">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
   
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_about_introduction/index.html">
+                        Introduction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_theory/index.html">
+                        Theory
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_user_guide/index.html">
+                        User Manual
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_about_us/index.html">
+                        About Us
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_appendix/index.html">
+                        Appendix
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
   
-  <span class="sidebar-brand-text"><strong>OpenFDEM</strong></span>
-  
-</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
-  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
-  <input type="hidden" name="check_keywords" value="yes">
-  <input type="hidden" name="area" value="default">
-</form>
-<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../rst_about_project/intro.html">What is OpenFDEM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst_about_project/installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst_about_project/started.html">Getting started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst_about_project/Changelog.html">Changelog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst_about_project/copyrights.html">Copyright</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../rst_about_project/Blog.html">Blogs</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Blogs</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../rst_about_project/Blogs/20230804_Call_for_Paper.html">Call for papers</a></li>
-</ul>
-</li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Theory</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../rst_theory/Solid_FEM_Engine.html">Solid FEM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst_theory/Solid_Cohesive_Mechanics.html">Solid Cohesive Mechanics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst_theory/Contact_Mechanics.html">Contact Mechanics</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../rst_theory/Fluid_Transport_Theory.html">Fluid Transport</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Fluid Transport</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../rst_theory/Fracture_Fluid_Theory.html">Fracture Fluid</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../rst_theory/Porous_Fluid_Theory.html">Porous Fluid</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../rst_theory/Two_Phase_Fluid_Theory.html">Two Phase Fluid</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../rst_theory/Gas_Flow_Theory.html">Gas Flow</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../rst_theory/Thermal_Transfer_Theory.html">Thermal Transfer</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Thermal Transfer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../rst_theory/Matrix_Thermal.html">Matrix Thermal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../rst_theory/Fracture_Heat_Resistance.html">Fracture Heat Resistance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../rst_theory/Contact_Thermal.html">Contact Thermal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../rst_theory/Thermal_Hydromechanical_Chemical_Couple.html">Thermal-Hydromechanical (Chemical) Couple</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../rst_theory/Phase_Field.html">Phase Field</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../rst_theory/Particle_Discrete_Element_Method.html">Particle Discrete Element Method (pDEM)</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Particle Discrete Element Method (pDEM)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../rst_theory/Rigid_Particle_DEM.html">Rigid Particle DEM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../rst_theory/Irregular_Deformable_Cluster_DEM.html">Irregular Deformable Cluster DEM</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../rst_theory/Mesh_Adaptive_Analysis.html">Mesh Adaptive Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Mesh Adaptive Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../rst_theory/Local_Adaptive_Mesh_Refinement.html">Local Adaptive Mesh Refinement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../rst_theory/Global_Adaptive_Mesh_Refinement.html">Global Adaptive Mesh Refinement</a></li>
-</ul>
-</li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
-<ul class="current">
-<li class="toctree-l1 has-children"><a class="reference internal" href="index.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Tutorials</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="tutorialindex.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="tutorial0_Geometry.html">How to create a geometry</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial1_UCS_Test.html">Quick start with Uniaxial Compression Test</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial2_UCS_with_Gmsh.html">Create a model from imported mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial1_UCS_Test.html">Quick start with uniaxial compression test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial2_UCS_with_Gmsh.html">Create model from imported mesh</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial3_UCS_Test_with_Quadrangle_Elements.html">How to use higher-order element</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial4_BD_Test.html">Quick start with Brazilian Disc Test</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial5_In_Situ_Stress.html">Tutorial 5: Apply In-situ Stress</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial6_Hydro_Seepage.html">Tutorial 6: Hydro Seepage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial7_Hydro_Fracture_Flow.html">Tutorial 7: Hydro Fracture Flow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial8_Thermal_Flux.html">Tutorial 8: Thermal Flux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial9_GBM.html">Tutorial 9: Grain-based Model (GBM)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial10_Phase_Field.html">Tutorial 10: Phase Field</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial4_BD_Test.html">Quick start with Brazilian disc test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial5_In_Situ_Stress.html">Tunnel excavation under <cite>In-situ</cite> stress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial6_Hydro_Seepage.html">Water flowing in rock dam - seepage flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial7_Hydro_Fracture_Flow.html">Water flowing in rock dam - fracture flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial8_Thermal_Flux.html">Thermal flux transportation in a bar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial9_GBM.html">Grain-based model (GBM), interface with <code class="docutils literal notranslate"><span class="pre">Neper</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial10_Phase_Field.html">Phase Field</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Post-Processing</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Post-Processing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorialB_Notepad%2B%2B.html">NotePad++ and Syntax Highlighting</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">User Manual</span></p>
-<ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../rst_user_guide/index.html">User Manual</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of User Manual</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/general.html">General</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of General</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.console.interval.html">of.console.interval</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.damp.global.html">of.damp.global</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.finalize.html">of.finalize</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.import.html">of.import</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.import.table.html">of.import.table</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.log.interval.html">of.log.interval</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.new.html">of.new</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.restore.html">of.restore</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.save.html">of.save</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.save.FEM.html">of.save.FEM</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.config.html">of.set.config</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.contact.html">of.set.contact</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.debug.html">of.set.debug</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.GBM.html">of.set.GBM</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.gravity.html">of.set.gravity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.large.html">of.set.large</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.massscale.html">of.set.massscale</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.module.html">of.set.module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.omp.html">of.set.omp</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.result.html">of.set.result</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.rgbm.html">of.set.rgbm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.solve.html">of.solve</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.step.html">of.step</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.timestep.html">of.timestep</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/blast.html">Blast</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Blast</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Blast/of.blast.position.html">of.blast.position</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/boundary.html">Boundary</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of Boundary</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.force.html">of.boundary.nodal.force</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.velocity.html">of.boundary.nodal.velocity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.inivelocity.html">of.boundary.nodal.inivelocity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.acceleration.html">of.boundary.nodal.acceleration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.clear.html">of.boundary.nodal.clear</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.force.html">of.boundary.edge.force</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.velocity.html">of.boundary.edge.velocity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.inivelocity.html">of.boundary.edge.inivelocity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.acceleration.html">of.boundary.edge.acceleration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.clear.html">of.boundary.edge.clear</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.stress.html">of.boundary.element.stress</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.stress.xgrad.html">of.boundary.element.stress.xgrad</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.stress.ygrad.html">of.boundary.element.stress.ygrad</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.clear.html">of.boundary.element.clear</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.blast.html">of.boundary.blast</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/DFN.html">DFN</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of DFN</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/DFN/of.DFN.connectivity.html">of.DFN.connectivity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/DFN/of.DFN.group.html">of.DFN.group</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/DFN/of.DFN.cohesive.html">of.DFN.cohesive</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/DFN/of.DFN.broken.html">of.DFN.broken</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/FEM.html">FEM</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of FEM</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.coord.html">of.import.FEM.nodal.coord</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.coord0.html">of.import.FEM.nodal.coord0</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.velocity.html">of.import.FEM.nodal.velocity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.groups.html">of.import.FEM.nodal.groups</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.edge.groups.html">of.import.FEM.edge.groups</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.element.groups.html">of.import.FEM.element.groups</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.element.connectivity.html">of.import.FEM.element.connectivity</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/geometry.html">Geometry</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of Geometry</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.square.html">of.geometry.square</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.square.html">of.geometry.cut.square</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.remove.square.html">of.geometry.remove.square</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.circle.html">of.geometry.circle</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.circle.html">of.geometry.cut.circle</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.remove.circle.html">of.geometry.remove.circle</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.ellipse.html">of.geometry.ellipse</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.ellipse.html">of.geometry.cut.ellipse</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.remove.ellipse.html">of.geometry.remove.ellipse</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.polygon.html">of.geometry.polygon</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.polygon.html">of.geometry.cut.polygon</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.remove.polygon.html">of.geometry.remove.polygon</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.table.html">of.geometry.table</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.table.html">of.geometry.cut.table</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.remove.table.html">of.geometry.remove.table</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.domain.html">of.geometry.domain</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.joint.html">of.geometry.cut.joint</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.jset.html">of.geometry.cut.jset</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.DFN.html">of.geometry.cut.DFN</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.arc.html">of.geometry.cut.arc</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.minsize.html">of.geometry.minsize</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.minangle.html">of.geometry.minangle</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.iteration.html">of.geometry.iteration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.group.html">of.geometry.group</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.mesh.size.html">of.geometry.mesh.size</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.recombine.html">of.geometry.recombine</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.mesh.html">of.geometry.mesh</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.mesh.write.html">of.geometry.mesh.write</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/group.html">Group</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of Group</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.html">of.group.nodal</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.html">of.group.edge</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.element.html">of.group.element</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.html">of.group.cohelement</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.from.element.html">of.group.nodal.from.element</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.from.element.html">of.group.edge.from.element</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.from.cohelement.html">of.group.edge.from.cohcohelement</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.from.dfn.html">of.group.edge.from.dfn</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.from.dfn.html">of.group.cohelement.from.dfn</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.from.gbm.html">of.group.cohelement.from.gbm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.bool.union.html">of.group.nodal.bool.union</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.bool.intersect.html">of.group.nodal.bool.intersect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.bool.subtract.html">of.group.nodal.bool.subtract</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.bool.union.html">of.group.edge.bool.union</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.bool.intersect.html">of.group.edge.bool.intersect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.bool.subtract.html">of.group.edge.bool.subtract</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.element.bool.union.html">of.group.element.bool.union</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.element.bool.intersect.html">of.group.element.bool.intersect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.element.bool.subtract.html">of.group.element.bool.subtract</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.bool.union.html">of.group.cohelement.bool.union</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.bool.intersect.html">of.group.cohelement.bool.intersect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.bool.subtract.html">of.group.cohelement.bool.subtract</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/mesh.html">Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Mesh</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.insert.html">of.mesh.insert</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.insert.dfn.html">of.mesh.insert.dfn</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.voronoi.html">of.mesh.voronoi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.split.html">of.mesh.split</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.bary.html">of.mesh.bary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.RG.html">of.mesh.RG</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.RGB.html">of.mesh.RGB</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.NVB.html">of.mesh.NVB</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.baryGB.html">of.mesh.baryGB</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/material.html">Material</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle navigation of Material</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.element.html">of.mat.element</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.cohesive.html">of.mat.cohesive</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.contact.html">of.mat.contact</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.hydro.matrix.html">of.mat.hydro.matrix</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.hydro.fracture.html">of.mat.hydro.fracture</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.mpm.fluid.html">of.mat.mpm.fluid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.mpm.solid.html">of.mat.mpm.solid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.hydro.fluid.html">of.mat.hydro.fluid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.hydro.gas.html">of.mat.hydro.gas</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.nonlocal.html">of.mat.nonlocal</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.thermal.html">of.mat.thermal</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/history.html">History</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle navigation of History</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.interval.html">of.history.pv.interval</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.dynamic.interval.html">of.history.pv.dynamic.interval</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.field.html">of.history.pv.field</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.fracture.html">of.history.pv.fracture</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.cohesive.html">of.history.pv.cohesive</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.damage.html">of.history.pv.damage</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.ae.html">of.history.pv.ae</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../rst_developer/developer.html">Developer Document</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle navigation of Developer Document</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../rst_developer/commonclass.html">Common class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../rst_developer/geometryclass.html">Geometry class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../rst_developer/solidclass.html">Solid class</a></li>
-</ul>
-</li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">About Us</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../rst_about_project/contact.html">Contact</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst_about_project/collaborator.html">Collaborating</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst_about_project/openfdemforum.html">Forum</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Appendix</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../rst_developer/appendix.html">Index</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst_about_project/publication.html">Publications</a></li>
-</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-</div>
-</div>
 
       </div>
       
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Tutorials</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Post-Processing</li>
+  </ul>
+</nav>
+</div>
+      
     </div>
-  </aside>
-  <div class="main">
-    <div class="content">
-      <div class="article-container">
-        <a href="#" class="back-to-top muted-link">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
-          </svg>
-          <span>Back to top</span>
-        </a>
-        <div class="content-icon-container">
-          
-<div class="theme-toggle-container theme-toggle-content">
-            <button class="theme-toggle">
-              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
-              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
-              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
-              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
-            </button>
-          </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
-            <div class="visually-hidden">Toggle table of contents sidebar</div>
-            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
-          </label>
-        </div>
-        <article role="main">
-          <section id="post-processing">
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="post-processing">
 <h1>Post-Processing<a class="headerlink" href="#post-processing" title="Permalink to this heading">#</a></h1>
-<p>ParaView is an open source post-processing visualization engine users can use to visualize their model results.
-Users can go to <a class="reference external" href="https://www.paraview.org/download/">ParaView</a> to download their software. There is an <a class="reference external" href="https://docs.paraview.org/en/latest/index.html">official
-PraView documentation</a> online. This tutorial will briefly
+<p><code class="docutils literal notranslate"><span class="pre">ParaView</span></code> is an open-source, multi-platform scientific data analysis and visualization tool that enables analysis and visualization of extremely large datasets.
+Users can go to <a class="reference external" href="https://www.paraview.org/download/">ParaView</a> to download this software. The ParaView Documentation can be found at <a class="reference external" href="https://docs.paraview.org/en/latest/index.html">PraView documentation</a> online. This tutorial will briefly
 introduce a few useful functions to view the results from OpenFDEM.</p>
+<section id="getting-started-with-paraview">
+<h2>Getting started with Paraview<a class="headerlink" href="#getting-started-with-paraview" title="Permalink to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">ParaView</span></code> is the graphical front-end to the <code class="docutils literal notranslate"><span class="pre">ParaView</span></code> application.  The UI provides panels for you to inspect and modify
+the pipelines, to change parameters that in turn affect the processing pipelines,
+to perform various data selection and inspection actions to introspect the data,
+and to generate renderings.</p>
+<p>The window after you turn on Paraview is comprised of menus,
+dockable panels, toolbars, and the viewport – the central portion of the
+application window. Menus provide the standard set of options typical with a desktop application
+including options for opening/saving files (<span class="guilabel">File</span>
+menu), for undo/redo (<span class="guilabel">Edit</span> menu), for the toggle panel, and for toolbar visibilities
+(<span class="guilabel">View</span> menu). Additionally, the menus provide ways to create sources that
+generate test datasets of various types (<span class="guilabel">Sources</span> menu), as well new
+filters for processing data (<span class="guilabel">Filters</span> menu). The <span class="guilabel">Tools</span> menu
+provides access to some of the advanced features in paraview such as
+managing plugins and favorites.</p>
+<figure class="align-center" id="fig-guioverview">
+<a class="reference internal image-reference" href="https://docs.paraview.org/en/latest/_images/GUIOverview.png"><img alt="https://docs.paraview.org/en/latest/_images/GUIOverview.png" src="https://docs.paraview.org/en/latest/_images/GUIOverview.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-text">ParaView window</span><a class="headerlink" href="#fig-guioverview" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Panels provide you with the ability to peek into the application’s state. For example, you can
+inspect the visualization pipeline that has been set up ( <code class="docutils literal notranslate"><span class="pre">Pipeline</span>
+<span class="pre">Browser</span></code>  ), as well as the memory that is being used ( <code class="docutils literal notranslate"><span class="pre">Memory</span> <span class="pre">Inspector</span></code>  ) and the parameters or properties
+for a processing module ( <code class="docutils literal notranslate"><span class="pre">Properties</span></code>   panel). Several of the panels also
+allow you to change the values that are displayed, e.g., the  <code class="docutils literal notranslate"><span class="pre">Properties</span></code>   panel not only
+shows the processing module parameters, but it also allows you to change them.
+Several of the panels are context sensitive. For example, the  <code class="docutils literal notranslate"><span class="pre">Properties</span></code>
+panel changes to show the parameters from the selected module as you change the
+active module in the  <code class="docutils literal notranslate"><span class="pre">Pipeline</span> <span class="pre">Browser</span></code>  .</p>
+</section>
+<section id="results-visualization-for-openfdem">
+<h2>Results visualization for OpenFDEM<a class="headerlink" href="#results-visualization-for-openfdem" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Go to the toolbar &gt; File &gt; Open… and choose the file path of the results and click OK. It will import all results under this category. You may also expand the group and select a single file.</p></li>
 </ol>
@@ -551,72 +563,262 @@ introduce a few useful functions to view the results from OpenFDEM.</p>
 </figcaption>
 </figure>
 </section>
+<section id="data-processing-by-pyfdempp">
+<h2>Data processing by <code class="docutils literal notranslate"><span class="pre">pyfdempp</span></code><a class="headerlink" href="#data-processing-by-pyfdempp" title="Permalink to this heading">#</a></h2>
+<section id="what-is-pyfdempp">
+<h3>What is pyfdempp<a class="headerlink" href="#what-is-pyfdempp" title="Permalink to this heading">#</a></h3>
+<p>This <a class="reference external" href="https://pypi.org/project/pyfdempp/0.2/">Python package</a> performs transformations on hybrid finite-discrete element method (FDEM) models with an unstructured grid in <code class="docutils literal notranslate"><span class="pre">vtk</span></code>/<code class="docutils literal notranslate"><span class="pre">vtu</span></code>/<code class="docutils literal notranslate"><span class="pre">vtp</span></code> format. It currently supports arrays of simulation files from the FDEM solvers:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.geomechanica.com/software/">Geomechanica’s Irazu software</a>,</p></li>
+<li><p><a class="reference external" href="https://geogroup.utoronto.ca/software/">Y-Geo</a> (and its common derivatives), as well as</p></li>
+<li><p><a class="reference external" href="https://openfdem.com/">OpenFDEM</a>.</p></li>
+</ul>
+<p>The package is heavily dependent on <cite>pyvista</cite> and is limited to <cite>Python &gt;=3.5</cite>. The package is maintained
+by the <a class="reference external" href="https://geogroup.utoronto.ca/">Grasselli’s Geomechanics Group</a> at the University of Toronto,
+Canada, and is part of a collaborative effort by the open-source pacakge OpenFDEM.</p>
+</section>
+<section id="functionality">
+<h3>Functionality<a class="headerlink" href="#functionality" title="Permalink to this heading">#</a></h3>
+<p>The functionality of this script was developed with the objective of extracting common information needed when running simulations. Highlights of the script are:</p>
+<p>Get model information.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyfdempp</span> <span class="k">as</span> <span class="nn">fd</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">fd</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="s2">&quot;abs_model_path_on_machine&quot;</span><span class="p">)</span>
+<span class="c1"># Getting number of points in your model.</span>
+<span class="n">model</span><span class="o">.</span><span class="n">n_points</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">11904</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Extract information within the FDEM Model based on the name of the array (e.g., Stress, Strain, Temperature, etc…) Works in 2D and 3D.</p></li>
+<li><p>Extract stress-strain information for UCS and BD Simulations (Works in 2D and 3D). Optional addition of virtual strain gauges (Limited to 2D).</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyfdempp</span> <span class="k">as</span> <span class="nn">fd</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">fd</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="s2">&quot;abs_model_path_on_machine&quot;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">complete_stress_strain</span><span class="p">(</span><span class="n">progress_bar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Script</span> <span class="n">Identifying</span> <span class="n">Platen</span>
+<span class="n">Platen</span> <span class="n">Material</span> <span class="n">ID</span> <span class="n">found</span> <span class="k">as</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">Progress</span><span class="p">:</span> <span class="o">|//////////////////////////////////////////////////|</span> <span class="mf">100.0</span><span class="o">%</span> <span class="n">Complete</span>
+<span class="mf">1.51</span> <span class="n">seconds</span>
+    <span class="n">Platen</span> <span class="n">Stress</span>  <span class="n">Platen</span> <span class="n">Strain</span>
+<span class="mi">0</span>    <span class="mf">0.000000e+00</span>       <span class="mf">0.000000</span>
+<span class="mi">1</span>    <span class="mf">4.825237e+00</span>       <span class="mf">0.009259</span>
+<span class="mi">2</span>    <span class="mf">9.628823e+00</span>       <span class="mf">0.018519</span>
+<span class="mi">3</span>    <span class="mf">1.441437e+01</span>       <span class="mf">0.027778</span>
+<span class="mi">4</span>    <span class="mf">1.919164e+01</span>       <span class="mf">0.037037</span>
+<span class="o">..</span>            <span class="o">...</span>            <span class="o">...</span>
+<span class="mi">57</span>   <span class="mf">2.036137e-30</span>       <span class="mf">0.240741</span>
+<span class="mi">58</span>   <span class="mf">2.036137e-30</span>       <span class="mf">0.250000</span>
+<span class="mi">59</span>   <span class="mf">2.036137e-30</span>       <span class="mf">0.259259</span>
+<span class="mi">60</span>   <span class="mf">2.036137e-30</span>       <span class="mf">0.268519</span>
+<span class="mi">61</span>   <span class="mf">2.036137e-30</span>       <span class="mf">0.277778</span>
 
-        </article>
+<span class="p">[</span><span class="mi">62</span> <span class="n">rows</span> <span class="n">x</span> <span class="mi">2</span> <span class="n">columns</span><span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Plotting stress vs strain curve.</p></li>
+</ul>
+<figure class="align-center" id="id13">
+<img alt="Result" src="../_images/stress_strain.png" />
+<figcaption>
+<p><span class="caption-text">Figure 12: Complete stress-strain curve</span><a class="headerlink" href="#id13" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>Calculate the Elastic Modulus of the dataset. Eavg, Esec and Etan can be evaluated. Works in 2D and 3D.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyfdempp</span> <span class="k">as</span> <span class="nn">fd</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">fd</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="s2">&quot;abs_model_path_on_machine&quot;</span><span class="p">)</span>
+<span class="n">df_1</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">complete_UCS_stress_strain</span><span class="p">(</span><span class="n">st_status</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Variants of E tangent</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Etan at 50</span><span class="si">%%</span><span class="s1">: </span><span class="si">%.2f</span><span class="s1">MPa&#39;</span> <span class="o">%</span> <span class="n">model</span><span class="o">.</span><span class="n">Etan50_mod</span><span class="p">(</span><span class="n">df_1</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Etan at 50</span><span class="si">%%</span><span class="s1"> with linear best fit disabled: </span><span class="si">%.2f</span><span class="s1">MPa&#39;</span> <span class="o">%</span> <span class="n">model</span><span class="o">.</span><span class="n">Etan50_mod</span><span class="p">(</span><span class="n">df_1</span><span class="p">,</span> <span class="n">linear_bestfit</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Etan at 50</span><span class="si">%%</span><span class="s1"> using strain gauge data: </span><span class="si">%.2f</span><span class="s1">MPa&#39;</span> <span class="o">%</span> <span class="n">model</span><span class="o">.</span><span class="n">Etan50_mod</span><span class="p">(</span><span class="n">df_1</span><span class="p">,</span> <span class="n">loc_strain</span><span class="o">=</span><span class="s1">&#39;Gauge Displacement Y&#39;</span><span class="p">,</span> <span class="n">plusminus_range</span><span class="o">=</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+<span class="c1"># Variants of E secant</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Esec at 70</span><span class="si">%%</span><span class="s1">: </span><span class="si">%.2f</span><span class="s1">MPa&#39;</span> <span class="o">%</span> <span class="n">model</span><span class="o">.</span><span class="n">Esec_mod</span><span class="p">(</span><span class="n">df_1</span><span class="p">,</span> <span class="mi">70</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Esec at 50</span><span class="si">%%</span><span class="s1">: </span><span class="si">%.2f</span><span class="s1">MPa&#39;</span> <span class="o">%</span> <span class="n">model</span><span class="o">.</span><span class="n">Esec_mod</span><span class="p">(</span><span class="n">df_1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span>
+<span class="c1"># Variants of E average</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Eavg between 50-60</span><span class="si">%%</span><span class="s1">: </span><span class="si">%.2f</span><span class="s1">MPa&#39;</span> <span class="o">%</span> <span class="n">model</span><span class="o">.</span><span class="n">Eavg_mod</span><span class="p">(</span><span class="n">df_1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Eavg between 20-70</span><span class="si">%%</span><span class="s1"> with linear best fit disabled: </span><span class="si">%.2f</span><span class="s1">MPa&#39;</span> <span class="o">%</span> <span class="n">model</span><span class="o">.</span><span class="n">Eavg_mod</span><span class="p">(</span><span class="n">df_1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="n">linear_bestfit</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Etan</span> <span class="n">at</span> <span class="mi">50</span><span class="o">%</span><span class="p">:</span> <span class="mf">51683.94</span><span class="n">MPa</span>
+<span class="n">Etan</span> <span class="n">at</span> <span class="mi">50</span><span class="o">%</span> <span class="k">with</span> <span class="n">linear</span> <span class="n">best</span> <span class="n">fit</span> <span class="n">disabled</span><span class="p">:</span> <span class="mf">51639.22</span><span class="n">MPa</span>
+<span class="n">Etan</span> <span class="n">at</span> <span class="mi">50</span><span class="o">%</span> <span class="n">using</span> <span class="n">strain</span> <span class="n">gauge</span> <span class="n">data</span><span class="p">:</span> <span class="mf">50275.03</span><span class="n">MPa</span>
+
+<span class="n">Esec</span> <span class="n">at</span> <span class="mi">70</span><span class="o">%</span><span class="p">:</span> <span class="mf">51681.01</span><span class="n">MPa</span>
+<span class="n">Esec</span> <span class="n">at</span> <span class="mi">50</span><span class="o">%</span><span class="p">:</span> <span class="mf">51817.43</span><span class="n">MPa</span>
+
+<span class="n">Eavg</span> <span class="n">between</span> <span class="mi">50</span><span class="o">-</span><span class="mi">60</span><span class="o">%</span><span class="p">:</span> <span class="mf">51594.49</span><span class="n">MPa</span>
+<span class="n">Eavg</span> <span class="n">between</span> <span class="mi">20</span><span class="o">-</span><span class="mi">70</span><span class="o">%</span> <span class="k">with</span> <span class="n">linear</span> <span class="n">best</span> <span class="n">fit</span> <span class="n">disabled</span><span class="p">:</span> <span class="mf">51660.62</span><span class="n">MPa</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Extract information of a particular cell based on a sequence of array names. This can be extended to extracting information along a line. Works in 2D and 3D.</p></li>
+</ul>
+<figure class="align-center" id="id14">
+<img alt="Result" src="../_images/plot_point_over_time.png" />
+<figcaption>
+<p><span class="caption-text">Figure 13: Plot point values over time</span><a class="headerlink" href="#id14" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>Extract information of a threshold dataset criteria based on a sequence of array names. Works in 2D and 3D.</p></li>
+</ul>
+<figure class="align-center" id="id15">
+<img alt="Result" src="../_images/temp_evolution.png" />
+<figcaption>
+<p><span class="caption-text">Figure 14: Temperature evolution over time</span><a class="headerlink" href="#id15" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>Extract mesh information and plot rosette/polar plots. Limited to 2D.</p></li>
+</ul>
+<figure class="align-center" id="id16">
+<img alt="Result" src="../_images/mesh_rose_diagram.png" />
+<figcaption>
+<p><span class="caption-text">Figure 15: Rose diagram of mesh at TS2</span><a class="headerlink" href="#id16" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>Automatic detection/ User-defined assigment of loading direction when analysing mechanical simulations, namely UCS, BD, and PLT, in both 2D and 3D simulations.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Script</span> <span class="n">Identifying</span> <span class="n">Platen</span>
+    <span class="n">Platen</span> <span class="n">Material</span> <span class="n">ID</span> <span class="n">found</span> <span class="k">as</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="mi">3</span><span class="n">D</span> <span class="n">Loading</span> <span class="n">direction</span> <span class="n">detected</span> <span class="k">as</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">is</span> <span class="n">Y</span><span class="o">-</span><span class="n">direction</span>
+<span class="n">Values</span> <span class="n">used</span> <span class="ow">in</span> <span class="n">calculations</span> <span class="n">are</span>
+    <span class="n">Area</span>    <span class="mf">3721.00</span>
+    <span class="n">Length</span>  <span class="mf">122.00</span>
+<span class="n">Progress</span><span class="p">:</span> <span class="o">|//////////////////////////////////////////////////|</span> <span class="mf">100.0</span><span class="o">%</span> <span class="n">Complete</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="tutorial10_Phase_Field.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Phase Field</p>
       </div>
-      <footer>
-        
-        <div class="related-pages">
-          <a class="next-page" href="tutorialB_Notepad%2B%2B.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">NotePad++ and Syntax Highlighting</div>
-              </div>
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-            </a>
-          <a class="prev-page" href="tutorial10_Phase_Field.html">
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-              <div class="page-info">
-                <div class="context">
-                  <span>Previous</span>
-                </div>
-                
-                <div class="title">Tutorial 10: Phase Field</div>
-                
-              </div>
-            </a>
-        </div>
-        <div class="bottom-of-page">
-          <div class="left-details">
-            <div class="copyright">
-                Copyright &#169; 2023, OpenFDEM Developer Group
-            </div>
-            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-            
-            <a href="https://github.com/pradyunsg/furo">Furo</a>
-            
-          </div>
-          <div class="right-details">
-            <div class="icons">
-              <a class="muted-link " href="https://github.com/OpenFDEM-geomechanics/OpenFDEM" aria-label="GitHub">
-                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
-                </svg>
-            </a>
+    </a>
+    <a class="right-next"
+       href="tutorialB_Notepad%2B%2B.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">NotePad++ and Syntax Highlighting</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
               
             </div>
-          </div>
-        </div>
-        
-      </footer>
-    </div>
-    <aside class="toc-drawer no-toc">
-      
-      
-      
-    </aside>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
   </div>
-</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/scripts/furo.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/design-tabs.js"></script>
-    </body>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started-with-paraview">Getting started with Paraview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results-visualization-for-openfdem">Results visualization for OpenFDEM</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-processing-by-pyfdempp">Data processing by <code class="docutils literal notranslate"><span class="pre">pyfdempp</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-pyfdempp">What is pyfdempp</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functionality">Functionality</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../_sources/rst_tutorials/tutorialA_Paraview.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, OpenFDEM Developer Group.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
 </html>

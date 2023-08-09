@@ -1,6 +1,7 @@
-Water flowing in rock dam, seepage flow
+Water flowing in rock dam - seepage flow
 ########################################
-Tutorial 6 and 7 will present the numercial method to solve hydraulic fracture on a dam model in both finite element method (FEM) and finite-discrete element method (FDEM). The model in these two tutorials is based on the paper `"Combined Finite-Discrete Element Method for Simulation of Hydraulic Fracturing" <https://doi.org/10.1007/s00603-015-0816-9>`_.
+Tutorial 6 and 7 will present the modelling to solve hydraulic fracture on a dam model in both finite element method (FEM) and finite-discrete element method (FDEM). 
+
 
 .. figure:: ../../images/Desmos/Hydro.png
     :alt: Geometry of a Dam Model
@@ -25,40 +26,43 @@ Tutorial 6 and 7 will present the numercial method to solve hydraulic fracture o
 ==================================
 2 Codes
 ==================================
-Please note that, all the setting in the example is based on the developer's computer. You may need to change 
-these setting based on your own conditions.
+.. warning::
 
-To start with programming, create a new empty text file (later add the `.of` extension). Begin writing the following commands:
+    Please note that, all the setting in the example is based on the developer's computer. You may need to change 
+    these details based on your own environment.
+
+To start with programming, create a new empty input file or copy it from the existing examples (later add the ``.of`` extension). Begin writing the following commands:
 
 -------------------------------------------------------------------
 2.1 Initialize the model
 -------------------------------------------------------------------
-#. Create a new run and clean up the old memories.
-    .. literalinclude:: examples/HydroSeepage/runme.of
-        :lines: 39
+1. Create a new run and clean up the old memories.
 
-#. Set up the folder name to save your results. Here the folder name is set to be “result”.
-    .. literalinclude:: examples/HydroSeepage/runme.of
-        :lines: 43
+.. literalinclude:: examples/HydroSeepage/runme.of
+    :lines: 39
 
-#. Set the number of cores to be used for running this model.
-    .. warning::
-        In this example, 15 cores will be used for running. To prevent the crushing of your computer, please 
-        check your computer to fill in the number of cores you want to use from your computer. To check the number 
-        of cores your computer has, you can go Task Manager > Performance > CPU > Cores. If nothing is set here, 
-        serial computing will be used.
-    .. literalinclude:: examples/HydroSeepage/runme.of
-        :lines: 47
+2. Set up the folder name to save your results. Here the folder name is set to be “result”.
+
+.. literalinclude:: examples/HydroSeepage/runme.of
+    :lines: 43
+
+3. Set the number of cores to be used for running this model.
+
+.. literalinclude:: examples/HydroSeepage/runme.of
+    :lines: 47
 
 -------------------------------------------------------------------
 2.2 Create the geometry and the mesh
 -------------------------------------------------------------------
-#. See Figure 1 for the dam model and draw the corresponding geometry.
-    .. literalinclude:: examples/HydroSeepage/runme.of
-        :lines: 50
-#. Set the mesh size of the geometry.
-    .. literalinclude:: examples/HydroSeepage/runme.of
-        :lines: 52-53
+1. See Figure 1 for the dam model and draw the corresponding geometry.
+
+.. literalinclude:: examples/HydroSeepage/runme.of
+    :lines: 50
+
+2. Set the mesh size of the geometry.
+
+.. literalinclude:: examples/HydroSeepage/runme.of
+    :lines: 52-53
 
 -------------------------------------------------------------------
 2.3 Assign Material Properties
@@ -96,45 +100,64 @@ To start with programming, create a new empty text file (later add the `.of` ext
 +---------------------------------------------+------------------------+
 
 
-#. Set the material properties. For this test, the example uses the elastic constitutive model and assigned material for CZM and contact.
-    .. literalinclude:: examples/HydroSeepage/runme.of
-        :lines: 56-57
-#. Set the hydraulic properties.
-    .. literalinclude:: examples/HydroSeepage/runme.of
-        :lines: 60
+1. Set the material properties. In this example, the matrix is assiged as elastic material and thethe contact uses Mohr-Coulomb slip by default. In this porous flow example, the cohesive interfaces are ignored.
+
+.. literalinclude:: examples/HydroSeepage/runme.of
+    :lines: 56-57
+
+2. Set the hydraulic properties.
+
+.. literalinclude:: examples/HydroSeepage/runme.of
+    :lines: 60
 
 -------------------------------------------------------------------
 2.4 Create Groups and Assign Boundary Conditions
 -------------------------------------------------------------------
-#. Group the nodes to prepare for the next step.
-    .. literalinclude:: examples/HydroSeepage/runme.of
-        :lines: 65-68
-#. Assign the nodal boundaries. Fix the bottom of the model.
-    .. literalinclude:: examples/HydroSeepage/runme.of
-        :lines: 72
-#. Assign the water level based on Figure 1. Water at the 0.0 m from the top of the dam on the left side of the dam and 3.0 m deep from the top of the dam on the right side of the dam.
-    .. literalinclude:: examples/HydroSeepage/runme.of
-        :lines: 73-74
+1. Group the nodes to prepare for the next step.
+
+.. literalinclude:: examples/HydroSeepage/runme.of
+    :lines: 65-68
+
+2. Assign the nodal boundaries. Fix the bottom of the model.
+
+.. literalinclude:: examples/HydroSeepage/runme.of
+    :lines: 72
+
+3. Assign the water level based on Figure 1. Water at the 0.0 m from the top of the dam on the left side of the dam and 3.0 m deep from the top of the dam on the right side of the dam.
+p0 is the initial water pressure on the boundary and head is the water level.
+
+.. literalinclude:: examples/HydroSeepage/runme.of
+    :lines: 73-74
 
 -------------------------------------------------------------------
 2.5 Set the Outputs
 -------------------------------------------------------------------
-#. Set the output interval to be every 6000 steps and output all fields variables and fracture variables. Control the output interval to a reasonable size could shorten the computation time but get a good understanding of the model.
-    .. literalinclude:: examples/HydroSeepage/runme.of
-        :lines: 78-80
-#. In this model, only hydro module is considered in the calculation. ???????
-    .. literalinclude:: examples/HydroSeepage/runme.of
-        :lines: 78-80
-#. Timestep for hydraulic calculation can be fixed to 1e-8 in this example.
-    .. literalinclude:: examples/HydroSeepage/runme.of
-        :lines: 88
-#. The program will run 60000 steps in total. In other words, it will output 10 files for reference.
-    .. literalinclude:: examples/HydroSeepage/runme.of
-        :lines: 90
-#. Finalize the model and clear all the temporary memories.
-    .. literalinclude:: examples/HydroSeepage/runme.of
-        :lines: 92
-#. Save the notepad and double click the .of file to run the program.
+1. Set the output interval to be every 6000 steps and output all fields variables and fracture variables. 
+
+.. literalinclude:: examples/HydroSeepage/runme.of
+    :lines: 78-80
+
+2. In this model, only hydro module is considered in the calculation. The mechanical module is turned off and the coupling between mechanical and hydro is overlooked. The pressure-induced deformation is not considered in this example.
+
+.. literalinclude:: examples/HydroSeepage/runme.of
+    :lines: 86
+
+3. Timestep for hydraulic calculation can be fixed to 1e-5 in this example.
+
+.. literalinclude:: examples/HydroSeepage/runme.of
+    :lines: 88
+
+4. The program will run 60000 steps in total to terminate the modelling. It will output 10 files for reference.
+
+.. literalinclude:: examples/HydroSeepage/runme.of
+    :lines: 90
+
+5. Finalize the model and clear all the temporary memories.
+
+.. literalinclude:: examples/HydroSeepage/runme.of
+    :lines: 92
+
+6. Save the notepad and double click the .of file to run the program.
 
 ==================================
 3 Run the Program
