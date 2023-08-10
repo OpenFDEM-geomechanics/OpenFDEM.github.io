@@ -50,7 +50,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'rst_tutorials/tutorial4_BD_Test';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Tunnel excavation under In-situ stress" href="tutorial5_In_Situ_Stress.html" />
+    <link rel="next" title="Tunnel excavation under in-situ stress" href="tutorial5_In_Situ_Stress.html" />
     <link rel="prev" title="How to use higher-order element" href="tutorial3_UCS_Test_with_Quadrangle_Elements.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -349,11 +349,11 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="tutorial2_UCS_with_Gmsh.html">Create model from imported mesh</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial3_UCS_Test_with_Quadrangle_Elements.html">How to use higher-order element</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Quick start with Brazilian disc test</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial5_In_Situ_Stress.html">Tunnel excavation under <cite>In-situ</cite> stress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial5_In_Situ_Stress.html">Tunnel excavation under <cite>in-situ</cite> stress</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial6_Hydro_Seepage.html">Water flowing in rock dam - seepage flow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial7_Hydro_Fracture_Flow.html">Water flowing in rock dam - fracture flow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial8_Thermal_Flux.html">Thermal flux transportation in a bar</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial9_GBM.html">Grain-based model (GBM), interface with <code class="docutils literal notranslate"><span class="pre">Neper</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial9_GBM.html">Grain-based model (GBM), interface with Neper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial10_Phase_Field.html">Phase Field</a></li>
 </ul>
 </li>
@@ -429,9 +429,6 @@ it is amonst the most commonly used laboratoory tesing methods in geotechnical i
 <p><span class="caption-text">Figure 1: Geometry of the Brazilian disc test</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <section id="tutorial-prerequistes">
 <h2>1 Tutorial Prerequistes<a class="headerlink" href="#tutorial-prerequistes" title="Permalink to this heading">#</a></h2>
 <p>The following files are needed to follow along the tutorial:</p>
@@ -604,7 +601,7 @@ check your computer to change core number you want to use. To check the configur
 <p>Check <a class="reference internal" href="../rst_user_guide/Material/of.mat.element.html"><span class="doc">element materal</span></a>, <a class="reference internal" href="../rst_user_guide/Material/of.mat.cohesive.html"><span class="doc">cohesive materal</span></a>, <a class="reference internal" href="../rst_user_guide/Material/of.mat.contact.html"><span class="doc">contact materal</span></a> to see more materials.</p>
 </div>
 <ol class="arabic simple">
-<li><p>Set the material properties. For this test, the example uses the elastic constitutive model and assigned material for CZM and contact.</p></li>
+<li><p>Set the material properties. elastic material is assigned for the matrix element and Evans_Marathe cohesive law is for CZM, the contact uses Mohr-Coulomb slip by default.</p></li>
 </ol>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">of</span><span class="o">.</span><span class="n">mat</span><span class="o">.</span><span class="n">element</span> <span class="s1">&#39;rock&#39;</span> <span class="n">elastic</span> <span class="n">den</span> <span class="mi">2700</span> <span class="n">E</span> <span class="mf">30e9</span> <span class="n">v</span> <span class="mf">0.3</span> <span class="n">damp</span> <span class="mf">0.6</span>
 <span class="n">of</span><span class="o">.</span><span class="n">mat</span><span class="o">.</span><span class="n">element</span> <span class="s1">&#39;up&#39;</span> <span class="n">rigid</span> <span class="n">den</span> <span class="mi">7000</span>
@@ -681,9 +678,6 @@ check your computer to change core number you want to use. To check the configur
 <p><span class="caption-text">Figure 2: Mesh created by Gmsh</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 </section>
 <section id="results">
 <h2>5 Results<a class="headerlink" href="#results" title="Permalink to this heading">#</a></h2>
@@ -781,7 +775,7 @@ check your computer to change core number you want to use. To check the configur
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tunnel excavation under <cite>In-situ</cite> stress</p>
+        <p class="prev-next-title">Tunnel excavation under <cite>in-situ</cite> stress</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

@@ -348,11 +348,11 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="tutorial2_UCS_with_Gmsh.html">Create model from imported mesh</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial3_UCS_Test_with_Quadrangle_Elements.html">How to use higher-order element</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial4_BD_Test.html">Quick start with Brazilian disc test</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial5_In_Situ_Stress.html">Tunnel excavation under <cite>In-situ</cite> stress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial5_In_Situ_Stress.html">Tunnel excavation under <cite>in-situ</cite> stress</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial6_Hydro_Seepage.html">Water flowing in rock dam - seepage flow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial7_Hydro_Fracture_Flow.html">Water flowing in rock dam - fracture flow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial8_Thermal_Flux.html">Thermal flux transportation in a bar</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial9_GBM.html">Grain-based model (GBM), interface with <code class="docutils literal notranslate"><span class="pre">Neper</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial9_GBM.html">Grain-based model (GBM), interface with Neper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial10_Phase_Field.html">Phase Field</a></li>
 </ul>
 </li>
@@ -420,6 +420,7 @@ document.write(`
 <p><code class="docutils literal notranslate"><span class="pre">ParaView</span></code> is an open-source, multi-platform scientific data analysis and visualization tool that enables analysis and visualization of extremely large datasets.
 Users can go to <a class="reference external" href="https://www.paraview.org/download/">ParaView</a> to download this software. The ParaView Documentation can be found at <a class="reference external" href="https://docs.paraview.org/en/latest/index.html">PraView documentation</a> online. This tutorial will briefly
 introduce a few useful functions to view the results from OpenFDEM.</p>
+<p>It is available to export Tecplot-supported results if you have the access to this commerical software. You can find more instructions from <a class="reference external" href="https://www.tecplot.com/documentation/">Tecplot Documentation</a> to know how to visualize the dumpered results.</p>
 <section id="getting-started-with-paraview">
 <h2>Getting started with Paraview<a class="headerlink" href="#getting-started-with-paraview" title="Permalink to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">ParaView</span></code> is the graphical front-end to the <code class="docutils literal notranslate"><span class="pre">ParaView</span></code> application.  The UI provides panels for you to inspect and modify
@@ -467,7 +468,7 @@ active module in the  <code class="docutils literal notranslate"><span class="pr
 <li><p>Click Apply to show the data.</p></li>
 </ol>
 <figure class="align-center" id="id2">
-<a class="reference internal image-reference" href="../_images/Apply.png"><img alt="Apply the data to show" src="../_images/Apply.png" style="width: 768.0px; height: 398.40000000000003px;" /></a>
+<img alt="Apply the data to show" src="../_images/Apply.png" />
 <figcaption>
 <p><span class="caption-text">Figure 2: Apply the data to show</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -476,7 +477,7 @@ active module in the  <code class="docutils literal notranslate"><span class="pr
 <li><p>If the figure of the result is too small, choose reset to rescale the model.</p></li>
 </ol>
 <figure class="align-center" id="id3">
-<a class="reference internal image-reference" href="../_images/Reset.png"><img alt="Reset the view." src="../_images/Reset.png" style="width: 768.0px; height: 400.40000000000003px;" /></a>
+<img alt="Reset the view." src="../_images/Reset.png" />
 <figcaption>
 <p><span class="caption-text">Figure 3: Reset the view</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -485,7 +486,7 @@ active module in the  <code class="docutils literal notranslate"><span class="pr
 <li><p>Select “runme_field_0.vtu” and change the result to “Stress”</p></li>
 </ol>
 <figure class="align-center" id="id4">
-<a class="reference internal image-reference" href="../_images/Stress.png"><img alt="Show the Stress" src="../_images/Stress.png" style="width: 768.0px; height: 400.40000000000003px;" /></a>
+<img alt="Show the Stress" src="../_images/Stress.png" />
 <figcaption>
 <p><span class="caption-text">Figure 4: Show the Stress</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -494,7 +495,7 @@ active module in the  <code class="docutils literal notranslate"><span class="pr
 <li><p>To go to the next frame, users may use the arrow, select specific frame number, or enter the frame number. In this example, the last frame will be used.</p></li>
 </ol>
 <figure class="align-center" id="id5">
-<a class="reference internal image-reference" href="../_images/Frames.png"><img alt="Show a specific frame." src="../_images/Frames.png" style="width: 768.0px; height: 399.6px;" /></a>
+<img alt="Show a specific frame." src="../_images/Frames.png" />
 <figcaption>
 <p><span class="caption-text">Figure 4: Show a specific frame</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -503,7 +504,7 @@ active module in the  <code class="docutils literal notranslate"><span class="pr
 <li><p>Select “Clamp and update every timestep” for Automatic Rescale Range Mode.</p></li>
 </ol>
 <figure class="align-center" id="id6">
-<a class="reference internal image-reference" href="../_images/Clamp_range.png"><img alt="Clamp the range." src="../_images/Clamp_range.png" style="width: 768.0px; height: 400.40000000000003px;" /></a>
+<img alt="Clamp the range." src="../_images/Clamp_range.png" />
 <figcaption>
 <p><span class="caption-text">Figure 5: Clamp the range</span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -512,7 +513,7 @@ active module in the  <code class="docutils literal notranslate"><span class="pr
 <li><p>Go to the last step of the result. The sample is fractured under compression.</p></li>
 </ol>
 <figure class="align-center" id="id7">
-<a class="reference internal image-reference" href="../_images/Last_step.png"><img alt="Last step of the UCS test" src="../_images/Last_step.png" style="width: 768.0px; height: 400.0px;" /></a>
+<img alt="Last step of the UCS test" src="../_images/Last_step.png" />
 <figcaption>
 <p><span class="caption-text">Figure 6: Last step of the UCS test</span><a class="headerlink" href="#id7" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -530,7 +531,7 @@ active module in the  <code class="docutils literal notranslate"><span class="pr
 <li><p>Select “runme_fracture_elements_0” and choose “Fracture Mode” with type of “Feature Edges” to show the cracking boundaries.</p></li>
 </ol>
 <figure class="align-center" id="id9">
-<a class="reference internal image-reference" href="../_images/Fracture_mode.png"><img alt="Fracture_mode" src="../_images/Fracture_mode.png" style="width: 768.0px; height: 399.6px;" /></a>
+<img alt="Fracture_mode" src="../_images/Fracture_mode.png" />
 <figcaption>
 <p><span class="caption-text">Figure 8: Fracture mode</span><a class="headerlink" href="#id9" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -539,7 +540,7 @@ active module in the  <code class="docutils literal notranslate"><span class="pr
 <li><p>To only show the sample without platens, users can select the “runme_field_0.vtu” file and use threshold filter in filters.</p></li>
 </ol>
 <figure class="align-center" id="id10">
-<a class="reference internal image-reference" href="../_images/Filters.png"><img alt="Filters" src="../_images/Filters.png" style="width: 768.0px; height: 411.6px;" /></a>
+<img alt="Filters" src="../_images/Filters.png" />
 <figcaption>
 <p><span class="caption-text">Figure 9: Filters</span><a class="headerlink" href="#id10" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -548,7 +549,7 @@ active module in the  <code class="docutils literal notranslate"><span class="pr
 <li><p>To filter the sample out, choose “ele_group_rock” with condition of above upper thresold 1 and apply.</p></li>
 </ol>
 <figure class="align-center" id="id11">
-<a class="reference internal image-reference" href="../_images/Threshold.png"><img alt="Threshold" src="../_images/Threshold.png" style="width: 768.0px; height: 399.20000000000005px;" /></a>
+<img alt="Threshold" src="../_images/Threshold.png" />
 <figcaption>
 <p><span class="caption-text">Figure 10: Threshold</span><a class="headerlink" href="#id11" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -557,14 +558,14 @@ active module in the  <code class="docutils literal notranslate"><span class="pr
 <li><p>You may show results with the rock sample only now.</p></li>
 </ol>
 <figure class="align-center" id="id12">
-<a class="reference internal image-reference" href="../_images/Result.png"><img alt="Result" src="../_images/Result.png" style="width: 768.0px; height: 412.0px;" /></a>
+<img alt="Result" src="../_images/Result.png" />
 <figcaption>
 <p><span class="caption-text">Figure 11: Result</span><a class="headerlink" href="#id12" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="data-processing-by-pyfdempp">
-<h2>Data processing by <code class="docutils literal notranslate"><span class="pre">pyfdempp</span></code><a class="headerlink" href="#data-processing-by-pyfdempp" title="Permalink to this heading">#</a></h2>
+<h2>Data processing by pyfdempp<a class="headerlink" href="#data-processing-by-pyfdempp" title="Permalink to this heading">#</a></h2>
 <section id="what-is-pyfdempp">
 <h3>What is pyfdempp<a class="headerlink" href="#what-is-pyfdempp" title="Permalink to this heading">#</a></h3>
 <p>This <a class="reference external" href="https://pypi.org/project/pyfdempp/0.2/">Python package</a> performs transformations on hybrid finite-discrete element method (FDEM) models with an unstructured grid in <code class="docutils literal notranslate"><span class="pre">vtk</span></code>/<code class="docutils literal notranslate"><span class="pre">vtu</span></code>/<code class="docutils literal notranslate"><span class="pre">vtp</span></code> format. It currently supports arrays of simulation files from the FDEM solvers:</p>
@@ -753,7 +754,7 @@ Canada, and is part of a collaborative effort by the open-source pacakge OpenFDE
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started-with-paraview">Getting started with Paraview</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results-visualization-for-openfdem">Results visualization for OpenFDEM</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-processing-by-pyfdempp">Data processing by <code class="docutils literal notranslate"><span class="pre">pyfdempp</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-processing-by-pyfdempp">Data processing by pyfdempp</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-pyfdempp">What is pyfdempp</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functionality">Functionality</a></li>
 </ul>

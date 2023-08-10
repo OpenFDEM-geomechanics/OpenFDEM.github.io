@@ -30,8 +30,6 @@ When the program runs, the mesh of the model will look like this.
 
     Figure 1: Uniaxial Compression Test Mesh with Quadrangle Elements
 
-|
-
 The program will also show the mesh has quadrilateral elements.
 
 .. figure:: ../../images/Command/UCS_Quad.PNG
@@ -40,8 +38,6 @@ The program will also show the mesh has quadrilateral elements.
     :scale: 60%
 
     Figure 2: Uniaxial Compression Test Mesh with Quadrangle Elements
-
-|
 
 ==================================
 3 Full Script

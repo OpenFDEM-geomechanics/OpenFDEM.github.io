@@ -1,4 +1,4 @@
-Water flowing in rock dam - fracture flow
+Water flowing in rock dam: fracture flow
 ########################################
 This tutorial will continue the hydro seepage model in tutorial 6 with discrete elements. The hydro flowing is considered only on the cohesive interfaces.
 
@@ -9,7 +9,6 @@ This tutorial will continue the hydro seepage model in tutorial 6 with discrete 
 
     Figure 1: Geometry of the uniaxial compression strength test
 
-|
 
 ==================================
 1 Code
@@ -95,7 +94,6 @@ Based on the code in tutorial 6, fracture flow parameters will be add to model t
     :scale: 65%
 
     Figure 4: Hydro Boundary Conditions
-
 
 ==================================
 3 Results

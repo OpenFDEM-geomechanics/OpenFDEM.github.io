@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Water flowing in rock dam - fracture flow &#8212; &lt;strong&gt;OpenFDEM&lt;/strong&gt;</title>
+    <title>Water flowing in rock dam: fracture flow &#8212; &lt;strong&gt;OpenFDEM&lt;/strong&gt;</title>
   
   
   
@@ -51,7 +51,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Thermal flux transportation in a bar" href="tutorial8_Thermal_Flux.html" />
-    <link rel="prev" title="Water flowing in rock dam - seepage flow" href="tutorial6_Hydro_Seepage.html" />
+    <link rel="prev" title="Water flowing in rock dam: seepage flow" href="tutorial6_Hydro_Seepage.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -349,11 +349,11 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="tutorial2_UCS_with_Gmsh.html">Create model from imported mesh</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial3_UCS_Test_with_Quadrangle_Elements.html">How to use higher-order element</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial4_BD_Test.html">Quick start with Brazilian disc test</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial5_In_Situ_Stress.html">Tunnel excavation under <cite>In-situ</cite> stress</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial6_Hydro_Seepage.html">Water flowing in rock dam - seepage flow</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Water flowing in rock dam - fracture flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial5_In_Situ_Stress.html">Tunnel excavation under <cite>in-situ</cite> stress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial6_Hydro_Seepage.html">Water flowing in rock dam: seepage flow</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Water flowing in rock dam: fracture flow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial8_Thermal_Flux.html">Thermal flux transportation in a bar</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial9_GBM.html">Grain-based model (GBM), interface with <code class="docutils literal notranslate"><span class="pre">Neper</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial9_GBM.html">Grain-based model (GBM), interface with Neper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial10_Phase_Field.html">Phase Field</a></li>
 </ul>
 </li>
@@ -402,7 +402,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="tutorialindex.html" class="nav-link">Examples</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Water flowing in rock dam - fracture flow</li>
+    <li class="breadcrumb-item active" aria-current="page">Water flowing in rock dam: fracture flow</li>
   </ul>
 </nav>
 </div>
@@ -420,7 +420,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="water-flowing-in-rock-dam-fracture-flow">
-<h1>Water flowing in rock dam - fracture flow<a class="headerlink" href="#water-flowing-in-rock-dam-fracture-flow" title="Permalink to this heading">#</a></h1>
+<h1>Water flowing in rock dam: fracture flow<a class="headerlink" href="#water-flowing-in-rock-dam-fracture-flow" title="Permalink to this heading">#</a></h1>
 <p>This tutorial will continue the hydro seepage model in tutorial 6 with discrete elements. The hydro flowing is considered only on the cohesive interfaces.</p>
 <figure class="align-center" id="id1">
 <a class="reference internal image-reference" href="../_images/Hydro.png"><img alt="Geometry of the uniaxial compression test" src="../_images/Hydro.png" style="width: 566.8000000000001px; height: 189.60000000000002px;" /></a>
@@ -428,9 +428,6 @@ document.write(`
 <p><span class="caption-text">Figure 1: Geometry of the uniaxial compression strength test</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <section id="code">
 <h2>1 Code<a class="headerlink" href="#code" title="Permalink to this heading">#</a></h2>
 <p>Based on the code in tutorial 6, fracture flow parameters will be add to model the hydro fracture.</p>
@@ -643,7 +640,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Water flowing in rock dam - seepage flow</p>
+        <p class="prev-next-title">Water flowing in rock dam: seepage flow</p>
       </div>
     </a>
     <a class="right-next"

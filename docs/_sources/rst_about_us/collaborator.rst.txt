@@ -39,6 +39,7 @@ Collaborating
 
 
 |
+
 .. figure:: ../../images/Aboutus/polyulogo.png   
     :scale: 60%
     :align: left
@@ -48,13 +49,15 @@ Collaborating
 |
 |
 |
-===================================================================
+|
+----------------------------------------------------
 
 - Dr **Qi Zhao**, 2019 - 2022
 - Dr **Xiaofeng Li**, 2020 - 2021
 
 
 |
+
 .. figure:: ../../images/Aboutus/monashlogo.png   
     :scale: 20%
     :align: left
@@ -63,7 +66,8 @@ Collaborating
 |
 |
 |
-===================================================================
+|
+----------------------------------------------------------------
 
 - Professor **Jian Zhao**, Editors-in-Chief of International Journal of Rock Mechanics and Mining Sciences
 

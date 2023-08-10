@@ -46,6 +46,7 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/design-tabs.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'rst_theory/Solid_FEM_Engine';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -429,7 +430,177 @@ document.write(`
                   
   <section id="solid-fem">
 <h1>Solid FEM<a class="headerlink" href="#solid-fem" title="Permalink to this heading">#</a></h1>
-<p>under construction</p>
+<p>In this document, the following conventions are assumed for the notations:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Gibbs notation is employed for tensor algebra and the order is denoted by the number of underdots (e.g. <span class="math notranslate nohighlight">\({\mathbf{u}} = u_{i}\mathbf{e}_{\mathbf{i}}\)</span>,<span class="math notranslate nohighlight">\({\mathbf{\sigma}} = \sigma_{ij}\mathbf{e}_{\mathbf{i}} \otimes \mathbf{e}_{\mathbf{j}}\)</span>);</p></li>
+<li><p>the dot symbol means the contraction between two tensors (e.g. <span class="math notranslate nohighlight">\({\mathbf{T}} = {\mathbf{\sigma}} \cdot {\mathbf{n}}\)</span>);</p></li>
+<li><p>the colon symbol denotes for the double contraction of two second-order tensors (e.g. <span class="math notranslate nohighlight">\({\mathbf{\sigma}} = {\mathbf{D}} : {\mathbf{\varepsilon}}\)</span>);</p></li>
+<li><p>the wedge symbol <span class="math notranslate nohighlight">\(\land\)</span> is for the cross product (e.g. <span class="math notranslate nohighlight">\(\mathbf{e}_{3} = \mathbf{e}_{1} \land \mathbf{e}_{2}\)</span>) and,</p></li>
+<li><p>the tensorial product <span class="math notranslate nohighlight">\({\mathbf{\sigma}} = {\mathbf{x}} \otimes {\mathbf{F}}\)</span> states for the linear production two tensors.</p></li>
+</ul>
+</div></blockquote>
+<section id="weak-formulation-of-updated-lagrange">
+<h2>Weak formulation of updated Lagrange<a class="headerlink" href="#weak-formulation-of-updated-lagrange" title="Permalink to this heading">#</a></h2>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../_images/FDEM_body.png"><img alt="Timesteps" src="../_images/FDEM_body.png" style="width: 561.4499999999999px; height: 468.45px;" /></a>
+<figcaption>
+<p><span class="caption-text">Figure 1: The theory of FDEM body</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Consider an arbitrary body <span class="math notranslate nohighlight">\(\Omega \subset \mathbb{R}^{D}\left( D\  \in \ [\ 1\ ,\ 2\ ,\ 3\ ] \right)\)</span>
+with external boundary <span class="math notranslate nohighlight">\(\partial\Omega\)</span> and the internal
+discontinuity boundary <span class="math notranslate nohighlight">\(\Gamma\)</span>, <span class="math notranslate nohighlight">\({\mathbf{x}}\)</span>
+is the current position vector of the point and
+<span class="math notranslate nohighlight">\({\mathbf{u}}\left( {\mathbf{x}}\ ,t \right) \subset \mathbb{R}^{D}\)</span>
+is the displacement at time
+<span class="math notranslate nohighlight">\(t \in \left\lbrack 0\ ,\ t_{all} \right\rbrack\)</span>. The
+infinitesimal strain tensor based on small deformation and deformation
+gradients assumptions is characterized as
+<span class="math notranslate nohighlight">\({\mathbf{\varepsilon}}\left( {\mathbf{x}}\ ,\ t \right) \in \mathbb{R}^{D \times D}\)</span>.</p>
+<p>Balance of mass:</p>
+<div class="math notranslate nohighlight">
+\[\dot{\rho}+\rho \nabla \cdot \mathbf{\dot{u}}=0  \quad \forall{\mathbf{x}} \in \Omega \tag{1}\]</div>
+<p>Balance of momentum:</p>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dt}\int_{\Omega}^{}\rho{\dot{\mathbf{u}}}\left( {\mathbf{x}} \right)d\Omega = \int_{\Omega}^{}\rho{\ddot{\mathbf{u}}}\left( {\mathbf{x}} \right)d\Omega = \int_{\partial\Omega}^{}{\mathbf{t}}d\partial\Omega + \int_{\Omega}^{}{\mathbf{b}}d\Omega \tag{2}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\rho\)</span> is the density of the solid body. The force is split into
+tractions <span class="math notranslate nohighlight">\({\mathbf{t}}\)</span> acted on boundaries
+<span class="math notranslate nohighlight">\(\partial\Omega\)</span> and into body force
+<span class="math notranslate nohighlight">\({\mathbf{b}}\)</span> in volume
+<span class="math notranslate nohighlight">\(\Omega \mapsto \mathbb{R}^{D}\)</span>. Similarly, the conservation of
+the moment of momentum can be written as</p>
+<div class="math notranslate nohighlight">
+\[\int_{\Omega}^{}\rho{\ddot{\mathbf{u}}}\left( {\mathbf{x}} \right) \land {\mathbf{x}}d\Omega = \int_{\partial\Omega}^{}{\mathbf{t}} \land {\mathbf{x}}d\partial\Omega + \int_{\Omega}^{}{{\mathbf{b}} \land {\mathbf{x}}}d\Omega \tag{3}\]</div>
+<p>In terms of the Cauchy stress tensor, the traction force satisfies
+<span class="math notranslate nohighlight">\({\mathbf{t}} = {\mathbf{\sigma}} \cdot {\mathbf{n}}\)</span>,
+The equation above is rewritten according to Gausss theorem
+<span class="math notranslate nohighlight">\(\int_{\partial\Omega}^{}{\mathbf{t}}d\partial\Omega = \int_{\partial\Omega}^{}{{\mathbf{\sigma}} \cdot {\mathbf{n}}}d\partial\Omega = \int_{\Omega}^{}{{\mathbf{\sigma}} \cdot \nabla}d\Omega\)</span>.
+Since the stress tensor is symmetric as
+<span class="math notranslate nohighlight">\({\mathbf{\sigma}} = {{\mathbf{\sigma}}}^{T}\)</span>,
+the conservation of momentum is</p>
+<div class="math notranslate nohighlight">
+\[\rho{\ddot{\mathbf{u}}}\left( {\mathbf{x}} \right) - \nabla \cdot {\mathbf{\sigma}} - {\mathbf{b}} = 0 \tag{4}\]</div>
+<p>Boundary conditions:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}{\mathbf{\sigma}} \cdot {\mathbf{n}} = {\mathbf{t}}  \quad \forall{\mathbf{x}} \in \partial\Omega_{t}\\{\mathbf{u}} = \overline{{\mathbf{u}}} \quad \forall{\mathbf{x}} \in \partial\Omega_{u}\end{aligned}\end{align} \]</div>
+<p>Initial conditions:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}{\mathbf{u}}\left( {\mathbf{x}}\ ,\ t\  = \ 0 \right) = \overline{{\mathbf{u}}}\left( {\mathbf{x}} \right) \quad \forall{\mathbf{x}} \in \partial\Omega_{u}\\\dot{{\mathbf{u}}}\left( {\mathbf{x}}\ ,\ t\  = \ 0 \right) = \overline{\dot{{\mathbf{u}}}}\left( {\mathbf{x}} \right) \quad \forall{\mathbf{x}} \in \partial\Omega_{u}\end{aligned}\end{align} \]</div>
+<p>The spatial version of the principle of virtual work states that the body <span class="math notranslate nohighlight">\(\Omega\)</span> is in equilibrium when the Cauchy stress satisfies the initial condition</p>
+<div class="math notranslate nohighlight">
+\[\int_{\Omega}^{}{\left( \left( \nabla\  \cdot \ {\mathbf{\sigma}} \right)\  \cdot \ \delta\ {\mathbf{v}}\  - \ \left( {\mathbf{b}}\  - \ \rho\ {\ddot{\mathbf{u}}} \right)\  \cdot \ \delta\ {\mathbf{v}} \right)d\Omega} = 0 \tag{5}\]</div>
+<p>Integration by parts of the first term gives</p>
+<div class="math notranslate nohighlight">
+\[\int_{\Omega}{\left( \nabla \cdot \mathbf{\sigma } \right)}\cdot \delta \mathbf{v}\mathrm{d}\Omega =\int_{\Omega}{\left( \mathbf{\sigma }\nabla \delta \mathbf{v} \right)}\mathrm{d}\Omega -\int_{\partial \Omega}{\left( \mathbf{\sigma }^{\mathrm{T}}\delta \mathbf{v}\cdot \mathbf{n} \right)}\mathrm{d}\partial \Omega  \tag{6}\]</div>
+<p>Eq. 6 is changed to</p>
+<div class="math notranslate nohighlight">
+\[\int_{\Omega}{\left( \nabla \cdot \mathbf{\sigma } \right)}\cdot \delta \mathbf{v}\mathrm{d}\Omega =\int_{\Omega}{\left( \mathbf{\sigma }\nabla \delta \mathbf{v} \right)}d\Omega -\int_{\partial \Omega _t}{\left( \mathbf{t}\cdot \delta \mathbf{v} \right)}\mathrm{d}\partial \Omega  \tag{7}\]</div>
+<p>Substitution of Eq.7 back into Eq.5 gives</p>
+<div class="math notranslate nohighlight">
+\[\int_{\Omega}^{}{\left( {\mathbf{\sigma}}\  : \ \nabla\ \delta\ {\mathbf{v}}\  - \ \left( {\mathbf{b}}\  - \ \rho\ {\ddot{\mathbf{u}}} \right)\  \cdot \ \delta\ {\mathbf{v}} \right)d\Omega = \int_{\partial\Omega_{t}}^{}{{\mathbf{t}} \cdot}}\delta{\mathbf{v}}d\partial\Omega \tag{8}\]</div>
+</section>
+<section id="spatial-discretization-in-finite-domain">
+<h2>Spatial discretization in finite domain<a class="headerlink" href="#spatial-discretization-in-finite-domain" title="Permalink to this heading">#</a></h2>
+<p>In this section, Eq.8 is discretised to derive the mass matrix, internal
+force and external force which is convenient to the matrix notation. Let
+the generic finite element <span class="math notranslate nohighlight">\(e \in \Omega\)</span> is defined by
+<span class="math notranslate nohighlight">\(n_{node}\)</span> nodes with shape function
+<span class="math notranslate nohighlight">\(\mathcal{N}^{(e)}\left( {\mathbf{x}} \right)\)</span>
+associated with node <span class="math notranslate nohighlight">\(i\)</span> having coordinate
+<span class="math notranslate nohighlight">\({\mathbf{x}}\)</span>. The global interpolation matrix is
+defined as</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{N}^{g}\left( {\mathbf{x}} \right) = \left\lbrack diag\ \left\lbrack \mathcal{N}_{1}^{g}\ \left( {\mathbf{x}} \right) \right\rbrack\ \ diag\ \left\lbrack \mathcal{N}_{2}^{g}\ \left( {\mathbf{x}} \right) \right\rbrack\ \cdots\ \ diag\ \left\lbrack \mathcal{N}_{n_{poin}}^{g}\ \left( {\mathbf{x}} \right) \right\rbrack \right\rbrack \tag{9}\]</div>
+<p>where
+<span class="math notranslate nohighlight">\(diag\left\lbrack \mathcal{N}_{1}^{g}\ \left( {\mathbf{x}} \right) \right\rbrack\)</span>
+is the <span class="math notranslate nohighlight">\(n_{\dim}\)</span>×<span class="math notranslate nohighlight">\(n_{\dim}\)</span> diagonal matrix. The
+element displacement in global coordinate is</p>
+<div class="math notranslate nohighlight">
+\[{}^{h}{\mathbf{u}}\left( {\mathbf{x}} \right) = \sum_{i = 1}^{n_{poi}}{\mathcal{N}_{i}\left( {\mathbf{x}} \right)}{\mathbf{u}} = \mathcal{N}^{g}{\mathbf{u}} \tag{10}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathcal{B}^{g} = \begin{bmatrix}
+\mathcal{N}_{1,1}^{g} &amp; 0 &amp; \mathcal{N}_{2,1}^{g} &amp; 0 &amp; \cdots &amp; \mathcal{N}_{n_{poin},1}^{g} &amp; 0 \\
+0 &amp; \mathcal{N}_{1,2}^{g} &amp; 0 &amp; \mathcal{N}_{2,2}^{g} &amp; \cdots &amp; 0 &amp; \mathcal{N}_{n_{poin},2}^{g} \\
+\mathcal{N}_{1,2}^{g} &amp; \mathcal{N}_{1,1}^{g} &amp; \mathcal{N}_{2,2}^{g} &amp; \mathcal{N}_{2,1}^{g} &amp; \cdots &amp; \mathcal{N}_{n_{poin},2}^{g} &amp; \mathcal{N}_{n_{poin},1}^{g}
+\end{bmatrix}\end{split}\]</div>
+<p>Therefore, the discretised virtual work expression considering the
+kinetic is</p>
+<div class="math notranslate nohighlight">
+\[\int_{{}^{h}\Omega}^{}\left\lbrack {{\mathbf{\sigma}}}^{T}\ \mathcal{B}^{g}\ \delta\ {\mathbf{v}}\  - \ \left( {\mathbf{b}}\  - \ \rho\ {\ddot{\mathbf{u}}} \right)\  \cdot \ \mathcal{N}^{g}\ \delta\ {\mathbf{v}} \right\rbrack d\Omega - \int_{\partial^{h}\Omega_{t}}^{}{\mathbf{t}} \cdot \mathcal{N}^{g}\delta{\mathbf{v}}d\partial\Omega = 0 \tag{11}\]</div>
+<p>Since the above equation is satisfied for all vectors
+<span class="math notranslate nohighlight">\(\delta{\mathbf{v}}\)</span>, Eq. 10 can be reformulated as</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{M}^{FE}{\ddot{\mathbf{u}}} + {{\mathbf{f}}}^{int}\left( {\mathbf{u}} \right) - {{\mathbf{f}}}^{ext} = 0 \tag{12}\]</div>
+<p>while the internal force
+<span class="math notranslate nohighlight">\({{\mathbf{f}}}^{int}\left( {\mathbf{u}} \right)\)</span>,
+external force <span class="math notranslate nohighlight">\({{\mathbf{f}}}^{ext}\)</span>and inertia
+mass <span class="math notranslate nohighlight">\(\mathbf{M}^{FE}\)</span> are</p>
+<div class="math notranslate nohighlight">
+\[{{\mathbf{f}}}^{int}\left( {\mathbf{u}} \right) = \int_{{}^{h}\Omega}^{}{\left( \mathcal{B}^{g} \right)^{T} \cdot {\mathbf{\sigma}}\left( {\mathbf{u}} \right)d\Omega} \tag{13}\]</div>
+<div class="math notranslate nohighlight">
+\[{{\mathbf{f}}}^{ext} = \int_{{}^{h}\Omega}^{}{\left( \mathcal{N}^{g} \right)^{T}\rho{\mathbf{b}}d\Omega} + \int_{\partial^{h}\Omega_{t}}^{}{\left( \mathcal{N}^{g} \right)^{T}{\mathbf{t}}}d\partial\Omega = 0 \tag{14}\]</div>
+<div class="math notranslate nohighlight">
+\[\mathbf{M}^{FE} = \int_{{}^{h}\Omega}^{}{\left( \mathcal{N}^{g} \right)^{T}\rho\mathcal{N}^{g}d\Omega} \tag{15}\]</div>
+<p><span class="math notranslate nohighlight">\(\mathcal{B}^{g}\)</span> and <span class="math notranslate nohighlight">\(\mathcal{N}^{g}\)</span> are matrices
+incorporating the interpolation functions and their spatial derivatives
+in global, respectively. The actual force vectors are assembled as</p>
+<div class="math notranslate nohighlight">
+\[{{\mathbf{f}}}^{int} = \overset{e = 1}{\underset{n_{elem}}{\mathbf{A}}}\left( {{\mathbf{f}}}_{(e)}^{int} \right) \tag{16}\]</div>
+<div class="math notranslate nohighlight">
+\[{{\mathbf{f}}}^{ext} = \overset{e = 1}{\underset{n_{elem}}{\mathbf{A}}}\left( {{\mathbf{f}}}_{(e)}^{ext} \right) \tag{17}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\overset{e = 1}{\underset{n_{elem}}{\mathbf{A}}}\)</span> is the
+finite element assembly operator and the element force vector can be
+obtained as</p>
+<div class="math notranslate nohighlight">
+\[{{\mathbf{f}}}_{(e)}^{int}\left( {\mathbf{u}} \right) = \int_{{}^{e}\Omega}^{}{\left( \mathcal{B}^{e} \right)^{T} \cdot {\mathbf{\sigma}}\left( {\mathbf{u}} \right)d\Omega} \tag{18}\]</div>
+<div class="math notranslate nohighlight">
+\[{{\mathbf{f}}}_{(e)}^{ext} = \int_{{}^{e}\Omega}^{}{\left( \mathcal{N}^{e} \right)^{T}\rho{\mathbf{b}}d\Omega} + \int_{\partial^{e}\Omega_{t}}^{}{\left( \mathcal{N}^{e} \right)^{T}{\mathbf{t}}}d\partial\Omega = 0 \tag{19}\]</div>
+<p>The superscripts <span class="math notranslate nohighlight">\(e\)</span> denotes the variables in local element.</p>
+</section>
+<section id="dynamic-relaxation-and-time-integration-scheme">
+<h2>Dynamic relaxation and time integration scheme<a class="headerlink" href="#dynamic-relaxation-and-time-integration-scheme" title="Permalink to this heading">#</a></h2>
+<p>The continuum-discontinuum method (CDM) employs the explicit time
+integration based on velocity verlet algorithm to solve Eq .12,
+<span class="math notranslate nohighlight">\({}^{n + 1}\dot{{\mathbf{u}}}\)</span> and
+<span class="math notranslate nohighlight">\({}^{n}{\mathbf{u}}\)</span> are the velocity vector and
+displacement vector at <span class="math notranslate nohighlight">\({}^{n + 1}t\)</span> and <span class="math notranslate nohighlight">\({}^{n}t\)</span> for a
+time step <span class="math notranslate nohighlight">\(\mathrm{\Delta}t\)</span></p>
+<div class="math notranslate nohighlight">
+\[{}^{n}\ddot{{\mathbf{u}}} = \frac{1}{2\mathrm{\Delta}t}\left( {}^{n + 1}\ \dot{{\mathbf{u}}}\  -^{n}\ \dot{{\mathbf{u}}} \right) \tag{20}\]</div>
+<div class="math notranslate nohighlight">
+\[{}^{n}\dot{{\mathbf{u}}} =^{n + 1}{\mathbf{u}} -^{n}{\mathbf{u}} \tag{21}\]</div>
+<p>If the damping matrix <span class="math notranslate nohighlight">\(\mathbf{C}^{FE} = \alpha\mathbf{M}^{FE}\)</span> is
+considered, the governing equation is written as</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{M}^{FE}{\ddot{\mathbf{u}}} + \mathbf{C}^{FE}\dot{{\mathbf{u}}} + {{\mathbf{f}}}^{int}\left( {\mathbf{u}} \right) - {{\mathbf{f}}}^{ext} = 0 \tag{22}\]</div>
+<p>Eq. can be rewritten in the form of nodal velocities</p>
+<div class="math notranslate nohighlight">
+\[{}^{n + 1}{\dot{\mathbf{u}}} = \left\lbrack \left( 1\  - \ 2\ \alpha\ \mathrm{\Delta}t \right)^{n}\ {\dot{\mathbf{u}}}\  + \ \frac{2\mathrm{\Delta}t}{\mathbf{M}^{FE}}\ \left( {}^{n}\ {{\mathbf{f}}}^{ext}\  -^{n}\ {{\mathbf{f}}}^{int}\ \left( {}^{n}\ {\mathbf{u}} \right) \right) \right\rbrack \tag{23}\]</div>
+<p>while the damping coefficient is <span class="math notranslate nohighlight">\(\alpha = 2\xi\omega\)</span>,
+<span class="math notranslate nohighlight">\(\xi\)</span> is the damping ratio and <span class="math notranslate nohighlight">\(\omega\)</span> is the frequency
+parameter. The stability of the explicit scheme is depended on the
+critical timestep, which is determined by</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{\Delta}t_{cri} = \gamma\frac{2}{\omega}\left( \sqrt{\xi^{2} + 1}\  - \ \xi \right)  \tag{24}\]</div>
+<p>In CDM, each triangular element is considered as elastic with constant
+strain. During each timestep, the element strain rate is computed as</p>
+<div class="math notranslate nohighlight">
+\[\dot{{\mathbf{\varepsilon}}} = \frac{1}{2}\left( \nabla\ \dot{{\mathbf{u}}}\  + \ \nabla^{T}\ \dot{{\mathbf{u}}} \right),\dot{{\mathbf{\theta}}} = \frac{1}{2}\left( \nabla\ \dot{{\mathbf{u}}}\  - \ \nabla^{T}\ \dot{{\mathbf{u}}} \right),\nabla\dot{{\mathbf{u}}} \cong \frac{1}{2A}\sum_{s}^{}{\left( {\dot{{\mathbf{u}}}}^{(a)}\  + \ {\dot{{\mathbf{u}}}}^{(b)} \right) \cdot \mathbf{n}\mathrm{\Delta}s} \tag{25}\]</div>
+<p>The incremental strain tensor is denoted as
+<span class="math notranslate nohighlight">\(\mathrm{\Delta}\varepsilon_{ij} = {\dot{\varepsilon}}_{ij}\mathrm{\Delta}t\)</span>,
+<span class="math notranslate nohighlight">\(\mathbf{n}\)</span> is unit vector in normal direction, <span class="math notranslate nohighlight">\(A\)</span> is the
+area and <span class="math notranslate nohighlight">\(s\)</span> is the length of edge, the incremental stress is
+updated according to the constitutive relations of the isotropic elastic
+blocks as</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{\Delta}{\mathbf{\sigma}} = \lambda{\dot{{\mathbf{\varepsilon}}}}_{v}\mathbf{\delta}\mathrm{\Delta}t + 2\mu\dot{{\mathbf{e}}}\mathrm{\Delta}t \tag{26}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{\delta}\)</span> is Kronecker symbol, <span class="math notranslate nohighlight">\(\lambda\)</span> and
+<span class="math notranslate nohighlight">\(G\)</span> are Lame constants. The updated stress and strain at <span class="math notranslate nohighlight">\(n\)</span>
+step are</p>
+<div class="math notranslate nohighlight">
+\[{}^{n + 1}{\mathbf{\sigma}} =^{n}{\mathbf{\sigma}} + \mathrm{\Delta}{\mathbf{\sigma}},{}^{n + 1}\dot{{\mathbf{\varepsilon}}} =^{n}\dot{{\mathbf{\varepsilon}}} + \mathrm{\Delta}{\mathbf{\varepsilon}}  \tag{27}\]</div>
+</section>
 </section>
 
 
@@ -472,6 +643,18 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weak-formulation-of-updated-lagrange">Weak formulation of updated Lagrange</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-discretization-in-finite-domain">Spatial discretization in finite domain</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamic-relaxation-and-time-integration-scheme">Dynamic relaxation and time integration scheme</a></li>
+</ul>
+  </nav></div>
 
   <div class="sidebar-secondary-item">
   <div class="tocsection sourcelink">

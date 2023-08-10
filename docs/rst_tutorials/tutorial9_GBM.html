@@ -348,11 +348,11 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="tutorial2_UCS_with_Gmsh.html">Create model from imported mesh</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial3_UCS_Test_with_Quadrangle_Elements.html">How to use higher-order element</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial4_BD_Test.html">Quick start with Brazilian disc test</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial5_In_Situ_Stress.html">Tunnel excavation under <cite>In-situ</cite> stress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial5_In_Situ_Stress.html">Tunnel excavation under <cite>in-situ</cite> stress</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial6_Hydro_Seepage.html">Water flowing in rock dam - seepage flow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial7_Hydro_Fracture_Flow.html">Water flowing in rock dam - fracture flow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial8_Thermal_Flux.html">Thermal flux transportation in a bar</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Grain-based model (GBM), interface with <code class="docutils literal notranslate"><span class="pre">Neper</span></code></a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Grain-based model (GBM), interface with Neper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial10_Phase_Field.html">Phase Field</a></li>
 </ul>
 </li>
@@ -401,7 +401,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="tutorialindex.html" class="nav-link">Examples</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Grain-based model (GBM), interface with <code class="docutils literal notranslate"><span class="pre">Neper</span></code></li>
+    <li class="breadcrumb-item active" aria-current="page">Grain-based model (GBM), interface with Neper</li>
   </ul>
 </nav>
 </div>
@@ -419,9 +419,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="grain-based-model-gbm-interface-with-neper">
-<h1>Grain-based model (GBM), interface with <code class="docutils literal notranslate"><span class="pre">Neper</span></code><a class="headerlink" href="#grain-based-model-gbm-interface-with-neper" title="Permalink to this heading">#</a></h1>
+<h1>Grain-based model (GBM), interface with Neper<a class="headerlink" href="#grain-based-model-gbm-interface-with-neper" title="Permalink to this heading">#</a></h1>
 <style> .red {color:#F64A8A; } </style>
-<style> .blue {color:#4169E1; font-weight:bold;} </style><p>Grain based modeling for UCS example. The grain-based model is constructed by the Voronoi tessellations fron <code class="docutils literal notranslate"><span class="pre">Neper</span></code> &lt;<a class="reference external" href="https://neper.info/">https://neper.info/</a>&gt;,  <code class="docutils literal notranslate"><span class="pre">.geo</span></code>  or <code class="docutils literal notranslate"><span class="pre">.inp</span></code> files can be directly imported by OpenFDEM and each tessellation will be created into
+<style> .blue {color:#4169E1; font-weight:bold;} </style><p>Grain based modeling for UCS example. The grain-based model is constructed by the Voronoi tessellations fron <a class="reference external" href="https://neper.info/">Neper</a>,  <code class="docutils literal notranslate"><span class="pre">.geo</span></code>  or <code class="docutils literal notranslate"><span class="pre">.inp</span></code> files can be directly imported by OpenFDEM and each tessellation will be created into
 a individual physcial group. The user can regroup those tessellations into different minerals by assigning the area ratio, OpenFDEM will create those mineral groups by random to approach the predesigned mineral distributions.</p>
 <figure class="align-center" id="id1">
 <a class="reference internal image-reference" href="../_images/grainbasedmodel.png"><img alt="Geometry of the uniaxial compression test" src="../_images/grainbasedmodel.png" style="width: 390.3px; height: 526.1999999999999px;" /></a>
@@ -429,9 +429,6 @@ a individual physcial group. The user can regroup those tessellations into diffe
 <p><span class="caption-text">Figure 1: Mineral distribution in UCS sample</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <section id="tutorial-prerequistes">
 <h2>1 Tutorial Prerequistes<a class="headerlink" href="#tutorial-prerequistes" title="Permalink to this heading">#</a></h2>
 <p>The following files are needed to follow along the tutorial:</p>

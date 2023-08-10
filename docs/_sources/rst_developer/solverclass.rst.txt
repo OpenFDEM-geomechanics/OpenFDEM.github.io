@@ -1,0 +1,6 @@
+Solver class
+###########################
+
+.. doxygenindex::
+        :project: OpenFDEM_solver
+		

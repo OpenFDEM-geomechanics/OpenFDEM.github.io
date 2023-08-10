@@ -9,7 +9,6 @@ Phase Field
 
     Figure 1: Geometry of the uniaxial compression strength test
 
-|
 
 ==================================
 1 Main Steps
@@ -133,7 +132,7 @@ To start with programming, create a new empty text file (later add the `.of` ext
 
 .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
     :lines: 110
-    
+
 4. Save the notepad and double click the .of file to run the program.
 
 ==================================
@@ -148,7 +147,6 @@ When you run the program, you can first check the mesh that was created by Gmsh 
 
     Figure 2: Mesh created by Gmsh
 
-|
 
 The phase field module is ON in this model.
 
@@ -159,7 +157,6 @@ The phase field module is ON in this model.
 
     Figure 3: Global modules
 
-|
 
 Material properties you set on step 2.3 will be shown on the screen. You can confirm it while the program just starts to run.
 
@@ -170,7 +167,6 @@ Material properties you set on step 2.3 will be shown on the screen. You can con
 
     Figure 4: Check the material assignment from command window
 
-|
 
 
 ==================================

@@ -208,7 +208,6 @@ When you run the program, you can first check the mesh that was created by Gmsh 
 
     Figure 2: Mesh created by Gmsh
 
-|
 
 The thermal module is ON in this model.
 
@@ -219,7 +218,6 @@ The thermal module is ON in this model.
 
     Figure 3: Global modules
 
-|
 
 Material properties you set on step 2.3 will be shown on the screen. You can confirm it while the program just starts to run.
 
@@ -230,7 +228,6 @@ Material properties you set on step 2.3 will be shown on the screen. You can con
 
     Figure 4: Check the material assignment from command window
 
-|
 
 Furthermore, node boundaries are shown at the header of the program.
 
@@ -241,7 +238,6 @@ Furthermore, node boundaries are shown at the header of the program.
 
     Figure 5: Check the boundary information from command window   
 
-|
 
 ==================================
 4 Results

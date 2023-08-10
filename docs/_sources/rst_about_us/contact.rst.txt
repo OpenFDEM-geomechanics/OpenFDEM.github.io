@@ -44,21 +44,12 @@ Bio:
  a free finite and discrete element kernel with object-oriented architecture for solving multiscale, 
  multiphase and multiphysics (3M) problems that operates on various platforms.
 
-.. raw:: html
-
-   <div style="height: 5px;"></div>
 
 Current PhD students for solver
 -----------------------------
-.. raw:: html
-
-   <div style="height: 5px;"></div>
 
 Wang Ben (blast solver) – Institute of Rock and Soil Mechanics, Chinese Academy of Sciences
 
-.. raw:: html
-
-   <div style="height: 5px;"></div>
 
 Supporting packages developers
 -----------------------------
@@ -66,12 +57,12 @@ Supporting packages developers
 
    <div style="height: 5px;"></div>
 
-Dr Qi Zhao - The Hong Kong Polytechnic University, Architecture Design
+- Dr Qi Zhao - The Hong Kong Polytechnic University, Architecture Design
 
-Katia Ossetchkina – University of Toronto, Documentation and Website
+- Katia Ossetchkina – University of Toronto, Documentation and Website
 
-Grace Hu - University of Toronto, Documentation and Website
+- Grace Hu - University of Toronto, Documentation and Website
 
-Earl Magsipoc - University of Toronto, Graphical user interface designing
+- Earl Magsipoc - University of Toronto, Graphical user interface designing
 
-Dr Aly Abdelaziz - University of Toronto, Postprocessing and data processing
+- Dr Aly Abdelaziz - University of Toronto, Postprocessing and data processing

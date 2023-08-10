@@ -12,8 +12,6 @@ rock sample is realized by contacts.
 
     Figure 1: Geometry of the uniaxial compression strength test
 
-|
-
 ==================================
 1 Main Steps
 ==================================
@@ -152,7 +150,6 @@ The material properties of the rock is shown as the table below:
 +---------------------------------------------+------------------------+
 
 
-
 .. seealso::
     Check :doc:`element materal<../rst_user_guide/Material/of.mat.element>`, :doc:`cohesive materal<../rst_user_guide/Material/of.mat.cohesive>`, :doc:`contact materal<../rst_user_guide/Material/of.mat.contact>` to see more materials.
 
@@ -219,7 +216,6 @@ When you run the program, you can first check the mesh that was created by Gmsh 
 
     Figure 2: Mesh created by Gmsh
 
-|
 
 The mesh is using triangle elements.
 
@@ -230,7 +226,6 @@ The mesh is using triangle elements.
 
     Figure 3: Check the mesh setting from command window
 
-|
 
 Material properties you set on step 2.3 will be shown on the screen. You can confirm it while the program just starts to run.
 
@@ -241,7 +236,6 @@ Material properties you set on step 2.3 will be shown on the screen. You can con
 
     Figure 4: Check the material assignment from command window
 
-|
 
 Furthermore, node boundaries are shown at the header of the program.
 
@@ -252,7 +246,6 @@ Furthermore, node boundaries are shown at the header of the program.
 
     Figure 5: Check the boundary information from command window   
 
-|
 
 Global timestep is shown here.
 
@@ -263,7 +256,6 @@ Global timestep is shown here.
 
     Figure 6: Check the timesteps from command window   
 
-|
 
 Start to run the program. Results are logged for every 2000 steps.
 
@@ -274,7 +266,7 @@ Start to run the program. Results are logged for every 2000 steps.
 
     Figure 7: Start to run the program
 
-|
+
 
 ==================================
 4 Results

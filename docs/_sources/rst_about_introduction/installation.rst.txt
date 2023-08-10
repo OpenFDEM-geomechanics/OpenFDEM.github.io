@@ -17,7 +17,7 @@ Optional Packages
 - ``CUDA`` - package for GPU parallelization
 - ``PETSc`` (>= version 3.13) - portable, extensible toolkit for scientific computation
 - ``SLEPc`` - scalable library for eigenvalue problem computations
-- ``BLAS`` - standard building blocks for performing basic vector and matrix operations
+- ``BLAS/LAPACK`` - optimizes linear algebra kernels
 - ``doxygen`` - documentation system for automatic generating reference manual from the source code
 - ``Sphinx`` - documentation generator or a tool that translates a set of plain text source files into various output formats, automatically producing cross-references, indices, etc.
 
@@ -27,8 +27,7 @@ Implicit Static/Non-Linear Solvers
 To use the implicit static or nonlinear solvers, at least one of the following libraries is required:
 
 - ``PETSc`` - portable, extensible toolkit for scientific computation (if ``PETSC`` installed, ``LAPACK`` and ``BLAS`` can be ignored)
-- ``LAPACK`` - a standard software library for numerical linear algebra
-- ``BLAS`` - standard building blocks for performing basic vector and matrix operations
+- ``BLAS/LAPACK`` - a standard software library for numerical linear algebra
 
 For Python interface
 -------------------------

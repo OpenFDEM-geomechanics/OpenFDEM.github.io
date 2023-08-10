@@ -349,11 +349,11 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="tutorial2_UCS_with_Gmsh.html">Create model from imported mesh</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial3_UCS_Test_with_Quadrangle_Elements.html">How to use higher-order element</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial4_BD_Test.html">Quick start with Brazilian disc test</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial5_In_Situ_Stress.html">Tunnel excavation under <cite>In-situ</cite> stress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial5_In_Situ_Stress.html">Tunnel excavation under <cite>in-situ</cite> stress</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial6_Hydro_Seepage.html">Water flowing in rock dam - seepage flow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial7_Hydro_Fracture_Flow.html">Water flowing in rock dam - fracture flow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial8_Thermal_Flux.html">Thermal flux transportation in a bar</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial9_GBM.html">Grain-based model (GBM), interface with <code class="docutils literal notranslate"><span class="pre">Neper</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial9_GBM.html">Grain-based model (GBM), interface with Neper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial10_Phase_Field.html">Phase Field</a></li>
 </ul>
 </li>
@@ -431,9 +431,6 @@ rock sample is realized by contacts.</p>
 <p><span class="caption-text">Figure 1: Geometry of the uniaxial compression strength test</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <section id="main-steps">
 <h2>1 Main Steps<a class="headerlink" href="#main-steps" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
@@ -680,9 +677,6 @@ is always a necessary for the explict integration. User-defined timestep is allo
 <p><span class="caption-text">Figure 2: Mesh created by Gmsh</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>The mesh is using triangle elements.</p>
 <figure class="align-center" id="id3">
 <a class="reference internal image-reference" href="../_images/UCS_T3.png"><img alt="Triangle elements" src="../_images/UCS_T3.png" style="width: 576.0px; height: 220.8px;" /></a>
@@ -690,9 +684,6 @@ is always a necessary for the explict integration. User-defined timestep is allo
 <p><span class="caption-text">Figure 3: Check the mesh setting from command window</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Material properties you set on step 2.3 will be shown on the screen. You can confirm it while the program just starts to run.</p>
 <figure class="align-center" id="id4">
 <a class="reference internal image-reference" href="../_images/UCS_Material.png"><img alt="Material assignment" src="../_images/UCS_Material.png" style="width: 590.7px; height: 188.10000000000002px;" /></a>
@@ -700,9 +691,6 @@ is always a necessary for the explict integration. User-defined timestep is allo
 <p><span class="caption-text">Figure 4: Check the material assignment from command window</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Furthermore, node boundaries are shown at the header of the program.</p>
 <figure class="align-center" id="id5">
 <a class="reference internal image-reference" href="../_images/UCS_bondaries.PNG"><img alt="Boundary information" src="../_images/UCS_bondaries.PNG" style="width: 590.1500000000001px; height: 101.2px;" /></a>
@@ -710,9 +698,6 @@ is always a necessary for the explict integration. User-defined timestep is allo
 <p><span class="caption-text">Figure 5: Check the boundary information from command window</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Global timestep is shown here.</p>
 <figure class="align-center" id="id6">
 <a class="reference internal image-reference" href="../_images/UCS_timesteps.png"><img alt="Timesteps" src="../_images/UCS_timesteps.png" style="width: 592.35px; height: 68.75px;" /></a>
@@ -720,9 +705,6 @@ is always a necessary for the explict integration. User-defined timestep is allo
 <p><span class="caption-text">Figure 6: Check the timesteps from command window</span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Start to run the program. Results are logged for every 2000 steps.</p>
 <figure class="align-center" id="id7">
 <a class="reference internal image-reference" href="../_images/UCS_run.png"><img alt="Start to run the program" src="../_images/UCS_run.png" style="width: 590.7px; height: 168.3px;" /></a>
@@ -730,9 +712,6 @@ is always a necessary for the explict integration. User-defined timestep is allo
 <p><span class="caption-text">Figure 7: Start to run the program</span><a class="headerlink" href="#id7" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 </section>
 <section id="results">
 <h2>4 Results<a class="headerlink" href="#results" title="Permalink to this heading">#</a></h2>

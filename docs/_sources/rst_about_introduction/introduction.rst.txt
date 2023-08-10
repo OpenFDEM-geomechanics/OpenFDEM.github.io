@@ -1,8 +1,8 @@
 What is OpenFDEM
 ==============================
 
-**OpenFDEM** (an Open-source Hybrid Finite-Discrete Element Method, also Open-source Combined Finite-Discrete Element Method) is a scientific software for the numerical solution of partial differential equations, 
-also open to other coupling of physical problems such as thermal transportation, hydro flowing, fluid dynamics, rigid collision, etc. This open-source library is primarily based on Hybrid Finite-Discrete Element Method, and now
+**OpenFDEM** (Open-source Hybrid Finite-Discrete Element Method, also named Open-source Combined Finite-Discrete Element Method) is a scientific software for the numerical solution of partial differential equations, 
+is also open to other coupling of physical problems such as thermal transportation, hydro flowing, fluid dynamics, rigid collision, etc. This open-source library is primarily based on Hybrid Finite-Discrete Element Method, and now
 is a more general solver, which allows an efficient computation of FEM, DEM, particulate DEM, phase-field and CFD.
 
 General
@@ -32,15 +32,21 @@ or numerical algorithms (explicit and implicit) is possible, as well as the abil
 (``OpenFDEM`` is intended to be a more general FEM/DEM solver compatible with arbitrary scenarios.) Like other general open-source FEM solvers, the most important 
 feature of ``OpenFDEM`` is its standardization and generality, which allows the continuum-discontinuum method to be used with more general scenarios. The limitation of this project is the developers' thoughts, rather than the method itself.
 
-.. figure:: ../../images/Introduction/elementtype.gif
-  :alt: Element Types Gif
+.. figure:: ../../images/Introduction/feature2.svg
+  :alt: FDEM feature  
 
-  OpenFDEM supports 26 element types and 24 materials.
+  OpenFDEM feature
 
 **Highly accurate and reliable** - The kernel provides high-order integration schemes and solving methods to seek more reliable numerical 
 results which are comparable to theoretical solutions. The element type has a maximum order of three to produce the large deformation behavior 
 whithin the entity, and the new kinematic scheme to construct a nonlinear deformation. The Hilber-Hughes-Taylor (HHT) time integration scheme 
 (second-order accuracy) is used for the explicit solver. 
+
+
+.. figure:: ../../images/Introduction/feature.gif
+  :alt: Element Types Gif
+
+  OpenFDEM supports 26 element types and 24 materials.
 
 **Friendly preprocessing interface** - The ``Gmsh`` is implemented to easily create meshes from computer-aided design (CAD), 
 geometry file or third-party commercial software. The built-in commands are accessible to create many basic geometries 
@@ -78,11 +84,11 @@ Furthermore, transgranular fracturing can be realized by element splitting techn
 
   OpenFDEM implements a Voronoi lib and is able to simulate grains directly based on polygonal elements.
 
-**Large material library including the state-of-the-art models for phase field of quasi-brittle materials and rich element library** - currently, 
+**Large material library** - currently, 
 ``OpenFDEM`` supports 17 element materials (including elastic, hyperelastic, plastic, damage, nonlocal, viscous and phas—field models), 7 cohesive materials (spanning static, dynamic and fatigue problems), 
 and 6 contact models (including Mohr-coulomb friction, hertz contact, rate friction, rough dilation shear law and so on). 
 
-.. figure:: ../../images/Introduction/feature.png
+.. figure:: ../../images/Introduction/feature.svg
   :alt: New material library
 
   New material library in OpenFDEM.
@@ -90,7 +96,7 @@ and 6 contact models (including Mohr-coulomb friction, hertz contact, rate frict
 .. figure:: ../../images/Introduction/globalAMRPhase.gif
   :alt: Phase field library
 
-  Phasefield module in OpenFDEM.
+  Phasefield module with adaptive mesh refinement in OpenFDEM.
 
 **Advanced analysis solvers** - Linear dynamic solver (implicit and explicit), linear static solver (PETSC), eigenvalue problem (SLEPc), 
 and nonlinear dynamic solver (explicit) are applicable for different problems, the implicit solver currently can be run on Linux-like OS.
@@ -113,6 +119,7 @@ The realistic particles can be rigid or deformable. The breakage of the particle
 
 .. figure:: ../../images/Introduction/landslide.gif
   :alt: landslide gif 
+  :align: left
   
   Debris flow of rigid particles due to gravity (left) and debris flow of irregular deformable fragments due to gravity (right, .stl file from Itasca).
 
@@ -132,15 +139,12 @@ Fluid Dynamic Module
 
 **Element Library** - triangle, quadratic triangle, quadrilateral and quadratic quadrilateral element types are supported for Newtonian fluid and Bingham fluid.
 
-.. figure:: ../../images/Introduction/Hydraulic.gif
-  :alt: Fluid injection in fractured rock block.  
-  
-  Fluid injection in fractured rock block.
 
-.. figure:: ../../images/Introduction/tube.gif
-  :alt: Water flowing in a tube using CFD in hydro module. 
+.. figure:: ../../images/Introduction/water.gif
+  :alt: Fluid injection in fractured rock block.  
+  :scale: 25%
   
-  Water flowing in a tube using CFD in hydro module.
+  Fluid injection in fractured rock block (left),  Water flowing in a tube using CFD in hydro module (right)
 
 **Boundary Types** - water level, pore pressure, flow rate, steady flow and impermeable boundary conditions are supported in hydro module.
 

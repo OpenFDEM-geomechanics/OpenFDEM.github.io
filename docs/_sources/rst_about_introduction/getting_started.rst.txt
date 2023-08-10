@@ -1,35 +1,283 @@
 Getting started
 ===========================
 
-This is the source code of C/C++ based OpenFDEM project developed by Dr. Xiaofeng Li, 
-since 2017. This project is not limited to an FDEM solver for continuum-discontinuum problems, 
-but is also capable of solving particulate DEM, material point method and phasefield problems.
+***********
+Source Code
+***********
 
-The project can be complied by Visual Studio (> 2015) and compatible with Windows 7, 10 or Linux-like systems.
+The OpenFDEM source code is available to obtain from the `OpenFDEM GitHub repository <http://geogroup.utoronto.ca:9191/gitlab/xiaofeng.li/openfdem_solver>`_.  GitHub is a platform and cloud-based service for software development and version control by ``Git``. 
+It lets you and others work together on this project from anywhere.
+But in the first stage, the source code is only open to collaborating partners before some benchmark papers are published. 
+Trial of source code is accessible on request, contact the developer `Dr. Xiaofeng Li <xfli@whrsm.ac.cn>`_ to get the invitation to this repository.
 
-Tutorial examples can be found in ``..src\test\..``. The main file is located at ``src\solve\openfdem.cpp``. OpenFDEM is run by
-parsing the input file. 
 
-General steps to run OpenFDEM models:
+.. note::
 
-1. Open ``.sln`` project in ``\openfdem src\of\OpenFDEM\OpenFDEM.sln`` by your local Visual Studio software.
+   If you plan on collaborating or using OpenFDEM as your base code it is highly recommended that you frok this repository to your own account and work on it there. 
+   
+   **NEVER** push your local code to the master branch. The master branch of OpenFDEM is the stable branch that will only be updated after all tests are passing.
 
-2. Compile the project in Visual Studio  from the ``src\solve\openfdem.cpp`` main file.
 
-3. The executable code should be in ``x64\Release``(or ``Debug``), be sure to keep the ``.dll`` files in the same folder with ``.exe`` file.
+.. warning::
 
-4. Drag the ``.of`` file into the ``.exe`` software then the model will starts to run, or use ``openfdem example.of`` in terminal to run a model.
+   Only pull requests from your own fork to the main repository will be considered and they will only be considered if there are **NO CONFLICTS**. 
 
-Source Code Download
----------------------
-The source code is hosted on the University of Toronto Gitlab: `OpenFDEM Gitlab`_.
+   Push requests which cause **CONFLICTS** will be rejected out of hand.   
 
-.. _OpenFDEM Gitlab: http://geogroup.utoronto.ca:9191/gitlab/xiaofeng.li/openfdem_solver 
 
-System Requirements
----------------------
 
-- Windows x64
-- Visual Studio (> 2015)
+********************
+Building Application
+********************
 
-All external dependencies are included in the OpenFDEM download.
+The OpenFDEM projects are built by `CMake <https://cmake.org/>`_, an extensible open-source system that manages the build system. It provides 
+a standard and convenient build process cross various operating systems: Windows, MacOS and different version of Linux. 
+CMake needs to be installed on your system. For it to work, other applications such as C, C++ and Fortran compilers (if you want to complie LACPACK yourself) need to be also installed.
+
+
+.. note::
+   
+   Most code instructions below are run from a **Console** application. Type **CDM** in the Windows search. 
+
+
+Microsoft Windows 10
+**********
+
+Software Requirements
+^^^^^^^^^^^^^^^^^^^^^
+
+For Windows 10 the user must have the following applications installed on their computer: CMake, Visual Studio (>= Visual Studio 2019, SDK should supports C++ 20):
+
+.. note::
+
+    Installation of PETSc on Windows makes the developer headache, You can uncheck  ``Static Solver`` in CMakeList or use ``BLAS/LAPACK`` instead. If you insist on trying nonlinear static solver and compiling PETSC on Windows OS, more information can be found from 
+    `PETSc Document <https://petsc.org/release/install/windows/>`_ , how to use
+
+    - `MSYS2 <https://www.msys2.org>`__ or
+
+    - Microsoft Windows Subsystem for Linux 2 (`WLS2 <https://docs.microsoft.com/en-us/windows/wsl/install-win10>`__) 
+
+    to install PETSc.
+
+Obtaining OpenFDEM Source Code       
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To obtain the source code, from a terminal **cd** to the directory you want to store OpenFDEM and then type the following:
+
+.. code::
+
+    export BASEDIR=~/openfdem
+    mkdir -p $BASEDIR
+    cd $BASEDIR
+    git clone https://github.com/OpenFDEM-geomechanics/OpenFDEM.git
+    cd openfdem
+    git checkout master
+
+
+Building the OpenFDEM
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Go to the folder that contains the OpenFDEM folder and issue the following:
+
+.. code::
+
+    mkdir build 
+    cd build
+    cmake ..
+    cmake --build . -j$(nproc) 
+
+When completed the executables (OpenSees, OpenSeesMP, and OpenSeesMP) are located in the build/bin folder and the python module (opensees.pyd) is located in the build/lib folder.
+	 
+
+
+MacOS
+*****
+
+Software Requirements
+^^^^^^^^^^^^^^^^^^^^^
+
+For MacOS the user must have the following applications installed on their computer: xcode command line tools, brew, cmake, gcc, gfortran, python, and open-mpi. All the applications are installed via the command line. Some of these you can skip as you may already have them installed.
+
+1. **XCODE Command Line Tools**: To make Apple Clang and git available, type the following in a terminal application:
+
+.. code:: 
+
+    xcode-select install
+
+.. note::
+   
+   #. if `xcode-select: error: command line tools are already installed, use "Software Update" to install updates` appears, skip because it's already installed.
+      
+   #. if `xcode-select: error: command line tools are already installed, use "Software Update" to install updates` appears, skip because it's already installed.
+
+2. **brew**: To install the HomeBrew package manager, type the following in a terminal window:
+
+.. code::
+
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)
+
+
+3. **cmake, gfortran, python & open-mpi**. Now we will use brew to install these applications. Again from the command line type:
+   
+
+.. code::
+    
+    brew install cmake
+    brew install gcc
+    brew install open-mpi
+    brew install scalapack
+    brew install python@3.9
+
+    git clone https://github.com/mumps.git
+    cd mumps
+    mkdir build
+    cd build
+    cmake .. -Darith=d
+    cmake --build . --config Release --parallel 4
+    cd ..
+    
+Obtaining the Source Code       
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To obtain the source code, from a terminal **cd** to the directory you want to store OpenFDEM and then type the following:
+
+.. code::
+
+    export BASEDIR=~/openfdem
+    mkdir -p $BASEDIR
+    cd $BASEDIR
+    git clone https://github.com/OpenFDEM-geomechanics/OpenFDEM.git
+    cd openfdem
+    git checkout master
+
+
+Building the OpenFDEM
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+With everything installed the build process is somehwat simple! Again from a terminal window:
+
+.. code::
+
+    cd openfdem
+    git pull
+    mkdir build
+    cd build
+    conan install .. --build missing
+    cmake .. -DMUMPS_DIR=$PWD/../../mumps/build -DOPENMPI=TRUE -DSCALAPACK_LIBRARIES=/usr/local/Cellar/scalapack/2.2.0_1/lib/libscalapack.dylib
+    cmake --build . --config Release 
+
+      
+Ubuntu
+******
+
+Software Requirements
+^^^^^^^^^^^^^^^^^^^^^
+
+1. **Needed Applications and Libraries**: For Ubuntu, the user must have a number of packages installed on their system. These can be installed following commands issued in a terminal window.
+
+.. code::
+
+    >>>sudo apt-get update      
+    sudo apt install cmake
+    sudo apt install gcc g++ gfortran
+    sudo apt install python3-pip
+    sudo apt install liblapack-dev
+    sudo apt install libopenmpi-dev
+    sudo apt install libatlas-base-dev
+    sudo apt install libeigen3-dev
+    sudo apt install petsc-dev
+
+    git clone https://github.com/mumps.git
+    cd mumps
+    mkdir build
+    cd build
+    cmake .. -Darith=d
+    cmake --build . --config Release --parallel 4
+    make
+    sudo make install
+      
+
+Obtaining the Source Code
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To obtain the source code, from a terminal **cd** to the directory you want to store OpenFDEM and then type the following:
+
+.. code::
+
+    export BASEDIR=~/openfdem
+    mkdir -p $BASEDIR
+    cd $BASEDIR
+    git clone https://github.com/OpenFDEM-geomechanics/OpenFDEM.git
+    cd openfdem
+    git checkout master
+
+Building the OpenSees Applications
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+With everything installed the build process is somehwat simple! Again from a terminal window enter the following commands:
+
+.. code::
+
+    cd openfdem
+    git pull
+    mkdir build
+    cd build
+    conan install .. --build missing
+    cmake .. -DMUMPS_DIR=$PWD/../../mumps/build -DOPENMPI=TRUE -DSCALAPACK_LIBRARIES=/usr/local/Cellar/scalapack/2.2.0_1/lib/libscalapack.dylib
+    cmake --build . --config Release 
+
+.. note::
+
+   1. If you have more than **4** cores available, you can use the extra cores by changing the **4** value!      
+
+
+
+********************
+Run an Example
+********************
+
+OpenFDEM is command-driven software, and should be run using command lines with input arguments by specifying the path. The console will print out the available options when run without any option. Generally, there are several ways to run your model as described in this section.
+
+Method one
+****************
+
+Use **WIN + R** from any screen to bring up the command prompt console. Int the console input the path of the OpenFDEM installation and the folder where your input file (should has the suffix ``.of) is stored, as follows:
+
+.. code::
+
+  C:\[The path you installed OpenFDEM]\OpenFDEM -in E:\[the path you put your input file].[runfilename].of
+ 
+If you open the command prompt console in the folder where you saved the ``.of`` file, generally, you can shorten the path in front of your input file, as follows:
+  
+.. code::
+
+    C:\[The path you installed OpenFDEM]\OpenFDEM -in [runfilename].of
+ 
+Moreover, aAfter OpenFDEM installation on your computer, the path will be added to PATH by default. You can check this by typing ``openfdem`` in the command prompt console. If the home page of OpenFDEM appears, it means OpenFDEM is successfully installed. If this is successful, then the command prompt 
+  
+.. code::
+
+    OpenFDEM -in [runfilename].of
+ 
+You can also add the OpenFDEM folder into the default path by following the instruction here: https://stackoverflow.com/questions/44272416/how-to-add-a-folder-to-path-environment-variable-in-windows-10-with-screensho. 
+
+Method two
+************
+
+Similar to the method mentioned above, you can omit the keywords of ``-in`` and change the command as
+
+.. code::
+
+    OpenFDEM [runfilename].of
+	
+Method three
+****************
+
+You can create a shortcut of ``OpenFDEM.exe`` from the installed folder, and copy the shortcut to the folder where you put your ``.of`` file. Then, drag the input ``.of`` file directly into that shortcut. The model will run automatically. 
+	
+Method four
+********************
+	
+You can use the ``.bat`` to quickly run your model on Windows OS. There is a sample template ``runOpenfdem.bat`` in the example folder. You can copy this file into the same folder of your input file ``.of``, and edit the file to change the path (using textbook editing tools like text editor or NotePad++) of the OpenFDEM (line 4) and your input file name (line 7). Save the file and then run (doubel click) the ``.bat`` file. This should run the model whose path is saved in the ``.bat`` file.
+
+If you want to create your own examples, you can directly create a copy of the folder and modify it on the existing ``.of`` files or ``.bat`` files.

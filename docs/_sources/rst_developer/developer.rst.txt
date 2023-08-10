@@ -5,5 +5,17 @@ Developer Document
    :maxdepth: 1
 
    commonclass
+   blastclass
+   contactclass
    geometryclass
    solidclass
+   hydroclass
+   iohelperclass
+   meshclass
+   mpmclass
+   particlesclass
+   phasefieldclass
+   solverclass
+   thermalclass
+   voronoiclass       
+   

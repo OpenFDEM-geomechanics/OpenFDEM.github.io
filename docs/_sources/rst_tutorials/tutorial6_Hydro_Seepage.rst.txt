@@ -1,4 +1,4 @@
-Water flowing in rock dam - seepage flow
+Water flowing in rock dam: seepage flow
 ########################################
 Tutorial 6 and 7 will present the modelling to solve hydraulic fracture on a dam model in both finite element method (FEM) and finite-discrete element method (FDEM). 
 
@@ -10,7 +10,6 @@ Tutorial 6 and 7 will present the modelling to solve hydraulic fracture on a dam
 
     Figure 1: Geometry of a Dam Model
 
-|
 
 ==================================
 1 Main Steps
@@ -171,7 +170,6 @@ Hydro module and matrix flow module are on to model the hydro seepage.
 
     Figure 2: Applied Modules
 
-|
 Hydro material information are included in the modeling.
 
 .. figure:: ../../images/Command/Hydro_Fracture_Material.PNG
@@ -181,7 +179,6 @@ Hydro material information are included in the modeling.
 
     Figure 3: Hydro Materials
 
-|
 Hydro boundary conditions.
 
 .. figure:: ../../images/Command/Hydro_BC.PNG
@@ -191,7 +188,6 @@ Hydro boundary conditions.
 
     Figure 4: Hydro Boundary Conditions
 
-|
 
 ==================================
 4 Results

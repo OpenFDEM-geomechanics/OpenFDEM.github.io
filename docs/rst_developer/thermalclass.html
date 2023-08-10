@@ -1,0 +1,1514 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Thermal flux class &#8212; &lt;strong&gt;OpenFDEM&lt;/strong&gt;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'rst_developer/thermalclass';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Voronoi tessellation class" href="voronoiclass.html" />
+    <link rel="prev" title="Solver class" href="solverclass.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">Call for papers for <a href='https://www.sciencedirect.com/journal/journal-of-rock-mechanics-and-geotechnical-engineering'>Journal of Rock Mechanics and Geotechnical Engineering!</a></div>
+  </div>
+
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title"><strong>OpenFDEM</strong></p>
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_about_introduction/index.html">
+                        Introduction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_theory/index.html">
+                        Theory
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_tutorials/index.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../rst_user_guide/index.html">
+                        User Manual
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_about_us/index.html">
+                        About Us
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_appendix/index.html">
+                        Appendix
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_about_introduction/index.html">
+                        Introduction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_theory/index.html">
+                        Theory
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_tutorials/index.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../rst_user_guide/index.html">
+                        User Manual
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_about_us/index.html">
+                        About Us
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_appendix/index.html">
+                        Appendix
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rst_user_guide/commandindex.html">Command  reference</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/general.html">General</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.console.interval.html">of.console.interval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.damp.global.html">of.damp.global</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.finalize.html">of.finalize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.import.html">of.import</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.import.table.html">of.import.table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.log.interval.html">of.log.interval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.new.html">of.new</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.restore.html">of.restore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.save.html">of.save</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.save.FEM.html">of.save.FEM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.config.html">of.set.config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.contact.html">of.set.contact</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.debug.html">of.set.debug</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.GBM.html">of.set.GBM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.gravity.html">of.set.gravity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.large.html">of.set.large</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.massscale.html">of.set.massscale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.module.html">of.set.module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.omp.html">of.set.omp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.result.html">of.set.result</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.rgbm.html">of.set.rgbm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.solve.html">of.solve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.step.html">of.step</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.timestep.html">of.timestep</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/blast.html">Blast</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Blast/of.blast.position.html">of.blast.position</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/boundary.html">Boundary</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.force.html">of.boundary.nodal.force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.velocity.html">of.boundary.nodal.velocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.inivelocity.html">of.boundary.nodal.inivelocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.acceleration.html">of.boundary.nodal.acceleration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.clear.html">of.boundary.nodal.clear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.force.html">of.boundary.edge.force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.velocity.html">of.boundary.edge.velocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.inivelocity.html">of.boundary.edge.inivelocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.acceleration.html">of.boundary.edge.acceleration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.clear.html">of.boundary.edge.clear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.stress.html">of.boundary.element.stress</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.stress.xgrad.html">of.boundary.element.stress.xgrad</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.stress.ygrad.html">of.boundary.element.stress.ygrad</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.clear.html">of.boundary.element.clear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.blast.html">of.boundary.blast</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/DFN.html">DFN</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/DFN/of.DFN.connectivity.html">of.DFN.connectivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/DFN/of.DFN.group.html">of.DFN.group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/DFN/of.DFN.cohesive.html">of.DFN.cohesive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/DFN/of.DFN.broken.html">of.DFN.broken</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/FEM.html">FEM</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.coord.html">of.import.FEM.nodal.coord</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.coord0.html">of.import.FEM.nodal.coord0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.velocity.html">of.import.FEM.nodal.velocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.groups.html">of.import.FEM.nodal.groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.edge.groups.html">of.import.FEM.edge.groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.element.groups.html">of.import.FEM.element.groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.element.connectivity.html">of.import.FEM.element.connectivity</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/geometry.html">Geometry</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.square.html">of.geometry.square</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.square.html">of.geometry.cut.square</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.remove.square.html">of.geometry.remove.square</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.circle.html">of.geometry.circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.circle.html">of.geometry.cut.circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.remove.circle.html">of.geometry.remove.circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.ellipse.html">of.geometry.ellipse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.ellipse.html">of.geometry.cut.ellipse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.remove.ellipse.html">of.geometry.remove.ellipse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.polygon.html">of.geometry.polygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.polygon.html">of.geometry.cut.polygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.remove.polygon.html">of.geometry.remove.polygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.table.html">of.geometry.table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.table.html">of.geometry.cut.table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.remove.table.html">of.geometry.remove.table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.domain.html">of.geometry.domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.joint.html">of.geometry.cut.joint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.jset.html">of.geometry.cut.jset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.DFN.html">of.geometry.cut.DFN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.arc.html">of.geometry.cut.arc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.minsize.html">of.geometry.minsize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.minangle.html">of.geometry.minangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.iteration.html">of.geometry.iteration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.group.html">of.geometry.group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.mesh.size.html">of.geometry.mesh.size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.recombine.html">of.geometry.recombine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.mesh.html">of.geometry.mesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.mesh.write.html">of.geometry.mesh.write</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/group.html">Group</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.html">of.group.nodal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.html">of.group.edge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.element.html">of.group.element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.html">of.group.cohelement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.from.element.html">of.group.nodal.from.element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.from.element.html">of.group.edge.from.element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.from.cohelement.html">of.group.edge.from.cohcohelement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.from.dfn.html">of.group.edge.from.dfn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.from.dfn.html">of.group.cohelement.from.dfn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.from.gbm.html">of.group.cohelement.from.gbm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.bool.union.html">of.group.nodal.bool.union</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.bool.intersect.html">of.group.nodal.bool.intersect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.bool.subtract.html">of.group.nodal.bool.subtract</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.bool.union.html">of.group.edge.bool.union</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.bool.intersect.html">of.group.edge.bool.intersect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.bool.subtract.html">of.group.edge.bool.subtract</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.element.bool.union.html">of.group.element.bool.union</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.element.bool.intersect.html">of.group.element.bool.intersect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.element.bool.subtract.html">of.group.element.bool.subtract</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.bool.union.html">of.group.cohelement.bool.union</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.bool.intersect.html">of.group.cohelement.bool.intersect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.bool.subtract.html">of.group.cohelement.bool.subtract</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/mesh.html">Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.insert.html">of.mesh.insert</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.insert.dfn.html">of.mesh.insert.dfn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.voronoi.html">of.mesh.voronoi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.split.html">of.mesh.split</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.bary.html">of.mesh.bary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.RG.html">of.mesh.RG</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.RGB.html">of.mesh.RGB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.NVB.html">of.mesh.NVB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.baryGB.html">of.mesh.baryGB</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/material.html">Material</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.element.html">of.mat.element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.cohesive.html">of.mat.cohesive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.contact.html">of.mat.contact</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.hydro.matrix.html">of.mat.hydro.matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.hydro.fracture.html">of.mat.hydro.fracture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.mpm.fluid.html">of.mat.mpm.fluid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.mpm.solid.html">of.mat.mpm.solid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.hydro.fluid.html">of.mat.hydro.fluid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.hydro.gas.html">of.mat.hydro.gas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.nonlocal.html">of.mat.nonlocal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.thermal.html">of.mat.thermal</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/history.html">History</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.interval.html">of.history.pv.interval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.dynamic.interval.html">of.history.pv.dynamic.interval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.field.html">of.history.pv.field</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.fracture.html">of.history.pv.fracture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.cohesive.html">of.history.pv.cohesive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.damage.html">of.history.pv.damage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.ae.html">of.history.pv.ae</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="developer.html">Developer Document</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="commonclass.html">Common class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blastclass.html">Blast class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contactclass.html">Contact class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometryclass.html">Geometry class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solidclass.html">Solid engine class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hydroclass.html">Hydro transportation class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iohelperclass.html">Input/Output class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meshclass.html">Mesh processing class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpmclass.html">Computational fluid dynamics class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="particlesclass.html">Particulate DEM class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="phasefieldclass.html">Phase field class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solverclass.html">Solver class</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Thermal flux class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voronoiclass.html">Voronoi tessellation class</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../rst_user_guide/index.html" class="nav-link">User Manual</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="developer.html" class="nav-link">Developer Document</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Thermal flux class</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="thermal-flux-class">
+<h1>Thermal flux class<a class="headerlink" href="#thermal-flux-class" title="Permalink to this heading">#</a></h1>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal13HeatAdvectionE">
+<span id="_CPPv3N10ns_thermal13HeatAdvectionE"></span><span id="_CPPv2N10ns_thermal13HeatAdvectionE"></span><span id="ns_thermal::HeatAdvection"></span><span class="target" id="classns__thermal_1_1_heat_advection"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HeatAdvection</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">OpenFdemAbstract</span></span><a class="headerlink" href="#_CPPv4N10ns_thermal13HeatAdvectionE" title="Permalink to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;<a class="reference internal" href="#new__thermal__heat__advection_8h"><span class="std std-ref">new_thermal_heat_advection.h</span></a>&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal13HeatAdvection13HeatAdvectionEv">
+<span id="_CPPv3N10ns_thermal13HeatAdvection13HeatAdvectionEv"></span><span id="_CPPv2N10ns_thermal13HeatAdvection13HeatAdvectionEv"></span><span id="ns_thermal::HeatAdvection::HeatAdvection"></span><span class="target" id="classns__thermal_1_1_heat_advection_1ad1eaa0711704084de3001e124b109ae7"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HeatAdvection</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal13HeatAdvection13HeatAdvectionEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal13HeatAdvectionD0Ev">
+<span id="_CPPv3N10ns_thermal13HeatAdvectionD0Ev"></span><span id="_CPPv2N10ns_thermal13HeatAdvectionD0Ev"></span><span id="ns_thermal::HeatAdvection::~HeatAdvection"></span><span class="target" id="classns__thermal_1_1_heat_advection_1ad34e4ef3b8857de587afe568817244f0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~HeatAdvection</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal13HeatAdvectionD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal13HeatAdvection32computeHeadtAdvectionFluidTensorE7General7Element5Nodal4Edge7Thermal5Hydro8Solidmat">
+<span id="_CPPv3N10ns_thermal13HeatAdvection32computeHeadtAdvectionFluidTensorE7General7Element5Nodal4Edge7Thermal5Hydro8Solidmat"></span><span id="_CPPv2N10ns_thermal13HeatAdvection32computeHeadtAdvectionFluidTensorE7General7Element5Nodal4Edge7Thermal5Hydro8Solidmat"></span><span id="ns_thermal::HeatAdvection::computeHeadtAdvectionFluidTensor__General.Element.Nodal.Edge.Thermal.Hydro.Solidmat"></span><span class="target" id="classns__thermal_1_1_heat_advection_1ab9bf84caf9d446b839196ad1fe85b3cb"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeHeadtAdvectionFluidTensor</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv44Edge" title="Edge"><span class="n"><span class="pre">Edge</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">edge</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span>, <a class="reference internal" href="hydroclass.html#_CPPv45Hydro" title="Hydro"><span class="n"><span class="pre">Hydro</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">hydro</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal13HeatAdvection32computeHeadtAdvectionFluidTensorE7General7Element5Nodal4Edge7Thermal5Hydro8Solidmat" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>compute the equvalient advection tenssor for each element </p>
+<p>\detail q=\frac{1}{2}\rho <em>wC_wq</em>{i}^{w}</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>element</strong> – </p></li>
+<li><p><strong>face</strong> – </p></li>
+<li><p><strong>cohelement</strong> – </p></li>
+<li><p><strong>thermal</strong> – </p></li>
+<li><p><strong>hydro</strong> – </p></li>
+<li><p><strong>solidmat</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal13HeatAdvection47computeFluidHeatAdvectionFluxRateatIntergrationE7General7ElementK3IntK3Int12Intergration7Thermal">
+<span id="_CPPv3N10ns_thermal13HeatAdvection47computeFluidHeatAdvectionFluxRateatIntergrationE7General7ElementK3IntK3Int12Intergration7Thermal"></span><span id="_CPPv2N10ns_thermal13HeatAdvection47computeFluidHeatAdvectionFluxRateatIntergrationE7General7ElementK3IntK3Int12Intergration7Thermal"></span><span id="ns_thermal::HeatAdvection::computeFluidHeatAdvectionFluxRateatIntergration__General.Element.IntC.IntC.Intergration.Thermal"></span><span class="target" id="classns__thermal_1_1_heat_advection_1aa6faa68795f5528c7b601e074e681d0a"></span><a class="reference internal" href="commonclass.html#_CPPv47Vector2" title="Vector2"><span class="n"><span class="pre">Vector2</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeFluidHeatAdvectionFluxRateatIntergration</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="commonclass.html#_CPPv43Int" title="Int"><span class="n"><span class="pre">Int</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">elementindices</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="commonclass.html#_CPPv43Int" title="Int"><span class="n"><span class="pre">Int</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">igauss</span></span>, <span class="n"><span class="pre">Intergration</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">intergration</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal13HeatAdvection47computeFluidHeatAdvectionFluxRateatIntergrationE7General7ElementK3IntK3Int12Intergration7Thermal" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal13HeatAdvection32computeFluidAdvectionThermalFlowE7General5Nodal7Element12Intergration7Thermal">
+<span id="_CPPv3N10ns_thermal13HeatAdvection32computeFluidAdvectionThermalFlowE7General5Nodal7Element12Intergration7Thermal"></span><span id="_CPPv2N10ns_thermal13HeatAdvection32computeFluidAdvectionThermalFlowE7General5Nodal7Element12Intergration7Thermal"></span><span id="ns_thermal::HeatAdvection::computeFluidAdvectionThermalFlow__General.Nodal.Element.Intergration.Thermal"></span><span class="target" id="classns__thermal_1_1_heat_advection_1a7da97f7a4b8549abf97b60df6f2d2303"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeFluidAdvectionThermalFlow</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <span class="n"><span class="pre">Intergration</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">intergration</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal13HeatAdvection32computeFluidAdvectionThermalFlowE7General5Nodal7Element12Intergration7Thermal" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Compute fracture volume. </p>
+<p>\attension The fracture volume is V=\,\,\frac{1}{2}\left( S_{low}+S_{up} \right) o the fracture aperature should be updated before calculate fracture volume</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>face</strong> – </p></li>
+<li><p><strong>cohelement</strong> – </p></li>
+<li><p><strong>hydro</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal13HeatAdvection16HeatAdvectionRunE7Boudary5Nodal7Thermal4Edge5Hydro7Element12Intergration8Solidmat7General10Cohelement">
+<span id="_CPPv3N10ns_thermal13HeatAdvection16HeatAdvectionRunE7Boudary5Nodal7Thermal4Edge5Hydro7Element12Intergration8Solidmat7General10Cohelement"></span><span id="_CPPv2N10ns_thermal13HeatAdvection16HeatAdvectionRunE7Boudary5Nodal7Thermal4Edge5Hydro7Element12Intergration8Solidmat7General10Cohelement"></span><span id="ns_thermal::HeatAdvection::HeatAdvectionRun__Boudary.Nodal.Thermal.Edge.Hydro.Element.Intergration.Solidmat.General.Cohelement"></span><span class="target" id="classns__thermal_1_1_heat_advection_1a79337fd50d715d3d07b7e2848b076a56"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HeatAdvectionRun</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="solverclass.html#_CPPv47Boudary" title="Boudary"><span class="n"><span class="pre">Boudary</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">boudary</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv44Edge" title="Edge"><span class="n"><span class="pre">Edge</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">edge</span></span>, <a class="reference internal" href="hydroclass.html#_CPPv45Hydro" title="Hydro"><span class="n"><span class="pre">Hydro</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">hydro</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <span class="n"><span class="pre">Intergration</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">intergration</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span>, <a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv410Cohelement" title="Cohelement"><span class="n"><span class="pre">Cohelement</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">cohelement</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal13HeatAdvection16HeatAdvectionRunE7Boudary5Nodal7Thermal4Edge5Hydro7Element12Intergration8Solidmat7General10Cohelement" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal14HeatConductionE">
+<span id="_CPPv3N10ns_thermal14HeatConductionE"></span><span id="_CPPv2N10ns_thermal14HeatConductionE"></span><span id="ns_thermal::HeatConduction"></span><span class="target" id="classns__thermal_1_1_heat_conduction"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HeatConduction</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">OpenFdemAbstract</span></span><a class="headerlink" href="#_CPPv4N10ns_thermal14HeatConductionE" title="Permalink to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;<a class="reference internal" href="#new__thermal__heat__conduction_8h"><span class="std std-ref">new_thermal_heat_conduction.h</span></a>&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal14HeatConduction14HeatConductionEv">
+<span id="_CPPv3N10ns_thermal14HeatConduction14HeatConductionEv"></span><span id="_CPPv2N10ns_thermal14HeatConduction14HeatConductionEv"></span><span id="ns_thermal::HeatConduction::HeatConduction"></span><span class="target" id="classns__thermal_1_1_heat_conduction_1ae6fc5d5a52292e5a6830ae6165b84dd4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HeatConduction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal14HeatConduction14HeatConductionEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal14HeatConductionD0Ev">
+<span id="_CPPv3N10ns_thermal14HeatConductionD0Ev"></span><span id="_CPPv2N10ns_thermal14HeatConductionD0Ev"></span><span id="ns_thermal::HeatConduction::~HeatConduction"></span><span class="target" id="classns__thermal_1_1_heat_conduction_1acc5fe08c2b514198642cb1e388c3be25"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~HeatConduction</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal14HeatConductionD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal14HeatConduction10initializeE7General7Boudary5Nodal7Thermal">
+<span id="_CPPv3N10ns_thermal14HeatConduction10initializeE7General7Boudary5Nodal7Thermal"></span><span id="_CPPv2N10ns_thermal14HeatConduction10initializeE7General7Boudary5Nodal7Thermal"></span><span id="ns_thermal::HeatConduction::initialize__General.Boudary.Nodal.Thermal"></span><span class="target" id="classns__thermal_1_1_heat_conduction_1a6fe0109c78efa7dbe8c5ece654f4b72c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">initialize</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solverclass.html#_CPPv47Boudary" title="Boudary"><span class="n"><span class="pre">Boudary</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">boudary</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal14HeatConduction10initializeE7General7Boudary5Nodal7Thermal" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Initialize the fracture flow and fracture volume at hydro knnot. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>boudary</strong> – boudary condition class refference </p></li>
+<li><p><strong>nodal</strong> – nodal class refference </p></li>
+<li><p><strong>hydro</strong> – hydro class refference</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>na </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal14HeatConduction39computeFractureFluidConducitivityTensorE7General5Nodal7Element4Edge7Thermal8Solidmat">
+<span id="_CPPv3N10ns_thermal14HeatConduction39computeFractureFluidConducitivityTensorE7General5Nodal7Element4Edge7Thermal8Solidmat"></span><span id="_CPPv2N10ns_thermal14HeatConduction39computeFractureFluidConducitivityTensorE7General5Nodal7Element4Edge7Thermal8Solidmat"></span><span id="ns_thermal::HeatConduction::computeFractureFluidConducitivityTensor__General.Nodal.Element.Edge.Thermal.Solidmat"></span><span class="target" id="classns__thermal_1_1_heat_conduction_1a9294cb80e246778a613b29b354dcb02c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeFractureFluidConducitivityTensor</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <a class="reference internal" href="solidclass.html#_CPPv44Edge" title="Edge"><span class="n"><span class="pre">Edge</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">edge</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal14HeatConduction39computeFractureFluidConducitivityTensorE7General5Nodal7Element4Edge7Thermal8Solidmat" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Compute the fracture permability tensor for fracture flow. </p>
+<p>\detail The k.ij is assembled from the local permability tensor on each surface of an element according to modified cubic law, the local permability is constructured by the principal values on each local directions in d-s-n plane</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>element</strong> – </p></li>
+<li><p><strong>face</strong> – </p></li>
+<li><p><strong>hydro</strong> – </p></li>
+<li><p><strong>solidmat</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal14HeatConduction44computeFluidConductionFluxRateatIntergrationE7General7ElementK3IntK3Int12Intergration7Thermal">
+<span id="_CPPv3N10ns_thermal14HeatConduction44computeFluidConductionFluxRateatIntergrationE7General7ElementK3IntK3Int12Intergration7Thermal"></span><span id="_CPPv2N10ns_thermal14HeatConduction44computeFluidConductionFluxRateatIntergrationE7General7ElementK3IntK3Int12Intergration7Thermal"></span><span id="ns_thermal::HeatConduction::computeFluidConductionFluxRateatIntergration__General.Element.IntC.IntC.Intergration.Thermal"></span><span class="target" id="classns__thermal_1_1_heat_conduction_1a812a31d4deef4f2725961aa510053d93"></span><a class="reference internal" href="commonclass.html#_CPPv47Vector2" title="Vector2"><span class="n"><span class="pre">Vector2</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeFluidConductionFluxRateatIntergration</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="commonclass.html#_CPPv43Int" title="Int"><span class="n"><span class="pre">Int</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">elementindices</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="commonclass.html#_CPPv43Int" title="Int"><span class="n"><span class="pre">Int</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">igauss</span></span>, <span class="n"><span class="pre">Intergration</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">intergration</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal14HeatConduction44computeFluidConductionFluxRateatIntergrationE7General7ElementK3IntK3Int12Intergration7Thermal" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal14HeatConduction26computeFluidHeatConductionE7General5Nodal7Element12Intergration7Thermal">
+<span id="_CPPv3N10ns_thermal14HeatConduction26computeFluidHeatConductionE7General5Nodal7Element12Intergration7Thermal"></span><span id="_CPPv2N10ns_thermal14HeatConduction26computeFluidHeatConductionE7General5Nodal7Element12Intergration7Thermal"></span><span id="ns_thermal::HeatConduction::computeFluidHeatConduction__General.Nodal.Element.Intergration.Thermal"></span><span class="target" id="classns__thermal_1_1_heat_conduction_1ae97da51937d865419e5577680a1ce379"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeFluidHeatConduction</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <span class="n"><span class="pre">Intergration</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">intergration</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal14HeatConduction26computeFluidHeatConductionE7General5Nodal7Element12Intergration7Thermal" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Compute fracture volume. </p>
+<p>\attension The fracture volume is V=\,\,\frac{1}{2}\left( S_{low}+S_{up} \right) o the fracture aperature should be updated before calculate fracture volume</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>face</strong> – </p></li>
+<li><p><strong>cohelement</strong> – </p></li>
+<li><p><strong>hydro</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal14HeatConduction17HeatConductionRunE7Boudary5Nodal7Thermal7Element12Intergration4Edge8Solidmat7General10Cohelement">
+<span id="_CPPv3N10ns_thermal14HeatConduction17HeatConductionRunE7Boudary5Nodal7Thermal7Element12Intergration4Edge8Solidmat7General10Cohelement"></span><span id="_CPPv2N10ns_thermal14HeatConduction17HeatConductionRunE7Boudary5Nodal7Thermal7Element12Intergration4Edge8Solidmat7General10Cohelement"></span><span id="ns_thermal::HeatConduction::HeatConductionRun__Boudary.Nodal.Thermal.Element.Intergration.Edge.Solidmat.General.Cohelement"></span><span class="target" id="classns__thermal_1_1_heat_conduction_1a1ffbb8c5036ea33b0a120d70628c91b7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HeatConductionRun</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="solverclass.html#_CPPv47Boudary" title="Boudary"><span class="n"><span class="pre">Boudary</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">boudary</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <span class="n"><span class="pre">Intergration</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">intergration</span></span>, <a class="reference internal" href="solidclass.html#_CPPv44Edge" title="Edge"><span class="n"><span class="pre">Edge</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">edge</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span>, <a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv410Cohelement" title="Cohelement"><span class="n"><span class="pre">Cohelement</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">cohelement</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal14HeatConduction17HeatConductionRunE7Boudary5Nodal7Thermal7Element12Intergration4Edge8Solidmat7General10Cohelement" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>compute fracture flow rate at intergration point </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>general</strong> – </p></li>
+<li><p><strong>element</strong> – </p></li>
+<li><p><strong>nodal</strong> – </p></li>
+<li><p><strong>elementindices</strong> – </p></li>
+<li><p><strong>intPoint</strong> – </p></li>
+<li><p><strong>hydro</strong> – </p></li>
+<li><p><strong>solidmat</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>q.i: flow rate vector in each direction </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal12HeatExchangeE">
+<span id="_CPPv3N10ns_thermal12HeatExchangeE"></span><span id="_CPPv2N10ns_thermal12HeatExchangeE"></span><span id="ns_thermal::HeatExchange"></span><span class="target" id="classns__thermal_1_1_heat_exchange"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HeatExchange</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">OpenFdemAbstract</span></span><a class="headerlink" href="#_CPPv4N10ns_thermal12HeatExchangeE" title="Permalink to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;<a class="reference internal" href="#new__thermal__heat__exchange_8h"><span class="std std-ref">new_thermal_heat_exchange.h</span></a>&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal12HeatExchange12HeatExchangeEv">
+<span id="_CPPv3N10ns_thermal12HeatExchange12HeatExchangeEv"></span><span id="_CPPv2N10ns_thermal12HeatExchange12HeatExchangeEv"></span><span id="ns_thermal::HeatExchange::HeatExchange"></span><span class="target" id="classns__thermal_1_1_heat_exchange_1a56d4c6fc4a843eb16986985bde1822a5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HeatExchange</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal12HeatExchange12HeatExchangeEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal12HeatExchangeD0Ev">
+<span id="_CPPv3N10ns_thermal12HeatExchangeD0Ev"></span><span id="_CPPv2N10ns_thermal12HeatExchangeD0Ev"></span><span id="ns_thermal::HeatExchange::~HeatExchange"></span><span class="target" id="classns__thermal_1_1_heat_exchange_1a1d3e3290e7b52f3cc63f7b611a64e50f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~HeatExchange</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal12HeatExchangeD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal12HeatExchange40computeFractureSolidFluidThermalExchangeE7General5Nodal10Cohelement7Thermal8Solidmat">
+<span id="_CPPv3N10ns_thermal12HeatExchange40computeFractureSolidFluidThermalExchangeE7General5Nodal10Cohelement7Thermal8Solidmat"></span><span id="_CPPv2N10ns_thermal12HeatExchange40computeFractureSolidFluidThermalExchangeE7General5Nodal10Cohelement7Thermal8Solidmat"></span><span id="ns_thermal::HeatExchange::computeFractureSolidFluidThermalExchange__General.Nodal.Cohelement.Thermal.Solidmat"></span><span class="target" id="classns__thermal_1_1_heat_exchange_1ab7e00f6f75e27ef6336a6da3ef8a2f39"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeFractureSolidFluidThermalExchange</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv410Cohelement" title="Cohelement"><span class="n"><span class="pre">Cohelement</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">cohelement</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal12HeatExchange40computeFractureSolidFluidThermalExchangeE7General5Nodal10Cohelement7Thermal8Solidmat" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Compute the fracture aperature on surface, the aperature should be updated for broken CZM as well, this function only need to run at the mechanical step. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodal</strong> – </p></li>
+<li><p><strong>face</strong> – </p></li>
+<li><p><strong>cohelement</strong> – </p></li>
+<li><p><strong>hydro</strong> – </p></li>
+<li><p><strong>solidmat</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>na </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal12HeatExchange14assembleCavityE7Thermal7General">
+<span id="_CPPv3N10ns_thermal12HeatExchange14assembleCavityE7Thermal7General"></span><span id="_CPPv2N10ns_thermal12HeatExchange14assembleCavityE7Thermal7General"></span><span id="ns_thermal::HeatExchange::assembleCavity__Thermal.General"></span><span class="target" id="classns__thermal_1_1_heat_exchange_1ab4530d6b1b8dd4d208c5356e716c9ea4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">assembleCavity</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span>, <a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal12HeatExchange14assembleCavityE7Thermal7General" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal17MatrixBaseThermalE">
+<span id="_CPPv3N10ns_thermal17MatrixBaseThermalE"></span><span id="_CPPv2N10ns_thermal17MatrixBaseThermalE"></span><span id="ns_thermal::MatrixBaseThermal"></span><span class="target" id="classns__thermal_1_1_matrix_base_thermal"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MatrixBaseThermal</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">OpenFdemAbstract</span></span><a class="headerlink" href="#_CPPv4N10ns_thermal17MatrixBaseThermalE" title="Permalink to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;<a class="reference internal" href="#new__thermal__matrix__flow_8h"><span class="std std-ref">new_thermal_matrix_flow.h</span></a>&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal17MatrixBaseThermal17MatrixBaseThermalEv">
+<span id="_CPPv3N10ns_thermal17MatrixBaseThermal17MatrixBaseThermalEv"></span><span id="_CPPv2N10ns_thermal17MatrixBaseThermal17MatrixBaseThermalEv"></span><span id="ns_thermal::MatrixBaseThermal::MatrixBaseThermal"></span><span class="target" id="classns__thermal_1_1_matrix_base_thermal_1a5a5f8b3b8ecc60b2c48a30ba119321dc"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MatrixBaseThermal</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal17MatrixBaseThermal17MatrixBaseThermalEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal17MatrixBaseThermalD0Ev">
+<span id="_CPPv3N10ns_thermal17MatrixBaseThermalD0Ev"></span><span id="_CPPv2N10ns_thermal17MatrixBaseThermalD0Ev"></span><span id="ns_thermal::MatrixBaseThermal::~MatrixBaseThermal"></span><span class="target" id="classns__thermal_1_1_matrix_base_thermal_1a0363102f404d3d9c53ec2cced838f1af"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~MatrixBaseThermal</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal17MatrixBaseThermalD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal17MatrixBaseThermal10initializeE7General7Boudary5Nodal7Thermal">
+<span id="_CPPv3N10ns_thermal17MatrixBaseThermal10initializeE7General7Boudary5Nodal7Thermal"></span><span id="_CPPv2N10ns_thermal17MatrixBaseThermal10initializeE7General7Boudary5Nodal7Thermal"></span><span id="ns_thermal::MatrixBaseThermal::initialize__General.Boudary.Nodal.Thermal"></span><span class="target" id="classns__thermal_1_1_matrix_base_thermal_1ad467a22df3c637f63f1d9d4c9e600790"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">initialize</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solverclass.html#_CPPv47Boudary" title="Boudary"><span class="n"><span class="pre">Boudary</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">boudary</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal17MatrixBaseThermal10initializeE7General7Boudary5Nodal7Thermal" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Initialize the fracture flow and fracture volume at hydro knnot. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>boudary</strong> – boudary condition class refference </p></li>
+<li><p><strong>nodal</strong> – nodal class refference </p></li>
+<li><p><strong>hydro</strong> – hydro class refference</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>na </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal17MatrixBaseThermal30computeFractureThermalExchangeE7General5Nodal10Cohelement7Thermal8Solidmat">
+<span id="_CPPv3N10ns_thermal17MatrixBaseThermal30computeFractureThermalExchangeE7General5Nodal10Cohelement7Thermal8Solidmat"></span><span id="_CPPv2N10ns_thermal17MatrixBaseThermal30computeFractureThermalExchangeE7General5Nodal10Cohelement7Thermal8Solidmat"></span><span id="ns_thermal::MatrixBaseThermal::computeFractureThermalExchange__General.Nodal.Cohelement.Thermal.Solidmat"></span><span class="target" id="classns__thermal_1_1_matrix_base_thermal_1ab0ca0e2b4c4c5dfbb34830dade6f9936"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeFractureThermalExchange</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv410Cohelement" title="Cohelement"><span class="n"><span class="pre">Cohelement</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">cohelement</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal17MatrixBaseThermal30computeFractureThermalExchangeE7General5Nodal10Cohelement7Thermal8Solidmat" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Compute the fracture aperature on surface, the aperature should be updated for broken CZM as well, this function only need to run at the mechanical step. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodal</strong> – </p></li>
+<li><p><strong>face</strong> – </p></li>
+<li><p><strong>cohelement</strong> – </p></li>
+<li><p><strong>hydro</strong> – </p></li>
+<li><p><strong>solidmat</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>na </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal17MatrixBaseThermal35computeMatrixFluxRateatIntergrationE7General7Element5NodalK3IntK3Int12Intergration7Thermal8Solidmat">
+<span id="_CPPv3N10ns_thermal17MatrixBaseThermal35computeMatrixFluxRateatIntergrationE7General7Element5NodalK3IntK3Int12Intergration7Thermal8Solidmat"></span><span id="_CPPv2N10ns_thermal17MatrixBaseThermal35computeMatrixFluxRateatIntergrationE7General7Element5NodalK3IntK3Int12Intergration7Thermal8Solidmat"></span><span id="ns_thermal::MatrixBaseThermal::computeMatrixFluxRateatIntergration__General.Element.Nodal.IntC.IntC.Intergration.Thermal.Solidmat"></span><span class="target" id="classns__thermal_1_1_matrix_base_thermal_1aba8c4dd944b3248bb5f3a4fe15a3397e"></span><a class="reference internal" href="commonclass.html#_CPPv47Vector2" title="Vector2"><span class="n"><span class="pre">Vector2</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeMatrixFluxRateatIntergration</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="commonclass.html#_CPPv43Int" title="Int"><span class="n"><span class="pre">Int</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">elementindices</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="commonclass.html#_CPPv43Int" title="Int"><span class="n"><span class="pre">Int</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">igauss</span></span>, <span class="n"><span class="pre">Intergration</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">intergration</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal17MatrixBaseThermal35computeMatrixFluxRateatIntergrationE7General7Element5NodalK3IntK3Int12Intergration7Thermal8Solidmat" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal17MatrixBaseThermal24computeMatrixThermalFlowE7General5Nodal7Element12Intergration7Thermal8Solidmat">
+<span id="_CPPv3N10ns_thermal17MatrixBaseThermal24computeMatrixThermalFlowE7General5Nodal7Element12Intergration7Thermal8Solidmat"></span><span id="_CPPv2N10ns_thermal17MatrixBaseThermal24computeMatrixThermalFlowE7General5Nodal7Element12Intergration7Thermal8Solidmat"></span><span id="ns_thermal::MatrixBaseThermal::computeMatrixThermalFlow__General.Nodal.Element.Intergration.Thermal.Solidmat"></span><span class="target" id="classns__thermal_1_1_matrix_base_thermal_1a09ab782dfc3c4f9fbea80324563f11bc"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeMatrixThermalFlow</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <span class="n"><span class="pre">Intergration</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">intergration</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal17MatrixBaseThermal24computeMatrixThermalFlowE7General5Nodal7Element12Intergration7Thermal8Solidmat" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Compute fracture volume. </p>
+<p>\attension The fracture volume is V=\,\,\frac{1}{2}\left( S_{low}+S_{up} \right) o the fracture aperature should be updated before calculate fracture volume</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>face</strong> – </p></li>
+<li><p><strong>cohelement</strong> – </p></li>
+<li><p><strong>hydro</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal17MatrixBaseThermal19updateMatrixThermalE5Nodal7Thermal7General">
+<span id="_CPPv3N10ns_thermal17MatrixBaseThermal19updateMatrixThermalE5Nodal7Thermal7General"></span><span id="_CPPv2N10ns_thermal17MatrixBaseThermal19updateMatrixThermalE5Nodal7Thermal7General"></span><span id="ns_thermal::MatrixBaseThermal::updateMatrixThermal__Nodal.Thermal.General"></span><span class="target" id="classns__thermal_1_1_matrix_base_thermal_1aa0e0954f8147b396146dcff808e4a9c6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">updateMatrixThermal</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span>, <a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal17MatrixBaseThermal19updateMatrixThermalE5Nodal7Thermal7General" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>compute fracture flow rate at intergration point </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>general</strong> – </p></li>
+<li><p><strong>element</strong> – </p></li>
+<li><p><strong>nodal</strong> – </p></li>
+<li><p><strong>elementindices</strong> – </p></li>
+<li><p><strong>intPoint</strong> – </p></li>
+<li><p><strong>hydro</strong> – </p></li>
+<li><p><strong>solidmat</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>q.i: flow rate vector in each direction </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal17MatrixBaseThermal19aseembleContactFluxE7Thermal5Nodal7General">
+<span id="_CPPv3N10ns_thermal17MatrixBaseThermal19aseembleContactFluxE7Thermal5Nodal7General"></span><span id="_CPPv2N10ns_thermal17MatrixBaseThermal19aseembleContactFluxE7Thermal5Nodal7General"></span><span id="ns_thermal::MatrixBaseThermal::aseembleContactFlux__Thermal.Nodal.General"></span><span class="target" id="classns__thermal_1_1_matrix_base_thermal_1a46477676c708b378c58fd87bfc5da5f5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">aseembleContactFlux</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal17MatrixBaseThermal19aseembleContactFluxE7Thermal5Nodal7General" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Add the contact flux in previous mechanical step. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>thermal</strong> – </p></li>
+<li><p><strong>nodal</strong> – </p></li>
+<li><p><strong>general</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal17MatrixBaseThermal16matrixThermalRunE7Boudary5Nodal7Thermal7Element12Intergration8Solidmat7General10Cohelement">
+<span id="_CPPv3N10ns_thermal17MatrixBaseThermal16matrixThermalRunE7Boudary5Nodal7Thermal7Element12Intergration8Solidmat7General10Cohelement"></span><span id="_CPPv2N10ns_thermal17MatrixBaseThermal16matrixThermalRunE7Boudary5Nodal7Thermal7Element12Intergration8Solidmat7General10Cohelement"></span><span id="ns_thermal::MatrixBaseThermal::matrixThermalRun__Boudary.Nodal.Thermal.Element.Intergration.Solidmat.General.Cohelement"></span><span class="target" id="classns__thermal_1_1_matrix_base_thermal_1a1e482c23bf64572d6b2103529769961a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">matrixThermalRun</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="solverclass.html#_CPPv47Boudary" title="Boudary"><span class="n"><span class="pre">Boudary</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">boudary</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <span class="n"><span class="pre">Intergration</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">intergration</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span>, <a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv410Cohelement" title="Cohelement"><span class="n"><span class="pre">Cohelement</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">cohelement</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal17MatrixBaseThermal16matrixThermalRunE7Boudary5Nodal7Thermal7Element12Intergration8Solidmat7General10Cohelement" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal13MatrixThermalE">
+<span id="_CPPv3N10ns_thermal13MatrixThermalE"></span><span id="_CPPv2N10ns_thermal13MatrixThermalE"></span><span id="ns_thermal::MatrixThermal"></span><span class="target" id="classns__thermal_1_1_matrix_thermal"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MatrixThermal</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">OpenFdemAbstract</span></span><a class="headerlink" href="#_CPPv4N10ns_thermal13MatrixThermalE" title="Permalink to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;<a class="reference internal" href="#thermal__matrix_8h"><span class="std std-ref">thermal_matrix.h</span></a>&gt;</em></div>
+<p>Subclassed by <a class="reference internal" href="#classns__thermal_1_1_thermal_module"><span class="std std-ref">ns_thermal::ThermalModule</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal13MatrixThermal10initializeE7General5Nodal7Thermal7Boudary">
+<span id="_CPPv3N10ns_thermal13MatrixThermal10initializeE7General5Nodal7Thermal7Boudary"></span><span id="_CPPv2N10ns_thermal13MatrixThermal10initializeE7General5Nodal7Thermal7Boudary"></span><span id="ns_thermal::MatrixThermal::initialize__General.Nodal.Thermal.Boudary"></span><span class="target" id="classns__thermal_1_1_matrix_thermal_1a9e2126acba32c41dd6784547795be81c"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">initialize</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span>, <a class="reference internal" href="solverclass.html#_CPPv47Boudary" title="Boudary"><span class="n"><span class="pre">Boudary</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">boundary</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal13MatrixThermal10initializeE7General5Nodal7Thermal7Boudary" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal13MatrixThermal34computeMatrixThermalTransportationE7General5Nodal7Element7Thermal8Solidmat">
+<span id="_CPPv3N10ns_thermal13MatrixThermal34computeMatrixThermalTransportationE7General5Nodal7Element7Thermal8Solidmat"></span><span id="_CPPv2N10ns_thermal13MatrixThermal34computeMatrixThermalTransportationE7General5Nodal7Element7Thermal8Solidmat"></span><span id="ns_thermal::MatrixThermal::computeMatrixThermalTransportation__General.Nodal.Element.Thermal.Solidmat"></span><span class="target" id="classns__thermal_1_1_matrix_thermal_1a0e0be5820cae0bc117acdf08c4a12e9f"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeMatrixThermalTransportation</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal13MatrixThermal34computeMatrixThermalTransportationE7General5Nodal7Element7Thermal8Solidmat" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal13MatrixThermal30computeFractureThermalExchangeE7General5Nodal7Element10Cohelement7Thermal8Solidmat">
+<span id="_CPPv3N10ns_thermal13MatrixThermal30computeFractureThermalExchangeE7General5Nodal7Element10Cohelement7Thermal8Solidmat"></span><span id="_CPPv2N10ns_thermal13MatrixThermal30computeFractureThermalExchangeE7General5Nodal7Element10Cohelement7Thermal8Solidmat"></span><span id="ns_thermal::MatrixThermal::computeFractureThermalExchange__General.Nodal.Element.Cohelement.Thermal.Solidmat"></span><span class="target" id="classns__thermal_1_1_matrix_thermal_1a5ff075fa27a7720ba225ae27c5c89472"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeFractureThermalExchange</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <a class="reference internal" href="solidclass.html#_CPPv410Cohelement" title="Cohelement"><span class="n"><span class="pre">Cohelement</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">cohelement</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal13MatrixThermal30computeFractureThermalExchangeE7General5Nodal7Element10Cohelement7Thermal8Solidmat" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal13MatrixThermal30updateMatrixThermalTemperatureE7General5Nodal7Thermal">
+<span id="_CPPv3N10ns_thermal13MatrixThermal30updateMatrixThermalTemperatureE7General5Nodal7Thermal"></span><span id="_CPPv2N10ns_thermal13MatrixThermal30updateMatrixThermalTemperatureE7General5Nodal7Thermal"></span><span id="ns_thermal::MatrixThermal::updateMatrixThermalTemperature__General.Nodal.Thermal"></span><span class="target" id="classns__thermal_1_1_matrix_thermal_1ac634c23bb877339206ceb21e4e619f94"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">updateMatrixThermalTemperature</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal13MatrixThermal30updateMatrixThermalTemperatureE7General5Nodal7Thermal" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal13MatrixThermal16matrixThermalRunE7General5Nodal7Element10Cohelement7Thermal8Solidmat7Boudary">
+<span id="_CPPv3N10ns_thermal13MatrixThermal16matrixThermalRunE7General5Nodal7Element10Cohelement7Thermal8Solidmat7Boudary"></span><span id="_CPPv2N10ns_thermal13MatrixThermal16matrixThermalRunE7General5Nodal7Element10Cohelement7Thermal8Solidmat7Boudary"></span><span id="ns_thermal::MatrixThermal::matrixThermalRun__General.Nodal.Element.Cohelement.Thermal.Solidmat.Boudary"></span><span class="target" id="classns__thermal_1_1_matrix_thermal_1abc060743e5e2da8ccffb64b4e442ace0"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">matrixThermalRun</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <a class="reference internal" href="solidclass.html#_CPPv410Cohelement" title="Cohelement"><span class="n"><span class="pre">Cohelement</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">cohelement</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span>, <a class="reference internal" href="solverclass.html#_CPPv47Boudary" title="Boudary"><span class="n"><span class="pre">Boudary</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">boundary</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal13MatrixThermal16matrixThermalRunE7General5Nodal7Element10Cohelement7Thermal8Solidmat7Boudary" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv417Thermal_structure">
+<span id="_CPPv317Thermal_structure"></span><span id="_CPPv217Thermal_structure"></span><span id="Thermal_structure"></span><span class="target" id="struct_thermal__structure"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Thermal_structure</span></span></span><a class="headerlink" href="#_CPPv417Thermal_structure" title="Permalink to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;<a class="reference internal" href="#openfdem__thermal_8h"><span class="std std-ref">openfdem_thermal.h</span></a>&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N17Thermal_structure6resizeE3Int3Int">
+<span id="_CPPv3N17Thermal_structure6resizeE3Int3Int"></span><span id="_CPPv2N17Thermal_structure6resizeE3Int3Int"></span><span id="Thermal_structure::resize__Int.Int"></span><span class="target" id="struct_thermal__structure_1a6cb5c3a9369abf1bd36dbe646f4f41ca"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">resize</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv43Int" title="Int"><span class="n"><span class="pre">Int</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span>, <a class="reference internal" href="commonclass.html#_CPPv43Int" title="Int"><span class="n"><span class="pre">Int</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">initialsize</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17Thermal_structure6resizeE3Int3Int" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N17Thermal_structure5clearEv">
+<span id="_CPPv3N17Thermal_structure5clearEv"></span><span id="_CPPv2N17Thermal_structure5clearEv"></span><span id="Thermal_structure::clear"></span><span class="target" id="struct_thermal__structure_1a9e255de1dd52c0b2597941611db8eb8f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clear</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N17Thermal_structure5clearEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17Thermal_structure9_nodeSizeE">
+<span id="_CPPv3N17Thermal_structure9_nodeSizeE"></span><span id="_CPPv2N17Thermal_structure9_nodeSizeE"></span><span id="Thermal_structure::_nodeSize__UInt"></span><span class="target" id="struct_thermal__structure_1a602af8a3d2a86b7de30c1a0b1efbe7e7"></span><a class="reference internal" href="commonclass.html#_CPPv44UInt" title="UInt"><span class="n"><span class="pre">UInt</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_nodeSize</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N17Thermal_structure9_nodeSizeE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17Thermal_structure12_elementSizeE">
+<span id="_CPPv3N17Thermal_structure12_elementSizeE"></span><span id="_CPPv2N17Thermal_structure12_elementSizeE"></span><span id="Thermal_structure::_elementSize__UInt"></span><span class="target" id="struct_thermal__structure_1a6d7638207f14225a490b356afa67244f"></span><a class="reference internal" href="commonclass.html#_CPPv44UInt" title="UInt"><span class="n"><span class="pre">UInt</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_elementSize</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N17Thermal_structure12_elementSizeE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17Thermal_structure13thermal_stepsE">
+<span id="_CPPv3N17Thermal_structure13thermal_stepsE"></span><span id="_CPPv2N17Thermal_structure13thermal_stepsE"></span><span id="Thermal_structure::thermal_steps__Int"></span><span class="target" id="struct_thermal__structure_1a79d9f664595e25f20716237658829711"></span><a class="reference internal" href="commonclass.html#_CPPv43Int" title="Int"><span class="n"><span class="pre">Int</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">thermal_steps</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">10</span></span><a class="headerlink" href="#_CPPv4N17Thermal_structure13thermal_stepsE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17Thermal_structure12thermal_timeE">
+<span id="_CPPv3N17Thermal_structure12thermal_timeE"></span><span id="_CPPv2N17Thermal_structure12thermal_timeE"></span><span id="Thermal_structure::thermal_time__Real"></span><span class="target" id="struct_thermal__structure_1a6b9eb3178ea869118bdf0506fa973034"></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">thermal_time</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N17Thermal_structure12thermal_timeE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17Thermal_structure12sub_timestepE">
+<span id="_CPPv3N17Thermal_structure12sub_timestepE"></span><span id="_CPPv2N17Thermal_structure12sub_timestepE"></span><span id="Thermal_structure::sub_timestep__Real"></span><span class="target" id="struct_thermal__structure_1a9fa9e8e5bbaf9ff2abb0ca33c15d6109"></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sub_timestep</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N17Thermal_structure12sub_timestepE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17Thermal_structure7boud_idE">
+<span id="_CPPv3N17Thermal_structure7boud_idE"></span><span id="_CPPv2N17Thermal_structure7boud_idE"></span><span id="Thermal_structure::boud_id__std::vector:Int:"></span><span class="target" id="struct_thermal__structure_1a69958bdb3fc5720cbdca30207c855603"></span><a class="reference internal" href="commonclass.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="commonclass.html#_CPPv43Int" title="Int"><span class="n"><span class="pre">Int</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">boud_id</span></span></span><a class="headerlink" href="#_CPPv4N17Thermal_structure7boud_idE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17Thermal_structure6mat_idE">
+<span id="_CPPv3N17Thermal_structure6mat_idE"></span><span id="_CPPv2N17Thermal_structure6mat_idE"></span><span id="Thermal_structure::mat_id__std::vector:Int:"></span><span class="target" id="struct_thermal__structure_1acdfb80d1b0a39ee5fa301d5d4498b41d"></span><a class="reference internal" href="commonclass.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="commonclass.html#_CPPv43Int" title="Int"><span class="n"><span class="pre">Int</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mat_id</span></span></span><a class="headerlink" href="#_CPPv4N17Thermal_structure6mat_idE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17Thermal_structure11Matrix_fluxE">
+<span id="_CPPv3N17Thermal_structure11Matrix_fluxE"></span><span id="_CPPv2N17Thermal_structure11Matrix_fluxE"></span><span id="Thermal_structure::Matrix_flux__std::vector:Real:"></span><span class="target" id="struct_thermal__structure_1a270af0f5fc5e1dd545c7d6b3fe4c14b5"></span><a class="reference internal" href="commonclass.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Matrix_flux</span></span></span><a class="headerlink" href="#_CPPv4N17Thermal_structure11Matrix_fluxE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17Thermal_structure12Contact_fluxE">
+<span id="_CPPv3N17Thermal_structure12Contact_fluxE"></span><span id="_CPPv2N17Thermal_structure12Contact_fluxE"></span><span id="Thermal_structure::Contact_flux__std::vector:Real:"></span><span class="target" id="struct_thermal__structure_1abd1f58bd3b3a1cb354f3c88bd9f5c445"></span><a class="reference internal" href="commonclass.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Contact_flux</span></span></span><a class="headerlink" href="#_CPPv4N17Thermal_structure12Contact_fluxE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17Thermal_structure8Matrix_TE">
+<span id="_CPPv3N17Thermal_structure8Matrix_TE"></span><span id="_CPPv2N17Thermal_structure8Matrix_TE"></span><span id="Thermal_structure::Matrix_T__std::vector:Real:"></span><span class="target" id="struct_thermal__structure_1aae79ac9585573aa1fc66e17ca0521b96"></span><a class="reference internal" href="commonclass.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Matrix_T</span></span></span><a class="headerlink" href="#_CPPv4N17Thermal_structure8Matrix_TE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17Thermal_structure8Matrix_CE">
+<span id="_CPPv3N17Thermal_structure8Matrix_CE"></span><span id="_CPPv2N17Thermal_structure8Matrix_CE"></span><span id="Thermal_structure::Matrix_C__std::vector:Real:"></span><span class="target" id="struct_thermal__structure_1a7c10023fea0a88526791711bab89eb5e"></span><a class="reference internal" href="commonclass.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Matrix_C</span></span></span><a class="headerlink" href="#_CPPv4N17Thermal_structure8Matrix_CE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17Thermal_structure7Fluid_TE">
+<span id="_CPPv3N17Thermal_structure7Fluid_TE"></span><span id="_CPPv2N17Thermal_structure7Fluid_TE"></span><span id="Thermal_structure::Fluid_T__std::vector:Real:"></span><span class="target" id="struct_thermal__structure_1a0e7344f2db6c74054428bf2224c5cc0f"></span><a class="reference internal" href="commonclass.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Fluid_T</span></span></span><a class="headerlink" href="#_CPPv4N17Thermal_structure7Fluid_TE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17Thermal_structure10Fluid_fluxE">
+<span id="_CPPv3N17Thermal_structure10Fluid_fluxE"></span><span id="_CPPv2N17Thermal_structure10Fluid_fluxE"></span><span id="Thermal_structure::Fluid_flux__std::vector:Real:"></span><span class="target" id="struct_thermal__structure_1aec31961d773e6cb928c23eee156bc090"></span><a class="reference internal" href="commonclass.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Fluid_flux</span></span></span><a class="headerlink" href="#_CPPv4N17Thermal_structure10Fluid_fluxE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17Thermal_structure9Matrix_T0E">
+<span id="_CPPv3N17Thermal_structure9Matrix_T0E"></span><span id="_CPPv2N17Thermal_structure9Matrix_T0E"></span><span id="Thermal_structure::Matrix_T0__std::vector:Real:"></span><span class="target" id="struct_thermal__structure_1acad04aa8214f46a1ca98ff5d2fe0b0f6"></span><a class="reference internal" href="commonclass.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Matrix_T0</span></span></span><a class="headerlink" href="#_CPPv4N17Thermal_structure9Matrix_T0E" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17Thermal_structure11THMcouplingE">
+<span id="_CPPv3N17Thermal_structure11THMcouplingE"></span><span id="_CPPv2N17Thermal_structure11THMcouplingE"></span><span id="Thermal_structure::THMcoupling__b"></span><span class="target" id="struct_thermal__structure_1a5cfd00e08084fef473ea021c05e3063e"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">THMcoupling</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N17Thermal_structure11THMcouplingE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17Thermal_structure14ContactThermalE">
+<span id="_CPPv3N17Thermal_structure14ContactThermalE"></span><span id="_CPPv2N17Thermal_structure14ContactThermalE"></span><span id="Thermal_structure::ContactThermal__b"></span><span class="target" id="struct_thermal__structure_1afba3d75da2f38913d7de97d116288690"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ContactThermal</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><a class="headerlink" href="#_CPPv4N17Thermal_structure14ContactThermalE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17Thermal_structure17isDoubleWayCoupleE">
+<span id="_CPPv3N17Thermal_structure17isDoubleWayCoupleE"></span><span id="_CPPv2N17Thermal_structure17isDoubleWayCoupleE"></span><span id="Thermal_structure::isDoubleWayCouple__b"></span><span class="target" id="struct_thermal__structure_1ae8ec121b0f00150e20dbe189620a05a2"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isDoubleWayCouple</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><a class="headerlink" href="#_CPPv4N17Thermal_structure17isDoubleWayCoupleE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17Thermal_structure13cavity_numberE">
+<span id="_CPPv3N17Thermal_structure13cavity_numberE"></span><span id="_CPPv2N17Thermal_structure13cavity_numberE"></span><span id="Thermal_structure::cavity_number__UInt"></span><span class="target" id="struct_thermal__structure_1a5a11125972827f10d68d7f6b39f701f9"></span><a class="reference internal" href="commonclass.html#_CPPv44UInt" title="UInt"><span class="n"><span class="pre">UInt</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cavity_number</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N17Thermal_structure13cavity_numberE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17Thermal_structure6cavityE">
+<span id="_CPPv3N17Thermal_structure6cavityE"></span><span id="_CPPv2N17Thermal_structure6cavityE"></span><span id="Thermal_structure::cavity__std::vector:caivity_type:"></span><span class="target" id="struct_thermal__structure_1a8ed7611a22aa7b76762845987a6cf5a5"></span><a class="reference internal" href="commonclass.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="hydroclass.html#_CPPv412caivity_type" title="caivity_type"><span class="n"><span class="pre">caivity_type</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cavity</span></span></span><a class="headerlink" href="#_CPPv4N17Thermal_structure6cavityE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17Thermal_structure14kfijconductionE">
+<span id="_CPPv3N17Thermal_structure14kfijconductionE"></span><span id="_CPPv2N17Thermal_structure14kfijconductionE"></span><span id="Thermal_structure::kfijconduction__std::vector:Tensor:"></span><span class="target" id="struct_thermal__structure_1af49bbc847ab18a0105a194ce51be6917"></span><a class="reference internal" href="commonclass.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="commonclass.html#_CPPv46Tensor" title="Tensor"><span class="n"><span class="pre">Tensor</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kfijconduction</span></span></span><a class="headerlink" href="#_CPPv4N17Thermal_structure14kfijconductionE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17Thermal_structure13kfijadvectionE">
+<span id="_CPPv3N17Thermal_structure13kfijadvectionE"></span><span id="_CPPv2N17Thermal_structure13kfijadvectionE"></span><span id="Thermal_structure::kfijadvection__std::vector:Tensor:"></span><span class="target" id="struct_thermal__structure_1a1c8cba638f5b467884028f3cd71a700d"></span><a class="reference internal" href="commonclass.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="commonclass.html#_CPPv46Tensor" title="Tensor"><span class="n"><span class="pre">Tensor</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kfijadvection</span></span></span><a class="headerlink" href="#_CPPv4N17Thermal_structure13kfijadvectionE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal14ThermalBoudaryE">
+<span id="_CPPv3N10ns_thermal14ThermalBoudaryE"></span><span id="_CPPv2N10ns_thermal14ThermalBoudaryE"></span><span id="ns_thermal::ThermalBoudary"></span><span class="target" id="classns__thermal_1_1_thermal_boudary"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ThermalBoudary</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">OpenFdemAbstract</span></span><a class="headerlink" href="#_CPPv4N10ns_thermal14ThermalBoudaryE" title="Permalink to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;<a class="reference internal" href="#update__thermal__boundary_8h"><span class="std std-ref">update_thermal_boundary.h</span></a>&gt;</em></div>
+<p>Subclassed by <a class="reference internal" href="#classns__thermal_1_1_thermal_module"><span class="std std-ref">ns_thermal::ThermalModule</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal14ThermalBoudary21updateThermalBoundaryE7Thermal7Boudary8Solidmat7General5Nodal7Element12Intergration">
+<span id="_CPPv3N10ns_thermal14ThermalBoudary21updateThermalBoundaryE7Thermal7Boudary8Solidmat7General5Nodal7Element12Intergration"></span><span id="_CPPv2N10ns_thermal14ThermalBoudary21updateThermalBoundaryE7Thermal7Boudary8Solidmat7General5Nodal7Element12Intergration"></span><span id="ns_thermal::ThermalBoudary::updateThermalBoundary__Thermal.Boudary.Solidmat.General.Nodal.Element.Intergration"></span><span class="target" id="classns__thermal_1_1_thermal_boudary_1ad75246fb64d9264812f653cf2dfac20c"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">updateThermalBoundary</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span>, <a class="reference internal" href="solverclass.html#_CPPv47Boudary" title="Boudary"><span class="n"><span class="pre">Boudary</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">boundary</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span>, <a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <span class="n"><span class="pre">Intergration</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">intergration</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal14ThermalBoudary21updateThermalBoundaryE7Thermal7Boudary8Solidmat7General5Nodal7Element12Intergration" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>update boundary condition. This function is not parallised because thermal boundary is not heavy, extra time will costed to step in the parallel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>thermal</strong> – </p></li>
+<li><p><strong>boundary</strong> – </p></li>
+<li><p><strong>solidmat</strong> – </p></li>
+<li><p><strong>general</strong> – </p></li>
+<li><p><strong>nodal</strong> – </p></li>
+<li><p><strong>element</strong> – </p></li>
+<li><p><strong>intergration</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal19ThermalComputeForceE">
+<span id="_CPPv3N10ns_thermal19ThermalComputeForceE"></span><span id="_CPPv2N10ns_thermal19ThermalComputeForceE"></span><span id="ns_thermal::ThermalComputeForce"></span><span class="target" id="classns__thermal_1_1_thermal_compute_force"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ThermalComputeForce</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">OpenFdemAbstract</span></span><a class="headerlink" href="#_CPPv4N10ns_thermal19ThermalComputeForceE" title="Permalink to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;<a class="reference internal" href="#get__thermal__force_8h"><span class="std std-ref">get_thermal_force.h</span></a>&gt;</em></div>
+<p>Subclassed by <a class="reference internal" href="#classns__thermal_1_1_thermal_module"><span class="std std-ref">ns_thermal::ThermalModule</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal19ThermalComputeForce19computeThermalForceE7General5Nodal7Element7Thermal8Solidmat">
+<span id="_CPPv3N10ns_thermal19ThermalComputeForce19computeThermalForceE7General5Nodal7Element7Thermal8Solidmat"></span><span id="_CPPv2N10ns_thermal19ThermalComputeForce19computeThermalForceE7General5Nodal7Element7Thermal8Solidmat"></span><span id="ns_thermal::ThermalComputeForce::computeThermalForce__General.Nodal.Element.Thermal.Solidmat"></span><span class="target" id="classns__thermal_1_1_thermal_compute_force_1aadfaeaa56adf80d9870b3cac5615512e"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeThermalForce</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal19ThermalComputeForce19computeThermalForceE7General5Nodal7Element7Thermal8Solidmat" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>compute the thermal force only for triangle element.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodal</strong> – </p></li>
+<li><p><strong>element</strong> – </p></li>
+<li><p><strong>thermal</strong> – </p></li>
+<li><p><strong>solidmat</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal19ThermalComputeForce19computeThermalForceE7General5Nodal7Element12Intergration7Thermal8Solidmat">
+<span id="_CPPv3N10ns_thermal19ThermalComputeForce19computeThermalForceE7General5Nodal7Element12Intergration7Thermal8Solidmat"></span><span id="_CPPv2N10ns_thermal19ThermalComputeForce19computeThermalForceE7General5Nodal7Element12Intergration7Thermal8Solidmat"></span><span id="ns_thermal::ThermalComputeForce::computeThermalForce__General.Nodal.Element.Intergration.Thermal.Solidmat"></span><span class="target" id="classns__thermal_1_1_thermal_compute_force_1ad2261ef19e76c895176f9f1a011d3d75"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeThermalForce</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <span class="n"><span class="pre">Intergration</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">intergration</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal19ThermalComputeForce19computeThermalForceE7General5Nodal7Element12Intergration7Thermal8Solidmat" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>compute the thermal force for arbitary element type. more time will be cost for triangle element.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodal</strong> – </p></li>
+<li><p><strong>element</strong> – </p></li>
+<li><p><strong>intergration</strong> – </p></li>
+<li><p><strong>thermal</strong> – </p></li>
+<li><p><strong>solidmat</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal13ThermalModuleE">
+<span id="_CPPv3N10ns_thermal13ThermalModuleE"></span><span id="_CPPv2N10ns_thermal13ThermalModuleE"></span><span id="ns_thermal::ThermalModule"></span><span class="target" id="classns__thermal_1_1_thermal_module"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ThermalModule</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">OpenFdemAbstract</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv410ns_thermal" title="ns_thermal"><span class="n"><span class="pre">ns_thermal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N10ns_thermal19ThermalComputeForceE" title="ns_thermal::ThermalComputeForce"><span class="n"><span class="pre">ThermalComputeForce</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv410ns_thermal" title="ns_thermal"><span class="n"><span class="pre">ns_thermal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N10ns_thermal13MatrixThermalE" title="ns_thermal::MatrixThermal"><span class="n"><span class="pre">MatrixThermal</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv410ns_thermal" title="ns_thermal"><span class="n"><span class="pre">ns_thermal</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N10ns_thermal14ThermalBoudaryE" title="ns_thermal::ThermalBoudary"><span class="n"><span class="pre">ThermalBoudary</span></span></a><a class="headerlink" href="#_CPPv4N10ns_thermal13ThermalModuleE" title="Permalink to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;<a class="reference internal" href="#openfdem__thermal__module_8h"><span class="std std-ref">openfdem_thermal_module.h</span></a>&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal13ThermalModule18Thermal_module_runE8Openfdem">
+<span id="_CPPv3N10ns_thermal13ThermalModule18Thermal_module_runE8Openfdem"></span><span id="_CPPv2N10ns_thermal13ThermalModule18Thermal_module_runE8Openfdem"></span><span id="ns_thermal::ThermalModule::Thermal_module_run__Openfdem"></span><span class="target" id="classns__thermal_1_1_thermal_module_1aab32e39a109c8a774e874008dcb52276"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Thermal_module_run</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="solverclass.html#_CPPv48Openfdem" title="Openfdem"><span class="n"><span class="pre">Openfdem</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">openfdem</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal13ThermalModule18Thermal_module_runE8Openfdem" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal9THMCoupleE">
+<span id="_CPPv3N10ns_thermal9THMCoupleE"></span><span id="_CPPv2N10ns_thermal9THMCoupleE"></span><span id="ns_thermal::THMCouple"></span><span class="target" id="classns__thermal_1_1_t_h_m_couple"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">THMCouple</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">OpenFdemAbstract</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">InterfaceUtils</span></span><a class="headerlink" href="#_CPPv4N10ns_thermal9THMCoupleE" title="Permalink to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;<a class="reference internal" href="#new__thermal___t_h_m__coupling_8h"><span class="std std-ref">new_thermal_THM_coupling.h</span></a>&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal9THMCouple9THMCoupleEv">
+<span id="_CPPv3N10ns_thermal9THMCouple9THMCoupleEv"></span><span id="_CPPv2N10ns_thermal9THMCouple9THMCoupleEv"></span><span id="ns_thermal::THMCouple::THMCouple"></span><span class="target" id="classns__thermal_1_1_t_h_m_couple_1a00d0f10b5c64273f2b2bba7223ad1e95"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">THMCouple</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal9THMCouple9THMCoupleEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal9THMCoupleD0Ev">
+<span id="_CPPv3N10ns_thermal9THMCoupleD0Ev"></span><span id="_CPPv2N10ns_thermal9THMCoupleD0Ev"></span><span id="ns_thermal::THMCouple::~THMCouple"></span><span class="target" id="classns__thermal_1_1_t_h_m_couple_1a32535c2f7a14ffaf8aa0e841d4f71755"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~THMCouple</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal9THMCoupleD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal9THMCouple20updateFluidViscosityE7General5Nodal10Cohelement7Thermal5Hydro8Solidmat">
+<span id="_CPPv3N10ns_thermal9THMCouple20updateFluidViscosityE7General5Nodal10Cohelement7Thermal5Hydro8Solidmat"></span><span id="_CPPv2N10ns_thermal9THMCouple20updateFluidViscosityE7General5Nodal10Cohelement7Thermal5Hydro8Solidmat"></span><span id="ns_thermal::THMCouple::updateFluidViscosity__General.Nodal.Cohelement.Thermal.Hydro.Solidmat"></span><span class="target" id="classns__thermal_1_1_t_h_m_couple_1a81b4d320c63eee6ae79c96b32fb93111"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">updateFluidViscosity</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv410Cohelement" title="Cohelement"><span class="n"><span class="pre">Cohelement</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">cohelement</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span>, <a class="reference internal" href="hydroclass.html#_CPPv45Hydro" title="Hydro"><span class="n"><span class="pre">Hydro</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">hydro</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal9THMCouple20updateFluidViscosityE7General5Nodal10Cohelement7Thermal5Hydro8Solidmat" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Update the water viscosity due to tempearature change. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodal</strong> – - nodal class </p></li>
+<li><p><strong>cohelement</strong> – - cohelement class </p></li>
+<li><p><strong>thermal</strong> – - thermal class </p></li>
+<li><p><strong>hydro</strong> – - hydro class </p></li>
+<li><p><strong>solidmat</strong> – - solid material class </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10ns_thermal9THMCouple18updateFluidThermalE7Boudary5Nodal7Thermal5Hydro8Solidmat7General">
+<span id="_CPPv3N10ns_thermal9THMCouple18updateFluidThermalE7Boudary5Nodal7Thermal5Hydro8Solidmat7General"></span><span id="_CPPv2N10ns_thermal9THMCouple18updateFluidThermalE7Boudary5Nodal7Thermal5Hydro8Solidmat7General"></span><span id="ns_thermal::THMCouple::updateFluidThermal__Boudary.Nodal.Thermal.Hydro.Solidmat.General"></span><span class="target" id="classns__thermal_1_1_t_h_m_couple_1ad3668d61881a6fbe612f150f8ceedced"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">updateFluidThermal</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="solverclass.html#_CPPv47Boudary" title="Boudary"><span class="n"><span class="pre">Boudary</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">boudary</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span>, <a class="reference internal" href="hydroclass.html#_CPPv45Hydro" title="Hydro"><span class="n"><span class="pre">Hydro</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">hydro</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span>, <a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal9THMCouple18updateFluidThermalE7Boudary5Nodal7Thermal5Hydro8Solidmat7General" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Compute the nodal temperature in fluid the temperature only be updated for wetted nodes, which are on the broken cohesive elememt surfaces. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>boudary</strong> – </p></li>
+<li><p><strong>nodal</strong> – </p></li>
+<li><p><strong>thermal</strong> – </p></li>
+<li><p><strong>hydro</strong> – </p></li>
+<li><p><strong>solidmat</strong> – </p></li>
+<li><p><strong>general</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv49ns_common">
+<span id="_CPPv39ns_common"></span><span id="_CPPv29ns_common"></span><span id="ns_common"></span><span class="target" id="namespacens__common"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ns_common</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv48ns_solid">
+<span id="_CPPv38ns_solid"></span><span id="_CPPv28ns_solid"></span><span id="ns_solid"></span><span class="target" id="namespacens__solid"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ns_solid</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv410ns_thermal">
+<span id="_CPPv310ns_thermal"></span><span id="_CPPv210ns_thermal"></span><span id="ns_thermal"></span><span class="target" id="namespacens__thermal"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ns_thermal</span></span></span><a class="headerlink" href="#_CPPv410ns_thermal" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="get__thermal__force_8h"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">get_thermal_force.h</span></span></dt>
+<dd><div class="docutils container">
+<em>#include &lt;math.h&gt;</em></div>
+<div class="docutils container">
+<em>#include “common/memory_manager.h”</em></div>
+<div class="docutils container">
+<em>#include “common/openfdem_abstract.h”</em></div>
+<div class="docutils container">
+<em>#include “common/openfdem_math.h”</em></div>
+<div class="docutils container">
+<em>#include “solver/openfdem.h”</em></div>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="new__thermal__heat__advection_8h"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">new_thermal_heat_advection.h</span></span></dt>
+<dd><div class="docutils container">
+<em>#include &lt;math.h&gt;</em></div>
+<div class="docutils container">
+<em>#include “common/openfdem_abstract.h”</em></div>
+<div class="docutils container">
+<em>#include “common/openfdem_math.h”</em></div>
+<div class="docutils container">
+<em>#include “solver/openfdem.h”</em></div>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="new__thermal__heat__conduction_8h"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">new_thermal_heat_conduction.h</span></span></dt>
+<dd><div class="docutils container">
+<em>#include &lt;math.h&gt;</em></div>
+<div class="docutils container">
+<em>#include “common/openfdem_abstract.h”</em></div>
+<div class="docutils container">
+<em>#include “common/openfdem_math.h”</em></div>
+<div class="docutils container">
+<em>#include “solver/openfdem.h”</em></div>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="new__thermal__heat__exchange_8h"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">new_thermal_heat_exchange.h</span></span></dt>
+<dd><div class="docutils container">
+<em>#include &lt;math.h&gt;</em></div>
+<div class="docutils container">
+<em>#include “common/openfdem_abstract.h”</em></div>
+<div class="docutils container">
+<em>#include “common/openfdem_math.h”</em></div>
+<div class="docutils container">
+<em>#include “solver/openfdem.h”</em></div>
+<div class="docutils container">
+<em>#include “solid/solid_mechanics_cohesive/solid_interface_element_utils.h”</em></div>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="new__thermal__matrix__flow_8h"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">new_thermal_matrix_flow.h</span></span></dt>
+<dd><div class="docutils container">
+<em>#include &lt;math.h&gt;</em></div>
+<div class="docutils container">
+<em>#include “common/openfdem_abstract.h”</em></div>
+<div class="docutils container">
+<em>#include “common/openfdem_math.h”</em></div>
+<div class="docutils container">
+<em>#include “solver/openfdem.h”</em></div>
+<div class="docutils container">
+<em>#include “solid/solid_mechanics_cohesive/solid_interface_element_utils.h”</em></div>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="new__thermal___t_h_m__coupling_8h"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">new_thermal_THM_coupling.h</span></span></dt>
+<dd><div class="docutils container">
+<em>#include &lt;math.h&gt;</em></div>
+<div class="docutils container">
+<em>#include “common/openfdem_abstract.h”</em></div>
+<div class="docutils container">
+<em>#include “common/openfdem_math.h”</em></div>
+<div class="docutils container">
+<em>#include “solver/openfdem.h”</em></div>
+<div class="docutils container">
+<em>#include “solid/solid_mechanics_cohesive/solid_interface_element_utils.h”</em></div>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="openfdem__thermal_8h"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">openfdem_thermal.h</span></span></dt>
+<dd><div class="docutils container">
+<em>#include “common/openfdem_common.h”</em></div>
+<div class="docutils container">
+<em>#include “hydro/openfdem_hydro.h”</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-typedefs">Typedefs</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv47Thermal">
+<span id="_CPPv37Thermal"></span><span id="_CPPv27Thermal"></span><span id="Thermal"></span><span class="target" id="openfdem__thermal_8h_1aaf26c62cfc5de18d4ebc8adde7816730"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv417Thermal_structure" title="Thermal_structure"><span class="n"><span class="pre">Thermal_structure</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">Thermal</span></span></span><a class="headerlink" href="#_CPPv47Thermal" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="openfdem__thermal__module_8h"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">openfdem_thermal_module.h</span></span></dt>
+<dd><div class="docutils container">
+<em>#include &lt;math.h&gt;</em></div>
+<div class="docutils container">
+<em>#include &lt;<a class="reference internal" href="#get__thermal__force_8h"><span class="std std-ref">thermal/get_thermal_force.h</span></a>&gt;</em></div>
+<div class="docutils container">
+<em>#include &lt;<a class="reference internal" href="#thermal__matrix_8h"><span class="std std-ref">thermal/thermal_matrix.h</span></a>&gt;</em></div>
+<div class="docutils container">
+<em>#include &lt;<a class="reference internal" href="#update__thermal__boundary_8h"><span class="std std-ref">thermal/update_thermal_boundary.h</span></a>&gt;</em></div>
+<div class="docutils container">
+<em>#include “common/memory_manager.h”</em></div>
+<div class="docutils container">
+<em>#include “common/openfdem_abstract.h”</em></div>
+<div class="docutils container">
+<em>#include “common/openfdem_math.h”</em></div>
+<div class="docutils container">
+<em>#include “solver/openfdem.h”</em></div>
+<div class="docutils container">
+<em>#include “<a class="reference internal" href="#new__thermal__matrix__flow_8h"><span class="std std-ref">thermal/new_thermal_matrix_flow.h</span></a>”</em></div>
+<div class="docutils container">
+<em>#include “<a class="reference internal" href="#new__thermal__heat__conduction_8h"><span class="std std-ref">thermal/new_thermal_heat_conduction.h</span></a>”</em></div>
+<div class="docutils container">
+<em>#include “<a class="reference internal" href="#new__thermal__heat__advection_8h"><span class="std std-ref">thermal/new_thermal_heat_advection.h</span></a>”</em></div>
+<div class="docutils container">
+<em>#include “<a class="reference internal" href="#new__thermal__heat__exchange_8h"><span class="std std-ref">thermal/new_thermal_heat_exchange.h</span></a>”</em></div>
+<div class="docutils container">
+<em>#include “<a class="reference internal" href="#new__thermal___t_h_m__coupling_8h"><span class="std std-ref">thermal/new_thermal_THM_coupling.h</span></a>”</em></div>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="thermal__matrix_8h"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">thermal_matrix.h</span></span></dt>
+<dd><div class="docutils container">
+<em>#include &lt;math.h&gt;</em></div>
+<div class="docutils container">
+<em>#include “common/memory_manager.h”</em></div>
+<div class="docutils container">
+<em>#include “common/openfdem_abstract.h”</em></div>
+<div class="docutils container">
+<em>#include “common/openfdem_math.h”</em></div>
+<div class="docutils container">
+<em>#include “solver/openfdem.h”</em></div>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="update__thermal__boundary_8h"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">update_thermal_boundary.h</span></span></dt>
+<dd><div class="docutils container">
+<em>#include &lt;math.h&gt;</em></div>
+<div class="docutils container">
+<em>#include “common/memory_manager.h”</em></div>
+<div class="docutils container">
+<em>#include “common/openfdem_abstract.h”</em></div>
+<div class="docutils container">
+<em>#include “common/openfdem_math.h”</em></div>
+<div class="docutils container">
+<em>#include “solver/openfdem.h”</em></div>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="dir_68267d1309a1af8e8297ef4c3efbcdba"></span><em><span class="pre">dir</span></em> <span class="sig-name descname"><span class="pre">src</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="dir_c76857fc1df696ce4184507b38b4027f"></span><em><span class="pre">dir</span></em> <span class="sig-name descname"><span class="pre">thermal</span></span></dt>
+<dd></dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="solverclass.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Solver class</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="voronoiclass.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Voronoi tessellation class</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../_sources/rst_developer/thermalclass.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, OpenFDEM Developer Group.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

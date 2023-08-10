@@ -12,7 +12,7 @@ August 2023
 
 .. grid:: 3
    
-   .. grid-item-card::  Call for Paper
+   .. grid-item-card::  *Call for Paper*
       :img-top: ../../images/Blogs/JRMGE.jpg
       :link: Blogs/20230804_Call_for_Paper
       :link-type: doc

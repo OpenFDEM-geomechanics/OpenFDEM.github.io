@@ -10,7 +10,6 @@ it is amonst the most commonly used laboratoory tesing methods in geotechnical i
 
     Figure 1: Geometry of the Brazilian disc test
 
-|
 
 ==================================
 1 Tutorial Prerequistes
@@ -156,7 +155,7 @@ The material properties of this model is shown as the table below:
     Check :doc:`element materal<../rst_user_guide/Material/of.mat.element>`, :doc:`cohesive materal<../rst_user_guide/Material/of.mat.cohesive>`, :doc:`contact materal<../rst_user_guide/Material/of.mat.contact>` to see more materials.
 
 
-#. Set the material properties. For this test, the example uses the elastic constitutive model and assigned material for CZM and contact.
+#. Set the material properties. elastic material is assigned for the matrix element and Evans_Marathe cohesive law is for CZM, the contact uses Mohr-Coulomb slip by default. 
 
 .. literalinclude:: examples/CreateBrazilianDiscTest/runme.of
     :lines: 63-65, 67, 69
@@ -215,7 +214,6 @@ When you run the program, you can first check the mesh that was created by Gmsh 
 
     Figure 2: Mesh created by Gmsh
 
-|
 
 ==================================
 5 Results

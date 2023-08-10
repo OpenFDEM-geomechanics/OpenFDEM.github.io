@@ -1,0 +1,1135 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Phase field class &#8212; &lt;strong&gt;OpenFDEM&lt;/strong&gt;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'rst_developer/phasefieldclass';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Solver class" href="solverclass.html" />
+    <link rel="prev" title="Particulate DEM class" href="particlesclass.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">Call for papers for <a href='https://www.sciencedirect.com/journal/journal-of-rock-mechanics-and-geotechnical-engineering'>Journal of Rock Mechanics and Geotechnical Engineering!</a></div>
+  </div>
+
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title"><strong>OpenFDEM</strong></p>
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_about_introduction/index.html">
+                        Introduction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_theory/index.html">
+                        Theory
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_tutorials/index.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../rst_user_guide/index.html">
+                        User Manual
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_about_us/index.html">
+                        About Us
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_appendix/index.html">
+                        Appendix
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_about_introduction/index.html">
+                        Introduction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_theory/index.html">
+                        Theory
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_tutorials/index.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../rst_user_guide/index.html">
+                        User Manual
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_about_us/index.html">
+                        About Us
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_appendix/index.html">
+                        Appendix
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rst_user_guide/commandindex.html">Command  reference</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/general.html">General</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.console.interval.html">of.console.interval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.damp.global.html">of.damp.global</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.finalize.html">of.finalize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.import.html">of.import</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.import.table.html">of.import.table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.log.interval.html">of.log.interval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.new.html">of.new</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.restore.html">of.restore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.save.html">of.save</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.save.FEM.html">of.save.FEM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.config.html">of.set.config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.contact.html">of.set.contact</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.debug.html">of.set.debug</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.GBM.html">of.set.GBM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.gravity.html">of.set.gravity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.large.html">of.set.large</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.massscale.html">of.set.massscale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.module.html">of.set.module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.omp.html">of.set.omp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.result.html">of.set.result</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.rgbm.html">of.set.rgbm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.solve.html">of.solve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.step.html">of.step</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.timestep.html">of.timestep</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/blast.html">Blast</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Blast/of.blast.position.html">of.blast.position</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/boundary.html">Boundary</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.force.html">of.boundary.nodal.force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.velocity.html">of.boundary.nodal.velocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.inivelocity.html">of.boundary.nodal.inivelocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.acceleration.html">of.boundary.nodal.acceleration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.clear.html">of.boundary.nodal.clear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.force.html">of.boundary.edge.force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.velocity.html">of.boundary.edge.velocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.inivelocity.html">of.boundary.edge.inivelocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.acceleration.html">of.boundary.edge.acceleration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.clear.html">of.boundary.edge.clear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.stress.html">of.boundary.element.stress</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.stress.xgrad.html">of.boundary.element.stress.xgrad</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.stress.ygrad.html">of.boundary.element.stress.ygrad</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.clear.html">of.boundary.element.clear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.blast.html">of.boundary.blast</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/DFN.html">DFN</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/DFN/of.DFN.connectivity.html">of.DFN.connectivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/DFN/of.DFN.group.html">of.DFN.group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/DFN/of.DFN.cohesive.html">of.DFN.cohesive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/DFN/of.DFN.broken.html">of.DFN.broken</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/FEM.html">FEM</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.coord.html">of.import.FEM.nodal.coord</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.coord0.html">of.import.FEM.nodal.coord0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.velocity.html">of.import.FEM.nodal.velocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.groups.html">of.import.FEM.nodal.groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.edge.groups.html">of.import.FEM.edge.groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.element.groups.html">of.import.FEM.element.groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.element.connectivity.html">of.import.FEM.element.connectivity</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/geometry.html">Geometry</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.square.html">of.geometry.square</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.square.html">of.geometry.cut.square</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.remove.square.html">of.geometry.remove.square</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.circle.html">of.geometry.circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.circle.html">of.geometry.cut.circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.remove.circle.html">of.geometry.remove.circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.ellipse.html">of.geometry.ellipse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.ellipse.html">of.geometry.cut.ellipse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.remove.ellipse.html">of.geometry.remove.ellipse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.polygon.html">of.geometry.polygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.polygon.html">of.geometry.cut.polygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.remove.polygon.html">of.geometry.remove.polygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.table.html">of.geometry.table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.table.html">of.geometry.cut.table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.remove.table.html">of.geometry.remove.table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.domain.html">of.geometry.domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.joint.html">of.geometry.cut.joint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.jset.html">of.geometry.cut.jset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.DFN.html">of.geometry.cut.DFN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.arc.html">of.geometry.cut.arc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.minsize.html">of.geometry.minsize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.minangle.html">of.geometry.minangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.iteration.html">of.geometry.iteration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.group.html">of.geometry.group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.mesh.size.html">of.geometry.mesh.size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.recombine.html">of.geometry.recombine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.mesh.html">of.geometry.mesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.mesh.write.html">of.geometry.mesh.write</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/group.html">Group</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.html">of.group.nodal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.html">of.group.edge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.element.html">of.group.element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.html">of.group.cohelement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.from.element.html">of.group.nodal.from.element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.from.element.html">of.group.edge.from.element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.from.cohelement.html">of.group.edge.from.cohcohelement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.from.dfn.html">of.group.edge.from.dfn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.from.dfn.html">of.group.cohelement.from.dfn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.from.gbm.html">of.group.cohelement.from.gbm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.bool.union.html">of.group.nodal.bool.union</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.bool.intersect.html">of.group.nodal.bool.intersect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.bool.subtract.html">of.group.nodal.bool.subtract</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.bool.union.html">of.group.edge.bool.union</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.bool.intersect.html">of.group.edge.bool.intersect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.bool.subtract.html">of.group.edge.bool.subtract</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.element.bool.union.html">of.group.element.bool.union</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.element.bool.intersect.html">of.group.element.bool.intersect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.element.bool.subtract.html">of.group.element.bool.subtract</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.bool.union.html">of.group.cohelement.bool.union</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.bool.intersect.html">of.group.cohelement.bool.intersect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.bool.subtract.html">of.group.cohelement.bool.subtract</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/mesh.html">Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.insert.html">of.mesh.insert</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.insert.dfn.html">of.mesh.insert.dfn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.voronoi.html">of.mesh.voronoi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.split.html">of.mesh.split</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.bary.html">of.mesh.bary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.RG.html">of.mesh.RG</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.RGB.html">of.mesh.RGB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.NVB.html">of.mesh.NVB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.baryGB.html">of.mesh.baryGB</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/material.html">Material</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.element.html">of.mat.element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.cohesive.html">of.mat.cohesive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.contact.html">of.mat.contact</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.hydro.matrix.html">of.mat.hydro.matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.hydro.fracture.html">of.mat.hydro.fracture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.mpm.fluid.html">of.mat.mpm.fluid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.mpm.solid.html">of.mat.mpm.solid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.hydro.fluid.html">of.mat.hydro.fluid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.hydro.gas.html">of.mat.hydro.gas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.nonlocal.html">of.mat.nonlocal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.thermal.html">of.mat.thermal</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/history.html">History</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.interval.html">of.history.pv.interval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.dynamic.interval.html">of.history.pv.dynamic.interval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.field.html">of.history.pv.field</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.fracture.html">of.history.pv.fracture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.cohesive.html">of.history.pv.cohesive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.damage.html">of.history.pv.damage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.ae.html">of.history.pv.ae</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="developer.html">Developer Document</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="commonclass.html">Common class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blastclass.html">Blast class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contactclass.html">Contact class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometryclass.html">Geometry class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solidclass.html">Solid engine class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hydroclass.html">Hydro transportation class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iohelperclass.html">Input/Output class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meshclass.html">Mesh processing class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpmclass.html">Computational fluid dynamics class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="particlesclass.html">Particulate DEM class</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Phase field class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solverclass.html">Solver class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="thermalclass.html">Thermal flux class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voronoiclass.html">Voronoi tessellation class</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../rst_user_guide/index.html" class="nav-link">User Manual</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="developer.html" class="nav-link">Developer Document</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Phase field class</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="phase-field-class">
+<h1>Phase field class<a class="headerlink" href="#phase-field-class" title="Permalink to this heading">#</a></h1>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid15ModelPhasefieldE">
+<span id="_CPPv3N8ns_solid15ModelPhasefieldE"></span><span id="_CPPv2N8ns_solid15ModelPhasefieldE"></span><span id="ns_solid::ModelPhasefield"></span><span class="target" id="classns__solid_1_1_model_phasefield"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModelPhasefield</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">OpenFdemAbstract</span></span><a class="headerlink" href="#_CPPv4N8ns_solid15ModelPhasefieldE" title="Permalink to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;<a class="reference internal" href="#solid__mechanics__model__phasefield_8h"><span class="std std-ref">solid_mechanics_model_phasefield.h</span></a>&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid15ModelPhasefield15ModelPhasefieldEv">
+<span id="_CPPv3N8ns_solid15ModelPhasefield15ModelPhasefieldEv"></span><span id="_CPPv2N8ns_solid15ModelPhasefield15ModelPhasefieldEv"></span><span id="ns_solid::ModelPhasefield::ModelPhasefield"></span><span class="target" id="classns__solid_1_1_model_phasefield_1af4e487beae05f0c0566a7ffeed531b67"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModelPhasefield</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_solid15ModelPhasefield15ModelPhasefieldEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid15ModelPhasefieldD0Ev">
+<span id="_CPPv3N8ns_solid15ModelPhasefieldD0Ev"></span><span id="_CPPv2N8ns_solid15ModelPhasefieldD0Ev"></span><span id="ns_solid::ModelPhasefield::~ModelPhasefield"></span><span class="target" id="classns__solid_1_1_model_phasefield_1a048603a0df39efc3d10c50cf81803567"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~ModelPhasefield</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_solid15ModelPhasefieldD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid15ModelPhasefield17getBulkParametersE8SolidmatK3Int">
+<span id="_CPPv3N8ns_solid15ModelPhasefield17getBulkParametersE8SolidmatK3Int"></span><span id="_CPPv2N8ns_solid15ModelPhasefield17getBulkParametersE8SolidmatK3Int"></span><span id="ns_solid::ModelPhasefield::getBulkParameters__Solidmat.IntC"></span><span class="target" id="classns__solid_1_1_model_phasefield_1a7eea52338bc9e378d8586efca1ce21e9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getBulkParameters</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="commonclass.html#_CPPv43Int" title="Int"><span class="n"><span class="pre">Int</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">matindices</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_solid15ModelPhasefield17getBulkParametersE8SolidmatK3Int" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Get the material parameters from the material library and compute the stiffness damping coefficient.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>solidmat</strong> – </p></li>
+<li><p><strong>matindices</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid15ModelPhasefield17computePhasefieldE5Nodal7Element12Intergration">
+<span id="_CPPv3N8ns_solid15ModelPhasefield17computePhasefieldE5Nodal7Element12Intergration"></span><span id="_CPPv2N8ns_solid15ModelPhasefield17computePhasefieldE5Nodal7Element12Intergration"></span><span id="ns_solid::ModelPhasefield::computePhasefield__Nodal.Element.Intergration"></span><span class="target" id="classns__solid_1_1_model_phasefield_1af018a429827c8a704c1b5cb316c2d0ee"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computePhasefield</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <span class="n"><span class="pre">Intergration</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">intergration</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_solid15ModelPhasefield17computePhasefieldE5Nodal7Element12Intergration" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid15ModelPhasefield22PhasefieldModelElasticE5Nodal7Element12Intergration8Solidmat">
+<span id="_CPPv3N8ns_solid15ModelPhasefield22PhasefieldModelElasticE5Nodal7Element12Intergration8Solidmat"></span><span id="_CPPv2N8ns_solid15ModelPhasefield22PhasefieldModelElasticE5Nodal7Element12Intergration8Solidmat"></span><span id="ns_solid::ModelPhasefield::PhasefieldModelElastic__Nodal.Element.Intergration.Solidmat"></span><span class="target" id="classns__solid_1_1_model_phasefield_1acc3229ec388704159815eab4484a7230"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PhasefieldModelElastic</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <span class="n"><span class="pre">Intergration</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">intergration</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_solid15ModelPhasefield22PhasefieldModelElasticE5Nodal7Element12Intergration8Solidmat" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid15ModelPhasefield4phi_E">
+<span id="_CPPv3N8ns_solid15ModelPhasefield4phi_E"></span><span id="_CPPv2N8ns_solid15ModelPhasefield4phi_E"></span><span id="ns_solid::ModelPhasefield::phi___Real"></span><span class="target" id="classns__solid_1_1_model_phasefield_1ac6b18fdd6611ade4d7417d7da00f38c7"></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">phi_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N8ns_solid15ModelPhasefield4phi_E" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid15ModelPhasefield3g_cE">
+<span id="_CPPv3N8ns_solid15ModelPhasefield3g_cE"></span><span id="_CPPv2N8ns_solid15ModelPhasefield3g_cE"></span><span id="ns_solid::ModelPhasefield::g_c__Real"></span><span class="target" id="classns__solid_1_1_model_phasefield_1a5d6d9cb694f4696973a49bbdd752bff7"></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">g_c</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N8ns_solid15ModelPhasefield3g_cE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid15ModelPhasefield3l_cE">
+<span id="_CPPv3N8ns_solid15ModelPhasefield3l_cE"></span><span id="_CPPv2N8ns_solid15ModelPhasefield3l_cE"></span><span id="ns_solid::ModelPhasefield::l_c__Real"></span><span class="target" id="classns__solid_1_1_model_phasefield_1ab7846b7f26589492d2bf200fa68104d9"></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">l_c</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N8ns_solid15ModelPhasefield3l_cE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid15ModelPhasefield4nitaE">
+<span id="_CPPv3N8ns_solid15ModelPhasefield4nitaE"></span><span id="_CPPv2N8ns_solid15ModelPhasefield4nitaE"></span><span id="ns_solid::ModelPhasefield::nita__Real"></span><span class="target" id="classns__solid_1_1_model_phasefield_1aa67cafaf65130df88a0298f51b0c1d88"></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nita</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N8ns_solid15ModelPhasefield4nitaE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid15ModelPhasefield2glE">
+<span id="_CPPv3N8ns_solid15ModelPhasefield2glE"></span><span id="_CPPv2N8ns_solid15ModelPhasefield2glE"></span><span id="ns_solid::ModelPhasefield::gl__Real"></span><span class="target" id="classns__solid_1_1_model_phasefield_1a6d251c008c38dffb3fa8d93f9db86ece"></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gl</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N8ns_solid15ModelPhasefield2glE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid15ModelPhasefield2igE">
+<span id="_CPPv3N8ns_solid15ModelPhasefield2igE"></span><span id="_CPPv2N8ns_solid15ModelPhasefield2igE"></span><span id="ns_solid::ModelPhasefield::ig__UInt"></span><span class="target" id="classns__solid_1_1_model_phasefield_1aa5f5fad2a2fc954a78aa3e12568a011d"></span><a class="reference internal" href="commonclass.html#_CPPv44UInt" title="UInt"><span class="n"><span class="pre">UInt</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ig</span></span></span><a class="headerlink" href="#_CPPv4N8ns_solid15ModelPhasefield2igE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid15ModelPhasefield14elementindicesE">
+<span id="_CPPv3N8ns_solid15ModelPhasefield14elementindicesE"></span><span id="_CPPv2N8ns_solid15ModelPhasefield14elementindicesE"></span><span id="ns_solid::ModelPhasefield::elementindices__UInt"></span><span class="target" id="classns__solid_1_1_model_phasefield_1a78c65815c6118799da08a44db0bf652e"></span><a class="reference internal" href="commonclass.html#_CPPv44UInt" title="UInt"><span class="n"><span class="pre">UInt</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">elementindices</span></span></span><a class="headerlink" href="#_CPPv4N8ns_solid15ModelPhasefield14elementindicesE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid18ModelPhasefieldDisE">
+<span id="_CPPv3N8ns_solid18ModelPhasefieldDisE"></span><span id="_CPPv2N8ns_solid18ModelPhasefieldDisE"></span><span id="ns_solid::ModelPhasefieldDis"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModelPhasefieldDis</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">OpenFdemAbstract</span></span><a class="headerlink" href="#_CPPv4N8ns_solid18ModelPhasefieldDisE" title="Permalink to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;<a class="reference internal" href="#solid__mechanics__model__phasefield__displacement_8h"><span class="std std-ref">solid_mechanics_model_phasefield_displacement.h</span></a>&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid18ModelPhasefieldDis22computePrincipalStressEA_4RealA_K4RealK4Realb">
+<span id="_CPPv3N8ns_solid18ModelPhasefieldDis22computePrincipalStressEA_4RealA_K4RealK4Realb"></span><span id="_CPPv2N8ns_solid18ModelPhasefieldDis22computePrincipalStressEA_4RealA_K4RealK4Realb"></span><span id="ns_solid::ModelPhasefieldDis::computePrincipalStress__RealA.RealCA.RealC.b"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_1a05debcc068051a69c57406eb1c3d897f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computePrincipalStress</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">prinS</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">prinE</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">straintrace</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ispostive</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_solid18ModelPhasefieldDis22computePrincipalStressEA_4RealA_K4RealK4Realb" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid18ModelPhasefieldDis17getBulkParametersE8SolidmatK3Int">
+<span id="_CPPv3N8ns_solid18ModelPhasefieldDis17getBulkParametersE8SolidmatK3Int"></span><span id="_CPPv2N8ns_solid18ModelPhasefieldDis17getBulkParametersE8SolidmatK3Int"></span><span id="ns_solid::ModelPhasefieldDis::getBulkParameters__Solidmat.IntC"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_1a6a8dd14f159fa321bba21306fb97219b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getBulkParameters</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="commonclass.html#_CPPv43Int" title="Int"><span class="n"><span class="pre">Int</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">matindices</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_solid18ModelPhasefieldDis17getBulkParametersE8SolidmatK3Int" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Get the material parameters from the material library and compute the stiffness damping coefficient.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>solidmat</strong> – </p></li>
+<li><p><strong>matindices</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid18ModelPhasefieldDis39computeElasticTrailStressatIntergrationE12IntergrationK3Int">
+<span id="_CPPv3N8ns_solid18ModelPhasefieldDis39computeElasticTrailStressatIntergrationE12IntergrationK3Int"></span><span id="_CPPv2N8ns_solid18ModelPhasefieldDis39computeElasticTrailStressatIntergrationE12IntergrationK3Int"></span><span id="ns_solid::ModelPhasefieldDis::computeElasticTrailStressatIntergration__Intergration.IntC"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_1add0c35388ab5f2c457dd34cc579dd245"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeElasticTrailStressatIntergration</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Intergration</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">intergration</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="commonclass.html#_CPPv43Int" title="Int"><span class="n"><span class="pre">Int</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">ig</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_solid18ModelPhasefieldDis39computeElasticTrailStressatIntergrationE12IntergrationK3Int" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Compute the elastic trial stress by incremental strain. the stress should not include the stiffness damping stress</p>
+<p>\begin{aligned} &amp;\Delta \sigma_{11}=\alpha_1 \Delta e_{11}+\alpha_2 \Delta e_{22}\ &amp;\Delta \sigma_{22}=\alpha_2 \Delta e_{11}+\alpha_1 \Delta e_{22}\ &amp;\Delta \sigma_{12}=2 G \Delta e_{12} \quad\left(\Delta \sigma_{21}=\Delta \sigma_{12}\right)\ &amp;\Delta \sigma_{33}=\alpha_2\left(\Delta e_{11}+\Delta e_{22}\right) \end{aligned} where \alpha_1 = K + 4/3 * G and \alpha_2 = K - 2/3 * G</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodal</strong> – </p></li>
+<li><p><strong>element</strong> – </p></li>
+<li><p><strong>elementindices</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid18ModelPhasefieldDis23computePhasefieldStressE5Nodal7Element12Intergration">
+<span id="_CPPv3N8ns_solid18ModelPhasefieldDis23computePhasefieldStressE5Nodal7Element12Intergration"></span><span id="_CPPv2N8ns_solid18ModelPhasefieldDis23computePhasefieldStressE5Nodal7Element12Intergration"></span><span id="ns_solid::ModelPhasefieldDis::computePhasefieldStress__Nodal.Element.Intergration"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_1a56da272b27194ab5e9970859eda888f1"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computePhasefieldStress</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <span class="n"><span class="pre">Intergration</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">intergration</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_solid18ModelPhasefieldDis23computePhasefieldStressE5Nodal7Element12Intergration" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid18ModelPhasefieldDis20computeInternalForceE7General5Nodal7Element12Intergration">
+<span id="_CPPv3N8ns_solid18ModelPhasefieldDis20computeInternalForceE7General5Nodal7Element12Intergration"></span><span id="_CPPv2N8ns_solid18ModelPhasefieldDis20computeInternalForceE7General5Nodal7Element12Intergration"></span><span id="ns_solid::ModelPhasefieldDis::computeInternalForce__General.Nodal.Element.Intergration"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_1a4ce838ee414aaa94021e1309c1b3d146"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeInternalForce</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <span class="n"><span class="pre">Intergration</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">intergration</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_solid18ModelPhasefieldDis20computeInternalForceE7General5Nodal7Element12Intergration" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid18ModelPhasefieldDis17computeLumpedMassE7General7Element5Nodal">
+<span id="_CPPv3N8ns_solid18ModelPhasefieldDis17computeLumpedMassE7General7Element5Nodal"></span><span id="_CPPv2N8ns_solid18ModelPhasefieldDis17computeLumpedMassE7General7Element5Nodal"></span><span id="ns_solid::ModelPhasefieldDis::computeLumpedMass__General.Element.Nodal"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_1a50f17438e13b8c6a70a07973114a91ea"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeLumpedMass</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_solid18ModelPhasefieldDis17computeLumpedMassE7General7Element5Nodal" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid18ModelPhasefieldDis19computeStrainEnergyE7General7Element12Intergration">
+<span id="_CPPv3N8ns_solid18ModelPhasefieldDis19computeStrainEnergyE7General7Element12Intergration"></span><span id="_CPPv2N8ns_solid18ModelPhasefieldDis19computeStrainEnergyE7General7Element12Intergration"></span><span id="ns_solid::ModelPhasefieldDis::computeStrainEnergy__General.Element.Intergration"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_1afb57ccd0af9dcc5118d34fbdd1c8282d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeStrainEnergy</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <span class="n"><span class="pre">Intergration</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">intergration</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_solid18ModelPhasefieldDis19computeStrainEnergyE7General7Element12Intergration" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid18ModelPhasefieldDis17solidModelElasticE7General7Element8Solidmat5Nodal12Intergration">
+<span id="_CPPv3N8ns_solid18ModelPhasefieldDis17solidModelElasticE7General7Element8Solidmat5Nodal12Intergration"></span><span id="_CPPv2N8ns_solid18ModelPhasefieldDis17solidModelElasticE7General7Element8Solidmat5Nodal12Intergration"></span><span id="ns_solid::ModelPhasefieldDis::solidModelElastic__General.Element.Solidmat.Nodal.Intergration"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_1a4100f6bb31f4da546cc45518bf62036a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">solidModelElastic</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <span class="n"><span class="pre">Intergration</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">intergration</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_solid18ModelPhasefieldDis17solidModelElasticE7General7Element8Solidmat5Nodal12Intergration" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid18ModelPhasefieldDis3e1_E">
+<span id="_CPPv3N8ns_solid18ModelPhasefieldDis3e1_E"></span><span id="_CPPv2N8ns_solid18ModelPhasefieldDis3e1_E"></span><span id="ns_solid::ModelPhasefieldDis::e1___Real"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_1a983103b199d8f01f33443f90b874489b"></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">e1_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N8ns_solid18ModelPhasefieldDis3e1_E" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid18ModelPhasefieldDis3e2_E">
+<span id="_CPPv3N8ns_solid18ModelPhasefieldDis3e2_E"></span><span id="_CPPv2N8ns_solid18ModelPhasefieldDis3e2_E"></span><span id="ns_solid::ModelPhasefieldDis::e2___Real"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_1ac32b6662cede0c3011bc967738738a8a"></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">e2_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N8ns_solid18ModelPhasefieldDis3e2_E" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid18ModelPhasefieldDis3g2_E">
+<span id="_CPPv3N8ns_solid18ModelPhasefieldDis3g2_E"></span><span id="_CPPv2N8ns_solid18ModelPhasefieldDis3g2_E"></span><span id="ns_solid::ModelPhasefieldDis::g2___Real"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_1a887e4169726d9a22134739ce10a125fe"></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">g2_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N8ns_solid18ModelPhasefieldDis3g2_E" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid18ModelPhasefieldDis3rouE">
+<span id="_CPPv3N8ns_solid18ModelPhasefieldDis3rouE"></span><span id="_CPPv2N8ns_solid18ModelPhasefieldDis3rouE"></span><span id="ns_solid::ModelPhasefieldDis::rou__Real"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_1a1eda4c22aef52f622cc88ab4bc5c20e3"></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rou</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N8ns_solid18ModelPhasefieldDis3rouE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid18ModelPhasefieldDis1EE">
+<span id="_CPPv3N8ns_solid18ModelPhasefieldDis1EE"></span><span id="_CPPv2N8ns_solid18ModelPhasefieldDis1EE"></span><span id="ns_solid::ModelPhasefieldDis::E__Real"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_1a9799f92f7aca1cc5aa49b36b1b99d202"></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">E</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N8ns_solid18ModelPhasefieldDis1EE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid18ModelPhasefieldDis4dampE">
+<span id="_CPPv3N8ns_solid18ModelPhasefieldDis4dampE"></span><span id="_CPPv2N8ns_solid18ModelPhasefieldDis4dampE"></span><span id="ns_solid::ModelPhasefieldDis::damp__Real"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_1aade60f5ced177b3f1a672609a292d80c"></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">damp</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N8ns_solid18ModelPhasefieldDis4dampE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid18ModelPhasefieldDis2muE">
+<span id="_CPPv3N8ns_solid18ModelPhasefieldDis2muE"></span><span id="_CPPv2N8ns_solid18ModelPhasefieldDis2muE"></span><span id="ns_solid::ModelPhasefieldDis::mu__Real"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_1a82953e30c3276b9be51c88dd1d205024"></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mu</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N8ns_solid18ModelPhasefieldDis2muE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid18ModelPhasefieldDis5lamdaE">
+<span id="_CPPv3N8ns_solid18ModelPhasefieldDis5lamdaE"></span><span id="_CPPv2N8ns_solid18ModelPhasefieldDis5lamdaE"></span><span id="ns_solid::ModelPhasefieldDis::lamda__Real"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_1a426acd63360cc766fddedb5d8e38bdca"></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lamda</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N8ns_solid18ModelPhasefieldDis5lamdaE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid18ModelPhasefieldDis4phi_E">
+<span id="_CPPv3N8ns_solid18ModelPhasefieldDis4phi_E"></span><span id="_CPPv2N8ns_solid18ModelPhasefieldDis4phi_E"></span><span id="ns_solid::ModelPhasefieldDis::phi___Real"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_1a36a61424bfb4f8c7f15661aae7e0db5f"></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">phi_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N8ns_solid18ModelPhasefieldDis4phi_E" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid18ModelPhasefieldDis14elementindicesE">
+<span id="_CPPv3N8ns_solid18ModelPhasefieldDis14elementindicesE"></span><span id="_CPPv2N8ns_solid18ModelPhasefieldDis14elementindicesE"></span><span id="ns_solid::ModelPhasefieldDis::elementindices__UInt"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_1a0abb402b1f7593a4f6e5d1c1bec6450d"></span><a class="reference internal" href="commonclass.html#_CPPv44UInt" title="UInt"><span class="n"><span class="pre">UInt</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">elementindices</span></span></span><a class="headerlink" href="#_CPPv4N8ns_solid18ModelPhasefieldDis14elementindicesE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid21ModelPhasefieldDisDevE">
+<span id="_CPPv3N8ns_solid21ModelPhasefieldDisDevE"></span><span id="_CPPv2N8ns_solid21ModelPhasefieldDisDevE"></span><span id="ns_solid::ModelPhasefieldDisDev"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_dev"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModelPhasefieldDisDev</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">OpenFdemAbstract</span></span><a class="headerlink" href="#_CPPv4N8ns_solid21ModelPhasefieldDisDevE" title="Permalink to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;<a class="reference internal" href="#solid__mechanics__model__phasefield__displacement__dev_8h"><span class="std std-ref">solid_mechanics_model_phasefield_displacement_dev.h</span></a>&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid21ModelPhasefieldDisDev21ModelPhasefieldDisDevEv">
+<span id="_CPPv3N8ns_solid21ModelPhasefieldDisDev21ModelPhasefieldDisDevEv"></span><span id="_CPPv2N8ns_solid21ModelPhasefieldDisDev21ModelPhasefieldDisDevEv"></span><span id="ns_solid::ModelPhasefieldDisDev::ModelPhasefieldDisDev"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_dev_1a777188bae155571cd31b39ca8eebee81"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ModelPhasefieldDisDev</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_solid21ModelPhasefieldDisDev21ModelPhasefieldDisDevEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid21ModelPhasefieldDisDevD0Ev">
+<span id="_CPPv3N8ns_solid21ModelPhasefieldDisDevD0Ev"></span><span id="_CPPv2N8ns_solid21ModelPhasefieldDisDevD0Ev"></span><span id="ns_solid::ModelPhasefieldDisDev::~ModelPhasefieldDisDev"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_dev_1ad89f13b49ebed54d9c3fa8b797dd5ad9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~ModelPhasefieldDisDev</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_solid21ModelPhasefieldDisDevD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid21ModelPhasefieldDisDev22computePrincipalStressEA_4RealA_4Real4Realb">
+<span id="_CPPv3N8ns_solid21ModelPhasefieldDisDev22computePrincipalStressEA_4RealA_4Real4Realb"></span><span id="_CPPv2N8ns_solid21ModelPhasefieldDisDev22computePrincipalStressEA_4RealA_4Real4Realb"></span><span id="ns_solid::ModelPhasefieldDisDev::computePrincipalStress__RealA.RealA.Real.b"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_dev_1a2f3540094a46c09d642eade59a02e3ca"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computePrincipalStress</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">prinS</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span>, <a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">prinE</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span>, <a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">straintrace</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ispostive</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_solid21ModelPhasefieldDisDev22computePrincipalStressEA_4RealA_4Real4Realb" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid21ModelPhasefieldDisDev17getBulkParametersE8SolidmatK3Int">
+<span id="_CPPv3N8ns_solid21ModelPhasefieldDisDev17getBulkParametersE8SolidmatK3Int"></span><span id="_CPPv2N8ns_solid21ModelPhasefieldDisDev17getBulkParametersE8SolidmatK3Int"></span><span id="ns_solid::ModelPhasefieldDisDev::getBulkParameters__Solidmat.IntC"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_dev_1ab3395460f7a4475f28a493e94baa6b3f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getBulkParameters</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="commonclass.html#_CPPv43Int" title="Int"><span class="n"><span class="pre">Int</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">matindices</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_solid21ModelPhasefieldDisDev17getBulkParametersE8SolidmatK3Int" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Get the material parameters from the material library and compute the stiffness damping coefficient.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>solidmat</strong> – </p></li>
+<li><p><strong>matindices</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid21ModelPhasefieldDisDev39computeElasticTrailStressatIntergrationE12IntergrationK3Int">
+<span id="_CPPv3N8ns_solid21ModelPhasefieldDisDev39computeElasticTrailStressatIntergrationE12IntergrationK3Int"></span><span id="_CPPv2N8ns_solid21ModelPhasefieldDisDev39computeElasticTrailStressatIntergrationE12IntergrationK3Int"></span><span id="ns_solid::ModelPhasefieldDisDev::computeElasticTrailStressatIntergration__Intergration.IntC"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_dev_1a8e64b81c546fc2637fbb89c1ea0b3f2a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeElasticTrailStressatIntergration</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Intergration</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">intergration</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="commonclass.html#_CPPv43Int" title="Int"><span class="n"><span class="pre">Int</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">ig</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_solid21ModelPhasefieldDisDev39computeElasticTrailStressatIntergrationE12IntergrationK3Int" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Compute the elastic trial stress by incremental strain. the stress should not include the stiffness damping stress</p>
+<p>\begin{aligned} &amp;\Delta \sigma_{11}=\alpha_1 \Delta e_{11}+\alpha_2 \Delta e_{22}\ &amp;\Delta \sigma_{22}=\alpha_2 \Delta e_{11}+\alpha_1 \Delta e_{22}\ &amp;\Delta \sigma_{12}=2 G \Delta e_{12} \quad\left(\Delta \sigma_{21}=\Delta \sigma_{12}\right)\ &amp;\Delta \sigma_{33}=\alpha_2\left(\Delta e_{11}+\Delta e_{22}\right) \end{aligned} where \alpha_1 = K + 4/3 * G and \alpha_2 = K - 2/3 * G</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodal</strong> – </p></li>
+<li><p><strong>element</strong> – </p></li>
+<li><p><strong>elementindices</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid21ModelPhasefieldDisDev23computePhasefieldStressE5Nodal7Element12Intergration">
+<span id="_CPPv3N8ns_solid21ModelPhasefieldDisDev23computePhasefieldStressE5Nodal7Element12Intergration"></span><span id="_CPPv2N8ns_solid21ModelPhasefieldDisDev23computePhasefieldStressE5Nodal7Element12Intergration"></span><span id="ns_solid::ModelPhasefieldDisDev::computePhasefieldStress__Nodal.Element.Intergration"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_dev_1afb583ec3c189f310b4e0a117ee3d9931"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computePhasefieldStress</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <span class="n"><span class="pre">Intergration</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">intergration</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_solid21ModelPhasefieldDisDev23computePhasefieldStressE5Nodal7Element12Intergration" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid21ModelPhasefieldDisDev20computeInternalForceE7General5Nodal7Element12Intergration">
+<span id="_CPPv3N8ns_solid21ModelPhasefieldDisDev20computeInternalForceE7General5Nodal7Element12Intergration"></span><span id="_CPPv2N8ns_solid21ModelPhasefieldDisDev20computeInternalForceE7General5Nodal7Element12Intergration"></span><span id="ns_solid::ModelPhasefieldDisDev::computeInternalForce__General.Nodal.Element.Intergration"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_dev_1a505f743f8a8c54fc0140d03fab0ff249"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeInternalForce</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <span class="n"><span class="pre">Intergration</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">intergration</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_solid21ModelPhasefieldDisDev20computeInternalForceE7General5Nodal7Element12Intergration" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid21ModelPhasefieldDisDev17computeLumpedMassE7General7Element5Nodal">
+<span id="_CPPv3N8ns_solid21ModelPhasefieldDisDev17computeLumpedMassE7General7Element5Nodal"></span><span id="_CPPv2N8ns_solid21ModelPhasefieldDisDev17computeLumpedMassE7General7Element5Nodal"></span><span id="ns_solid::ModelPhasefieldDisDev::computeLumpedMass__General.Element.Nodal"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_dev_1a8ad163c19966a5958b44785ef3d52416"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeLumpedMass</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_solid21ModelPhasefieldDisDev17computeLumpedMassE7General7Element5Nodal" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid21ModelPhasefieldDisDev19computeStrainEnergyE7General7Element12Intergration">
+<span id="_CPPv3N8ns_solid21ModelPhasefieldDisDev19computeStrainEnergyE7General7Element12Intergration"></span><span id="_CPPv2N8ns_solid21ModelPhasefieldDisDev19computeStrainEnergyE7General7Element12Intergration"></span><span id="ns_solid::ModelPhasefieldDisDev::computeStrainEnergy__General.Element.Intergration"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_dev_1afae0e1cd13a83494cb99b062a2684471"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeStrainEnergy</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <span class="n"><span class="pre">Intergration</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">intergration</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_solid21ModelPhasefieldDisDev19computeStrainEnergyE7General7Element12Intergration" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid21ModelPhasefieldDisDev17solidModelElasticE7General7Element8Solidmat5Nodal12Intergration">
+<span id="_CPPv3N8ns_solid21ModelPhasefieldDisDev17solidModelElasticE7General7Element8Solidmat5Nodal12Intergration"></span><span id="_CPPv2N8ns_solid21ModelPhasefieldDisDev17solidModelElasticE7General7Element8Solidmat5Nodal12Intergration"></span><span id="ns_solid::ModelPhasefieldDisDev::solidModelElastic__General.Element.Solidmat.Nodal.Intergration"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_dev_1a00d7db31b0ebc6e22c31f31c999da9c3"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">solidModelElastic</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <span class="n"><span class="pre">Intergration</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">intergration</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_solid21ModelPhasefieldDisDev17solidModelElasticE7General7Element8Solidmat5Nodal12Intergration" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid21ModelPhasefieldDisDev3e1_E">
+<span id="_CPPv3N8ns_solid21ModelPhasefieldDisDev3e1_E"></span><span id="_CPPv2N8ns_solid21ModelPhasefieldDisDev3e1_E"></span><span id="ns_solid::ModelPhasefieldDisDev::e1___Real"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_dev_1ae4ca7610cd5f56186864ec5214c91337"></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">e1_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N8ns_solid21ModelPhasefieldDisDev3e1_E" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid21ModelPhasefieldDisDev3e2_E">
+<span id="_CPPv3N8ns_solid21ModelPhasefieldDisDev3e2_E"></span><span id="_CPPv2N8ns_solid21ModelPhasefieldDisDev3e2_E"></span><span id="ns_solid::ModelPhasefieldDisDev::e2___Real"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_dev_1ada181c015e58fdc2eadd8962694be425"></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">e2_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N8ns_solid21ModelPhasefieldDisDev3e2_E" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid21ModelPhasefieldDisDev3g2_E">
+<span id="_CPPv3N8ns_solid21ModelPhasefieldDisDev3g2_E"></span><span id="_CPPv2N8ns_solid21ModelPhasefieldDisDev3g2_E"></span><span id="ns_solid::ModelPhasefieldDisDev::g2___Real"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_dev_1a8372de1e5c2b8c8243b0d3fb150c58eb"></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">g2_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N8ns_solid21ModelPhasefieldDisDev3g2_E" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid21ModelPhasefieldDisDev3rouE">
+<span id="_CPPv3N8ns_solid21ModelPhasefieldDisDev3rouE"></span><span id="_CPPv2N8ns_solid21ModelPhasefieldDisDev3rouE"></span><span id="ns_solid::ModelPhasefieldDisDev::rou__Real"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_dev_1a22a4b654deff2e03af004aaaad9c1a49"></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rou</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N8ns_solid21ModelPhasefieldDisDev3rouE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid21ModelPhasefieldDisDev1EE">
+<span id="_CPPv3N8ns_solid21ModelPhasefieldDisDev1EE"></span><span id="_CPPv2N8ns_solid21ModelPhasefieldDisDev1EE"></span><span id="ns_solid::ModelPhasefieldDisDev::E__Real"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_dev_1a939562205a2a35fdbfb1f2c46dc18a52"></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">E</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N8ns_solid21ModelPhasefieldDisDev1EE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid21ModelPhasefieldDisDev4dampE">
+<span id="_CPPv3N8ns_solid21ModelPhasefieldDisDev4dampE"></span><span id="_CPPv2N8ns_solid21ModelPhasefieldDisDev4dampE"></span><span id="ns_solid::ModelPhasefieldDisDev::damp__Real"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_dev_1a91126e7567cd96d6458b0cec971e983b"></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">damp</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N8ns_solid21ModelPhasefieldDisDev4dampE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid21ModelPhasefieldDisDev2muE">
+<span id="_CPPv3N8ns_solid21ModelPhasefieldDisDev2muE"></span><span id="_CPPv2N8ns_solid21ModelPhasefieldDisDev2muE"></span><span id="ns_solid::ModelPhasefieldDisDev::mu__Real"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_dev_1ac3999f1d3fa4288e7a6eef208c36a279"></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mu</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N8ns_solid21ModelPhasefieldDisDev2muE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid21ModelPhasefieldDisDev5lamdaE">
+<span id="_CPPv3N8ns_solid21ModelPhasefieldDisDev5lamdaE"></span><span id="_CPPv2N8ns_solid21ModelPhasefieldDisDev5lamdaE"></span><span id="ns_solid::ModelPhasefieldDisDev::lamda__Real"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_dev_1aa41041100e140933462c189c2a87e7d2"></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lamda</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N8ns_solid21ModelPhasefieldDisDev5lamdaE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid21ModelPhasefieldDisDev4phi_E">
+<span id="_CPPv3N8ns_solid21ModelPhasefieldDisDev4phi_E"></span><span id="_CPPv2N8ns_solid21ModelPhasefieldDisDev4phi_E"></span><span id="ns_solid::ModelPhasefieldDisDev::phi___Real"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_dev_1aba57913fa2e16247082db7aed9d0a670"></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">phi_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N8ns_solid21ModelPhasefieldDisDev4phi_E" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_solid21ModelPhasefieldDisDev14elementindicesE">
+<span id="_CPPv3N8ns_solid21ModelPhasefieldDisDev14elementindicesE"></span><span id="_CPPv2N8ns_solid21ModelPhasefieldDisDev14elementindicesE"></span><span id="ns_solid::ModelPhasefieldDisDev::elementindices__UInt"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_dev_1a94512d6921adc450beaaa1acfb8c0b89"></span><a class="reference internal" href="commonclass.html#_CPPv44UInt" title="UInt"><span class="n"><span class="pre">UInt</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">elementindices</span></span></span><a class="headerlink" href="#_CPPv4N8ns_solid21ModelPhasefieldDisDev14elementindicesE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N13ns_phasefield10PhasefieldE">
+<span id="_CPPv3N13ns_phasefield10PhasefieldE"></span><span id="_CPPv2N13ns_phasefield10PhasefieldE"></span><span id="ns_phasefield::Phasefield"></span><span class="target" id="classns__phasefield_1_1_phasefield"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Phasefield</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">OpenFdemAbstract</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">ElementUtils</span></span><a class="headerlink" href="#_CPPv4N13ns_phasefield10PhasefieldE" title="Permalink to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;<a class="reference internal" href="#phase__field__model__module_8h"><span class="std std-ref">phase_field_model_module.h</span></a>&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13ns_phasefield10Phasefield10PhasefieldEv">
+<span id="_CPPv3N13ns_phasefield10Phasefield10PhasefieldEv"></span><span id="_CPPv2N13ns_phasefield10Phasefield10PhasefieldEv"></span><span id="ns_phasefield::Phasefield::Phasefield"></span><span class="target" id="classns__phasefield_1_1_phasefield_1ac6699b17690902ec719c402ef63a8275"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Phasefield</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13ns_phasefield10Phasefield10PhasefieldEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13ns_phasefield10PhasefieldD0Ev">
+<span id="_CPPv3N13ns_phasefield10PhasefieldD0Ev"></span><span id="_CPPv2N13ns_phasefield10PhasefieldD0Ev"></span><span id="ns_phasefield::Phasefield::~Phasefield"></span><span class="target" id="classns__phasefield_1_1_phasefield_1ae5f8fee170fc645cf5088cbe7d329027"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~Phasefield</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13ns_phasefield10PhasefieldD0Ev" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13ns_phasefield10Phasefield18phase_field_updateE8Openfdem">
+<span id="_CPPv3N13ns_phasefield10Phasefield18phase_field_updateE8Openfdem"></span><span id="_CPPv2N13ns_phasefield10Phasefield18phase_field_updateE8Openfdem"></span><span id="ns_phasefield::Phasefield::phase_field_update__Openfdem"></span><span class="target" id="classns__phasefield_1_1_phasefield_1a9d7defc977e8a3806609c22772424cfc"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">phase_field_update</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="solverclass.html#_CPPv48Openfdem" title="Openfdem"><span class="n"><span class="pre">Openfdem</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">openfdem</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13ns_phasefield10Phasefield18phase_field_updateE8Openfdem" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>main function to call phase field.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>openfdem</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv49ns_common">
+<span id="_CPPv39ns_common"></span><span id="_CPPv29ns_common"></span><span id="ns_common"></span><span class="target" id="namespacens__common"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ns_common</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv413ns_phasefield">
+<span id="_CPPv313ns_phasefield"></span><span id="_CPPv213ns_phasefield"></span><span id="ns_phasefield"></span><span class="target" id="namespacens__phasefield"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ns_phasefield</span></span></span><a class="headerlink" href="#_CPPv413ns_phasefield" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv48ns_solid">
+<span id="_CPPv38ns_solid"></span><span id="_CPPv28ns_solid"></span><span id="ns_solid"></span><span class="target" id="namespacens__solid"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ns_solid</span></span></span><br /></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="phase__field__model__module_8h"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">phase_field_model_module.h</span></span></dt>
+<dd><div class="docutils container">
+<em>#include “common/openfdem_abstract.h”</em></div>
+<div class="docutils container">
+<em>#include &lt;solid/solid_mechanics/element_utils/element_utils.h&gt;</em></div>
+<div class="docutils container">
+<em>#include “<a class="reference internal" href="#solid__mechanics__model__phasefield_8h"><span class="std std-ref">phasefield/solid_mechanics_model_phasefield.h</span></a>”</em></div>
+<div class="docutils container">
+<em>#include “<a class="reference internal" href="#solid__mechanics__model__phasefield__displacement_8h"><span class="std std-ref">phasefield/solid_mechanics_model_phasefield_displacement.h</span></a>”</em></div>
+<div class="docutils container">
+<em>#include “<a class="reference internal" href="#solid__mechanics__model__phasefield__displacement__dev_8h"><span class="std std-ref">phasefield/solid_mechanics_model_phasefield_displacement_dev.h</span></a>”</em></div>
+<div class="docutils container">
+<em>#include “solver/openfdem.h”</em></div>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="solid__mechanics__model__phasefield_8h"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">solid_mechanics_model_phasefield.h</span></span></dt>
+<dd><div class="docutils container">
+<em>#include “common/openfdem_abstract.h”</em></div>
+<div class="docutils container">
+<em>#include &lt;solid/solid_mechanics/element_utils/element_utils.h&gt;</em></div>
+<div class="docutils container">
+<em>#include “solver/openfdem.h”</em></div>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="solid__mechanics__model__phasefield__displacement_8h"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">solid_mechanics_model_phasefield_displacement.h</span></span></dt>
+<dd><div class="docutils container">
+<em>#include “common/openfdem_abstract.h”</em></div>
+<div class="docutils container">
+<em>#include &lt;solid/solid_mechanics/element_utils/element_utils.h&gt;</em></div>
+<div class="docutils container">
+<em>#include “solver/openfdem.h”</em></div>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="solid__mechanics__model__phasefield__displacement__dev_8h"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">solid_mechanics_model_phasefield_displacement_dev.h</span></span></dt>
+<dd><div class="docutils container">
+<em>#include “common/openfdem_abstract.h”</em></div>
+<div class="docutils container">
+<em>#include &lt;solid/solid_mechanics/element_utils/element_utils.h&gt;</em></div>
+<div class="docutils container">
+<em>#include “solver/openfdem.h”</em></div>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="dir_c990843e826d8aad2d684c5dc0bbb108"></span><em><span class="pre">dir</span></em> <span class="sig-name descname"><span class="pre">phasefield</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="dir_68267d1309a1af8e8297ef4c3efbcdba"></span><em><span class="pre">dir</span></em> <span class="sig-name descname"><span class="pre">src</span></span></dt>
+<dd></dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="particlesclass.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Particulate DEM class</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="solverclass.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Solver class</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../_sources/rst_developer/phasefieldclass.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, OpenFDEM Developer Group.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

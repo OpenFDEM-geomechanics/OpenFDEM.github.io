@@ -1,4 +1,4 @@
-Tunnel excavation under `In-situ` stress
+Tunnel excavation under `in-situ` stress
 ########################################
 In-situ stress is an important issue that significantly influence the damage distribution and surrounding rock stability in underground excavation.
 In this example, we will show how to create the excavation model, how to get stress equlibrium before excavation and how to use step-by-step excavation in OpenFDEM.
@@ -9,8 +9,6 @@ In this example, we will show how to create the excavation model, how to get str
     :scale: 60%
 
     Figure 1: Geometry of the Rock and Excavation
-
-|
 
 ==================================
 1 Main Steps
@@ -23,7 +21,6 @@ In this example, we will show how to create the excavation model, how to get str
 #. Assign boundaries
 #. Setup output
 #. Run model
-
 
 ==================================
 2 Codes
@@ -201,7 +198,6 @@ When you run the program, you can first check the mesh that was created by Gmsh 
 
     Figure 2: Mesh created by Gmsh
 
-|
 
 Check the boundary conditions here. Absorbing boundary conditions are on for both normal and shear directions. In-situ stresses are applied to the boundaries.
 
@@ -212,7 +208,6 @@ Check the boundary conditions here. Absorbing boundary conditions are on for bot
 
     Figure 3: Check the mesh setting from command window
 
-|
 
 
 ==================================

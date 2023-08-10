@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Tunnel excavation under In-situ stress &#8212; &lt;strong&gt;OpenFDEM&lt;/strong&gt;</title>
+    <title>Tunnel excavation under in-situ stress &#8212; &lt;strong&gt;OpenFDEM&lt;/strong&gt;</title>
   
   
   
@@ -349,11 +349,11 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="tutorial2_UCS_with_Gmsh.html">Create model from imported mesh</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial3_UCS_Test_with_Quadrangle_Elements.html">How to use higher-order element</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial4_BD_Test.html">Quick start with Brazilian disc test</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Tunnel excavation under <cite>In-situ</cite> stress</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Tunnel excavation under <cite>in-situ</cite> stress</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial6_Hydro_Seepage.html">Water flowing in rock dam - seepage flow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial7_Hydro_Fracture_Flow.html">Water flowing in rock dam - fracture flow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial8_Thermal_Flux.html">Thermal flux transportation in a bar</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial9_GBM.html">Grain-based model (GBM), interface with <code class="docutils literal notranslate"><span class="pre">Neper</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial9_GBM.html">Grain-based model (GBM), interface with Neper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorial10_Phase_Field.html">Phase Field</a></li>
 </ul>
 </li>
@@ -402,7 +402,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="tutorialindex.html" class="nav-link">Examples</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Tunnel excavation under <cite>In-situ</cite> stress</li>
+    <li class="breadcrumb-item active" aria-current="page">Tunnel excavation under <cite>in-situ</cite> stress</li>
   </ul>
 </nav>
 </div>
@@ -420,7 +420,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="tunnel-excavation-under-in-situ-stress">
-<h1>Tunnel excavation under <cite>In-situ</cite> stress<a class="headerlink" href="#tunnel-excavation-under-in-situ-stress" title="Permalink to this heading">#</a></h1>
+<h1>Tunnel excavation under <cite>in-situ</cite> stress<a class="headerlink" href="#tunnel-excavation-under-in-situ-stress" title="Permalink to this heading">#</a></h1>
 <p>In-situ stress is an important issue that significantly influence the damage distribution and surrounding rock stability in underground excavation.
 In this example, we will show how to create the excavation model, how to get stress equlibrium before excavation and how to use step-by-step excavation in OpenFDEM.</p>
 <figure class="align-center" id="id1">
@@ -429,9 +429,6 @@ In this example, we will show how to create the excavation model, how to get str
 <p><span class="caption-text">Figure 1: Geometry of the Rock and Excavation</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <section id="main-steps">
 <h2>1 Main Steps<a class="headerlink" href="#main-steps" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
@@ -689,9 +686,6 @@ these details based on your own environment.</p>
 <p><span class="caption-text">Figure 2: Mesh created by Gmsh</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Check the boundary conditions here. Absorbing boundary conditions are on for both normal and shear directions. In-situ stresses are applied to the boundaries.</p>
 <figure class="align-center" id="id3">
 <a class="reference internal image-reference" href="../_images/Insitu_BC.png"><img alt="Triangle elements" src="../_images/Insitu_BC.png" style="width: 651.0px; height: 183.6px;" /></a>
@@ -699,9 +693,6 @@ these details based on your own environment.</p>
 <p><span class="caption-text">Figure 3: Check the mesh setting from command window</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 </section>
 <section id="results">
 <h2>4 Results<a class="headerlink" href="#results" title="Permalink to this heading">#</a></h2>

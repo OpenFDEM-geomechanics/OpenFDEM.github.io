@@ -410,8 +410,8 @@ document.write(`
                   
   <section id="what-is-openfdem">
 <h1>What is OpenFDEM<a class="headerlink" href="#what-is-openfdem" title="Permalink to this heading">#</a></h1>
-<p><strong>OpenFDEM</strong> (an Open-source Hybrid Finite-Discrete Element Method, also Open-source Combined Finite-Discrete Element Method) is a scientific software for the numerical solution of partial differential equations,
-also open to other coupling of physical problems such as thermal transportation, hydro flowing, fluid dynamics, rigid collision, etc. This open-source library is primarily based on Hybrid Finite-Discrete Element Method, and now
+<p><strong>OpenFDEM</strong> (Open-source Hybrid Finite-Discrete Element Method, also named Open-source Combined Finite-Discrete Element Method) is a scientific software for the numerical solution of partial differential equations,
+is also open to other coupling of physical problems such as thermal transportation, hydro flowing, fluid dynamics, rigid collision, etc. This open-source library is primarily based on Hybrid Finite-Discrete Element Method, and now
 is a more general solver, which allows an efficient computation of FEM, DEM, particulate DEM, phase-field and CFD.</p>
 <section id="general">
 <h2>General<a class="headerlink" href="#general" title="Permalink to this heading">#</a></h2>
@@ -432,15 +432,20 @@ or numerical algorithms (explicit and implicit) is possible, as well as the abil
 (<code class="docutils literal notranslate"><span class="pre">OpenFDEM</span></code> is intended to be a more general FEM/DEM solver compatible with arbitrary scenarios.) Like other general open-source FEM solvers, the most important
 feature of <code class="docutils literal notranslate"><span class="pre">OpenFDEM</span></code> is its standardization and generality, which allows the continuum-discontinuum method to be used with more general scenarios. The limitation of this project is the developers’ thoughts, rather than the method itself.</p>
 <figure class="align-default" id="id1">
-<img alt="Element Types Gif" src="../_images/elementtype.gif" />
-<figcaption>
-<p><span class="caption-text">OpenFDEM supports 26 element types and 24 materials.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+<img alt="FDEM feature" src="../_images/feature2.svg" /><figcaption>
+<p><span class="caption-text">OpenFDEM feature</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p><strong>Highly accurate and reliable</strong> - The kernel provides high-order integration schemes and solving methods to seek more reliable numerical
 results which are comparable to theoretical solutions. The element type has a maximum order of three to produce the large deformation behavior
 whithin the entity, and the new kinematic scheme to construct a nonlinear deformation. The Hilber-Hughes-Taylor (HHT) time integration scheme
 (second-order accuracy) is used for the explicit solver.</p>
+<figure class="align-default" id="id2">
+<img alt="Element Types Gif" src="../_images/feature.gif" />
+<figcaption>
+<p><span class="caption-text">OpenFDEM supports 26 element types and 24 materials.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p><strong>Friendly preprocessing interface</strong> - The <code class="docutils literal notranslate"><span class="pre">Gmsh</span></code> is implemented to easily create meshes from computer-aided design (CAD),
 geometry file or third-party commercial software. The built-in commands are accessible to create many basic geometries
 (e.g. rectangular, circle, ellipse, polygon, line and particles) and initial discontinuities (e.g. single joint, joint sets,
@@ -454,41 +459,40 @@ complexity of O(NlogN) is proposed to make the contact searching process paralle
 <p><strong>Mesh adaptive analysis support</strong> - Local adaptive mesh refinement (lAMR) and global adaptive mesh refinement(gAMR) are provided in <code class="docutils literal notranslate"><span class="pre">OpenFDEM</span></code>
 for mesh optimization and accuracy enhancement. Based on different remeshing criteria, <code class="docutils literal notranslate"><span class="pre">OpenFDEM</span></code> supports various error estimations, such as primary unknown,
 internal variables mapping, high-accuracy internal variable interpolation and fast unbalance equilibrium after refinement. The AMR supports fracture path consistent before and after remeshing.</p>
-<figure class="align-default" id="id2">
+<figure class="align-default" id="id3">
 <img alt="AMR Gif" src="../_images/AMR.gif" />
 <figcaption>
-<p><span class="caption-text">Global adaptive mesh refinement (up-left) and local adaptive mesh refinement (down-right) in OpenFDEM.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">Global adaptive mesh refinement (up-left) and local adaptive mesh refinement (down-right) in OpenFDEM.</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<figure class="align-default" id="id3">
+<figure class="align-default" id="id4">
 <img alt="Flowing mesh refined stress" src="../_images/wavebetter.gif" />
 <figcaption>
-<p><span class="caption-text">Flowing mesh refined based on the stress level in the bar.</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">Flowing mesh refined based on the stress level in the bar.</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p><strong>Rich grain-based modelling support</strong> - Voronoi tessellations can be created with the built-in Voronoi module.
 The optimization is deployed to match the laboratorial mineral distribution from measurements or digital image.
 The realistic grain-based model (GBM) can be reproduced directly in the project by inputting the binary sample images. The polygonal element type is available for representing the whole mineral individually.
 Furthermore, transgranular fracturing can be realized by element splitting techniques.</p>
-<figure class="align-default" id="id4">
+<figure class="align-default" id="id5">
 <img alt="Voronoi" src="../_images/voronoi.gif" />
 <figcaption>
-<p><span class="caption-text">OpenFDEM implements a Voronoi lib and is able to simulate grains directly based on polygonal elements.</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">OpenFDEM implements a Voronoi lib and is able to simulate grains directly based on polygonal elements.</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p><strong>Large material library including the state-of-the-art models for phase field of quasi-brittle materials and rich element library</strong> - currently,
+<p><strong>Large material library</strong> - currently,
 <code class="docutils literal notranslate"><span class="pre">OpenFDEM</span></code> supports 17 element materials (including elastic, hyperelastic, plastic, damage, nonlocal, viscous and phas—field models), 7 cohesive materials (spanning static, dynamic and fatigue problems),
 and 6 contact models (including Mohr-coulomb friction, hertz contact, rate friction, rough dilation shear law and so on).</p>
-<figure class="align-default" id="id5">
-<img alt="New material library" src="../_images/feature.png" />
-<figcaption>
-<p><span class="caption-text">New material library in OpenFDEM.</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
+<figure class="align-default" id="id6">
+<img alt="New material library" src="../_images/feature.svg" /><figcaption>
+<p><span class="caption-text">New material library in OpenFDEM.</span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<figure class="align-default" id="id6">
+<figure class="align-default" id="id7">
 <img alt="Phase field library" src="../_images/globalAMRPhase.gif" />
 <figcaption>
-<p><span class="caption-text">Phasefield module in OpenFDEM.</span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">Phasefield module with adaptive mesh refinement in OpenFDEM.</span><a class="headerlink" href="#id7" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p><strong>Advanced analysis solvers</strong> - Linear dynamic solver (implicit and explicit), linear static solver (PETSC), eigenvalue problem (SLEPc),
@@ -498,41 +502,35 @@ and nonlinear dynamic solver (explicit) are applicable for different problems, t
 <section id="particle-discrete-element-method-pdem">
 <h2>Particle Discrete Element Method (pDEM)<a class="headerlink" href="#particle-discrete-element-method-pdem" title="Permalink to this heading">#</a></h2>
 <div style="height: 5px;"></div><p><strong>Rigid DEM support</strong> - built-in module for rigid particles packing, kinematics and collision, the particle-based contact models include linear, Hertz, cohesive bond and rotation resistance model.</p>
-<figure class="align-default" id="id7">
+<figure class="align-default" id="id8">
 <img alt="Sand compression test with membrane (left) and irregular deformable and breakable particles packing (right)." src="../_images/PDEM.png" />
 <figcaption>
-<p><span class="caption-text">Sand compression test with membrane (left) and irregular deformable and breakable particles packing (right).</span><a class="headerlink" href="#id7" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">Sand compression test with membrane (left) and irregular deformable and breakable particles packing (right).</span><a class="headerlink" href="#id8" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p><strong>Realistic Particle Modelling</strong> - Overlapping particles and Fourier-Voronoi-based algorithm are used to generate realistic particles having complex shapes.
 The realistic particles can be rigid or deformable. The breakage of the particles are also possible.</p>
-<figure class="align-default" id="id8">
+<figure class="align-left" id="id9">
 <img alt="landslide gif" src="../_images/landslide.gif" />
 <figcaption>
-<p><span class="caption-text">Debris flow of rigid particles due to gravity (left) and debris flow of irregular deformable fragments due to gravity (right, .stl file from Itasca).</span><a class="headerlink" href="#id8" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">Debris flow of rigid particles due to gravity (left) and debris flow of irregular deformable fragments due to gravity (right, .stl file from Itasca).</span><a class="headerlink" href="#id9" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="fluid-dynamic-module">
 <h2>Fluid Dynamic Module<a class="headerlink" href="#fluid-dynamic-module" title="Permalink to this heading">#</a></h2>
 <div style="height: 5px;"></div><p><strong>Analysis Procedures</strong> - matrix flow for pore seepage, transient incompressible fracture flow, transient compressible fracture flow and gas flow problems.</p>
-<figure class="align-default" id="id9">
+<figure class="align-default" id="id10">
 <img alt="landslide gif" src="../_images/gasblast.gif" />
 <figcaption>
-<p><span class="caption-text">Blast considering gas expansion, gas flow by hydro module (left) and without gas expansion by mechanical module (right) ((Wang et al. 2021, 2022)).</span><a class="headerlink" href="#id9" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">Blast considering gas expansion, gas flow by hydro module (left) and without gas expansion by mechanical module (right) ((Wang et al. 2021, 2022)).</span><a class="headerlink" href="#id10" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p><strong>Element Library</strong> - triangle, quadratic triangle, quadrilateral and quadratic quadrilateral element types are supported for Newtonian fluid and Bingham fluid.</p>
-<figure class="align-default" id="id10">
-<img alt="Fluid injection in fractured rock block." src="../_images/Hydraulic.gif" />
-<figcaption>
-<p><span class="caption-text">Fluid injection in fractured rock block.</span><a class="headerlink" href="#id10" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
 <figure class="align-default" id="id11">
-<img alt="Water flowing in a tube using CFD in hydro module." src="../_images/tube.gif" />
+<a class="reference internal image-reference" href="../_images/water.gif"><img alt="Fluid injection in fractured rock block." src="../_images/water.gif" style="width: 720.0px; height: 405.0px;" /></a>
 <figcaption>
-<p><span class="caption-text">Water flowing in a tube using CFD in hydro module.</span><a class="headerlink" href="#id11" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">Fluid injection in fractured rock block (left),  Water flowing in a tube using CFD in hydro module (right)</span><a class="headerlink" href="#id11" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p><strong>Boundary Types</strong> - water level, pore pressure, flow rate, steady flow and impermeable boundary conditions are supported in hydro module.</p>

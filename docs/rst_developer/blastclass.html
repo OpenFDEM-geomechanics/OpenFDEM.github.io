@@ -1,0 +1,926 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Blast class &#8212; &lt;strong&gt;OpenFDEM&lt;/strong&gt;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'rst_developer/blastclass';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Contact class" href="contactclass.html" />
+    <link rel="prev" title="Common class" href="commonclass.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">Call for papers for <a href='https://www.sciencedirect.com/journal/journal-of-rock-mechanics-and-geotechnical-engineering'>Journal of Rock Mechanics and Geotechnical Engineering!</a></div>
+  </div>
+
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title"><strong>OpenFDEM</strong></p>
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_about_introduction/index.html">
+                        Introduction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_theory/index.html">
+                        Theory
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_tutorials/index.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../rst_user_guide/index.html">
+                        User Manual
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_about_us/index.html">
+                        About Us
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_appendix/index.html">
+                        Appendix
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_about_introduction/index.html">
+                        Introduction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_theory/index.html">
+                        Theory
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_tutorials/index.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../rst_user_guide/index.html">
+                        User Manual
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_about_us/index.html">
+                        About Us
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../rst_appendix/index.html">
+                        Appendix
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rst_user_guide/commandindex.html">Command  reference</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/general.html">General</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.console.interval.html">of.console.interval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.damp.global.html">of.damp.global</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.finalize.html">of.finalize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.import.html">of.import</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.import.table.html">of.import.table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.log.interval.html">of.log.interval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.new.html">of.new</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.restore.html">of.restore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.save.html">of.save</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.save.FEM.html">of.save.FEM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.config.html">of.set.config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.contact.html">of.set.contact</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.debug.html">of.set.debug</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.GBM.html">of.set.GBM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.gravity.html">of.set.gravity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.large.html">of.set.large</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.massscale.html">of.set.massscale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.module.html">of.set.module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.omp.html">of.set.omp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.result.html">of.set.result</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.set.rgbm.html">of.set.rgbm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.solve.html">of.solve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.step.html">of.step</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/General/of.timestep.html">of.timestep</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/blast.html">Blast</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Blast/of.blast.position.html">of.blast.position</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/boundary.html">Boundary</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.force.html">of.boundary.nodal.force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.velocity.html">of.boundary.nodal.velocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.inivelocity.html">of.boundary.nodal.inivelocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.acceleration.html">of.boundary.nodal.acceleration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.clear.html">of.boundary.nodal.clear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.force.html">of.boundary.edge.force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.velocity.html">of.boundary.edge.velocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.inivelocity.html">of.boundary.edge.inivelocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.acceleration.html">of.boundary.edge.acceleration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.clear.html">of.boundary.edge.clear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.stress.html">of.boundary.element.stress</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.stress.xgrad.html">of.boundary.element.stress.xgrad</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.stress.ygrad.html">of.boundary.element.stress.ygrad</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.clear.html">of.boundary.element.clear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.blast.html">of.boundary.blast</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/DFN.html">DFN</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/DFN/of.DFN.connectivity.html">of.DFN.connectivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/DFN/of.DFN.group.html">of.DFN.group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/DFN/of.DFN.cohesive.html">of.DFN.cohesive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/DFN/of.DFN.broken.html">of.DFN.broken</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/FEM.html">FEM</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.coord.html">of.import.FEM.nodal.coord</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.coord0.html">of.import.FEM.nodal.coord0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.velocity.html">of.import.FEM.nodal.velocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.groups.html">of.import.FEM.nodal.groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.edge.groups.html">of.import.FEM.edge.groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.element.groups.html">of.import.FEM.element.groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.element.connectivity.html">of.import.FEM.element.connectivity</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/geometry.html">Geometry</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.square.html">of.geometry.square</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.square.html">of.geometry.cut.square</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.remove.square.html">of.geometry.remove.square</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.circle.html">of.geometry.circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.circle.html">of.geometry.cut.circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.remove.circle.html">of.geometry.remove.circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.ellipse.html">of.geometry.ellipse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.ellipse.html">of.geometry.cut.ellipse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.remove.ellipse.html">of.geometry.remove.ellipse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.polygon.html">of.geometry.polygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.polygon.html">of.geometry.cut.polygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.remove.polygon.html">of.geometry.remove.polygon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.table.html">of.geometry.table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.table.html">of.geometry.cut.table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.remove.table.html">of.geometry.remove.table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.domain.html">of.geometry.domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.joint.html">of.geometry.cut.joint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.jset.html">of.geometry.cut.jset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.DFN.html">of.geometry.cut.DFN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.cut.arc.html">of.geometry.cut.arc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.minsize.html">of.geometry.minsize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.minangle.html">of.geometry.minangle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.iteration.html">of.geometry.iteration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.group.html">of.geometry.group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.mesh.size.html">of.geometry.mesh.size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.recombine.html">of.geometry.recombine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.mesh.html">of.geometry.mesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.mesh.write.html">of.geometry.mesh.write</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/group.html">Group</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.html">of.group.nodal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.html">of.group.edge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.element.html">of.group.element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.html">of.group.cohelement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.from.element.html">of.group.nodal.from.element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.from.element.html">of.group.edge.from.element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.from.cohelement.html">of.group.edge.from.cohcohelement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.from.dfn.html">of.group.edge.from.dfn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.from.dfn.html">of.group.cohelement.from.dfn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.from.gbm.html">of.group.cohelement.from.gbm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.bool.union.html">of.group.nodal.bool.union</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.bool.intersect.html">of.group.nodal.bool.intersect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.bool.subtract.html">of.group.nodal.bool.subtract</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.bool.union.html">of.group.edge.bool.union</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.bool.intersect.html">of.group.edge.bool.intersect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.bool.subtract.html">of.group.edge.bool.subtract</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.element.bool.union.html">of.group.element.bool.union</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.element.bool.intersect.html">of.group.element.bool.intersect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.element.bool.subtract.html">of.group.element.bool.subtract</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.bool.union.html">of.group.cohelement.bool.union</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.bool.intersect.html">of.group.cohelement.bool.intersect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.bool.subtract.html">of.group.cohelement.bool.subtract</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/mesh.html">Mesh</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.insert.html">of.mesh.insert</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.insert.dfn.html">of.mesh.insert.dfn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.voronoi.html">of.mesh.voronoi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.split.html">of.mesh.split</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.bary.html">of.mesh.bary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.RG.html">of.mesh.RG</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.RGB.html">of.mesh.RGB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.NVB.html">of.mesh.NVB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.baryGB.html">of.mesh.baryGB</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/material.html">Material</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.element.html">of.mat.element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.cohesive.html">of.mat.cohesive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.contact.html">of.mat.contact</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.hydro.matrix.html">of.mat.hydro.matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.hydro.fracture.html">of.mat.hydro.fracture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.mpm.fluid.html">of.mat.mpm.fluid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.mpm.solid.html">of.mat.mpm.solid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.hydro.fluid.html">of.mat.hydro.fluid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.hydro.gas.html">of.mat.hydro.gas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.nonlocal.html">of.mat.nonlocal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/Material/of.mat.thermal.html">of.mat.thermal</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_user_guide/history.html">History</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.interval.html">of.history.pv.interval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.dynamic.interval.html">of.history.pv.dynamic.interval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.field.html">of.history.pv.field</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.fracture.html">of.history.pv.fracture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.cohesive.html">of.history.pv.cohesive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.damage.html">of.history.pv.damage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.ae.html">of.history.pv.ae</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="developer.html">Developer Document</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="commonclass.html">Common class</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Blast class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contactclass.html">Contact class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometryclass.html">Geometry class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solidclass.html">Solid engine class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hydroclass.html">Hydro transportation class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iohelperclass.html">Input/Output class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="meshclass.html">Mesh processing class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpmclass.html">Computational fluid dynamics class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="particlesclass.html">Particulate DEM class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="phasefieldclass.html">Phase field class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solverclass.html">Solver class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="thermalclass.html">Thermal flux class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voronoiclass.html">Voronoi tessellation class</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../rst_user_guide/index.html" class="nav-link">User Manual</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="developer.html" class="nav-link">Developer Document</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Blast class</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="blast-class">
+<h1>Blast class<a class="headerlink" href="#blast-class" title="Permalink to this heading">#</a></h1>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv415Blast_structure">
+<span id="_CPPv315Blast_structure"></span><span id="_CPPv215Blast_structure"></span><span id="Blast_structure"></span><span class="target" id="struct_blast__structure"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Blast_structure</span></span></span><a class="headerlink" href="#_CPPv415Blast_structure" title="Permalink to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;<a class="reference internal" href="#openfdem__blast_8h"><span class="std std-ref">openfdem_blast.h</span></a>&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15Blast_structure6resizeE3Int3Int">
+<span id="_CPPv3N15Blast_structure6resizeE3Int3Int"></span><span id="_CPPv2N15Blast_structure6resizeE3Int3Int"></span><span id="Blast_structure::resize__Int.Int"></span><span class="target" id="struct_blast__structure_1a7bef32988d4b6caa6245cbfbebe35643"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">resize</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv43Int" title="Int"><span class="n"><span class="pre">Int</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span>, <a class="reference internal" href="commonclass.html#_CPPv43Int" title="Int"><span class="n"><span class="pre">Int</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">initialsize</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15Blast_structure6resizeE3Int3Int" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15Blast_structure5clearEv">
+<span id="_CPPv3N15Blast_structure5clearEv"></span><span id="_CPPv2N15Blast_structure5clearEv"></span><span id="Blast_structure::clear"></span><span class="target" id="struct_blast__structure_1a5abbb20ee61bcee64f1374caa99be9e7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clear</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15Blast_structure5clearEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15Blast_structure9_nodeSizeE">
+<span id="_CPPv3N15Blast_structure9_nodeSizeE"></span><span id="_CPPv2N15Blast_structure9_nodeSizeE"></span><span id="Blast_structure::_nodeSize__UInt"></span><span class="target" id="struct_blast__structure_1a3c92a6e681eea44b7f03590af93e5467"></span><a class="reference internal" href="commonclass.html#_CPPv44UInt" title="UInt"><span class="n"><span class="pre">UInt</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_nodeSize</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N15Blast_structure9_nodeSizeE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15Blast_structure8boreholeE">
+<span id="_CPPv3N15Blast_structure8boreholeE"></span><span id="_CPPv2N15Blast_structure8boreholeE"></span><span id="Blast_structure::borehole__std::vector:blast_type:"></span><span class="target" id="struct_blast__structure_1a1b56e8a9c95d90bf578c41b02a7da25b"></span><a class="reference internal" href="commonclass.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv410blast_type" title="blast_type"><span class="n"><span class="pre">blast_type</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">borehole</span></span></span><a class="headerlink" href="#_CPPv4N15Blast_structure8boreholeE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15Blast_structure11BlastNumberE">
+<span id="_CPPv3N15Blast_structure11BlastNumberE"></span><span id="_CPPv2N15Blast_structure11BlastNumberE"></span><span id="Blast_structure::BlastNumber__UInt"></span><span class="target" id="struct_blast__structure_1aabe0907400377c44b6401d4c5fcea0e3"></span><a class="reference internal" href="commonclass.html#_CPPv44UInt" title="UInt"><span class="n"><span class="pre">UInt</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BlastNumber</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N15Blast_structure11BlastNumberE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15Blast_structure10gas_volumeE">
+<span id="_CPPv3N15Blast_structure10gas_volumeE"></span><span id="_CPPv2N15Blast_structure10gas_volumeE"></span><span id="Blast_structure::gas_volume__Real"></span><span class="target" id="struct_blast__structure_1ad9f821d8d6bae62a63de8dc30a9f6a74"></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gas_volume</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N15Blast_structure10gas_volumeE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15Blast_structure9blast_wetE">
+<span id="_CPPv3N15Blast_structure9blast_wetE"></span><span id="_CPPv2N15Blast_structure9blast_wetE"></span><span id="Blast_structure::blast_wet__std::vector:Int:"></span><span class="target" id="struct_blast__structure_1ac6b0eb69a53a86670dfa9ef6023e54a5"></span><a class="reference internal" href="commonclass.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="commonclass.html#_CPPv43Int" title="Int"><span class="n"><span class="pre">Int</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">blast_wet</span></span></span><a class="headerlink" href="#_CPPv4N15Blast_structure9blast_wetE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15Blast_structure8pressureE">
+<span id="_CPPv3N15Blast_structure8pressureE"></span><span id="_CPPv2N15Blast_structure8pressureE"></span><span id="Blast_structure::pressure__Real"></span><span class="target" id="struct_blast__structure_1ae67d88e22a591fedba65af52f9cf335a"></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pressure</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N15Blast_structure8pressureE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv410blast_type">
+<span id="_CPPv310blast_type"></span><span id="_CPPv210blast_type"></span><span id="blast_type"></span><span class="target" id="structblast__type"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">blast_type</span></span></span><a class="headerlink" href="#_CPPv410blast_type" title="Permalink to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;<a class="reference internal" href="#openfdem__blast_8h"><span class="std std-ref">openfdem_blast.h</span></a>&gt;</em></div>
+<p>class for blast sources. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10blast_type10blast_typeEv">
+<span id="_CPPv3N10blast_type10blast_typeEv"></span><span id="_CPPv2N10blast_type10blast_typeEv"></span><span id="blast_type::blast_type"></span><span class="target" id="structblast__type_1a76c67e712c473e4bd641b551ad05b43c"></span><span class="sig-name descname"><span class="n"><span class="pre">blast_type</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N10blast_type10blast_typeEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N10blast_type3tagE">
+<span id="_CPPv3N10blast_type3tagE"></span><span id="_CPPv2N10blast_type3tagE"></span><span id="blast_type::tag__ss"></span><span class="target" id="structblast__type_1a1eeaecaf9e3121bd958a144823596d08"></span><a class="reference internal" href="commonclass.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">tag</span></span></span><a class="headerlink" href="#_CPPv4N10blast_type3tagE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N10blast_type5coordE">
+<span id="_CPPv3N10blast_type5coordE"></span><span id="_CPPv2N10blast_type5coordE"></span><span id="blast_type::coord__Vector2"></span><span class="target" id="structblast__type_1a48c1c1f46b9de38be226da911fa5addf"></span><a class="reference internal" href="commonclass.html#_CPPv47Vector2" title="Vector2"><span class="n"><span class="pre">Vector2</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">coord</span></span></span><a class="headerlink" href="#_CPPv4N10blast_type5coordE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N10blast_type6radiusE">
+<span id="_CPPv3N10blast_type6radiusE"></span><span id="_CPPv2N10blast_type6radiusE"></span><span id="blast_type::radius__Real"></span><span class="target" id="structblast__type_1aace5b6987ec185a2a662ae29d5d01318"></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">radius</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N10blast_type6radiusE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N10blast_type6bou_idE">
+<span id="_CPPv3N10blast_type6bou_idE"></span><span id="_CPPv2N10blast_type6bou_idE"></span><span id="blast_type::bou_id__UInt"></span><span class="target" id="structblast__type_1aed79934867df4e708ea83b6480d1beef"></span><a class="reference internal" href="commonclass.html#_CPPv44UInt" title="UInt"><span class="n"><span class="pre">UInt</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bou_id</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N10blast_type6bou_idE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N10blast_type7tableidE">
+<span id="_CPPv3N10blast_type7tableidE"></span><span id="_CPPv2N10blast_type7tableidE"></span><span id="blast_type::tableid__UInt"></span><span class="target" id="structblast__type_1a656956a1a5c33651b0dbc4e71629ef52"></span><a class="reference internal" href="commonclass.html#_CPPv44UInt" title="UInt"><span class="n"><span class="pre">UInt</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">tableid</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N10blast_type7tableidE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N10blast_type8time_iniE">
+<span id="_CPPv3N10blast_type8time_iniE"></span><span id="_CPPv2N10blast_type8time_iniE"></span><span id="blast_type::time_ini__Real"></span><span class="target" id="structblast__type_1aa07400a92197214552c2187bdea79ffe"></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">time_ini</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N10blast_type8time_iniE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N10blast_type8time_endE">
+<span id="_CPPv3N10blast_type8time_endE"></span><span id="_CPPv2N10blast_type8time_endE"></span><span id="blast_type::time_end__Real"></span><span class="target" id="structblast__type_1abb7ca707a277d619ed3589304a26e175"></span><a class="reference internal" href="commonclass.html#_CPPv44Real" title="Real"><span class="n"><span class="pre">Real</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">time_end</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N10blast_type8time_endE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_blast11BlastModuleE">
+<span id="_CPPv3N8ns_blast11BlastModuleE"></span><span id="_CPPv2N8ns_blast11BlastModuleE"></span><span id="ns_blast::BlastModule"></span><span class="target" id="classns__blast_1_1_blast_module"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BlastModule</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">OpenFdemAbstract</span></span><a class="headerlink" href="#_CPPv4N8ns_blast11BlastModuleE" title="Permalink to this definition">#</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;<a class="reference internal" href="#openfdem__blast__module_8h"><span class="std std-ref">openfdem_blast_module.h</span></a>&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_blast11BlastModule16Blast_module_runE8Openfdem">
+<span id="_CPPv3N8ns_blast11BlastModule16Blast_module_runE8Openfdem"></span><span id="_CPPv2N8ns_blast11BlastModule16Blast_module_runE8Openfdem"></span><span id="ns_blast::BlastModule::Blast_module_run__Openfdem"></span><span class="target" id="classns__blast_1_1_blast_module_1a5e08409d1ea0d8aa17ce6593dc0346b6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Blast_module_run</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="solverclass.html#_CPPv48Openfdem" title="Openfdem"><span class="n"><span class="pre">Openfdem</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">openfdem</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_blast11BlastModule16Blast_module_runE8Openfdem" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>main interface function to run the blast module. it is called in the main function when the blast module is turned on. This module theoritically can be used for arbitary element types, but other type should be checked.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>openfdem</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_blast11BlastModule16Blast_apply_loadE7General5Nodal10Cohelement7Element5Blast7Boudary8Solidmat">
+<span id="_CPPv3N8ns_blast11BlastModule16Blast_apply_loadE7General5Nodal10Cohelement7Element5Blast7Boudary8Solidmat"></span><span id="_CPPv2N8ns_blast11BlastModule16Blast_apply_loadE7General5Nodal10Cohelement7Element5Blast7Boudary8Solidmat"></span><span id="ns_blast::BlastModule::Blast_apply_load__General.Nodal.Cohelement.Element.Blast.Boudary.Solidmat"></span><span class="target" id="classns__blast_1_1_blast_module_1a79286ac826d540871fc60a5c9e7f88b6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Blast_apply_load</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv410Cohelement" title="Cohelement"><span class="n"><span class="pre">Cohelement</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">cohelement</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <a class="reference internal" href="#_CPPv45Blast" title="Blast"><span class="n"><span class="pre">Blast</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">blast</span></span>, <a class="reference internal" href="solverclass.html#_CPPv47Boudary" title="Boudary"><span class="n"><span class="pre">Boudary</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">boudary</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_blast11BlastModule16Blast_apply_loadE7General5Nodal10Cohelement7Element5Blast7Boudary8Solidmat" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>compute the blast pressure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>general</strong> – </p></li>
+<li><p><strong>nodal</strong> – </p></li>
+<li><p><strong>cohelement</strong> – </p></li>
+<li><p><strong>element</strong> – </p></li>
+<li><p><strong>blast</strong> – </p></li>
+<li><p><strong>boudary</strong> – </p></li>
+<li><p><strong>solidmat</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_blast11BlastModule10push_blastE7General5Blast7BoudaryPc4UInt">
+<span id="_CPPv3N8ns_blast11BlastModule10push_blastE7General5Blast7BoudaryPc4UInt"></span><span id="_CPPv2N8ns_blast11BlastModule10push_blastE7General5Blast7BoudaryPc4UInt"></span><span id="ns_blast::BlastModule::push_blast__General.Blast.Boudary.cP.UInt"></span><span class="target" id="classns__blast_1_1_blast_module_1af218157cfc8b32ef656e0ea79b8e4635"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">push_blast</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="#_CPPv45Blast" title="Blast"><span class="n"><span class="pre">Blast</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">blast</span></span>, <a class="reference internal" href="solverclass.html#_CPPv47Boudary" title="Boudary"><span class="n"><span class="pre">Boudary</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">boudary</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">keyword</span></span>, <a class="reference internal" href="commonclass.html#_CPPv44UInt" title="UInt"><span class="n"><span class="pre">UInt</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">type</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_blast11BlastModule10push_blastE7General5Blast7BoudaryPc4UInt" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>parse blast parameters and boundary types.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>general</strong> – </p></li>
+<li><p><strong>blast</strong> – </p></li>
+<li><p><strong>boudary</strong> – </p></li>
+<li><p><strong>keyword</strong> – </p></li>
+<li><p><strong>type</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_blast11BlastModule23updateBlastConnectedNetE5Nodal5Blast7Boudary10Cohelement7Element">
+<span id="_CPPv3N8ns_blast11BlastModule23updateBlastConnectedNetE5Nodal5Blast7Boudary10Cohelement7Element"></span><span id="_CPPv2N8ns_blast11BlastModule23updateBlastConnectedNetE5Nodal5Blast7Boudary10Cohelement7Element"></span><span id="ns_blast::BlastModule::updateBlastConnectedNet__Nodal.Blast.Boudary.Cohelement.Element"></span><span class="target" id="classns__blast_1_1_blast_module_1ae73870181346762965befda5050f6a58"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">updateBlastConnectedNet</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="#_CPPv45Blast" title="Blast"><span class="n"><span class="pre">Blast</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">blast</span></span>, <a class="reference internal" href="solverclass.html#_CPPv47Boudary" title="Boudary"><span class="n"><span class="pre">Boudary</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">boundary</span></span>, <a class="reference internal" href="solidclass.html#_CPPv410Cohelement" title="Cohelement"><span class="n"><span class="pre">Cohelement</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">cohelement</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_blast11BlastModule23updateBlastConnectedNetE5Nodal5Blast7Boudary10Cohelement7Element" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>update blast connectivity to get gas volume.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodal</strong> – </p></li>
+<li><p><strong>blast</strong> – </p></li>
+<li><p><strong>boundary</strong> – </p></li>
+<li><p><strong>cohelement</strong> – </p></li>
+<li><p><strong>element</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_blast11BlastModule6bou_idE">
+<span id="_CPPv3N8ns_blast11BlastModule6bou_idE"></span><span id="_CPPv2N8ns_blast11BlastModule6bou_idE"></span><span id="ns_blast::BlastModule::bou_id__UInt"></span><span class="target" id="classns__blast_1_1_blast_module_1a406f6521849f572ff5e9b67bd045e0b0"></span><a class="reference internal" href="commonclass.html#_CPPv44UInt" title="UInt"><span class="n"><span class="pre">UInt</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bou_id</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N8ns_blast11BlastModule6bou_idE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8ns_blast11BlastModule5isourE">
+<span id="_CPPv3N8ns_blast11BlastModule5isourE"></span><span id="_CPPv2N8ns_blast11BlastModule5isourE"></span><span id="ns_blast::BlastModule::isour__UInt"></span><span class="target" id="classns__blast_1_1_blast_module_1aa635ce76a9e562475d96def5f32a19c7"></span><a class="reference internal" href="commonclass.html#_CPPv44UInt" title="UInt"><span class="n"><span class="pre">UInt</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isour</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N8ns_blast11BlastModule5isourE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv48ns_blast">
+<span id="_CPPv38ns_blast"></span><span id="_CPPv28ns_blast"></span><span id="ns_blast"></span><span class="target" id="namespacens__blast"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ns_blast</span></span></span><a class="headerlink" href="#_CPPv48ns_blast" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv49ns_common">
+<span id="_CPPv39ns_common"></span><span id="_CPPv29ns_common"></span><span id="ns_common"></span><span class="target" id="namespacens__common"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ns_common</span></span></span><a class="headerlink" href="#_CPPv49ns_common" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="openfdem__blast_8h"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">openfdem_blast.h</span></span></dt>
+<dd><div class="docutils container">
+<em>#include “common/openfdem_common.h”</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-typedefs">Typedefs</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv45Blast">
+<span id="_CPPv35Blast"></span><span id="_CPPv25Blast"></span><span id="Blast"></span><span class="target" id="openfdem__blast_8h_1a28ed42c981361d0da0f0bde2e4c8e628"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv415Blast_structure" title="Blast_structure"><span class="n"><span class="pre">Blast_structure</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">Blast</span></span></span><a class="headerlink" href="#_CPPv45Blast" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="openfdem__blast__module_8h"></span><em><span class="pre">file</span></em> <span class="sig-name descname"><span class="pre">openfdem_blast_module.h</span></span></dt>
+<dd><div class="docutils container">
+<em>#include “common/openfdem_abstract.h”</em></div>
+<div class="docutils container">
+<em>#include “solver/openfdem.h”</em></div>
+</dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="dir_343c401c27b18f0ac163999f45a4744a"></span><em><span class="pre">dir</span></em> <span class="sig-name descname"><span class="pre">blast</span></span></dt>
+<dd></dd></dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<span class="target" id="dir_68267d1309a1af8e8297ef4c3efbcdba"></span><em><span class="pre">dir</span></em> <span class="sig-name descname"><span class="pre">src</span></span></dt>
+<dd></dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="commonclass.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Common class</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="contactclass.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Contact class</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="../_sources/rst_developer/blastclass.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, OpenFDEM Developer Group.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

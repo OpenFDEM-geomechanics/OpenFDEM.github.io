@@ -410,30 +410,237 @@ document.write(`
                   
   <section id="getting-started">
 <h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h1>
-<p>This is the source code of C/C++ based OpenFDEM project developed by Dr. Xiaofeng Li,
-since 2017. This project is not limited to an FDEM solver for continuum-discontinuum problems,
-but is also capable of solving particulate DEM, material point method and phasefield problems.</p>
-<p>The project can be complied by Visual Studio (&gt; 2015) and compatible with Windows 7, 10 or Linux-like systems.</p>
-<p>Tutorial examples can be found in <code class="docutils literal notranslate"><span class="pre">..src\test\..</span></code>. The main file is located at <code class="docutils literal notranslate"><span class="pre">src\solve\openfdem.cpp</span></code>. OpenFDEM is run by
-parsing the input file.</p>
-<p>General steps to run OpenFDEM models:</p>
-<ol class="arabic simple">
-<li><p>Open <code class="docutils literal notranslate"><span class="pre">.sln</span></code> project in <code class="docutils literal notranslate"><span class="pre">\openfdem</span> <span class="pre">src\of\OpenFDEM\OpenFDEM.sln</span></code> by your local Visual Studio software.</p></li>
-<li><p>Compile the project in Visual Studio  from the <code class="docutils literal notranslate"><span class="pre">src\solve\openfdem.cpp</span></code> main file.</p></li>
-<li><p>The executable code should be in <code class="docutils literal notranslate"><span class="pre">x64\Release``(or</span> <span class="pre">``Debug</span></code>), be sure to keep the <code class="docutils literal notranslate"><span class="pre">.dll</span></code> files in the same folder with <code class="docutils literal notranslate"><span class="pre">.exe</span></code> file.</p></li>
-<li><p>Drag the <code class="docutils literal notranslate"><span class="pre">.of</span></code> file into the <code class="docutils literal notranslate"><span class="pre">.exe</span></code> software then the model will starts to run, or use <code class="docutils literal notranslate"><span class="pre">openfdem</span> <span class="pre">example.of</span></code> in terminal to run a model.</p></li>
-</ol>
-<section id="source-code-download">
-<h2>Source Code Download<a class="headerlink" href="#source-code-download" title="Permalink to this heading">#</a></h2>
-<p>The source code is hosted on the University of Toronto Gitlab: <a class="reference external" href="http://geogroup.utoronto.ca:9191/gitlab/xiaofeng.li/openfdem_solver">OpenFDEM Gitlab</a>.</p>
+<section id="source-code">
+<h2>Source Code<a class="headerlink" href="#source-code" title="Permalink to this heading">#</a></h2>
+<p>The OpenFDEM source code is available to obtain from the <a class="reference external" href="http://geogroup.utoronto.ca:9191/gitlab/xiaofeng.li/openfdem_solver">OpenFDEM GitHub repository</a>.  GitHub is a platform and cloud-based service for software development and version control by <code class="docutils literal notranslate"><span class="pre">Git</span></code>.
+It lets you and others work together on this project from anywhere.
+But in the first stage, the source code is only open to collaborating partners before some benchmark papers are published.
+Trial of source code is accessible on request, contact the developer <a class="reference external" href="mailto:xfli&#37;&#52;&#48;whrsm&#46;ac&#46;cn">Dr<span>&#46;</span> Xiaofeng Li</a> to get the invitation to this repository.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you plan on collaborating or using OpenFDEM as your base code it is highly recommended that you frok this repository to your own account and work on it there.</p>
+<p><strong>NEVER</strong> push your local code to the master branch. The master branch of OpenFDEM is the stable branch that will only be updated after all tests are passing.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Only pull requests from your own fork to the main repository will be considered and they will only be considered if there are <strong>NO CONFLICTS</strong>.</p>
+<p>Push requests which cause <strong>CONFLICTS</strong> will be rejected out of hand.</p>
+</div>
 </section>
-<section id="system-requirements">
-<h2>System Requirements<a class="headerlink" href="#system-requirements" title="Permalink to this heading">#</a></h2>
+<section id="building-application">
+<h2>Building Application<a class="headerlink" href="#building-application" title="Permalink to this heading">#</a></h2>
+<p>The OpenFDEM projects are built by <a class="reference external" href="https://cmake.org/">CMake</a>, an extensible open-source system that manages the build system. It provides
+a standard and convenient build process cross various operating systems: Windows, MacOS and different version of Linux.
+CMake needs to be installed on your system. For it to work, other applications such as C, C++ and Fortran compilers (if you want to complie LACPACK yourself) need to be also installed.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Most code instructions below are run from a <strong>Console</strong> application. Type <strong>CDM</strong> in the Windows search.</p>
+</div>
+<section id="microsoft-windows-10">
+<h3>Microsoft Windows 10<a class="headerlink" href="#microsoft-windows-10" title="Permalink to this heading">#</a></h3>
+<section id="software-requirements">
+<h4>Software Requirements<a class="headerlink" href="#software-requirements" title="Permalink to this heading">#</a></h4>
+<p>For Windows 10 the user must have the following applications installed on their computer: CMake, Visual Studio (&gt;= Visual Studio 2019, SDK should supports C++ 20):</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Installation of PETSc on Windows makes the developer headache, You can uncheck  <code class="docutils literal notranslate"><span class="pre">Static</span> <span class="pre">Solver</span></code> in CMakeList or use <code class="docutils literal notranslate"><span class="pre">BLAS/LAPACK</span></code> instead. If you insist on trying nonlinear static solver and compiling PETSC on Windows OS, more information can be found from
+<a class="reference external" href="https://petsc.org/release/install/windows/">PETSc Document</a> , how to use</p>
 <ul class="simple">
-<li><p>Windows x64</p></li>
-<li><p>Visual Studio (&gt; 2015)</p></li>
+<li><p><a class="reference external" href="https://www.msys2.org">MSYS2</a> or</p></li>
+<li><p>Microsoft Windows Subsystem for Linux 2 (<a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">WLS2</a>)</p></li>
 </ul>
-<p>All external dependencies are included in the OpenFDEM download.</p>
+<p>to install PETSc.</p>
+</div>
+</section>
+<section id="obtaining-openfdem-source-code">
+<h4>Obtaining OpenFDEM Source Code<a class="headerlink" href="#obtaining-openfdem-source-code" title="Permalink to this heading">#</a></h4>
+<p>To obtain the source code, from a terminal <strong>cd</strong> to the directory you want to store OpenFDEM and then type the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export BASEDIR=~/openfdem
+mkdir -p $BASEDIR
+cd $BASEDIR
+git clone https://github.com/OpenFDEM-geomechanics/OpenFDEM.git
+cd openfdem
+git checkout master
+</pre></div>
+</div>
+</section>
+<section id="building-the-openfdem">
+<h4>Building the OpenFDEM<a class="headerlink" href="#building-the-openfdem" title="Permalink to this heading">#</a></h4>
+<p>Go to the folder that contains the OpenFDEM folder and issue the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mkdir build
+cd build
+cmake ..
+cmake --build . -j$(nproc)
+</pre></div>
+</div>
+<p>When completed the executables (OpenSees, OpenSeesMP, and OpenSeesMP) are located in the build/bin folder and the python module (opensees.pyd) is located in the build/lib folder.</p>
+</section>
+</section>
+<section id="macos">
+<h3>MacOS<a class="headerlink" href="#macos" title="Permalink to this heading">#</a></h3>
+<section id="id1">
+<h4>Software Requirements<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
+<p>For MacOS the user must have the following applications installed on their computer: xcode command line tools, brew, cmake, gcc, gfortran, python, and open-mpi. All the applications are installed via the command line. Some of these you can skip as you may already have them installed.</p>
+<ol class="arabic simple">
+<li><p><strong>XCODE Command Line Tools</strong>: To make Apple Clang and git available, type the following in a terminal application:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">xcode</span><span class="o">-</span><span class="n">select</span> <span class="n">install</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ol class="arabic simple">
+<li><p>if <cite>xcode-select: error: command line tools are already installed, use “Software Update” to install updates</cite> appears, skip because it’s already installed.</p></li>
+<li><p>if <cite>xcode-select: error: command line tools are already installed, use “Software Update” to install updates</cite> appears, skip because it’s already installed.</p></li>
+</ol>
+</div>
+<ol class="arabic simple" start="2">
+<li><p><strong>brew</strong>: To install the HomeBrew package manager, type the following in a terminal window:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p><strong>cmake, gfortran, python &amp; open-mpi</strong>. Now we will use brew to install these applications. Again from the command line type:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">cmake</span>
+<span class="n">brew</span> <span class="n">install</span> <span class="n">gcc</span>
+<span class="n">brew</span> <span class="n">install</span> <span class="nb">open</span><span class="o">-</span><span class="n">mpi</span>
+<span class="n">brew</span> <span class="n">install</span> <span class="n">scalapack</span>
+<span class="n">brew</span> <span class="n">install</span> <span class="n">python</span><span class="o">@</span><span class="mf">3.9</span>
+
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">mumps</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">mumps</span>
+<span class="n">mkdir</span> <span class="n">build</span>
+<span class="n">cd</span> <span class="n">build</span>
+<span class="n">cmake</span> <span class="o">..</span> <span class="o">-</span><span class="n">Darith</span><span class="o">=</span><span class="n">d</span>
+<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Release</span> <span class="o">--</span><span class="n">parallel</span> <span class="mi">4</span>
+<span class="n">cd</span> <span class="o">..</span>
+</pre></div>
+</div>
+</section>
+<section id="obtaining-the-source-code">
+<h4>Obtaining the Source Code<a class="headerlink" href="#obtaining-the-source-code" title="Permalink to this heading">#</a></h4>
+<p>To obtain the source code, from a terminal <strong>cd</strong> to the directory you want to store OpenFDEM and then type the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export BASEDIR=~/openfdem
+mkdir -p $BASEDIR
+cd $BASEDIR
+git clone https://github.com/OpenFDEM-geomechanics/OpenFDEM.git
+cd openfdem
+git checkout master
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h4>Building the OpenFDEM<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
+<p>With everything installed the build process is somehwat simple! Again from a terminal window:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd openfdem
+git pull
+mkdir build
+cd build
+conan install .. --build missing
+cmake .. -DMUMPS_DIR=$PWD/../../mumps/build -DOPENMPI=TRUE -DSCALAPACK_LIBRARIES=/usr/local/Cellar/scalapack/2.2.0_1/lib/libscalapack.dylib
+cmake --build . --config Release
+</pre></div>
+</div>
+</section>
+</section>
+<section id="ubuntu">
+<h3>Ubuntu<a class="headerlink" href="#ubuntu" title="Permalink to this heading">#</a></h3>
+<section id="id3">
+<h4>Software Requirements<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p><strong>Needed Applications and Libraries</strong>: For Ubuntu, the user must have a number of packages installed on their system. These can be installed following commands issued in a terminal window.</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;sudo apt-get update</span>
+<span class="go">sudo apt install cmake</span>
+<span class="go">sudo apt install gcc g++ gfortran</span>
+<span class="go">sudo apt install python3-pip</span>
+<span class="go">sudo apt install liblapack-dev</span>
+<span class="go">sudo apt install libopenmpi-dev</span>
+<span class="go">sudo apt install libatlas-base-dev</span>
+<span class="go">sudo apt install libeigen3-dev</span>
+<span class="go">sudo apt install petsc-dev</span>
+
+<span class="go">git clone https://github.com/mumps.git</span>
+<span class="go">cd mumps</span>
+<span class="go">mkdir build</span>
+<span class="go">cd build</span>
+<span class="go">cmake .. -Darith=d</span>
+<span class="go">cmake --build . --config Release --parallel 4</span>
+<span class="go">make</span>
+<span class="go">sudo make install</span>
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h4>Obtaining the Source Code<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
+<p>To obtain the source code, from a terminal <strong>cd</strong> to the directory you want to store OpenFDEM and then type the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export BASEDIR=~/openfdem
+mkdir -p $BASEDIR
+cd $BASEDIR
+git clone https://github.com/OpenFDEM-geomechanics/OpenFDEM.git
+cd openfdem
+git checkout master
+</pre></div>
+</div>
+</section>
+<section id="building-the-opensees-applications">
+<h4>Building the OpenSees Applications<a class="headerlink" href="#building-the-opensees-applications" title="Permalink to this heading">#</a></h4>
+<p>With everything installed the build process is somehwat simple! Again from a terminal window enter the following commands:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd openfdem
+git pull
+mkdir build
+cd build
+conan install .. --build missing
+cmake .. -DMUMPS_DIR=$PWD/../../mumps/build -DOPENMPI=TRUE -DSCALAPACK_LIBRARIES=/usr/local/Cellar/scalapack/2.2.0_1/lib/libscalapack.dylib
+cmake --build . --config Release
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ol class="arabic simple">
+<li><p>If you have more than <strong>4</strong> cores available, you can use the extra cores by changing the <strong>4</strong> value!</p></li>
+</ol>
+</div>
+</section>
+</section>
+</section>
+<section id="run-an-example">
+<h2>Run an Example<a class="headerlink" href="#run-an-example" title="Permalink to this heading">#</a></h2>
+<p>OpenFDEM is command-driven software, and should be run using command lines with input arguments by specifying the path. The console will print out the available options when run without any option. Generally, there are several ways to run your model as described in this section.</p>
+<section id="method-one">
+<h3>Method one<a class="headerlink" href="#method-one" title="Permalink to this heading">#</a></h3>
+<p>Use <strong>WIN + R</strong> from any screen to bring up the command prompt console. Int the console input the path of the OpenFDEM installation and the folder where your input file (should has the suffix <a href="#id5"><span class="problematic" id="id6">``</span></a>.of) is stored, as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span>\<span class="p">[</span><span class="n">The</span> <span class="n">path</span> <span class="n">you</span> <span class="n">installed</span> <span class="n">OpenFDEM</span><span class="p">]</span>\<span class="n">OpenFDEM</span> <span class="o">-</span><span class="ow">in</span> <span class="n">E</span><span class="p">:</span>\<span class="p">[</span><span class="n">the</span> <span class="n">path</span> <span class="n">you</span> <span class="n">put</span> <span class="n">your</span> <span class="nb">input</span> <span class="n">file</span><span class="p">]</span><span class="o">.</span><span class="p">[</span><span class="n">runfilename</span><span class="p">]</span><span class="o">.</span><span class="n">of</span>
+</pre></div>
+</div>
+<p>If you open the command prompt console in the folder where you saved the <code class="docutils literal notranslate"><span class="pre">.of</span></code> file, generally, you can shorten the path in front of your input file, as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span>\<span class="p">[</span><span class="n">The</span> <span class="n">path</span> <span class="n">you</span> <span class="n">installed</span> <span class="n">OpenFDEM</span><span class="p">]</span>\<span class="n">OpenFDEM</span> <span class="o">-</span><span class="ow">in</span> <span class="p">[</span><span class="n">runfilename</span><span class="p">]</span><span class="o">.</span><span class="n">of</span>
+</pre></div>
+</div>
+<p>Moreover, aAfter OpenFDEM installation on your computer, the path will be added to PATH by default. You can check this by typing <code class="docutils literal notranslate"><span class="pre">openfdem</span></code> in the command prompt console. If the home page of OpenFDEM appears, it means OpenFDEM is successfully installed. If this is successful, then the command prompt</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">OpenFDEM</span> <span class="o">-</span><span class="ow">in</span> <span class="p">[</span><span class="n">runfilename</span><span class="p">]</span><span class="o">.</span><span class="n">of</span>
+</pre></div>
+</div>
+<p>You can also add the OpenFDEM folder into the default path by following the instruction here: <a class="reference external" href="https://stackoverflow.com/questions/44272416/how-to-add-a-folder-to-path-environment-variable-in-windows-10-with-screensho">https://stackoverflow.com/questions/44272416/how-to-add-a-folder-to-path-environment-variable-in-windows-10-with-screensho</a>.</p>
+</section>
+<section id="method-two">
+<h3>Method two<a class="headerlink" href="#method-two" title="Permalink to this heading">#</a></h3>
+<p>Similar to the method mentioned above, you can omit the keywords of <code class="docutils literal notranslate"><span class="pre">-in</span></code> and change the command as</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">OpenFDEM</span> <span class="p">[</span><span class="n">runfilename</span><span class="p">]</span><span class="o">.</span><span class="n">of</span>
+</pre></div>
+</div>
+</section>
+<section id="method-three">
+<h3>Method three<a class="headerlink" href="#method-three" title="Permalink to this heading">#</a></h3>
+<p>You can create a shortcut of <code class="docutils literal notranslate"><span class="pre">OpenFDEM.exe</span></code> from the installed folder, and copy the shortcut to the folder where you put your <code class="docutils literal notranslate"><span class="pre">.of</span></code> file. Then, drag the input <code class="docutils literal notranslate"><span class="pre">.of</span></code> file directly into that shortcut. The model will run automatically.</p>
+</section>
+<section id="method-four">
+<h3>Method four<a class="headerlink" href="#method-four" title="Permalink to this heading">#</a></h3>
+<p>You can use the <code class="docutils literal notranslate"><span class="pre">.bat</span></code> to quickly run your model on Windows OS. There is a sample template <code class="docutils literal notranslate"><span class="pre">runOpenfdem.bat</span></code> in the example folder. You can copy this file into the same folder of your input file <code class="docutils literal notranslate"><span class="pre">.of</span></code>, and edit the file to change the path (using textbook editing tools like text editor or NotePad++) of the OpenFDEM (line 4) and your input file name (line 7). Save the file and then run (doubel click) the <code class="docutils literal notranslate"><span class="pre">.bat</span></code> file. This should run the model whose path is saved in the <code class="docutils literal notranslate"><span class="pre">.bat</span></code> file.</p>
+<p>If you want to create your own examples, you can directly create a copy of the folder and modify it on the existing <code class="docutils literal notranslate"><span class="pre">.of</span></code> files or <code class="docutils literal notranslate"><span class="pre">.bat</span></code> files.</p>
+</section>
 </section>
 </section>
 
@@ -484,8 +691,35 @@ parsing the input file.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#source-code-download">Source Code Download</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#system-requirements">System Requirements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#source-code">Source Code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-application">Building Application</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#microsoft-windows-10">Microsoft Windows 10</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#software-requirements">Software Requirements</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#obtaining-openfdem-source-code">Obtaining OpenFDEM Source Code</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-openfdem">Building the OpenFDEM</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#macos">MacOS</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Software Requirements</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#obtaining-the-source-code">Obtaining the Source Code</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Building the OpenFDEM</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ubuntu">Ubuntu</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Software Requirements</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Obtaining the Source Code</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-opensees-applications">Building the OpenSees Applications</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-an-example">Run an Example</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-one">Method one</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-two">Method two</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-three">Method three</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-four">Method four</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
