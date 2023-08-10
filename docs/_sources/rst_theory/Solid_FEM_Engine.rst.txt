@@ -18,8 +18,7 @@ Weak formulation of updated Lagrange
 
 .. figure:: ../../images/Theory/FDEM_body.png
     :alt: Timesteps
-    :align: center
-    :scale: 15%
+    :align: center    
 
     Figure 1: The theory of FDEM body  
 
@@ -217,7 +216,7 @@ considered, the governing equation is written as
 Eq. can be rewritten in the form of nodal velocities
 
 .. math::
-    {}^{n + 1}{\dot{\mathbf{u}}} = \left\lbrack \left( 1\  - \ 2\ \alpha\ \mathrm{\Delta}t \right)^{n}\ {\dot{\mathbf{u}}}\  + \ \frac{2\mathrm{\Delta}t}{\mathbf{M}^{FE}}\ \left( {}^{n}\ {{\mathbf{f}}}^{ext}\  -^{n}\ {{\mathbf{f}}}^{int}\ \left( {}^{n}\ {\mathbf{u}} \right) \right) \right\rbrack \tag{23}
+   ^{\mathrm{n}+1}\mathbf{\dot{u}}=\left[ \left( 1-2\alpha \Delta t \right) ^{\mathrm{n}}\mathbf{\dot{u}}+\frac{2\Delta t}{\mathbf{M}}\left( ^{\mathrm{n}}\mathbf{f}^{ext}-^{\mathrm{n}}\mathbf{f}^{int}\left( ^{\mathrm{n}}\mathbf{u} \right) \right) \right]   \tag{23}
 
 while the damping coefficient is :math:`\alpha = 2\xi\omega`,
 :math:`\xi` is the damping ratio and :math:`\omega` is the frequency

@@ -1,6 +1,8 @@
 Getting started
 ===========================
 
+There are two ways to use OpenFDEM: user access from installation binary suite or developer access from compiling the source code yourself.
+
 ***********
 Source Code
 ***********
@@ -8,7 +10,7 @@ Source Code
 The OpenFDEM source code is available to obtain from the `OpenFDEM GitHub repository <http://geogroup.utoronto.ca:9191/gitlab/xiaofeng.li/openfdem_solver>`_.  GitHub is a platform and cloud-based service for software development and version control by ``Git``. 
 It lets you and others work together on this project from anywhere.
 But in the first stage, the source code is only open to collaborating partners before some benchmark papers are published. 
-Trial of source code is accessible on request, contact the developer `Dr. Xiaofeng Li <xfli@whrsm.ac.cn>`_ to get the invitation to this repository.
+But trial of source code is accessible on request, contact the developer `Dr. Xiaofeng Li <xfli@whrsm.ac.cn>`_ to get the invitation to this repository.
 
 
 .. note::
@@ -27,7 +29,7 @@ Trial of source code is accessible on request, contact the developer `Dr. Xiaofe
 
 
 ********************
-Building Application
+Installation from Sources
 ********************
 
 The OpenFDEM projects are built by `CMake <https://cmake.org/>`_, an extensible open-source system that manages the build system. It provides 
@@ -40,13 +42,13 @@ CMake needs to be installed on your system. For it to work, other applications s
    Most code instructions below are run from a **Console** application. Type **CDM** in the Windows search. 
 
 
-Microsoft Windows 10
-**********
+Microsoft Windows OS
+********************
 
 Software Requirements
 ^^^^^^^^^^^^^^^^^^^^^
 
-For Windows 10 the user must have the following applications installed on their computer: CMake, Visual Studio (>= Visual Studio 2019, SDK should supports C++ 20):
+For Windows 10 the user must have the following applications installed on their computer: CMake, Visual Studio (>= Visual Studio 2019, SDK should supports C++ 20), Microsoft Visual C++ 2008 Redistributable Package is required for Windows 7 and 10.
 
 .. note::
 
@@ -86,7 +88,12 @@ Go to the folder that contains the OpenFDEM folder and issue the following:
     cmake ..
     cmake --build . -j$(nproc) 
 
-When completed the executables (OpenSees, OpenSeesMP, and OpenSeesMP) are located in the build/bin folder and the python module (opensees.pyd) is located in the build/lib folder.
+Compiling the OpenFDEM
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+After the project is built, go to ``../build`` and use Visual Studio open the project,
+
+When completed the executables are located in the src/bin folder and the python module is located in the src/lib folder.
 	 
 
 
@@ -128,12 +135,12 @@ For MacOS the user must have the following applications installed on their compu
     brew install scalapack
     brew install python@3.9
 
-    git clone https://github.com/mumps.git
+    git clone https://github.com/scivision/mumps.git
     cd mumps
     mkdir build
     cd build
     cmake .. -Darith=d
-    cmake --build . --config Release --parallel 4
+    cmake --build . --config Release --parallel 8
     cd ..
     
 Obtaining the Source Code       
@@ -173,7 +180,7 @@ Ubuntu
 Software Requirements
 ^^^^^^^^^^^^^^^^^^^^^
 
-1. **Needed Applications and Libraries**: For Ubuntu, the user must have a number of packages installed on their system. These can be installed following commands issued in a terminal window.
+**Needed Applications and Libraries**: For Ubuntu, the user must have a number of packages installed on their system. These can be installed following commands issued in a terminal window.
 
 .. code::
 
@@ -187,7 +194,7 @@ Software Requirements
     sudo apt install libeigen3-dev
     sudo apt install petsc-dev
 
-    git clone https://github.com/mumps.git
+    git clone https://github.com/scivision/mumps.git
     cd mumps
     mkdir build
     cd build
@@ -211,7 +218,7 @@ To obtain the source code, from a terminal **cd** to the directory you want to s
     cd openfdem
     git checkout master
 
-Building the OpenSees Applications
+Building the OpenFDEM Applications
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 With everything installed the build process is somehwat simple! Again from a terminal window enter the following commands:
@@ -223,12 +230,11 @@ With everything installed the build process is somehwat simple! Again from a ter
     mkdir build
     cd build
     conan install .. --build missing
-    cmake .. -DMUMPS_DIR=$PWD/../../mumps/build -DOPENMPI=TRUE -DSCALAPACK_LIBRARIES=/usr/local/Cellar/scalapack/2.2.0_1/lib/libscalapack.dylib
     cmake --build . --config Release 
 
 .. note::
 
-   1. If you have more than **4** cores available, you can use the extra cores by changing the **4** value!      
+    If you have more than **8** cores available, you can use the extra cores by changing the **8** value!      
 
 
 
@@ -281,6 +287,12 @@ Method four
 You can use the ``.bat`` to quickly run your model on Windows OS. There is a sample template ``runOpenfdem.bat`` in the example folder. You can copy this file into the same folder of your input file ``.of``, and edit the file to change the path (using textbook editing tools like text editor or NotePad++) of the OpenFDEM (line 4) and your input file name (line 7). Save the file and then run (doubel click) the ``.bat`` file. This should run the model whose path is saved in the ``.bat`` file.
 
 If you want to create your own examples, you can directly create a copy of the folder and modify it on the existing ``.of`` files or ``.bat`` files.
+
+********************
+Python Interface
+********************
+
+under construction
 
 
 .. raw:: html

@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Getting started &#8212; &lt;strong&gt;OpenFDEM&lt;/strong&gt;</title>
+    <title>Getting started &#8212; OpenFDEM</title>
   
   
   
@@ -118,7 +118,7 @@
   
   
   
-    <p class="title logo__title"><strong>OpenFDEM</strong></p>
+    <p class="title logo__title">OpenFDEM</p>
   
 </a></div>
     
@@ -346,6 +346,7 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
 <li class="toctree-l1"><a class="reference internal" href="copyrights.html">Copyright</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="Blog.html">Blogs</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="Blogs/20230804_Call_for_Paper.html">Call for papers</a></li>
@@ -410,12 +411,13 @@ document.write(`
                   
   <section id="getting-started">
 <h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h1>
+<p>There are two ways to use OpenFDEM: user access from installation binary suite or developer access from compiling the source code yourself.</p>
 <section id="source-code">
 <h2>Source Code<a class="headerlink" href="#source-code" title="Permalink to this heading">#</a></h2>
 <p>The OpenFDEM source code is available to obtain from the <a class="reference external" href="http://geogroup.utoronto.ca:9191/gitlab/xiaofeng.li/openfdem_solver">OpenFDEM GitHub repository</a>.  GitHub is a platform and cloud-based service for software development and version control by <code class="docutils literal notranslate"><span class="pre">Git</span></code>.
 It lets you and others work together on this project from anywhere.
 But in the first stage, the source code is only open to collaborating partners before some benchmark papers are published.
-Trial of source code is accessible on request, contact the developer <a class="reference external" href="mailto:xfli&#37;&#52;&#48;whrsm&#46;ac&#46;cn">Dr<span>&#46;</span> Xiaofeng Li</a> to get the invitation to this repository.</p>
+But trial of source code is accessible on request, contact the developer <a class="reference external" href="mailto:xfli&#37;&#52;&#48;whrsm&#46;ac&#46;cn">Dr<span>&#46;</span> Xiaofeng Li</a> to get the invitation to this repository.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you plan on collaborating or using OpenFDEM as your base code it is highly recommended that you frok this repository to your own account and work on it there.</p>
@@ -427,8 +429,8 @@ Trial of source code is accessible on request, contact the developer <a class="r
 <p>Push requests which cause <strong>CONFLICTS</strong> will be rejected out of hand.</p>
 </div>
 </section>
-<section id="building-application">
-<h2>Building Application<a class="headerlink" href="#building-application" title="Permalink to this heading">#</a></h2>
+<section id="installation-from-sources">
+<h2>Installation from Sources<a class="headerlink" href="#installation-from-sources" title="Permalink to this heading">#</a></h2>
 <p>The OpenFDEM projects are built by <a class="reference external" href="https://cmake.org/">CMake</a>, an extensible open-source system that manages the build system. It provides
 a standard and convenient build process cross various operating systems: Windows, MacOS and different version of Linux.
 CMake needs to be installed on your system. For it to work, other applications such as C, C++ and Fortran compilers (if you want to complie LACPACK yourself) need to be also installed.</p>
@@ -436,11 +438,11 @@ CMake needs to be installed on your system. For it to work, other applications s
 <p class="admonition-title">Note</p>
 <p>Most code instructions below are run from a <strong>Console</strong> application. Type <strong>CDM</strong> in the Windows search.</p>
 </div>
-<section id="microsoft-windows-10">
-<h3>Microsoft Windows 10<a class="headerlink" href="#microsoft-windows-10" title="Permalink to this heading">#</a></h3>
+<section id="microsoft-windows-os">
+<h3>Microsoft Windows OS<a class="headerlink" href="#microsoft-windows-os" title="Permalink to this heading">#</a></h3>
 <section id="software-requirements">
 <h4>Software Requirements<a class="headerlink" href="#software-requirements" title="Permalink to this heading">#</a></h4>
-<p>For Windows 10 the user must have the following applications installed on their computer: CMake, Visual Studio (&gt;= Visual Studio 2019, SDK should supports C++ 20):</p>
+<p>For Windows 10 the user must have the following applications installed on their computer: CMake, Visual Studio (&gt;= Visual Studio 2019, SDK should supports C++ 20), Microsoft Visual C++ 2008 Redistributable Package is required for Windows 7 and 10.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Installation of PETSc on Windows makes the developer headache, You can uncheck  <code class="docutils literal notranslate"><span class="pre">Static</span> <span class="pre">Solver</span></code> in CMakeList or use <code class="docutils literal notranslate"><span class="pre">BLAS/LAPACK</span></code> instead. If you insist on trying nonlinear static solver and compiling PETSC on Windows OS, more information can be found from
@@ -473,7 +475,11 @@ cmake ..
 cmake --build . -j$(nproc)
 </pre></div>
 </div>
-<p>When completed the executables (OpenSees, OpenSeesMP, and OpenSeesMP) are located in the build/bin folder and the python module (opensees.pyd) is located in the build/lib folder.</p>
+</section>
+<section id="compiling-the-openfdem">
+<h4>Compiling the OpenFDEM<a class="headerlink" href="#compiling-the-openfdem" title="Permalink to this heading">#</a></h4>
+<p>After the project is built, go to <code class="docutils literal notranslate"><span class="pre">../build</span></code> and use Visual Studio open the project,</p>
+<p>When completed the executables are located in the src/bin folder and the python module is located in the src/lib folder.</p>
 </section>
 </section>
 <section id="macos">
@@ -509,12 +515,12 @@ cmake --build . -j$(nproc)
 <span class="n">brew</span> <span class="n">install</span> <span class="n">scalapack</span>
 <span class="n">brew</span> <span class="n">install</span> <span class="n">python</span><span class="o">@</span><span class="mf">3.9</span>
 
-<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">mumps</span><span class="o">.</span><span class="n">git</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">scivision</span><span class="o">/</span><span class="n">mumps</span><span class="o">.</span><span class="n">git</span>
 <span class="n">cd</span> <span class="n">mumps</span>
 <span class="n">mkdir</span> <span class="n">build</span>
 <span class="n">cd</span> <span class="n">build</span>
 <span class="n">cmake</span> <span class="o">..</span> <span class="o">-</span><span class="n">Darith</span><span class="o">=</span><span class="n">d</span>
-<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Release</span> <span class="o">--</span><span class="n">parallel</span> <span class="mi">4</span>
+<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Release</span> <span class="o">--</span><span class="n">parallel</span> <span class="mi">8</span>
 <span class="n">cd</span> <span class="o">..</span>
 </pre></div>
 </div>
@@ -549,9 +555,7 @@ cmake --build . --config Release
 <h3>Ubuntu<a class="headerlink" href="#ubuntu" title="Permalink to this heading">#</a></h3>
 <section id="id3">
 <h4>Software Requirements<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
-<ol class="arabic simple">
-<li><p><strong>Needed Applications and Libraries</strong>: For Ubuntu, the user must have a number of packages installed on their system. These can be installed following commands issued in a terminal window.</p></li>
-</ol>
+<p><strong>Needed Applications and Libraries</strong>: For Ubuntu, the user must have a number of packages installed on their system. These can be installed following commands issued in a terminal window.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
 <span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">cmake</span>
 <span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">gcc</span> <span class="n">g</span><span class="o">++</span> <span class="n">gfortran</span>
@@ -562,7 +566,7 @@ cmake --build . --config Release
 <span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">libeigen3</span><span class="o">-</span><span class="n">dev</span>
 <span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">petsc</span><span class="o">-</span><span class="n">dev</span>
 
-<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">mumps</span><span class="o">.</span><span class="n">git</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">scivision</span><span class="o">/</span><span class="n">mumps</span><span class="o">.</span><span class="n">git</span>
 <span class="n">cd</span> <span class="n">mumps</span>
 <span class="n">mkdir</span> <span class="n">build</span>
 <span class="n">cd</span> <span class="n">build</span>
@@ -585,23 +589,20 @@ git checkout master
 </pre></div>
 </div>
 </section>
-<section id="building-the-opensees-applications">
-<h4>Building the OpenSees Applications<a class="headerlink" href="#building-the-opensees-applications" title="Permalink to this heading">#</a></h4>
+<section id="building-the-openfdem-applications">
+<h4>Building the OpenFDEM Applications<a class="headerlink" href="#building-the-openfdem-applications" title="Permalink to this heading">#</a></h4>
 <p>With everything installed the build process is somehwat simple! Again from a terminal window enter the following commands:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd openfdem
-git pull
-mkdir build
-cd build
-conan install .. --build missing
-cmake .. -DMUMPS_DIR=$PWD/../../mumps/build -DOPENMPI=TRUE -DSCALAPACK_LIBRARIES=/usr/local/Cellar/scalapack/2.2.0_1/lib/libscalapack.dylib
-cmake --build . --config Release
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">openfdem</span>
+<span class="n">git</span> <span class="n">pull</span>
+<span class="n">mkdir</span> <span class="n">build</span>
+<span class="n">cd</span> <span class="n">build</span>
+<span class="n">conan</span> <span class="n">install</span> <span class="o">..</span> <span class="o">--</span><span class="n">build</span> <span class="n">missing</span>
+<span class="n">cmake</span> <span class="o">--</span><span class="n">build</span> <span class="o">.</span> <span class="o">--</span><span class="n">config</span> <span class="n">Release</span>
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<ol class="arabic simple">
-<li><p>If you have more than <strong>4</strong> cores available, you can use the extra cores by changing the <strong>4</strong> value!</p></li>
-</ol>
+<p>If you have more than <strong>8</strong> cores available, you can use the extra cores by changing the <strong>8</strong> value!</p>
 </div>
 </section>
 </section>
@@ -640,9 +641,13 @@ cmake --build . --config Release
 <h3>Method four<a class="headerlink" href="#method-four" title="Permalink to this heading">#</a></h3>
 <p>You can use the <code class="docutils literal notranslate"><span class="pre">.bat</span></code> to quickly run your model on Windows OS. There is a sample template <code class="docutils literal notranslate"><span class="pre">runOpenfdem.bat</span></code> in the example folder. You can copy this file into the same folder of your input file <code class="docutils literal notranslate"><span class="pre">.of</span></code>, and edit the file to change the path (using textbook editing tools like text editor or NotePad++) of the OpenFDEM (line 4) and your input file name (line 7). Save the file and then run (doubel click) the <code class="docutils literal notranslate"><span class="pre">.bat</span></code> file. This should run the model whose path is saved in the <code class="docutils literal notranslate"><span class="pre">.bat</span></code> file.</p>
 <p>If you want to create your own examples, you can directly create a copy of the folder and modify it on the existing <code class="docutils literal notranslate"><span class="pre">.of</span></code> files or <code class="docutils literal notranslate"><span class="pre">.bat</span></code> files.</p>
+</section>
+</section>
+<section id="python-interface">
+<h2>Python Interface<a class="headerlink" href="#python-interface" title="Permalink to this heading">#</a></h2>
+<p>under construction</p>
 <script src="//clustrmaps.com/globe.js?d=IJDdJTOZeBy5TaHUiVkIm7GLGSulnk0C2NzaC4-34QA">
 </script></section>
-</section>
 </section>
 
 
@@ -693,11 +698,12 @@ cmake --build . --config Release
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#source-code">Source Code</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-application">Building Application</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#microsoft-windows-10">Microsoft Windows 10</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-from-sources">Installation from Sources</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#microsoft-windows-os">Microsoft Windows OS</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#software-requirements">Software Requirements</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#obtaining-openfdem-source-code">Obtaining OpenFDEM Source Code</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-openfdem">Building the OpenFDEM</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#compiling-the-openfdem">Compiling the OpenFDEM</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#macos">MacOS</a><ul class="nav section-nav flex-column">
@@ -709,7 +715,7 @@ cmake --build . --config Release
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ubuntu">Ubuntu</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Software Requirements</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Obtaining the Source Code</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-opensees-applications">Building the OpenSees Applications</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-openfdem-applications">Building the OpenFDEM Applications</a></li>
 </ul>
 </li>
 </ul>
@@ -721,6 +727,7 @@ cmake --build . --config Release
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-four">Method four</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-interface">Python Interface</a></li>
 </ul>
   </nav></div>
 

@@ -4,6 +4,7 @@ Collaborating
 .. figure:: ../../images/Aboutus/torontoLogo.png   
     :scale: 45%
     :align: left
+
 |
 |
 |
@@ -11,6 +12,7 @@ Collaborating
 |
 |
 |
+
 ===================================================================
 
 - Professor **Giovanni Grasselli**, NSERC – Energi Simulation Industrial Research Chair in Fundamental Rock Physics and Rock Mechanics
@@ -26,11 +28,13 @@ Collaborating
 .. figure:: ../../images/Aboutus/ISRMlogo.png   
     :scale: 20%
     :align: left
+
 |
 |
 |
 |
 |
+
 =================================================================
 
 - Professor **Haibo Li**, Dean of Wuhan Branch, Chinese Academy of Sciences, Vice-Editor of Journal of Rock Mechanics and Geotechnical Engineering
@@ -43,6 +47,7 @@ Collaborating
 .. figure:: ../../images/Aboutus/polyulogo.png   
     :scale: 60%
     :align: left
+
 |
 |
 |
@@ -50,7 +55,8 @@ Collaborating
 |
 |
 |
-----------------------------------------------------
+
+=================================================================
 
 - Dr **Qi Zhao**, 2019 - 2022
 - Dr **Xiaofeng Li**, 2020 - 2021
@@ -61,13 +67,15 @@ Collaborating
 .. figure:: ../../images/Aboutus/monashlogo.png   
     :scale: 20%
     :align: left
+
 |
 |
 |
 |
 |
 |
-----------------------------------------------------------------
+
+=================================================================
 
 - Professor **Jian Zhao**, Editors-in-Chief of International Journal of Rock Mechanics and Mining Sciences
 

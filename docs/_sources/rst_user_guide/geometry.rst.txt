@@ -33,7 +33,3 @@ Geometry
    Geometry/of.geometry.mesh
    Geometry/of.geometry.mesh.write
 
-.. raw:: html
-
-   <script src="//clustrmaps.com/globe.js?d=IJDdJTOZeBy5TaHUiVkIm7GLGSulnk0C2NzaC4-34QA">
-   </script>

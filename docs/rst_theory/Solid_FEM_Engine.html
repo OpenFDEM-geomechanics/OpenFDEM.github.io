@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Solid FEM &#8212; &lt;strong&gt;OpenFDEM&lt;/strong&gt;</title>
+    <title>Solid FEM &#8212; OpenFDEM</title>
   
   
   
@@ -119,7 +119,7 @@
   
   
   
-    <p class="title logo__title"><strong>OpenFDEM</strong></p>
+    <p class="title logo__title">OpenFDEM</p>
   
 </a></div>
     
@@ -443,7 +443,7 @@ document.write(`
 <section id="weak-formulation-of-updated-lagrange">
 <h2>Weak formulation of updated Lagrange<a class="headerlink" href="#weak-formulation-of-updated-lagrange" title="Permalink to this heading">#</a></h2>
 <figure class="align-center" id="id1">
-<a class="reference internal image-reference" href="../_images/FDEM_body.png"><img alt="Timesteps" src="../_images/FDEM_body.png" style="width: 561.4499999999999px; height: 468.45px;" /></a>
+<img alt="Timesteps" src="../_images/FDEM_body.png" />
 <figcaption>
 <p><span class="caption-text">Figure 1: The theory of FDEM body</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -576,7 +576,7 @@ considered, the governing equation is written as</p>
 \[\mathbf{M}^{FE}{\ddot{\mathbf{u}}} + \mathbf{C}^{FE}\dot{{\mathbf{u}}} + {{\mathbf{f}}}^{int}\left( {\mathbf{u}} \right) - {{\mathbf{f}}}^{ext} = 0 \tag{22}\]</div>
 <p>Eq. can be rewritten in the form of nodal velocities</p>
 <div class="math notranslate nohighlight">
-\[{}^{n + 1}{\dot{\mathbf{u}}} = \left\lbrack \left( 1\  - \ 2\ \alpha\ \mathrm{\Delta}t \right)^{n}\ {\dot{\mathbf{u}}}\  + \ \frac{2\mathrm{\Delta}t}{\mathbf{M}^{FE}}\ \left( {}^{n}\ {{\mathbf{f}}}^{ext}\  -^{n}\ {{\mathbf{f}}}^{int}\ \left( {}^{n}\ {\mathbf{u}} \right) \right) \right\rbrack \tag{23}\]</div>
+\[^{\mathrm{n}+1}\mathbf{\dot{u}}=\left[ \left( 1-2\alpha \Delta t \right) ^{\mathrm{n}}\mathbf{\dot{u}}+\frac{2\Delta t}{\mathbf{M}}\left( ^{\mathrm{n}}\mathbf{f}^{ext}-^{\mathrm{n}}\mathbf{f}^{int}\left( ^{\mathrm{n}}\mathbf{u} \right) \right) \right]   \tag{23}\]</div>
 <p>while the damping coefficient is <span class="math notranslate nohighlight">\(\alpha = 2\xi\omega\)</span>,
 <span class="math notranslate nohighlight">\(\xi\)</span> is the damping ratio and <span class="math notranslate nohighlight">\(\omega\)</span> is the frequency
 parameter. The stability of the explicit scheme is depended on the

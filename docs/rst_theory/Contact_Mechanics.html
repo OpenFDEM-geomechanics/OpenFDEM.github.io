@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Contact Mechanics &#8212; &lt;strong&gt;OpenFDEM&lt;/strong&gt;</title>
+    <title>Contact Mechanics &#8212; OpenFDEM</title>
   
   
   
@@ -46,6 +46,7 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/design-tabs.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'rst_theory/Contact_Mechanics';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -118,7 +119,7 @@
   
   
   
-    <p class="title logo__title"><strong>OpenFDEM</strong></p>
+    <p class="title logo__title">OpenFDEM</p>
   
 </a></div>
     
@@ -429,9 +430,73 @@ document.write(`
                   
   <section id="contact-mechanics">
 <h1>Contact Mechanics<a class="headerlink" href="#contact-mechanics" title="Permalink to this heading">#</a></h1>
-<p>under construction</p>
+<section id="contact-detection-algorithm">
+<h2>Contact detection algorithm<a class="headerlink" href="#contact-detection-algorithm" title="Permalink to this heading">#</a></h2>
+<p>The contact algorithms in OpenFDEM is divided into: (a) <strong>neighbour search</strong>
+and (b) <strong>geometric resolution.</strong> Neighbour search is a rough search
+aims to provide a list of possible blocks in contact including global
+search e.g. an altering digital tree (ADT), no binary search (NBS)
+contact detection algorithm, CGRID, DESS algorithm,
+master-slave algorithm and local search, e.g. node-to-surface (NTS)
+algorithm, RIGID algorithm, inside-outside algorithm.
+Geometric resolution algorithms strongly depend on complexity of the
+geometric representation of cells. The discrete function representation
+(DFR) algorithm has a computational complexity of order O(<em>N</em>) and
+the common-plane (CP), which bisects the space between two contacting
+blocks, is advantageous for vertex-to-vertex or edge-to-vertex contacts
+where the definition of the contact normal is a non-trivial problem and
+the method has a complexity of order O(<em>N</em>). The number of
+iterations of CP is depended on the accuracy of the initial guess of the
+CP position, and then a fast common plane (FCP) method and a
+shortest link (SL) method are proposed to increase efficiency of
+the CP method.</p>
+<p>In OpenFDEM, the contact detection algorithm is developed for blocks
+with evident size using square bounding box method in cooperation with
+the NBS algorithm (shown in Figure 1), which aims to divide the NBS
+model to several groups (list in Table 1), the flow chart of the
+enhanced NBS algorithm is</p>
+<div class="math notranslate nohighlight">
+\[{{\mathbf{x}}}^{k} = 1 + int\left( \frac{{{\mathbf{x}}}_{i} - {{\mathbf{x}}}_{\min}}{d(0)}\  + \ \frac{1}{2} \right) \tag{1}\]</div>
+<figure class="align-center" id="id1">
+<img alt="Timesteps" src="../_images/contactdetection.png" />
+<figcaption>
+<p><span class="caption-text">Figure 1. The schematic algorithm of NBS contact detection in OpenFDEM.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The enhanced NBS contact detection method used in mGbCDM</p>
+<table class="table" id="id2">
+<caption><span class="caption-text">Table 1</span><a class="headerlink" href="#id2" title="Permalink to this table">#</a></caption>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Step 1:</strong> Loop the blocks and find the maximum size buffer box for
+the initial group box <span class="math notranslate nohighlight">\(d(0) = d_{\max}\)</span>;</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Step 2</strong>: Divide the blocks into <span class="math notranslate nohighlight">\(n\)</span> groups with size of
+buffer box for the nth group box as
+<span class="math notranslate nohighlight">\(d(n) = d_{\max} \cdot \alpha^{n - 1}\)</span>,
+<span class="math notranslate nohighlight">\(\alpha \in \left( 0\ ,\ \left. \ 1 \right\rbrack \right.\ \)</span>;</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Step 3:</strong> All the blocks are mapped in to the grid space with edge
+length of <span class="math notranslate nohighlight">\(d(0)\)</span> as depicted in Figure 2 , the central point of
+the block <span class="math notranslate nohighlight">\({\underset{˙}{\mathbf{x}}}^{k}\)</span> is computed in Eq ;</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Step 4:</strong> Loop all the blocks and detect contacts for the first
+group, the contact couple groups is identified when
+<span class="math notranslate nohighlight">\(\left| {\underset{˙}{\mathbf{x}}}^{(t)}\  - \ {\underset{˙}{\m
+athbf{x}}}^{(c)} \right| &lt; \max\left( d^{(t)}\  + \ d^{(c)} \right)\)</span>,
+the contact state can be recognized as neighboring contacts or center
+contacts;</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Step 5:</strong> Repeat step 3 and step 4 for all groups of the remaining
+blocks and identify the states of the contacts;</p></td>
+</tr>
+</tbody>
+</table>
 <script src="//clustrmaps.com/globe.js?d=IJDdJTOZeBy5TaHUiVkIm7GLGSulnk0C2NzaC4-34QA">
 </script></section>
+</section>
 
 
                 </article>
@@ -473,6 +538,16 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contact-detection-algorithm">Contact detection algorithm</a></li>
+</ul>
+  </nav></div>
 
   <div class="sidebar-secondary-item">
   <div class="tocsection sourcelink">
