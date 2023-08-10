@@ -70,3 +70,7 @@ The content in the input file when opened in ``NotePad++`` will be shown in diff
 
 Black characters that are not bold are incorrect keywords or keywords misspelled from those predefined in the fdem syntax. For the second case, you can check your keywords in the command list or try to rerun your model. OpenFDEM will pop out an error message when it meets any unrecognized keywords and prints the corresponding error. 
 
+.. raw:: html
+
+   <script src="//clustrmaps.com/globe.js?d=IJDdJTOZeBy5TaHUiVkIm7GLGSulnk0C2NzaC4-34QA">
+   </script>

@@ -6,3 +6,8 @@ Particle Discrete Element Method (pDEM)
    
    Rigid_Particle_DEM
    Irregular_Deformable_Cluster_DEM
+
+.. raw:: html
+
+   <script src="//clustrmaps.com/globe.js?d=IJDdJTOZeBy5TaHUiVkIm7GLGSulnk0C2NzaC4-34QA">
+   </script>

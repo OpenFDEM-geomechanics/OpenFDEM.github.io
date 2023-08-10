@@ -15,3 +15,8 @@ Material
    Material/of.mat.hydro.gas
    Material/of.mat.nonlocal
    Material/of.mat.thermal
+
+.. raw:: html
+
+   <script src="//clustrmaps.com/globe.js?d=IJDdJTOZeBy5TaHUiVkIm7GLGSulnk0C2NzaC4-34QA">
+   </script>

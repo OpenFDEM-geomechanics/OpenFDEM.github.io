@@ -6,3 +6,8 @@ Mesh Adaptive Analysis
    
    Local_Adaptive_Mesh_Refinement
    Global_Adaptive_Mesh_Refinement
+
+.. raw:: html
+
+   <script src="//clustrmaps.com/globe.js?d=IJDdJTOZeBy5TaHUiVkIm7GLGSulnk0C2NzaC4-34QA">
+   </script>

@@ -8,3 +8,8 @@ Fluid Transport
    Porous_Fluid_Theory
    Two_Phase_Fluid_Theory
    Gas_Flow_Theory
+
+.. raw:: html
+
+   <script src="//clustrmaps.com/globe.js?d=IJDdJTOZeBy5TaHUiVkIm7GLGSulnk0C2NzaC4-34QA">
+   </script>

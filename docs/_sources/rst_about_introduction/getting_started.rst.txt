@@ -177,7 +177,7 @@ Software Requirements
 
 .. code::
 
-    >>>sudo apt-get update      
+    sudo apt-get update      
     sudo apt install cmake
     sudo apt install gcc g++ gfortran
     sudo apt install python3-pip
@@ -281,3 +281,9 @@ Method four
 You can use the ``.bat`` to quickly run your model on Windows OS. There is a sample template ``runOpenfdem.bat`` in the example folder. You can copy this file into the same folder of your input file ``.of``, and edit the file to change the path (using textbook editing tools like text editor or NotePad++) of the OpenFDEM (line 4) and your input file name (line 7). Save the file and then run (doubel click) the ``.bat`` file. This should run the model whose path is saved in the ``.bat`` file.
 
 If you want to create your own examples, you can directly create a copy of the folder and modify it on the existing ``.of`` files or ``.bat`` files.
+
+
+.. raw:: html
+
+   <script src="//clustrmaps.com/globe.js?d=IJDdJTOZeBy5TaHUiVkIm7GLGSulnk0C2NzaC4-34QA">
+   </script>

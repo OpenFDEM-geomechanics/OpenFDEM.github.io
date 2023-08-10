@@ -410,15 +410,15 @@ document.write(`
                   
   <section id="what-is-openfdem">
 <h1>What is OpenFDEM<a class="headerlink" href="#what-is-openfdem" title="Permalink to this heading">#</a></h1>
-<p><strong>OpenFDEM</strong> (Open-source Hybrid Finite-Discrete Element Method, also named Open-source Combined Finite-Discrete Element Method) is a scientific software for the numerical solution of partial differential equations,
-is also open to other coupling of physical problems such as thermal transportation, hydro flowing, fluid dynamics, rigid collision, etc. This open-source library is primarily based on Hybrid Finite-Discrete Element Method, and now
-is a more general solver, which allows an efficient computation of FEM, DEM, particulate DEM, phase-field and CFD.</p>
+<p><strong>OpenFDEM</strong> (open-source Hybrid Finite-Discrete Element Method, also named Open-source Combined Finite-Discrete Element Method) is a scientific software for the numerical solution of partial differential equations,
+is also open to other coupling of physical problems such as thermal transportation, hydro flowing, fluid dynamics and rigid collision, etc. This open-source library is primarily based on Finite-Discrete Element Method, and now
+is a more general solver, which allows an efficient computation of FEM, DEM, particulate DEM, phase-field and CFD problems.</p>
 <section id="general">
 <h2>General<a class="headerlink" href="#general" title="Permalink to this heading">#</a></h2>
 <section id="object-oriented-architecture-c-and-cuda">
 <h3>Object Oriented Architecture (C++ and CUDA®)<a class="headerlink" href="#object-oriented-architecture-c-and-cuda" title="Permalink to this heading">#</a></h3>
 <div style="height: 5px;"></div><p>The main feature of <code class="docutils literal notranslate"><span class="pre">OpenFDEM</span></code> is the use of modern C++ object-oriented programming, and the organization of data structure defining
-from the explicit input keywords. It consists of a working environment in which any problem is defined using a limited number of objects, which makes</p>
+from the explicit input keywords. It consists of a working environment in which any problem is defined using a certain number of objects, which makes</p>
 <ul class="simple">
 <li><p>it approachable and easy to use at both the development and application levels as the initial intention.</p></li>
 <li><p>the environment structured and concise.</p></li>
@@ -437,7 +437,7 @@ feature of <code class="docutils literal notranslate"><span class="pre">OpenFDEM
 </figcaption>
 </figure>
 <p><strong>Highly accurate and reliable</strong> - The kernel provides high-order integration schemes and solving methods to seek more reliable numerical
-results which are comparable to theoretical solutions. The element type has a maximum order of three to produce the large deformation behavior
+results which are comparable to theoretical solutions. The element type has a maximum order of three to accurately reproduce the large deformation behavior
 whithin the entity, and the new kinematic scheme to construct a nonlinear deformation. The Hilber-Hughes-Taylor (HHT) time integration scheme
 (second-order accuracy) is used for the explicit solver.</p>
 <figure class="align-default" id="id2">
@@ -450,12 +450,12 @@ whithin the entity, and the new kinematic scheme to construct a nonlinear deform
 geometry file or third-party commercial software. The built-in commands are accessible to create many basic geometries
 (e.g. rectangular, circle, ellipse, polygon, line and particles) and initial discontinuities (e.g. single joint, joint sets,
 DFNs and DFNs from image mapping). This built-in mesh module can quickly assess mesh quality and identify the local bad meshes
-which will be further optimized by swap, node insertion, node delete, element split techniques, automatically or manually. Meanwhile,
+which will be further optimized by node swap, node insertion, node delete, element split techniques, automatically or manually. Meanwhile,
 for very complex geometric models, users can also import mesh files from third-party software. <code class="docutils literal notranslate"><span class="pre">OpenFDEM</span></code> supports importing standard mesh files,
-such as <code class="docutils literal notranslate"><span class="pre">.geo</span></code>, <code class="docutils literal notranslate"><span class="pre">.msh</span></code>, <code class="docutils literal notranslate"><span class="pre">.inp</span></code>, <code class="docutils literal notranslate"><span class="pre">.stl</span></code>, <code class="docutils literal notranslate"><span class="pre">.dxf</span></code>, <code class="docutils literal notranslate"><span class="pre">.iges</span></code>, <code class="docutils literal notranslate"><span class="pre">.pos</span></code> and <code class="docutils literal notranslate"><span class="pre">.step</span></code>, etc. Principally, the geometry file can be processed by Gmsh can also be done by <code class="docutils literal notranslate"><span class="pre">OpenFDEM</span></code>.</p>
+such as <code class="docutils literal notranslate"><span class="pre">.geo</span></code>, <code class="docutils literal notranslate"><span class="pre">.msh</span></code>, <code class="docutils literal notranslate"><span class="pre">.inp</span></code>, <code class="docutils literal notranslate"><span class="pre">.stl</span></code>, <code class="docutils literal notranslate"><span class="pre">.dxf</span></code>, <code class="docutils literal notranslate"><span class="pre">.iges</span></code>, <code class="docutils literal notranslate"><span class="pre">.pos</span></code> and <code class="docutils literal notranslate"><span class="pre">.step</span></code>, etc. Principally, the geometry file can be processed by <code class="docutils literal notranslate"><span class="pre">Gmsh</span></code> can also be done by <code class="docutils literal notranslate"><span class="pre">OpenFDEM</span></code>.</p>
 <p><strong>Parallel processing support</strong> - Most modules can be operated in parallel and very good performance scalability on various platforms.
 Instead of using no binary searching (NBS) contact method in <code class="docutils literal notranslate"><span class="pre">OpenFDEM</span></code>, a new element-wise contact searching algorithm with a
-complexity of O(NlogN) is proposed to make the contact searching process parallelable. The GPU acceleration will also be added shortly.</p>
+complexity of O(NlogN) is proposed to make the contact searching process parallelable. The GPU acceleration will be open shortly.</p>
 <p><strong>Mesh adaptive analysis support</strong> - Local adaptive mesh refinement (lAMR) and global adaptive mesh refinement(gAMR) are provided in <code class="docutils literal notranslate"><span class="pre">OpenFDEM</span></code>
 for mesh optimization and accuracy enhancement. Based on different remeshing criteria, <code class="docutils literal notranslate"><span class="pre">OpenFDEM</span></code> supports various error estimations, such as primary unknown,
 internal variables mapping, high-accuracy internal variable interpolation and fast unbalance equilibrium after refinement. The AMR supports fracture path consistent before and after remeshing.</p>
@@ -510,7 +510,7 @@ and nonlinear dynamic solver (explicit) are applicable for different problems, t
 </figure>
 <p><strong>Realistic Particle Modelling</strong> - Overlapping particles and Fourier-Voronoi-based algorithm are used to generate realistic particles having complex shapes.
 The realistic particles can be rigid or deformable. The breakage of the particles are also possible.</p>
-<figure class="align-left" id="id9">
+<figure class="align-default" id="id9">
 <img alt="landslide gif" src="../_images/landslide.gif" />
 <figcaption>
 <p><span class="caption-text">Debris flow of rigid particles due to gravity (left) and debris flow of irregular deformable fragments due to gravity (right, .stl file from Itasca).</span><a class="headerlink" href="#id9" title="Permalink to this image">#</a></p>
@@ -528,7 +528,7 @@ The realistic particles can be rigid or deformable. The breakage of the particle
 </figure>
 <p><strong>Element Library</strong> - triangle, quadratic triangle, quadrilateral and quadratic quadrilateral element types are supported for Newtonian fluid and Bingham fluid.</p>
 <figure class="align-default" id="id11">
-<a class="reference internal image-reference" href="../_images/water.gif"><img alt="Fluid injection in fractured rock block." src="../_images/water.gif" style="width: 720.0px; height: 405.0px;" /></a>
+<img alt="Fluid injection in fractured rock block." src="../_images/water.gif" />
 <figcaption>
 <p><span class="caption-text">Fluid injection in fractured rock block (left),  Water flowing in a tube using CFD in hydro module (right)</span><a class="headerlink" href="#id11" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -585,7 +585,8 @@ The realistic particles can be rigid or deformable. The breakage of the particle
 <p>The documentation is auto-generated from the <code class="docutils literal notranslate"><span class="pre">.of</span></code> and <code class="docutils literal notranslate"><span class="pre">.rst</span></code> files throughout
 the codebase and the extensive comments in the source code <code class="docutils literal notranslate"><span class="pre">.h</span></code> and <code class="docutils literal notranslate"><span class="pre">.of</span></code> files. Sphinx is used to compile
 the documentation in HTML and PDF formats.</p>
-</section>
+<script src="//clustrmaps.com/globe.js?d=IJDdJTOZeBy5TaHUiVkIm7GLGSulnk0C2NzaC4-34QA">
+</script></section>
 </section>
 
 

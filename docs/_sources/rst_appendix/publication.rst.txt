@@ -42,3 +42,7 @@ Here is a list of representative outcomes for the FDEM method, those will help y
 
 - Yan C, Xie X, Ren Y, et al. *A FDEM-based 2D coupled thermal-hydro-mechanical model for multiphysical simulation of rock fracturing*. **International Journal of Rock Mechanics and Mining Sciences**, 2022, 149: 104964.
 
+  .. raw:: html
+
+   <script src="//clustrmaps.com/globe.js?d=IJDdJTOZeBy5TaHUiVkIm7GLGSulnk0C2NzaC4-34QA">
+   </script>

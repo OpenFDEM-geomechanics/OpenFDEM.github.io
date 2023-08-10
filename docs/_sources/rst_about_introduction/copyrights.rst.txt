@@ -26,3 +26,9 @@ You should have received a copy of the GNU Lesser General Public License along w
 If you want to integrate parts of OpenFDEM into a closed-source or commercial software or want to sell a modified closed-source version of OpenFDEM, please contact Dr. Xiaofeng Li directly by email for a different license and more information.
 
 The OpenFDEM website (2022 - 2023) is compiled and maintained by: Xiaofeng Li, Katia (Ekaterina) Ossetchkina and Yuqi (Grace) Hu, ALL RIGHTS RESERVED.
+
+
+.. raw:: html
+
+   <script src="//clustrmaps.com/globe.js?d=IJDdJTOZeBy5TaHUiVkIm7GLGSulnk0C2NzaC4-34QA">
+   </script>

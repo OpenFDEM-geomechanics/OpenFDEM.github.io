@@ -40,3 +40,8 @@ Dr. Xiaofeng Li
     | Department of Civil & Mineral Engineering
     | University of Toronto, Toronto, CA, Canada
     | Email: xiaofeng.li@utoronto.ca  
+
+.. raw:: html
+
+   <script src="//clustrmaps.com/globe.js?d=IJDdJTOZeBy5TaHUiVkIm7GLGSulnk0C2NzaC4-34QA">
+   </script>

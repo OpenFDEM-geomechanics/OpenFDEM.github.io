@@ -11,3 +11,8 @@ History
    History/of.history.pv.cohesive
    History/of.history.pv.damage
    History/of.history.pv.ae
+
+.. raw:: html
+
+   <script src="//clustrmaps.com/globe.js?d=IJDdJTOZeBy5TaHUiVkIm7GLGSulnk0C2NzaC4-34QA">
+   </script>

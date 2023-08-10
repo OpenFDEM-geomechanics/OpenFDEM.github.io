@@ -46,3 +46,8 @@ To use the post-processing outputs (optional steps):
 
 
 ``OpenFDEM`` is flexible and can be run on Windows or Linux-like systems. The released version is for Windows x64.
+
+.. raw:: html
+
+   <script src="//clustrmaps.com/globe.js?d=IJDdJTOZeBy5TaHUiVkIm7GLGSulnk0C2NzaC4-34QA">
+   </script>

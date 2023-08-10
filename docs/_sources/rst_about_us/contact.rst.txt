@@ -66,3 +66,9 @@ Supporting packages developers
 - Earl Magsipoc - University of Toronto, Graphical user interface designing
 
 - Dr Aly Abdelaziz - University of Toronto, Postprocessing and data processing
+
+
+.. raw:: html
+
+   <script src="//clustrmaps.com/globe.js?d=IJDdJTOZeBy5TaHUiVkIm7GLGSulnk0C2NzaC4-34QA">
+   </script>

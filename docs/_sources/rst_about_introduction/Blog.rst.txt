@@ -17,3 +17,7 @@ August 2023
       :link: Blogs/20230804_Call_for_Paper
       :link-type: doc
 
+.. raw:: html
+
+   <script src="//clustrmaps.com/globe.js?d=IJDdJTOZeBy5TaHUiVkIm7GLGSulnk0C2NzaC4-34QA">
+   </script>

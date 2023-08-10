@@ -1,3 +1,9 @@
 How to create a geometry
 ########################################
 wait for updates.
+
+
+.. raw:: html
+
+   <script src="//clustrmaps.com/globe.js?d=IJDdJTOZeBy5TaHUiVkIm7GLGSulnk0C2NzaC4-34QA">
+   </script>
