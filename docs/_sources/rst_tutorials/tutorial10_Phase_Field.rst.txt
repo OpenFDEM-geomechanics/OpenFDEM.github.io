@@ -54,7 +54,7 @@ To start with programming, create a new empty text file (later add the `.of` ext
 5. Set the number of cores to be used for running this model.
 
 .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-    :lines: 53
+    :lines: 54
 
 -------------------------------------------------------------------
 2.2 Create the geometry and the mesh
@@ -62,32 +62,32 @@ To start with programming, create a new empty text file (later add the `.of` ext
 1. See Figur 1 to create a polygon with 9 points.
 
 .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-    :lines: 56-65
+    :lines: 57-66
 
 2. Cut the joints in the plate.
 
 .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-    :lines: 68
+    :lines: 69
 
 3. Group the geometries.
 
 .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-    :lines: 70-71
+    :lines: 71-72
 
 4. Set different mesh size for different group of geometries.
 
 .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-    :lines: 73-76
+    :lines: 74-77
 
 5. Create the mesh.
 
 .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-    :lines: 78
+    :lines: 79
 
 6. Group the elements in a mesh.
 
 .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-    :lines: 80
+    :lines: 81
 
 -------------------------------------------------------------------
 2.3 Assign Material and Thermal Properties
@@ -95,12 +95,12 @@ To start with programming, create a new empty text file (later add the `.of` ext
 1. Set the material properties.
 
 .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-    :lines: 84-85
+    :lines: 85-86
 
 2. Assign materials contacts.
 
 .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-    :lines: 87
+    :lines: 88
 
 -------------------------------------------------------------------
 2.4 Create Groups and Assign Boundary Conditions
@@ -108,12 +108,12 @@ To start with programming, create a new empty text file (later add the `.of` ext
 1. Group the nodes to prepare for the next step.
 
 .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-    :lines: 90-91
+    :lines: 91-92
 
 2. Assign the pressure boundary conditions.
 
 .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-    :lines: 98-99
+    :lines: 99-100
 
 -------------------------------------------------------------------
 2.5 Set the Outputs
@@ -121,17 +121,17 @@ To start with programming, create a new empty text file (later add the `.of` ext
 1. Set the output interval to be every 2000 steps and output all fields variables and fracture variables. Control the output interval to a reasonable size could shorten the computation time but get a good understanding of the model.
 
 .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-    :lines: 103-104
+    :lines: 104-105
 
 2. The program will run 100000 steps in total. In other words, it will output 10 files for reference.
 
 .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-    :lines: 108
+    :lines: 109
 
 3. Finalize the model and clear all the temporary memories.
 
 .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-    :lines: 110
+    :lines: 111
 
 4. Save the notepad and double click the .of file to run the program.
 
@@ -143,7 +143,6 @@ When you run the program, you can first check the mesh that was created by Gmsh 
 .. figure:: ../../images/Gmsh/Phase_Field.png
     :alt: Mesh of the sample
     :align: center
-    :scale: 60%
 
     Figure 2: Mesh created by Gmsh
 
@@ -153,7 +152,6 @@ The phase field module is ON in this model.
 .. figure:: ../../images/Command/Phase_Field_module.png
     :alt: Phase field module is ON
     :align: center
-    :scale: 80%
 
     Figure 3: Global modules
 
@@ -163,7 +161,6 @@ Material properties you set on step 2.3 will be shown on the screen. You can con
 .. figure:: ../../images/Command/Phase_Field_Material.png
     :alt: Material assignment
     :align: center
-    :scale: 55%
 
     Figure 4: Check the material assignment from command window
 
@@ -185,7 +182,7 @@ Wait for updates.
 .. _Phase_Field.of: https://github.com/OpenFDEM-geomechanics/Examples/blob/main/PhaseFieldModelforModeIcrack/runme.of
 
 .. literalinclude:: examples/PhaseFieldModelforModeIcrack/runme.of
-    :lines: 37-110
+    :lines: 37-111
 
 
 

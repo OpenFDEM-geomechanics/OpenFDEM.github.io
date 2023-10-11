@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Phase field class &#8212; OpenFDEM</title>
   
@@ -38,9 +38,6 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
@@ -604,7 +601,7 @@ document.write(`
 <span id="_CPPv3N8ns_solid15ModelPhasefield17getBulkParametersE8SolidmatK3Int"></span><span id="_CPPv2N8ns_solid15ModelPhasefield17getBulkParametersE8SolidmatK3Int"></span><span id="ns_solid::ModelPhasefield::getBulkParameters__Solidmat.IntC"></span><span class="target" id="classns__solid_1_1_model_phasefield_1a7eea52338bc9e378d8586efca1ce21e9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getBulkParameters</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="commonclass.html#_CPPv43Int" title="Int"><span class="n"><span class="pre">Int</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">matindices</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_solid15ModelPhasefield17getBulkParametersE8SolidmatK3Int" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Get the material parameters from the material library and compute the stiffness damping coefficient.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>solidmat</strong> – </p></li>
 <li><p><strong>matindices</strong> – </p></li>
@@ -681,7 +678,7 @@ document.write(`
 <span id="_CPPv3N8ns_solid18ModelPhasefieldDis17getBulkParametersE8SolidmatK3Int"></span><span id="_CPPv2N8ns_solid18ModelPhasefieldDis17getBulkParametersE8SolidmatK3Int"></span><span id="ns_solid::ModelPhasefieldDis::getBulkParameters__Solidmat.IntC"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_1a6a8dd14f159fa321bba21306fb97219b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getBulkParameters</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="commonclass.html#_CPPv43Int" title="Int"><span class="n"><span class="pre">Int</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">matindices</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_solid18ModelPhasefieldDis17getBulkParametersE8SolidmatK3Int" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Get the material parameters from the material library and compute the stiffness damping coefficient.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>solidmat</strong> – </p></li>
 <li><p><strong>matindices</strong> – </p></li>
@@ -696,7 +693,7 @@ document.write(`
 <dd><p>Compute the elastic trial stress by incremental strain. the stress should not include the stiffness damping stress</p>
 <p>\begin{aligned} &amp;\Delta \sigma_{11}=\alpha_1 \Delta e_{11}+\alpha_2 \Delta e_{22}\ &amp;\Delta \sigma_{22}=\alpha_2 \Delta e_{11}+\alpha_1 \Delta e_{22}\ &amp;\Delta \sigma_{12}=2 G \Delta e_{12} \quad\left(\Delta \sigma_{21}=\Delta \sigma_{12}\right)\ &amp;\Delta \sigma_{33}=\alpha_2\left(\Delta e_{11}+\Delta e_{22}\right) \end{aligned} where \alpha_1 = K + 4/3 * G and \alpha_2 = K - 2/3 * G</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>nodal</strong> – </p></li>
 <li><p><strong>element</strong> – </p></li>
@@ -814,7 +811,7 @@ document.write(`
 <span id="_CPPv3N8ns_solid21ModelPhasefieldDisDev17getBulkParametersE8SolidmatK3Int"></span><span id="_CPPv2N8ns_solid21ModelPhasefieldDisDev17getBulkParametersE8SolidmatK3Int"></span><span id="ns_solid::ModelPhasefieldDisDev::getBulkParameters__Solidmat.IntC"></span><span class="target" id="classns__solid_1_1_model_phasefield_dis_dev_1ab3395460f7a4475f28a493e94baa6b3f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getBulkParameters</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="commonclass.html#_CPPv43Int" title="Int"><span class="n"><span class="pre">Int</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">matindices</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_solid21ModelPhasefieldDisDev17getBulkParametersE8SolidmatK3Int" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Get the material parameters from the material library and compute the stiffness damping coefficient.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>solidmat</strong> – </p></li>
 <li><p><strong>matindices</strong> – </p></li>
@@ -829,7 +826,7 @@ document.write(`
 <dd><p>Compute the elastic trial stress by incremental strain. the stress should not include the stiffness damping stress</p>
 <p>\begin{aligned} &amp;\Delta \sigma_{11}=\alpha_1 \Delta e_{11}+\alpha_2 \Delta e_{22}\ &amp;\Delta \sigma_{22}=\alpha_2 \Delta e_{11}+\alpha_1 \Delta e_{22}\ &amp;\Delta \sigma_{12}=2 G \Delta e_{12} \quad\left(\Delta \sigma_{21}=\Delta \sigma_{12}\right)\ &amp;\Delta \sigma_{33}=\alpha_2\left(\Delta e_{11}+\Delta e_{22}\right) \end{aligned} where \alpha_1 = K + 4/3 * G and \alpha_2 = K - 2/3 * G</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>nodal</strong> – </p></li>
 <li><p><strong>element</strong> – </p></li>
@@ -945,7 +942,7 @@ document.write(`
 <span id="_CPPv3N13ns_phasefield10Phasefield18phase_field_updateE8Openfdem"></span><span id="_CPPv2N13ns_phasefield10Phasefield18phase_field_updateE8Openfdem"></span><span id="ns_phasefield::Phasefield::phase_field_update__Openfdem"></span><span class="target" id="classns__phasefield_1_1_phasefield_1a9d7defc977e8a3806609c22772424cfc"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">phase_field_update</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="solverclass.html#_CPPv48Openfdem" title="Openfdem"><span class="n"><span class="pre">Openfdem</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">openfdem</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13ns_phasefield10Phasefield18phase_field_updateE8Openfdem" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>main function to call phase field.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>openfdem</strong> – </p>
 </dd>
 </dl>
@@ -1112,7 +1109,7 @@ document.write(`
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
     <br/>
   </p>
 </div>

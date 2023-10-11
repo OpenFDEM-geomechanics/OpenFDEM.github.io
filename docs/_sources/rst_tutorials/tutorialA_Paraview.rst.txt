@@ -50,7 +50,6 @@ Results visualization for OpenFDEM
 .. figure:: ../../images/ParaView/ParaView_import_Files.png
     :alt: Import Files to ParaView
     :align: center
-    :scale: 60%
 
     Figure 1: Import Files to ParaView
 
@@ -112,7 +111,6 @@ Results visualization for OpenFDEM
 .. figure:: ../../images/ParaView/Rescale.png
     :alt: Rescale to the data range
     :align: center
-    :scale: 40%
 
     Figure 7: Rescale to the data range
 

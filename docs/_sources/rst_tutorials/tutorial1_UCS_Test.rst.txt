@@ -1,14 +1,14 @@
 Quick start with uniaxial compression test
 ############################################################
-Uniaxial compression test (UCS) is one of the benchmark tests that can be used to obtain the material properties 
-in the labratory. It is also used as the most common simulation to calibrate the material
-properties in FDEM or DEM. In this model, the sample is compressed by two rigid platens and the force interaction between platens and
-rock sample is realized by contacts. 
+Uniaxial compression test (UCS) is one of the oldest and simplest rock mechanical test used to determine the Young's modulus and 
+unconfined compressive strength. It is also used as the most common simulation to calibrate the material properties in FDEM or DEM. 
+In this model, the sample is compressed by two rigid platens and the force interaction between platens and rock sample is realized 
+by contacts. Barrel-shape failure mode is expected by theory. 
 
 .. figure:: ../../images/Desmos/UCS.png
     :alt: Geometry of the uniaxial compression test
     :align: center
-    :scale: 60%
+
 
     Figure 1: Geometry of the uniaxial compression strength test
 
@@ -75,7 +75,7 @@ To start with programming, create a new empty input file or copy it from the exi
 
     If nothing is set here, serial computing will be used by default.
 .. literalinclude:: examples/CreateUniaxialCompressionTest/runme.of
-    :lines: 50
+    :lines: 51
 
 -------------------------------------------------------------------
 2.2 Create the geometry and the mesh
@@ -91,7 +91,7 @@ line, etc.
         
     This example used three methods to creat a entity. Users may choose any format to create geometris.
 .. literalinclude:: examples/CreateUniaxialCompressionTest/runme.of
-    :lines: 55, 57, 59
+    :lines: 56, 58, 60
 
 2. Define the mesh size geometry and insert cohesive interfaces. You can define a global size on the points in your geometry, it is able to refine some specific parts, assign a smaller mesh size on the point 
 groups you want to refine after your assign the global mesh size.
@@ -101,7 +101,7 @@ groups you want to refine after your assign the global mesh size.
     You can insert cohesive interfaces only in `rock` physical group to boost the calculation speed to some extent.
     
 .. literalinclude:: examples/CreateUniaxialCompressionTest/runme.of
-    :lines: 61, 65, 68
+    :lines: 62, 66, 69
 
 -------------------------------------------------------------------
 2.3 Assign Material Properties
@@ -159,7 +159,7 @@ The material properties of the rock is shown as the table below:
     The tag *default* is a default keyword implemented in the OpenFDEM kernel, it means the whole physical objects in this model. It will be illegal to use this tag as the name of user-defined physical group.
 
 .. literalinclude:: examples/CreateUniaxialCompressionTest/runme.of
-    :lines: 72, 74, 76
+    :lines: 73, 75, 77
 
 -------------------------------------------------------------------
 2.4 Create Groups and Assign Boundary Conditions
@@ -167,12 +167,12 @@ The material properties of the rock is shown as the table below:
 1. Group the nodes.
 
 .. literalinclude:: examples/CreateUniaxialCompressionTest/runme.of
-    :lines: 81-82
+    :lines: 82-83
 
 2. Assign the nodal boundaries. In this example, top and bottom platens are moving toward to compress the sample, platens are fixed in the `x` direction and moving with 0.05 m/s in the `y` direction.
 
 .. literalinclude:: examples/CreateUniaxialCompressionTest/runme.of
-    :lines: 86-87
+    :lines: 87-88
 
 -------------------------------------------------------------------
 2.5 Set the Outputs
@@ -181,13 +181,13 @@ The material properties of the rock is shown as the table below:
 huge size for the storage and at the cost of computation efficiency. Control the output interval to a reasonable size could shorten the computation time.
 
 .. literalinclude:: examples/CreateUniaxialCompressionTest/runme.of
-    :lines: 91, 93-94
+    :lines: 92, 94-95
 
 2. Timestep can be fixed to 5e-9 in this example to accelerate the calculation in this example, but the default time step is recommended to use. Mass scaling can save you a lot time to some extent, but check the stability of the calculation
 is always a necessary for the explict integration. User-defined timestep is allowable only if you are rather familiar with the method you are using. 
 
 .. literalinclude:: examples/CreateUniaxialCompressionTest/runme.of
-    :lines: 100
+    :lines: 101
 
 -------------------------------------------------------------------
 2.6 Run
@@ -195,12 +195,12 @@ is always a necessary for the explict integration. User-defined timestep is allo
 1. The program will run 500000 steps in total. In other words, it will output 10 files for reference.
 
 .. literalinclude:: examples/CreateUniaxialCompressionTest/runme.of
-    :lines: 102
+    :lines: 103
 
 2. Finalize the model and clear all the temporary memories.
 
 .. literalinclude:: examples/CreateUniaxialCompressionTest/runme.of
-    :lines: 104
+    :lines: 105
 
 3. Save the notepad and double click the .of file to run the program.
 
@@ -212,7 +212,6 @@ When you run the program, you can first check the mesh that was created by Gmsh 
 .. figure:: ../../images/Gmsh/UCS_test.png
     :alt: Mesh of the sample
     :align: center
-    :scale: 80%
 
     Figure 2: Mesh created by Gmsh
 
@@ -222,7 +221,6 @@ The mesh is using triangle elements.
 .. figure:: ../../images/Command/UCS_T3.png
     :alt: Triangle elements
     :align: center
-    :scale: 80%
 
     Figure 3: Check the mesh setting from command window
 
@@ -232,7 +230,6 @@ Material properties you set on step 2.3 will be shown on the screen. You can con
 .. figure:: ../../images/Command/UCS_Material.png
     :alt: Material assignment
     :align: center
-    :scale: 55%
 
     Figure 4: Check the material assignment from command window
 
@@ -242,7 +239,6 @@ Furthermore, node boundaries are shown at the header of the program.
 .. figure:: ../../images/Command/UCS_bondaries.PNG
     :alt: Boundary information
     :align: center
-    :scale: 55% 
 
     Figure 5: Check the boundary information from command window   
 
@@ -252,7 +248,6 @@ Global timestep is shown here.
 .. figure:: ../../images/Command/UCS_timesteps.png
     :alt: Timesteps
     :align: center
-    :scale: 55%
 
     Figure 6: Check the timesteps from command window   
 
@@ -262,7 +257,6 @@ Start to run the program. Results are logged for every 2000 steps.
 .. figure:: ../../images/Command/UCS_run.png
     :alt: Start to run the program
     :align: center
-    :scale: 55%
 
     Figure 7: Start to run the program
 
@@ -271,7 +265,22 @@ Start to run the program. Results are logged for every 2000 steps.
 ==================================
 4 Results
 ==================================
-Wait for updates.
+
+Stress YY results.
+
+.. figure:: ../../images/Result/UCS_StressYY_Viridis.gif
+    :alt: UCS Stress YY
+    :align: center
+
+    Figure 8: UCS Stress YY
+
+Displacement YY results.
+
+.. figure:: ../../images/Result/UCS_DispYY_Viridis.gif
+    :alt: UCS Displacement YY
+    :align: center
+
+    Figure 9: UCS Displacement YY
 
 
 
@@ -284,7 +293,7 @@ Wait for updates.
 .. _UCS_test.of: https://github.com/OpenFDEM-geomechanics/Examples/blob/main/CreateUniaxialCompressionTest/runme.of
 
 .. literalinclude:: examples/CreateUniaxialCompressionTest/runme.of
-    :lines: 37-104
+    :lines: 37-105
 
 
 .. raw:: html

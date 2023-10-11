@@ -1,0 +1,175 @@
+Tutorial 4: Apply In-situ Stress
+########################################
+In-situ stress is applied to model the original state of the rock before excavation or disturbtion. 
+
+.. figure:: ../../images/Desmos/Apply_Insitu_Stress.png
+    :alt: Geometry of the Rock and Excavation
+    :align: center
+    :scale: 60%
+
+    Figure 1: Geometry of the Rock and Excavation
+
+|
+
+==================================
+1.0 Main Steps
+==================================
+
+#. Initialize the model
+#. Import mesh
+#. Create groups
+#. Assign material properties
+#. Assign boundaries
+#. Setup output
+#. Execute model
+
+
+==================================
+2.0 Codes
+==================================
+Please note that, all the setting in the example is based on the developer's computer. You may need to change 
+these setting based on your own conditions.
+
+To start with programming, create a new empty text file (later add the `.of` extension). Begin writing the following commands:
+
+-------------------------------------------------------------------
+2.1 Initialize the model
+-------------------------------------------------------------------
+#. Create a new run and clean up the old memories.
+    .. literalinclude:: ../../../src/examples/ApplyInsituStress/runme.of
+        :lines: 39
+#. Set up the folder name to save your results. Here the folder name is set to be “result”.
+    .. literalinclude:: ../../../src/examples/ApplyInsituStress/runme.of
+        :lines: 43
+#. Set the number of cores to be used for running this model.
+    .. warning::
+        In this example, 15 cores will be used for running. To prevent the crushing of your computer, please 
+        check your computer to fill in the number of cores you want to use from your computer. To check the number 
+        of cores your computer has, you can go Task Manager > Performance > CPU > Cores. If nothing is set here, 
+        serial computing will be used.
+    .. literalinclude:: ../../../src/examples/ApplyInsituStress/runme.of
+        :lines: 47
+
+-------------------------------------------------------------------
+2.2 Create the geometry and the mesh
+-------------------------------------------------------------------
+#. See Figure 1, we will create a square rock model with a 0.05 m radius hole at the center of the rock.  
+    .. note::
+        Circles in OpenFDEM are defined by four values: x coordinate, y coordinate, radius and the number of segments. Users can define a circle by entering **[x_value y_value radius #_of_segements]**.         
+
+    .. literalinclude:: ../../../src/examples/ApplyInsituStress/runme.of
+        :lines: 51-52
+
+#. Set the mesh size and the default method to create the mesh
+    .. literalinclude:: ../../../src/examples/ApplyInsituStress/runme.of
+        :lines: 54-55
+
+#. Group the elements which will be excavated later.
+    .. literalinclude:: ../../../src/examples/ApplyInsituStress/runme.of
+        :lines: 57
+
+-------------------------------------------------------------------
+2.3 Assign Material Properties
+-------------------------------------------------------------------
+Set the material properties as shown below.
+    .. literalinclude:: ../../../src/examples/ApplyInsituStress/runme.of
+        :lines: 61,63
+
+-------------------------------------------------------------------
+2.4 Group the Edges
+-------------------------------------------------------------------
+Group the four boundaries of the model for applying the in-situ stresses and boundary conditions later.
+    .. literalinclude:: ../../../src/examples/ApplyInsituStress/runme.of
+        :lines: 68-71
+
+-------------------------------------------------------------------
+2.5 Assign Boundary Conditions
+-------------------------------------------------------------------
+#. For this example, 30 MPa compressive stress in the xx direction and 5 MPa compressive stresses in the yy direction are assigned to the rock.
+    .. literalinclude:: ../../../src/examples/ApplyInsituStress/runme.of
+        :lines: 75
+
+#. To quickly balance the model, absorbing boundary conditions are assigned to four boundaries in the model.
+    .. literalinclude:: ../../../src/examples/ApplyInsituStress/runme.of
+        :lines: 78-81
+
+-------------------------------------------------------------------
+2.6 Set the Outputs
+-------------------------------------------------------------------
+#. Set the output interval to be every 2000 steps and output all fields variables and fracture variables. Control the output interval to a reasonable size could shorten the computation time but get a good understanding of the model.
+    .. literalinclude:: ../../../src/examples/ApplyInsituStress/runme.of
+        :lines: 85, 87-88
+#. In this step, model will first achieve the equilibrium without excavation under in-situ stresses state. The result of velocity or kinematic ratio should be less than 1e-5.
+    .. literalinclude:: ../../../src/examples/ApplyInsituStress/runme.of
+        :lines: 95
+#. Insert CZM after achieve the equlibrium of in-situ stresses
+    .. literalinclude:: ../../../src/examples/ApplyInsituStress/runme.of
+        :lines: 98-99
+#. One step excavation. Remove the elements in the "excavation" group.
+    .. literalinclude:: ../../../src/examples/ApplyInsituStress/runme.of
+        :lines: 100
+#. Clear the absorbing boundaries
+    .. literalinclude:: ../../../src/examples/ApplyInsituStress/runme.of
+        :lines: 103-106
+#. Add pressures at the external boundaries
+    .. literalinclude:: ../../../src/examples/ApplyInsituStress/runme.of
+        :lines: 109-112
+#. The program will run 500000 steps in total. In other words, it will output 25 files for reference.
+    .. literalinclude:: ../../../src/examples/ApplyInsituStress/runme.of
+        :lines: 115
+#. Finalize the model and clear all the temporary memories.
+    .. literalinclude:: ../../../src/examples/ApplyInsituStress/runme.of
+        :lines: 118
+#. Save the notepad and double click the .of file to run the program.
+
+==================================
+3.0 Run the Program
+==================================
+When you run the program, you can first check the mesh that was created by Gmsh as shown in Figure 2. If the mesh has a good quality, you can close the window to continue run the program.
+
+.. figure:: ../../images/Gmsh/In_situ_stress.png
+    :alt: Mesh of the sample
+    :align: center
+    :scale: 60%
+
+    Figure 2: Mesh created by Gmsh
+
+|
+
+Check the boundary conditions here. Absorbing boundary conditions are on for both normal and shear directions. In-situ stresses are applied to the boundaries.
+
+.. figure:: ../../images/Command/Insitu_BC.png
+    :alt: Triangle elements
+    :align: center
+    :scale: 60%
+
+    Figure 3: Check the mesh setting from command window
+
+|
+
+
+==================================
+4.0 Results
+==================================
+The stress and displacement results here are for reference.
+
+
+
+==================================
+5.0 Full Script
+==================================
+
+- `Apply_Insitu_Stress.of`_ (click to download from Gitlab)
+
+.. _Apply_Insitu_Stress.of: http://geogroup.utoronto.ca:9191/gitlab/xiaofeng.li/openfdem_solver/-/blob/main/openfdem%20src/src/test/UCS%20by%20gmsh/example_UCS.geo
+
+    .. literalinclude:: ../../../src/examples/ApplyInsituStress/runme.of
+        :lines: 37-118
+
+
+
+
+
+
+
+

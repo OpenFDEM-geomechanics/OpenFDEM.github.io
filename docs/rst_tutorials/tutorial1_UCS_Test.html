@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Quick start with uniaxial compression test &#8212; OpenFDEM</title>
   
@@ -38,9 +38,6 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
@@ -421,12 +418,12 @@ document.write(`
                   
   <section id="quick-start-with-uniaxial-compression-test">
 <h1>Quick start with uniaxial compression test<a class="headerlink" href="#quick-start-with-uniaxial-compression-test" title="Permalink to this heading">#</a></h1>
-<p>Uniaxial compression test (UCS) is one of the benchmark tests that can be used to obtain the material properties
-in the labratory. It is also used as the most common simulation to calibrate the material
-properties in FDEM or DEM. In this model, the sample is compressed by two rigid platens and the force interaction between platens and
-rock sample is realized by contacts.</p>
+<p>Uniaxial compression test (UCS) is one of the oldest and simplest rock mechanical test used to determine the Young’s modulus and
+unconfined compressive strength. It is also used as the most common simulation to calibrate the material properties in FDEM or DEM.
+In this model, the sample is compressed by two rigid platens and the force interaction between platens and rock sample is realized
+by contacts. Barrel-shape failure mode is expected by theory.</p>
 <figure class="align-center" id="id1">
-<a class="reference internal image-reference" href="../_images/UCS.png"><img alt="Geometry of the uniaxial compression test" src="../_images/UCS.png" style="width: 463.79999999999995px; height: 496.79999999999995px;" /></a>
+<img alt="Geometry of the uniaxial compression test" src="../_images/UCS.png" />
 <figcaption>
 <p><span class="caption-text">Figure 1: Geometry of the uniaxial compression strength test</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -534,10 +531,6 @@ You can insert cohesive interfaces only in <cite>rock</cite> physical group to b
 <h3>2.3 Assign Material Properties<a class="headerlink" href="#assign-material-properties" title="Permalink to this heading">#</a></h3>
 <p>The material properties of the rock is shown as the table below:</p>
 <table class="table">
-<colgroup>
-<col style="width: 65%" />
-<col style="width: 35%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Parameter</p></th>
 <th class="head"><p>Value</p></th>
@@ -672,42 +665,42 @@ is always a necessary for the explict integration. User-defined timestep is allo
 <h2>3 Run the Program<a class="headerlink" href="#run-the-program" title="Permalink to this heading">#</a></h2>
 <p>When you run the program, you can first check the mesh that was created by Gmsh as shown in Figure 2. If the mesh has a good quality, you can close the window to continue run the program.</p>
 <figure class="align-center" id="id2">
-<a class="reference internal image-reference" href="../_images/UCS_test.png"><img alt="Mesh of the sample" src="../_images/UCS_test.png" style="width: 600.0px; height: 600.0px;" /></a>
+<img alt="Mesh of the sample" src="../_images/UCS_test.png" />
 <figcaption>
 <p><span class="caption-text">Figure 2: Mesh created by Gmsh</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The mesh is using triangle elements.</p>
 <figure class="align-center" id="id3">
-<a class="reference internal image-reference" href="../_images/UCS_T3.png"><img alt="Triangle elements" src="../_images/UCS_T3.png" style="width: 576.0px; height: 220.8px;" /></a>
+<img alt="Triangle elements" src="../_images/UCS_T3.png" />
 <figcaption>
 <p><span class="caption-text">Figure 3: Check the mesh setting from command window</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Material properties you set on step 2.3 will be shown on the screen. You can confirm it while the program just starts to run.</p>
 <figure class="align-center" id="id4">
-<a class="reference internal image-reference" href="../_images/UCS_Material.png"><img alt="Material assignment" src="../_images/UCS_Material.png" style="width: 590.7px; height: 188.10000000000002px;" /></a>
+<img alt="Material assignment" src="../_images/UCS_Material.png" />
 <figcaption>
 <p><span class="caption-text">Figure 4: Check the material assignment from command window</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Furthermore, node boundaries are shown at the header of the program.</p>
 <figure class="align-center" id="id5">
-<a class="reference internal image-reference" href="../_images/UCS_bondaries.PNG"><img alt="Boundary information" src="../_images/UCS_bondaries.PNG" style="width: 590.1500000000001px; height: 101.2px;" /></a>
+<img alt="Boundary information" src="../_images/UCS_bondaries.PNG" />
 <figcaption>
 <p><span class="caption-text">Figure 5: Check the boundary information from command window</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Global timestep is shown here.</p>
 <figure class="align-center" id="id6">
-<a class="reference internal image-reference" href="../_images/UCS_timesteps.png"><img alt="Timesteps" src="../_images/UCS_timesteps.png" style="width: 592.35px; height: 68.75px;" /></a>
+<img alt="Timesteps" src="../_images/UCS_timesteps.png" />
 <figcaption>
 <p><span class="caption-text">Figure 6: Check the timesteps from command window</span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Start to run the program. Results are logged for every 2000 steps.</p>
 <figure class="align-center" id="id7">
-<a class="reference internal image-reference" href="../_images/UCS_run.png"><img alt="Start to run the program" src="../_images/UCS_run.png" style="width: 590.7px; height: 168.3px;" /></a>
+<img alt="Start to run the program" src="../_images/UCS_run.png" />
 <figcaption>
 <p><span class="caption-text">Figure 7: Start to run the program</span><a class="headerlink" href="#id7" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -715,29 +708,43 @@ is always a necessary for the explict integration. User-defined timestep is allo
 </section>
 <section id="results">
 <h2>4 Results<a class="headerlink" href="#results" title="Permalink to this heading">#</a></h2>
-<p>Wait for updates.</p>
+<p>Stress YY results.</p>
+<figure class="align-center" id="id8">
+<img alt="UCS Stress YY" src="../_images/UCS_StressYY_Viridis.gif" />
+<figcaption>
+<p><span class="caption-text">Figure 8: UCS Stress YY</span><a class="headerlink" href="#id8" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Displacement YY results.</p>
+<figure class="align-center" id="id9">
+<img alt="UCS Displacement YY" src="../_images/UCS_DispYY_Viridis.gif" />
+<figcaption>
+<p><span class="caption-text">Figure 9: UCS Displacement YY</span><a class="headerlink" href="#id9" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="full-script">
 <h2>5 Full Script<a class="headerlink" href="#full-script" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/OpenFDEM-geomechanics/Examples/blob/main/CreateUniaxialCompressionTest/runme.of">UCS_test.of</a> (click to download from GitHub)</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># initialization, this command is to clear the memory in your last run, it is not mandatory </span>
-<span class="c1"># but strongly recommend.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># initialization, this command is to clear the memory in your last run, it is not </span>
+<span class="c1"># mandatory but strongly recommend.</span>
 <span class="n">of</span><span class="o">.</span><span class="n">new</span>
 
-<span class="c1"># Set the path folder of your output results, //result// in the same path of your input file </span>
-<span class="c1"># will be created by default</span>
+<span class="c1"># Set the path folder of your output results, //result// in the same path of your input </span>
+<span class="c1"># file will be created by default</span>
 <span class="n">of</span><span class="o">.</span><span class="n">set</span><span class="o">.</span><span class="n">result</span> <span class="s2">&quot;result&quot;</span>
 
 <span class="c1"># Set the interval of logging in the log file, 2000 is by default, not mandatory</span>
 <span class="n">of</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">interval</span> <span class="mi">2000</span>
 
-<span class="c1"># Set the number of cores you want to use, the parallization will be automatically turned on</span>
-<span class="c1"># when you use the following command, otherwise the serilization will be used by default</span>
+<span class="c1"># Set the number of cores you want to use, the parallization will be automatically turned </span>
+<span class="c1"># on when you use the following command, otherwise the serilization will be used by </span>
+<span class="c1"># default</span>
 <span class="n">of</span><span class="o">.</span><span class="n">set</span><span class="o">.</span><span class="n">omp</span> <span class="mi">15</span>
 
-<span class="c1">###################################### create mesh #########################################</span>
+<span class="c1">###################################### create mesh ######################################</span>
 <span class="c1"># Create a box having the group tag &#39;rock&#39;, the box is defined by the minimum and maximum </span>
 <span class="c1"># coordinations of each edge.</span>
 <span class="n">of</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">square</span> <span class="s1">&#39;rock&#39;</span> <span class="n">xmin</span> <span class="o">-</span><span class="mf">25e-3</span> <span class="n">xmax</span> <span class="mf">25e-3</span>  <span class="n">ymin</span> <span class="o">-</span><span class="mf">50e-3</span> <span class="n">ymax</span> <span class="mf">50e-3</span> 
@@ -747,15 +754,15 @@ is always a necessary for the explict integration. User-defined timestep is allo
 <span class="n">of</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">square</span> <span class="s1">&#39;down&#39;</span> <span class="p">[</span><span class="o">-</span><span class="mf">35e-3</span>  <span class="mf">35e-3</span>  <span class="o">-</span><span class="mf">55e-3</span> <span class="o">-</span><span class="mf">50e-3</span><span class="p">]</span> 
 <span class="c1"># Assign the mesh size</span>
 <span class="n">of</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">size</span> <span class="s1">&#39;default&#39;</span> <span class="mf">0.8e-3</span>
-<span class="c1"># to execute the kernel for meshing, the kernel will automatically export a mesh file named </span>
-<span class="c1"># &quot;mess.msh&quot; in the input folder. Users can of.import &quot;mesh.msh&quot; to run the model again </span>
-<span class="c1"># without recreating the mesh</span>
+<span class="c1"># to execute the kernel for meshing, the kernel will automatically export a mesh file </span>
+<span class="c1"># named &quot;mess.msh&quot; in the input folder. Users can of.import &quot;mesh.msh&quot; to run the model </span>
+<span class="c1"># again without recreating the mesh</span>
 <span class="n">of</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">mesh</span> <span class="n">delaunay</span> 
 
 <span class="c1"># Insert the cohesive elements.</span>
 <span class="n">of</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">insert</span> <span class="s1">&#39;rock&#39;</span>
 
-<span class="c1">################################# assign material parameters ################################</span>
+<span class="c1">################################# assign material parameters ############################</span>
 <span class="c1"># Assign material for matrix.</span>
 <span class="n">of</span><span class="o">.</span><span class="n">mat</span><span class="o">.</span><span class="n">element</span> <span class="s1">&#39;default&#39;</span> <span class="n">elastic</span> <span class="n">den</span> <span class="mi">2700</span> <span class="n">E</span> <span class="mf">30e9</span> <span class="n">v</span> <span class="mf">0.3</span> <span class="n">damp</span> <span class="mf">1.0</span>
 <span class="c1"># Assign material for CZM</span>
@@ -763,28 +770,28 @@ is always a necessary for the explict integration. User-defined timestep is allo
 <span class="c1"># Assign materials for contacts</span>
 <span class="n">of</span><span class="o">.</span><span class="n">mat</span><span class="o">.</span><span class="n">contact</span> <span class="s1">&#39;default&#39;</span> <span class="n">MC</span> <span class="n">fric</span> <span class="mf">0.3</span>
 
-<span class="c1">##################################### create groups #########################################</span>
-<span class="c1"># OpenFDEM can manually group the nodes, elements, cohesive elements and edges by using the </span>
-<span class="c1"># region of box, circle and plane.</span>
+<span class="c1">##################################### create groups #####################################</span>
+<span class="c1"># OpenFDEM can manually group the nodes, elements, cohesive elements and edges by using </span>
+<span class="c1"># the region of box, circle and plane.</span>
 <span class="n">of</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">nodal</span><span class="o">.</span><span class="n">from</span><span class="o">.</span><span class="n">element</span> <span class="s1">&#39;up&#39;</span> <span class="s1">&#39;up&#39;</span>
 <span class="n">of</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">nodal</span><span class="o">.</span><span class="n">from</span><span class="o">.</span><span class="n">element</span> <span class="s1">&#39;down&#39;</span> <span class="s1">&#39;down&#39;</span>
 
-<span class="c1">################################### assign boundaries #######################################</span>
+<span class="c1">################################### assign boundaries ###################################</span>
 <span class="c1"># boundaries can be assigned after you define the groups</span>
 <span class="n">of</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">nodal</span><span class="o">.</span><span class="n">velocity</span> <span class="s1">&#39;up&#39;</span> <span class="n">x</span> <span class="mf">0.0</span> <span class="n">y</span> <span class="o">-</span><span class="mf">0.05</span> 
 <span class="n">of</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">nodal</span><span class="o">.</span><span class="n">velocity</span> <span class="s1">&#39;down&#39;</span> <span class="n">x</span> <span class="mf">0.0</span> <span class="n">y</span> <span class="mf">0.05</span> 
 
-<span class="c1">####################################### set output ###########################################</span>
+<span class="c1">####################################### set output ######################################</span>
 <span class="c1"># Set the interval of writing ParaView results.</span>
 <span class="n">of</span><span class="o">.</span><span class="n">history</span><span class="o">.</span><span class="n">pv</span><span class="o">.</span><span class="n">interval</span> <span class="mi">5000</span>
 <span class="c1"># Output all results by default.</span>
 <span class="n">of</span><span class="o">.</span><span class="n">history</span><span class="o">.</span><span class="n">pv</span><span class="o">.</span><span class="n">field</span> <span class="n">default</span>
 <span class="n">of</span><span class="o">.</span><span class="n">history</span><span class="o">.</span><span class="n">pv</span><span class="o">.</span><span class="n">fracture</span> <span class="n">default</span>
 
-<span class="c1">##################################### execute model ##########################################</span>
+<span class="c1">##################################### execute model #####################################</span>
 <span class="c1"># Manually set the timestep to overwirte the default timestep suggested by the program.</span>
-<span class="c1"># It is not recommended to manually increase the size of timesteps unless the user has enough </span>
-<span class="c1"># understanding of the calculation process.</span>
+<span class="c1"># It is not recommended to manually increase the size of timesteps unless the user has </span>
+<span class="c1"># enough understanding of the calculation process.</span>
 <span class="n">of</span><span class="o">.</span><span class="n">timestep</span> <span class="n">fix</span> <span class="mf">5e-9</span>
 <span class="c1"># to excuate the model</span>
 <span class="n">of</span><span class="o">.</span><span class="n">step</span> <span class="mi">500000</span>
@@ -899,7 +906,7 @@ is always a necessary for the explict integration. User-defined timestep is allo
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
     <br/>
   </p>
 </div>

@@ -6,7 +6,6 @@ Tutorial 6 and 7 will present the modelling to solve hydraulic fracture on a dam
 .. figure:: ../../images/Desmos/Hydro.png
     :alt: Geometry of a Dam Model
     :align: center
-    :scale: 40%
 
     Figure 1: Geometry of a Dam Model
 
@@ -166,7 +165,6 @@ Hydro module and matrix flow module are on to model the hydro seepage.
 .. figure:: ../../images/Command/Hydro_Fracture_Modulus.PNG
     :alt: Applied Modules
     :align: center
-    :scale: 80%
 
     Figure 2: Applied Modules
 
@@ -175,7 +173,6 @@ Hydro material information are included in the modeling.
 .. figure:: ../../images/Command/Hydro_Fracture_Material.PNG
     :alt: Hydro Materials
     :align: center
-    :scale: 60%
 
     Figure 3: Hydro Materials
 
@@ -184,7 +181,6 @@ Hydro boundary conditions.
 .. figure:: ../../images/Command/Hydro_BC.PNG
     :alt: Hydro Boundary Conditions
     :align: center
-    :scale: 65%
 
     Figure 4: Hydro Boundary Conditions
 
@@ -192,7 +188,13 @@ Hydro boundary conditions.
 ==================================
 4 Results
 ==================================
-Wait for updates.
+Fluid pressure of seepage.
+
+.. figure:: ../../images/Result/Seepage_Viridis.gif
+    :alt: Hydro Seepage
+    :align: center
+
+    Figure 5: Hydro Seepage
 
 
 

@@ -15,7 +15,6 @@ a individual physcial group. The user can regroup those tessellations into diffe
 .. figure:: ../../images/User_Guide/grainbasedmodel.png
     :alt: Geometry of the uniaxial compression test
     :align: center
-    :scale: 30%
 
     Figure 1: Mineral distribution in UCS sample
 
@@ -87,7 +86,7 @@ To start with programming, create a new empty input file or copy it from the exi
 
     If nothing is set here, serial computing will be used by default.
 .. literalinclude:: examples/GBM/runme.of
-    :lines: 48
+    :lines: 49
 
 -------------------------------------------------------------------
 3.2 Import the geometry and the mesh
@@ -95,27 +94,27 @@ To start with programming, create a new empty input file or copy it from the exi
 1. Import the mesh file from ``Neper``.
 
 .. literalinclude:: examples/GBM/runme.of
-    :lines: 51
+    :lines: 52
 
 2. Regroup the tessellations to three mineral groups, each group is controlled by the area ratio.
 
 .. literalinclude:: examples/GBM/runme.of
-    :lines: 53
+    :lines: 54
 
 3. Create ``object:element`` groups for platens and sample.
 
 .. literalinclude:: examples/GBM/runme.of
-    :lines: 54-56
+    :lines: 55-57
 
 4. Insert cohesive interface in rock sample only.
 
 .. literalinclude:: examples/GBM/runme.of
-    :lines: 59
+    :lines: 60
 
 5. Create ``object:cohesive`` groups for the interfaces, those groups will be assigned different material properties.
 
 .. literalinclude:: examples/GBM/runme.of
-    :lines: 62-67
+    :lines: 63-68
 
 -------------------------------------------------------------------
 3.3 Assign Material and Thermal Properties
@@ -123,17 +122,17 @@ To start with programming, create a new empty input file or copy it from the exi
 1. Set the material properties of minerals and platens.
 
 .. literalinclude:: examples/GBM/runme.of
-    :lines: 70-72, 74-75
+    :lines: 71-73, 75-76
 
 2. Assign different materials for cohesive interfaces.
 
 .. literalinclude:: examples/GBM/runme.of
-    :lines: 78-83
+    :lines: 79-84
 
 3. Assign different materials for contact.
 
 .. literalinclude:: examples/GBM/runme.of
-    :lines: 86-92
+    :lines: 87-93
 
 -------------------------------------------------------------------
 3.4 Create Groups and Assign Boundary Conditions
@@ -141,12 +140,12 @@ To start with programming, create a new empty input file or copy it from the exi
 1. Create ``object::node`` groups.
 
 .. literalinclude:: examples/GBM/runme.of
-    :lines: 95-96
+    :lines: 96-97
 
 2. Assign the nodal boundaries. In this model, top, bottom and right boundaries are fixed in both *x* and *y* directions.
 
 .. literalinclude:: examples/GBM/runme.of
-    :lines: 100-101
+    :lines: 101-102
 
 -------------------------------------------------------------------
 3.5 Set the Outputs
@@ -154,17 +153,17 @@ To start with programming, create a new empty input file or copy it from the exi
 1. Set the output interval to be every 500 steps and output all fields variables and fracture variables. 
 
 .. literalinclude:: examples/GBM/runme.of
-    :lines: 105-107
+    :lines: 106-108
 
 2. The program will run 10000000 steps in total.
 
 .. literalinclude:: examples/GBM/runme.of
-    :lines: 111
+    :lines: 112
 
 3. Finalize the model and clear all the temporary memories.
 
 .. literalinclude:: examples/GBM/runme.of
-    :lines: 113
+    :lines: 114
 
 4. Save the notepad and double click the .of file to run the program.
 
@@ -189,7 +188,7 @@ Wait for updates.
 .. _GBM.of: https://github.com/OpenFDEM-geomechanics/Examples/blob/main/GBM/Job-1.inp
 
 .. literalinclude:: examples/GBM/runme.of
-    :lines: 37-113
+    :lines: 37-114
 
 
 

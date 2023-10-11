@@ -1,0 +1,79 @@
+Tutorial 2: In Situ Stress Tutorial 
+#######################################
+
+This example will review how to setup an insitu excavation example, defining the mesh in the *.of* file.
+
+**Runtime**: <10 min on i9 8-core Windows 10 Machine
+
+Expected tutorial output (visualized in ParaView):
+
+.. image:: ../../images/insitu_example.png
+  :width: 400
+  :alt: In Situ Example Image
+  :align: center
+
+Tutorial Resources 
+****************************************************
+The result mesh file will be created during the tutorial, but can also be viewed on Gitlab: `mesh.msh`_.
+
+.. _mesh.msh: http://geogroup.utoronto.ca:9191/gitlab/xiaofeng.li/openfdem_solver/-/blob/main/openfdem%20src/src/test/insitustress/mesh.msh
+
+Tutorial Steps
+****************************************************
+
+Mesh Pre-Processing
+=======================
+
+In a new text-file, write the following commands. These will define the geometry 
+as a square with a circle in the center for excavation:
+
+.. literalinclude:: ../../../src/test/insitustress/insitu_method.of
+   :lines: 26-34
+
+.. literalinclude:: ../../../src/test/insitustress/insitu_method.of
+   :lines: 36-37
+
+Materials Definition
+=======================
+
+Assign the following material properties (density, Young's modulus and damping coefficient):
+
+.. literalinclude:: ../../../src/test/insitustress/insitu_method.of
+   :lines: 39-41
+
+Define Boundary Conditions
+=============================
+
+.. literalinclude:: ../../../src/test/insitustress/insitu_method.of
+   :lines: 43-50
+
+Run Model, Set Paraview Parameters
+=======================================
+
+Define parameters for paraview export: 
+
+.. literalinclude:: ../../../src/test/insitustress/insitu_method.of
+   :lines: 52-59
+
+Set Tunnel Excavation
+=======================================
+
+.. literalinclude:: ../../../src/test/insitustress/insitu_method.of
+   :lines: 66-72
+
+Execute Model
+=======================================
+
+Define the number of model time-steps:
+
+.. literalinclude:: ../../../src/test/insitustress/insitu_method.of
+   :lines: 74-76
+
+Full Tutorial Script
+=======================
+
+To run the model, save your text file with the `.of` extension. Rebuild the openfdem solution and drag your
+`.of` file into the `OpenFDEM.exe`. It will automatically run and save the outputs. 
+
+.. literalinclude:: ../../../src/test/insitustress/insitu_method.of
+   :lines: 26-76

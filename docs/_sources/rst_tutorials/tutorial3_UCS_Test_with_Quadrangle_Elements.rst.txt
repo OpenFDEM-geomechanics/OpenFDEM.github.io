@@ -26,7 +26,6 @@ When the program runs, the mesh of the model will look like this.
 .. figure:: ../../images/Gmsh/UCS_test_quad.png
     :alt: Uniaxial Compression Test Mesh with Quadrangle Elements
     :align: center
-    :scale: 60%
 
     Figure 1: Uniaxial Compression Test Mesh with Quadrangle Elements
 
@@ -35,7 +34,6 @@ The program will also show the mesh has quadrilateral elements.
 .. figure:: ../../images/Command/UCS_Quad.PNG
     :alt: Uniaxial Compression Test Mesh with Quadrangle Elements
     :align: center
-    :scale: 60%
 
     Figure 2: Uniaxial Compression Test Mesh with Quadrangle Elements
 
@@ -47,8 +45,8 @@ The program will also show the mesh has quadrilateral elements.
 .. _UCS_test_quad.of: https://github.com/OpenFDEM-geomechanics/Examples/blob/main/CreateUniaxialCompressionTestwithQuadrangleElement/runme.of
 
 .. literalinclude:: examples/CreateUniaxialCompressionTestwithQuadrangleElement/runme.of
-    :lines: 37-109
-    :emphasize-lines: 26-27
+    :lines: 37-110
+    :emphasize-lines: 27-28
 
 .. raw:: html
 

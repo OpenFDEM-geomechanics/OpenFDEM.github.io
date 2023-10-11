@@ -1,0 +1,40 @@
+Installation
+==================================
+
+Mandatory Packages
+---------------------
+To compile ``OpenFDEM``, you neeed a complier supporting ``C++ 17`` and the following packages are required:
+
+- **CMake** (>= version 3.15) - cross-platform build system
+- C, C++ compiler with Standard Template Library (STL) support, C++ 20 is mandatory.
+- **OpenMP** - a high-performance, freely available package for multi core acceleration.
+- **Gmsh** (>= version 4.10) -  mesh generation and pre-processing, it is optional and the kernel is implemented in the source code.
+- **Eigen** (>= version 3.4.0) - a scientific matrix computation, it is optional and the headers are included in source code.
+
+Optional Packages
+---------------------
+- **CUDA** package for GPU parallelization. 
+- **PETSc** (>= version 3.13) - portable, extensible toolkit for scientific computation
+- **doxygen** documentation system for automatic generating reference manual from the source code.
+
+Implicit Static/Non-Linear Solvers
+--------------------------------------
+
+To use the implicit static or nonlinear solvers, at least one of the following libraries is required:
+
+- **PETSc** - portable, extensible toolkit for scientific computation
+- **LAPACK** - a standard software library for numerical linear algebra
+
+
+Post-Processing
+----------------
+
+To use the post-processing outputs (optional steps):
+
+- **ParaView** - Parallel visualization application
+- **Tecplot** - Commerical software for field results
+
+
+
+
+``OpenFDEM`` is flexible and can be run on Windows or Linux-like systems. The released version is for Windows x64.

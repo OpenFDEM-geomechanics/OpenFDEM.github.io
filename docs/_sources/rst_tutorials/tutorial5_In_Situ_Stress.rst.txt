@@ -6,7 +6,6 @@ In this example, we will show how to create the excavation model, how to get str
 .. figure:: ../../images/Desmos/Apply_Insitu_Stress.png
     :alt: Geometry of the Rock and Excavation
     :align: center
-    :scale: 60%
 
     Figure 1: Geometry of the Rock and Excavation
 
@@ -48,7 +47,7 @@ To start with programming, create a new empty input file or copy it from the exi
 3. Set the number of cores to be used for running this model in parallelization.
 
 .. literalinclude:: examples/ApplyInsituStress/runme.of
-    :lines: 47
+    :lines: 48
 
 -------------------------------------------------------------------
 2.2 Create the geometry and the mesh
@@ -59,17 +58,17 @@ To start with programming, create a new empty input file or copy it from the exi
     Circles in OpenFDEM are defined by four parameters: x coordinate, y coordinate, radius and the number of segments. Users can define a circle by entering **[x_value y_value radius #_of_segements]**.         
 
 .. literalinclude:: examples/ApplyInsituStress/runme.of
-    :lines: 51-52
+    :lines: 52-53
 
 2. Set the mesh size and the `default` method to create the mesh
 
 .. literalinclude:: examples/ApplyInsituStress/runme.of
-    :lines: 54-55
+    :lines: 55-56
 
 3. Group the elements which will be excavated.
 
 .. literalinclude:: examples/ApplyInsituStress/runme.of
-    :lines: 57
+    :lines: 58
 
 -------------------------------------------------------------------
 2.3 Assign Material Properties
@@ -106,7 +105,7 @@ The material properties of this model is shown as the table below:
 Set the material properties as shown below.
 
 .. literalinclude:: examples/ApplyInsituStress/runme.of
-    :lines: 61,63
+    :lines: 62,64
 
 -------------------------------------------------------------------
 2.4 Group the Edges
@@ -114,7 +113,7 @@ Set the material properties as shown below.
 Group the four boundaries of the model for applying the `in-situ` stress and boundary conditions.
 
 .. literalinclude:: examples/ApplyInsituStress/runme.of
-    :lines: 68-71
+    :lines: 69-72
 
 -------------------------------------------------------------------
 2.5 Assign Boundary Conditions
@@ -122,12 +121,12 @@ Group the four boundaries of the model for applying the `in-situ` stress and bou
 1. For this example, 30 MPa compressive stress in the `xx` direction and 5 MPa compressive stresses in the `yy` direction are assigned to the rock.
 
 .. literalinclude:: examples/ApplyInsituStress/runme.of
-    :lines: 75
+    :lines: 76
 
 2. To quickly balance the model, absorbing boundary conditions are assigned to four boundaries in the model.
 
 .. literalinclude:: examples/ApplyInsituStress/runme.of
-    :lines: 78-81
+    :lines: 79-82
 
 -------------------------------------------------------------------
 2.6 Set the Outputs
@@ -135,11 +134,11 @@ Group the four boundaries of the model for applying the `in-situ` stress and bou
 1. Set the output interval to be every 2000 steps and output all fields variables and fracture variables. 
 
 .. literalinclude:: examples/ApplyInsituStress/runme.of
-    :lines: 85, 87-88
+    :lines: 86, 88-89
 2. In this step, model will first achieve the equilibrium without excavation under `in-situ` stresses state. The result of velocity or kinematic ratio should be less than 0.00001.
 
 .. literalinclude:: examples/ApplyInsituStress/runme.of
-    :lines: 95
+    :lines: 96
 3. Insert CZM after achieve the equlibrium of in-situ stresses
 
 +---------------------------------------------+------------------------+
@@ -160,29 +159,29 @@ Group the four boundaries of the model for applying the `in-situ` stress and bou
 | GII (:math:`J/m^2`)                         | 40                     |
 +---------------------------------------------+------------------------+
 .. literalinclude:: examples/ApplyInsituStress/runme.of
-    :lines: 98-99
+    :lines: 99-100
 4. One step excavation method. Remove the elements in the "excavation" group.
 
 .. literalinclude:: examples/ApplyInsituStress/runme.of
-    :lines: 100
+    :lines: 101
 5. Clear the absorbing boundaries
 
 .. literalinclude:: examples/ApplyInsituStress/runme.of
-    :lines: 103-106
+    :lines: 104-107
 
 6. Add pressures at the external boundaries
 
 .. literalinclude:: examples/ApplyInsituStress/runme.of
-    :lines: 109-112
+    :lines: 110-113
 7. The program will run 500000 steps in total. In other words, it will output 25 files for reference.
 
 .. literalinclude:: examples/ApplyInsituStress/runme.of
-    :lines: 115
+    :lines: 116
 
 8. Finalize the model and clear all the temporary memories.
 
 .. literalinclude:: examples/ApplyInsituStress/runme.of
-    :lines: 118
+    :lines: 119
 
 9. Save the notepad and double click the .of file to run the program.
 
@@ -194,7 +193,6 @@ When you run the program, you can first check the mesh that was created by Gmsh 
 .. figure:: ../../images/Gmsh/In_situ_stress.png
     :alt: Mesh of the sample
     :align: center
-    :scale: 60%
 
     Figure 2: Mesh created by Gmsh
 
@@ -204,7 +202,6 @@ Check the boundary conditions here. Absorbing boundary conditions are on for bot
 .. figure:: ../../images/Command/Insitu_BC.png
     :alt: Triangle elements
     :align: center
-    :scale: 60%
 
     Figure 3: Check the mesh setting from command window
 
@@ -213,7 +210,24 @@ Check the boundary conditions here. Absorbing boundary conditions are on for bot
 ==================================
 4 Results
 ==================================
-Wait for updates.
+
+To hide hole of excavation, threshold filter can be used.
+
+Stress XX results.
+
+.. figure:: ../../images/Result/Insitu_StressXX.gif
+    :alt: In-situ Stress XX
+    :align: center
+
+    Figure 4: In-situ Stress XX
+
+Stress YY results.
+
+.. figure:: ../../images/Result/Insitu_StressYY.gif
+    :alt: In-situ Stress YY
+    :align: center
+
+    Figure 5: In-situ Stress XX
 
 
 ==================================
@@ -225,7 +239,7 @@ Wait for updates.
 .. _Apply_Insitu_Stress.of: https://github.com/OpenFDEM-geomechanics/Examples/blob/main/ApplyInsituStress/runme.of
 
 .. literalinclude:: examples/ApplyInsituStress/runme.of
-    :lines: 37-118
+    :lines: 37-119
 
 .. raw:: html
 

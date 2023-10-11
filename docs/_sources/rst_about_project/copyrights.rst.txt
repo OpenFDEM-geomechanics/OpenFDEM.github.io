@@ -1,0 +1,7 @@
+Copyright
+##############       
+
+The OpenFDEM documentation is compiled and maintained by: Xiaofeng Li, Katia (Ekaterina) Ossetchkina and Yuqi (Grace) Hu.
+
+.. include:: license.txt
+    :literal:

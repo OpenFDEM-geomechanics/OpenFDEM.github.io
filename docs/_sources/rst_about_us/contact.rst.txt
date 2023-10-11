@@ -46,18 +46,18 @@ Bio:
 
 
 Current PhD students for solver
------------------------------
+----------------------------------------
 
-Wang Ben (blast solver) – Institute of Rock and Soil Mechanics, Chinese Academy of Sciences
+Wang Ben (blast solver) - Institute of Rock and Soil Mechanics, Chinese Academy of Sciences
 
 
 Supporting packages developers
------------------------------
+----------------------------------------
 .. raw:: html
 
    <div style="height: 5px;"></div>
 
-- Dr Qi Zhao - The Hong Kong Polytechnic University, Architecture Design
+- Dr. Qi Zhao - The Hong Kong Polytechnic University, Architecture Design
 
 - Katia Ossetchkina – University of Toronto, Documentation and Website
 
@@ -65,7 +65,7 @@ Supporting packages developers
 
 - Earl Magsipoc - University of Toronto, Graphical user interface designing
 
-- Dr Aly Abdelaziz - University of Toronto, Postprocessing and data processing
+- Dr. Aly Abdelaziz - University of Toronto, Postprocessing and data processing
 
 
 .. raw:: html

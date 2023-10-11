@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Grain-based model (GBM), interface with Neper &#8212; OpenFDEM</title>
   
@@ -38,9 +38,6 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
@@ -424,7 +421,7 @@ document.write(`
 <style> .blue {color:#4169E1; font-weight:bold;} </style><p>Grain based modeling for UCS example. The grain-based model is constructed by the Voronoi tessellations fron <a class="reference external" href="https://neper.info/">Neper</a>,  <code class="docutils literal notranslate"><span class="pre">.geo</span></code>  or <code class="docutils literal notranslate"><span class="pre">.inp</span></code> files can be directly imported by OpenFDEM and each tessellation will be created into
 a individual physcial group. The user can regroup those tessellations into different minerals by assigning the area ratio, OpenFDEM will create those mineral groups by random to approach the predesigned mineral distributions.</p>
 <figure class="align-center" id="id1">
-<a class="reference internal image-reference" href="../_images/grainbasedmodel.png"><img alt="Geometry of the uniaxial compression test" src="../_images/grainbasedmodel.png" style="width: 390.3px; height: 526.1999999999999px;" /></a>
+<img alt="Geometry of the uniaxial compression test" src="../_images/grainbasedmodel.png" />
 <figcaption>
 <p><span class="caption-text">Figure 1: Mineral distribution in UCS sample</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -527,7 +524,7 @@ check your computer to change core number you want to use. To check the configur
 <ol class="arabic simple" start="5">
 <li><p>Create <code class="docutils literal notranslate"><span class="pre">object:cohesive</span></code> groups for the interfaces, those groups will be assigned different material properties.</p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">of</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">cohelement</span><span class="o">.</span><span class="n">from</span><span class="o">.</span><span class="n">gbm</span> <span class="s1">&#39;Qtz-Qtz&#39;</span> <span class="s1">&#39;Qtz&#39;</span> <span class="s1">&#39;Qtz&#39;</span>   <span class="c1"># Quartz group</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">of</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">cohelement</span><span class="o">.</span><span class="n">from</span><span class="o">.</span><span class="n">gbm</span> <span class="s1">&#39;Qtz-Qtz&#39;</span> <span class="s1">&#39;Qtz&#39;</span> <span class="s1">&#39;Qtz&#39;</span>  <span class="c1"># Quartz group</span>
 <span class="n">of</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">cohelement</span><span class="o">.</span><span class="n">from</span><span class="o">.</span><span class="n">gbm</span> <span class="s1">&#39;Qtz-Fel&#39;</span> <span class="s1">&#39;Qtz&#39;</span> <span class="s1">&#39;Fel&#39;</span>	<span class="c1"># Quartz-feldspar group</span>
 <span class="n">of</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">cohelement</span><span class="o">.</span><span class="n">from</span><span class="o">.</span><span class="n">gbm</span> <span class="s1">&#39;Fel-Fel&#39;</span> <span class="s1">&#39;Fel&#39;</span> <span class="s1">&#39;Fel&#39;</span>	<span class="c1"># feldspar-feldspar group</span>
 <span class="n">of</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">cohelement</span><span class="o">.</span><span class="n">from</span><span class="o">.</span><span class="n">gbm</span> <span class="s1">&#39;Fel-Bio&#39;</span> <span class="s1">&#39;Fel&#39;</span> <span class="s1">&#39;Bio&#39;</span>	<span class="c1"># feldspar-biotite group</span>
@@ -629,20 +626,21 @@ check your computer to change core number you want to use. To check the configur
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/OpenFDEM-geomechanics/Examples/blob/main/GBM/Job-1.inp">GBM.of</a> (click to download from GitHub)</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># initialization, this command is to clear the memory in your last run, it is not mandatory </span>
-<span class="c1"># but strongly recommend.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># initialization, this command is to clear the memory in your last run, it is not </span>
+<span class="c1"># mandatory but strongly recommend.</span>
 <span class="n">of</span><span class="o">.</span><span class="n">new</span>
 <span class="n">of</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">GBM</span>
 
-<span class="c1"># Set the path folder of your output results, //result// in the same path of your input file </span>
-<span class="c1"># will be created by default</span>
+<span class="c1"># Set the path folder of your output results, //result// in the same path of your input </span>
+<span class="c1"># file will be created by default</span>
 <span class="n">of</span><span class="o">.</span><span class="n">set</span><span class="o">.</span><span class="n">result</span> <span class="s2">&quot;result&quot;</span>
 
-<span class="c1"># Set the number of cores you want to use, the parallization will be automatically turned on</span>
-<span class="c1"># when you use the following command, otherwise the serilization will be used by default</span>
+<span class="c1"># Set the number of cores you want to use, the parallization will be automatically </span>
+<span class="c1"># turned on when you use the following command, otherwise the serilization will be used </span>
+<span class="c1"># by default</span>
 <span class="n">of</span><span class="o">.</span><span class="n">set</span><span class="o">.</span><span class="n">omp</span> <span class="mi">15</span>
 
-<span class="c1">##################################### import mesh ##########################################</span>
+<span class="c1">##################################### import mesh #######################################</span>
 <span class="n">of</span><span class="o">.</span><span class="kn">import</span> <span class="s1">&#39;Job-1.inp&#39;</span>
 
 <span class="n">of</span><span class="o">.</span><span class="n">set</span><span class="o">.</span><span class="n">gbm</span> <span class="mi">3</span> <span class="s1">&#39;Qtz&#39;</span> <span class="mf">0.3</span> <span class="s1">&#39;Fel&#39;</span> <span class="mf">0.46</span> <span class="s1">&#39;Bio&#39;</span> <span class="mf">0.24</span>
@@ -654,14 +652,14 @@ check your computer to change core number you want to use. To check the configur
 <span class="n">of</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">insert</span> <span class="s1">&#39;rock&#39;</span>
 
 <span class="c1"># Group Cohesive Elements</span>
-<span class="n">of</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">cohelement</span><span class="o">.</span><span class="n">from</span><span class="o">.</span><span class="n">gbm</span> <span class="s1">&#39;Qtz-Qtz&#39;</span> <span class="s1">&#39;Qtz&#39;</span> <span class="s1">&#39;Qtz&#39;</span>   <span class="c1"># Quartz group</span>
+<span class="n">of</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">cohelement</span><span class="o">.</span><span class="n">from</span><span class="o">.</span><span class="n">gbm</span> <span class="s1">&#39;Qtz-Qtz&#39;</span> <span class="s1">&#39;Qtz&#39;</span> <span class="s1">&#39;Qtz&#39;</span>  <span class="c1"># Quartz group</span>
 <span class="n">of</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">cohelement</span><span class="o">.</span><span class="n">from</span><span class="o">.</span><span class="n">gbm</span> <span class="s1">&#39;Qtz-Fel&#39;</span> <span class="s1">&#39;Qtz&#39;</span> <span class="s1">&#39;Fel&#39;</span>	<span class="c1"># Quartz-feldspar group</span>
 <span class="n">of</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">cohelement</span><span class="o">.</span><span class="n">from</span><span class="o">.</span><span class="n">gbm</span> <span class="s1">&#39;Fel-Fel&#39;</span> <span class="s1">&#39;Fel&#39;</span> <span class="s1">&#39;Fel&#39;</span>	<span class="c1"># feldspar-feldspar group</span>
 <span class="n">of</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">cohelement</span><span class="o">.</span><span class="n">from</span><span class="o">.</span><span class="n">gbm</span> <span class="s1">&#39;Fel-Bio&#39;</span> <span class="s1">&#39;Fel&#39;</span> <span class="s1">&#39;Bio&#39;</span>	<span class="c1"># feldspar-biotite group</span>
 <span class="n">of</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">cohelement</span><span class="o">.</span><span class="n">from</span><span class="o">.</span><span class="n">gbm</span> <span class="s1">&#39;Bio-Bio&#39;</span> <span class="s1">&#39;Bio&#39;</span> <span class="s1">&#39;Bio&#39;</span>	<span class="c1"># biotite-biotite group</span>
 <span class="n">of</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">cohelement</span><span class="o">.</span><span class="n">from</span><span class="o">.</span><span class="n">gbm</span> <span class="s1">&#39;Bio-Qtz&#39;</span> <span class="s1">&#39;Bio&#39;</span> <span class="s1">&#39;Qtz&#39;</span>	<span class="c1"># biotite-Quartz group</span>
 
-<span class="c1">################################# assign material parameters ################################</span>
+<span class="c1">################################# assign material parameters ############################</span>
 <span class="n">of</span><span class="o">.</span><span class="n">mat</span><span class="o">.</span><span class="n">element</span> <span class="s1">&#39;Qtz&#39;</span> <span class="n">elastic</span> <span class="n">den</span> <span class="mi">2700</span> <span class="n">E</span> <span class="mf">70e9</span> <span class="n">v</span> <span class="mf">0.1</span> <span class="n">damp</span> <span class="mf">0.6</span>
 <span class="n">of</span><span class="o">.</span><span class="n">mat</span><span class="o">.</span><span class="n">element</span> <span class="s1">&#39;Fel&#39;</span> <span class="n">elastic</span> <span class="n">den</span> <span class="mi">3500</span> <span class="n">E</span> <span class="mf">45e9</span> <span class="n">v</span> <span class="mf">0.2</span> <span class="n">damp</span> <span class="mf">0.6</span>
 <span class="n">of</span><span class="o">.</span><span class="n">mat</span><span class="o">.</span><span class="n">element</span> <span class="s1">&#39;Bio&#39;</span> <span class="n">elastic</span> <span class="n">den</span> <span class="mi">1800</span> <span class="n">E</span> <span class="mf">20e9</span> <span class="n">v</span> <span class="mf">0.3</span> <span class="n">damp</span> <span class="mf">0.6</span>
@@ -686,22 +684,22 @@ check your computer to change core number you want to use. To check the configur
 <span class="n">of</span><span class="o">.</span><span class="n">mat</span><span class="o">.</span><span class="n">contact</span> <span class="s1">&#39;Bio&#39;</span> <span class="s1">&#39;Bio&#39;</span> <span class="n">MC</span> <span class="n">fric</span> <span class="mf">0.2</span>
 <span class="n">of</span><span class="o">.</span><span class="n">mat</span><span class="o">.</span><span class="n">contact</span> <span class="s1">&#39;Bio&#39;</span> <span class="s1">&#39;Qtz&#39;</span> <span class="n">MC</span> <span class="n">fric</span> <span class="mf">0.3</span>
 
-<span class="c1">##################################### create groups #########################################</span>
+<span class="c1">##################################### create groups #####################################</span>
 <span class="n">of</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">nodal</span><span class="o">.</span><span class="n">from</span><span class="o">.</span><span class="n">element</span> <span class="s1">&#39;up&#39;</span> <span class="s1">&#39;up&#39;</span>
 <span class="n">of</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">nodal</span><span class="o">.</span><span class="n">from</span><span class="o">.</span><span class="n">element</span> <span class="s1">&#39;down&#39;</span> <span class="s1">&#39;down&#39;</span> 
 
-<span class="c1">################################### assign boundaries #######################################</span>
+<span class="c1">################################### assign boundaries ###################################</span>
 <span class="c1"># boundaries can be assigned after you define the groups</span>
 <span class="n">of</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">nodal</span><span class="o">.</span><span class="n">velocity</span>  <span class="s1">&#39;up&#39;</span> <span class="n">x</span> <span class="mf">0.0</span> <span class="n">y</span> <span class="o">-</span><span class="mf">0.05</span>
 <span class="n">of</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">nodal</span><span class="o">.</span><span class="n">velocity</span>  <span class="s1">&#39;down&#39;</span> <span class="n">x</span> <span class="mf">0.0</span> <span class="n">y</span> <span class="mf">0.05</span>
 
-<span class="c1">####################################### set output ##########################################</span>
+<span class="c1">####################################### set output ######################################</span>
 <span class="c1"># Set the interval of writing ParaView results.</span>
 <span class="n">of</span><span class="o">.</span><span class="n">history</span><span class="o">.</span><span class="n">pv</span><span class="o">.</span><span class="n">interval</span> <span class="mi">50000</span>
 <span class="n">of</span><span class="o">.</span><span class="n">history</span><span class="o">.</span><span class="n">pv</span><span class="o">.</span><span class="n">field</span> <span class="n">default</span> 
 <span class="n">of</span><span class="o">.</span><span class="n">history</span><span class="o">.</span><span class="n">pv</span><span class="o">.</span><span class="n">fracture</span> <span class="n">default</span>
 
-<span class="c1">##################################### execute model #########################################</span>
+<span class="c1">##################################### execute model #####################################</span>
 <span class="c1"># to excuate the model</span>
 <span class="n">of</span><span class="o">.</span><span class="n">step</span> <span class="mi">1000000</span>
 <span class="c1"># finalize the model and clear the memory</span>
@@ -815,7 +813,7 @@ check your computer to change core number you want to use. To check the configur
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
     <br/>
   </p>
 </div>

@@ -1,12 +1,13 @@
 Quick start with Brazilian disc test
 ########################################
-Brazilian Disc Test is a geotechnical laboratory test for indirect measurement of tensile strength of rocks. Due to its simplicity and efficiencly, 
-it is amonst the most commonly used laboratoory tesing methods in geotechnical investigation in rocks. It is also used as a benchmark test for calibrating the tensile behaviour of rocks in FDEM.
+Brazilian Disc Test is a geotechnical laboratory test for indirect measurement of tensile strength of rocks. 
+Due to its simplicity and efficiencly, it is amonst the most commonly used laboratory testing methods in 
+geotechnical investigation in rocks. It is also used as a benchmark test for calibrating the tensile behaviour 
+of rocks in FDEM.
 
 .. figure:: ../../images/Desmos/BD_Test.png
     :alt: Geometry of the Brazilian disc test
     :align: center
-    :scale: 40%
 
     Figure 1: Geometry of the Brazilian disc test
 
@@ -76,7 +77,7 @@ To start with runing, create a new empty text file (later add the `.of` extensio
     The cores will be printed on the console when you start a new run, you can also check the information from OpenFDEM kernel itself.
 
 .. literalinclude:: examples/CreateBrazilianDiscTest/runme.of
-    :lines: 47
+    :lines: 48
 
 -------------------------------------------------------------------
 3.2 Import the geometry and the mesh
@@ -84,17 +85,17 @@ To start with runing, create a new empty text file (later add the `.of` extensio
 1. Import the geometry and mesh of the model from the "example_br.geo" file. The final geometry will be the same as Figure 1 shown.
 
 .. literalinclude:: examples/CreateBrazilianDiscTest/runme.of
-    :lines: 51
+    :lines: 52
 
 2. Group the elements to rock, top platen and bottom platen.
 
 .. literalinclude:: examples/CreateBrazilianDiscTest/runme.of
-    :lines: 54-56
+    :lines: 55-57
 
 3. Insert the cohesive elements to the mesh.
 
 .. literalinclude:: examples/CreateBrazilianDiscTest/runme.of
-    :lines: 59
+    :lines: 60
 
 -------------------------------------------------------------------
 3.3 Assign Material Properties
@@ -158,7 +159,7 @@ The material properties of this model is shown as the table below:
 #. Set the material properties. elastic material is assigned for the matrix element and Evans_Marathe cohesive law is for CZM, the contact uses Mohr-Coulomb slip by default. 
 
 .. literalinclude:: examples/CreateBrazilianDiscTest/runme.of
-    :lines: 63-65, 67, 69
+    :lines: 64-66, 68, 70
 
 -------------------------------------------------------------------
 3.4 Create Groups and Assign Boundary Conditions
@@ -172,12 +173,12 @@ The material properties of this model is shown as the table below:
         #. plane.on/plane.above/plane.below p0 [x0 y0] p1 [x1 y1] or [x0 y0 x1 y1]
 
 .. literalinclude:: examples/CreateBrazilianDiscTest/runme.of
-    :lines: 74-75
+    :lines: 75-76
 
 2. Assign the nodal boundaries. In this example, platens are fixed in the `x` direction and moving with 0.005 m/s in `y` direction.
 
 .. literalinclude:: examples/CreateBrazilianDiscTest/runme.of
-    :lines: 79-80
+    :lines: 80-81
 
 -------------------------------------------------------------------
 3.5 Set the Outputs
@@ -185,7 +186,7 @@ The material properties of this model is shown as the table below:
 1. Set the output interval to be every 2000 steps and output all fields variables and fracture variables.
 
 .. literalinclude:: examples/CreateBrazilianDiscTest/runme.of
-    :lines: 84, 86-87
+    :lines: 85, 87-88
 
 -------------------------------------------------------------------
 3.6 Run
@@ -193,12 +194,12 @@ The material properties of this model is shown as the table below:
 1. The program will run 500000 steps to terminate the model. 
 
 .. literalinclude:: examples/CreateBrazilianDiscTest/runme.of
-    :lines: 91
+    :lines: 92
 
 2. Finalize the model and clear all the temporary memories.
 
 .. literalinclude:: examples/CreateBrazilianDiscTest/runme.of
-    :lines: 93
+    :lines: 94
 
 3. Save the notepad and double click the ``.of`` file to run the program.
 
@@ -210,7 +211,6 @@ When you run the program, you can first check the mesh that was created by Gmsh 
 .. figure:: ../../images/Gmsh/BD_Test.png
     :alt: Mesh of the sample
     :align: center
-    :scale: 60%
 
     Figure 2: Mesh created by Gmsh
 
@@ -218,7 +218,22 @@ When you run the program, you can first check the mesh that was created by Gmsh 
 ==================================
 5 Results
 ==================================
-Wait for updates.
+
+X Displacement
+
+.. figure:: ../../images/Result/BD_DispXX_Viridis.gif
+    :alt: BD Stress XX
+    :align: center
+
+    Figure 3: BD Stress XX
+
+Stress XX
+
+.. figure:: ../../images/Result/BD_StressXX_Viridis.gif
+    :alt: BD Stress YY
+    :align: center
+
+    Figure 4: BD Stress YY
 
 
 
@@ -231,7 +246,7 @@ Wait for updates.
 .. _BD_test.of: https://github.com/OpenFDEM-geomechanics/Examples/blob/main/CreateBrazilianDiscTest/runme.of
 
 .. literalinclude:: examples/CreateBrazilianDiscTest/runme.of
-    :lines: 37-93
+    :lines: 37-94
 
 
 .. raw:: html

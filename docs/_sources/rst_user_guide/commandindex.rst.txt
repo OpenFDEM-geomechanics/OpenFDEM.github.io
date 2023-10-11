@@ -185,7 +185,7 @@ Geometry
 +-------------------------------------------------------------------------+-----------------------------------------------------------------+
 | :doc:`of.geometry.remove.ellipse<Geometry/of.geometry.remove.ellipse>`  | remove the ellipse from the existing geometry                   |
 +-------------------------------------------------------------------------+-----------------------------------------------------------------+
-| :doc:`of.geometry.polyg<Geometry/of.geometry.polygon>`                  | create a polygon object                                         |
+| :doc:`of.geometry.polygon<Geometry/of.geometry.polygon>`                | create a polygon object                                         |
 +-------------------------------------------------------------------------+-----------------------------------------------------------------+
 | :doc:`of.geometry.cut.polygon<Geometry/of.geometry.cut.polygon>`        | cut the polygon from the existing geometry                      |
 +-------------------------------------------------------------------------+-----------------------------------------------------------------+

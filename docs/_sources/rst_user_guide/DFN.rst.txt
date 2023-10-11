@@ -1,5 +1,5 @@
-DFN
-===============================
+Discrete Fracture Networks (DFN)
+=======================================
 
 .. toctree::
    :maxdepth: 1

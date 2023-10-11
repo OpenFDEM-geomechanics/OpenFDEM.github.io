@@ -9,7 +9,6 @@ This example will review how to setup a uniaxial compressive test example with o
 Expected tutorial output (visualized in ``ParaView``):
 
 .. image:: ../../images/User_Guide/ucs_example.png 
-  :scale: 30%
   :alt: UCS Example Image
   :align: center
 
@@ -41,12 +40,12 @@ The following files are needed to follow along the tutorial:
 test example. 
 
 .. literalinclude:: examples/CreateUniaxialCompressionTestfromInputMesh/runme.of
-   :lines: 54
+   :lines: 55
 
 2. Given input file was exported from ABAQUS without assigning groups, so users need to group elements manually here.
 
 .. literalinclude:: examples/CreateUniaxialCompressionTestfromInputMesh/runme.of
-   :lines: 58-60
+   :lines: 59-61
 
 ==================================
 3 Full Script
@@ -58,8 +57,8 @@ test example.
 
 
 .. literalinclude:: examples/CreateUniaxialCompressionTestfromInputMesh/runme.of
-   :lines: 37-101
-   :emphasize-lines: 17-18
+   :lines: 37-102
+   :emphasize-lines: 18-19
 
 
 .. raw:: html

@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Phase Field &#8212; OpenFDEM</title>
   
@@ -38,9 +38,6 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
@@ -589,21 +586,21 @@ these setting based on your own conditions.</p>
 <h2>3 Run the Program<a class="headerlink" href="#run-the-program" title="Permalink to this heading">#</a></h2>
 <p>When you run the program, you can first check the mesh that was created by Gmsh as shown in Figure 2. If the mesh has a good quality, you can close the window to continue run the program.</p>
 <figure class="align-center" id="id2">
-<a class="reference internal image-reference" href="../_images/Phase_Field1.png"><img alt="Mesh of the sample" src="../_images/Phase_Field1.png" style="width: 597.0px; height: 557.4px;" /></a>
+<img alt="Mesh of the sample" src="../_images/Phase_Field1.png" />
 <figcaption>
 <p><span class="caption-text">Figure 2: Mesh created by Gmsh</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The phase field module is ON in this model.</p>
 <figure class="align-center" id="id3">
-<a class="reference internal image-reference" href="../_images/Phase_Field_module.png"><img alt="Phase field module is ON" src="../_images/Phase_Field_module.png" style="width: 220.0px; height: 196.0px;" /></a>
+<img alt="Phase field module is ON" src="../_images/Phase_Field_module.png" />
 <figcaption>
 <p><span class="caption-text">Figure 3: Global modules</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Material properties you set on step 2.3 will be shown on the screen. You can confirm it while the program just starts to run.</p>
 <figure class="align-center" id="id4">
-<a class="reference internal image-reference" href="../_images/Phase_Field_Material.png"><img alt="Material assignment" src="../_images/Phase_Field_Material.png" style="width: 597.85px; height: 191.4px;" /></a>
+<img alt="Material assignment" src="../_images/Phase_Field_Material.png" />
 <figcaption>
 <p><span class="caption-text">Figure 4: Check the material assignment from command window</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -618,12 +615,12 @@ these setting based on your own conditions.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/OpenFDEM-geomechanics/Examples/blob/main/PhaseFieldModelforModeIcrack/runme.of">Phase_Field.of</a> (click to download from GitHub)</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># initialization, this command is to clear the memory in your last run, it is not mandatory </span>
-<span class="c1"># but strongly recommend.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># initialization, this command is to clear the memory in your last run, it is not </span>
+<span class="c1"># mandatory but strongly recommend.</span>
 <span class="n">of</span><span class="o">.</span><span class="n">new</span>
 
-<span class="c1"># Set the path folder of your output results, //result// in the same path of your input file </span>
-<span class="c1"># will be created by default</span>
+<span class="c1"># Set the path folder of your output results, //result// in the same path of your input </span>
+<span class="c1"># file will be created by default</span>
 <span class="n">of</span><span class="o">.</span><span class="n">set</span><span class="o">.</span><span class="n">result</span> <span class="s2">&quot;result&quot;</span>
 
 <span class="c1"># turn off the contact</span>
@@ -632,11 +629,12 @@ these setting based on your own conditions.</p>
 <span class="c1"># Set the minangle to delete the bad segments for jsets and dfns.</span>
 <span class="n">of</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">minangle</span> <span class="mf">0.0</span>
 
-<span class="c1"># Set the number of cores you want to use, the parallization will be automatically turned on</span>
-<span class="c1"># when you use the following command, otherwise the serilization will be used by default</span>
+<span class="c1"># Set the number of cores you want to use, the parallization will be automatically </span>
+<span class="c1"># turned on when you use the following command, otherwise the serilization will be used </span>
+<span class="c1"># by default</span>
 <span class="n">of</span><span class="o">.</span><span class="n">set</span><span class="o">.</span><span class="n">omp</span> <span class="mi">15</span>
 
-<span class="c1">##################################### create mesh ##########################################</span>
+<span class="c1">##################################### create mesh #######################################</span>
 <span class="n">of</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">polygon</span> <span class="s1">&#39;plate&#39;</span> <span class="n">size</span> <span class="mi">9</span> 
 <span class="p">[</span><span class="o">-</span><span class="mf">30e-3</span> <span class="mf">30e-3</span><span class="p">]</span>
 <span class="p">[</span><span class="o">-</span><span class="mf">30e-3</span> <span class="mf">0.01e-3</span><span class="p">]</span>
@@ -663,18 +661,18 @@ these setting based on your own conditions.</p>
 
 <span class="n">of</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">element</span> <span class="s1">&#39;Mat2&#39;</span> <span class="nb">range</span> <span class="n">plane</span><span class="o">.</span><span class="n">below</span> <span class="n">x0</span> <span class="mf">10e-3</span> <span class="n">y0</span> <span class="o">-</span><span class="mf">40e-3</span> <span class="n">x1</span> <span class="mf">10e-3</span> <span class="n">y1</span> <span class="mf">40e-3</span> 
 
-<span class="c1">################################# assign material parameters ################################</span>
+<span class="c1">################################ assign material parameters #############################</span>
 <span class="c1"># assign material for matrix</span>
 <span class="n">of</span><span class="o">.</span><span class="n">mat</span><span class="o">.</span><span class="n">element</span> <span class="s1">&#39;plate&#39;</span> <span class="n">elastic</span> <span class="n">den</span> <span class="mi">2700</span> <span class="n">E</span> <span class="mf">30e9</span> <span class="n">v</span> <span class="mf">0.3</span> <span class="n">lc</span> <span class="mf">1.0e-4</span> <span class="n">Gc</span> <span class="mi">200</span> <span class="n">nita</span> <span class="mi">1</span> <span class="n">damp</span> <span class="mf">0.0</span>
 <span class="n">of</span><span class="o">.</span><span class="n">mat</span><span class="o">.</span><span class="n">element</span> <span class="s1">&#39;Mat2&#39;</span> <span class="n">elastic</span> <span class="n">den</span> <span class="mi">2700</span> <span class="n">E</span> <span class="mf">20e9</span> <span class="n">v</span> <span class="mf">0.3</span> <span class="n">lc</span> <span class="mf">1.0e-4</span> <span class="n">Gc</span> <span class="mi">100</span> <span class="n">nita</span> <span class="mi">1</span> <span class="n">damp</span> <span class="mf">0.0</span>
 <span class="c1"># assign materials for contacts</span>
 <span class="n">of</span><span class="o">.</span><span class="n">mat</span><span class="o">.</span><span class="n">contact</span> <span class="s1">&#39;default&#39;</span> <span class="n">MC</span> <span class="n">fric</span> <span class="mf">0.3</span>
 
-<span class="c1">##################################### create groups #########################################</span>
+<span class="c1">#################################### create groups ######################################</span>
 <span class="n">of</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">edge</span> <span class="s1">&#39;up_b&#39;</span> <span class="nb">range</span> <span class="n">plane</span><span class="o">.</span><span class="n">on</span> <span class="n">x0</span> <span class="o">-</span><span class="mf">30e-3</span> <span class="n">y0</span> <span class="mf">30e-3</span> <span class="n">x1</span> <span class="mf">30e-3</span> <span class="n">y1</span> <span class="mf">30e-3</span>
 <span class="n">of</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">edge</span> <span class="s1">&#39;bottow_b&#39;</span> <span class="nb">range</span> <span class="n">plane</span><span class="o">.</span><span class="n">on</span> <span class="n">x0</span> <span class="o">-</span><span class="mf">30e-3</span> <span class="n">y0</span> <span class="o">-</span><span class="mf">30e-3</span> <span class="n">x1</span> <span class="mf">30e-3</span> <span class="n">y1</span> <span class="o">-</span><span class="mf">30e-3</span>
 
-<span class="c1">################################### assign boundaries #######################################</span>
+<span class="c1">################################### assign boundaries ###################################</span>
 <span class="c1"># import the data table</span>
 <span class="n">of</span><span class="o">.</span><span class="n">import</span><span class="o">.</span><span class="n">table</span> <span class="n">stress</span> <span class="s1">&#39;load.dat&#39;</span>
 
@@ -682,12 +680,12 @@ these setting based on your own conditions.</p>
 <span class="n">of</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">edge</span><span class="o">.</span><span class="n">pressure</span> <span class="s1">&#39;up_b&#39;</span> <span class="n">normal</span> <span class="o">-</span><span class="mi">1</span> <span class="n">ntable</span> <span class="n">stress</span>
 <span class="n">of</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">edge</span><span class="o">.</span><span class="n">pressure</span> <span class="s1">&#39;bottow_b&#39;</span> <span class="n">normal</span> <span class="o">-</span><span class="mi">1</span> <span class="n">ntable</span> <span class="n">stress</span>
 
-<span class="c1">####################################### set output ##########################################</span>
+<span class="c1">###################################### set output #######################################</span>
 <span class="c1"># Set the interval of writing ParaView results.</span>
 <span class="n">of</span><span class="o">.</span><span class="n">history</span><span class="o">.</span><span class="n">pv</span><span class="o">.</span><span class="n">interval</span> <span class="mi">2000</span>
 <span class="n">of</span><span class="o">.</span><span class="n">history</span><span class="o">.</span><span class="n">pv</span><span class="o">.</span><span class="n">field</span> <span class="n">default</span>
 
-<span class="c1">##################################### execute model #########################################</span>
+<span class="c1">##################################### execute model #####################################</span>
 <span class="c1"># to excuate the model</span>
 <span class="n">of</span><span class="o">.</span><span class="n">step</span> <span class="mi">100000</span>
 <span class="c1"># finalize the model and clear the memory</span>
@@ -800,7 +798,7 @@ these setting based on your own conditions.</p>
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
     <br/>
   </p>
 </div>

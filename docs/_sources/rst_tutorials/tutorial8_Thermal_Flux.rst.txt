@@ -1,11 +1,11 @@
 Thermal flux transportation in a bar
 ########################################
-Thermal module will be reviewed in this tutorial.
+In this tutorial, thermal module will be review. Contact thermal transition from FEM (left) part to FDEM (right) part 
+will be modeled by triangular elements (left) and quadrilateral elements (right).
 
 .. figure:: ../../images/Desmos/Thermal.png
     :alt: Geometry of the uniaxial compression test
     :align: center
-    :scale: 40%
 
     Figure 1: Geometry of the uniaxial compression strength test
 
@@ -45,6 +45,7 @@ To start with programming, create a new empty input file or copy it from the exi
     :lines: 43
 
 3. Set the number of cores to be used for running this model.
+
 .. warning::
     In the default example, 15 cores will be used for running. To prevent the heavy burden of your computer, please 
     check your computer to change core number you want to use. To check the configuration of your computer, you can go
@@ -63,8 +64,8 @@ To start with programming, create a new empty input file or copy it from the exi
 
     If nothing is set here, serial computing will be used by default.
 
-    .. literalinclude:: examples/ThermalFlux/runme.of
-        :lines: 47
+.. literalinclude:: examples/ThermalFlux/runme.of
+    :lines: 48
 
 -------------------------------------------------------------------
 2.2 Create the geometry and the mesh
@@ -72,22 +73,22 @@ To start with programming, create a new empty input file or copy it from the exi
 1. See Figure 1 for the thermal conduction setup and draw the corresponding geometry.
 
 .. literalinclude:: examples/ThermalFlux/runme.of
-    :lines: 50-51
+    :lines: 51-52
 
 2. Set the mesh size of the geometry.
 
 .. literalinclude:: examples/ThermalFlux/runme.of
-    :lines: 52
+    :lines: 53
 
 3. Set the quadrangle elements
 
 .. literalinclude:: examples/ThermalFlux/runme.of
-    :lines: 53
+    :lines: 54
 
-4. Create the mesh
+4. Create the mesh.
 
 .. literalinclude:: examples/ThermalFlux/runme.of
-    :lines: 54
+    :lines: 55
 
 -------------------------------------------------------------------
 2.3 Assign Material and Thermal Properties
@@ -146,12 +147,12 @@ To start with programming, create a new empty input file or copy it from the exi
 1. Set the material properties.
 
 .. literalinclude:: examples/ThermalFlux/runme.of
-    :lines: 58, 60, 62
+    :lines: 59, 61, 63
 
 2. Set the thermal properties.
 
 .. literalinclude:: examples/ThermalFlux/runme.of
-    :lines: 65
+    :lines: 66
 
 -------------------------------------------------------------------
 2.4 Create Groups and Assign Boundary Conditions
@@ -159,17 +160,17 @@ To start with programming, create a new empty input file or copy it from the exi
 1. Create boundary groups on object:node, the **range** method is on the plane, all the nodes on the plane will be added into the specific groups. The plane is defined by the start point and end point.
 
 .. literalinclude:: examples/ThermalFlux/runme.of
-    :lines: 68-71
+    :lines: 69-72
 
 2. Assign the thermal properties to the model. In this model, the temperature of the left of the example is 50 degree Celsius. The temperature of the right of the example is 0 degree Celsius. Heat will be conducted in this model from left to right.
 
 .. literalinclude:: examples/ThermalFlux/runme.of
-    :lines: 75-76
+    :lines: 76-77
 
 3. Assign the nodal boundaries. In this model, top, bottom and right boundaries are fixed in both x and y directions.
 
 .. literalinclude:: examples/ThermalFlux/runme.of
-    :lines: 77-79
+    :lines: 78-80
 
 -------------------------------------------------------------------
 2.5 Set the Outputs
@@ -177,22 +178,22 @@ To start with programming, create a new empty input file or copy it from the exi
 1. Set the output interval to be every 500 steps and output all fields variables and fracture variables. Control the output interval to a reasonable size could shorten the computation time but get a good understanding of the model.
 
 .. literalinclude:: examples/ThermalFlux/runme.of
-    :lines: 83-85
+    :lines: 84-86
 
 2. Timestep of thermal calculation can be fixed to 5e-5 in this example.
 
 .. literalinclude:: examples/ThermalFlux/runme.of
-    :lines: 89
+    :lines: 90
 
 3. The program will run 15000 steps in total. In other words, it will output 10 files for reference.
 
 .. literalinclude:: examples/ThermalFlux/runme.of
-    :lines: 91
+    :lines: 92
 
 4. Finalize the model and clear all the temporary memories.
 
 .. literalinclude:: examples/ThermalFlux/runme.of
-    :lines: 93
+    :lines: 94
 
 5. Save the notepad and double click the .of file to run the program.
 
@@ -204,7 +205,6 @@ When you run the program, you can first check the mesh that was created by Gmsh 
 .. figure:: ../../images/Gmsh/Thermal.png
     :alt: Mesh of the sample
     :align: center
-    :scale: 80%
 
     Figure 2: Mesh created by Gmsh
 
@@ -214,7 +214,6 @@ The thermal module is ON in this model.
 .. figure:: ../../images/Command/Thermal_module.png
     :alt: Thermal module is ON
     :align: center
-    :scale: 80%
 
     Figure 3: Global modules
 
@@ -224,7 +223,6 @@ Material properties you set on step 2.3 will be shown on the screen. You can con
 .. figure:: ../../images/Command/Thermal_Material.png
     :alt: Material assignment
     :align: center
-    :scale: 55%
 
     Figure 4: Check the material assignment from command window
 
@@ -234,7 +232,6 @@ Furthermore, node boundaries are shown at the header of the program.
 .. figure:: ../../images/Command/Thermal_BC.PNG
     :alt: Boundary information
     :align: center
-    :scale: 80% 
 
     Figure 5: Check the boundary information from command window   
 
@@ -242,7 +239,13 @@ Furthermore, node boundaries are shown at the header of the program.
 ==================================
 4 Results
 ==================================
-Wait for updates.
+Thermal flow
+
+.. figure:: ../../images/Result/Thermal_Ele.gif
+    :alt: Thermal Flow
+    :align: center
+
+    Figure 6: Thermal Flow
 
 
 
@@ -255,7 +258,7 @@ Wait for updates.
 .. _Thermal_Flux.of: https://github.com/OpenFDEM-geomechanics/Examples/blob/main/ThermalFlux/runme.of
 
 .. literalinclude:: examples/ThermalFlux/runme.of
-    :lines: 37-93
+    :lines: 37-94
 
 
 .. raw:: html

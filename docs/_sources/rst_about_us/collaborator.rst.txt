@@ -2,7 +2,6 @@ Collaborating
 ##############
 
 .. figure:: ../../images/Aboutus/torontoLogo.png   
-    :scale: 45%
     :align: left
 
 |
@@ -12,12 +11,13 @@ Collaborating
 |
 |
 |
-
+|
+|
 ===================================================================
 
-- Professor **Giovanni Grasselli**, NSERC – Energi Simulation Industrial Research Chair in Fundamental Rock Physics and Rock Mechanics
-- Dr **Xiaofeng Li**, 2021 - 2023
-- Dr **Aly Abdelaziz**, 2021 - 2023
+- | Professor **Giovanni Grasselli**, NSERC – Energi Simulation Industrial Research Chair in Fundamental Rock Physics and Rock Mechanics
+- Dr. **Xiaofeng Li**, 2021 - 2023
+- Dr. **Aly Abdelaziz**, 2021 - 2023
 - **Earl Magsipoc**, 2021 - 2023
 - **Katia Ossetchkina**, 2021 - 2023
 - **Grace Hu**, 2023 - 2023
@@ -26,7 +26,6 @@ Collaborating
 
 
 .. figure:: ../../images/Aboutus/ISRMlogo.png   
-    :scale: 20%
     :align: left
 
 |
@@ -38,14 +37,13 @@ Collaborating
 =================================================================
 
 - Professor **Haibo Li**, Dean of Wuhan Branch, Chinese Academy of Sciences, Vice-Editor of Journal of Rock Mechanics and Geotechnical Engineering
-- Dr **Xiaofeng Li**, 2017 - 2020
+- Dr. **Xiaofeng Li**, 2017 - 2020
 - **Ben Wang**, 2019 - 2022
 
 
 |
 
 .. figure:: ../../images/Aboutus/polyulogo.png   
-    :scale: 60%
     :align: left
 
 |
@@ -58,14 +56,13 @@ Collaborating
 
 =================================================================
 
-- Dr **Qi Zhao**, 2019 - 2022
-- Dr **Xiaofeng Li**, 2020 - 2021
+- Dr. **Qi Zhao**, 2019 - 2022
+- Dr. **Xiaofeng Li**, 2020 - 2021
 
 
 |
 
 .. figure:: ../../images/Aboutus/monashlogo.png   
-    :scale: 20%
     :align: left
 
 |
@@ -81,7 +78,7 @@ Collaborating
 
 - Professor **Qianbing Zhang**, Editor of Tunnelling and Underground Space Technology
 
-- Dr **Xiaofeng Li**, 2018 - 2019
+- Dr. **Xiaofeng Li**, 2018 - 2019
 
 ===================================================================
 

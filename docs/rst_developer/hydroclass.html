@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Hydro transportation class &#8212; OpenFDEM</title>
   
@@ -38,9 +38,6 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
@@ -915,7 +912,7 @@ document.write(`
 <span id="_CPPv3N8ns_hydro21HydroBaseFractureFlow18updateCZMAperatureE7General5Nodal10Cohelement"></span><span id="_CPPv2N8ns_hydro21HydroBaseFractureFlow18updateCZMAperatureE7General5Nodal10Cohelement"></span><span id="ns_hydro::HydroBaseFractureFlow::updateCZMAperature__General.Nodal.Cohelement"></span><span class="target" id="classns__hydro_1_1_hydro_base_fracture_flow_1ac7fab2c19f3ebfa9b32b515da685cba8"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">updateCZMAperature</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv410Cohelement" title="Cohelement"><span class="n"><span class="pre">Cohelement</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">cohelement</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_hydro21HydroBaseFractureFlow18updateCZMAperatureE7General5Nodal10Cohelement" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Compute the fracture aperature on surface, the aperature should be updated for broken CZM as well, this function only need to run at the mechanical step. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>nodal</strong> – </p></li>
 <li><p><strong>face</strong> – </p></li>
@@ -924,7 +921,7 @@ document.write(`
 <li><p><strong>solidmat</strong> – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>na </p>
 </dd>
 </dl>
@@ -936,7 +933,7 @@ document.write(`
 <dd><p>Compute the fracture permability tensor for fracture flow. </p>
 <p>\detail The k.ij is assembled from the local permability tensor on each surface of an element according to modified cubic law, the local permability is constructured by the principal values on each local directions in d-s-n plane</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>element</strong> – </p></li>
 <li><p><strong>face</strong> – </p></li>
@@ -953,7 +950,7 @@ document.write(`
 <dd><p>Compute fracture volume. </p>
 <p>\attension The fracture volume is V=\,\,\frac{1}{2}\left( S_{low}+S_{up} \right) o the fracture aperature should be updated before calculate fracture volume</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>face</strong> – </p></li>
 <li><p><strong>cohelement</strong> – </p></li>
@@ -968,7 +965,7 @@ document.write(`
 <span id="_CPPv3N8ns_hydro21HydroBaseFractureFlow37computeFractureFlowRateatIntergrationE7General7Element5NodalK3IntK3Int12Intergration5Hydro8Solidmat"></span><span id="_CPPv2N8ns_hydro21HydroBaseFractureFlow37computeFractureFlowRateatIntergrationE7General7Element5NodalK3IntK3Int12Intergration5Hydro8Solidmat"></span><span id="ns_hydro::HydroBaseFractureFlow::computeFractureFlowRateatIntergration__General.Element.Nodal.IntC.IntC.Intergration.Hydro.Solidmat"></span><span class="target" id="classns__hydro_1_1_hydro_base_fracture_flow_1af13508f74d5fe3d14bd36973586a28ae"></span><a class="reference internal" href="commonclass.html#_CPPv47Vector2" title="Vector2"><span class="n"><span class="pre">Vector2</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeFractureFlowRateatIntergration</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="commonclass.html#_CPPv43Int" title="Int"><span class="n"><span class="pre">Int</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">elementindices</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="commonclass.html#_CPPv43Int" title="Int"><span class="n"><span class="pre">Int</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">igauss</span></span>, <span class="n"><span class="pre">Intergration</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">intergration</span></span>, <a class="reference internal" href="#_CPPv45Hydro" title="Hydro"><span class="n"><span class="pre">Hydro</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">hydro</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_hydro21HydroBaseFractureFlow37computeFractureFlowRateatIntergrationE7General7Element5NodalK3IntK3Int12Intergration5Hydro8Solidmat" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>compute fracture flow rate at intergration point </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>general</strong> – </p></li>
 <li><p><strong>element</strong> – </p></li>
@@ -979,7 +976,7 @@ document.write(`
 <li><p><strong>solidmat</strong> – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>q.i: flow rate vector in each direction </p>
 </dd>
 </dl>
@@ -1038,14 +1035,14 @@ document.write(`
 <span id="_CPPv3N8ns_hydro21HydroBaseFractureFlow22initializeforHydroStepE7General5Nodal5Hydro7Boudary"></span><span id="_CPPv2N8ns_hydro21HydroBaseFractureFlow22initializeforHydroStepE7General5Nodal5Hydro7Boudary"></span><span id="ns_hydro::HydroBaseFractureFlow::initializeforHydroStep__General.Nodal.Hydro.Boudary"></span><span class="target" id="classns__hydro_1_1_hydro_base_fracture_flow_1a95ede4073f1877183c59e88792c95087"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">initializeforHydroStep</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="#_CPPv45Hydro" title="Hydro"><span class="n"><span class="pre">Hydro</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">hydro</span></span>, <a class="reference internal" href="solverclass.html#_CPPv47Boudary" title="Boudary"><span class="n"><span class="pre">Boudary</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">boudary</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_hydro21HydroBaseFractureFlow22initializeforHydroStepE7General5Nodal5Hydro7Boudary" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Initialize the fracture flow and fracture volume at hydro knnot. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>boudary</strong> – boudary condition class refference </p></li>
 <li><p><strong>nodal</strong> – nodal class refference </p></li>
 <li><p><strong>hydro</strong> – hydro class refference</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>na </p>
 </dd>
 </dl>
@@ -1081,14 +1078,14 @@ document.write(`
 <span id="_CPPv3N8ns_hydro19HydroBaseMatrixFlow10initializeE7General7Boudary5Nodal5Hydro"></span><span id="_CPPv2N8ns_hydro19HydroBaseMatrixFlow10initializeE7General7Boudary5Nodal5Hydro"></span><span id="ns_hydro::HydroBaseMatrixFlow::initialize__General.Boudary.Nodal.Hydro"></span><span class="target" id="classns__hydro_1_1_hydro_base_matrix_flow_1a249b74b877500eb9a37979fdc3739d46"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">initialize</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solverclass.html#_CPPv47Boudary" title="Boudary"><span class="n"><span class="pre">Boudary</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">boudary</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="#_CPPv45Hydro" title="Hydro"><span class="n"><span class="pre">Hydro</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">hydro</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_hydro19HydroBaseMatrixFlow10initializeE7General7Boudary5Nodal5Hydro" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Initialize the fracture flow and fracture volume at hydro knnot. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>boudary</strong> – boudary condition class refference </p></li>
 <li><p><strong>nodal</strong> – nodal class refference </p></li>
 <li><p><strong>hydro</strong> – hydro class refference</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>na </p>
 </dd>
 </dl>
@@ -1099,7 +1096,7 @@ document.write(`
 <span id="_CPPv3N8ns_hydro19HydroBaseMatrixFlow19computeMatrixVolumeE7General5Nodal7Element12Intergration5Hydro7Boudary"></span><span id="_CPPv2N8ns_hydro19HydroBaseMatrixFlow19computeMatrixVolumeE7General5Nodal7Element12Intergration5Hydro7Boudary"></span><span id="ns_hydro::HydroBaseMatrixFlow::computeMatrixVolume__General.Nodal.Element.Intergration.Hydro.Boudary"></span><span class="target" id="classns__hydro_1_1_hydro_base_matrix_flow_1acc3cba89304c5f27ae959f0a860b697a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeMatrixVolume</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <span class="n"><span class="pre">Intergration</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">intergration</span></span>, <a class="reference internal" href="#_CPPv45Hydro" title="Hydro"><span class="n"><span class="pre">Hydro</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">hydro</span></span>, <a class="reference internal" href="solverclass.html#_CPPv47Boudary" title="Boudary"><span class="n"><span class="pre">Boudary</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">boudary</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_hydro19HydroBaseMatrixFlow19computeMatrixVolumeE7General5Nodal7Element12Intergration5Hydro7Boudary" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Compute matrix volume. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>element</strong> – </p></li>
 <li><p><strong>hydro</strong> – </p></li>
@@ -1113,7 +1110,7 @@ document.write(`
 <span id="_CPPv3N8ns_hydro19HydroBaseMatrixFlow35computeMatrixFlowRateatIntergrationE7General7Element5NodalK3IntK3Int12Intergration5Hydro8Solidmat"></span><span id="_CPPv2N8ns_hydro19HydroBaseMatrixFlow35computeMatrixFlowRateatIntergrationE7General7Element5NodalK3IntK3Int12Intergration5Hydro8Solidmat"></span><span id="ns_hydro::HydroBaseMatrixFlow::computeMatrixFlowRateatIntergration__General.Element.Nodal.IntC.IntC.Intergration.Hydro.Solidmat"></span><span class="target" id="classns__hydro_1_1_hydro_base_matrix_flow_1ac425f5e84306ee709e760cf0370510dc"></span><a class="reference internal" href="commonclass.html#_CPPv47Vector2" title="Vector2"><span class="n"><span class="pre">Vector2</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeMatrixFlowRateatIntergration</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="commonclass.html#_CPPv43Int" title="Int"><span class="n"><span class="pre">Int</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">elementindices</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="commonclass.html#_CPPv43Int" title="Int"><span class="n"><span class="pre">Int</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">igauss</span></span>, <span class="n"><span class="pre">Intergration</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">intergration</span></span>, <a class="reference internal" href="#_CPPv45Hydro" title="Hydro"><span class="n"><span class="pre">Hydro</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">hydro</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_hydro19HydroBaseMatrixFlow35computeMatrixFlowRateatIntergrationE7General7Element5NodalK3IntK3Int12Intergration5Hydro8Solidmat" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>compute fracture flow rate at intergration point </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>general</strong> – </p></li>
 <li><p><strong>element</strong> – </p></li>
@@ -1124,7 +1121,7 @@ document.write(`
 <li><p><strong>solidmat</strong> – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>q.i: flow rate vector in each direction </p>
 </dd>
 </dl>
@@ -1185,7 +1182,7 @@ document.write(`
 <span id="_CPPv3N8ns_hydro12HydroBoudary21update_hydro_boundaryE5Hydro7Boudary8Solidmat7General5Nodal"></span><span id="_CPPv2N8ns_hydro12HydroBoudary21update_hydro_boundaryE5Hydro7Boudary8Solidmat7General5Nodal"></span><span id="ns_hydro::HydroBoudary::update_hydro_boundary__Hydro.Boudary.Solidmat.General.Nodal"></span><span class="target" id="classns__hydro_1_1_hydro_boudary_1a01bab6060b9a72d4aa4f6c024e038102"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update_hydro_boundary</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv45Hydro" title="Hydro"><span class="n"><span class="pre">Hydro</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">hydro</span></span>, <a class="reference internal" href="solverclass.html#_CPPv47Boudary" title="Boudary"><span class="n"><span class="pre">Boudary</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">boundary</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span>, <a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_hydro12HydroBoudary21update_hydro_boundaryE5Hydro7Boudary8Solidmat7General5Nodal" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>update boundary condition. This function is not parallised because thermal boundary is not heavy, extra time will costed to step in the parallel.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>thermal</strong> – </p></li>
 <li><p><strong>boundary</strong> – </p></li>
@@ -1214,7 +1211,7 @@ document.write(`
 <span id="_CPPv3N8ns_hydro17HydroComputeForce24computeFractureFlowForceE7General7Boudary4Edge7Element5Nodal5Hydro"></span><span id="_CPPv2N8ns_hydro17HydroComputeForce24computeFractureFlowForceE7General7Boudary4Edge7Element5Nodal5Hydro"></span><span id="ns_hydro::HydroComputeForce::computeFractureFlowForce__General.Boudary.Edge.Element.Nodal.Hydro"></span><span class="target" id="classns__hydro_1_1_hydro_compute_force_1ae0480f876011380678f9ac5267a9280c"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeFractureFlowForce</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solverclass.html#_CPPv47Boudary" title="Boudary"><span class="n"><span class="pre">Boudary</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">boundary</span></span>, <a class="reference internal" href="solidclass.html#_CPPv44Edge" title="Edge"><span class="n"><span class="pre">Edge</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">edge</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="#_CPPv45Hydro" title="Hydro"><span class="n"><span class="pre">Hydro</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">hydro</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_hydro17HydroComputeForce24computeFractureFlowForceE7General7Boudary4Edge7Element5Nodal5Hydro" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>compute the thermal force only for triangle element.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>nodal</strong> – </p></li>
 <li><p><strong>element</strong> – </p></li>
@@ -1230,7 +1227,7 @@ document.write(`
 <span id="_CPPv3N8ns_hydro17HydroComputeForce19computeGasFlowForceE7General7Boudary4Edge7Element5Nodal5Hydro"></span><span id="_CPPv2N8ns_hydro17HydroComputeForce19computeGasFlowForceE7General7Boudary4Edge7Element5Nodal5Hydro"></span><span id="ns_hydro::HydroComputeForce::computeGasFlowForce__General.Boudary.Edge.Element.Nodal.Hydro"></span><span class="target" id="classns__hydro_1_1_hydro_compute_force_1a7c7e0b97b385941812258b5ac1f32c66"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeGasFlowForce</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solverclass.html#_CPPv47Boudary" title="Boudary"><span class="n"><span class="pre">Boudary</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">boundary</span></span>, <a class="reference internal" href="solidclass.html#_CPPv44Edge" title="Edge"><span class="n"><span class="pre">Edge</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">edge</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="#_CPPv45Hydro" title="Hydro"><span class="n"><span class="pre">Hydro</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">hydro</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_hydro17HydroComputeForce19computeGasFlowForceE7General7Boudary4Edge7Element5Nodal5Hydro" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>compute the fluid force for gas flow, appliable for arbitary element shape.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>general</strong> – </p></li>
 <li><p><strong>boundary</strong> – </p></li>
@@ -1248,7 +1245,7 @@ document.write(`
 <span id="_CPPv3N8ns_hydro17HydroComputeForce22computeMatrixFlowForceE7General5Nodal7Element5Hydro"></span><span id="_CPPv2N8ns_hydro17HydroComputeForce22computeMatrixFlowForceE7General5Nodal7Element5Hydro"></span><span id="ns_hydro::HydroComputeForce::computeMatrixFlowForce__General.Nodal.Element.Hydro"></span><span class="target" id="classns__hydro_1_1_hydro_compute_force_1ae081fad4dda90ac44b46fee0196c40c0"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeMatrixFlowForce</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <a class="reference internal" href="#_CPPv45Hydro" title="Hydro"><span class="n"><span class="pre">Hydro</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">hydro</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8ns_hydro17HydroComputeForce22computeMatrixFlowForceE7General5Nodal7Element5Hydro" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>compute the thermal force for arbitary element type. more time will be cost for triangle element.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>nodal</strong> – </p></li>
 <li><p><strong>element</strong> – </p></li>
@@ -1750,7 +1747,7 @@ document.write(`
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
     <br/>
   </p>
 </div>

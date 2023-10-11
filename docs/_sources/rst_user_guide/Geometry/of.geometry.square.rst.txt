@@ -30,7 +30,7 @@ Example:
 .. code-block:: 
 
     # Method 1
-    of.geometry.square [0 1 0 1]
+    of.geometry.square 'rock' [0 1 0 1]
     # Method 2
     of.geometry.square [rock] x [0 1] y [0 1]
     # Method 3

@@ -5,7 +5,6 @@ This tutorial will continue the hydro seepage model in tutorial 6 with discrete 
 .. figure:: ../../images/Desmos/Hydro.png
     :alt: Geometry of the uniaxial compression test
     :align: center
-    :scale: 40%
 
     Figure 1: Geometry of the uniaxial compression strength test
 
@@ -18,7 +17,7 @@ Based on the code in tutorial 6, fracture flow parameters will be add to model t
 1. To include the discrete elements, joint elements are added to the model after create the mesh.
 
 .. literalinclude:: examples/HydroFractureFlow/runme.of
-    :lines: 55
+    :lines: 20
 
 2. Assign the material properties to CZM.
 
@@ -33,7 +32,7 @@ Based on the code in tutorial 6, fracture flow parameters will be add to model t
 +---------------------------------------------+------------------------+
 
 .. literalinclude:: examples/HydroFractureFlow/runme.of
-    :lines: 60
+    :lines: 61
 
 3. Set fracture flow parameters
 
@@ -63,7 +62,7 @@ Based on the code in tutorial 6, fracture flow parameters will be add to model t
 | b                                           | 1.0                    |
 +---------------------------------------------+------------------------+
 .. literalinclude:: examples/HydroFractureFlow/runme.of
-    :lines: 63-64
+    :lines: 64-65
 
 ==================================
 2 Run the Program
@@ -73,7 +72,6 @@ Based on the code in tutorial 6, fracture flow parameters will be add to model t
 .. figure:: ../../images/Command/Hydro_Fracture_Modulus.PNG
     :alt: Applied Modules
     :align: center
-    :scale: 80%
 
     Figure 2: Applied Modules
 
@@ -82,7 +80,6 @@ Based on the code in tutorial 6, fracture flow parameters will be add to model t
 .. figure:: ../../images/Command/Hydro_Fracture_Material.PNG
     :alt: Hydro Fracture Materials
     :align: center
-    :scale: 60%
 
     Figure 3: Hydro Fracture Materials
 
@@ -91,14 +88,19 @@ Based on the code in tutorial 6, fracture flow parameters will be add to model t
 .. figure:: ../../images/Command/Hydro_BC.PNG
     :alt: Hydro Boundary Conditions
     :align: center
-    :scale: 65%
 
     Figure 4: Hydro Boundary Conditions
 
 ==================================
 3 Results
 ==================================
-Wait for updates.
+Fluid pressure of fracture flow.
+
+.. figure:: ../../images/Result/Fracture_Viridis.gif
+    :alt: Hydro Fracture Flow
+    :align: center
+
+    Figure 5: Hydro Fracture Flow
 
 
 
@@ -111,8 +113,8 @@ Wait for updates.
 .. _Hydro_Fracture_Flow.of: https://github.com/OpenFDEM-geomechanics/Examples/blob/main/HydroFractureFlow/runme.of
 
 .. literalinclude:: examples/HydroFractureFlow/runme.of
-    :lines: 37-96
-    :emphasize-lines: 19, 24, 27-28
+    :lines: 37-97
+    :emphasize-lines: 20, 25, 28-29
 
 
 

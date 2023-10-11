@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Thermal flux class &#8212; OpenFDEM</title>
   
@@ -38,9 +38,6 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
@@ -605,7 +602,7 @@ document.write(`
 <dd><p>compute the equvalient advection tenssor for each element </p>
 <p>\detail q=\frac{1}{2}\rho <em>wC_wq</em>{i}^{w}</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>element</strong> – </p></li>
 <li><p><strong>face</strong> – </p></li>
@@ -629,7 +626,7 @@ document.write(`
 <dd><p>Compute fracture volume. </p>
 <p>\attension The fracture volume is V=\,\,\frac{1}{2}\left( S_{low}+S_{up} \right) o the fracture aperature should be updated before calculate fracture volume</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>face</strong> – </p></li>
 <li><p><strong>cohelement</strong> – </p></li>
@@ -669,14 +666,14 @@ document.write(`
 <span id="_CPPv3N10ns_thermal14HeatConduction10initializeE7General7Boudary5Nodal7Thermal"></span><span id="_CPPv2N10ns_thermal14HeatConduction10initializeE7General7Boudary5Nodal7Thermal"></span><span id="ns_thermal::HeatConduction::initialize__General.Boudary.Nodal.Thermal"></span><span class="target" id="classns__thermal_1_1_heat_conduction_1a6fe0109c78efa7dbe8c5ece654f4b72c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">initialize</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solverclass.html#_CPPv47Boudary" title="Boudary"><span class="n"><span class="pre">Boudary</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">boudary</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal14HeatConduction10initializeE7General7Boudary5Nodal7Thermal" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Initialize the fracture flow and fracture volume at hydro knnot. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>boudary</strong> – boudary condition class refference </p></li>
 <li><p><strong>nodal</strong> – nodal class refference </p></li>
 <li><p><strong>hydro</strong> – hydro class refference</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>na </p>
 </dd>
 </dl>
@@ -688,7 +685,7 @@ document.write(`
 <dd><p>Compute the fracture permability tensor for fracture flow. </p>
 <p>\detail The k.ij is assembled from the local permability tensor on each surface of an element according to modified cubic law, the local permability is constructured by the principal values on each local directions in d-s-n plane</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>element</strong> – </p></li>
 <li><p><strong>face</strong> – </p></li>
@@ -710,7 +707,7 @@ document.write(`
 <dd><p>Compute fracture volume. </p>
 <p>\attension The fracture volume is V=\,\,\frac{1}{2}\left( S_{low}+S_{up} \right) o the fracture aperature should be updated before calculate fracture volume</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>face</strong> – </p></li>
 <li><p><strong>cohelement</strong> – </p></li>
@@ -725,7 +722,7 @@ document.write(`
 <span id="_CPPv3N10ns_thermal14HeatConduction17HeatConductionRunE7Boudary5Nodal7Thermal7Element12Intergration4Edge8Solidmat7General10Cohelement"></span><span id="_CPPv2N10ns_thermal14HeatConduction17HeatConductionRunE7Boudary5Nodal7Thermal7Element12Intergration4Edge8Solidmat7General10Cohelement"></span><span id="ns_thermal::HeatConduction::HeatConductionRun__Boudary.Nodal.Thermal.Element.Intergration.Edge.Solidmat.General.Cohelement"></span><span class="target" id="classns__thermal_1_1_heat_conduction_1a1ffbb8c5036ea33b0a120d70628c91b7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HeatConductionRun</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="solverclass.html#_CPPv47Boudary" title="Boudary"><span class="n"><span class="pre">Boudary</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">boudary</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <span class="n"><span class="pre">Intergration</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">intergration</span></span>, <a class="reference internal" href="solidclass.html#_CPPv44Edge" title="Edge"><span class="n"><span class="pre">Edge</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">edge</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span>, <a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv410Cohelement" title="Cohelement"><span class="n"><span class="pre">Cohelement</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">cohelement</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal14HeatConduction17HeatConductionRunE7Boudary5Nodal7Thermal7Element12Intergration4Edge8Solidmat7General10Cohelement" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>compute fracture flow rate at intergration point </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>general</strong> – </p></li>
 <li><p><strong>element</strong> – </p></li>
@@ -736,7 +733,7 @@ document.write(`
 <li><p><strong>solidmat</strong> – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>q.i: flow rate vector in each direction </p>
 </dd>
 </dl>
@@ -767,7 +764,7 @@ document.write(`
 <span id="_CPPv3N10ns_thermal12HeatExchange40computeFractureSolidFluidThermalExchangeE7General5Nodal10Cohelement7Thermal8Solidmat"></span><span id="_CPPv2N10ns_thermal12HeatExchange40computeFractureSolidFluidThermalExchangeE7General5Nodal10Cohelement7Thermal8Solidmat"></span><span id="ns_thermal::HeatExchange::computeFractureSolidFluidThermalExchange__General.Nodal.Cohelement.Thermal.Solidmat"></span><span class="target" id="classns__thermal_1_1_heat_exchange_1ab7e00f6f75e27ef6336a6da3ef8a2f39"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeFractureSolidFluidThermalExchange</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv410Cohelement" title="Cohelement"><span class="n"><span class="pre">Cohelement</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">cohelement</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal12HeatExchange40computeFractureSolidFluidThermalExchangeE7General5Nodal10Cohelement7Thermal8Solidmat" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Compute the fracture aperature on surface, the aperature should be updated for broken CZM as well, this function only need to run at the mechanical step. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>nodal</strong> – </p></li>
 <li><p><strong>face</strong> – </p></li>
@@ -776,7 +773,7 @@ document.write(`
 <li><p><strong>solidmat</strong> – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>na </p>
 </dd>
 </dl>
@@ -812,14 +809,14 @@ document.write(`
 <span id="_CPPv3N10ns_thermal17MatrixBaseThermal10initializeE7General7Boudary5Nodal7Thermal"></span><span id="_CPPv2N10ns_thermal17MatrixBaseThermal10initializeE7General7Boudary5Nodal7Thermal"></span><span id="ns_thermal::MatrixBaseThermal::initialize__General.Boudary.Nodal.Thermal"></span><span class="target" id="classns__thermal_1_1_matrix_base_thermal_1ad467a22df3c637f63f1d9d4c9e600790"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">initialize</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solverclass.html#_CPPv47Boudary" title="Boudary"><span class="n"><span class="pre">Boudary</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">boudary</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal17MatrixBaseThermal10initializeE7General7Boudary5Nodal7Thermal" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Initialize the fracture flow and fracture volume at hydro knnot. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>boudary</strong> – boudary condition class refference </p></li>
 <li><p><strong>nodal</strong> – nodal class refference </p></li>
 <li><p><strong>hydro</strong> – hydro class refference</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>na </p>
 </dd>
 </dl>
@@ -830,7 +827,7 @@ document.write(`
 <span id="_CPPv3N10ns_thermal17MatrixBaseThermal30computeFractureThermalExchangeE7General5Nodal10Cohelement7Thermal8Solidmat"></span><span id="_CPPv2N10ns_thermal17MatrixBaseThermal30computeFractureThermalExchangeE7General5Nodal10Cohelement7Thermal8Solidmat"></span><span id="ns_thermal::MatrixBaseThermal::computeFractureThermalExchange__General.Nodal.Cohelement.Thermal.Solidmat"></span><span class="target" id="classns__thermal_1_1_matrix_base_thermal_1ab0ca0e2b4c4c5dfbb34830dade6f9936"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeFractureThermalExchange</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv410Cohelement" title="Cohelement"><span class="n"><span class="pre">Cohelement</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">cohelement</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal17MatrixBaseThermal30computeFractureThermalExchangeE7General5Nodal10Cohelement7Thermal8Solidmat" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Compute the fracture aperature on surface, the aperature should be updated for broken CZM as well, this function only need to run at the mechanical step. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>nodal</strong> – </p></li>
 <li><p><strong>face</strong> – </p></li>
@@ -839,7 +836,7 @@ document.write(`
 <li><p><strong>solidmat</strong> – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>na </p>
 </dd>
 </dl>
@@ -856,7 +853,7 @@ document.write(`
 <dd><p>Compute fracture volume. </p>
 <p>\attension The fracture volume is V=\,\,\frac{1}{2}\left( S_{low}+S_{up} \right) o the fracture aperature should be updated before calculate fracture volume</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>face</strong> – </p></li>
 <li><p><strong>cohelement</strong> – </p></li>
@@ -871,7 +868,7 @@ document.write(`
 <span id="_CPPv3N10ns_thermal17MatrixBaseThermal19updateMatrixThermalE5Nodal7Thermal7General"></span><span id="_CPPv2N10ns_thermal17MatrixBaseThermal19updateMatrixThermalE5Nodal7Thermal7General"></span><span id="ns_thermal::MatrixBaseThermal::updateMatrixThermal__Nodal.Thermal.General"></span><span class="target" id="classns__thermal_1_1_matrix_base_thermal_1aa0e0954f8147b396146dcff808e4a9c6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">updateMatrixThermal</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span>, <a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal17MatrixBaseThermal19updateMatrixThermalE5Nodal7Thermal7General" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>compute fracture flow rate at intergration point </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>general</strong> – </p></li>
 <li><p><strong>element</strong> – </p></li>
@@ -882,7 +879,7 @@ document.write(`
 <li><p><strong>solidmat</strong> – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>q.i: flow rate vector in each direction </p>
 </dd>
 </dl>
@@ -893,7 +890,7 @@ document.write(`
 <span id="_CPPv3N10ns_thermal17MatrixBaseThermal19aseembleContactFluxE7Thermal5Nodal7General"></span><span id="_CPPv2N10ns_thermal17MatrixBaseThermal19aseembleContactFluxE7Thermal5Nodal7General"></span><span id="ns_thermal::MatrixBaseThermal::aseembleContactFlux__Thermal.Nodal.General"></span><span class="target" id="classns__thermal_1_1_matrix_base_thermal_1a46477676c708b378c58fd87bfc5da5f5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">aseembleContactFlux</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal17MatrixBaseThermal19aseembleContactFluxE7Thermal5Nodal7General" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Add the contact flux in previous mechanical step. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>thermal</strong> – </p></li>
 <li><p><strong>nodal</strong> – </p></li>
@@ -1088,7 +1085,7 @@ document.write(`
 <span id="_CPPv3N10ns_thermal14ThermalBoudary21updateThermalBoundaryE7Thermal7Boudary8Solidmat7General5Nodal7Element12Intergration"></span><span id="_CPPv2N10ns_thermal14ThermalBoudary21updateThermalBoundaryE7Thermal7Boudary8Solidmat7General5Nodal7Element12Intergration"></span><span id="ns_thermal::ThermalBoudary::updateThermalBoundary__Thermal.Boudary.Solidmat.General.Nodal.Element.Intergration"></span><span class="target" id="classns__thermal_1_1_thermal_boudary_1ad75246fb64d9264812f653cf2dfac20c"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">updateThermalBoundary</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span>, <a class="reference internal" href="solverclass.html#_CPPv47Boudary" title="Boudary"><span class="n"><span class="pre">Boudary</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">boundary</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span>, <a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <span class="n"><span class="pre">Intergration</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">intergration</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal14ThermalBoudary21updateThermalBoundaryE7Thermal7Boudary8Solidmat7General5Nodal7Element12Intergration" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>update boundary condition. This function is not parallised because thermal boundary is not heavy, extra time will costed to step in the parallel.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>thermal</strong> – </p></li>
 <li><p><strong>boundary</strong> – </p></li>
@@ -1118,7 +1115,7 @@ document.write(`
 <span id="_CPPv3N10ns_thermal19ThermalComputeForce19computeThermalForceE7General5Nodal7Element7Thermal8Solidmat"></span><span id="_CPPv2N10ns_thermal19ThermalComputeForce19computeThermalForceE7General5Nodal7Element7Thermal8Solidmat"></span><span id="ns_thermal::ThermalComputeForce::computeThermalForce__General.Nodal.Element.Thermal.Solidmat"></span><span class="target" id="classns__thermal_1_1_thermal_compute_force_1aadfaeaa56adf80d9870b3cac5615512e"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeThermalForce</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal19ThermalComputeForce19computeThermalForceE7General5Nodal7Element7Thermal8Solidmat" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>compute the thermal force only for triangle element.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>nodal</strong> – </p></li>
 <li><p><strong>element</strong> – </p></li>
@@ -1134,7 +1131,7 @@ document.write(`
 <span id="_CPPv3N10ns_thermal19ThermalComputeForce19computeThermalForceE7General5Nodal7Element12Intergration7Thermal8Solidmat"></span><span id="_CPPv2N10ns_thermal19ThermalComputeForce19computeThermalForceE7General5Nodal7Element12Intergration7Thermal8Solidmat"></span><span id="ns_thermal::ThermalComputeForce::computeThermalForce__General.Nodal.Element.Intergration.Thermal.Solidmat"></span><span class="target" id="classns__thermal_1_1_thermal_compute_force_1ad2261ef19e76c895176f9f1a011d3d75"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeThermalForce</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv47Element" title="Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">element</span></span>, <span class="n"><span class="pre">Intergration</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">intergration</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal19ThermalComputeForce19computeThermalForceE7General5Nodal7Element12Intergration7Thermal8Solidmat" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>compute the thermal force for arbitary element type. more time will be cost for triangle element.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>nodal</strong> – </p></li>
 <li><p><strong>element</strong> – </p></li>
@@ -1186,7 +1183,7 @@ document.write(`
 <span id="_CPPv3N10ns_thermal9THMCouple20updateFluidViscosityE7General5Nodal10Cohelement7Thermal5Hydro8Solidmat"></span><span id="_CPPv2N10ns_thermal9THMCouple20updateFluidViscosityE7General5Nodal10Cohelement7Thermal5Hydro8Solidmat"></span><span id="ns_thermal::THMCouple::updateFluidViscosity__General.Nodal.Cohelement.Thermal.Hydro.Solidmat"></span><span class="target" id="classns__thermal_1_1_t_h_m_couple_1a81b4d320c63eee6ae79c96b32fb93111"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">updateFluidViscosity</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="solidclass.html#_CPPv410Cohelement" title="Cohelement"><span class="n"><span class="pre">Cohelement</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">cohelement</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span>, <a class="reference internal" href="hydroclass.html#_CPPv45Hydro" title="Hydro"><span class="n"><span class="pre">Hydro</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">hydro</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal9THMCouple20updateFluidViscosityE7General5Nodal10Cohelement7Thermal5Hydro8Solidmat" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Update the water viscosity due to tempearature change. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>nodal</strong> – - nodal class </p></li>
 <li><p><strong>cohelement</strong> – - cohelement class </p></li>
@@ -1203,7 +1200,7 @@ document.write(`
 <span id="_CPPv3N10ns_thermal9THMCouple18updateFluidThermalE7Boudary5Nodal7Thermal5Hydro8Solidmat7General"></span><span id="_CPPv2N10ns_thermal9THMCouple18updateFluidThermalE7Boudary5Nodal7Thermal5Hydro8Solidmat7General"></span><span id="ns_thermal::THMCouple::updateFluidThermal__Boudary.Nodal.Thermal.Hydro.Solidmat.General"></span><span class="target" id="classns__thermal_1_1_t_h_m_couple_1ad3668d61881a6fbe612f150f8ceedced"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">updateFluidThermal</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="solverclass.html#_CPPv47Boudary" title="Boudary"><span class="n"><span class="pre">Boudary</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">boudary</span></span>, <a class="reference internal" href="solidclass.html#_CPPv45Nodal" title="Nodal"><span class="n"><span class="pre">Nodal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nodal</span></span>, <a class="reference internal" href="#_CPPv47Thermal" title="Thermal"><span class="n"><span class="pre">Thermal</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">thermal</span></span>, <a class="reference internal" href="hydroclass.html#_CPPv45Hydro" title="Hydro"><span class="n"><span class="pre">Hydro</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">hydro</span></span>, <a class="reference internal" href="solidclass.html#_CPPv48Solidmat" title="Solidmat"><span class="n"><span class="pre">Solidmat</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">solidmat</span></span>, <a class="reference internal" href="commonclass.html#_CPPv47General" title="General"><span class="n"><span class="pre">General</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">general</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10ns_thermal9THMCouple18updateFluidThermalE7Boudary5Nodal7Thermal5Hydro8Solidmat7General" title="Permalink to this definition">#</a><br /></dt>
 <dd><p>Compute the nodal temperature in fluid the temperature only be updated for wetted nodes, which are on the broken cohesive elememt surfaces. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>boudary</strong> – </p></li>
 <li><p><strong>nodal</strong> – </p></li>
@@ -1491,7 +1488,7 @@ document.write(`
       
         <div class="footer-item">
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
     <br/>
   </p>
 </div>
