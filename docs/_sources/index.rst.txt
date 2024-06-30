@@ -17,7 +17,7 @@ OpenFDEM
 
 *Open-Source Finite and Discrete Element Solver*
 
-Copyright (©) 2017 - 2023 by Dr. Xiaofeng Li.
+Copyright (©) 2017 - 2024 by Dr. Xiaofeng Li.
 
 
 What is OpenFDEM
@@ -116,6 +116,11 @@ Dr. Xiaofeng Li
    :maxdepth: 2
 
    rst_user_guide/index 
+
+.. toctree::
+   :maxdepth: 2
+
+   rst_downloads
 
 .. toctree::
    :maxdepth: 2

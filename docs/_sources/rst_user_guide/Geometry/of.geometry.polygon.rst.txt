@@ -26,5 +26,5 @@ Example:
 
 .. code-block:: 
 
-    of.geometry.polygon [rock] 4 [-1 -1] [1,-1] [1,1] [-1,1]
+    of.geometry.polygon [rock] size 4 [-1 -1] [1,-1] [1,1] [-1,1]
 
