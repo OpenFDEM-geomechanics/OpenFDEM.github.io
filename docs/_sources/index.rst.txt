@@ -116,7 +116,12 @@ the developer.
 .. toctree::
    :maxdepth: 2
 
-   rst_user_guide/index 
+   rst_user_guide/index
+
+.. toctree::
+   :maxdepth: 2
+
+   rst_downloads
 
 .. toctree::
    :maxdepth: 2
@@ -127,7 +132,7 @@ the developer.
    :maxdepth: 2
 
    rst_appendix/index
-   
+
 .. raw:: html
 
    <script src="//clustrmaps.com/globe.js?d=IJDdJTOZeBy5TaHUiVkIm7GLGSulnk0C2NzaC4-34QA">
