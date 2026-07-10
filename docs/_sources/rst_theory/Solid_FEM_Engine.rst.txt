@@ -249,6 +249,88 @@ step are
 .. math::
     {}^{n + 1}{\mathbf{\sigma}} =^{n}{\mathbf{\sigma}} + \mathrm{\Delta}{\mathbf{\sigma}},{}^{n + 1}\dot{{\mathbf{\varepsilon}}} =^{n}\dot{{\mathbf{\varepsilon}}} + \mathrm{\Delta}{\mathbf{\varepsilon}}  \tag{27}
 
+High-order bulk element
+------------------------------------------------
+
+The classical FDEM framework is limited to linear elements, as both its
+cohesive element formulation and contact algorithm rely on the linear-edge
+assumption. OpenFDEM generalizes it to an arbitrary higher-order element
+framework. For simplicity, the quadratic triangular element is used as a
+primary example here; the shape functions of other higher-order elements can
+be constructed similarly.
+
+The shape functions serve as a fundamental mathematical basis for
+interpolating field variables within a bulk element from nodal values. Shape
+functions of arbitrary order of triangular and rectangular elements can be
+constructed through approaches based on the barycentric coordinates method and
+the Lagrange polynomials method.
+
+For a triangular element of arbitrary order :math:`p`, the shape functions
+have a universal form as
+
+.. math::
+    N_{rst}\left( \lambda _1,\lambda _2,\lambda _3 \right) =\frac{p!}{r!s!t!}\lambda _{1}^{r}\lambda _{2}^{s}\lambda _{3}^{t},\quad r+s+t=p \tag{28}
+
+where :math:`\lambda _1, \lambda _2, \lambda _3` are the area coordinates of
+the corresponding node, which satisfy
+
+.. math::
+    \lambda _i(\xi ,\eta )=\frac{1}{2A}\left[ \left( \xi _j-\xi \right) \left( \eta _k-\eta \right) -\left( \xi _k-\xi \right) \left( \eta _j-\eta \right) \right] \tag{29}
+
+.. math::
+    \lambda _1=\frac{r}{p},\quad \lambda _2=\frac{s}{p},\quad \lambda _3=\frac{t}{p} \tag{30}
+
+where :math:`A` is the area of the triangle. Using Eq. 30, values of
+:math:`r, s, t` in Eq. 28 can be obtained naturally.
+
+For a quadrilateral element of arbitrary order :math:`p`, the shape functions
+can be expressed as
+
+.. math::
+    N_{ij}(\xi ,\eta )=l_i(\xi )\cdot l_j(\eta ) \tag{31}
+
+where :math:`l_i(\xi )` and :math:`l_j(\eta )` are the one-dimensional
+Lagrange polynomials in natural coordinates :math:`(\xi ,\eta )`, given by
+
+.. math::
+    :nowrap:
+
+    \[l_i(\xi )=\prod_{\substack{m=0\\m\ne i}}^p{\frac{\xi -\xi _m}{\xi _i-\xi _m}},\quad \xi _m\in [-1,1] \tag{32}\]
+
+.. math::
+    :nowrap:
+
+    \[l_j(\eta )=\prod_{\substack{m=0\\m\ne j}}^p{\frac{\eta -\eta _m}{\eta _j-\eta _m}},\quad \eta _m\in [-1,1] \tag{33}\]
+
+.. figure:: ../../images/Theory/qFDEM_quad_triangle.png
+    :alt: Quadratic triangle element in natural coordinates
+    :width: 56%
+    :align: center
+
+    Figure 2. Quadratic triangle element in natural coordinates.
+
+In detail, using Eq. 28, the shape functions of the quadratic triangle element
+are obtained as
+
+.. math::
+    :nowrap:
+
+    \[\begin{aligned}
+    N_1\left( \xi ,\eta \right) &=-\left( 1-\xi -\eta \right) \left( 1-2\left( 1-\xi -\eta \right) \right) \\
+    N_2\left( \xi ,\eta \right) &=-\xi \left( 1-2\xi \right) \\
+    N_3\left( \xi ,\eta \right) &=-\eta \left( 1-2\eta \right) \\
+    N_4\left( \xi ,\eta \right) &=4\xi \left( 1-\xi -\eta \right) \\
+    N_5\left( \xi ,\eta \right) &=4\xi \eta \\
+    N_6\left( \xi ,\eta \right) &=4\eta \left( 1-\xi -\eta \right)
+    \end{aligned} \tag{34}\]
+
+where the subscript denotes the corresponding nodes shown in Figure 2. It is
+simple to employ quadratic order shape functions to compute the internal nodal
+force of the bulk element (Eq. 18) and the nodal external force (Eq. 19), in
+the same way used in the finite element method. The strain matrix
+:math:`\mathcal{B}` of quadratic order in natural coordinates can also be
+derived accordingly.
+
 
 .. raw:: html
 
