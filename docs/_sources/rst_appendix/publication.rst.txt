@@ -5,6 +5,23 @@ Here is a tentative list of the outcomes (journal papers and books) from OpenFDE
 work should be listed here, please `contact us <xfli@whrsm.ac.cn>`_.
 
 
+2026
+----
+- Li X F, Li Q, Li H B, He L H, Hu Z W, Xie K R, Xia X. *An improved constitutive model for predicting blast-induced damage zones and surrounding rock pressure*. **International Journal of Rock Mechanics and Mining Sciences**, 2026, 202: 106504.
+- Li Z H, Li X F, Li H B, Zhao Q, Grasselli G. *The performance of quadratic finite-discrete element method (qFDEM) and its potential advantages*. **Computers and Geotechnics**, 2026, 193: 107925.
+- Li X F, Li H B, Grasselli G. *Revisiting the Brazilian disc test with split Hopkinson pressure bar by high-speed digital image correlation analysis*. **Journal of Rock Mechanics and Geotechnical Engineering**, 2026, 18(5): 3499-3511.
+- Xie K R, Li X F, Li H B, He L H, Zeng Y Q, Zhao Q, Grasselli G. *A non-Darcy compressible gas-solid coupling model for rock blasting and its application*. **Journal of Rock Mechanics and Geotechnical Engineering**, 2026.
+- He L H, Li H B, Ju M H, Li Q, Li X F. *The dynamic fragmentation of Mott ring containing defects*. **Defence Technology**, 2026, 59: 76-94.
+
+2025
+----
+- Li Q, Li H B, He L H, Li X F. *Effect of empty-hole on the rock blasting under in-situ stress*. **Computers and Geotechnics**, 2025, 185: 107290.
+
+2024
+----
+- Fu S Y, Li H B, Liu L W, Li Q, Li X F. *Study on the characteristics of blast-induced damage zone by using the wave velocity field inversion technique*. **Computers and Geotechnics**, 2024, 176: 106808.
+- Li Q, Li H B, Fu S Y, Li X F. *The effect of in-situ stress on blast-induced rock fracture and damage zone*. **Tunnelling and Underground Space Technology**, 2024, 154: 106091.
+
 2022
 -----
 - Wang B, Li H, Xing H, et al. *Modelling of gas-driven fracturing and fragmentation in liquid CO2 blasting using finite-discrete element method*. **Engineering Analysis with Boundary Elements**, 2022, 144: 409-421.
@@ -16,7 +33,7 @@ work should be listed here, please `contact us <xfli@whrsm.ac.cn>`_.
 
 2020
 ----
-- Li X F, Li H B, Liu L W, et al. *I*nvestigating the crack initiation and propagation mechanism in brittle rocks using grain-based finite-discrete element method*. **International Journal of Rock Mechanics and Mining Sciences**, 2020, 127: 104219.
+- Li X F, Li H B, Liu L W, et al. *Investigating the crack initiation and propagation mechanism in brittle rocks using grain-based finite-discrete element method*. **International Journal of Rock Mechanics and Mining Sciences**, 2020, 127: 104219.
 
 2019
 ----

@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
@@ -15,34 +15,39 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/design-tabs.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'rst_theory/Gas_Flow_Theory';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -57,19 +62,23 @@
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -92,24 +101,28 @@
 </form></div>
   </div>
 
-
-  <div class="bd-header-announcement container-fluid bd-header-announcement">
-    <div class="bd-header-announcement__content">Call for papers for <a href='https://www.sciencedirect.com/journal/journal-of-rock-mechanics-and-geotechnical-engineering'>Journal of Rock Mechanics and Geotechnical Engineering!</a></div>
-  </div>
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
 
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
-  </label>
+  </button>
   
-  <div class="navbar-header-items__start">
+  
+  <div class="col-lg-3 navbar-header-items__start">
     
       <div class="navbar-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../index.html">
+  
   
   
   
@@ -121,75 +134,62 @@
     
   </div>
   
-  
   <div class="col-lg-9 navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
-        <div class="navbar-item"><nav class="navbar-nav">
-  <p class="sidebar-header-items__title"
-     role="heading"
-     aria-level="1"
-     aria-label="Site Navigation">
-    Site Navigation
-  </p>
+        <div class="navbar-item">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../rst_about_introduction/index.html">
-                        Introduction
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../rst_about_introduction/index.html">
+    Introduction
+  </a>
+</li>
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="index.html">
-                        Theory
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../rst_tutorials/index.html">
-                        Tutorials
-                      </a>
-                    </li>
-                
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Theory
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../rst_user_guide/index.html">
-                        User Manual
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../rst_downloads.html">
-                        Downloads
-                      </a>
-                    </li>
-                
-            <div class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../rst_tutorials/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../rst_user_guide/index.html">
+    User Manual
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../rst_about_us/index.html">
+    About Us
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
                     More
                 </button>
-                <div class="dropdown-menu">
+                <ul id="pst-nav-more-links" class="dropdown-menu">
                     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../rst_about_us/index.html">
-                        About Us
-                      </a>
-                    </li>
-                
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../rst_appendix/index.html">
+    Appendix
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../rst_appendix/index.html">
-                        Appendix
-                      </a>
-                    </li>
-                
-                </div>
-            </div>
+                </ul>
+            </li>
             
   </ul>
 </nav></div>
@@ -201,23 +201,27 @@
       
         <div class="navbar-item navbar-persistent--container">
           
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
         </div>
       
       
         <div class="navbar-item">
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script></div>
@@ -228,27 +232,33 @@ document.write(`
   
   
     <div class="navbar-persistent--mobile">
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
     </div>
   
 
   
-    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
       <span class="fa-solid fa-outdent"></span>
-    </label>
+    </button>
   
 </div>
 
-    </nav>
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -259,73 +269,56 @@ document.write(`
     
       <div class="sidebar-header-items__center">
         
-          <div class="navbar-item"><nav class="navbar-nav">
-  <p class="sidebar-header-items__title"
-     role="heading"
-     aria-level="1"
-     aria-label="Site Navigation">
-    Site Navigation
-  </p>
+          
+          
+            <div class="navbar-item">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../rst_about_introduction/index.html">
-                        Introduction
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../rst_about_introduction/index.html">
+    Introduction
+  </a>
+</li>
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="index.html">
-                        Theory
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../rst_tutorials/index.html">
-                        Tutorials
-                      </a>
-                    </li>
-                
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Theory
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../rst_user_guide/index.html">
-                        User Manual
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../rst_downloads.html">
-                        Downloads
-                      </a>
-                    </li>
-                
-            <div class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    More
-                </button>
-                <div class="dropdown-menu">
-                    
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../rst_about_us/index.html">
-                        About Us
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../rst_tutorials/index.html">
+    Tutorials
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../rst_appendix/index.html">
-                        Appendix
-                      </a>
-                    </li>
-                
-                </div>
-            </div>
-            
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../rst_user_guide/index.html">
+    User Manual
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../rst_about_us/index.html">
+    About Us
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../rst_appendix/index.html">
+    Appendix
+  </a>
+</li>
+
   </ul>
 </nav></div>
+          
         
       </div>
     
@@ -334,12 +327,13 @@ document.write(`
       <div class="sidebar-header-items__end">
         
           <div class="navbar-item">
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script></div>
@@ -349,38 +343,39 @@ document.write(`
   </div>
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Solid_FEM_Engine.html">Solid FEM</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Solid_Cohesive_Mechanics.html">Solid Cohesive Mechanics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Contact_Mechanics.html">Contact Mechanics</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="Fluid_Transport_Theory.html">Fluid Transport</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Fluid_Transport_Theory.html">Fluid Transport</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Fracture_Fluid_Theory.html">Fracture Fluid</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Porous_Fluid_Theory.html">Porous Fluid</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Two_Phase_Fluid_Theory.html">Two Phase Fluid</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Gas Flow</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Thermal_Transfer_Theory.html">Thermal Transfer</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Thermal_Transfer_Theory.html">Thermal Transfer</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="Matrix_Thermal.html">Matrix Thermal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Fracture_Heat_Resistance.html">Fracture Heat Resistance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Contact_Thermal.html">Contact Thermal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Thermal_Hydromechanical_Chemical_Couple.html">Thermal-Hydromechanical (Chemical) Couple</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="Phase_Field.html">Phase Field</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Particle_Discrete_Element_Method.html">Particle Discrete Element Method (pDEM)</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Particle_Discrete_Element_Method.html">Particle Discrete Element Method (pDEM)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="Rigid_Particle_DEM.html">Rigid Particle DEM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Irregular_Deformable_Cluster_DEM.html">Irregular Deformable Cluster DEM</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Mesh_Adaptive_Analysis.html">Mesh Adaptive Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Mesh_Adaptive_Analysis.html">Mesh Adaptive Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="Local_Adaptive_Mesh_Refinement.html">Local Adaptive Mesh Refinement</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Global_Adaptive_Mesh_Refinement.html">Global Adaptive Mesh Refinement</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 </div>
 </nav></div>
@@ -395,13 +390,13 @@ document.write(`
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
@@ -410,8 +405,8 @@ document.write(`
 
 
 
-<nav aria-label="Breadcrumbs">
-  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
     
     <li class="breadcrumb-item breadcrumb-home">
       <a href="../index.html" class="nav-link" aria-label="Home">
@@ -439,11 +434,169 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section id="gas-flow">
 <h1>Gas Flow<a class="headerlink" href="#gas-flow" title="Permalink to this heading">#</a></h1>
-<p>under construction</p>
+<p>To reproduce the coupled fracturing behavior driven by blasting gas with high
+fidelity, OpenFDEM provides a compressible gas-solid coupling model based on
+FDEM. The blasting gas is assumed to obey the ideal gas equation of state. At
+each time step, the gas volume at different locations along the fractures is
+computed, allowing the gas density and bulk modulus to be updated. The gas
+pressure field is then transferred to the mechanical module to compute the
+fracture propagation at the next time step, and the updated fracture geometry
+is subsequently used for the next gas-flow calculation. The definition of the
+fracture aperture and volume is described in the <a class="reference internal" href="Fracture_Fluid_Theory.html"><span class="doc">Fracture Fluid</span></a>
+section.</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../_images/gas_fracture_development.png"><img alt="Blast-induced fracture development" src="../_images/gas_fracture_development.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-text">Figure 1. Development of the blast-induced fracture network: from stress
+wave loading to gas-driven secondary fracture extension.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="compressible-gas-flow-model">
+<h2>Compressible gas flow model<a class="headerlink" href="#compressible-gas-flow-model" title="Permalink to this heading">#</a></h2>
+<p>The velocity of blasting gas can reach the order of hundreds of meters per
+second, and the fracture aperture can be estimated to range from
+<span class="math notranslate nohighlight">\(10^{-6}\)</span> to <span class="math notranslate nohighlight">\(10^{-4}\)</span> m. The Reynolds number can then be
+calculated using</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{Re}=\frac{\rho va}{\mu} \tag{1}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\rho\)</span> is the fluid density, <span class="math notranslate nohighlight">\(v\)</span> is the gas velocity,
+<span class="math notranslate nohighlight">\(a\)</span> is the fracture aperture, and <span class="math notranslate nohighlight">\(\mu\)</span> is the dynamic viscosity.
+The Reynolds number of blasting gas flowing through blast-induced fractures
+can be preliminarily estimated to range from approximately 10 to 1000. When
+<span class="math notranslate nohighlight">\(\mathrm{Re}\)</span> exceeds 1, inertial effects must be considered, meaning
+that the Forchheimer model should be adopted and the conventional Darcy flow
+model is no longer applicable.</p>
+<p>The flow of blasting gas within rock fractures satisfies the principle of mass
+conservation</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial \rho _g}{\partial t}+\nabla \cdot \left( \rho _g\mathbf{q}_{\mathbf{g}} \right) =0 \tag{2}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{q}_g\)</span> is the gas velocity vector and <span class="math notranslate nohighlight">\(\rho _g\)</span> is
+the gas density. Integrating over any control volume <span class="math notranslate nohighlight">\(V_i\)</span> and its
+control boundary <span class="math notranslate nohighlight">\(\varGamma _i\)</span> yields</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial}{\partial t}\int_{V_i}{\rho _gdV}+\int_{\varGamma _i}{\rho _g\left( \mathbf{q}_{\mathbf{g}}\cdot \mathbf{n} \right)}\,d\varGamma =0 \tag{3}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> is the unit vector normal to the boundary of the
+control volume.</p>
+<p>For an ideal adiabatic compressible gas, the variation of density with time is
+pressure-dependent</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial \rho _g}{\partial t}=\frac{\partial \rho _g}{\partial p_g}\frac{\partial p_g}{\partial t}=\frac{\rho _g}{K_g}\frac{\partial p_g}{\partial t} \tag{4}\]</div>
+<p>where <span class="math notranslate nohighlight">\(K_g\)</span> is the bulk modulus of the gas. Combining the volume and
+boundary integral terms, the discrete pressure equation for the control volume
+<span class="math notranslate nohighlight">\(V_i\)</span> becomes</p>
+<div class="math notranslate nohighlight">
+\[\frac{V_i}{K_g}\frac{\partial p_g}{\partial t}+Q_{i}^{total}=0 \tag{5}\]</div>
+<p>where <span class="math notranslate nohighlight">\(Q_{i}^{total}\)</span> is the total flow rate within the control volume,
+from which the gas pressure can be determined.</p>
+<p>Because the velocity of blasting gas is relatively high, the pressure gradient
+term and the velocity term in Darcy’s law exhibit a nonlinear dependence.
+Forchheimer introduced an empirical constant <span class="math notranslate nohighlight">\(\beta\)</span> to account for this
+nonlinearity caused by inertial effects</p>
+<div class="math notranslate nohighlight">
+\[\nabla p_g+\rho _gg=\frac{\rho _gg}{\mathrm{k}_i}q_g+\beta \rho _g{q_g}^2, \quad \mathrm{k}_i=k_g\frac{\rho _gg}{\mu} \tag{6}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathrm{k}_i\)</span> is the gas permeability coefficient, <span class="math notranslate nohighlight">\(k_g\)</span> is
+the gas permeability, and <span class="math notranslate nohighlight">\(\beta\)</span> characterizes the influence of the
+inertial effects. The parameter <span class="math notranslate nohighlight">\(\beta\)</span> is expressed as</p>
+<div class="math notranslate nohighlight">
+\[\beta =\lambda \left( \frac{\xi}{D_{\mathrm{h}}} \right) ^{\eta} \tag{7}\]</div>
+<p>where <span class="math notranslate nohighlight">\(D_{\mathrm{h}}=2a\)</span> is the hydraulic diameter, <span class="math notranslate nohighlight">\(\xi\)</span> is the
+peak penetration height, and <span class="math notranslate nohighlight">\(\lambda\)</span> and <span class="math notranslate nohighlight">\(\eta\)</span> are two
+empirical coefficients, taken as 0.022 and 2/3, respectively. Based on Eq. 6,
+the gas velocity between any fracture element node <span class="math notranslate nohighlight">\(i\)</span> in one cavity and
+its corresponding node <span class="math notranslate nohighlight">\(j\)</span> in an adjacent cavity can be expressed as</p>
+<div class="math notranslate nohighlight">
+\[q_g=\frac{1}{2\rho _g\beta}\left( -\frac{\mu}{k_g}+\sqrt{\left( \frac{\mu}{k_g} \right) ^2+4\beta \rho _g\frac{\varDelta p_g}{L}} \right) \tag{8}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\varDelta p_g\)</span> is the gas pressure difference between cavity
+<span class="math notranslate nohighlight">\(i\)</span> and cavity <span class="math notranslate nohighlight">\(j\)</span>, calculated from the previous time step, and
+<span class="math notranslate nohighlight">\(L\)</span> is the length of the fracture element.</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../_images/gas_nondarcy_flow.png"><img alt="Non-Darcy gas flow" src="../_images/gas_nondarcy_flow.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-text">Figure 2. Non-Darcy gas flow: comparison of the gas flow velocity between
+the Forchheimer (non-Darcy) and Darcy models.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="gas-equation-of-state">
+<h2>Gas equation of state<a class="headerlink" href="#gas-equation-of-state" title="Permalink to this heading">#</a></h2>
+<p>During the ideal adiabatic compressible gas flow, compressibility must be
+taken into account. Unlike liquids, which are nearly incompressible, the
+density of the gas changes significantly with pressure. Both density and bulk
+modulus vary with pressure. According to the equation of state for an ideal
+adiabatic gas, the gas density <span class="math notranslate nohighlight">\(\rho _g\)</span> and bulk modulus <span class="math notranslate nohighlight">\(K_g\)</span>
+are given by</p>
+<div class="math notranslate nohighlight">
+\[\rho _g=\rho _0p_{g}^{-\frac{1}{\gamma}} \tag{9}\]</div>
+<div class="math notranslate nohighlight">
+\[K_g=p_g\gamma \tag{10}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\rho _0\)</span> is the initial gas density, <span class="math notranslate nohighlight">\(p_g\)</span> is the current
+gas pressure in the cavity, and <span class="math notranslate nohighlight">\(\gamma\)</span> is the adiabatic index of the
+gas. In this study, the adiabatic index of the blasting gas is approximated by
+that of air, <span class="math notranslate nohighlight">\(\gamma=1.4\)</span>.</p>
+</section>
+<section id="gas-solid-coupling">
+<h2>Gas-solid coupling<a class="headerlink" href="#gas-solid-coupling" title="Permalink to this heading">#</a></h2>
+<p>Following the determination of gas pressures for all cavities within the
+computational domain, the gas pressure <span class="math notranslate nohighlight">\(\sigma _g\)</span> acting on each
+adjacent solid element is calculated. Defining the mass flow rate as
+<span class="math notranslate nohighlight">\(m_t=q_g\left( x \right) \rho \left( x \right) A_e\)</span>, the flow equation
+can be written as</p>
+<div class="math notranslate nohighlight">
+\[\frac{d\sigma _g\left( x \right)}{dx}=\left( \frac{\mu m_t}{k_gA_e}+\frac{{\beta m_t}^2}{A_{e}^{2}} \right) \left( \rho _{c,in}\left( \frac{\sigma _g\left( x \right)}{p_{c,in}} \right) ^{\frac{1}{\gamma}} \right) ^{-1} \tag{11}\]</div>
+<p>where <span class="math notranslate nohighlight">\(p_{c,in}\)</span> and <span class="math notranslate nohighlight">\(\rho _{c,in}\)</span> represent the gas pressure and
+density at the inlet cavity, respectively. Integrating this equation yields
+the gas pressure distribution along each fracture element</p>
+<div class="math notranslate nohighlight">
+\[\sigma _g\left( x \right) =\left[ p_{c,in}^{\frac{\gamma +1}{\gamma}}+\frac{\gamma +1}{\gamma}\frac{p_{c,in}^{\frac{1}{\gamma}}}{\rho _{c,in}}\left( \frac{\mu m_t}{k_gA_e}+\frac{{\beta m_t}^2}{A_{e}^{2}} \right) x \right] ^{\frac{\gamma}{\gamma +1}} \tag{12}\]</div>
+<p>Once the pressure distribution along the parallel plate is obtained, the
+virtual work principle is applied to equivalently assign the pressure to the
+nodes of the fracture element, yielding the nodal force</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{f}_{\mathbf{gas}}=\int_{S_e}{\mathbf{N}^{\mathrm{T}}\left( x \right) \sigma _g\left( x \right) \cdot \mathbf{n}}\,ds \tag{13}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> is the normal vector of the element surface subjected
+to the gas action, <span class="math notranslate nohighlight">\(S_e\)</span> is the area of that surface, and
+<span class="math notranslate nohighlight">\(\mathbf{N}(x)\)</span> is the shape function matrix of the element.</p>
+<p>The gas-mechanical coupling is achieved by alternately advancing the time
+steps between the mechanical solver and the gas-pressure solver, realizing a
+fully bidirectional coupling. The mechanical solver computes the deformation,
+fracturing and interaction of the rock mass. The gas flow solver then captures
+the change in cavity volume caused by fracture propagation, elastic
+deformation and gas compressibility, recalculates the gas density and bulk
+modulus, and determines the gas pressure, which is applied back to the
+mechanical solver as an external load.</p>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../_images/gas_module_interaction.png"><img alt="Interaction between computational modules" src="../_images/gas_module_interaction.png" style="width: 53%;" /></a>
+<figcaption>
+<p><span class="caption-text">Figure 3. Interaction between the mechanical solver and the gas flow
+solver.</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="critical-time-step-of-the-coupling">
+<h2>Critical time step of the coupling<a class="headerlink" href="#critical-time-step-of-the-coupling" title="Permalink to this heading">#</a></h2>
+<p>Both the mechanical and gas solvers employ an explicit time integration
+scheme. The critical time step of the mechanical solver, required to ensure
+numerical stability, can be estimated as</p>
+<div class="math notranslate nohighlight">
+\[\varDelta t_{cr}^{s}=\frac{h_{\min}}{\sqrt{\left( \lambda +2\mu \right) /\rho}} \tag{14}\]</div>
+<p>where <span class="math notranslate nohighlight">\(h_{\min}\)</span> is the minimum width of the solid element,
+<span class="math notranslate nohighlight">\(\lambda\)</span> and <span class="math notranslate nohighlight">\(\mu\)</span> are the Lamé constants, and <span class="math notranslate nohighlight">\(\rho\)</span> is
+the material density. The critical time step for the gas solver is given by</p>
+<div class="math notranslate nohighlight">
+\[\varDelta t_{cr}^{g}=\min \left[ \frac{V_i}{K_g\sum_i{\frac{k_{g,i}}{\mu _g}}} \right] \tag{15}\]</div>
+<p>where <span class="math notranslate nohighlight">\(k_{g,i}\)</span> is the permeability, <span class="math notranslate nohighlight">\(\mu _g\)</span> is the dynamic
+viscosity of the fluid, and <span class="math notranslate nohighlight">\(K_g\)</span> is the gas bulk modulus. Because the
+critical time step for transient flow can be very restrictive, a sub-cycling
+strategy is adopted, in which each mechanical time-step loop contains multiple
+gas-calculation sub-cycles. After the gas flow solver completes the specified
+number of sub-cycles, the gas pressure from the final sub-cycle is passed to
+the mechanical solver, which then proceeds to the next mechanical time step.</p>
+<script src="//clustrmaps.com/globe.js?d=IJDdJTOZeBy5TaHUiVkIm7GLGSulnk0C2NzaC4-34QA">
+</script></section>
 </section>
 
 
@@ -451,11 +604,10 @@ document.write(`
               
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="Two_Phase_Fluid_Theory.html"
@@ -475,10 +627,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -487,7 +636,24 @@ document.write(`
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compressible-gas-flow-model">Compressible gas flow model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gas-equation-of-state">Gas equation of state</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gas-solid-coupling">Gas-solid coupling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#critical-time-step-of-the-coupling">Critical time step of the coupling</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
   <div class="tocsection sourcelink">
     <a href="../_sources/rst_theory/Gas_Flow_Theory.rst.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
@@ -508,8 +674,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -517,17 +683,19 @@ document.write(`
     <div class="footer-items__start">
       
         <div class="footer-item">
+
   <p class="copyright">
     
-      © Copyright 2024, OpenFDEM Developer Group.
+      © Copyright 2023, OpenFDEM Developer Group.
       <br/>
     
   </p>
 </div>
       
         <div class="footer-item">
+
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     <br/>
   </p>
 </div>
@@ -535,10 +703,12 @@ document.write(`
     </div>
   
   
+  
     <div class="footer-items__end">
       
-        <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
 </p></div>
       
     </div>

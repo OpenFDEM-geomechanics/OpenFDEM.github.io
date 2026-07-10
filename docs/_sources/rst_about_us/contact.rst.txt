@@ -50,6 +50,12 @@ Current PhD students for solver
 
 Wang Ben (blast solver) - Institute of Rock and Soil Mechanics, Chinese Academy of Sciences
 
+Li Qian (blast solver) - Institute of Rock and Soil Mechanics, Chinese Academy of Sciences
+
+Li Zhonghao (quadratic FDEM framework) - Institute of Rock and Soil Mechanics, Chinese Academy of Sciences
+
+Xie Kunru (fluid solver) - Institute of Rock and Soil Mechanics, Chinese Academy of Sciences
+
 
 Supporting packages developers
 ----------------------------------------
