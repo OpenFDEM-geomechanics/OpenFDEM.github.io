@@ -1,0 +1,46 @@
+/* OpenFDEM 自定义样式 —— wagtail 主题微调 */
+
+/* ===== 代码块:浅灰底 + GitHub 浅色语法高亮,替换默认深紫底 ===== */
+.highlight pre,
+pre {
+    background-color: #f6f8fa !important;
+    color: #24292e !important;
+    border: 1px solid #e1e4e8;
+    border-radius: 5px;
+}
+
+/* 覆盖整套 Material 深色 token(原为浅色配深底),改为浅底友好深色 */
+pre .n, pre .ni, pre .nl, pre .nx, pre .py, pre .bp, pre .w,
+pre .p, pre .x, pre .nn, pre .nc, pre .nv, pre .no, pre .nb,
+pre .vc, pre .vg, pre .vi, pre .na, pre .nf { color: #24292e !important; }
+
+pre .k, pre .kc, pre .kd, pre .kn, pre .kp, pre .kr, pre .kt,
+pre .ow { color: #d73a49 !important; }              /* 关键字:红 */
+
+pre .s, pre .s1, pre .s2, pre .sb, pre .sc, pre .sd, pre .se,
+pre .sh, pre .si, pre .sr, pre .ss, pre .sx { color: #032f62 !important; }  /* 字符串:深蓝 */
+
+pre .m, pre .mf, pre .mh, pre .mi, pre .mo, pre .il,
+pre .l, pre .ld { color: #005cc5 !important; }      /* 数字/字面量:蓝 */
+
+pre .c, pre .c1, pre .cm, pre .cp, pre .cs { color: #6a737d !important; }   /* 注释:灰 */
+
+pre .o { color: #d73a49 !important; }               /* 运算符:红 */
+pre .nt { color: #22863a !important; }              /* 标签:绿 */
+pre .err { color: #b31d28 !important; }             /* 错误:深红 */
+pre .gh, pre .gp, pre .gu { color: #005cc5 !important; }
+pre a, pre a:visited { color: #0366d6 !important; }
+
+pre .hll { background-color: #fff5b1 !important; }   /* 行高亮 */
+
+/* 行内代码:浅灰底 */
+code.literal,
+.rst-content code:not(.xref) {
+    background-color: #eff1f3;
+    color: #24292e;
+}
+
+/* ===== 左上角 logo 占位图不可见(仅保留 OpenFDEM 文字)===== */
+.navbar-brand .logo-img {
+    display: none;
+}

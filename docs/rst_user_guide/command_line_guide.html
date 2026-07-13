@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>general commands &#8212; OpenFDEM</title>
   
@@ -17,41 +16,45 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=1dee3432" />
   
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'rst_user_guide/command_line_guide';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -67,19 +70,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -87,16 +79,15 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
-         placeholder="Search the docs ..."
-         aria-label="Search the docs ..."
+         placeholder="Search..."
+         aria-label="Search..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -104,15 +95,30 @@
 
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-<div class="bd-header__inner bd-page-width">
-  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
-    <span class="fa-solid fa-bars"></span>
-  </button>
+    </header>
   
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
   
-  <div class="col-lg-3 navbar-header-items__start">
+  <div class="sidebar-header-items sidebar-primary__section">
     
-      <div class="navbar-item">
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
 
   
     
@@ -128,238 +134,297 @@
     <p class="title logo__title">OpenFDEM</p>
   
 </a></div>
-    
-  </div>
-  
-  <div class="col-lg-9 navbar-header-items">
-    
-    <div class="me-auto navbar-header-items__center">
-      
-        <div class="navbar-item">
-<nav>
-  <ul class="bd-navbar-elements navbar-nav">
-    
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../rst_about_introduction/index.html">
-    Introduction
-  </a>
-</li>
+        <div class="sidebar-primary-item">
 
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rst_about_introduction/index.html">Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rst_about_introduction/introduction.html">What is OpenFDEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst_about_introduction/installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst_about_introduction/getting_started.html">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst_about_introduction/Changelog.html">Changelog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst_about_introduction/history.html">History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst_about_introduction/copyrights.html">Copyright</a></li>
+</ul>
+</details></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rst_theory/index.html">Theory</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rst_theory/Solid_FEM_Engine.html">Solid FEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst_theory/Solid_Cohesive_Mechanics.html">Solid Cohesive Mechanics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst_theory/Contact_Mechanics.html">Contact Mechanics</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_theory/Fluid_Transport_Theory.html">Fluid Transport</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_theory/Fracture_Fluid_Theory.html">Fracture Fluid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_theory/Porous_Fluid_Theory.html">Porous Fluid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_theory/Two_Phase_Fluid_Theory.html">Two Phase Fluid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_theory/Gas_Flow_Theory.html">Gas Flow</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_theory/Thermal_Transfer_Theory.html">Thermal Transfer</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_theory/Matrix_Thermal.html">Matrix Thermal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_theory/Fracture_Heat_Resistance.html">Fracture Heat Resistance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_theory/Contact_Thermal.html">Contact Thermal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_theory/Thermal_Hydromechanical_Chemical_Couple.html">Thermal-Hydromechanical (Chemical) Couple</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst_theory/Phase_Field.html">Phase Field</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_theory/Particle_Discrete_Element_Method.html">Particle Discrete Element Method (pDEM)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_theory/Rigid_Particle_DEM.html">Rigid Particle DEM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_theory/Irregular_Deformable_Cluster_DEM.html">Irregular Deformable Cluster DEM</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_theory/Mesh_Adaptive_Analysis.html">Mesh Adaptive Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_theory/Local_Adaptive_Mesh_Refinement.html">Local Adaptive Mesh Refinement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_theory/Global_Adaptive_Mesh_Refinement.html">Global Adaptive Mesh Refinement</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rst_tutorials/index.html">Tutorials</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_tutorials/tutorialindex.html">Examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_tutorials/tutorial0_Geometry.html">How to create a geometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_tutorials/tutorial1_UCS_Test.html">Quick start with uniaxial compression test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_tutorials/tutorial2_UCS_with_Gmsh.html">Create model from imported mesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_tutorials/tutorial3_UCS_Test_with_Quadrangle_Elements.html">How to use higher-order element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_tutorials/tutorial4_BD_Test.html">Quick start with Brazilian disc test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_tutorials/tutorial5_In_Situ_Stress.html">Tunnel excavation under <cite>in-situ</cite> stress</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_tutorials/tutorial6_Hydro_Seepage.html">Water flowing in rock dam: seepage flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_tutorials/tutorial7_Hydro_Fracture_Flow.html">Water flowing in rock dam: fracture flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_tutorials/tutorial8_Thermal_Flux.html">Thermal flux transportation in a bar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_tutorials/tutorial9_GBM.html">Grain-based model (GBM), interface with Neper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_tutorials/tutorial10_Phase_Field.html">Phase Field</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst_tutorials/tutorialA_Paraview.html">Post-Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst_tutorials/tutorialB_Notepad%2B%2B.html">NotePad++ and Syntax Highlighting</a></li>
+</ul>
+</details></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="index.html">User Manual</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="commandindex.html">Command  reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="general.html">General</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="General/of.console.interval.html">of.console.interval</a></li>
+<li class="toctree-l4"><a class="reference internal" href="General/of.damp.global.html">of.damp.global</a></li>
+<li class="toctree-l4"><a class="reference internal" href="General/of.finalize.html">of.finalize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="General/of.import.html">of.import</a></li>
+<li class="toctree-l4"><a class="reference internal" href="General/of.import.table.html">of.import.table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="General/of.log.interval.html">of.log.interval</a></li>
+<li class="toctree-l4"><a class="reference internal" href="General/of.new.html">of.new</a></li>
+<li class="toctree-l4"><a class="reference internal" href="General/of.restore.html">of.restore</a></li>
+<li class="toctree-l4"><a class="reference internal" href="General/of.save.html">of.save</a></li>
+<li class="toctree-l4"><a class="reference internal" href="General/of.save.FEM.html">of.save.FEM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="General/of.set.config.html">of.set.config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="General/of.set.contact.html">of.set.contact</a></li>
+<li class="toctree-l4"><a class="reference internal" href="General/of.set.debug.html">of.set.debug</a></li>
+<li class="toctree-l4"><a class="reference internal" href="General/of.set.GBM.html">of.set.GBM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="General/of.set.gravity.html">of.set.gravity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="General/of.set.large.html">of.set.large</a></li>
+<li class="toctree-l4"><a class="reference internal" href="General/of.set.massscale.html">of.set.massscale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="General/of.set.module.html">of.set.module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="General/of.set.omp.html">of.set.omp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="General/of.set.result.html">of.set.result</a></li>
+<li class="toctree-l4"><a class="reference internal" href="General/of.set.rgbm.html">of.set.rgbm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="General/of.solve.html">of.solve</a></li>
+<li class="toctree-l4"><a class="reference internal" href="General/of.step.html">of.step</a></li>
+<li class="toctree-l4"><a class="reference internal" href="General/of.timestep.html">of.timestep</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="blast.html">Blast</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="Blast/of.blast.position.html">of.blast.position</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="boundary.html">Boundary</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="Boundary/of.boundary.nodal.force.html">of.boundary.nodal.force</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Boundary/of.boundary.nodal.velocity.html">of.boundary.nodal.velocity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Boundary/of.boundary.nodal.inivelocity.html">of.boundary.nodal.inivelocity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Boundary/of.boundary.nodal.acceleration.html">of.boundary.nodal.acceleration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Boundary/of.boundary.nodal.clear.html">of.boundary.nodal.clear</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Boundary/of.boundary.edge.force.html">of.boundary.edge.force</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Boundary/of.boundary.edge.velocity.html">of.boundary.edge.velocity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Boundary/of.boundary.edge.inivelocity.html">of.boundary.edge.inivelocity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Boundary/of.boundary.edge.acceleration.html">of.boundary.edge.acceleration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Boundary/of.boundary.edge.clear.html">of.boundary.edge.clear</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Boundary/of.boundary.element.stress.html">of.boundary.element.stress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Boundary/of.boundary.element.stress.xgrad.html">of.boundary.element.stress.xgrad</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Boundary/of.boundary.element.stress.ygrad.html">of.boundary.element.stress.ygrad</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Boundary/of.boundary.element.clear.html">of.boundary.element.clear</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Boundary/of.boundary.blast.html">of.boundary.blast</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="DFN.html">Discrete Fracture Networks (DFN)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="DFN/of.DFN.connectivity.html">of.DFN.connectivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DFN/of.DFN.group.html">of.DFN.group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DFN/of.DFN.cohesive.html">of.DFN.cohesive</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DFN/of.DFN.broken.html">of.DFN.broken</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="FEM.html">Finite Element Method (FEM)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="FEM/of.import.FEM.nodal.coord.html">of.import.FEM.nodal.coord</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FEM/of.import.FEM.nodal.coord0.html">of.import.FEM.nodal.coord0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FEM/of.import.FEM.nodal.velocity.html">of.import.FEM.nodal.velocity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FEM/of.import.FEM.nodal.groups.html">of.import.FEM.nodal.groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FEM/of.import.FEM.edge.groups.html">of.import.FEM.edge.groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FEM/of.import.FEM.element.groups.html">of.import.FEM.element.groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FEM/of.import.FEM.element.connectivity.html">of.import.FEM.element.connectivity</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="geometry.html">Geometry</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="Geometry/of.geometry.square.html">of.geometry.square</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Geometry/of.geometry.cut.square.html">of.geometry.cut.square</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Geometry/of.geometry.remove.square.html">of.geometry.remove.square</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Geometry/of.geometry.circle.html">of.geometry.circle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Geometry/of.geometry.cut.circle.html">of.geometry.cut.circle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Geometry/of.geometry.remove.circle.html">of.geometry.remove.circle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Geometry/of.geometry.ellipse.html">of.geometry.ellipse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Geometry/of.geometry.cut.ellipse.html">of.geometry.cut.ellipse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Geometry/of.geometry.remove.ellipse.html">of.geometry.remove.ellipse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Geometry/of.geometry.polygon.html">of.geometry.polygon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Geometry/of.geometry.cut.polygon.html">of.geometry.cut.polygon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Geometry/of.geometry.remove.polygon.html">of.geometry.remove.polygon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Geometry/of.geometry.table.html">of.geometry.table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Geometry/of.geometry.cut.table.html">of.geometry.cut.table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Geometry/of.geometry.remove.table.html">of.geometry.remove.table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Geometry/of.geometry.domain.html">of.geometry.domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Geometry/of.geometry.cut.joint.html">of.geometry.cut.joint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Geometry/of.geometry.cut.jset.html">of.geometry.cut.jset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Geometry/of.geometry.cut.DFN.html">of.geometry.cut.DFN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Geometry/of.geometry.cut.arc.html">of.geometry.cut.arc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Geometry/of.geometry.minsize.html">of.geometry.minsize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Geometry/of.geometry.minangle.html">of.geometry.minangle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Geometry/of.geometry.iteration.html">of.geometry.iteration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Geometry/of.geometry.group.html">of.geometry.group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Geometry/of.geometry.mesh.size.html">of.geometry.mesh.size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Geometry/of.geometry.recombine.html">of.geometry.recombine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Geometry/of.geometry.mesh.html">of.geometry.mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Geometry/of.geometry.mesh.write.html">of.geometry.mesh.write</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="group.html">Group</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="Group/of.group.nodal.html">of.group.nodal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Group/of.group.edge.html">of.group.edge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Group/of.group.element.html">of.group.element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Group/of.group.cohelement.html">of.group.cohelement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Group/of.group.nodal.from.element.html">of.group.nodal.from.element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Group/of.group.edge.from.element.html">of.group.edge.from.element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Group/of.group.edge.from.cohelement.html">of.group.edge.from.cohcohelement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Group/of.group.edge.from.dfn.html">of.group.edge.from.dfn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Group/of.group.cohelement.from.dfn.html">of.group.cohelement.from.dfn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Group/of.group.cohelement.from.gbm.html">of.group.cohelement.from.gbm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Group/of.group.nodal.bool.union.html">of.group.nodal.bool.union</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Group/of.group.nodal.bool.intersect.html">of.group.nodal.bool.intersect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Group/of.group.nodal.bool.subtract.html">of.group.nodal.bool.subtract</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Group/of.group.edge.bool.union.html">of.group.edge.bool.union</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Group/of.group.edge.bool.intersect.html">of.group.edge.bool.intersect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Group/of.group.edge.bool.subtract.html">of.group.edge.bool.subtract</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Group/of.group.element.bool.union.html">of.group.element.bool.union</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Group/of.group.element.bool.intersect.html">of.group.element.bool.intersect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Group/of.group.element.bool.subtract.html">of.group.element.bool.subtract</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Group/of.group.cohelement.bool.union.html">of.group.cohelement.bool.union</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Group/of.group.cohelement.bool.intersect.html">of.group.cohelement.bool.intersect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Group/of.group.cohelement.bool.subtract.html">of.group.cohelement.bool.subtract</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="mesh.html">Mesh</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="Mesh/of.mesh.insert.html">of.mesh.insert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mesh/of.mesh.insert.dfn.html">of.mesh.insert.dfn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mesh/of.mesh.voronoi.html">of.mesh.voronoi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mesh/of.mesh.split.html">of.mesh.split</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mesh/of.mesh.bary.html">of.mesh.bary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mesh/of.mesh.RG.html">of.mesh.RG</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mesh/of.mesh.RGB.html">of.mesh.RGB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mesh/of.mesh.NVB.html">of.mesh.NVB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mesh/of.mesh.baryGB.html">of.mesh.baryGB</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="material.html">Material</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="Material/of.mat.element.html">of.mat.element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Material/of.mat.cohesive.html">of.mat.cohesive</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Material/of.mat.contact.html">of.mat.contact</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Material/of.mat.hydro.matrix.html">of.mat.hydro.matrix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Material/of.mat.hydro.fracture.html">of.mat.hydro.fracture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Material/of.mat.mpm.fluid.html">of.mat.mpm.fluid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Material/of.mat.mpm.solid.html">of.mat.mpm.solid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Material/of.mat.hydro.fluid.html">of.mat.hydro.fluid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Material/of.mat.hydro.gas.html">of.mat.hydro.gas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Material/of.mat.nonlocal.html">of.mat.nonlocal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Material/of.mat.thermal.html">of.mat.thermal</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="history.html">History</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="History/of.history.pv.interval.html">of.history.pv.interval</a></li>
+<li class="toctree-l4"><a class="reference internal" href="History/of.history.pv.dynamic.interval.html">of.history.pv.dynamic.interval</a></li>
+<li class="toctree-l4"><a class="reference internal" href="History/of.history.pv.field.html">of.history.pv.field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="History/of.history.pv.fracture.html">of.history.pv.fracture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="History/of.history.pv.cohesive.html">of.history.pv.cohesive</a></li>
+<li class="toctree-l4"><a class="reference internal" href="History/of.history.pv.damage.html">of.history.pv.damage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="History/of.history.pv.ae.html">of.history.pv.ae</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../rst_developer/developer.html">Developer Document</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst_developer/commonclass.html">Common class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_developer/blastclass.html">Blast class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_developer/contactclass.html">Contact class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_developer/geometryclass.html">Geometry class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_developer/solidclass.html">Solid engine class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_developer/hydroclass.html">Hydro transportation class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_developer/iohelperclass.html">Input/Output class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_developer/meshclass.html">Mesh processing class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_developer/mpmclass.html">Computational fluid dynamics class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_developer/particlesclass.html">Particulate DEM class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_developer/phasefieldclass.html">Phase field class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_developer/solverclass.html">Solver class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_developer/thermalclass.html">Thermal flux class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst_developer/voronoiclass.html">Voronoi tessellation class</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../rst_downloads.html">Downloads</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rst_about_us/index.html">About Us</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rst_about_us/contact.html">Contact</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst_about_us/collaborator.html">Collaborating</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://github.com/OpenFDEM-geomechanics/OpenFDEM.github.io/discussions">OpenFDEM Forum</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://geogroup.utoronto.ca/global-fdem-2022/">Global FDEM Workshop 2022</a></li>
+</ul>
+</details></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rst_appendix/index.html">Appendix</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rst_appendix/publication.html">Publications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst_developer/appendix.html">Index</a></li>
+</ul>
+</details></li>
+</ul>
 
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../rst_theory/index.html">
-    Theory
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../rst_tutorials/index.html">
-    Tutorials
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="index.html">
-    User Manual
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../rst_downloads.html">
-    Downloads
-  </a>
-</li>
-
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
-                    More
-                </button>
-                <ul id="pst-nav-more-links" class="dropdown-menu">
-                    
-<li class=" ">
-  <a class="nav-link dropdown-item nav-internal" href="../rst_about_us/index.html">
-    About Us
-  </a>
-</li>
-
-
-<li class=" ">
-  <a class="nav-link dropdown-item nav-internal" href="../rst_appendix/index.html">
-    Appendix
-  </a>
-</li>
-
-                </ul>
-            </li>
-            
-  </ul>
+    </div>
 </nav></div>
-      
     </div>
-    
-    
-    <div class="navbar-header-items__end">
-      
-        <div class="navbar-item navbar-persistent--container">
-          
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
-        </div>
-      
-      
-        <div class="navbar-item">
-
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
-      
-    </div>
-    
-  </div>
-  
-  
-    <div class="navbar-persistent--mobile">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
-    </div>
-  
-
-  
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
-</div>
-
-    </header>
-  
-
-  <div class="bd-container">
-    <div class="bd-container__inner bd-page-width">
-      
-      
-      
-        
-      
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
-        
-
-  
-  <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-      <div class="sidebar-header-items__center">
-        
-          
-          
-            <div class="navbar-item">
-<nav>
-  <ul class="bd-navbar-elements navbar-nav">
-    
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../rst_about_introduction/index.html">
-    Introduction
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../rst_theory/index.html">
-    Theory
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../rst_tutorials/index.html">
-    Tutorials
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="index.html">
-    User Manual
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../rst_downloads.html">
-    Downloads
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../rst_about_us/index.html">
-    About Us
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../rst_appendix/index.html">
-    Appendix
-  </a>
-</li>
-
-  </ul>
-</nav></div>
-          
-        
-      </div>
-    
-    
-    
-      <div class="sidebar-header-items__end">
-        
-          <div class="navbar-item">
-
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
-        
-      </div>
-    
-  </div>
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -367,6 +432,9 @@ document.write(`
       <main id="main-content" class="bd-main" role="main">
         
         
+
+<div class="sbt-scroll-pixel-helper"></div>
+
           <div class="bd-content">
             <div class="bd-article-container">
               
@@ -375,30 +443,374 @@ document.write(`
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item">
-
-
-
-<nav aria-label="Breadcrumb" class="d-print-none">
-  <ul class="bd-breadcrumbs">
-    
-    <li class="breadcrumb-item breadcrumb-home">
-      <a href="../index.html" class="nav-link" aria-label="Home">
-        <i class="fa-solid fa-home"></i>
-      </a>
-    </li>
-    <li class="breadcrumb-item active" aria-current="page">general commands</li>
-  </ul>
-</nav>
-</div>
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
       
     </div>
   
   
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/rst_user_guide/command_line_guide.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
 </div>
 </div>
               
               
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>general commands</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">general commands</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-new">of.new</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-restore">of.restore</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-result">of.result</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-save">of.save</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-import">of.import</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-debug-on">of.debug on</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#config">config</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-config-type-planestress-planestrain">of.config.type planestress/planestrain</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-config-module-hydro-blast-thermal">of.config.module hydro/blast/thermal</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#geometry">geometry</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-geometry-square-name-x0-y0-x1-y1-x2-y2-x3-y3">of.geometry.square name x0 y0 x1 y1 x2 y2 x3 y3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-geometry-polygon-name-n-x0-y0-x1-y1-x2-y2-x3-y3">of.geometry.polygon name n x0 y0 x1 y1 x2 y2 x3 y3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-geometry-table-name-table-tab">of.geometry.table name ‘table.tab’</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-geometry-circle-name-x0-y0-r-n">of.geometry.circle name x0 y0 r n</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-geometry-ellipse-name-x0-y0-rmax-rmin-theta-n">of.geometry.ellipse name x0 y0 rmax rmin theta n</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-geometry-cut-square-name-name2-x0-y0-x1-y1-x2-y2-x3-y3">of.geometry.cut.square name name2 x0 y0 x1 y1 x2 y2 x3 y3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-geometry-cut-polygon-name-name2-n-x0-y0-x1-y1-x2-y2-x3-y3">of.geometry.cut.polygon name name2 n x0 y0 x1 y1 x2 y2 x3 y3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-geometry-cut-table-name-name2-table-tab">of.geometry.cut.table name name2 ‘table.tab’</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-geometry-cut-circle-name-name2-x0-y0-r-n">of.geometry.cut.circle name name2 x0 y0 r n</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-geometry-cut-ellipse-name-name2-x0-y0-rmax-rmin-theta-n">of.geometry.cut.ellipse name name2 x0 y0 rmax rmin theta n</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-geometry-cut-jset-name-name2-dip-length-space-gap">of.geometry.cut.jset name name2 dip length space gap</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-geometry-cut-dfn-name-name2-method-dip-length">of.geometry.cut.dfn name name2 method dip length</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-geometry-import-rdfn-pixel-ratio-name-name2-name">of.geometry.import.rdfn pixel_ratio name name2 name</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-geometry-remove-square-name-name2-x0-y0-x1-y1-x2-y2-x3-y3">of.geometry.remove.square name name2 x0 y0 x1 y1 x2 y2 x3 y3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-geometry-remove-polygon-name-name2-n-x0-y0-x1-y1-x2-y2-x3-y3">of.geometry.remove.polygon name name2 n x0 y0 x1 y1 x2 y2 x3 y3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-geometry-remove-table-name-name2-table-tab">of.geometry.remove.table name name2 ‘table.tab’</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-geometry-remove-circle-name-name2-x1-y1-r-n">of.geometry.remove.circle name name2 x1 y1 r n</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-geometry-remove-ellipse-name-name2-x0-y0-rmax-rmin-theta-n">of.geometry.remove.ellipse name name2 x0 y0 rmax rmin theta n</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-geometry-mesh-size-name-default">of.geometry.mesh.size name default</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-geometry-mesh-keyword">of.geometry.mesh keyword</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mesh-insert">mesh_insert</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-mesh-insert-elementgroup">of.mesh.insert elementgroup</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#nodal">nodal</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-nodal-coord-number-nodes">of.nodal.coord number_nodes</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#element">element</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-element-connectivity-number-nodes-number-elements">of.element.connectivity number_nodes number_elements</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contact">contact</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-contact-detection-nbs">of.contact.detection nbs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-contact-force-lig">of.contact.force lig</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cohelement">cohelement</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-cohelement-delete-cohelementgroup">of.cohelement.delete cohelementgroup</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#group">group</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nodal-groups">nodal groups</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-group-nodal-square-nodalgroupname-x1-x2-y1-y2">of.group.nodal.square nodalgroupname x1 x2 y1 y2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-group-nodal-circle-nodalgroupname-x1-y1-r">of.group.nodal.circle nodalgroupname x1 y1 r</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-group-nodal-circle-outer-nodalgroupname-x1-y1-r">of.group.nodal.circle.outer nodalgroupname x1 y1 r</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-group-nodal-circle-on-nodalgroupname-x1-y1-r">of.group.nodal.circle.on nodalgroupname x1 y1 r</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-group-nodal-plane-left-nodalgroupname-x1-y1-x2-y2">of.group.nodal.plane.left nodalgroupname x1 y1 x2 y2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-group-nodal-plane-right-nodalgroupname-x1-y1-x2-y2">of.group.nodal.plane.right nodalgroupname x1 y1 x2 y2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-group-nodal-plane-nodalgroupname-x1-y1-x2-y2">of.group.nodal.plane nodalgroupname x1 y1 x2 y2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-group-nodal-from-element-up-up">of.group.nodal.from.element ‘up’ ‘up’</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bool">bool</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-group-nodal-bool-union-nodalgroupnename-nodalgroupnamea-nodalgroupnameb">of.group.nodal.bool.union nodalgroupnename nodalgroupnamea nodalgroupnameb</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-group-nodal-bool-intersect-nodalgroupnewname-nodalgroupnamea-nodalgroupnameb">of.group.nodal.bool.intersect nodalgroupnewname nodalgroupnamea nodalgroupnameb</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-group-nodal-bool-subtract-nodalgroupnewname-nodalgroupnamea-nodalgroupnameb-a-b">of.group.nodal.bool.subtract nodalgroupnewname nodalgroupnamea nodalgroupnameb a-b</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#element-1">element</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-group-element-square-elementgroupname-x1-x2-y1-y2">of.group.element.square elementgroupname x1 x2 y1 y2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-group-element-circle-elementgroupname-x1-y1-r">of.group.element.circle elementgroupname x1 y1 r</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-group-element-circle-outer-elementgroupname-x1-y1-r">of.group.element.circle.outer elementgroupname x1 y1 r</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-group-element-plane-left-elementgroupname-x1-y1-x2-y2">of.group.element.plane.left elementgroupname x1 y1 x2 y2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-group-element-plane-right-elementgroupname-x1-y1-x2-y2">of.group.element.plane.right elementgroupname x1 y1 x2 y2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-group-element-bool-union-elementgroupnewname-elementgroupnamea-elementgroupnameb">of.group.element.bool.union elementgroupnewname elementgroupnamea elementgroupnameb</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-group-element-bool-intersect-elementgroupnewname-elementgroupnamea-elementgroupnameb">of.group. element.bool.intersect elementgroupnewname elementgroupnamea elementgroupnameb</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-group-element-bool-subtract-elementgroupnewname-elementgroupnamea-elementgroupnameb-a-b">of.group. element.bool.subtract elementgroupnewname elementgroupnamea elementgroupnameb a-b</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cohesive-element">cohesive element</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-group-cohelement-square-cohelementgroupname-x1-x2-y1-y2">of.group.cohelement.square cohelementgroupname x1 x2 y1 y2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-group-cohelement-circle-cohelementgroupname-x1-y1-r-default">of.group.cohelement.circle cohelementgroupname x1 y1 r (default)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-group-cohelement-circle-outer-cohelementgroupname-x1-y1-r">of.group.cohelement.circle.outer cohelementgroupname x1 y1 r</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-group-cohelement-circle-on-cohelementgroupname-x1-y1-r">of.group.cohelement.circle.on cohelementgroupname x1 y1 r</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-group-cohelement-plane-left-cohelementgroupname-x1-y1-x2-y2-default">of.group.cohelement.plane.left cohelementgroupname x1 y1 x2 y2 (default)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-group-cohelement-plane-right-cohelementgroupname-x1-y1-x2-y2">of.group.cohelement.plane.right cohelementgroupname x1 y1 x2 y2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-group-cohelement-plane-cohelementgroupname-x1-y1-x2-y2-default">of.group.cohelement.plane cohelementgroupname x1 y1 x2 y2 (default)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-group-cohelement-gbm-cohelementgroupname-elementgroupname1-elementgroupname2">of.group.cohelement.gbm cohelementgroupname elementgroupname1 elementgroupname2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-group-cohelement-dfn-cohelementgroupname-dfnname">of.group.cohelement.dfn cohelementgroupname dfnname</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-group-cohelement-bool-union-cohelementgroupnewname-cohelementgroupnamea-cohelementgroupnameb">of.group.cohelement.bool.union cohelementgroupnewname cohelementgroupnamea cohelementgroupnameb</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-group-cohelement-bool-intersect-cohelementgroupnewname-cohelementgroupnamea-cohelementgroupnameb">of.group. cohelement.bool.intersect cohelementgroupnewname cohelementgroupnamea cohelementgroupnameb</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-group-cohelement-bool-subtract-cohelementgroupnewname-cohelementgroupnamea-elementgroupnameb-a-b">of.group. cohelement.bool.subtract cohelementgroupnewname cohelementgroupnamea elementgroupnameb a-b</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#boundary">boundary</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nodal-1">nodal</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-nodal-force-nodalgroupname-xy-force-x-force-y">of.boundary.nodal.force nodalgroupname xy force_x force_y</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-nodal-velocity-nodalgroupname-xy-vel-x-vel-y">of.boundary.nodal.velocity nodalgroupname xy vel_x vel_y</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-nodal-inivelocity-nodalgroupname-xy-vel-x-vel-y">of.boundary.nodal.inivelocity nodalgroupname xy vel_x vel_y</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-nodal-acceleration-nodalgroupname-xy-acc-x-acc-y">of.boundary.nodal.acceleration nodalgroupname xy acc_x acc_y</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-nodal-viscous-nodalgroupnamexy-viscous-x-viscous-y">of.boundary.nodal.viscous nodalgroupnamexy viscous_x viscous_y</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-nodal-viscous-nodalgroupnamexy-viscous-x-viscous-y-1">of.boundary.nodal.viscous nodalgroupnamexy viscous_x viscous_y</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nodal-local-edge">nodal local edge</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-nodal-force-local-nodalgroupname-xy-force-normal-force-shear">of.boundary.nodal.force.local nodalgroupname xy force_normal force_shear</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-nodal-velocity-local-nodalgroupname-xy-vel-normal-vel-shear">of.boundary.nodal.velocity.local nodalgroupname xy vel_ normal vel_ shear</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-nodal-acceleration-local-nodalgroupname-xy-acc-normal-acc-shear">of.boundary.nodal.acceleration.local nodalgroupname xy acc_ normal acc_ shear</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-nodal-force-local-table-nodalgroupname-xy-force-normal-force-shear-tablename">of.boundary.nodal.force.local.table nodalgroupname xy force_normal force_shear tablename</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-nodal-velocity-table-nodalgroupname-xy-vel-normal-vel-shear-tablename">of.boundary.nodal.velocity. table nodalgroupname xy vel_ normal vel_ shear tablename</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-nodal-acceleration-table-nodalgroupname-xy-acc-normal-acc-shear-tablename">of.boundary.nodal.acceleration. table nodalgroupname xy acc_ normal acc_ shear tablename</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nodal-table">nodal table</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-nodal-force-table-nodalgroupname-xy-force-x-force-y-tablename">of.boundary.nodal.force.table nodalgroupname xy force_x force_y tablename</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-nodal-velocity-table-nodalgroupname-xy-vel-x-vel-y-tablename-tablename">of.boundary.nodal.velocity.table nodalgroupname xy vel_x vel_y tablename tablename</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-nodal-acceleration-table-nodalgroupname-xy-acc-x-acc-y-tablename-tablename">of.boundary.nodal.acceleration.table nodalgroupname xy acc_x acc_y tablename tablename</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-pressure-normal-nodalgroupname-value">of.boundary.pressure.normal nodalgroupname value</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-pressure-shear-nodalgroupname-value">of.boundary.pressure.shear nodalgroupname value</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-pressure-normal-table-nodalgroupname-value">of.boundary.pressure.normal.table nodalgroupname value</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-pressure-shear-table-nodalgroupname-value">of.boundary.pressure.shear.table nodalgroupname value</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hydro">hydro</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-hydro-porepressure-nodalgroup-p-p-x-p-y">of.boundary.hydro.porepressure nodalgroup p p_x p_y</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-hydro-waterlevel-nodalgroup-water-y-initial-p">of.boundary.hydro.waterlevel nodalgroup water_y initial_p</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-hydro-pressure-nodalgroup-value">of.boundary.hydro.pressure nodalgroup value</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-hydro-pressure-table-nodalgroup-value-tablename">of.boundary.hydro.pressure.table nodalgroup value tablename</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-hydro-flow-nodalgroup-flow-rate-value-initial-p">of.boundary.hydro.flow nodalgroup flow_rate_value initial_p</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-hydro-flow-table-nodalgroup-value-value2-tablename">of.boundary.hydro.flow.table nodalgroup value value2 tablename</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-hydro-impermeable-nodalgroup">of.boundary.hydro.impermeable nodalgroup</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#blast">blast</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-blast-nodalgroup-value-tablename">of.boundary.blast nodalgroup value tablename</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">element</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-element-stress-elementgroupname-sxx-sxy-syy">of.boundary.element.stress elementgroupname sxx sxy syy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-excavation-elementgroupname">of.boundary.excavation elementgroupname</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-uncontact-elementgroupname">of.boundary.uncontact elementgroupname</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thermal">thermal</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-thermal-t0-nodalgroupvalue">of.boundary.thermal.t0 nodalgroupvalue</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-boundary-thermal-temperature-nodalgroupvalue">of.boundary.thermal.temperature nodalgroupvalue</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#material">material</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-mat-element-elementgroupname-all-modelname-p1-p2-p3">of.mat.element elementgroupname(all) modelname p1 p2 p3 …</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-mat-particle-elementgroupname-all-modelname-p1-p2-p3">of.mat.particle elementgroupname(all) modelname p1 p2 p3 …</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-mat-cohesive-cohelementgroupname-all-modelname-p1-p2-p3">of.mat.cohesive cohelementgroupname(all) modelname p1 p2 p3 …</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-mat-cohesive-rock-em-het-power-0-5-dip-35-ten-30e6-3e6-coh-30e6-3e6-fric-0-3-0-gi-100-20-gii-300-30-power-dip-mean-pn-dev-pn-mean-pt-dev-pt-mean-ten-dev-ten-mean-coh-dev-coh-mean-fri-dev-fri-mean-gi-dev-gi-mean-gii-dev-gii">of.mat. cohesive ‘rock’ em_het power 0.5 dip 35 ten 30e6 3e6 coh 30e6 3e6 fric 0.3 0 gi 100 20 gii 300 30 (power, dip, mean pn, dev pn, mean pt, dev pt, mean ten, dev ten, mean coh, dev coh, mean fri, dev fri, mean gi, dev gi, mean gii, dev gii)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-mat-contact-elementgroupname1-elementgroupname2-all-modelname-p1-p2-p3">of.mat.contact elementgroupname1 elementgroupname2(all) modelname p1 p2 p3 …</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-mat-fluid-den-bulk-viscousity-cohesion">of.mat.fluid den bulk viscousity cohesion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-mat-fluid-matrix-elementgroupname-all-permeability-m-alpha">of.mat.fluid.matrix elementgroupname(all) permeability m alpha</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-mat-fluid-fracture-cohelementgroupname-all-aperature-0-apreature-min-para-exp-para-b">of.mat.fluid.fracture cohelementgroupname(all) aperature_0 apreature_min para_exp para_b</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-mat-gas-initial-den-permeability-initial-bulk-constant-b-alpha">of.mat.gas initial_den permeability initial_bulk constant_b alpha</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#gbm">gbm</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-gbm-numberofminerals-m1-name-ratio-m2-name-ratio">of.gbm numberofminerals m1_name ratio m2_name ratio …</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#history">history</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-nodal-force-id-x1-y1">of.history.nodal.force id x1 y1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-nodal-vel-id-x1-y1">of.history.nodal.vel id x1 y1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-nodal-dis-id-x1-y1">of.history.nodal.dis id x1 y1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-nodal-fluid-pressure-id-x1-y1">of.history.nodal.fluid.pressure id x1 y1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-nodal-fracture-pressure-id-x1-y1">of.history.nodal.fracture.pressure id x1 y1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-nodal-matrix-pressure-id-x1-y1">of.history.nodal.matrix.pressure id x1 y1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-nodal-temperature-id-x1-y1">of.history.nodal.temperature id x1 y1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-nodal-group-force-id-groupname">of.history.nodal.group.force id groupname</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-nodal-group-vel-id-groupname">of.history.nodal.group.vel id groupname</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-nodal-group-dis-id-groupname">of.history.nodal.group.dis id groupname</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-nodal-group-fluid-pressure-id-groupname">of.history.nodal.group.fluid.pressure id groupname</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-nodal-group-fracture-pressure-id-groupname">of.history.nodal.group.fracture.pressure id groupname</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-nodal-group-matrix-pressure-id-groupname">of.history.nodal.group.matrix.pressure id groupname</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-nodal-group-temperature-id-groupname">of.history.nodal.group.temperature id groupname</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-element-stress-id-x1-y1">of.history.element.stress id x1 y1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-element-strain-id-x1-y1">of.history.element.strain id x1 y1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-element-strainrate-id-x1-y1">of.history.element.strainrate id x1 y1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-element-group-stress-id-groupname">of.history.element.group.stress id groupname</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-element-group-strain-id-groupname">of.history.element.group.strain id groupname</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-element-group-strainrate-id-groupname">of.history.element.group.strainrate id groupname</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-cohelement-dis-id-x1-y1">of.history.cohelement.dis id x1 y1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-cohelement-force-id-x1-y1">of.history.cohelement.force id x1 y1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-cohelement-vel-id-x1-y1">of.history.cohelement.vel id x1 y1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-cohelement-shearstrength-id-x1-y1">of.history.cohelement.shearstrength id x1 y1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-cohelement-group-dis-id-groupname">of.history.cohelement.group.dis id groupname</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-cohelement-group-force-id-groupname">of.history.cohelement.group.force id groupname</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-cohelement-group-vel-id-groupname">of.history.cohelement.group.vel id groupname</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-cohelement-group-shearstrength-id-groupname">of.history.cohelement.group.shearstrength id groupname</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-energy">of.history.energy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-unbalance">of.history.unbalance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-solveratio">of.history.solveratio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-interval-intervalvalue">of.history.interval intervalvalue</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-pv-interval-intervalvalue">of.history.pv.interval intervalvalue</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-pv-reduced-interval-intervalvalue-fracturethreshold-intervalvalue">of.history.pv.reduced.interval intervalvalue fracturethreshold intervalvalue</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paraview">paraview</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-pv-field-fieldkeywords">of.history.pv.field fieldkeywords</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-pv-fracture-fracturekeywords">of.history.pv.fracture fracturekeywords</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-pv-damage-damagekeywords">of.history.pv.damage damagekeywords</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-pv-cohesive-cohesivekeywords">of.history.pv.cohesive cohesivekeywords</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-history-pv-ae-aekeywords">of.history.pv.ae aekeywords</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#dfn">dfn</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-dfn-connectivity-dfnnum">of.dfn.connectivity dfnnum</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#of-dfn-type-dfnname-dfn-enum">of.dfn.type dfnname dfn_enum</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#table">table</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-table-tablename-table1-dat">of.table tablename ‘table1.dat’</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#damping">damping</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-damp-global-value">of.damp.global value</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">hydro</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-hydro-timestep-value">of.hydro.timestep value</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#gravity">gravity</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-gravity-x-y">of.gravity x y</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#seismic">seismic</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-seismic-window-value">of.seismic.window value</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
               
                 
 <div id="searchbox"></div>
@@ -410,9 +822,9 @@ clarify the hierarchy of different classes.</p>
 commands in other layers cannot be shortened (for example, of.nodal or
 OpenFDEM.nodal).</p>
 <section id="general-commands">
-<h1>general commands<a class="headerlink" href="#general-commands" title="Permalink to this heading">#</a></h1>
+<h1>general commands<a class="headerlink" href="#general-commands" title="Link to this heading">#</a></h1>
 <section id="of-new">
-<h2>of.new<a class="headerlink" href="#of-new" title="Permalink to this heading">#</a></h2>
+<h2>of.new<a class="headerlink" href="#of-new" title="Link to this heading">#</a></h2>
 <p><strong>meaning</strong> [Optional]: Clear all variables from your last computation (i.e. start of a new OpenFDEM run).</p>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">of</span><span class="o">.</span><span class="n">new</span>
@@ -420,7 +832,7 @@ OpenFDEM.nodal).</p>
 </div>
 </section>
 <section id="of-restore">
-<h2>of.restore<a class="headerlink" href="#of-restore" title="Permalink to this heading">#</a></h2>
+<h2>of.restore<a class="headerlink" href="#of-restore" title="Link to this heading">#</a></h2>
 <p><strong>meaning</strong> [Optional]: call the saved binary computation results.</p>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>of.restore “filename.sav”
@@ -428,7 +840,7 @@ OpenFDEM.nodal).</p>
 </div>
 </section>
 <section id="of-result">
-<h2>of.result<a class="headerlink" href="#of-result" title="Permalink to this heading">#</a></h2>
+<h2>of.result<a class="headerlink" href="#of-result" title="Link to this heading">#</a></h2>
 <p><strong>meaning</strong> [Optional]: assign the results folder, default value is <code class="docutils literal notranslate"><span class="pre">../result</span></code>.</p>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>of.result “c:/user/openfdem example/result”
@@ -436,7 +848,7 @@ OpenFDEM.nodal).</p>
 </div>
 </section>
 <section id="of-save">
-<h2>of.save<a class="headerlink" href="#of-save" title="Permalink to this heading">#</a></h2>
+<h2>of.save<a class="headerlink" href="#of-save" title="Link to this heading">#</a></h2>
 <p><strong>meaning</strong>: save the binary computation results.</p>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>of.save “c:/user/openfdem example/result/insitu.sav”
@@ -444,7 +856,7 @@ OpenFDEM.nodal).</p>
 </div>
 </section>
 <section id="of-import">
-<h2>of.import<a class="headerlink" href="#of-import" title="Permalink to this heading">#</a></h2>
+<h2>of.import<a class="headerlink" href="#of-import" title="Link to this heading">#</a></h2>
 <p><strong>meaning</strong>: import files, currently supports all formats of <code class="docutils literal notranslate"><span class="pre">.inp</span></code> files, <code class="docutils literal notranslate"><span class="pre">.msh</span></code> files (no more than 2.0
 version), <code class="docutils literal notranslate"><span class="pre">.msh2</span></code> files, <code class="docutils literal notranslate"><span class="pre">.geo</span></code> files and <code class="docutils literal notranslate"><span class="pre">.ofdem</span></code> files (default format for OpenFDEM).</p>
 <p>OpenFDEM read all information from your mesh, including nodal physical, group, element physical group.</p>
@@ -455,7 +867,7 @@ version), <code class="docutils literal notranslate"><span class="pre">.msh2</sp
 </div>
 </section>
 <section id="of-debug-on">
-<h2>of.debug on<a class="headerlink" href="#of-debug-on" title="Permalink to this heading">#</a></h2>
+<h2>of.debug on<a class="headerlink" href="#of-debug-on" title="Link to this heading">#</a></h2>
 <p><strong>meaning</strong> [Optional]: turn on the debug mode, the default is off. Debugging will increase the run-time but a <code class="docutils literal notranslate"><span class="pre">.log</span></code> file will
 be generated when this mode is on.</p>
 <p><strong>demo</strong>:</p>
@@ -465,9 +877,9 @@ be generated when this mode is on.</p>
 </section>
 </section>
 <section id="config">
-<h1>config<a class="headerlink" href="#config" title="Permalink to this heading">#</a></h1>
+<h1>config<a class="headerlink" href="#config" title="Link to this heading">#</a></h1>
 <section id="of-config-type-planestress-planestrain">
-<h2>of.config.type planestress/planestrain<a class="headerlink" href="#of-config-type-planestress-planestrain" title="Permalink to this heading">#</a></h2>
+<h2>of.config.type planestress/planestrain<a class="headerlink" href="#of-config-type-planestress-planestrain" title="Link to this heading">#</a></h2>
 <p><strong>meaning</strong>: choosing plane stress or plane strain, the default is plane stress</p>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">of</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">type</span> <span class="n">planestrain</span>
@@ -475,7 +887,7 @@ be generated when this mode is on.</p>
 </div>
 </section>
 <section id="of-config-module-hydro-blast-thermal">
-<h2>of.config.module hydro/blast/thermal<a class="headerlink" href="#of-config-module-hydro-blast-thermal" title="Permalink to this heading">#</a></h2>
+<h2>of.config.module hydro/blast/thermal<a class="headerlink" href="#of-config-module-hydro-blast-thermal" title="Link to this heading">#</a></h2>
 <p><strong>meaning</strong>: choosing mechanical module, the default is mechanical</p>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">of</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">module</span> <span class="n">hydro</span>
@@ -486,11 +898,11 @@ be generated when this mode is on.</p>
 </section>
 </section>
 <section id="geometry">
-<h1>geometry<a class="headerlink" href="#geometry" title="Permalink to this heading">#</a></h1>
+<h1>geometry<a class="headerlink" href="#geometry" title="Link to this heading">#</a></h1>
 <p>You can create meshes based on the built-in command line functions. OpenFDEM also supports creating <code class="docutils literal notranslate"><span class="pre">retangular</span></code>, <code class="docutils literal notranslate"><span class="pre">circle</span></code>, <code class="docutils literal notranslate"><span class="pre">ellipse</span></code>,
 <code class="docutils literal notranslate"><span class="pre">arbitary</span> <span class="pre">polygon</span></code> from tables.  The bool operators support <code class="docutils literal notranslate"><span class="pre">intersection</span></code>, <code class="docutils literal notranslate"><span class="pre">union</span></code>, <code class="docutils literal notranslate"><span class="pre">difference</span></code>, and <code class="docutils literal notranslate"><span class="pre">fragment</span></code> between different entities.</p>
 <section id="of-geometry-square-name-x0-y0-x1-y1-x2-y2-x3-y3">
-<h2>of.geometry.square name x0 y0 x1 y1 x2 y2 x3 y3<a class="headerlink" href="#of-geometry-square-name-x0-y0-x1-y1-x2-y2-x3-y3" title="Permalink to this heading">#</a></h2>
+<h2>of.geometry.square name x0 y0 x1 y1 x2 y2 x3 y3<a class="headerlink" href="#of-geometry-square-name-x0-y0-x1-y1-x2-y2-x3-y3" title="Link to this heading">#</a></h2>
 <p><strong>meaning</strong>: create a geometry using square range, and the geometry tag
 is ‘name’</p>
 <p><strong>demo</strong>:</p>
@@ -499,7 +911,7 @@ is ‘name’</p>
 </div>
 </section>
 <section id="of-geometry-polygon-name-n-x0-y0-x1-y1-x2-y2-x3-y3">
-<h2>of.geometry.polygon name n x0 y0 x1 y1 x2 y2 x3 y3<a class="headerlink" href="#of-geometry-polygon-name-n-x0-y0-x1-y1-x2-y2-x3-y3" title="Permalink to this heading">#</a></h2>
+<h2>of.geometry.polygon name n x0 y0 x1 y1 x2 y2 x3 y3<a class="headerlink" href="#of-geometry-polygon-name-n-x0-y0-x1-y1-x2-y2-x3-y3" title="Link to this heading">#</a></h2>
 <p><strong>meaning</strong>: create a geometry using polygon range, the geometry tag is
 ‘name’ and the vertex count is n</p>
 <p><strong>demo</strong>:</p>
@@ -508,7 +920,7 @@ is ‘name’</p>
 </div>
 </section>
 <section id="of-geometry-table-name-table-tab">
-<h2>of.geometry.table name ‘table.tab’<a class="headerlink" href="#of-geometry-table-name-table-tab" title="Permalink to this heading">#</a></h2>
+<h2>of.geometry.table name ‘table.tab’<a class="headerlink" href="#of-geometry-table-name-table-tab" title="Link to this heading">#</a></h2>
 <p><strong>meaning</strong>: create a geometry. All point cords are put in the
 table file.</p>
 <dl class="simple">
@@ -524,7 +936,7 @@ x2, y2
 </div>
 </section>
 <section id="of-geometry-circle-name-x0-y0-r-n">
-<h2>of.geometry.circle name x0 y0 r n<a class="headerlink" href="#of-geometry-circle-name-x0-y0-r-n" title="Permalink to this heading">#</a></h2>
+<h2>of.geometry.circle name x0 y0 r n<a class="headerlink" href="#of-geometry-circle-name-x0-y0-r-n" title="Link to this heading">#</a></h2>
 <p><strong>meaning</strong>: create a geometry using circle range, the geometry tag is
 ‘name’. The centric point is (x1, y1), radius is r and edge count is n, deafault is 50.</p>
 <p><strong>demo</strong>:</p>
@@ -533,7 +945,7 @@ x2, y2
 </div>
 </section>
 <section id="of-geometry-ellipse-name-x0-y0-rmax-rmin-theta-n">
-<h2>of.geometry.ellipse name x0 y0 rmax rmin theta n<a class="headerlink" href="#of-geometry-ellipse-name-x0-y0-rmax-rmin-theta-n" title="Permalink to this heading">#</a></h2>
+<h2>of.geometry.ellipse name x0 y0 rmax rmin theta n<a class="headerlink" href="#of-geometry-ellipse-name-x0-y0-rmax-rmin-theta-n" title="Link to this heading">#</a></h2>
 <p><strong>meaning</strong>: create a geometry using ellipse range, where the geometry tag is
 ‘name’ and the centric point is (x0, y0). Radiuses are rmax and rmin,
 and edge count is n, default is 50.</p>
@@ -543,7 +955,7 @@ and edge count is n, default is 50.</p>
 </div>
 </section>
 <section id="of-geometry-cut-square-name-name2-x0-y0-x1-y1-x2-y2-x3-y3">
-<h2>of.geometry.cut.square name name2 x0 y0 x1 y1 x2 y2 x3 y3<a class="headerlink" href="#of-geometry-cut-square-name-name2-x0-y0-x1-y1-x2-y2-x3-y3" title="Permalink to this heading">#</a></h2>
+<h2>of.geometry.cut.square name name2 x0 y0 x1 y1 x2 y2 x3 y3<a class="headerlink" href="#of-geometry-cut-square-name-name2-x0-y0-x1-y1-x2-y2-x3-y3" title="Link to this heading">#</a></h2>
 <p><strong>meaning</strong>: cut a rectangular tunnel in existing <em>‘name2’</em> group geometry,
 but the <em>‘name’</em> group is not excavated.</p>
 <p><strong>demo</strong>:</p>
@@ -552,7 +964,7 @@ but the <em>‘name’</em> group is not excavated.</p>
 </div>
 </section>
 <section id="of-geometry-cut-polygon-name-name2-n-x0-y0-x1-y1-x2-y2-x3-y3">
-<h2>of.geometry.cut.polygon name name2 n x0 y0 x1 y1 x2 y2 x3 y3<a class="headerlink" href="#of-geometry-cut-polygon-name-name2-n-x0-y0-x1-y1-x2-y2-x3-y3" title="Permalink to this heading">#</a></h2>
+<h2>of.geometry.cut.polygon name name2 n x0 y0 x1 y1 x2 y2 x3 y3<a class="headerlink" href="#of-geometry-cut-polygon-name-name2-n-x0-y0-x1-y1-x2-y2-x3-y3" title="Link to this heading">#</a></h2>
 <p><strong>meaning</strong>: cut a polygon tunnel in existing <em>‘name2’</em> group geometry, but
 the <em>‘name’</em> group is not excavated.</p>
 <p><strong>demo</strong>:</p>
@@ -561,7 +973,7 @@ the <em>‘name’</em> group is not excavated.</p>
 </div>
 </section>
 <section id="of-geometry-cut-table-name-name2-table-tab">
-<h2>of.geometry.cut.table name name2 ‘table.tab’<a class="headerlink" href="#of-geometry-cut-table-name-name2-table-tab" title="Permalink to this heading">#</a></h2>
+<h2>of.geometry.cut.table name name2 ‘table.tab’<a class="headerlink" href="#of-geometry-cut-table-name-name2-table-tab" title="Link to this heading">#</a></h2>
 <p><strong>meaning</strong>: cut a table tunnel in existing ‘name2’ group geometry, but the
 ‘name’ group is not excavated.</p>
 <p><strong>demo</strong>:</p>
@@ -570,7 +982,7 @@ the <em>‘name’</em> group is not excavated.</p>
 </div>
 </section>
 <section id="of-geometry-cut-circle-name-name2-x0-y0-r-n">
-<h2>of.geometry.cut.circle name name2 x0 y0 r n<a class="headerlink" href="#of-geometry-cut-circle-name-name2-x0-y0-r-n" title="Permalink to this heading">#</a></h2>
+<h2>of.geometry.cut.circle name name2 x0 y0 r n<a class="headerlink" href="#of-geometry-cut-circle-name-name2-x0-y0-r-n" title="Link to this heading">#</a></h2>
 <p><strong>meaning</strong>: cut a circular tunnel in existing ‘name2’ group geometry, but the
 ‘name’ group is not excavated.</p>
 <p><strong>demo</strong>:</p>
@@ -579,7 +991,7 @@ the <em>‘name’</em> group is not excavated.</p>
 </div>
 </section>
 <section id="of-geometry-cut-ellipse-name-name2-x0-y0-rmax-rmin-theta-n">
-<h2>of.geometry.cut.ellipse name name2 x0 y0 rmax rmin theta n<a class="headerlink" href="#of-geometry-cut-ellipse-name-name2-x0-y0-rmax-rmin-theta-n" title="Permalink to this heading">#</a></h2>
+<h2>of.geometry.cut.ellipse name name2 x0 y0 rmax rmin theta n<a class="headerlink" href="#of-geometry-cut-ellipse-name-name2-x0-y0-rmax-rmin-theta-n" title="Link to this heading">#</a></h2>
 <p><strong>meaning</strong>: cut a elliptical tunnel in existing ‘name2’ group geometry, but
 the ‘name’ group is not excavated.</p>
 <p><strong>demo</strong>:</p>
@@ -588,7 +1000,7 @@ the ‘name’ group is not excavated.</p>
 </div>
 </section>
 <section id="of-geometry-cut-jset-name-name2-dip-length-space-gap">
-<h2>of.geometry.cut.jset name name2 dip length space gap<a class="headerlink" href="#of-geometry-cut-jset-name-name2-dip-length-space-gap" title="Permalink to this heading">#</a></h2>
+<h2>of.geometry.cut.jset name name2 dip length space gap<a class="headerlink" href="#of-geometry-cut-jset-name-name2-dip-length-space-gap" title="Link to this heading">#</a></h2>
 <p><strong>meaning</strong>: create jset ‘name2’ group geometry in ‘name’ group</p>
 <p>method: default, normal, uniform, exponential, log_normal, power</p>
 <p>cdip ndip udip edip logdip pdip</p>
@@ -602,7 +1014,7 @@ the ‘name’ group is not excavated.</p>
 </div>
 </section>
 <section id="of-geometry-cut-dfn-name-name2-method-dip-length">
-<h2>of.geometry.cut.dfn name name2 method dip length<a class="headerlink" href="#of-geometry-cut-dfn-name-name2-method-dip-length" title="Permalink to this heading">#</a></h2>
+<h2>of.geometry.cut.dfn name name2 method dip length<a class="headerlink" href="#of-geometry-cut-dfn-name-name2-method-dip-length" title="Link to this heading">#</a></h2>
 <p>method: count, p21(length/area), p10 (n/edge length)</p>
 <p>dip: dip udip ndip</p>
 <p>length: length nlength flength</p>
@@ -612,14 +1024,14 @@ the ‘name’ group is not excavated.</p>
 </div>
 </section>
 <section id="of-geometry-import-rdfn-pixel-ratio-name-name2-name">
-<h2>of.geometry.import.rdfn pixel_ratio name name2 name<a class="headerlink" href="#of-geometry-import-rdfn-pixel-ratio-name-name2-name" title="Permalink to this heading">#</a></h2>
+<h2>of.geometry.import.rdfn pixel_ratio name name2 name<a class="headerlink" href="#of-geometry-import-rdfn-pixel-ratio-name-name2-name" title="Link to this heading">#</a></h2>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">of</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">import</span><span class="o">.</span><span class="n">rdfn</span> <span class="mf">1.0</span> <span class="s1">&#39;dfn-1&#39;</span> <span class="s1">&#39;rock_0&#39;</span> <span class="s1">&#39;fault.dat&#39;</span>
 </pre></div>
 </div>
 </section>
 <section id="of-geometry-remove-square-name-name2-x0-y0-x1-y1-x2-y2-x3-y3">
-<h2>of.geometry.remove.square name name2 x0 y0 x1 y1 x2 y2 x3 y3<a class="headerlink" href="#of-geometry-remove-square-name-name2-x0-y0-x1-y1-x2-y2-x3-y3" title="Permalink to this heading">#</a></h2>
+<h2>of.geometry.remove.square name name2 x0 y0 x1 y1 x2 y2 x3 y3<a class="headerlink" href="#of-geometry-remove-square-name-name2-x0-y0-x1-y1-x2-y2-x3-y3" title="Link to this heading">#</a></h2>
 <p><strong>meaning</strong>: remove a rectangular tunnel in existing ‘name2’ group geometry,
 the ‘name’ group is excavated as null</p>
 <p><strong>demo</strong>:</p>
@@ -628,7 +1040,7 @@ the ‘name’ group is excavated as null</p>
 </div>
 </section>
 <section id="of-geometry-remove-polygon-name-name2-n-x0-y0-x1-y1-x2-y2-x3-y3">
-<h2>of.geometry.remove.polygon name name2 n x0 y0 x1 y1 x2 y2 x3 y3<a class="headerlink" href="#of-geometry-remove-polygon-name-name2-n-x0-y0-x1-y1-x2-y2-x3-y3" title="Permalink to this heading">#</a></h2>
+<h2>of.geometry.remove.polygon name name2 n x0 y0 x1 y1 x2 y2 x3 y3<a class="headerlink" href="#of-geometry-remove-polygon-name-name2-n-x0-y0-x1-y1-x2-y2-x3-y3" title="Link to this heading">#</a></h2>
 <p><strong>meaning</strong>: remove a polygon tunnel in existing ‘name2’ group geometry, the
 ‘name’ group is excavated as null</p>
 <p><strong>demo</strong>:</p>
@@ -637,7 +1049,7 @@ the ‘name’ group is excavated as null</p>
 </div>
 </section>
 <section id="of-geometry-remove-table-name-name2-table-tab">
-<h2>of.geometry.remove.table name name2 ‘table.tab’<a class="headerlink" href="#of-geometry-remove-table-name-name2-table-tab" title="Permalink to this heading">#</a></h2>
+<h2>of.geometry.remove.table name name2 ‘table.tab’<a class="headerlink" href="#of-geometry-remove-table-name-name2-table-tab" title="Link to this heading">#</a></h2>
 <p><strong>meaning</strong>: remove a table tunnel in existing ‘name2’ group geometry, the
 ‘name’ group is excavated as null</p>
 <p><strong>demo</strong>:</p>
@@ -646,7 +1058,7 @@ the ‘name’ group is excavated as null</p>
 </div>
 </section>
 <section id="of-geometry-remove-circle-name-name2-x1-y1-r-n">
-<h2>of.geometry.remove.circle name name2 x1 y1 r n<a class="headerlink" href="#of-geometry-remove-circle-name-name2-x1-y1-r-n" title="Permalink to this heading">#</a></h2>
+<h2>of.geometry.remove.circle name name2 x1 y1 r n<a class="headerlink" href="#of-geometry-remove-circle-name-name2-x1-y1-r-n" title="Link to this heading">#</a></h2>
 <p><strong>meaning</strong>: remove a circle tunnel in existing ‘name2’ group geometry, the
 ‘name’ group is excavated as null</p>
 <p><strong>demo</strong>:</p>
@@ -655,7 +1067,7 @@ the ‘name’ group is excavated as null</p>
 </div>
 </section>
 <section id="of-geometry-remove-ellipse-name-name2-x0-y0-rmax-rmin-theta-n">
-<h2>of.geometry.remove.ellipse name name2 x0 y0 rmax rmin theta n<a class="headerlink" href="#of-geometry-remove-ellipse-name-name2-x0-y0-rmax-rmin-theta-n" title="Permalink to this heading">#</a></h2>
+<h2>of.geometry.remove.ellipse name name2 x0 y0 rmax rmin theta n<a class="headerlink" href="#of-geometry-remove-ellipse-name-name2-x0-y0-rmax-rmin-theta-n" title="Link to this heading">#</a></h2>
 <p><strong>meaning</strong>: remove a ellipse tunnel in existing ‘name2’ group geometry, the
 ‘name’ group is excavated as null</p>
 <p><strong>demo</strong>:</p>
@@ -664,7 +1076,7 @@ the ‘name’ group is excavated as null</p>
 </div>
 </section>
 <section id="of-geometry-mesh-size-name-default">
-<h2>of.geometry.mesh.size name default<a class="headerlink" href="#of-geometry-mesh-size-name-default" title="Permalink to this heading">#</a></h2>
+<h2>of.geometry.mesh.size name default<a class="headerlink" href="#of-geometry-mesh-size-name-default" title="Link to this heading">#</a></h2>
 <p><strong>meaning</strong>: assign the mesh size to corresponding geometry groups, ‘all’
 means the all geometries</p>
 <p><strong>demo</strong>:</p>
@@ -673,7 +1085,7 @@ means the all geometries</p>
 </div>
 </section>
 <section id="of-geometry-mesh-keyword">
-<h2>of.geometry.mesh keyword<a class="headerlink" href="#of-geometry-mesh-keyword" title="Permalink to this heading">#</a></h2>
+<h2>of.geometry.mesh keyword<a class="headerlink" href="#of-geometry-mesh-keyword" title="Link to this heading">#</a></h2>
 <p><strong>meaning</strong>: method used to generate mesh, default is delaunay</p>
 <p>keyword: meshadapt(default), delaunay, frontal-delaunay</p>
 <p><strong>demo</strong>:</p>
@@ -683,9 +1095,9 @@ means the all geometries</p>
 </section>
 </section>
 <section id="mesh-insert">
-<h1>mesh_insert<a class="headerlink" href="#mesh-insert" title="Permalink to this heading">#</a></h1>
+<h1>mesh_insert<a class="headerlink" href="#mesh-insert" title="Link to this heading">#</a></h1>
 <section id="of-mesh-insert-elementgroup">
-<h2>of.mesh.insert elementgroup<a class="headerlink" href="#of-mesh-insert-elementgroup" title="Permalink to this heading">#</a></h2>
+<h2>of.mesh.insert elementgroup<a class="headerlink" href="#of-mesh-insert-elementgroup" title="Link to this heading">#</a></h2>
 <p><strong>meaning</strong>: insert the CZMs for specific element groups, ‘all’ means insert
 CZMs in all model</p>
 <p><strong>demo</strong>:</p>
@@ -697,9 +1109,9 @@ of.mesh.insert ‘all’
 </section>
 </section>
 <section id="nodal">
-<h1>nodal<a class="headerlink" href="#nodal" title="Permalink to this heading">#</a></h1>
+<h1>nodal<a class="headerlink" href="#nodal" title="Link to this heading">#</a></h1>
 <section id="of-nodal-coord-number-nodes">
-<h2>of.nodal.coord number_nodes<a class="headerlink" href="#of-nodal-coord-number-nodes" title="Permalink to this heading">#</a></h2>
+<h2>of.nodal.coord number_nodes<a class="headerlink" href="#of-nodal-coord-number-nodes" title="Link to this heading">#</a></h2>
 <p><strong>meaning</strong>: input nodes for the .fdem format</p>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">of</span><span class="o">.</span><span class="n">nodal</span><span class="o">.</span><span class="n">coord</span> <span class="mi">3</span>
@@ -714,9 +1126,9 @@ of.mesh.insert ‘all’
 </section>
 </section>
 <section id="element">
-<h1>element<a class="headerlink" href="#element" title="Permalink to this heading">#</a></h1>
+<h1>element<a class="headerlink" href="#element" title="Link to this heading">#</a></h1>
 <section id="of-element-connectivity-number-nodes-number-elements">
-<h2>of.element.connectivity number_nodes number_elements<a class="headerlink" href="#of-element-connectivity-number-nodes-number-elements" title="Permalink to this heading">#</a></h2>
+<h2>of.element.connectivity number_nodes number_elements<a class="headerlink" href="#of-element-connectivity-number-nodes-number-elements" title="Link to this heading">#</a></h2>
 <blockquote>
 <div><p>x1 y1 x2 y2 x3 y3…</p>
 </div></blockquote>
@@ -734,9 +1146,9 @@ of.mesh.insert ‘all’
 </section>
 </section>
 <section id="contact">
-<h1>contact<a class="headerlink" href="#contact" title="Permalink to this heading">#</a></h1>
+<h1>contact<a class="headerlink" href="#contact" title="Link to this heading">#</a></h1>
 <section id="of-contact-detection-nbs">
-<h2>of.contact.detection nbs<a class="headerlink" href="#of-contact-detection-nbs" title="Permalink to this heading">#</a></h2>
+<h2>of.contact.detection nbs<a class="headerlink" href="#of-contact-detection-nbs" title="Link to this heading">#</a></h2>
 <p><strong>meaning</strong>: the contact detection method, current methods are: Munjiza model, NBS,
 modified NBS and Li-Grasselli’s method [default].</p>
 <p><strong>demo</strong>:</p>
@@ -745,7 +1157,7 @@ modified NBS and Li-Grasselli’s method [default].</p>
 </div>
 </section>
 <section id="of-contact-force-lig">
-<h2>of.contact.force lig<a class="headerlink" href="#of-contact-force-lig" title="Permalink to this heading">#</a></h2>
+<h2>of.contact.force lig<a class="headerlink" href="#of-contact-force-lig" title="Link to this heading">#</a></h2>
 <p><strong>meaning</strong>: the contact force method, current methods are: Munjiza model,
 and Li-Grasselli’s method [default].</p>
 <p><strong>demo</strong>:</p>
@@ -755,17 +1167,17 @@ and Li-Grasselli’s method [default].</p>
 </section>
 </section>
 <section id="cohelement">
-<h1>cohelement<a class="headerlink" href="#cohelement" title="Permalink to this heading">#</a></h1>
+<h1>cohelement<a class="headerlink" href="#cohelement" title="Link to this heading">#</a></h1>
 <section id="of-cohelement-delete-cohelementgroup">
-<h2>of.cohelement.delete cohelementgroup<a class="headerlink" href="#of-cohelement-delete-cohelementgroup" title="Permalink to this heading">#</a></h2>
+<h2>of.cohelement.delete cohelementgroup<a class="headerlink" href="#of-cohelement-delete-cohelementgroup" title="Link to this heading">#</a></h2>
 </section>
 </section>
 <section id="group">
-<h1>group<a class="headerlink" href="#group" title="Permalink to this heading">#</a></h1>
+<h1>group<a class="headerlink" href="#group" title="Link to this heading">#</a></h1>
 <section id="nodal-groups">
-<h2>nodal groups<a class="headerlink" href="#nodal-groups" title="Permalink to this heading">#</a></h2>
+<h2>nodal groups<a class="headerlink" href="#nodal-groups" title="Link to this heading">#</a></h2>
 <section id="of-group-nodal-square-nodalgroupname-x1-x2-y1-y2">
-<h3>of.group.nodal.square nodalgroupname x1 x2 y1 y2<a class="headerlink" href="#of-group-nodal-square-nodalgroupname-x1-x2-y1-y2" title="Permalink to this heading">#</a></h3>
+<h3>of.group.nodal.square nodalgroupname x1 x2 y1 y2<a class="headerlink" href="#of-group-nodal-square-nodalgroupname-x1-x2-y1-y2" title="Link to this heading">#</a></h3>
 <p><strong>meaning</strong>: create nodal group using rectangular range</p>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>of.group.nodal.square ‘rock’ -50.0 50.0 -50.0 10.0
@@ -773,7 +1185,7 @@ and Li-Grasselli’s method [default].</p>
 </div>
 </section>
 <section id="of-group-nodal-circle-nodalgroupname-x1-y1-r">
-<h3>of.group.nodal.circle nodalgroupname x1 y1 r<a class="headerlink" href="#of-group-nodal-circle-nodalgroupname-x1-y1-r" title="Permalink to this heading">#</a></h3>
+<h3>of.group.nodal.circle nodalgroupname x1 y1 r<a class="headerlink" href="#of-group-nodal-circle-nodalgroupname-x1-y1-r" title="Link to this heading">#</a></h3>
 <p><strong>meaning</strong>: create nodal group using circle range, the nodes within the
 circle</p>
 <p><strong>demo</strong>:</p>
@@ -782,7 +1194,7 @@ circle</p>
 </div>
 </section>
 <section id="of-group-nodal-circle-outer-nodalgroupname-x1-y1-r">
-<h3>of.group.nodal.circle.outer nodalgroupname x1 y1 r<a class="headerlink" href="#of-group-nodal-circle-outer-nodalgroupname-x1-y1-r" title="Permalink to this heading">#</a></h3>
+<h3>of.group.nodal.circle.outer nodalgroupname x1 y1 r<a class="headerlink" href="#of-group-nodal-circle-outer-nodalgroupname-x1-y1-r" title="Link to this heading">#</a></h3>
 <p><strong>meaning</strong>: create nodal group out of the circle range</p>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>of.group.nodal.circle.outer ‘tunnel’ 0.0 0.0 2.5
@@ -790,7 +1202,7 @@ circle</p>
 </div>
 </section>
 <section id="of-group-nodal-circle-on-nodalgroupname-x1-y1-r">
-<h3>of.group.nodal.circle.on nodalgroupname x1 y1 r<a class="headerlink" href="#of-group-nodal-circle-on-nodalgroupname-x1-y1-r" title="Permalink to this heading">#</a></h3>
+<h3>of.group.nodal.circle.on nodalgroupname x1 y1 r<a class="headerlink" href="#of-group-nodal-circle-on-nodalgroupname-x1-y1-r" title="Link to this heading">#</a></h3>
 <p><strong>meaning</strong>: create nodal group on of the circle boundary</p>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>of.group.nodal.circle.on ‘tunnel’ 0.0 0.0 2.5
@@ -798,7 +1210,7 @@ circle</p>
 </div>
 </section>
 <section id="of-group-nodal-plane-left-nodalgroupname-x1-y1-x2-y2">
-<h3>of.group.nodal.plane.left nodalgroupname x1 y1 x2 y2<a class="headerlink" href="#of-group-nodal-plane-left-nodalgroupname-x1-y1-x2-y2" title="Permalink to this heading">#</a></h3>
+<h3>of.group.nodal.plane.left nodalgroupname x1 y1 x2 y2<a class="headerlink" href="#of-group-nodal-plane-left-nodalgroupname-x1-y1-x2-y2" title="Link to this heading">#</a></h3>
 <p><strong>meaning</strong>: create nodal group on the left of the predefined plane</p>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>of.group.nodal.plane.left ‘slope’ 0.0 0.0 1.0 2.7
@@ -806,7 +1218,7 @@ circle</p>
 </div>
 </section>
 <section id="of-group-nodal-plane-right-nodalgroupname-x1-y1-x2-y2">
-<h3>of.group.nodal.plane.right nodalgroupname x1 y1 x2 y2<a class="headerlink" href="#of-group-nodal-plane-right-nodalgroupname-x1-y1-x2-y2" title="Permalink to this heading">#</a></h3>
+<h3>of.group.nodal.plane.right nodalgroupname x1 y1 x2 y2<a class="headerlink" href="#of-group-nodal-plane-right-nodalgroupname-x1-y1-x2-y2" title="Link to this heading">#</a></h3>
 <p><strong>meaning</strong>: create nodal group on the right of the plane</p>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>of.group.nodal.plane.right ‘slope’ 0.0 0.0 1.0 2.7
@@ -814,7 +1226,7 @@ circle</p>
 </div>
 </section>
 <section id="of-group-nodal-plane-nodalgroupname-x1-y1-x2-y2">
-<h3>of.group.nodal.plane nodalgroupname x1 y1 x2 y2<a class="headerlink" href="#of-group-nodal-plane-nodalgroupname-x1-y1-x2-y2" title="Permalink to this heading">#</a></h3>
+<h3>of.group.nodal.plane nodalgroupname x1 y1 x2 y2<a class="headerlink" href="#of-group-nodal-plane-nodalgroupname-x1-y1-x2-y2" title="Link to this heading">#</a></h3>
 <p><strong>meaning</strong>: create nodal group on the plane</p>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>of.group.nodal.plane ‘slope’ 0.0 0.0 1.0 2.7
@@ -822,7 +1234,7 @@ circle</p>
 </div>
 </section>
 <section id="of-group-nodal-from-element-up-up">
-<h3>of.group.nodal.from.element ‘up’ ‘up’<a class="headerlink" href="#of-group-nodal-from-element-up-up" title="Permalink to this heading">#</a></h3>
+<h3>of.group.nodal.from.element ‘up’ ‘up’<a class="headerlink" href="#of-group-nodal-from-element-up-up" title="Link to this heading">#</a></h3>
 <p><strong>meaning</strong>: create nodal group from the element group</p>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>of.group.nodal.from.element ‘rock’ ‘rock’
@@ -831,9 +1243,9 @@ circle</p>
 </section>
 </section>
 <section id="bool">
-<h2>bool<a class="headerlink" href="#bool" title="Permalink to this heading">#</a></h2>
+<h2>bool<a class="headerlink" href="#bool" title="Link to this heading">#</a></h2>
 <section id="of-group-nodal-bool-union-nodalgroupnename-nodalgroupnamea-nodalgroupnameb">
-<h3>of.group.nodal.bool.union nodalgroupnename nodalgroupnamea nodalgroupnameb<a class="headerlink" href="#of-group-nodal-bool-union-nodalgroupnename-nodalgroupnamea-nodalgroupnameb" title="Permalink to this heading">#</a></h3>
+<h3>of.group.nodal.bool.union nodalgroupnename nodalgroupnamea nodalgroupnameb<a class="headerlink" href="#of-group-nodal-bool-union-nodalgroupnename-nodalgroupnamea-nodalgroupnameb" title="Link to this heading">#</a></h3>
 <p><strong>meaning</strong>: create nodal group using bool union</p>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>of.group.nodal.bool.union ‘rock1’ ‘rock2’
@@ -841,7 +1253,7 @@ circle</p>
 </div>
 </section>
 <section id="of-group-nodal-bool-intersect-nodalgroupnewname-nodalgroupnamea-nodalgroupnameb">
-<h3>of.group.nodal.bool.intersect nodalgroupnewname nodalgroupnamea nodalgroupnameb<a class="headerlink" href="#of-group-nodal-bool-intersect-nodalgroupnewname-nodalgroupnamea-nodalgroupnameb" title="Permalink to this heading">#</a></h3>
+<h3>of.group.nodal.bool.intersect nodalgroupnewname nodalgroupnamea nodalgroupnameb<a class="headerlink" href="#of-group-nodal-bool-intersect-nodalgroupnewname-nodalgroupnamea-nodalgroupnameb" title="Link to this heading">#</a></h3>
 <p><strong>meaning</strong>: create nodal group using bool intersect</p>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>of.group.nodal.bool.intersect ‘rock1’ ‘rock2’
@@ -849,7 +1261,7 @@ circle</p>
 </div>
 </section>
 <section id="of-group-nodal-bool-subtract-nodalgroupnewname-nodalgroupnamea-nodalgroupnameb-a-b">
-<h3>of.group.nodal.bool.subtract nodalgroupnewname nodalgroupnamea nodalgroupnameb a-b<a class="headerlink" href="#of-group-nodal-bool-subtract-nodalgroupnewname-nodalgroupnamea-nodalgroupnameb-a-b" title="Permalink to this heading">#</a></h3>
+<h3>of.group.nodal.bool.subtract nodalgroupnewname nodalgroupnamea nodalgroupnameb a-b<a class="headerlink" href="#of-group-nodal-bool-subtract-nodalgroupnewname-nodalgroupnamea-nodalgroupnameb-a-b" title="Link to this heading">#</a></h3>
 <p><strong>meaning</strong>: create nodal group using bool subtract</p>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>of.group.nodal.bool.subtract‘rock1’ ‘rock2’
@@ -858,102 +1270,102 @@ circle</p>
 </section>
 </section>
 <section id="element-1">
-<span id="id1"></span><h2>element<a class="headerlink" href="#element-1" title="Permalink to this heading">#</a></h2>
+<span id="id1"></span><h2>element<a class="headerlink" href="#element-1" title="Link to this heading">#</a></h2>
 <section id="of-group-element-square-elementgroupname-x1-x2-y1-y2">
-<h3>of.group.element.square elementgroupname x1 x2 y1 y2<a class="headerlink" href="#of-group-element-square-elementgroupname-x1-x2-y1-y2" title="Permalink to this heading">#</a></h3>
+<h3>of.group.element.square elementgroupname x1 x2 y1 y2<a class="headerlink" href="#of-group-element-square-elementgroupname-x1-x2-y1-y2" title="Link to this heading">#</a></h3>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>of.group.element.square ‘rock’ -50.0 50.0 -50.0 10.0
 </pre></div>
 </div>
 </section>
 <section id="of-group-element-circle-elementgroupname-x1-y1-r">
-<h3>of.group.element.circle elementgroupname x1 y1 r<a class="headerlink" href="#of-group-element-circle-elementgroupname-x1-y1-r" title="Permalink to this heading">#</a></h3>
+<h3>of.group.element.circle elementgroupname x1 y1 r<a class="headerlink" href="#of-group-element-circle-elementgroupname-x1-y1-r" title="Link to this heading">#</a></h3>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>of.group.element. circle ‘tunnel’ 0.0 0.0 2.5
 </pre></div>
 </div>
 </section>
 <section id="of-group-element-circle-outer-elementgroupname-x1-y1-r">
-<h3>of.group.element.circle.outer elementgroupname x1 y1 r<a class="headerlink" href="#of-group-element-circle-outer-elementgroupname-x1-y1-r" title="Permalink to this heading">#</a></h3>
+<h3>of.group.element.circle.outer elementgroupname x1 y1 r<a class="headerlink" href="#of-group-element-circle-outer-elementgroupname-x1-y1-r" title="Link to this heading">#</a></h3>
 </section>
 <section id="of-group-element-plane-left-elementgroupname-x1-y1-x2-y2">
-<h3>of.group.element.plane.left elementgroupname x1 y1 x2 y2<a class="headerlink" href="#of-group-element-plane-left-elementgroupname-x1-y1-x2-y2" title="Permalink to this heading">#</a></h3>
+<h3>of.group.element.plane.left elementgroupname x1 y1 x2 y2<a class="headerlink" href="#of-group-element-plane-left-elementgroupname-x1-y1-x2-y2" title="Link to this heading">#</a></h3>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>of.group.element. .left ‘slope’ 0.0 0.0 1.0 2.7
 </pre></div>
 </div>
 </section>
 <section id="of-group-element-plane-right-elementgroupname-x1-y1-x2-y2">
-<h3>of.group.element.plane.right elementgroupname x1 y1 x2 y2<a class="headerlink" href="#of-group-element-plane-right-elementgroupname-x1-y1-x2-y2" title="Permalink to this heading">#</a></h3>
+<h3>of.group.element.plane.right elementgroupname x1 y1 x2 y2<a class="headerlink" href="#of-group-element-plane-right-elementgroupname-x1-y1-x2-y2" title="Link to this heading">#</a></h3>
 </section>
 <section id="of-group-element-bool-union-elementgroupnewname-elementgroupnamea-elementgroupnameb">
-<h3>of.group.element.bool.union elementgroupnewname elementgroupnamea elementgroupnameb<a class="headerlink" href="#of-group-element-bool-union-elementgroupnewname-elementgroupnamea-elementgroupnameb" title="Permalink to this heading">#</a></h3>
+<h3>of.group.element.bool.union elementgroupnewname elementgroupnamea elementgroupnameb<a class="headerlink" href="#of-group-element-bool-union-elementgroupnewname-elementgroupnamea-elementgroupnameb" title="Link to this heading">#</a></h3>
 </section>
 <section id="of-group-element-bool-intersect-elementgroupnewname-elementgroupnamea-elementgroupnameb">
-<h3>of.group. element.bool.intersect elementgroupnewname elementgroupnamea elementgroupnameb<a class="headerlink" href="#of-group-element-bool-intersect-elementgroupnewname-elementgroupnamea-elementgroupnameb" title="Permalink to this heading">#</a></h3>
+<h3>of.group. element.bool.intersect elementgroupnewname elementgroupnamea elementgroupnameb<a class="headerlink" href="#of-group-element-bool-intersect-elementgroupnewname-elementgroupnamea-elementgroupnameb" title="Link to this heading">#</a></h3>
 </section>
 <section id="of-group-element-bool-subtract-elementgroupnewname-elementgroupnamea-elementgroupnameb-a-b">
-<span id="section-1"></span><h3>of.group. element.bool.subtract elementgroupnewname elementgroupnamea elementgroupnameb a-b<a class="headerlink" href="#of-group-element-bool-subtract-elementgroupnewname-elementgroupnamea-elementgroupnameb-a-b" title="Permalink to this heading">#</a></h3>
+<span id="section-1"></span><h3>of.group. element.bool.subtract elementgroupnewname elementgroupnamea elementgroupnameb a-b<a class="headerlink" href="#of-group-element-bool-subtract-elementgroupnewname-elementgroupnamea-elementgroupnameb-a-b" title="Link to this heading">#</a></h3>
 </section>
 </section>
 <section id="cohesive-element">
-<h2>cohesive element<a class="headerlink" href="#cohesive-element" title="Permalink to this heading">#</a></h2>
+<h2>cohesive element<a class="headerlink" href="#cohesive-element" title="Link to this heading">#</a></h2>
 <section id="of-group-cohelement-square-cohelementgroupname-x1-x2-y1-y2">
-<h3>of.group.cohelement.square cohelementgroupname x1 x2 y1 y2<a class="headerlink" href="#of-group-cohelement-square-cohelementgroupname-x1-x2-y1-y2" title="Permalink to this heading">#</a></h3>
+<h3>of.group.cohelement.square cohelementgroupname x1 x2 y1 y2<a class="headerlink" href="#of-group-cohelement-square-cohelementgroupname-x1-x2-y1-y2" title="Link to this heading">#</a></h3>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>of.group. cohelement.square ‘rock’ -50.0 50.0 -50.0 10.0
 </pre></div>
 </div>
 </section>
 <section id="of-group-cohelement-circle-cohelementgroupname-x1-y1-r-default">
-<h3>of.group.cohelement.circle cohelementgroupname x1 y1 r (default)<a class="headerlink" href="#of-group-cohelement-circle-cohelementgroupname-x1-y1-r-default" title="Permalink to this heading">#</a></h3>
+<h3>of.group.cohelement.circle cohelementgroupname x1 y1 r (default)<a class="headerlink" href="#of-group-cohelement-circle-cohelementgroupname-x1-y1-r-default" title="Link to this heading">#</a></h3>
 </section>
 <section id="of-group-cohelement-circle-outer-cohelementgroupname-x1-y1-r">
-<span id="section-2"></span><h3>of.group.cohelement.circle.outer cohelementgroupname x1 y1 r<a class="headerlink" href="#of-group-cohelement-circle-outer-cohelementgroupname-x1-y1-r" title="Permalink to this heading">#</a></h3>
+<span id="section-2"></span><h3>of.group.cohelement.circle.outer cohelementgroupname x1 y1 r<a class="headerlink" href="#of-group-cohelement-circle-outer-cohelementgroupname-x1-y1-r" title="Link to this heading">#</a></h3>
 </section>
 <section id="of-group-cohelement-circle-on-cohelementgroupname-x1-y1-r">
-<span id="section-3"></span><h3>of.group.cohelement.circle.on cohelementgroupname x1 y1 r<a class="headerlink" href="#of-group-cohelement-circle-on-cohelementgroupname-x1-y1-r" title="Permalink to this heading">#</a></h3>
+<span id="section-3"></span><h3>of.group.cohelement.circle.on cohelementgroupname x1 y1 r<a class="headerlink" href="#of-group-cohelement-circle-on-cohelementgroupname-x1-y1-r" title="Link to this heading">#</a></h3>
 </section>
 <section id="of-group-cohelement-plane-left-cohelementgroupname-x1-y1-x2-y2-default">
-<span id="section-4"></span><h3>of.group.cohelement.plane.left cohelementgroupname x1 y1 x2 y2 (default)<a class="headerlink" href="#of-group-cohelement-plane-left-cohelementgroupname-x1-y1-x2-y2-default" title="Permalink to this heading">#</a></h3>
+<span id="section-4"></span><h3>of.group.cohelement.plane.left cohelementgroupname x1 y1 x2 y2 (default)<a class="headerlink" href="#of-group-cohelement-plane-left-cohelementgroupname-x1-y1-x2-y2-default" title="Link to this heading">#</a></h3>
 </section>
 <section id="of-group-cohelement-plane-right-cohelementgroupname-x1-y1-x2-y2">
-<span id="section-5"></span><h3>of.group.cohelement.plane.right cohelementgroupname x1 y1 x2 y2<a class="headerlink" href="#of-group-cohelement-plane-right-cohelementgroupname-x1-y1-x2-y2" title="Permalink to this heading">#</a></h3>
+<span id="section-5"></span><h3>of.group.cohelement.plane.right cohelementgroupname x1 y1 x2 y2<a class="headerlink" href="#of-group-cohelement-plane-right-cohelementgroupname-x1-y1-x2-y2" title="Link to this heading">#</a></h3>
 </section>
 <section id="of-group-cohelement-plane-cohelementgroupname-x1-y1-x2-y2-default">
-<span id="section-6"></span><h3>of.group.cohelement.plane cohelementgroupname x1 y1 x2 y2 (default)<a class="headerlink" href="#of-group-cohelement-plane-cohelementgroupname-x1-y1-x2-y2-default" title="Permalink to this heading">#</a></h3>
+<span id="section-6"></span><h3>of.group.cohelement.plane cohelementgroupname x1 y1 x2 y2 (default)<a class="headerlink" href="#of-group-cohelement-plane-cohelementgroupname-x1-y1-x2-y2-default" title="Link to this heading">#</a></h3>
 </section>
 <section id="of-group-cohelement-gbm-cohelementgroupname-elementgroupname1-elementgroupname2">
-<span id="section-7"></span><h3>of.group.cohelement.gbm cohelementgroupname elementgroupname1 elementgroupname2<a class="headerlink" href="#of-group-cohelement-gbm-cohelementgroupname-elementgroupname1-elementgroupname2" title="Permalink to this heading">#</a></h3>
+<span id="section-7"></span><h3>of.group.cohelement.gbm cohelementgroupname elementgroupname1 elementgroupname2<a class="headerlink" href="#of-group-cohelement-gbm-cohelementgroupname-elementgroupname1-elementgroupname2" title="Link to this heading">#</a></h3>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">of</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">cohelement</span><span class="o">.</span><span class="n">gbm</span> <span class="s1">&#39;qtz-qtz&#39;</span> <span class="s1">&#39;qtz&#39;</span> <span class="s1">&#39;qtz&#39;</span> <span class="c1"># quartz group</span>
 </pre></div>
 </div>
 </section>
 <section id="of-group-cohelement-dfn-cohelementgroupname-dfnname">
-<h3>of.group.cohelement.dfn cohelementgroupname dfnname<a class="headerlink" href="#of-group-cohelement-dfn-cohelementgroupname-dfnname" title="Permalink to this heading">#</a></h3>
+<h3>of.group.cohelement.dfn cohelementgroupname dfnname<a class="headerlink" href="#of-group-cohelement-dfn-cohelementgroupname-dfnname" title="Link to this heading">#</a></h3>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">of</span><span class="o">.</span><span class="n">group</span><span class="o">.</span><span class="n">cohelement</span><span class="o">.</span><span class="n">dfn</span> <span class="s1">&#39;dfn1&#39;</span> <span class="s1">&#39;dfn1&#39;</span>
 </pre></div>
 </div>
 </section>
 <section id="of-group-cohelement-bool-union-cohelementgroupnewname-cohelementgroupnamea-cohelementgroupnameb">
-<h3>of.group.cohelement.bool.union cohelementgroupnewname cohelementgroupnamea cohelementgroupnameb<a class="headerlink" href="#of-group-cohelement-bool-union-cohelementgroupnewname-cohelementgroupnamea-cohelementgroupnameb" title="Permalink to this heading">#</a></h3>
+<h3>of.group.cohelement.bool.union cohelementgroupnewname cohelementgroupnamea cohelementgroupnameb<a class="headerlink" href="#of-group-cohelement-bool-union-cohelementgroupnewname-cohelementgroupnamea-cohelementgroupnameb" title="Link to this heading">#</a></h3>
 </section>
 <section id="of-group-cohelement-bool-intersect-cohelementgroupnewname-cohelementgroupnamea-cohelementgroupnameb">
-<span id="section-8"></span><h3>of.group. cohelement.bool.intersect cohelementgroupnewname cohelementgroupnamea cohelementgroupnameb<a class="headerlink" href="#of-group-cohelement-bool-intersect-cohelementgroupnewname-cohelementgroupnamea-cohelementgroupnameb" title="Permalink to this heading">#</a></h3>
+<span id="section-8"></span><h3>of.group. cohelement.bool.intersect cohelementgroupnewname cohelementgroupnamea cohelementgroupnameb<a class="headerlink" href="#of-group-cohelement-bool-intersect-cohelementgroupnewname-cohelementgroupnamea-cohelementgroupnameb" title="Link to this heading">#</a></h3>
 </section>
 <section id="of-group-cohelement-bool-subtract-cohelementgroupnewname-cohelementgroupnamea-elementgroupnameb-a-b">
-<span id="section-9"></span><h3>of.group. cohelement.bool.subtract cohelementgroupnewname cohelementgroupnamea elementgroupnameb a-b<a class="headerlink" href="#of-group-cohelement-bool-subtract-cohelementgroupnewname-cohelementgroupnamea-elementgroupnameb-a-b" title="Permalink to this heading">#</a></h3>
+<span id="section-9"></span><h3>of.group. cohelement.bool.subtract cohelementgroupnewname cohelementgroupnamea elementgroupnameb a-b<a class="headerlink" href="#of-group-cohelement-bool-subtract-cohelementgroupnewname-cohelementgroupnamea-elementgroupnameb-a-b" title="Link to this heading">#</a></h3>
 </section>
 </section>
 </section>
 <section id="boundary">
-<h1>boundary<a class="headerlink" href="#boundary" title="Permalink to this heading">#</a></h1>
+<h1>boundary<a class="headerlink" href="#boundary" title="Link to this heading">#</a></h1>
 <section id="nodal-1">
-<span id="id2"></span><h2>nodal<a class="headerlink" href="#nodal-1" title="Permalink to this heading">#</a></h2>
+<span id="id2"></span><h2>nodal<a class="headerlink" href="#nodal-1" title="Link to this heading">#</a></h2>
 <section id="of-boundary-nodal-force-nodalgroupname-xy-force-x-force-y">
-<h3>of.boundary.nodal.force nodalgroupname xy force_x force_y<a class="headerlink" href="#of-boundary-nodal-force-nodalgroupname-xy-force-x-force-y" title="Permalink to this heading">#</a></h3>
+<h3>of.boundary.nodal.force nodalgroupname xy force_x force_y<a class="headerlink" href="#of-boundary-nodal-force-nodalgroupname-xy-force-x-force-y" title="Link to this heading">#</a></h3>
 <p><strong>meaning</strong>: assign force boundary to nodal groups</p>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>of.boundary.nodal.force ‘rock’ xy -50.0 27.0
@@ -963,21 +1375,21 @@ of.boundary.nodal.force ‘rock’ y 27.0
 </div>
 </section>
 <section id="of-boundary-nodal-velocity-nodalgroupname-xy-vel-x-vel-y">
-<h3>of.boundary.nodal.velocity nodalgroupname xy vel_x vel_y<a class="headerlink" href="#of-boundary-nodal-velocity-nodalgroupname-xy-vel-x-vel-y" title="Permalink to this heading">#</a></h3>
+<h3>of.boundary.nodal.velocity nodalgroupname xy vel_x vel_y<a class="headerlink" href="#of-boundary-nodal-velocity-nodalgroupname-xy-vel-x-vel-y" title="Link to this heading">#</a></h3>
 <p><strong>meaning</strong>: assign normal velocity boundary to nodal groups (in local
 coords)</p>
 </section>
 <section id="of-boundary-nodal-inivelocity-nodalgroupname-xy-vel-x-vel-y">
-<h3>of.boundary.nodal.inivelocity nodalgroupname xy vel_x vel_y<a class="headerlink" href="#of-boundary-nodal-inivelocity-nodalgroupname-xy-vel-x-vel-y" title="Permalink to this heading">#</a></h3>
+<h3>of.boundary.nodal.inivelocity nodalgroupname xy vel_x vel_y<a class="headerlink" href="#of-boundary-nodal-inivelocity-nodalgroupname-xy-vel-x-vel-y" title="Link to this heading">#</a></h3>
 <p><strong>meaning</strong>: assign initial velocity boundary to nodal groups (in local
 coords)</p>
 </section>
 <section id="of-boundary-nodal-acceleration-nodalgroupname-xy-acc-x-acc-y">
-<h3>of.boundary.nodal.acceleration nodalgroupname xy acc_x acc_y<a class="headerlink" href="#of-boundary-nodal-acceleration-nodalgroupname-xy-acc-x-acc-y" title="Permalink to this heading">#</a></h3>
+<h3>of.boundary.nodal.acceleration nodalgroupname xy acc_x acc_y<a class="headerlink" href="#of-boundary-nodal-acceleration-nodalgroupname-xy-acc-x-acc-y" title="Link to this heading">#</a></h3>
 <p><strong>meaning</strong>: assign aceleration boundary to nodal groups (in local coords)</p>
 </section>
 <section id="of-boundary-nodal-viscous-nodalgroupnamexy-viscous-x-viscous-y">
-<h3>of.boundary.nodal.viscous nodalgroupnamexy viscous_x viscous_y<a class="headerlink" href="#of-boundary-nodal-viscous-nodalgroupnamexy-viscous-x-viscous-y" title="Permalink to this heading">#</a></h3>
+<h3>of.boundary.nodal.viscous nodalgroupnamexy viscous_x viscous_y<a class="headerlink" href="#of-boundary-nodal-viscous-nodalgroupnamexy-viscous-x-viscous-y" title="Link to this heading">#</a></h3>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>of.boundary.nodal.viscous ‘rock’ xy
 of.boundary.nodal.viscous ‘rock’ x
@@ -986,19 +1398,19 @@ of.boundary.nodal.viscous ‘rock’ y
 </div>
 </section>
 <section id="of-boundary-nodal-viscous-nodalgroupnamexy-viscous-x-viscous-y-1">
-<span id="id3"></span><h3>of.boundary.nodal.viscous nodalgroupnamexy viscous_x viscous_y<a class="headerlink" href="#of-boundary-nodal-viscous-nodalgroupnamexy-viscous-x-viscous-y-1" title="Permalink to this heading">#</a></h3>
+<span id="id3"></span><h3>of.boundary.nodal.viscous nodalgroupnamexy viscous_x viscous_y<a class="headerlink" href="#of-boundary-nodal-viscous-nodalgroupnamexy-viscous-x-viscous-y-1" title="Link to this heading">#</a></h3>
 </section>
 </section>
 <section id="nodal-local-edge">
-<h2>nodal local edge<a class="headerlink" href="#nodal-local-edge" title="Permalink to this heading">#</a></h2>
+<h2>nodal local edge<a class="headerlink" href="#nodal-local-edge" title="Link to this heading">#</a></h2>
 <section id="of-boundary-nodal-force-local-nodalgroupname-xy-force-normal-force-shear">
-<h3>of.boundary.nodal.force.local nodalgroupname xy force_normal force_shear<a class="headerlink" href="#of-boundary-nodal-force-local-nodalgroupname-xy-force-normal-force-shear" title="Permalink to this heading">#</a></h3>
+<h3>of.boundary.nodal.force.local nodalgroupname xy force_normal force_shear<a class="headerlink" href="#of-boundary-nodal-force-local-nodalgroupname-xy-force-normal-force-shear" title="Link to this heading">#</a></h3>
 </section>
 <section id="of-boundary-nodal-velocity-local-nodalgroupname-xy-vel-normal-vel-shear">
-<h3>of.boundary.nodal.velocity.local nodalgroupname xy vel_ normal vel_ shear<a class="headerlink" href="#of-boundary-nodal-velocity-local-nodalgroupname-xy-vel-normal-vel-shear" title="Permalink to this heading">#</a></h3>
+<h3>of.boundary.nodal.velocity.local nodalgroupname xy vel_ normal vel_ shear<a class="headerlink" href="#of-boundary-nodal-velocity-local-nodalgroupname-xy-vel-normal-vel-shear" title="Link to this heading">#</a></h3>
 </section>
 <section id="of-boundary-nodal-acceleration-local-nodalgroupname-xy-acc-normal-acc-shear">
-<h3>of.boundary.nodal.acceleration.local nodalgroupname xy acc_ normal acc_ shear<a class="headerlink" href="#of-boundary-nodal-acceleration-local-nodalgroupname-xy-acc-normal-acc-shear" title="Permalink to this heading">#</a></h3>
+<h3>of.boundary.nodal.acceleration.local nodalgroupname xy acc_ normal acc_ shear<a class="headerlink" href="#of-boundary-nodal-acceleration-local-nodalgroupname-xy-acc-normal-acc-shear" title="Link to this heading">#</a></h3>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>of.boundary.nodal.force.local ‘rock’ xy -50.0 27.0
 of.boundary.nodal.force.local ‘rock’ x -50.0
@@ -1007,13 +1419,13 @@ of.boundary.nodal.force.local ‘rock’ y 27.0
 </div>
 </section>
 <section id="of-boundary-nodal-force-local-table-nodalgroupname-xy-force-normal-force-shear-tablename">
-<h3>of.boundary.nodal.force.local.table nodalgroupname xy force_normal force_shear tablename<a class="headerlink" href="#of-boundary-nodal-force-local-table-nodalgroupname-xy-force-normal-force-shear-tablename" title="Permalink to this heading">#</a></h3>
+<h3>of.boundary.nodal.force.local.table nodalgroupname xy force_normal force_shear tablename<a class="headerlink" href="#of-boundary-nodal-force-local-table-nodalgroupname-xy-force-normal-force-shear-tablename" title="Link to this heading">#</a></h3>
 </section>
 <section id="of-boundary-nodal-velocity-table-nodalgroupname-xy-vel-normal-vel-shear-tablename">
-<h3>of.boundary.nodal.velocity. table nodalgroupname xy vel_ normal vel_ shear tablename<a class="headerlink" href="#of-boundary-nodal-velocity-table-nodalgroupname-xy-vel-normal-vel-shear-tablename" title="Permalink to this heading">#</a></h3>
+<h3>of.boundary.nodal.velocity. table nodalgroupname xy vel_ normal vel_ shear tablename<a class="headerlink" href="#of-boundary-nodal-velocity-table-nodalgroupname-xy-vel-normal-vel-shear-tablename" title="Link to this heading">#</a></h3>
 </section>
 <section id="of-boundary-nodal-acceleration-table-nodalgroupname-xy-acc-normal-acc-shear-tablename">
-<h3>of.boundary.nodal.acceleration. table nodalgroupname xy acc_ normal acc_ shear tablename<a class="headerlink" href="#of-boundary-nodal-acceleration-table-nodalgroupname-xy-acc-normal-acc-shear-tablename" title="Permalink to this heading">#</a></h3>
+<h3>of.boundary.nodal.acceleration. table nodalgroupname xy acc_ normal acc_ shear tablename<a class="headerlink" href="#of-boundary-nodal-acceleration-table-nodalgroupname-xy-acc-normal-acc-shear-tablename" title="Link to this heading">#</a></h3>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>of.boundary.nodal.force.local ‘rock’ xy -50.0 27.0
 
@@ -1025,9 +1437,9 @@ of.boundary.nodal.force.local ‘rock’ y 27.0
 </section>
 </section>
 <section id="nodal-table">
-<h2>nodal table<a class="headerlink" href="#nodal-table" title="Permalink to this heading">#</a></h2>
+<h2>nodal table<a class="headerlink" href="#nodal-table" title="Link to this heading">#</a></h2>
 <section id="of-boundary-nodal-force-table-nodalgroupname-xy-force-x-force-y-tablename">
-<h3>of.boundary.nodal.force.table nodalgroupname xy force_x force_y tablename<a class="headerlink" href="#of-boundary-nodal-force-table-nodalgroupname-xy-force-x-force-y-tablename" title="Permalink to this heading">#</a></h3>
+<h3>of.boundary.nodal.force.table nodalgroupname xy force_x force_y tablename<a class="headerlink" href="#of-boundary-nodal-force-table-nodalgroupname-xy-force-x-force-y-tablename" title="Link to this heading">#</a></h3>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>of.boundary.nodal.force.table ‘rock’ xy -50.0 27.0 blast
 of.boundary.nodal.force.local ‘rock’ x -50.0
@@ -1036,16 +1448,16 @@ of.boundary.nodal.force.local ‘rock’ y 27.0
 </div>
 </section>
 <section id="of-boundary-nodal-velocity-table-nodalgroupname-xy-vel-x-vel-y-tablename-tablename">
-<h3>of.boundary.nodal.velocity.table nodalgroupname xy vel_x vel_y tablename tablename<a class="headerlink" href="#of-boundary-nodal-velocity-table-nodalgroupname-xy-vel-x-vel-y-tablename-tablename" title="Permalink to this heading">#</a></h3>
+<h3>of.boundary.nodal.velocity.table nodalgroupname xy vel_x vel_y tablename tablename<a class="headerlink" href="#of-boundary-nodal-velocity-table-nodalgroupname-xy-vel-x-vel-y-tablename-tablename" title="Link to this heading">#</a></h3>
 </section>
 <section id="of-boundary-nodal-acceleration-table-nodalgroupname-xy-acc-x-acc-y-tablename-tablename">
-<h3>of.boundary.nodal.acceleration.table nodalgroupname xy acc_x acc_y tablename tablename<a class="headerlink" href="#of-boundary-nodal-acceleration-table-nodalgroupname-xy-acc-x-acc-y-tablename-tablename" title="Permalink to this heading">#</a></h3>
+<h3>of.boundary.nodal.acceleration.table nodalgroupname xy acc_x acc_y tablename tablename<a class="headerlink" href="#of-boundary-nodal-acceleration-table-nodalgroupname-xy-acc-x-acc-y-tablename-tablename" title="Link to this heading">#</a></h3>
 </section>
 <section id="of-boundary-pressure-normal-nodalgroupname-value">
-<span id="section-10"></span><h3>of.boundary.pressure.normal nodalgroupname value<a class="headerlink" href="#of-boundary-pressure-normal-nodalgroupname-value" title="Permalink to this heading">#</a></h3>
+<span id="section-10"></span><h3>of.boundary.pressure.normal nodalgroupname value<a class="headerlink" href="#of-boundary-pressure-normal-nodalgroupname-value" title="Link to this heading">#</a></h3>
 </section>
 <section id="of-boundary-pressure-shear-nodalgroupname-value">
-<h3>of.boundary.pressure.shear nodalgroupname value<a class="headerlink" href="#of-boundary-pressure-shear-nodalgroupname-value" title="Permalink to this heading">#</a></h3>
+<h3>of.boundary.pressure.shear nodalgroupname value<a class="headerlink" href="#of-boundary-pressure-shear-nodalgroupname-value" title="Link to this heading">#</a></h3>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>of.boundary.pressure .normal‘rock’ -50.0
 of.boundary.pressure.shear ‘rock’ -50.0
@@ -1053,10 +1465,10 @@ of.boundary.pressure.shear ‘rock’ -50.0
 </div>
 </section>
 <section id="of-boundary-pressure-normal-table-nodalgroupname-value">
-<h3>of.boundary.pressure.normal.table nodalgroupname value<a class="headerlink" href="#of-boundary-pressure-normal-table-nodalgroupname-value" title="Permalink to this heading">#</a></h3>
+<h3>of.boundary.pressure.normal.table nodalgroupname value<a class="headerlink" href="#of-boundary-pressure-normal-table-nodalgroupname-value" title="Link to this heading">#</a></h3>
 </section>
 <section id="of-boundary-pressure-shear-table-nodalgroupname-value">
-<h3>of.boundary.pressure.shear.table nodalgroupname value<a class="headerlink" href="#of-boundary-pressure-shear-table-nodalgroupname-value" title="Permalink to this heading">#</a></h3>
+<h3>of.boundary.pressure.shear.table nodalgroupname value<a class="headerlink" href="#of-boundary-pressure-shear-table-nodalgroupname-value" title="Link to this heading">#</a></h3>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>of.boundary.pressure.normal.table ‘rock’ -50.0 gas
 </pre></div>
@@ -1064,39 +1476,39 @@ of.boundary.pressure.shear ‘rock’ -50.0
 </section>
 </section>
 <section id="hydro">
-<h2>hydro<a class="headerlink" href="#hydro" title="Permalink to this heading">#</a></h2>
+<h2>hydro<a class="headerlink" href="#hydro" title="Link to this heading">#</a></h2>
 <section id="of-boundary-hydro-porepressure-nodalgroup-p-p-x-p-y">
-<h3>of.boundary.hydro.porepressure nodalgroup p p_x p_y<a class="headerlink" href="#of-boundary-hydro-porepressure-nodalgroup-p-p-x-p-y" title="Permalink to this heading">#</a></h3>
+<h3>of.boundary.hydro.porepressure nodalgroup p p_x p_y<a class="headerlink" href="#of-boundary-hydro-porepressure-nodalgroup-p-p-x-p-y" title="Link to this heading">#</a></h3>
 </section>
 <section id="of-boundary-hydro-waterlevel-nodalgroup-water-y-initial-p">
-<h3>of.boundary.hydro.waterlevel nodalgroup water_y initial_p<a class="headerlink" href="#of-boundary-hydro-waterlevel-nodalgroup-water-y-initial-p" title="Permalink to this heading">#</a></h3>
+<h3>of.boundary.hydro.waterlevel nodalgroup water_y initial_p<a class="headerlink" href="#of-boundary-hydro-waterlevel-nodalgroup-water-y-initial-p" title="Link to this heading">#</a></h3>
 </section>
 <section id="of-boundary-hydro-pressure-nodalgroup-value">
-<h3>of.boundary.hydro.pressure nodalgroup value<a class="headerlink" href="#of-boundary-hydro-pressure-nodalgroup-value" title="Permalink to this heading">#</a></h3>
+<h3>of.boundary.hydro.pressure nodalgroup value<a class="headerlink" href="#of-boundary-hydro-pressure-nodalgroup-value" title="Link to this heading">#</a></h3>
 </section>
 <section id="of-boundary-hydro-pressure-table-nodalgroup-value-tablename">
-<h3>of.boundary.hydro.pressure.table nodalgroup value tablename<a class="headerlink" href="#of-boundary-hydro-pressure-table-nodalgroup-value-tablename" title="Permalink to this heading">#</a></h3>
+<h3>of.boundary.hydro.pressure.table nodalgroup value tablename<a class="headerlink" href="#of-boundary-hydro-pressure-table-nodalgroup-value-tablename" title="Link to this heading">#</a></h3>
 </section>
 <section id="of-boundary-hydro-flow-nodalgroup-flow-rate-value-initial-p">
-<h3>of.boundary.hydro.flow nodalgroup flow_rate_value initial_p<a class="headerlink" href="#of-boundary-hydro-flow-nodalgroup-flow-rate-value-initial-p" title="Permalink to this heading">#</a></h3>
+<h3>of.boundary.hydro.flow nodalgroup flow_rate_value initial_p<a class="headerlink" href="#of-boundary-hydro-flow-nodalgroup-flow-rate-value-initial-p" title="Link to this heading">#</a></h3>
 </section>
 <section id="of-boundary-hydro-flow-table-nodalgroup-value-value2-tablename">
-<h3>of.boundary.hydro.flow.table nodalgroup value value2 tablename<a class="headerlink" href="#of-boundary-hydro-flow-table-nodalgroup-value-value2-tablename" title="Permalink to this heading">#</a></h3>
+<h3>of.boundary.hydro.flow.table nodalgroup value value2 tablename<a class="headerlink" href="#of-boundary-hydro-flow-table-nodalgroup-value-value2-tablename" title="Link to this heading">#</a></h3>
 </section>
 <section id="of-boundary-hydro-impermeable-nodalgroup">
-<h3>of.boundary.hydro.impermeable nodalgroup<a class="headerlink" href="#of-boundary-hydro-impermeable-nodalgroup" title="Permalink to this heading">#</a></h3>
+<h3>of.boundary.hydro.impermeable nodalgroup<a class="headerlink" href="#of-boundary-hydro-impermeable-nodalgroup" title="Link to this heading">#</a></h3>
 </section>
 </section>
 <section id="blast">
-<h2>blast<a class="headerlink" href="#blast" title="Permalink to this heading">#</a></h2>
+<h2>blast<a class="headerlink" href="#blast" title="Link to this heading">#</a></h2>
 <section id="of-boundary-blast-nodalgroup-value-tablename">
-<h3>of.boundary.blast nodalgroup value tablename<a class="headerlink" href="#of-boundary-blast-nodalgroup-value-tablename" title="Permalink to this heading">#</a></h3>
+<h3>of.boundary.blast nodalgroup value tablename<a class="headerlink" href="#of-boundary-blast-nodalgroup-value-tablename" title="Link to this heading">#</a></h3>
 </section>
 </section>
 <section id="id4">
-<h2>element<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
+<h2>element<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
 <section id="of-boundary-element-stress-elementgroupname-sxx-sxy-syy">
-<h3>of.boundary.element.stress elementgroupname sxx sxy syy<a class="headerlink" href="#of-boundary-element-stress-elementgroupname-sxx-sxy-syy" title="Permalink to this heading">#</a></h3>
+<h3>of.boundary.element.stress elementgroupname sxx sxy syy<a class="headerlink" href="#of-boundary-element-stress-elementgroupname-sxx-sxy-syy" title="Link to this heading">#</a></h3>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>of.boundary.element.stress ‘all’ -20e6 2e6 -2e6
 of.boundary.element.stress.xgrad elementgroupname sxx.x sxy.x syy.x
@@ -1105,26 +1517,26 @@ of.boundary.element.stress.ygrad elementgroupname sxx.y sxy.y syy.y
 </div>
 </section>
 <section id="of-boundary-excavation-elementgroupname">
-<h3>of.boundary.excavation elementgroupname<a class="headerlink" href="#of-boundary-excavation-elementgroupname" title="Permalink to this heading">#</a></h3>
+<h3>of.boundary.excavation elementgroupname<a class="headerlink" href="#of-boundary-excavation-elementgroupname" title="Link to this heading">#</a></h3>
 </section>
 <section id="of-boundary-uncontact-elementgroupname">
-<h3>of.boundary.uncontact elementgroupname<a class="headerlink" href="#of-boundary-uncontact-elementgroupname" title="Permalink to this heading">#</a></h3>
+<h3>of.boundary.uncontact elementgroupname<a class="headerlink" href="#of-boundary-uncontact-elementgroupname" title="Link to this heading">#</a></h3>
 </section>
 </section>
 <section id="thermal">
-<h2>thermal<a class="headerlink" href="#thermal" title="Permalink to this heading">#</a></h2>
+<h2>thermal<a class="headerlink" href="#thermal" title="Link to this heading">#</a></h2>
 <section id="of-boundary-thermal-t0-nodalgroupvalue">
-<h3>of.boundary.thermal.t0 nodalgroupvalue<a class="headerlink" href="#of-boundary-thermal-t0-nodalgroupvalue" title="Permalink to this heading">#</a></h3>
+<h3>of.boundary.thermal.t0 nodalgroupvalue<a class="headerlink" href="#of-boundary-thermal-t0-nodalgroupvalue" title="Link to this heading">#</a></h3>
 </section>
 <section id="of-boundary-thermal-temperature-nodalgroupvalue">
-<h3>of.boundary.thermal.temperature nodalgroupvalue<a class="headerlink" href="#of-boundary-thermal-temperature-nodalgroupvalue" title="Permalink to this heading">#</a></h3>
+<h3>of.boundary.thermal.temperature nodalgroupvalue<a class="headerlink" href="#of-boundary-thermal-temperature-nodalgroupvalue" title="Link to this heading">#</a></h3>
 </section>
 </section>
 </section>
 <section id="material">
-<span id="section-15"></span><h1>material<a class="headerlink" href="#material" title="Permalink to this heading">#</a></h1>
+<span id="section-15"></span><h1>material<a class="headerlink" href="#material" title="Link to this heading">#</a></h1>
 <section id="of-mat-element-elementgroupname-all-modelname-p1-p2-p3">
-<h2>of.mat.element elementgroupname(all) modelname p1 p2 p3 …<a class="headerlink" href="#of-mat-element-elementgroupname-all-modelname-p1-p2-p3" title="Permalink to this heading">#</a></h2>
+<h2>of.mat.element elementgroupname(all) modelname p1 p2 p3 …<a class="headerlink" href="#of-mat-element-elementgroupname-all-modelname-p1-p2-p3" title="Link to this heading">#</a></h2>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>of.mat.element ‘all’ elastic den 2500 e 40e9 v 0.2
 of.mat.element ‘rock’ mc den 2500 e 40e9 v 0.2 ten 10e6 coh 30e6 fric 0.3
@@ -1132,52 +1544,52 @@ of.mat.element ‘rock’ mc den 2500 e 40e9 v 0.2 ten 10e6 coh 30e6 fric 0.3
 </div>
 </section>
 <section id="of-mat-particle-elementgroupname-all-modelname-p1-p2-p3">
-<h2>of.mat.particle elementgroupname(all) modelname p1 p2 p3 …<a class="headerlink" href="#of-mat-particle-elementgroupname-all-modelname-p1-p2-p3" title="Permalink to this heading">#</a></h2>
+<h2>of.mat.particle elementgroupname(all) modelname p1 p2 p3 …<a class="headerlink" href="#of-mat-particle-elementgroupname-all-modelname-p1-p2-p3" title="Link to this heading">#</a></h2>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>of.mat.particle ‘all’ rigid den 2500
 </pre></div>
 </div>
 </section>
 <section id="of-mat-cohesive-cohelementgroupname-all-modelname-p1-p2-p3">
-<h2>of.mat.cohesive cohelementgroupname(all) modelname p1 p2 p3 …<a class="headerlink" href="#of-mat-cohesive-cohelementgroupname-all-modelname-p1-p2-p3" title="Permalink to this heading">#</a></h2>
+<h2>of.mat.cohesive cohelementgroupname(all) modelname p1 p2 p3 …<a class="headerlink" href="#of-mat-cohesive-cohelementgroupname-all-modelname-p1-p2-p3" title="Link to this heading">#</a></h2>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>of.mat.cohesive ‘all’ em pn 1e10 pt 0.5e10 ten 30e6 coh 30e6 fric 0.3 gi 100 gii 300 (pn pt ten coh fri gi gii)
 </pre></div>
 </div>
 </section>
 <section id="of-mat-cohesive-rock-em-het-power-0-5-dip-35-ten-30e6-3e6-coh-30e6-3e6-fric-0-3-0-gi-100-20-gii-300-30-power-dip-mean-pn-dev-pn-mean-pt-dev-pt-mean-ten-dev-ten-mean-coh-dev-coh-mean-fri-dev-fri-mean-gi-dev-gi-mean-gii-dev-gii">
-<h2>of.mat. cohesive ‘rock’ em_het power 0.5 dip 35 ten 30e6 3e6 coh 30e6 3e6 fric 0.3 0 gi 100 20 gii 300 30 (power, dip, mean pn, dev pn, mean pt, dev pt, mean ten, dev ten, mean coh, dev coh, mean fri, dev fri, mean gi, dev gi, mean gii, dev gii)<a class="headerlink" href="#of-mat-cohesive-rock-em-het-power-0-5-dip-35-ten-30e6-3e6-coh-30e6-3e6-fric-0-3-0-gi-100-20-gii-300-30-power-dip-mean-pn-dev-pn-mean-pt-dev-pt-mean-ten-dev-ten-mean-coh-dev-coh-mean-fri-dev-fri-mean-gi-dev-gi-mean-gii-dev-gii" title="Permalink to this heading">#</a></h2>
+<h2>of.mat. cohesive ‘rock’ em_het power 0.5 dip 35 ten 30e6 3e6 coh 30e6 3e6 fric 0.3 0 gi 100 20 gii 300 30 (power, dip, mean pn, dev pn, mean pt, dev pt, mean ten, dev ten, mean coh, dev coh, mean fri, dev fri, mean gi, dev gi, mean gii, dev gii)<a class="headerlink" href="#of-mat-cohesive-rock-em-het-power-0-5-dip-35-ten-30e6-3e6-coh-30e6-3e6-fric-0-3-0-gi-100-20-gii-300-30-power-dip-mean-pn-dev-pn-mean-pt-dev-pt-mean-ten-dev-ten-mean-coh-dev-coh-mean-fri-dev-fri-mean-gi-dev-gi-mean-gii-dev-gii" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-mat-contact-elementgroupname1-elementgroupname2-all-modelname-p1-p2-p3">
-<span id="section-16"></span><h2>of.mat.contact elementgroupname1 elementgroupname2(all) modelname p1 p2 p3 …<a class="headerlink" href="#of-mat-contact-elementgroupname1-elementgroupname2-all-modelname-p1-p2-p3" title="Permalink to this heading">#</a></h2>
+<span id="section-16"></span><h2>of.mat.contact elementgroupname1 elementgroupname2(all) modelname p1 p2 p3 …<a class="headerlink" href="#of-mat-contact-elementgroupname1-elementgroupname2-all-modelname-p1-p2-p3" title="Link to this heading">#</a></h2>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>of.mat.contact ‘all’ mc kn 2e10 ks 1e10 fric 0.3
 of.mat.contact ‘rock’ ‘plate’ mc kn 2e10 ks 1e10 fric 0.3 kn ks
 </pre></div>
 </div>
 <section id="of-mat-fluid-den-bulk-viscousity-cohesion">
-<h3>of.mat.fluid den bulk viscousity cohesion<a class="headerlink" href="#of-mat-fluid-den-bulk-viscousity-cohesion" title="Permalink to this heading">#</a></h3>
+<h3>of.mat.fluid den bulk viscousity cohesion<a class="headerlink" href="#of-mat-fluid-den-bulk-viscousity-cohesion" title="Link to this heading">#</a></h3>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">of</span><span class="o">.</span><span class="n">mat</span><span class="o">.</span><span class="n">fluid</span> <span class="n">den</span> <span class="mf">1000.0</span> <span class="n">k</span> <span class="mf">3e8</span> <span class="n">viscosity</span> <span class="mf">1e6</span> <span class="n">cohesion</span> <span class="mf">3e6</span>
 </pre></div>
 </div>
 </section>
 <section id="of-mat-fluid-matrix-elementgroupname-all-permeability-m-alpha">
-<h3>of.mat.fluid.matrix elementgroupname(all) permeability m alpha<a class="headerlink" href="#of-mat-fluid-matrix-elementgroupname-all-permeability-m-alpha" title="Permalink to this heading">#</a></h3>
+<h3>of.mat.fluid.matrix elementgroupname(all) permeability m alpha<a class="headerlink" href="#of-mat-fluid-matrix-elementgroupname-all-permeability-m-alpha" title="Link to this heading">#</a></h3>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">of</span><span class="o">.</span><span class="n">mat</span><span class="o">.</span><span class="n">fluid</span><span class="o">.</span><span class="n">matrix</span> <span class="s1">&#39;all&#39;</span> <span class="n">permeability</span> <span class="mf">1.0e-8</span> <span class="n">biot_k</span> <span class="mf">22e9</span> <span class="n">biot_c</span> <span class="mf">0.1</span>
 </pre></div>
 </div>
 </section>
 <section id="of-mat-fluid-fracture-cohelementgroupname-all-aperature-0-apreature-min-para-exp-para-b">
-<h3>of.mat.fluid.fracture cohelementgroupname(all) aperature_0 apreature_min para_exp para_b<a class="headerlink" href="#of-mat-fluid-fracture-cohelementgroupname-all-aperature-0-apreature-min-para-exp-para-b" title="Permalink to this heading">#</a></h3>
+<h3>of.mat.fluid.fracture cohelementgroupname(all) aperature_0 apreature_min para_exp para_b<a class="headerlink" href="#of-mat-fluid-fracture-cohelementgroupname-all-aperature-0-apreature-min-para-exp-para-b" title="Link to this heading">#</a></h3>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">of</span><span class="o">.</span><span class="n">mat</span><span class="o">.</span><span class="n">fluid</span><span class="o">.</span><span class="n">fracture</span> <span class="s1">&#39;joint&#39;</span> <span class="n">a0</span> <span class="mf">5e-4</span> <span class="n">power</span> <span class="mf">3.0</span> <span class="n">b</span> <span class="mf">1.0</span>
 </pre></div>
 </div>
 </section>
 <section id="of-mat-gas-initial-den-permeability-initial-bulk-constant-b-alpha">
-<h3>of.mat.gas initial_den permeability initial_bulk constant_b alpha<a class="headerlink" href="#of-mat-gas-initial-den-permeability-initial-bulk-constant-b-alpha" title="Permalink to this heading">#</a></h3>
+<h3>of.mat.gas initial_den permeability initial_bulk constant_b alpha<a class="headerlink" href="#of-mat-gas-initial-den-permeability-initial-bulk-constant-b-alpha" title="Link to this heading">#</a></h3>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">of</span><span class="o">.</span><span class="n">mat</span><span class="o">.</span><span class="n">fluid</span><span class="o">.</span><span class="n">fracture</span> <span class="s1">&#39;joint&#39;</span> <span class="n">density0</span> <span class="mf">1.29</span> <span class="n">permiability</span> <span class="mi">200</span> <span class="n">k0</span> <span class="mf">1.01e5</span> <span class="n">b</span>
 <span class="mf">1.0</span> <span class="n">alpha</span> <span class="mf">0.1</span>
@@ -1187,9 +1599,9 @@ of.mat.contact ‘rock’ ‘plate’ mc kn 2e10 ks 1e10 fric 0.3 kn ks
 </section>
 </section>
 <section id="gbm">
-<h1>gbm<a class="headerlink" href="#gbm" title="Permalink to this heading">#</a></h1>
+<h1>gbm<a class="headerlink" href="#gbm" title="Link to this heading">#</a></h1>
 <section id="of-gbm-numberofminerals-m1-name-ratio-m2-name-ratio">
-<h2>of.gbm numberofminerals m1_name ratio m2_name ratio …<a class="headerlink" href="#of-gbm-numberofminerals-m1-name-ratio-m2-name-ratio" title="Permalink to this heading">#</a></h2>
+<h2>of.gbm numberofminerals m1_name ratio m2_name ratio …<a class="headerlink" href="#of-gbm-numberofminerals-m1-name-ratio-m2-name-ratio" title="Link to this heading">#</a></h2>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">of</span><span class="o">.</span><span class="n">gbm</span> <span class="mi">3</span> <span class="s1">&#39;qtz&#39;</span> <span class="mf">0.3</span> <span class="s1">&#39;fel&#39;</span> <span class="mf">0.46</span> <span class="s1">&#39;bio&#39;</span> <span class="mf">0.24</span> <span class="p">(</span><span class="n">area</span> <span class="n">ratio</span><span class="p">)</span>
 </pre></div>
@@ -1197,116 +1609,116 @@ of.mat.contact ‘rock’ ‘plate’ mc kn 2e10 ks 1e10 fric 0.3 kn ks
 </section>
 </section>
 <section id="history">
-<h1>history<a class="headerlink" href="#history" title="Permalink to this heading">#</a></h1>
+<h1>history<a class="headerlink" href="#history" title="Link to this heading">#</a></h1>
 <section id="of-history-nodal-force-id-x1-y1">
-<h2>of.history.nodal.force id x1 y1<a class="headerlink" href="#of-history-nodal-force-id-x1-y1" title="Permalink to this heading">#</a></h2>
+<h2>of.history.nodal.force id x1 y1<a class="headerlink" href="#of-history-nodal-force-id-x1-y1" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-nodal-vel-id-x1-y1">
-<h2>of.history.nodal.vel id x1 y1<a class="headerlink" href="#of-history-nodal-vel-id-x1-y1" title="Permalink to this heading">#</a></h2>
+<h2>of.history.nodal.vel id x1 y1<a class="headerlink" href="#of-history-nodal-vel-id-x1-y1" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-nodal-dis-id-x1-y1">
-<h2>of.history.nodal.dis id x1 y1<a class="headerlink" href="#of-history-nodal-dis-id-x1-y1" title="Permalink to this heading">#</a></h2>
+<h2>of.history.nodal.dis id x1 y1<a class="headerlink" href="#of-history-nodal-dis-id-x1-y1" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-nodal-fluid-pressure-id-x1-y1">
-<h2>of.history.nodal.fluid.pressure id x1 y1<a class="headerlink" href="#of-history-nodal-fluid-pressure-id-x1-y1" title="Permalink to this heading">#</a></h2>
+<h2>of.history.nodal.fluid.pressure id x1 y1<a class="headerlink" href="#of-history-nodal-fluid-pressure-id-x1-y1" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-nodal-fracture-pressure-id-x1-y1">
-<h2>of.history.nodal.fracture.pressure id x1 y1<a class="headerlink" href="#of-history-nodal-fracture-pressure-id-x1-y1" title="Permalink to this heading">#</a></h2>
+<h2>of.history.nodal.fracture.pressure id x1 y1<a class="headerlink" href="#of-history-nodal-fracture-pressure-id-x1-y1" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-nodal-matrix-pressure-id-x1-y1">
-<h2>of.history.nodal.matrix.pressure id x1 y1<a class="headerlink" href="#of-history-nodal-matrix-pressure-id-x1-y1" title="Permalink to this heading">#</a></h2>
+<h2>of.history.nodal.matrix.pressure id x1 y1<a class="headerlink" href="#of-history-nodal-matrix-pressure-id-x1-y1" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-nodal-temperature-id-x1-y1">
-<h2>of.history.nodal.temperature id x1 y1<a class="headerlink" href="#of-history-nodal-temperature-id-x1-y1" title="Permalink to this heading">#</a></h2>
+<h2>of.history.nodal.temperature id x1 y1<a class="headerlink" href="#of-history-nodal-temperature-id-x1-y1" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-nodal-group-force-id-groupname">
-<span id="section-17"></span><h2>of.history.nodal.group.force id groupname<a class="headerlink" href="#of-history-nodal-group-force-id-groupname" title="Permalink to this heading">#</a></h2>
+<span id="section-17"></span><h2>of.history.nodal.group.force id groupname<a class="headerlink" href="#of-history-nodal-group-force-id-groupname" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-nodal-group-vel-id-groupname">
-<h2>of.history.nodal.group.vel id groupname<a class="headerlink" href="#of-history-nodal-group-vel-id-groupname" title="Permalink to this heading">#</a></h2>
+<h2>of.history.nodal.group.vel id groupname<a class="headerlink" href="#of-history-nodal-group-vel-id-groupname" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-nodal-group-dis-id-groupname">
-<h2>of.history.nodal.group.dis id groupname<a class="headerlink" href="#of-history-nodal-group-dis-id-groupname" title="Permalink to this heading">#</a></h2>
+<h2>of.history.nodal.group.dis id groupname<a class="headerlink" href="#of-history-nodal-group-dis-id-groupname" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-nodal-group-fluid-pressure-id-groupname">
-<h2>of.history.nodal.group.fluid.pressure id groupname<a class="headerlink" href="#of-history-nodal-group-fluid-pressure-id-groupname" title="Permalink to this heading">#</a></h2>
+<h2>of.history.nodal.group.fluid.pressure id groupname<a class="headerlink" href="#of-history-nodal-group-fluid-pressure-id-groupname" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-nodal-group-fracture-pressure-id-groupname">
-<h2>of.history.nodal.group.fracture.pressure id groupname<a class="headerlink" href="#of-history-nodal-group-fracture-pressure-id-groupname" title="Permalink to this heading">#</a></h2>
+<h2>of.history.nodal.group.fracture.pressure id groupname<a class="headerlink" href="#of-history-nodal-group-fracture-pressure-id-groupname" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-nodal-group-matrix-pressure-id-groupname">
-<h2>of.history.nodal.group.matrix.pressure id groupname<a class="headerlink" href="#of-history-nodal-group-matrix-pressure-id-groupname" title="Permalink to this heading">#</a></h2>
+<h2>of.history.nodal.group.matrix.pressure id groupname<a class="headerlink" href="#of-history-nodal-group-matrix-pressure-id-groupname" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-nodal-group-temperature-id-groupname">
-<h2>of.history.nodal.group.temperature id groupname<a class="headerlink" href="#of-history-nodal-group-temperature-id-groupname" title="Permalink to this heading">#</a></h2>
+<h2>of.history.nodal.group.temperature id groupname<a class="headerlink" href="#of-history-nodal-group-temperature-id-groupname" title="Link to this heading">#</a></h2>
 <blockquote>
 <div><p>note: average value in this group</p>
 </div></blockquote>
 </section>
 <section id="of-history-element-stress-id-x1-y1">
-<h2>of.history.element.stress id x1 y1<a class="headerlink" href="#of-history-element-stress-id-x1-y1" title="Permalink to this heading">#</a></h2>
+<h2>of.history.element.stress id x1 y1<a class="headerlink" href="#of-history-element-stress-id-x1-y1" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-element-strain-id-x1-y1">
-<h2>of.history.element.strain id x1 y1<a class="headerlink" href="#of-history-element-strain-id-x1-y1" title="Permalink to this heading">#</a></h2>
+<h2>of.history.element.strain id x1 y1<a class="headerlink" href="#of-history-element-strain-id-x1-y1" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-element-strainrate-id-x1-y1">
-<h2>of.history.element.strainrate id x1 y1<a class="headerlink" href="#of-history-element-strainrate-id-x1-y1" title="Permalink to this heading">#</a></h2>
+<h2>of.history.element.strainrate id x1 y1<a class="headerlink" href="#of-history-element-strainrate-id-x1-y1" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-element-group-stress-id-groupname">
-<span id="section-18"></span><h2>of.history.element.group.stress id groupname<a class="headerlink" href="#of-history-element-group-stress-id-groupname" title="Permalink to this heading">#</a></h2>
+<span id="section-18"></span><h2>of.history.element.group.stress id groupname<a class="headerlink" href="#of-history-element-group-stress-id-groupname" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-element-group-strain-id-groupname">
-<h2>of.history.element.group.strain id groupname<a class="headerlink" href="#of-history-element-group-strain-id-groupname" title="Permalink to this heading">#</a></h2>
+<h2>of.history.element.group.strain id groupname<a class="headerlink" href="#of-history-element-group-strain-id-groupname" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-element-group-strainrate-id-groupname">
-<h2>of.history.element.group.strainrate id groupname<a class="headerlink" href="#of-history-element-group-strainrate-id-groupname" title="Permalink to this heading">#</a></h2>
+<h2>of.history.element.group.strainrate id groupname<a class="headerlink" href="#of-history-element-group-strainrate-id-groupname" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-cohelement-dis-id-x1-y1">
-<span id="section-19"></span><h2>of.history.cohelement.dis id x1 y1<a class="headerlink" href="#of-history-cohelement-dis-id-x1-y1" title="Permalink to this heading">#</a></h2>
+<span id="section-19"></span><h2>of.history.cohelement.dis id x1 y1<a class="headerlink" href="#of-history-cohelement-dis-id-x1-y1" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-cohelement-force-id-x1-y1">
-<h2>of.history.cohelement.force id x1 y1<a class="headerlink" href="#of-history-cohelement-force-id-x1-y1" title="Permalink to this heading">#</a></h2>
+<h2>of.history.cohelement.force id x1 y1<a class="headerlink" href="#of-history-cohelement-force-id-x1-y1" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-cohelement-vel-id-x1-y1">
-<h2>of.history.cohelement.vel id x1 y1<a class="headerlink" href="#of-history-cohelement-vel-id-x1-y1" title="Permalink to this heading">#</a></h2>
+<h2>of.history.cohelement.vel id x1 y1<a class="headerlink" href="#of-history-cohelement-vel-id-x1-y1" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-cohelement-shearstrength-id-x1-y1">
-<h2>of.history.cohelement.shearstrength id x1 y1<a class="headerlink" href="#of-history-cohelement-shearstrength-id-x1-y1" title="Permalink to this heading">#</a></h2>
+<h2>of.history.cohelement.shearstrength id x1 y1<a class="headerlink" href="#of-history-cohelement-shearstrength-id-x1-y1" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-cohelement-group-dis-id-groupname">
-<span id="section-20"></span><h2>of.history.cohelement.group.dis id groupname<a class="headerlink" href="#of-history-cohelement-group-dis-id-groupname" title="Permalink to this heading">#</a></h2>
+<span id="section-20"></span><h2>of.history.cohelement.group.dis id groupname<a class="headerlink" href="#of-history-cohelement-group-dis-id-groupname" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-cohelement-group-force-id-groupname">
-<h2>of.history.cohelement.group.force id groupname<a class="headerlink" href="#of-history-cohelement-group-force-id-groupname" title="Permalink to this heading">#</a></h2>
+<h2>of.history.cohelement.group.force id groupname<a class="headerlink" href="#of-history-cohelement-group-force-id-groupname" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-cohelement-group-vel-id-groupname">
-<h2>of.history.cohelement.group.vel id groupname<a class="headerlink" href="#of-history-cohelement-group-vel-id-groupname" title="Permalink to this heading">#</a></h2>
+<h2>of.history.cohelement.group.vel id groupname<a class="headerlink" href="#of-history-cohelement-group-vel-id-groupname" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-cohelement-group-shearstrength-id-groupname">
-<h2>of.history.cohelement.group.shearstrength id groupname<a class="headerlink" href="#of-history-cohelement-group-shearstrength-id-groupname" title="Permalink to this heading">#</a></h2>
+<h2>of.history.cohelement.group.shearstrength id groupname<a class="headerlink" href="#of-history-cohelement-group-shearstrength-id-groupname" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-energy">
-<span id="section-22"></span><span id="section-21"></span><h2>of.history.energy<a class="headerlink" href="#of-history-energy" title="Permalink to this heading">#</a></h2>
+<span id="section-22"></span><span id="section-21"></span><h2>of.history.energy<a class="headerlink" href="#of-history-energy" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-unbalance">
-<h2>of.history.unbalance<a class="headerlink" href="#of-history-unbalance" title="Permalink to this heading">#</a></h2>
+<h2>of.history.unbalance<a class="headerlink" href="#of-history-unbalance" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-solveratio">
-<h2>of.history.solveratio<a class="headerlink" href="#of-history-solveratio" title="Permalink to this heading">#</a></h2>
+<h2>of.history.solveratio<a class="headerlink" href="#of-history-solveratio" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-interval-intervalvalue">
-<span id="section-23"></span><h2>of.history.interval intervalvalue<a class="headerlink" href="#of-history-interval-intervalvalue" title="Permalink to this heading">#</a></h2>
+<span id="section-23"></span><h2>of.history.interval intervalvalue<a class="headerlink" href="#of-history-interval-intervalvalue" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-pv-interval-intervalvalue">
-<h2>of.history.pv.interval intervalvalue<a class="headerlink" href="#of-history-pv-interval-intervalvalue" title="Permalink to this heading">#</a></h2>
+<h2>of.history.pv.interval intervalvalue<a class="headerlink" href="#of-history-pv-interval-intervalvalue" title="Link to this heading">#</a></h2>
 </section>
 <section id="of-history-pv-reduced-interval-intervalvalue-fracturethreshold-intervalvalue">
-<h2>of.history.pv.reduced.interval intervalvalue fracturethreshold intervalvalue<a class="headerlink" href="#of-history-pv-reduced-interval-intervalvalue-fracturethreshold-intervalvalue" title="Permalink to this heading">#</a></h2>
+<h2>of.history.pv.reduced.interval intervalvalue fracturethreshold intervalvalue<a class="headerlink" href="#of-history-pv-reduced-interval-intervalvalue-fracturethreshold-intervalvalue" title="Link to this heading">#</a></h2>
 </section>
 <section id="paraview">
-<h2>paraview<a class="headerlink" href="#paraview" title="Permalink to this heading">#</a></h2>
+<h2>paraview<a class="headerlink" href="#paraview" title="Link to this heading">#</a></h2>
 <section id="of-history-pv-field-fieldkeywords">
-<h3>of.history.pv.field fieldkeywords<a class="headerlink" href="#of-history-pv-field-fieldkeywords" title="Permalink to this heading">#</a></h3>
+<h3>of.history.pv.field fieldkeywords<a class="headerlink" href="#of-history-pv-field-fieldkeywords" title="Link to this heading">#</a></h3>
 <blockquote>
 <div><p>fieldkeywords: velocity force displacement fluid_pressure nodal_group
 element_group gbm_group mass stress strain strain_rate
@@ -1314,26 +1726,26 @@ principal_stress mat_id fragment</p>
 </div></blockquote>
 </section>
 <section id="of-history-pv-fracture-fracturekeywords">
-<h3>of.history.pv.fracture fracturekeywords<a class="headerlink" href="#of-history-pv-fracture-fracturekeywords" title="Permalink to this heading">#</a></h3>
+<h3>of.history.pv.fracture fracturekeywords<a class="headerlink" href="#of-history-pv-fracture-fracturekeywords" title="Link to this heading">#</a></h3>
 <blockquote>
 <div><p>fracturekeywords: mode sliding opening area time length energy</p>
 </div></blockquote>
 </section>
 <section id="of-history-pv-damage-damagekeywords">
-<h3>of.history.pv.damage damagekeywords<a class="headerlink" href="#of-history-pv-damage-damagekeywords" title="Permalink to this heading">#</a></h3>
+<h3>of.history.pv.damage damagekeywords<a class="headerlink" href="#of-history-pv-damage-damagekeywords" title="Link to this heading">#</a></h3>
 <blockquote>
 <div><p>damagekeywords: mode sliding opening area time length</p>
 </div></blockquote>
 </section>
 <section id="of-history-pv-cohesive-cohesivekeywords">
-<h3>of.history.pv.cohesive cohesivekeywords<a class="headerlink" href="#of-history-pv-cohesive-cohesivekeywords" title="Permalink to this heading">#</a></h3>
+<h3>of.history.pv.cohesive cohesivekeywords<a class="headerlink" href="#of-history-pv-cohesive-cohesivekeywords" title="Link to this heading">#</a></h3>
 <blockquote>
 <div><p>cohesivekeywords: velocity force displacement shear_strength dfn
 mat_id group</p>
 </div></blockquote>
 </section>
 <section id="of-history-pv-ae-aekeywords">
-<h3>of.history.pv.ae aekeywords<a class="headerlink" href="#of-history-pv-ae-aekeywords" title="Permalink to this heading">#</a></h3>
+<h3>of.history.pv.ae aekeywords<a class="headerlink" href="#of-history-pv-ae-aekeywords" title="Link to this heading">#</a></h3>
 <blockquote>
 <div><p>aekeywords: mode time win_time win_kinetic kinetic magnitude energy</p>
 </div></blockquote>
@@ -1341,9 +1753,9 @@ mat_id group</p>
 </section>
 </section>
 <section id="dfn">
-<h1>dfn<a class="headerlink" href="#dfn" title="Permalink to this heading">#</a></h1>
+<h1>dfn<a class="headerlink" href="#dfn" title="Link to this heading">#</a></h1>
 <section id="of-dfn-connectivity-dfnnum">
-<h2>of.dfn.connectivity dfnnum<a class="headerlink" href="#of-dfn-connectivity-dfnnum" title="Permalink to this heading">#</a></h2>
+<h2>of.dfn.connectivity dfnnum<a class="headerlink" href="#of-dfn-connectivity-dfnnum" title="Link to this heading">#</a></h2>
 <blockquote>
 <div><p>n1 n2 …</p>
 </div></blockquote>
@@ -1357,7 +1769,7 @@ of.dfn.group dfnname setnum dfn1 dfn4 dfn12…
 </pre></div>
 </div>
 <section id="of-dfn-type-dfnname-dfn-enum">
-<span id="section-24"></span><h3>of.dfn.type dfnname dfn_enum<a class="headerlink" href="#of-dfn-type-dfnname-dfn-enum" title="Permalink to this heading">#</a></h3>
+<span id="section-24"></span><h3>of.dfn.type dfnname dfn_enum<a class="headerlink" href="#of-dfn-type-dfnname-dfn-enum" title="Link to this heading">#</a></h3>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>of.dfn.type ‘jset1’ cohesive
 </pre></div>
@@ -1366,9 +1778,9 @@ of.dfn.group dfnname setnum dfn1 dfn4 dfn12…
 </section>
 </section>
 <section id="table">
-<h1>table<a class="headerlink" href="#table" title="Permalink to this heading">#</a></h1>
+<h1>table<a class="headerlink" href="#table" title="Link to this heading">#</a></h1>
 <section id="of-table-tablename-table1-dat">
-<h2>of.table tablename ‘table1.dat’<a class="headerlink" href="#of-table-tablename-table1-dat" title="Permalink to this heading">#</a></h2>
+<h2>of.table tablename ‘table1.dat’<a class="headerlink" href="#of-table-tablename-table1-dat" title="Link to this heading">#</a></h2>
 <p>format of table:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>t1 t2 num
 n1 n2 n3 …
@@ -1387,9 +1799,9 @@ double\* data;}
 </section>
 </section>
 <section id="damping">
-<h1>damping<a class="headerlink" href="#damping" title="Permalink to this heading">#</a></h1>
+<h1>damping<a class="headerlink" href="#damping" title="Link to this heading">#</a></h1>
 <section id="of-damp-global-value">
-<h2>of.damp.global value<a class="headerlink" href="#of-damp-global-value" title="Permalink to this heading">#</a></h2>
+<h2>of.damp.global value<a class="headerlink" href="#of-damp-global-value" title="Link to this heading">#</a></h2>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">of</span><span class="o">.</span><span class="n">damp</span><span class="o">.</span><span class="k">global</span> <span class="mf">0.7</span>
 </pre></div>
@@ -1403,9 +1815,9 @@ double\* data;}
 </section>
 </section>
 <section id="id5">
-<h1>hydro<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h1>
+<h1>hydro<a class="headerlink" href="#id5" title="Link to this heading">#</a></h1>
 <section id="of-hydro-timestep-value">
-<h2>of.hydro.timestep value<a class="headerlink" href="#of-hydro-timestep-value" title="Permalink to this heading">#</a></h2>
+<h2>of.hydro.timestep value<a class="headerlink" href="#of-hydro-timestep-value" title="Link to this heading">#</a></h2>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">of</span><span class="o">.</span><span class="n">hydro</span><span class="o">.</span><span class="n">timestep</span> <span class="mf">1e-9</span>
 <span class="n">of</span><span class="o">.</span><span class="n">hydro</span><span class="o">.</span><span class="n">matrix</span> <span class="n">off</span>
@@ -1416,9 +1828,9 @@ double\* data;}
 </section>
 </section>
 <section id="gravity">
-<h1>gravity<a class="headerlink" href="#gravity" title="Permalink to this heading">#</a></h1>
+<h1>gravity<a class="headerlink" href="#gravity" title="Link to this heading">#</a></h1>
 <section id="of-gravity-x-y">
-<h2>of.gravity x y<a class="headerlink" href="#of-gravity-x-y" title="Permalink to this heading">#</a></h2>
+<h2>of.gravity x y<a class="headerlink" href="#of-gravity-x-y" title="Link to this heading">#</a></h2>
 <dl class="simple">
 <dt><strong>demo</strong>::</dt><dd><p>of.gravity 0.0 -9.8</p>
 </dd>
@@ -1426,9 +1838,9 @@ double\* data;}
 </section>
 </section>
 <section id="seismic">
-<h1>seismic<a class="headerlink" href="#seismic" title="Permalink to this heading">#</a></h1>
+<h1>seismic<a class="headerlink" href="#seismic" title="Link to this heading">#</a></h1>
 <section id="of-seismic-window-value">
-<h2>of.seismic.window value<a class="headerlink" href="#of-seismic-window-value" title="Permalink to this heading">#</a></h2>
+<h2>of.seismic.window value<a class="headerlink" href="#of-seismic-window-value" title="Link to this heading">#</a></h2>
 <p><strong>demo</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">of</span><span class="o">.</span><span class="n">seismic</span><span class="o">.</span><span class="n">window</span> <span class="mf">1.0e-3</span>
 </pre></div>
@@ -1444,6 +1856,7 @@ double\* data;}
 
                 </article>
               
+
               
               
               
@@ -1458,16 +1871,16 @@ double\* data;}
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-<div
+  <div class="sidebar-secondary-item"><div
     id="pst-page-navigation-heading-2"
     class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
+    <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">general commands</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#of-new">of.new</a></li>
@@ -1723,69 +2136,55 @@ double\* data;}
 
   </nav></div>
 
-  <div class="sidebar-secondary-item">
-
-  <div class="tocsection sourcelink">
-    <a href="../_sources/rst_user_guide/command_line_guide.rst.txt">
-      <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-  </div>
-</div>
-
 </div></div>
               
             
           </div>
           <footer class="bd-footer-content">
             
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Xiaofeng Li
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, OpenFDEM Developer Group.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
           </footer>
         
+
       </main>
     </div>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
-<div class="bd-footer__inner bd-page-width">
-  
-    <div class="footer-items__start">
-      
-        <div class="footer-item">
-
-  <p class="copyright">
-    
-      © Copyright 2023, OpenFDEM Developer Group.
-      <br/>
-    
-  </p>
-</div>
-      
-        <div class="footer-item">
-
-  <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
-    <br/>
-  </p>
-</div>
-      
-    </div>
-  
-  
-  
-    <div class="footer-items__end">
-      
-        <div class="footer-item">
-<p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
-</p></div>
-      
-    </div>
-  
-</div>
-
   </footer>
   </body>
 </html>
