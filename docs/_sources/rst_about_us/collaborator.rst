@@ -1,0 +1,98 @@
+Collaborating
+##############
+
+
+.. figure:: ../../images/Aboutus/ISRMlogo.png   
+    :align: left
+
+|
+|
+|
+|
+|
+
+=================================================================
+
+- Professor **Xiaofeng Li**, Lead developer of OpenFDEM
+- Professor **Haibo Li**, Dean of Wuhan Branch, Chinese Academy of Sciences, Vice-Editor of Journal of Rock Mechanics and Geotechnical Engineering
+- **Qian Li**, 2025 -
+- **Zhonghao Li**, 2025 -
+- **Kunru Xie**, 2025 -
+- **Ben Wang**, 2019 - 2022
+
+
+|
+
+.. figure:: ../../images/Aboutus/torontoLogo.png
+    :align: left
+
+|
+|
+|
+|
+|
+|
+|
+|
+|
+
+===================================================================
+
+- | Professor **Giovanni Grasselli**, NSERC – Energi Simulation Industrial Research Chair in Fundamental Rock Physics and Rock Mechanics
+- Dr. **Xiaofeng Li**, 2021 - 2023
+- Dr. **Aly Abdelaziz**, 2021 - 2023
+- **Earl Magsipoc**, 2021 - 2023
+- **Katia Ossetchkina**, 2021 - 2023
+- **Grace Hu**, 2023 - 2023
+
+|
+
+.. figure:: ../../images/Aboutus/polyulogo.png   
+    :align: left
+
+|
+|
+|
+|
+|
+|
+|
+
+=================================================================
+
+- Dr. **Qi Zhao**, 2019 - 2022
+- Dr. **Xiaofeng Li**, 2020 - 2021
+
+
+|
+
+.. figure:: ../../images/Aboutus/monashlogo.png   
+    :align: left
+
+|
+|
+|
+|
+|
+|
+
+=================================================================
+
+- Professor **Jian Zhao**, Editors-in-Chief of International Journal of Rock Mechanics and Mining Sciences
+
+- Professor **Qianbing Zhang**, Editor of Tunnelling and Underground Space Technology
+
+- Dr. **Xiaofeng Li**, 2018 - 2019
+
+===================================================================
+
+There is constant need for specific numerical tools to solve specific problems other than 
+the areas currently implemented within OpenFDEM. If you think the general ideas of OpenFDEM 
+are appropriate for you and your problem, but OpenFDEM lacks the tools needed to address 
+the problem. Please let contact the lead developer `Xiaofeng Li <xfli@whrsm.ac.cn>`_ and we would be happy to 
+discuss this further.
+
+.. raw:: html
+
+   <script src="//clustrmaps.com/globe.js?d=IJDdJTOZeBy5TaHUiVkIm7GLGSulnk0C2NzaC4-34QA">
+   </script>

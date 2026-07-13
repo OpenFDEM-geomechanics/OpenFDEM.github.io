@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>of.mesh.baryGB &#8212; OpenFDEM</title>
   
@@ -17,36 +16,39 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=1dee3432" />
   
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'rst_user_guide/Mesh/of.mesh.baryGB';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -54,6 +56,7 @@
     <link rel="prev" title="of.mesh.NVB" href="of.mesh.NVB.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -69,19 +72,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -89,16 +81,15 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
-         placeholder="Search the docs ..."
-         aria-label="Search the docs ..."
+         placeholder="Search..."
+         aria-label="Search..."
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -106,15 +97,28 @@
 
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-<div class="bd-header__inner bd-page-width">
-  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
-    <span class="fa-solid fa-bars"></span>
-  </button>
+    </header>
   
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
   
-  <div class="col-lg-3 navbar-header-items__start">
+  <div class="sidebar-header-items sidebar-primary__section">
     
-      <div class="navbar-item">
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
 
   
     
@@ -130,425 +134,297 @@
     <p class="title logo__title">OpenFDEM</p>
   
 </a></div>
-    
-  </div>
-  
-  <div class="col-lg-9 navbar-header-items">
-    
-    <div class="me-auto navbar-header-items__center">
-      
-        <div class="navbar-item">
-<nav>
-  <ul class="bd-navbar-elements navbar-nav">
-    
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../rst_about_introduction/index.html">
-    Introduction
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../rst_theory/index.html">
-    Theory
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../rst_tutorials/index.html">
-    Tutorials
-  </a>
-</li>
-
-
-<li class="nav-item current active">
-  <a class="nav-link nav-internal" href="../index.html">
-    User Manual
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../rst_downloads.html">
-    Downloads
-  </a>
-</li>
-
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
-                    More
-                </button>
-                <ul id="pst-nav-more-links" class="dropdown-menu">
-                    
-<li class=" ">
-  <a class="nav-link dropdown-item nav-internal" href="../../rst_about_us/index.html">
-    About Us
-  </a>
-</li>
-
-
-<li class=" ">
-  <a class="nav-link dropdown-item nav-internal" href="../../rst_appendix/index.html">
-    Appendix
-  </a>
-</li>
-
-                </ul>
-            </li>
-            
-  </ul>
-</nav></div>
-      
-    </div>
-    
-    
-    <div class="navbar-header-items__end">
-      
-        <div class="navbar-item navbar-persistent--container">
-          
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
-        </div>
-      
-      
-        <div class="navbar-item">
-
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
-      
-    </div>
-    
-  </div>
-  
-  
-    <div class="navbar-persistent--mobile">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
-    </div>
-  
-
-  
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
-</div>
-
-    </header>
-  
-
-  <div class="bd-container">
-    <div class="bd-container__inner bd-page-width">
-      
-      
-      
-      <div class="bd-sidebar-primary bd-sidebar">
-        
-
-  
-  <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-      <div class="sidebar-header-items__center">
-        
-          
-          
-            <div class="navbar-item">
-<nav>
-  <ul class="bd-navbar-elements navbar-nav">
-    
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../rst_about_introduction/index.html">
-    Introduction
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../rst_theory/index.html">
-    Theory
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../rst_tutorials/index.html">
-    Tutorials
-  </a>
-</li>
-
-
-<li class="nav-item current active">
-  <a class="nav-link nav-internal" href="../index.html">
-    User Manual
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../rst_downloads.html">
-    Downloads
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../rst_about_us/index.html">
-    About Us
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../rst_appendix/index.html">
-    Appendix
-  </a>
-</li>
-
-  </ul>
-</nav></div>
-          
-        
-      </div>
-    
-    
-    
-      <div class="sidebar-header-items__end">
-        
-          <div class="navbar-item">
-
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
-        
-      </div>
-    
-  </div>
-  
-    <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-<nav class="bd-docs-nav bd-links"
-     aria-label="Section Navigation">
-  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../commandindex.html">Command  reference</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 has-children"><a class="reference internal" href="../general.html">General</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../General/of.console.interval.html">of.console.interval</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../General/of.damp.global.html">of.damp.global</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../General/of.finalize.html">of.finalize</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../General/of.import.html">of.import</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../General/of.import.table.html">of.import.table</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../General/of.log.interval.html">of.log.interval</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../General/of.new.html">of.new</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../General/of.restore.html">of.restore</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../General/of.save.html">of.save</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../General/of.save.FEM.html">of.save.FEM</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../General/of.set.config.html">of.set.config</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../General/of.set.contact.html">of.set.contact</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../General/of.set.debug.html">of.set.debug</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../General/of.set.GBM.html">of.set.GBM</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../General/of.set.gravity.html">of.set.gravity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../General/of.set.large.html">of.set.large</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../General/of.set.massscale.html">of.set.massscale</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../General/of.set.module.html">of.set.module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../General/of.set.omp.html">of.set.omp</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../General/of.set.result.html">of.set.result</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../General/of.set.rgbm.html">of.set.rgbm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../General/of.solve.html">of.solve</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../General/of.step.html">of.step</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../General/of.timestep.html">of.timestep</a></li>
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../rst_about_introduction/index.html">Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rst_about_introduction/introduction.html">What is OpenFDEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rst_about_introduction/installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rst_about_introduction/getting_started.html">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rst_about_introduction/Changelog.html">Changelog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rst_about_introduction/history.html">History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rst_about_introduction/copyrights.html">Copyright</a></li>
 </ul>
 </details></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../blast.html">Blast</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Blast/of.blast.position.html">of.blast.position</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../rst_theory/index.html">Theory</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rst_theory/Solid_FEM_Engine.html">Solid FEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rst_theory/Solid_Cohesive_Mechanics.html">Solid Cohesive Mechanics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rst_theory/Contact_Mechanics.html">Contact Mechanics</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../rst_theory/Fluid_Transport_Theory.html">Fluid Transport</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_theory/Fracture_Fluid_Theory.html">Fracture Fluid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_theory/Porous_Fluid_Theory.html">Porous Fluid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_theory/Two_Phase_Fluid_Theory.html">Two Phase Fluid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_theory/Gas_Flow_Theory.html">Gas Flow</a></li>
 </ul>
 </details></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../boundary.html">Boundary</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Boundary/of.boundary.nodal.force.html">of.boundary.nodal.force</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Boundary/of.boundary.nodal.velocity.html">of.boundary.nodal.velocity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Boundary/of.boundary.nodal.inivelocity.html">of.boundary.nodal.inivelocity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Boundary/of.boundary.nodal.acceleration.html">of.boundary.nodal.acceleration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Boundary/of.boundary.nodal.clear.html">of.boundary.nodal.clear</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Boundary/of.boundary.edge.force.html">of.boundary.edge.force</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Boundary/of.boundary.edge.velocity.html">of.boundary.edge.velocity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Boundary/of.boundary.edge.inivelocity.html">of.boundary.edge.inivelocity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Boundary/of.boundary.edge.acceleration.html">of.boundary.edge.acceleration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Boundary/of.boundary.edge.clear.html">of.boundary.edge.clear</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Boundary/of.boundary.element.stress.html">of.boundary.element.stress</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Boundary/of.boundary.element.stress.xgrad.html">of.boundary.element.stress.xgrad</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Boundary/of.boundary.element.stress.ygrad.html">of.boundary.element.stress.ygrad</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Boundary/of.boundary.element.clear.html">of.boundary.element.clear</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Boundary/of.boundary.blast.html">of.boundary.blast</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../rst_theory/Thermal_Transfer_Theory.html">Thermal Transfer</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_theory/Matrix_Thermal.html">Matrix Thermal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_theory/Fracture_Heat_Resistance.html">Fracture Heat Resistance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_theory/Contact_Thermal.html">Contact Thermal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_theory/Thermal_Hydromechanical_Chemical_Couple.html">Thermal-Hydromechanical (Chemical) Couple</a></li>
 </ul>
 </details></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../DFN.html">Discrete Fracture Networks (DFN)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../DFN/of.DFN.connectivity.html">of.DFN.connectivity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../DFN/of.DFN.group.html">of.DFN.group</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../DFN/of.DFN.cohesive.html">of.DFN.cohesive</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../DFN/of.DFN.broken.html">of.DFN.broken</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rst_theory/Phase_Field.html">Phase Field</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../rst_theory/Particle_Discrete_Element_Method.html">Particle Discrete Element Method (pDEM)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_theory/Rigid_Particle_DEM.html">Rigid Particle DEM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_theory/Irregular_Deformable_Cluster_DEM.html">Irregular Deformable Cluster DEM</a></li>
 </ul>
 </details></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../FEM.html">Finite Element Method (FEM)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../FEM/of.import.FEM.nodal.coord.html">of.import.FEM.nodal.coord</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../FEM/of.import.FEM.nodal.coord0.html">of.import.FEM.nodal.coord0</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../FEM/of.import.FEM.nodal.velocity.html">of.import.FEM.nodal.velocity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../FEM/of.import.FEM.nodal.groups.html">of.import.FEM.nodal.groups</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../FEM/of.import.FEM.edge.groups.html">of.import.FEM.edge.groups</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../FEM/of.import.FEM.element.groups.html">of.import.FEM.element.groups</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../FEM/of.import.FEM.element.connectivity.html">of.import.FEM.element.connectivity</a></li>
-</ul>
-</details></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../geometry.html">Geometry</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Geometry/of.geometry.square.html">of.geometry.square</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Geometry/of.geometry.cut.square.html">of.geometry.cut.square</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Geometry/of.geometry.remove.square.html">of.geometry.remove.square</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Geometry/of.geometry.circle.html">of.geometry.circle</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Geometry/of.geometry.cut.circle.html">of.geometry.cut.circle</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Geometry/of.geometry.remove.circle.html">of.geometry.remove.circle</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Geometry/of.geometry.ellipse.html">of.geometry.ellipse</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Geometry/of.geometry.cut.ellipse.html">of.geometry.cut.ellipse</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Geometry/of.geometry.remove.ellipse.html">of.geometry.remove.ellipse</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Geometry/of.geometry.polygon.html">of.geometry.polygon</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Geometry/of.geometry.cut.polygon.html">of.geometry.cut.polygon</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Geometry/of.geometry.remove.polygon.html">of.geometry.remove.polygon</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Geometry/of.geometry.table.html">of.geometry.table</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Geometry/of.geometry.cut.table.html">of.geometry.cut.table</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Geometry/of.geometry.remove.table.html">of.geometry.remove.table</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Geometry/of.geometry.domain.html">of.geometry.domain</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Geometry/of.geometry.cut.joint.html">of.geometry.cut.joint</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Geometry/of.geometry.cut.jset.html">of.geometry.cut.jset</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Geometry/of.geometry.cut.DFN.html">of.geometry.cut.DFN</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Geometry/of.geometry.cut.arc.html">of.geometry.cut.arc</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Geometry/of.geometry.minsize.html">of.geometry.minsize</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Geometry/of.geometry.minangle.html">of.geometry.minangle</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Geometry/of.geometry.iteration.html">of.geometry.iteration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Geometry/of.geometry.group.html">of.geometry.group</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Geometry/of.geometry.mesh.size.html">of.geometry.mesh.size</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Geometry/of.geometry.recombine.html">of.geometry.recombine</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Geometry/of.geometry.mesh.html">of.geometry.mesh</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Geometry/of.geometry.mesh.write.html">of.geometry.mesh.write</a></li>
-</ul>
-</details></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../group.html">Group</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Group/of.group.nodal.html">of.group.nodal</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Group/of.group.edge.html">of.group.edge</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Group/of.group.element.html">of.group.element</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Group/of.group.cohelement.html">of.group.cohelement</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Group/of.group.nodal.from.element.html">of.group.nodal.from.element</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Group/of.group.edge.from.element.html">of.group.edge.from.element</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Group/of.group.edge.from.cohelement.html">of.group.edge.from.cohcohelement</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Group/of.group.edge.from.dfn.html">of.group.edge.from.dfn</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Group/of.group.cohelement.from.dfn.html">of.group.cohelement.from.dfn</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Group/of.group.cohelement.from.gbm.html">of.group.cohelement.from.gbm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Group/of.group.nodal.bool.union.html">of.group.nodal.bool.union</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Group/of.group.nodal.bool.intersect.html">of.group.nodal.bool.intersect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Group/of.group.nodal.bool.subtract.html">of.group.nodal.bool.subtract</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Group/of.group.edge.bool.union.html">of.group.edge.bool.union</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Group/of.group.edge.bool.intersect.html">of.group.edge.bool.intersect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Group/of.group.edge.bool.subtract.html">of.group.edge.bool.subtract</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Group/of.group.element.bool.union.html">of.group.element.bool.union</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Group/of.group.element.bool.intersect.html">of.group.element.bool.intersect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Group/of.group.element.bool.subtract.html">of.group.element.bool.subtract</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Group/of.group.cohelement.bool.union.html">of.group.cohelement.bool.union</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Group/of.group.cohelement.bool.intersect.html">of.group.cohelement.bool.intersect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Group/of.group.cohelement.bool.subtract.html">of.group.cohelement.bool.subtract</a></li>
-</ul>
-</details></li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="../mesh.html">Mesh</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="of.mesh.insert.html">of.mesh.insert</a></li>
-<li class="toctree-l3"><a class="reference internal" href="of.mesh.insert.dfn.html">of.mesh.insert.dfn</a></li>
-<li class="toctree-l3"><a class="reference internal" href="of.mesh.voronoi.html">of.mesh.voronoi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="of.mesh.split.html">of.mesh.split</a></li>
-<li class="toctree-l3"><a class="reference internal" href="of.mesh.bary.html">of.mesh.bary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="of.mesh.RG.html">of.mesh.RG</a></li>
-<li class="toctree-l3"><a class="reference internal" href="of.mesh.RGB.html">of.mesh.RGB</a></li>
-<li class="toctree-l3"><a class="reference internal" href="of.mesh.NVB.html">of.mesh.NVB</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">of.mesh.baryGB</a></li>
-</ul>
-</details></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../material.html">Material</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Material/of.mat.element.html">of.mat.element</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Material/of.mat.cohesive.html">of.mat.cohesive</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Material/of.mat.contact.html">of.mat.contact</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Material/of.mat.hydro.matrix.html">of.mat.hydro.matrix</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Material/of.mat.hydro.fracture.html">of.mat.hydro.fracture</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Material/of.mat.mpm.fluid.html">of.mat.mpm.fluid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Material/of.mat.mpm.solid.html">of.mat.mpm.solid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Material/of.mat.hydro.fluid.html">of.mat.hydro.fluid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Material/of.mat.hydro.gas.html">of.mat.hydro.gas</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Material/of.mat.nonlocal.html">of.mat.nonlocal</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Material/of.mat.thermal.html">of.mat.thermal</a></li>
-</ul>
-</details></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../history.html">History</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="../History/of.history.pv.interval.html">of.history.pv.interval</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../History/of.history.pv.dynamic.interval.html">of.history.pv.dynamic.interval</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../History/of.history.pv.field.html">of.history.pv.field</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../History/of.history.pv.fracture.html">of.history.pv.fracture</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../History/of.history.pv.cohesive.html">of.history.pv.cohesive</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../History/of.history.pv.damage.html">of.history.pv.damage</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../History/of.history.pv.ae.html">of.history.pv.ae</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../rst_theory/Mesh_Adaptive_Analysis.html">Mesh Adaptive Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_theory/Local_Adaptive_Mesh_Refinement.html">Local Adaptive Mesh Refinement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_theory/Global_Adaptive_Mesh_Refinement.html">Global Adaptive Mesh Refinement</a></li>
 </ul>
 </details></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../rst_developer/developer.html">Developer Document</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../rst_developer/commonclass.html">Common class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../rst_developer/blastclass.html">Blast class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../rst_developer/contactclass.html">Contact class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../rst_developer/geometryclass.html">Geometry class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../rst_developer/solidclass.html">Solid engine class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../rst_developer/hydroclass.html">Hydro transportation class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../rst_developer/iohelperclass.html">Input/Output class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../rst_developer/meshclass.html">Mesh processing class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../rst_developer/mpmclass.html">Computational fluid dynamics class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../rst_developer/particlesclass.html">Particulate DEM class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../rst_developer/phasefieldclass.html">Phase field class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../rst_developer/solverclass.html">Solver class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../rst_developer/thermalclass.html">Thermal flux class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../rst_developer/voronoiclass.html">Voronoi tessellation class</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../rst_tutorials/index.html">Tutorials</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../rst_tutorials/tutorialindex.html">Examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_tutorials/tutorial0_Geometry.html">How to create a geometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_tutorials/tutorial1_UCS_Test.html">Quick start with uniaxial compression test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_tutorials/tutorial2_UCS_with_Gmsh.html">Create model from imported mesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_tutorials/tutorial3_UCS_Test_with_Quadrangle_Elements.html">How to use higher-order element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_tutorials/tutorial4_BD_Test.html">Quick start with Brazilian disc test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_tutorials/tutorial5_In_Situ_Stress.html">Tunnel excavation under <cite>in-situ</cite> stress</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_tutorials/tutorial6_Hydro_Seepage.html">Water flowing in rock dam: seepage flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_tutorials/tutorial7_Hydro_Fracture_Flow.html">Water flowing in rock dam: fracture flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_tutorials/tutorial8_Thermal_Flux.html">Thermal flux transportation in a bar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_tutorials/tutorial9_GBM.html">Grain-based model (GBM), interface with Neper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_tutorials/tutorial10_Phase_Field.html">Phase Field</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rst_tutorials/tutorialA_Paraview.html">Post-Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rst_tutorials/tutorialB_Notepad%2B%2B.html">NotePad++ and Syntax Highlighting</a></li>
 </ul>
 </details></li>
 </ul>
-</div>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">User Manual</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../commandindex.html">Command  reference</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 has-children"><a class="reference internal" href="../general.html">General</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../General/of.console.interval.html">of.console.interval</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../General/of.damp.global.html">of.damp.global</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../General/of.finalize.html">of.finalize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../General/of.import.html">of.import</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../General/of.import.table.html">of.import.table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../General/of.log.interval.html">of.log.interval</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../General/of.new.html">of.new</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../General/of.restore.html">of.restore</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../General/of.save.html">of.save</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../General/of.save.FEM.html">of.save.FEM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../General/of.set.config.html">of.set.config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../General/of.set.contact.html">of.set.contact</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../General/of.set.debug.html">of.set.debug</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../General/of.set.GBM.html">of.set.GBM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../General/of.set.gravity.html">of.set.gravity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../General/of.set.large.html">of.set.large</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../General/of.set.massscale.html">of.set.massscale</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../General/of.set.module.html">of.set.module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../General/of.set.omp.html">of.set.omp</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../General/of.set.result.html">of.set.result</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../General/of.set.rgbm.html">of.set.rgbm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../General/of.solve.html">of.solve</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../General/of.step.html">of.step</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../General/of.timestep.html">of.timestep</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../blast.html">Blast</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Blast/of.blast.position.html">of.blast.position</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../boundary.html">Boundary</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.nodal.force.html">of.boundary.nodal.force</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.nodal.velocity.html">of.boundary.nodal.velocity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.nodal.inivelocity.html">of.boundary.nodal.inivelocity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.nodal.acceleration.html">of.boundary.nodal.acceleration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.nodal.clear.html">of.boundary.nodal.clear</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.edge.force.html">of.boundary.edge.force</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.edge.velocity.html">of.boundary.edge.velocity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.edge.inivelocity.html">of.boundary.edge.inivelocity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.edge.acceleration.html">of.boundary.edge.acceleration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.edge.clear.html">of.boundary.edge.clear</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.element.stress.html">of.boundary.element.stress</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.element.stress.xgrad.html">of.boundary.element.stress.xgrad</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.element.stress.ygrad.html">of.boundary.element.stress.ygrad</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.element.clear.html">of.boundary.element.clear</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.blast.html">of.boundary.blast</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../DFN.html">Discrete Fracture Networks (DFN)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../DFN/of.DFN.connectivity.html">of.DFN.connectivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../DFN/of.DFN.group.html">of.DFN.group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../DFN/of.DFN.cohesive.html">of.DFN.cohesive</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../DFN/of.DFN.broken.html">of.DFN.broken</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../FEM.html">Finite Element Method (FEM)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../FEM/of.import.FEM.nodal.coord.html">of.import.FEM.nodal.coord</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../FEM/of.import.FEM.nodal.coord0.html">of.import.FEM.nodal.coord0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../FEM/of.import.FEM.nodal.velocity.html">of.import.FEM.nodal.velocity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../FEM/of.import.FEM.nodal.groups.html">of.import.FEM.nodal.groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../FEM/of.import.FEM.edge.groups.html">of.import.FEM.edge.groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../FEM/of.import.FEM.element.groups.html">of.import.FEM.element.groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../FEM/of.import.FEM.element.connectivity.html">of.import.FEM.element.connectivity</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../geometry.html">Geometry</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.square.html">of.geometry.square</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.cut.square.html">of.geometry.cut.square</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.remove.square.html">of.geometry.remove.square</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.circle.html">of.geometry.circle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.cut.circle.html">of.geometry.cut.circle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.remove.circle.html">of.geometry.remove.circle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.ellipse.html">of.geometry.ellipse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.cut.ellipse.html">of.geometry.cut.ellipse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.remove.ellipse.html">of.geometry.remove.ellipse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.polygon.html">of.geometry.polygon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.cut.polygon.html">of.geometry.cut.polygon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.remove.polygon.html">of.geometry.remove.polygon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.table.html">of.geometry.table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.cut.table.html">of.geometry.cut.table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.remove.table.html">of.geometry.remove.table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.domain.html">of.geometry.domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.cut.joint.html">of.geometry.cut.joint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.cut.jset.html">of.geometry.cut.jset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.cut.DFN.html">of.geometry.cut.DFN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.cut.arc.html">of.geometry.cut.arc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.minsize.html">of.geometry.minsize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.minangle.html">of.geometry.minangle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.iteration.html">of.geometry.iteration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.group.html">of.geometry.group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.mesh.size.html">of.geometry.mesh.size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.recombine.html">of.geometry.recombine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.mesh.html">of.geometry.mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.mesh.write.html">of.geometry.mesh.write</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../group.html">Group</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Group/of.group.nodal.html">of.group.nodal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Group/of.group.edge.html">of.group.edge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Group/of.group.element.html">of.group.element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Group/of.group.cohelement.html">of.group.cohelement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Group/of.group.nodal.from.element.html">of.group.nodal.from.element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Group/of.group.edge.from.element.html">of.group.edge.from.element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Group/of.group.edge.from.cohelement.html">of.group.edge.from.cohcohelement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Group/of.group.edge.from.dfn.html">of.group.edge.from.dfn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Group/of.group.cohelement.from.dfn.html">of.group.cohelement.from.dfn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Group/of.group.cohelement.from.gbm.html">of.group.cohelement.from.gbm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Group/of.group.nodal.bool.union.html">of.group.nodal.bool.union</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Group/of.group.nodal.bool.intersect.html">of.group.nodal.bool.intersect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Group/of.group.nodal.bool.subtract.html">of.group.nodal.bool.subtract</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Group/of.group.edge.bool.union.html">of.group.edge.bool.union</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Group/of.group.edge.bool.intersect.html">of.group.edge.bool.intersect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Group/of.group.edge.bool.subtract.html">of.group.edge.bool.subtract</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Group/of.group.element.bool.union.html">of.group.element.bool.union</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Group/of.group.element.bool.intersect.html">of.group.element.bool.intersect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Group/of.group.element.bool.subtract.html">of.group.element.bool.subtract</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Group/of.group.cohelement.bool.union.html">of.group.cohelement.bool.union</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Group/of.group.cohelement.bool.intersect.html">of.group.cohelement.bool.intersect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Group/of.group.cohelement.bool.subtract.html">of.group.cohelement.bool.subtract</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="../mesh.html">Mesh</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="of.mesh.insert.html">of.mesh.insert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="of.mesh.insert.dfn.html">of.mesh.insert.dfn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="of.mesh.voronoi.html">of.mesh.voronoi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="of.mesh.split.html">of.mesh.split</a></li>
+<li class="toctree-l4"><a class="reference internal" href="of.mesh.bary.html">of.mesh.bary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="of.mesh.RG.html">of.mesh.RG</a></li>
+<li class="toctree-l4"><a class="reference internal" href="of.mesh.RGB.html">of.mesh.RGB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="of.mesh.NVB.html">of.mesh.NVB</a></li>
+<li class="toctree-l4 current active"><a class="current reference internal" href="#">of.mesh.baryGB</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../material.html">Material</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Material/of.mat.element.html">of.mat.element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Material/of.mat.cohesive.html">of.mat.cohesive</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Material/of.mat.contact.html">of.mat.contact</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Material/of.mat.hydro.matrix.html">of.mat.hydro.matrix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Material/of.mat.hydro.fracture.html">of.mat.hydro.fracture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Material/of.mat.mpm.fluid.html">of.mat.mpm.fluid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Material/of.mat.mpm.solid.html">of.mat.mpm.solid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Material/of.mat.hydro.fluid.html">of.mat.hydro.fluid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Material/of.mat.hydro.gas.html">of.mat.hydro.gas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Material/of.mat.nonlocal.html">of.mat.nonlocal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Material/of.mat.thermal.html">of.mat.thermal</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../history.html">History</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../History/of.history.pv.interval.html">of.history.pv.interval</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../History/of.history.pv.dynamic.interval.html">of.history.pv.dynamic.interval</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../History/of.history.pv.field.html">of.history.pv.field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../History/of.history.pv.fracture.html">of.history.pv.fracture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../History/of.history.pv.cohesive.html">of.history.pv.cohesive</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../History/of.history.pv.damage.html">of.history.pv.damage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../History/of.history.pv.ae.html">of.history.pv.ae</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../rst_developer/developer.html">Developer Document</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_developer/commonclass.html">Common class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_developer/blastclass.html">Blast class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_developer/contactclass.html">Contact class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_developer/geometryclass.html">Geometry class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_developer/solidclass.html">Solid engine class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_developer/hydroclass.html">Hydro transportation class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_developer/iohelperclass.html">Input/Output class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_developer/meshclass.html">Mesh processing class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_developer/mpmclass.html">Computational fluid dynamics class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_developer/particlesclass.html">Particulate DEM class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_developer/phasefieldclass.html">Phase field class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_developer/solverclass.html">Solver class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_developer/thermalclass.html">Thermal flux class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_developer/voronoiclass.html">Voronoi tessellation class</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../rst_downloads.html">Downloads</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../rst_about_us/index.html">About Us</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rst_about_us/contact.html">Contact</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rst_about_us/collaborator.html">Collaborating</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://github.com/OpenFDEM-geomechanics/OpenFDEM.github.io/discussions">OpenFDEM Forum</a></li>
+<li class="toctree-l2"><a class="reference external" href="https://geogroup.utoronto.ca/global-fdem-2022/">Global FDEM Workshop 2022</a></li>
+</ul>
+</details></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../rst_appendix/index.html">Appendix</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rst_appendix/publication.html">Publications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rst_developer/appendix.html">Index</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
 </nav></div>
     </div>
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -556,6 +432,9 @@ document.write(`
       <main id="main-content" class="bd-main" role="main">
         
         
+
+<div class="sbt-scroll-pixel-helper"></div>
+
           <div class="bd-content">
             <div class="bd-article-container">
               
@@ -564,48 +443,131 @@ document.write(`
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item">
-
-
-
-
-
-<nav aria-label="Breadcrumb" class="d-print-none">
-  <ul class="bd-breadcrumbs">
-    
-    <li class="breadcrumb-item breadcrumb-home">
-      <a href="../../index.html" class="nav-link" aria-label="Home">
-        <i class="fa-solid fa-home"></i>
-      </a>
-    </li>
-    
-    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">User Manual</a></li>
-    
-    
-    <li class="breadcrumb-item"><i class="fa-solid fa-ellipsis"></i></li>
-    
-    
-    <li class="breadcrumb-item"><a href="../mesh.html" class="nav-link">Mesh</a></li>
-    
-    <li class="breadcrumb-item active" aria-current="page">of.mesh.baryGB</li>
-  </ul>
-</nav>
-</div>
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
       
     </div>
   
   
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/rst_user_guide/Mesh/of.mesh.baryGB.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
 </div>
 </div>
               
               
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>of.mesh.baryGB</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example:</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
               
                 
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
   <section id="of-mesh-barygb">
-<h1>of.mesh.baryGB<a class="headerlink" href="#of-mesh-barygb" title="Permalink to this heading">#</a></h1>
+<h1>of.mesh.baryGB<a class="headerlink" href="#of-mesh-barygb" title="Link to this heading">#</a></h1>
 <style> .red {color:#F64A8A; font-weight:bold;} </style>
 <style> .blue {color:#4169E1; font-weight:bold;} </style><dl>
 <dt><strong>of.</strong><span class="red">mesh.baryGB</span> <span class="blue">*element_tag*</span> &lt;string&gt;</dt><dd><p>Refine the target element groups using baryGB separation scheme.</p>
@@ -619,7 +581,7 @@ document.write(`
 <div class="line"><br /></div>
 </div>
 <section id="example">
-<h2>Example:<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h2>
+<h2>Example:<a class="headerlink" href="#example" title="Link to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">of</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">baryGB</span> <span class="p">[</span><span class="n">rock</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -629,6 +591,7 @@ document.write(`
 
                 </article>
               
+
               
               
               
@@ -661,29 +624,20 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-  <div class="sidebar-secondary-item">
-<div
+  <div class="sidebar-secondary-item"><div
     id="pst-page-navigation-heading-2"
     class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
+    <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example:</a></li>
 </ul>
   </nav></div>
-
-  <div class="sidebar-secondary-item">
-
-  <div class="tocsection sourcelink">
-    <a href="../../_sources/rst_user_guide/Mesh/of.mesh.baryGB.rst.txt">
-      <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-  </div>
-</div>
 
 </div></div>
               
@@ -691,54 +645,49 @@ document.write(`
           </div>
           <footer class="bd-footer-content">
             
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Xiaofeng Li
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, OpenFDEM Developer Group.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
           </footer>
         
+
       </main>
     </div>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
-<div class="bd-footer__inner bd-page-width">
-  
-    <div class="footer-items__start">
-      
-        <div class="footer-item">
-
-  <p class="copyright">
-    
-      © Copyright 2023, OpenFDEM Developer Group.
-      <br/>
-    
-  </p>
-</div>
-      
-        <div class="footer-item">
-
-  <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
-    <br/>
-  </p>
-</div>
-      
-    </div>
-  
-  
-  
-    <div class="footer-items__end">
-      
-        <div class="footer-item">
-<p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
-</p></div>
-      
-    </div>
-  
-</div>
-
   </footer>
   </body>
 </html>
