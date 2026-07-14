@@ -1,0 +1,16 @@
+Appendix
+============
+
+
+.. toctree::
+   :maxdepth: 2
+
+   publication
+   ../rst_developer/appendix
+   
+
+.. raw:: html
+
+   <script src="//clustrmaps.com/globe.js?d=IJDdJTOZeBy5TaHUiVkIm7GLGSulnk0C2NzaC4-34QA">
+   </script>
+

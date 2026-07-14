@@ -1,0 +1,14 @@
+User Manual
+===================
+
+
+.. toctree::
+   :maxdepth: 2
+
+   commandindex
+   ../rst_developer/developer  
+
+.. raw:: html
+
+   <script src="//clustrmaps.com/globe.js?d=IJDdJTOZeBy5TaHUiVkIm7GLGSulnk0C2NzaC4-34QA">
+   </script>
