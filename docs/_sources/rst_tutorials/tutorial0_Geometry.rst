@@ -6,7 +6,7 @@ and circles or even polygons with Boolean operation to cut or remove one geometr
 of creating geometries are explained in the command reference. A simple geometry as shown below will be created 
 in this tutorial.
 
-.. figure:: ../../images/Desmos/Geometry.png
+.. figure:: ../../images/Desmos/Geometry.PNG
     :alt: Create Geometry
     :align: center
 
@@ -57,7 +57,7 @@ To start with programming, create a new empty input file or copy it from the exi
     :lines: 57
 
 |
-.. figure:: ../../images/Gmsh/Geo_Rect.png
+.. figure:: ../../images/Gmsh/Geo_Rect.PNG
     :alt: Create a square
     :align: center
 
@@ -71,7 +71,7 @@ To start with programming, create a new empty input file or copy it from the exi
     :lines: 60
 
 |
-.. figure:: ../../images/Gmsh/Geo_Circle.png
+.. figure:: ../../images/Gmsh/Geo_Circle.PNG
     :alt: Remove a circle
     :align: center
 
@@ -84,7 +84,7 @@ To start with programming, create a new empty input file or copy it from the exi
     :lines: 63
 
 |
-.. figure:: ../../images/Gmsh/Geo_Rect2.png
+.. figure:: ../../images/Gmsh/Geo_Rect2.PNG
     :alt: Remove a rectangle
     :align: center
 
@@ -97,7 +97,7 @@ To start with programming, create a new empty input file or copy it from the exi
     :lines: 66
 
 |
-.. figure:: ../../images/Gmsh/Geo_Arc.png
+.. figure:: ../../images/Gmsh/Geo_Arc.PNG
     :alt: Cut an arc
     :align: center
 
@@ -110,7 +110,7 @@ To start with programming, create a new empty input file or copy it from the exi
     :lines: 67
 
 |
-.. figure:: ../../images/Gmsh/Geo_Tunnel.png
+.. figure:: ../../images/Gmsh/Geo_Tunnel.PNG
     :alt: Cut a rectangle
     :align: center
 

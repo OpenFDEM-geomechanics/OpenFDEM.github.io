@@ -199,7 +199,7 @@ When you run the program, you can first check the mesh that was created by Gmsh 
 
 Check the boundary conditions here. Absorbing boundary conditions are on for both normal and shear directions. In-situ stresses are applied to the boundaries.
 
-.. figure:: ../../images/Command/Insitu_BC.png
+.. figure:: ../../images/Command/Insitu_BC.PNG
     :alt: Triangle elements
     :align: center
 

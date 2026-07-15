@@ -42,31 +42,45 @@ enhanced NBS algorithm is
 
 The enhanced NBS contact detection method used in mGbCDM
 
-.. table:: Table 1
+.. list-table:: Table 1
+   :widths: 10 90
+   :header-rows: 0
 
-   +-----------------------------------------------------------------------+
-   | **Step 1:** Loop the blocks and find the maximum size buffer box for  |
-   | the initial group box :math:`d(0) = d_{\max}`;                        |
-   +-----------------------------------------------------------------------+
-   | **Step 2**: Divide the blocks into :math:`n` groups with size of      |
-   | buffer box for the nth group box as                                   |
-   | :math:`d(n) = d_{\max} \cdot \alpha^{n - 1}`,                         |
-   | \ :math:`\alpha \in \left( 0\ ,\ \left. \ 1 \right\rbrack \right.\ `; |
-   +-----------------------------------------------------------------------+
-   | **Step 3:** All the blocks are mapped in to the grid space with edge  |
-   | length of :math:`d(0)` as depicted in Figure 2 , the central point of |
-   | the block :math:`{\underset{˙}{\mathbf{x}}}^{k}` is computed in Eq ;  |
-   +-----------------------------------------------------------------------+
-   | **Step 4:** Loop all the blocks and detect contacts for the first     |
-   | group, the contact couple groups is identified when                   |
-   | :math:`\left| {\underset{˙}{\mathbf{x}}}^{(t)}\  - \ {\underset{˙}{\m |
-   | athbf{x}}}^{(c)} \right| < \max\left( d^{(t)}\  + \ d^{(c)} \right)`, |
-   | the contact state can be recognized as neighboring contacts or center |
-   | contacts;                                                             |
-   +-----------------------------------------------------------------------+
-   | **Step 5:** Repeat step 3 and step 4 for all groups of the remaining  |
-   | blocks and identify the states of the contacts;                       |
-   +-----------------------------------------------------------------------+
+   * - Step
+     - Description
+
+   * - **Step 1**
+     - Loop the blocks and find the maximum size buffer box for the initial group box :math:`d(0)=d_{\max}`.
+
+   * - **Step 2**
+     - Divide the blocks into :math:`n` groups with size of buffer box for the nth group box as
+
+       .. math::
+
+          d(n)=d_{\max}\cdot\alpha^{n-1}
+
+       where :math:`\alpha\in(0,1]`.
+
+   * - **Step 3**
+     - All the blocks are mapped into the grid space with edge length of :math:`d(0)` as depicted in Figure 2.
+
+   * - **Step 4**
+     - Loop all the blocks and detect contacts for the first group.
+
+       The contact couple groups are identified when
+
+       .. math::
+
+          \left|
+          \dot{\mathbf{x}}^{(t)}
+          -
+          \dot{\mathbf{x}}^{(c)}
+          \right|
+          <
+          \max(d^{(t)}+d^{(c)})
+
+   * - **Step 5**
+     - Repeat Step 3 and Step 4 for all groups of the remaining blocks.
 
 
 Contact force in high-order elements
