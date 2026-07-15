@@ -558,28 +558,42 @@ enhanced NBS algorithm is</p>
 <p>The enhanced NBS contact detection method used in mGbCDM</p>
 <div class="pst-scrollable-table-container"><table class="table" id="id2">
 <caption><span class="caption-text">Table 1</span><a class="headerlink" href="#id2" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 10.0%" />
+<col style="width: 90.0%" />
+</colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Step 1:</strong> Loop the blocks and find the maximum size buffer box for
-the initial group box <span class="math notranslate nohighlight">\(d(0) = d_{\max}\)</span>;</p></td>
+<tr class="row-odd"><td><p>Step</p></td>
+<td><p>Description</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Step 2</strong>: Divide the blocks into <span class="math notranslate nohighlight">\(n\)</span> groups with size of
-buffer box for the nth group box as
-<span class="math notranslate nohighlight">\(d(n) = d_{\max} \cdot \alpha^{n - 1}\)</span>,
-<span class="math notranslate nohighlight">\(\alpha \in \left( 0\ ,\ \left. \ 1 \right\rbrack \right.\ \)</span>;</p></td>
+<tr class="row-even"><td><p><strong>Step 1</strong></p></td>
+<td><p>Loop the blocks and find the maximum size buffer box for the initial group box <span class="math notranslate nohighlight">\(d(0)=d_{\max}\)</span>.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Step 3:</strong> All the blocks are mapped in to the grid space with edge
-length of <span class="math notranslate nohighlight">\(d(0)\)</span> as depicted in Figure 2 , the central point of
-the block <span class="math notranslate nohighlight">\({\underset{˙}{\mathbf{x}}}^{k}\)</span> is computed in Eq ;</p></td>
+<tr class="row-odd"><td><p><strong>Step 2</strong></p></td>
+<td><p>Divide the blocks into <span class="math notranslate nohighlight">\(n\)</span> groups with size of buffer box for the nth group box as</p>
+<div class="math notranslate nohighlight">
+\[d(n)=d_{\max}\cdot\alpha^{n-1}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\alpha\in(0,1]\)</span>.</p>
+</td>
 </tr>
-<tr class="row-even"><td><p><strong>Step 4:</strong> Loop all the blocks and detect contacts for the first
-group, the contact couple groups is identified when
-<span class="math notranslate nohighlight">\(\left| {\underset{˙}{\mathbf{x}}}^{(t)}\  - \ {\underset{˙}{\m
-athbf{x}}}^{(c)} \right| &lt; \max\left( d^{(t)}\  + \ d^{(c)} \right)\)</span>,
-the contact state can be recognized as neighboring contacts or center
-contacts;</p></td>
+<tr class="row-even"><td><p><strong>Step 3</strong></p></td>
+<td><p>All the blocks are mapped into the grid space with edge length of <span class="math notranslate nohighlight">\(d(0)\)</span> as depicted in Figure 2.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Step 5:</strong> Repeat step 3 and step 4 for all groups of the remaining
-blocks and identify the states of the contacts;</p></td>
+<tr class="row-odd"><td><p><strong>Step 4</strong></p></td>
+<td><p>Loop all the blocks and detect contacts for the first group.</p>
+<p>The contact couple groups are identified when</p>
+<div class="math notranslate nohighlight">
+\[\left|
+\dot{\mathbf{x}}^{(t)}
+-
+\dot{\mathbf{x}}^{(c)}
+\right|
+&lt;
+\max(d^{(t)}+d^{(c)})\]</div>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>Step 5</strong></p></td>
+<td><p>Repeat Step 3 and Step 4 for all groups of the remaining blocks.</p></td>
 </tr>
 </tbody>
 </table>
