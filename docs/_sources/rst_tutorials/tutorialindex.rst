@@ -1,6 +1,17 @@
 Examples
 ===================================
 
+.. raw:: html
+
+   <script>
+   // 页面无锚点时,加载后自动定位到 "How to create a geometry" 小节
+   if (!window.location.hash) {
+     window.addEventListener('DOMContentLoaded', function () {
+       var el = document.getElementById('how-to-create-a-geometry');
+       if (el) { el.scrollIntoView(); }
+     });
+   }
+   </script>
 
 .. toctree::
    :maxdepth: 1
@@ -126,5 +137,4 @@ Phase Field
 
 .. raw:: html
 
-   <script src="//clustrmaps.com/globe.js?d=IJDdJTOZeBy5TaHUiVkIm7GLGSulnk0C2NzaC4-34QA">
-   </script>
+   <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=FhQBKeKNkCLqgUfZdslz45dHXRuV_WDVgVzZVYmuX7s&cl=ffffff&w=a"></script>

@@ -67,9 +67,14 @@ Rewrite the frames and construct the basic classes to enhance the readability an
 **2023.08**
 
 OpenFDEM website is online, and the binary code is available to public.
-  
+
+
+Changelog
+-----------------------------------
+
+**Version 4.0**
+
 
 .. raw:: html
 
-   <script src="//clustrmaps.com/globe.js?d=IJDdJTOZeBy5TaHUiVkIm7GLGSulnk0C2NzaC4-34QA">
-   </script>
+   <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=FhQBKeKNkCLqgUfZdslz45dHXRuV_WDVgVzZVYmuX7s&cl=ffffff&w=a"></script>

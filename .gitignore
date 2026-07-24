@@ -1,0 +1,5 @@
+docs/.doctrees/
+docs/.buildinfo
+docs/.buildinfo.bak
+*.rar
+*.zip

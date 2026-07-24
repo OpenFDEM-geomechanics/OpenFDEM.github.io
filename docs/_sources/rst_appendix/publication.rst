@@ -7,6 +7,7 @@ work should be listed here, please `contact us <xfli@whrsm.ac.cn>`_.
 
 2026
 ----
+- He L H, Li H B, Xie K R, Xing H Z, Li X F. *The dynamic fragmentation of homogeneous brittle materials: insights from the failure wave propagation*.  **Engineering Failure Analysis**, 2026, 197(B): 111229.
 - Li X F, Li Q, Li H B, He L H, Hu Z W, Xie K R, Xia X. *An improved constitutive model for predicting blast-induced damage zones and surrounding rock pressure*. **International Journal of Rock Mechanics and Mining Sciences**, 2026, 202: 106504.
 - Li Z H, Li X F, Li H B, Zhao Q, Grasselli G. *The performance of quadratic finite-discrete element method (qFDEM) and its potential advantages*. **Computers and Geotechnics**, 2026, 193: 107925.
 - Li X F, Li H B, Grasselli G. *Revisiting the Brazilian disc test with split Hopkinson pressure bar by high-speed digital image correlation analysis*. **Journal of Rock Mechanics and Geotechnical Engineering**, 2026, 18(5): 3499-3511.
@@ -62,5 +63,4 @@ Here is a list of representative outcomes for the FDEM method, those will help y
 
 .. raw:: html
 
-    <script src="//clustrmaps.com/globe.js?d=IJDdJTOZeBy5TaHUiVkIm7GLGSulnk0C2NzaC4-34QA">
-    </script>
+   <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=FhQBKeKNkCLqgUfZdslz45dHXRuV_WDVgVzZVYmuX7s&cl=ffffff&w=a"></script>
