@@ -98,44 +98,50 @@ the developer.
 |
 .. toctree::
    :maxdepth: 2
+   :hidden:
 
    rst_about_introduction/index
 
 
 .. toctree::
    :maxdepth: 2
-   
+   :hidden:
+
    rst_theory/index
 
 .. toctree::
    :maxdepth: 2
-   
+   :hidden:
+
    rst_tutorials/index
 
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
 
    rst_user_guide/index
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
 
    rst_downloads
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
 
    rst_about_us/index
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
 
    rst_appendix/index
 
 .. raw:: html
 
-   <script src="//clustrmaps.com/globe.js?d=IJDdJTOZeBy5TaHUiVkIm7GLGSulnk0C2NzaC4-34QA">
-   </script>
+   <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=FhQBKeKNkCLqgUfZdslz45dHXRuV_WDVgVzZVYmuX7s&cl=ffffff&w=a"></script>
 
 

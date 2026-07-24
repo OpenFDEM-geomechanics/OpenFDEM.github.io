@@ -40,7 +40,11 @@ code.literal,
     color: #24292e;
 }
 
-/* ===== 左上角 logo 占位图不可见(仅保留 OpenFDEM 文字)===== */
-.navbar-brand .logo-img {
-    display: none;
+/* ===== 左上角 logo 尺寸约束(图内已含 OpenFDEM 文字)===== */
+.navbar-brand .logo__image,
+.sidebar-header-items .logo__image,
+img.logo__image {
+    max-width: 100%;
+    height: auto;
+    max-height: 60px;
 }
