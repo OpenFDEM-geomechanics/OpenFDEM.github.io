@@ -48,3 +48,16 @@ img.logo__image {
     height: auto;
     max-height: 60px;
 }
+
+/* ===== 隐藏 MapMyVisitors 访客地图(统计脚本仍运行,只是不显示)===== */
+#mapmyvisitors,
+#mapmyvisitors + *,
+a[href*="clustrmaps.com"],
+a[href*="mapmyvisitors.com"],
+img[src*="clustrmaps.com"],
+img[src*="mapmyvisitors.com"],
+.clustrmaps-map,
+#clustrmaps,
+#clustrmaps-widget {
+    display: none !important;
+}
