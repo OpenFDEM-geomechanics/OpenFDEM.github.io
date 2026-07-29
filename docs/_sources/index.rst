@@ -25,9 +25,7 @@ What is OpenFDEM
 
 **OpenFDEM** is a free and open finite-discrete element simulation framework for
 accurately and efficiently solving diverse **multiscale, multiphase, and
-multiphysics** (3M) problems.
-
-Based on the **Finite-Discrete Element Method (FDEM)** , OpenFDEM integrates advanced
+multiphysics** (3M) problems. Based on the **Finite-Discrete Element Method (FDEM)** , OpenFDEM integrates advanced
 numerical methods, including the Material Point Method (MPM), Phase-Field Method
 (PFM), and Finite Difference Method (FDM), to simulate complex problems involving
 solid mechanics, fluid dynamics, heat transfer, and their coupled processes.

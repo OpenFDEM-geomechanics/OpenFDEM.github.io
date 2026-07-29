@@ -12,6 +12,7 @@ Introduction
 
    introduction
    how_to_install
+   openfdem_gui
    history
    copyrights
 
