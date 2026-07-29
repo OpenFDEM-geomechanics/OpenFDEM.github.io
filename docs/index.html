@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=779d60c6" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c2add4de" />
   
   <!-- So that users can add custom icons -->
   <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -152,7 +152,7 @@
     <div class="bd-toc-item navbar-nav active">
         <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="rst_about_introduction/index.html">Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="rst_about_introduction/introduction.html">What is OpenFDEM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst_about_introduction/introduction.html">Features of OpenFDEM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rst_about_introduction/how_to_install.html">How to Install</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rst_about_introduction/history.html">History</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rst_about_introduction/copyrights.html">Copyright</a></li>
@@ -512,7 +512,9 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-openfdem">What is OpenFDEM</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-openfdem">What is OpenFDEM</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-fdem">Introduction to FDEM</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-openfdem">Applications of OpenFDEM</a><ul class="nav section-nav flex-column">
 </ul>
 </li>
 </ul>
@@ -533,14 +535,121 @@
 <p>Copyright (©) 2017 - 2026 by Dr. Xiaofeng Li.</p>
 <section id="what-is-openfdem">
 <h2>What is OpenFDEM<a class="headerlink" href="#what-is-openfdem" title="Link to this heading">#</a></h2>
-<p><strong>OpenFDEM</strong> is an open-source(free) and object-oriented finite and discrete element solver for solving diverse <strong>multiscale,
-multiphase and multiphysics</strong> (3M) problems accurately with high performance computations. Its applications include but
-are not limited to mechanical, thermal and fluid dynamics. OpenFDEM also provides a wide range of flexibility in
-geometry, mesh and material modules. <code class="docutils literal notranslate"><span class="pre">OpenFDEM</span></code> is constructed by C++, and can be operated with an extensive Python C++ interface.</p>
-<p><code class="docutils literal notranslate"><span class="pre">OpenFDEM</span></code> is open-free (first stage) or open-source (second stage) under GNU license and can be used even in comercial softwares as it is before properly get the copyright from
-the developer.</p>
-<img alt="landslide gif" src="_images/landslide.gif" />
-<div class="line-block">
+<p><strong>OpenFDEM</strong> is a free and open finite-discrete element simulation framework for
+accurately and efficiently solving diverse <strong>multiscale, multiphase, and
+multiphysics</strong> (3M) problems.</p>
+<p>Based on the <strong>Finite-Discrete Element Method (FDEM)</strong> , OpenFDEM integrates advanced
+numerical methods, including the Material Point Method (MPM), Phase-Field Method
+(PFM), and Finite Difference Method (FDM), to simulate complex problems involving
+solid mechanics, fluid dynamics, heat transfer, and their coupled processes.
+Developed in C++, OpenFDEM provides flexible modules for geometry, mesh, and
+material management. It is widely applicable to fracture, fragmentation, impact,
+fluid-solid interaction, and large-deformation problems.</p>
+</section>
+<section id="introduction-to-fdem">
+<h2>Introduction to FDEM<a class="headerlink" href="#introduction-to-fdem" title="Link to this heading">#</a></h2>
+<p>FDEM is a hybrid numerical method that combines the advantages of the Finite
+Element Method (FEM) and the Discrete Element Method (DEM). Similar to FEM, FDEM
+describes the deformation of continuous media through spatial discretization and
+differential equations. Meanwhile, it incorporates DEM-based contact detection
+and contact force calculation algorithms to simulate interactions between
+separated bodies. Unlike conventional hybrid methods, discrete elements in FDEM
+are generated naturally after the failure of continuous elements. Therefore, the
+transition from a continuous state to a fractured and fully fragmented state
+occurs automatically during the simulation process.</p>
+<p>Benefiting from this unique capability, FDEM can realistically reproduce the
+complete failure process of brittle materials, including elastic deformation,
+crack initiation, crack propagation, fragmentation, and post-failure motion,
+making it suitable for simulations of materials such as glass, rocks, ceramics,
+and concrete.</p>
+<div style="text-align:center;">
+  <video autoplay loop muted playsinline style="max-width:45%;border-radius:4px;">
+    <source src="_static/videos/hn_glass_real.mp4" type="video/mp4">
+  </video>
+  <p style="color:#555;font-style:italic;margin-top:4px;">Figure 1. Glass fragmentation in reality.</p>
+</div>
+
+<div style="text-align:center;">
+  <video autoplay loop muted playsinline style="max-width:80%;border-radius:4px;">
+    <source src="_static/videos/hn_glass_sim.mp4" type="video/mp4">
+  </video>
+  <p style="color:#555;font-style:italic;margin-top:4px;">Figure 2. Simulation of glass fragmentation (Left: continuous method; Middle: continuum damage method; Right: FDEM simulation).</p>
+</div></section>
+<section id="applications-of-openfdem">
+<h2>Applications of OpenFDEM<a class="headerlink" href="#applications-of-openfdem" title="Link to this heading">#</a></h2>
+<p><strong>1. Underground Excavation</strong></p>
+<p>OpenFDEM can simulate excavation and blasting processes in underground
+engineering, including stress wave propagation, crack growth, fragmentation, and
+rock mass failure. By considering material heterogeneity and damage evolution,
+OpenFDEM helps analyze excavation-induced damage and optimize engineering
+designs.</p>
+<div style="text-align:center;">
+  <div style="display:flex;gap:2%;justify-content:center;flex-wrap:wrap;">
+    <video autoplay loop muted playsinline style="width:32%;border-radius:4px;">
+      <source src="_static/videos/hn_excav_static.mp4" type="video/mp4">
+    </video>
+    <video autoplay loop muted playsinline style="width:32%;border-radius:4px;">
+      <source src="_static/videos/hn_excav_dynamic.mp4" type="video/mp4">
+    </video>
+    <video autoplay loop muted playsinline style="width:32%;border-radius:4px;">
+      <source src="_static/videos/hn_excav_blast.mp4" type="video/mp4">
+    </video>
+  </div>
+  <p style="color:#555;font-style:italic;margin-top:4px;">Figure 3. Tunnel excavation simulations (static / dynamic / drill-and-blast).</p>
+</div><p><strong>2. Fluid-Solid Coupling</strong></p>
+<p>OpenFDEM can simulate complex fluid-solid interaction problems, such as
+seepage-induced failure, tunnel water inrush, and underground storage leakage.
+By coupling solid deformation with fluid flow, it enables the analysis of
+hydro-mechanical processes and related geological hazards.</p>
+<div style="text-align:center;">
+  <video autoplay loop muted playsinline style="max-width:70%;border-radius:4px;">
+    <source src="_static/videos/hn_tapwater.mp4" type="video/mp4">
+  </video>
+  <p style="color:#555;font-style:italic;margin-top:4px;">Figure 4. Tap water flow into a tank.</p>
+</div><p><strong>3. Granular Flow and Particle Dynamics</strong></p>
+<p>OpenFDEM is suitable for simulating granular materials, including particle flow,
+deposition, crushing, and rearrangement processes. The explicit treatment of
+particle interactions makes it applicable to high-density granular systems and
+particle-structure interaction problems.</p>
+<div style="text-align:center;">
+  <video autoplay loop muted playsinline style="max-width:70%;border-radius:4px;">
+    <source src="_static/videos/hn_landslide.mp4" type="video/mp4">
+  </video>
+  <p style="color:#555;font-style:italic;margin-top:4px;">Figure 5. Landslide simulation.</p>
+</div><p><strong>4. Impact and Dynamic Loading</strong></p>
+<p>OpenFDEM can reproduce material responses under high-rate loading conditions,
+including stress wave propagation, dynamic fracture, and fragment generation. It
+is applicable to impact, blast, and penetration problems for analyzing failure
+mechanisms of materials and structures.</p>
+<div style="text-align:center;">
+  <video autoplay loop muted playsinline style="max-width:70%;border-radius:4px;">
+    <source src="_static/videos/hn_impact.mp4" type="video/mp4">
+  </video>
+  <p style="color:#555;font-style:italic;margin-top:4px;">Figure 6. Impact simulation.</p>
+</div><p><strong>5. Large Deformation Problems</strong></p>
+<p>OpenFDEM provides robust solutions for large-displacement and strongly nonlinear
+problems involving severe deformation and contact evolution. It can be applied to
+landslides, ground deformation, and soft soil settlement simulations.</p>
+<div style="text-align:center;">
+  <video autoplay loop muted playsinline style="max-width:70%;border-radius:4px;">
+    <source src="_static/videos/hn_large_deform.mp4" type="video/mp4">
+  </video>
+  <p style="color:#555;font-style:italic;margin-top:4px;">Figure 7. Large deformation.</p>
+</div><p><strong>6. Complex Contact Problems</strong></p>
+<p>OpenFDEM is capable of handling complex contact interactions, including sliding,
+separation, fracture, and interface debonding. It is suitable for studying rock
+block movement, structural failure, and composite material interface damage.</p>
+<div style="text-align:center;">
+  <div style="display:flex;gap:2%;justify-content:center;align-items:center;flex-wrap:wrap;">
+    <video autoplay loop muted playsinline style="width:53.7%;border-radius:4px;">
+      <source src="_static/videos/hn_contact_interface.mp4" type="video/mp4">
+    </video>
+    <video autoplay loop muted playsinline style="width:42.3%;border-radius:4px;">
+      <source src="_static/videos/hn_contact_update.mp4" type="video/mp4">
+    </video>
+  </div>
+  <p style="color:#555;font-style:italic;margin-top:4px;">Figure 8. Complex interface contact simulation (left) and dynamic updating of contact lists (right).</p>
+</div><div class="line-block">
 <div class="line"><br /></div>
 </div>
 <div class="toctree-wrapper compound">
@@ -598,7 +707,9 @@ the developer.</p>
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-openfdem">What is OpenFDEM</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-openfdem">What is OpenFDEM</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-fdem">Introduction to FDEM</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-openfdem">Applications of OpenFDEM</a><ul class="nav section-nav flex-column">
 </ul>
 </li>
 </ul>
