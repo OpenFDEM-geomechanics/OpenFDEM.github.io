@@ -1,4 +1,4 @@
-History
+History and Changelog
 ==========================================
 
 The OpenFDEM project started from 2017 when I was a PhD candidate in Monash University, it has evolved from continuum-discontinuum method (CDM), also written in C++.  At that time, it only had matrix solving capabilities, 

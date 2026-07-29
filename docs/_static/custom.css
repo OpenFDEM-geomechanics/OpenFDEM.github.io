@@ -61,3 +61,24 @@ img[src*="mapmyvisitors.com"],
 #clustrmaps-widget {
     display: none !important;
 }
+
+/* ===== 加宽正文区,减少左右留白 ===== */
+/* 整页最大宽度(含侧栏),默认 88rem */
+.bd-page-width {
+    max-width: 100rem !important;
+}
+/* 正文容器最大宽度,默认 60em -> 加宽 */
+.bd-main .bd-content .bd-article-container {
+    max-width: 85em !important;
+}
+
+/* ===== 首页 Applications 子标题:圆点前缀 + 加大字号 ===== */
+p.app-subhead {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-top: 1.6rem;
+    margin-bottom: 0.6rem;
+}
+p.app-subhead::before {
+    content: "\2022\00a0\00a0";  /* 圆点 + 两个空格 */
+}
