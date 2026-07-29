@@ -56,7 +56,7 @@ and concrete.
 .. raw:: html
 
    <div style="text-align:center;">
-     <video autoplay loop muted playsinline style="max-width:45%;border-radius:4px;">
+     <video autoplay loop muted playsinline style="width:35%;border-radius:4px;">
        <source src="_static/videos/hn_glass_real.mp4" type="video/mp4">
      </video>
      <p style="color:#555;font-style:italic;margin-top:4px;">Figure 1. Glass fragmentation in reality.</p>
@@ -73,7 +73,9 @@ and concrete.
 Applications of OpenFDEM
 ------------------------
 
-**1. Underground Excavation**
+.. rst-class:: app-subhead
+
+Underground Excavation
 
 OpenFDEM can simulate excavation and blasting processes in underground
 engineering, including stress wave propagation, crack growth, fragmentation, and
@@ -98,7 +100,9 @@ designs.
      <p style="color:#555;font-style:italic;margin-top:4px;">Figure 3. Tunnel excavation simulations (static / dynamic / drill-and-blast).</p>
    </div>
 
-**2. Fluid-Solid Coupling**
+.. rst-class:: app-subhead
+
+Fluid-Solid Coupling
 
 OpenFDEM can simulate complex fluid-solid interaction problems, such as
 seepage-induced failure, tunnel water inrush, and underground storage leakage.
@@ -114,7 +118,9 @@ hydro-mechanical processes and related geological hazards.
      <p style="color:#555;font-style:italic;margin-top:4px;">Figure 4. Tap water flow into a tank.</p>
    </div>
 
-**3. Granular Flow and Particle Dynamics**
+.. rst-class:: app-subhead
+
+Granular Flow and Particle Dynamics
 
 OpenFDEM is suitable for simulating granular materials, including particle flow,
 deposition, crushing, and rearrangement processes. The explicit treatment of
@@ -130,7 +136,9 @@ particle-structure interaction problems.
      <p style="color:#555;font-style:italic;margin-top:4px;">Figure 5. Landslide simulation.</p>
    </div>
 
-**4. Impact and Dynamic Loading**
+.. rst-class:: app-subhead
+
+Impact and Dynamic Loading
 
 OpenFDEM can reproduce material responses under high-rate loading conditions,
 including stress wave propagation, dynamic fracture, and fragment generation. It
@@ -146,7 +154,9 @@ mechanisms of materials and structures.
      <p style="color:#555;font-style:italic;margin-top:4px;">Figure 6. Impact simulation.</p>
    </div>
 
-**5. Large Deformation Problems**
+.. rst-class:: app-subhead
+
+Large Deformation Problems
 
 OpenFDEM provides robust solutions for large-displacement and strongly nonlinear
 problems involving severe deformation and contact evolution. It can be applied to
@@ -161,7 +171,9 @@ landslides, ground deformation, and soft soil settlement simulations.
      <p style="color:#555;font-style:italic;margin-top:4px;">Figure 7. Large deformation.</p>
    </div>
 
-**6. Complex Contact Problems**
+.. rst-class:: app-subhead
+
+Complex Contact Problems
 
 OpenFDEM is capable of handling complex contact interactions, including sliding,
 separation, fracture, and interface debonding. It is suitable for studying rock
