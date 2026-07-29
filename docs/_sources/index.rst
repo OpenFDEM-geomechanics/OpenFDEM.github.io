@@ -23,19 +23,166 @@ Copyright (©) 2017 - 2026 by Dr. Xiaofeng Li.
 What is OpenFDEM
 ----------------
 
-**OpenFDEM** is an open-source(free) and object-oriented finite and discrete element solver for solving diverse **multiscale, 
-multiphase and multiphysics** (3M) problems accurately with high performance computations. Its applications include but 
-are not limited to mechanical, thermal and fluid dynamics. OpenFDEM also provides a wide range of flexibility in 
-geometry, mesh and material modules. ``OpenFDEM`` is constructed by C++, and can be operated with an extensive Python C++ interface.
+**OpenFDEM** is a free and open finite-discrete element simulation framework for
+accurately and efficiently solving diverse **multiscale, multiphase, and
+multiphysics** (3M) problems.
 
-``OpenFDEM`` is open-free (first stage) or open-source (second stage) under GNU license and can be used even in comercial softwares as it is before properly get the copyright from
-the developer. 
+Based on the **Finite-Discrete Element Method (FDEM)** , OpenFDEM integrates advanced
+numerical methods, including the Material Point Method (MPM), Phase-Field Method
+(PFM), and Finite Difference Method (FDM), to simulate complex problems involving
+solid mechanics, fluid dynamics, heat transfer, and their coupled processes.
+Developed in C++, OpenFDEM provides flexible modules for geometry, mesh, and
+material management. It is widely applicable to fracture, fragmentation, impact,
+fluid-solid interaction, and large-deformation problems.
 
 
-.. image:: ../images/Introduction/landslide.gif
-  :alt: landslide gif 
+Introduction to FDEM
+--------------------
 
-  
+FDEM is a hybrid numerical method that combines the advantages of the Finite
+Element Method (FEM) and the Discrete Element Method (DEM). Similar to FEM, FDEM
+describes the deformation of continuous media through spatial discretization and
+differential equations. Meanwhile, it incorporates DEM-based contact detection
+and contact force calculation algorithms to simulate interactions between
+separated bodies. Unlike conventional hybrid methods, discrete elements in FDEM
+are generated naturally after the failure of continuous elements. Therefore, the
+transition from a continuous state to a fractured and fully fragmented state
+occurs automatically during the simulation process.
+
+Benefiting from this unique capability, FDEM can realistically reproduce the
+complete failure process of brittle materials, including elastic deformation,
+crack initiation, crack propagation, fragmentation, and post-failure motion,
+making it suitable for simulations of materials such as glass, rocks, ceramics,
+and concrete.
+
+.. raw:: html
+
+   <div style="text-align:center;">
+     <video autoplay loop muted playsinline style="max-width:45%;border-radius:4px;">
+       <source src="_static/videos/hn_glass_real.mp4" type="video/mp4">
+     </video>
+     <p style="color:#555;font-style:italic;margin-top:4px;">Figure 1. Glass fragmentation in reality.</p>
+   </div>
+
+   <div style="text-align:center;">
+     <video autoplay loop muted playsinline style="max-width:80%;border-radius:4px;">
+       <source src="_static/videos/hn_glass_sim.mp4" type="video/mp4">
+     </video>
+     <p style="color:#555;font-style:italic;margin-top:4px;">Figure 2. Simulation of glass fragmentation (Left: continuous method; Middle: continuum damage method; Right: FDEM simulation).</p>
+   </div>
+
+
+Applications of OpenFDEM
+------------------------
+
+**1. Underground Excavation**
+
+OpenFDEM can simulate excavation and blasting processes in underground
+engineering, including stress wave propagation, crack growth, fragmentation, and
+rock mass failure. By considering material heterogeneity and damage evolution,
+OpenFDEM helps analyze excavation-induced damage and optimize engineering
+designs.
+
+.. raw:: html
+
+   <div style="text-align:center;">
+     <div style="display:flex;gap:2%;justify-content:center;flex-wrap:wrap;">
+       <video autoplay loop muted playsinline style="width:32%;border-radius:4px;">
+         <source src="_static/videos/hn_excav_static.mp4" type="video/mp4">
+       </video>
+       <video autoplay loop muted playsinline style="width:32%;border-radius:4px;">
+         <source src="_static/videos/hn_excav_dynamic.mp4" type="video/mp4">
+       </video>
+       <video autoplay loop muted playsinline style="width:32%;border-radius:4px;">
+         <source src="_static/videos/hn_excav_blast.mp4" type="video/mp4">
+       </video>
+     </div>
+     <p style="color:#555;font-style:italic;margin-top:4px;">Figure 3. Tunnel excavation simulations (static / dynamic / drill-and-blast).</p>
+   </div>
+
+**2. Fluid-Solid Coupling**
+
+OpenFDEM can simulate complex fluid-solid interaction problems, such as
+seepage-induced failure, tunnel water inrush, and underground storage leakage.
+By coupling solid deformation with fluid flow, it enables the analysis of
+hydro-mechanical processes and related geological hazards.
+
+.. raw:: html
+
+   <div style="text-align:center;">
+     <video autoplay loop muted playsinline style="max-width:70%;border-radius:4px;">
+       <source src="_static/videos/hn_tapwater.mp4" type="video/mp4">
+     </video>
+     <p style="color:#555;font-style:italic;margin-top:4px;">Figure 4. Tap water flow into a tank.</p>
+   </div>
+
+**3. Granular Flow and Particle Dynamics**
+
+OpenFDEM is suitable for simulating granular materials, including particle flow,
+deposition, crushing, and rearrangement processes. The explicit treatment of
+particle interactions makes it applicable to high-density granular systems and
+particle-structure interaction problems.
+
+.. raw:: html
+
+   <div style="text-align:center;">
+     <video autoplay loop muted playsinline style="max-width:70%;border-radius:4px;">
+       <source src="_static/videos/hn_landslide.mp4" type="video/mp4">
+     </video>
+     <p style="color:#555;font-style:italic;margin-top:4px;">Figure 5. Landslide simulation.</p>
+   </div>
+
+**4. Impact and Dynamic Loading**
+
+OpenFDEM can reproduce material responses under high-rate loading conditions,
+including stress wave propagation, dynamic fracture, and fragment generation. It
+is applicable to impact, blast, and penetration problems for analyzing failure
+mechanisms of materials and structures.
+
+.. raw:: html
+
+   <div style="text-align:center;">
+     <video autoplay loop muted playsinline style="max-width:70%;border-radius:4px;">
+       <source src="_static/videos/hn_impact.mp4" type="video/mp4">
+     </video>
+     <p style="color:#555;font-style:italic;margin-top:4px;">Figure 6. Impact simulation.</p>
+   </div>
+
+**5. Large Deformation Problems**
+
+OpenFDEM provides robust solutions for large-displacement and strongly nonlinear
+problems involving severe deformation and contact evolution. It can be applied to
+landslides, ground deformation, and soft soil settlement simulations.
+
+.. raw:: html
+
+   <div style="text-align:center;">
+     <video autoplay loop muted playsinline style="max-width:70%;border-radius:4px;">
+       <source src="_static/videos/hn_large_deform.mp4" type="video/mp4">
+     </video>
+     <p style="color:#555;font-style:italic;margin-top:4px;">Figure 7. Large deformation.</p>
+   </div>
+
+**6. Complex Contact Problems**
+
+OpenFDEM is capable of handling complex contact interactions, including sliding,
+separation, fracture, and interface debonding. It is suitable for studying rock
+block movement, structural failure, and composite material interface damage.
+
+.. raw:: html
+
+   <div style="text-align:center;">
+     <div style="display:flex;gap:2%;justify-content:center;align-items:center;flex-wrap:wrap;">
+       <video autoplay loop muted playsinline style="width:53.7%;border-radius:4px;">
+         <source src="_static/videos/hn_contact_interface.mp4" type="video/mp4">
+       </video>
+       <video autoplay loop muted playsinline style="width:42.3%;border-radius:4px;">
+         <source src="_static/videos/hn_contact_update.mp4" type="video/mp4">
+       </video>
+     </div>
+     <p style="color:#555;font-style:italic;margin-top:4px;">Figure 8. Complex interface contact simulation (left) and dynamic updating of contact lists (right).</p>
+   </div>
+
 ..
    去掉过期call for papers
    Call for papers

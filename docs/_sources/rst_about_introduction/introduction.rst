@@ -1,4 +1,4 @@
-What is OpenFDEM
+Features of OpenFDEM
 ==============================
 
 **OpenFDEM** (open-source Hybrid Finite-Discrete Element Method, also named Open-source Combined Finite-Discrete Element Method) is a scientific software for the numerical solution of partial differential equations, 
