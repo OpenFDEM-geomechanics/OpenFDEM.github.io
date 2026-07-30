@@ -193,6 +193,20 @@ block movement, structural failure, and composite material interface damage.
      <p style="color:#555;font-style:italic;margin-top:4px;">Figure 8. Complex interface contact simulation (left) and dynamic updating of contact lists (right).</p>
    </div>
 
+
+Usage Statistics
+---------------
+
+Since its public release in August 2023, OpenFDEM has attracted more than 66,000 visits and received attention
+from users in over 60 countries and regions, including China, the United States, the United Kingdom, Canada, and Australia.
+To date, 84 research groups have used OpenFDEM free of charge to conduct related research.
+
+.. figure:: ../images/Introduction/visitors_status.png
+    :width: 70%
+    :align: center
+
+    OpenFDEM has attracted researchers and users from around the world.
+
 ..
    去掉过期call for papers
    Call for papers
