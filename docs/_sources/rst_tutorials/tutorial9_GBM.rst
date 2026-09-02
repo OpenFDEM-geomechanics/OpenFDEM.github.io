@@ -12,7 +12,7 @@ Grain-based model (GBM), interface with Neper
 Grain based modeling for UCS example. The grain-based model is constructed by the Voronoi tessellations fron `Neper <https://neper.info/>`_,  ``.geo``  or ``.inp`` files can be directly imported by OpenFDEM and each tessellation will be created into
 a individual physcial group. The user can regroup those tessellations into different minerals by assigning the area ratio, OpenFDEM will create those mineral groups by random to approach the predesigned mineral distributions.
 
-.. figure:: ../../images/User_Guide/grainbasedmodel.png
+.. figure:: ../_static/User_Guide/grainbasedmodel.png
     :alt: Geometry of the uniaxial compression test
     :align: center
 

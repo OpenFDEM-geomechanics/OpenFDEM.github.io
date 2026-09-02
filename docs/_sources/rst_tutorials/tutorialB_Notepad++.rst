@@ -24,14 +24,14 @@ This template file can be imported into ``NotePad++`` and highlights all the key
 If ``NotePad++`` is not installed in your computer, you can download this `free software <https://notepad-plus-plus.org/>`_ and install the package on your computer. To import the template file, you can
 
 - go to :guilabel:`Language` > :guilabel:`User Defined Language` > :guilabel:`Define your language`.
-.. figure:: ../../images/Notepad++/fdem.png
+.. figure:: ../_static/Notepad++/fdem.png
     :alt: Steps to import the [fdem.xml] script
     :align: center
 
     Figure 1: Steps to import the [fdem.xml] script
 
 - Import and select ``fdem.xml`` in the installation directory.
-.. figure:: ../../images/Notepad++/User_Defined.png
+.. figure:: ../_static/Notepad++/User_Defined.png
     :alt: NotePad++ User Defined Language Setting and Keywords
     :align: center
 

@@ -43,7 +43,7 @@ Example:
 
     of.geometry.remove.circle [tunnel] [rock] center [0,0] rad 1.0 segments 10
 
-.. figure:: ../../../images/User_Guide/Circle_Remove.png
+.. figure:: ../../_static/User_Guide/Circle_Remove.png
     :alt: Circle_Removes
     :align: center
     :scale: 60%

@@ -1,0 +1,23 @@
+Blogs
+=============================================
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+
+   Blogs/20230804_Call_for_Paper
+
+August 2023
+~~~~~~~~~~~
+
+.. grid:: 3
+   
+   .. grid-item-card::  *Call for Paper*
+      :img-top: ../_static/Blogs/JRMGE.jpg
+      :link: Blogs/20230804_Call_for_Paper
+      :link-type: doc
+
+.. raw:: html
+
+   <script src="//clustrmaps.com/globe.js?d=IJDdJTOZeBy5TaHUiVkIm7GLGSulnk0C2NzaC4-34QA">
+   </script>

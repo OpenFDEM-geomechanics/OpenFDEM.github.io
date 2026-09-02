@@ -43,7 +43,7 @@ Example:
 
     of.geometry.cut.square [tunnel] [rock] x [0 1] y [0 1]
 
-.. figure:: ../../../images/User_Guide/Square_Cut.png
+.. figure:: ../../_static/User_Guide/Square_Cut.png
     :alt: Square
     :align: center
     :scale: 60%

@@ -69,7 +69,7 @@ Based on the code in tutorial 6, fracture flow parameters will be add to model t
 ==================================
 1. Hydro module, Fracture flow module and CZM module are on to model the hydro fracture flow.
 
-.. figure:: ../../images/Command/Hydro_Fracture_Modulus.PNG
+.. figure:: ../_static/Command/Hydro_Fracture_Modulus.PNG
     :alt: Applied Modules
     :align: center
 
@@ -77,7 +77,7 @@ Based on the code in tutorial 6, fracture flow parameters will be add to model t
 
 2. Contact material, hydro fracture material and hydro fluid material are include in the modeling.
 
-.. figure:: ../../images/Command/Hydro_Fracture_Material.PNG
+.. figure:: ../_static/Command/Hydro_Fracture_Material.PNG
     :alt: Hydro Fracture Materials
     :align: center
 
@@ -85,7 +85,7 @@ Based on the code in tutorial 6, fracture flow parameters will be add to model t
 
 3. Hydro boundary conditions.
 
-.. figure:: ../../images/Command/Hydro_BC.PNG
+.. figure:: ../_static/Command/Hydro_BC.PNG
     :alt: Hydro Boundary Conditions
     :align: center
 
@@ -96,7 +96,7 @@ Based on the code in tutorial 6, fracture flow parameters will be add to model t
 ==================================
 Fluid pressure of fracture flow.
 
-.. figure:: ../../images/Result/Fracture_Viridis.gif
+.. figure:: ../_static/Result/Fracture_Viridis.gif
     :alt: Hydro Fracture Flow
     :align: center
 

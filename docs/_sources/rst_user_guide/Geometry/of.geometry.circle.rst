@@ -31,7 +31,7 @@ Example:
     # The circle will not be a perfect circle. Instead, it will be approximated by a decagon.
     of.geometry.circle [rock] center [0,0] rad 1.0 segments 10
 
-.. figure:: ../../../images/User_Guide/Circle.png
+.. figure:: ../../_static/User_Guide/Circle.png
     :alt: Circle
     :align: center
     :scale: 60%

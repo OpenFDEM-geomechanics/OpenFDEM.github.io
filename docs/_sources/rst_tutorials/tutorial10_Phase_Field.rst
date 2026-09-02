@@ -140,7 +140,7 @@ To start with programming, create a new empty text file (later add the `.of` ext
 ==================================
 When you run the program, you can first check the mesh that was created by Gmsh as shown in Figure 2. If the mesh has a good quality, you can close the window to continue run the program.
 
-.. figure:: ../../images/Gmsh/Phase_Field.png
+.. figure:: ../_static/Gmsh/Phase_Field.png
     :alt: Mesh of the sample
     :align: center
 

@@ -25,7 +25,7 @@ filters for processing data (:guilabel:`Filters` menu). The :guilabel:`Tools` me
 provides access to some of the advanced features in paraview such as
 managing plugins and favorites.
 
-.. figure:: https://docs.paraview.org/en/latest/_images/GUIOverview.png
+.. figure:: https://docs.paraview.org/en/latest/__static/GUIOverview.png
   :name: fig-GUIOverview
   :width: 100%
   :align: center
@@ -47,7 +47,7 @@ Results visualization for OpenFDEM
 ------------------------------
 1. Go to the toolbar > File > Open... and choose the file path of the results and click OK. It will import all results under this category. You may also expand the group and select a single file.
 
-.. figure:: ../../images/ParaView/ParaView_import_Files.png
+.. figure:: ../_static/ParaView/ParaView_import_Files.png
     :alt: Import Files to ParaView
     :align: center
 
@@ -55,7 +55,7 @@ Results visualization for OpenFDEM
 
 2. Click Apply to show the data.
 
-.. figure:: ../../images/ParaView/Apply.png
+.. figure:: ../_static/ParaView/Apply.png
     :alt: Apply the data to show
     :align: center
 
@@ -64,7 +64,7 @@ Results visualization for OpenFDEM
 
 3. If the figure of the result is too small, choose reset to rescale the model.
 
-.. figure:: ../../images/ParaView/Reset.png
+.. figure:: ../_static/ParaView/Reset.png
     :alt: Reset the view.
     :align: center
  
@@ -73,7 +73,7 @@ Results visualization for OpenFDEM
 
 4. Select "runme_field_0.vtu" and change the result to "Stress"
 
-.. figure:: ../../images/ParaView/Stress.png
+.. figure:: ../_static/ParaView/Stress.png
     :alt: Show the Stress
     :align: center
 
@@ -82,7 +82,7 @@ Results visualization for OpenFDEM
 
 5. To go to the next frame, users may use the arrow, select specific frame number, or enter the frame number. In this example, the last frame will be used.
 
-.. figure:: ../../images/ParaView/Frames.png
+.. figure:: ../_static/ParaView/Frames.png
     :alt: Show a specific frame.
     :align: center
 
@@ -91,7 +91,7 @@ Results visualization for OpenFDEM
 
 6. Select "Clamp and update every timestep" for Automatic Rescale Range Mode.
 
-.. figure:: ../../images/ParaView/Clamp_range.png
+.. figure:: ../_static/ParaView/Clamp_range.png
     :alt: Clamp the range.
     :align: center
   
@@ -100,7 +100,7 @@ Results visualization for OpenFDEM
 
 7. Go to the last step of the result. The sample is fractured under compression.
 
-.. figure:: ../../images/ParaView/Last_step.png
+.. figure:: ../_static/ParaView/Last_step.png
     :alt: Last step of the UCS test
     :align: center
 
@@ -108,7 +108,7 @@ Results visualization for OpenFDEM
 
 8. If the result is not shown in the correct color scheme, click "Rescale to Visible Data Range".
 
-.. figure:: ../../images/ParaView/Rescale.png
+.. figure:: ../_static/ParaView/Rescale.png
     :alt: Rescale to the data range
     :align: center
 
@@ -116,7 +116,7 @@ Results visualization for OpenFDEM
 
 9. Select "runme_fracture_elements_0" and choose "Fracture Mode" with type of "Feature Edges" to show the cracking boundaries.
 
-.. figure:: ../../images/ParaView/Fracture_mode.png
+.. figure:: ../_static/ParaView/Fracture_mode.png
     :alt: Fracture_mode
     :align: center
 
@@ -124,7 +124,7 @@ Results visualization for OpenFDEM
 
 10. To only show the sample without platens, users can select the "runme_field_0.vtu" file and use threshold filter in filters.
 
-.. figure:: ../../images/ParaView/Filters.png
+.. figure:: ../_static/ParaView/Filters.png
     :alt: Filters
     :align: center
 
@@ -132,7 +132,7 @@ Results visualization for OpenFDEM
 
 11. To filter the sample out, choose "ele_group_rock" with condition of above upper thresold 1 and apply.
 
-.. figure:: ../../images/ParaView/Threshold.png
+.. figure:: ../_static/ParaView/Threshold.png
     :alt: Threshold
     :align: center
 
@@ -140,7 +140,7 @@ Results visualization for OpenFDEM
 
 12. You may show results with the rock sample only now.
 
-.. figure:: ../../images/ParaView/Result.png
+.. figure:: ../_static/ParaView/Result.png
     :alt: Result
     :align: center
 
@@ -217,7 +217,7 @@ Output:
     [62 rows x 2 columns]
 
 - Plotting stress vs strain curve.
-.. figure:: ../../images/ParaView/stress_strain.png
+.. figure:: ../_static/ParaView/stress_strain.png
     :alt: Result
     :align: center
   
@@ -259,7 +259,7 @@ Output:
 
 
 - Extract information of a particular cell based on a sequence of array names. This can be extended to extracting information along a line. Works in 2D and 3D.
-.. figure:: ../../images/ParaView/plot_point_over_time.png
+.. figure:: ../_static/ParaView/plot_point_over_time.png
     :alt: Result
     :align: center
 
@@ -267,14 +267,14 @@ Output:
 
 
 - Extract information of a threshold dataset criteria based on a sequence of array names. Works in 2D and 3D.
-.. figure:: ../../images/ParaView/temp_evolution.png
+.. figure:: ../_static/ParaView/temp_evolution.png
     :alt: Result
     :align: center
 
     Figure 14: Temperature evolution over time
 
 - Extract mesh information and plot rosette/polar plots. Limited to 2D.
-.. figure:: ../../images/ParaView/mesh_rose_diagram.png
+.. figure:: ../_static/ParaView/mesh_rose_diagram.png
     :alt: Result
     :align: center
 

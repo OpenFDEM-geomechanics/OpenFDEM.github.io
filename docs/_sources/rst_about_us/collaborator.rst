@@ -2,7 +2,7 @@ Collaborating
 ##############
 
 
-.. figure:: ../../images/Aboutus/ISRMlogo.png   
+.. figure:: ../_static/AboutUs/ISRMlogo.png   
     :align: left
 
 |
@@ -66,7 +66,7 @@ Collaborating
 
 |
 
-.. figure:: ../../images/Aboutus/monashlogo.png   
+.. figure:: ../_static/AboutUs/monashlogo.png   
     :align: left
 
 |

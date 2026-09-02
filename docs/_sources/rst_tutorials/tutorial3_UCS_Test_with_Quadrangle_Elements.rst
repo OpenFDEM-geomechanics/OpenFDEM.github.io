@@ -23,7 +23,7 @@ up the mesh size and before creating the mesh.
 
 When the program runs, the mesh of the model will look like this.
 
-.. figure:: ../../images/Gmsh/UCS_test_quad.png
+.. figure:: ../_static/Gmsh/UCS_test_quad.png
     :alt: Uniaxial Compression Test Mesh with Quadrangle Elements
     :align: center
 
@@ -31,7 +31,7 @@ When the program runs, the mesh of the model will look like this.
 
 The program will also show the mesh has quadrilateral elements.
 
-.. figure:: ../../images/Command/UCS_Quad.PNG
+.. figure:: ../_static/Command/UCS_Quad.PNG
     :alt: Uniaxial Compression Test Mesh with Quadrangle Elements
     :align: center
 
