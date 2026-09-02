@@ -33,7 +33,7 @@ Example:
 
     of.geometry.cut.ellipse [tunnel] [rock] center [0,0] rad [1.0, 2.0] theta 0 segments 10
 
-.. figure:: ../../../images/User_Guide/Ellipse_Cut.png
+.. figure:: ../../_static/User_Guide/Ellipse_Cut.png
     :alt: Ellipse_Cut
     :align: center
     :scale: 60%

@@ -7,7 +7,7 @@ This example will review how to setup an insitu excavation example, defining the
 
 Expected tutorial output (visualized in ParaView):
 
-.. image:: ../../images/insitu_example.png
+.. image:: ../_static/insitu_example.png
   :width: 400
   :alt: In Situ Example Image
   :align: center

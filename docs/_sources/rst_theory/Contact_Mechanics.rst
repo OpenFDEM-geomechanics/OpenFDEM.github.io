@@ -32,7 +32,7 @@ enhanced NBS algorithm is
 .. math::
     {{\mathbf{x}}}^{k} = 1 + int\left( \frac{{{\mathbf{x}}}_{i} - {{\mathbf{x}}}_{\min}}{d(0)}\  + \ \frac{1}{2} \right) \tag{1}
 
-.. figure:: ../../images/Theory/contactdetection.png
+.. figure:: ../_static/Theory/contactdetection.png
     :alt: Timesteps
     :align: center    
 

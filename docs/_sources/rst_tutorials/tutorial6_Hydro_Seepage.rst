@@ -162,7 +162,7 @@ p0 is the initial water pressure on the boundary and head is the water level.
 ==================================
 Hydro module and matrix flow module are on to model the hydro seepage.
 
-.. figure:: ../../images/Command/Hydro_Fracture_Modulus.PNG
+.. figure:: ../_static/Command/Hydro_Fracture_Modulus.PNG
     :alt: Applied Modules
     :align: center
 
@@ -170,7 +170,7 @@ Hydro module and matrix flow module are on to model the hydro seepage.
 
 Hydro material information are included in the modeling.
 
-.. figure:: ../../images/Command/Hydro_Fracture_Material.PNG
+.. figure:: ../_static/Command/Hydro_Fracture_Material.PNG
     :alt: Hydro Materials
     :align: center
 
@@ -178,7 +178,7 @@ Hydro material information are included in the modeling.
 
 Hydro boundary conditions.
 
-.. figure:: ../../images/Command/Hydro_BC.PNG
+.. figure:: ../_static/Command/Hydro_BC.PNG
     :alt: Hydro Boundary Conditions
     :align: center
 
@@ -190,7 +190,7 @@ Hydro boundary conditions.
 ==================================
 Fluid pressure of seepage.
 
-.. figure:: ../../images/Result/Seepage_Viridis.gif
+.. figure:: ../_static/Result/Seepage_Viridis.gif
     :alt: Hydro Seepage
     :align: center
 

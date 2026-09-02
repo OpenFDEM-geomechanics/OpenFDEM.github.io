@@ -30,6 +30,7 @@ Bio:
 
 Developers for solver
 ----------------------------------------
+- Dongbao Yang (3D mechanical solver, GUI) - Institute of Rock and Soil Mechanics, Chinese Academy of Sciences
 
 - Qian Li (blast solver) - Institute of Rock and Soil Mechanics, Chinese Academy of Sciences
 

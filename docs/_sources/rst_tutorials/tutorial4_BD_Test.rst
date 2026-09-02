@@ -221,7 +221,7 @@ When you run the program, you can first check the mesh that was created by Gmsh 
 
 X Displacement
 
-.. figure:: ../../images/Result/BD_DispXX_Viridis.gif
+.. figure:: ../_static/Result/BD_DispXX_Viridis.gif
     :alt: BD Stress XX
     :align: center
 
@@ -229,7 +229,7 @@ X Displacement
 
 Stress XX
 
-.. figure:: ../../images/Result/BD_StressXX_Viridis.gif
+.. figure:: ../_static/Result/BD_StressXX_Viridis.gif
     :alt: BD Stress YY
     :align: center
 

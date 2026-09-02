@@ -8,7 +8,7 @@ This example will review how to setup a uniaxial compressive test example with o
 
 Expected tutorial output (visualized in ``ParaView``):
 
-.. image:: ../../images/User_Guide/ucs_example.png 
+.. image:: ../_static/User_Guide/ucs_example.png 
   :alt: UCS Example Image
   :align: center
 

@@ -5,7 +5,7 @@ unconfined compressive strength. It is also used as the most common simulation t
 In this model, the sample is compressed by two rigid platens and the force interaction between platens and rock sample is realized 
 by contacts. Barrel-shape failure mode is expected by theory. 
 
-.. figure:: ../../images/Desmos/UCS.png
+.. figure:: ../_static/Desmos/UCS.png
     :alt: Geometry of the uniaxial compression test
     :align: center
 
@@ -209,7 +209,7 @@ is always a necessary for the explict integration. User-defined timestep is allo
 ==================================
 When you run the program, you can first check the mesh that was created by Gmsh as shown in Figure 2. If the mesh has a good quality, you can close the window to continue run the program.
 
-.. figure:: ../../images/Gmsh/UCS_test.png
+.. figure:: ../_static/Gmsh/UCS_test.png
     :alt: Mesh of the sample
     :align: center
 
@@ -236,7 +236,7 @@ Material properties you set on step 2.3 will be shown on the screen. You can con
 
 Furthermore, node boundaries are shown at the header of the program.
 
-.. figure:: ../../images/Command/UCS_bondaries.PNG
+.. figure:: ../_static/Command/UCS_bondaries.PNG
     :alt: Boundary information
     :align: center
 
@@ -268,7 +268,7 @@ Start to run the program. Results are logged for every 2000 steps.
 
 Stress YY results.
 
-.. figure:: ../../images/Result/UCS_StressYY_Viridis.gif
+.. figure:: ../_static/Result/UCS_StressYY_Viridis.gif
     :alt: UCS Stress YY
     :align: center
 
@@ -276,7 +276,7 @@ Stress YY results.
 
 Displacement YY results.
 
-.. figure:: ../../images/Result/UCS_DispYY_Viridis.gif
+.. figure:: ../_static/Result/UCS_DispYY_Viridis.gif
     :alt: UCS Displacement YY
     :align: center
 

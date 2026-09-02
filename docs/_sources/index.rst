@@ -303,6 +303,11 @@ To date, 84 research groups have used OpenFDEM free of charge to conduct related
    :maxdepth: 2
    :hidden:
 
+   rst_downloads
+
+.. toctree::
+   :maxdepth: 2
+
    rst_about_us/index
 
 .. toctree::

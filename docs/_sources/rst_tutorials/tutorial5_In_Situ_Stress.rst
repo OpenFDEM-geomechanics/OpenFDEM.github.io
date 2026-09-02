@@ -3,7 +3,7 @@ Tunnel excavation under `in-situ` stress
 In-situ stress is an important issue that significantly influence the damage distribution and surrounding rock stability in underground excavation.
 In this example, we will show how to create the excavation model, how to get stress equlibrium before excavation and how to use step-by-step excavation in OpenFDEM.
 
-.. figure:: ../../images/Desmos/Apply_Insitu_Stress.png
+.. figure:: ../_static/Desmos/Apply_Insitu_Stress.png
     :alt: Geometry of the Rock and Excavation
     :align: center
 
@@ -190,7 +190,7 @@ Group the four boundaries of the model for applying the `in-situ` stress and bou
 ==================================
 When you run the program, you can first check the mesh that was created by Gmsh as shown in Figure 2. If the mesh has a good quality, you can close the window to continue run the program.
 
-.. figure:: ../../images/Gmsh/In_situ_stress.png
+.. figure:: ../_static/Gmsh/In_situ_stress.png
     :alt: Mesh of the sample
     :align: center
 
@@ -215,7 +215,7 @@ To hide hole of excavation, threshold filter can be used.
 
 Stress XX results.
 
-.. figure:: ../../images/Result/Insitu_StressXX.gif
+.. figure:: ../_static/Result/Insitu_StressXX.gif
     :alt: In-situ Stress XX
     :align: center
 
@@ -223,7 +223,7 @@ Stress XX results.
 
 Stress YY results.
 
-.. figure:: ../../images/Result/Insitu_StressYY.gif
+.. figure:: ../_static/Result/Insitu_StressYY.gif
     :alt: In-situ Stress YY
     :align: center
 

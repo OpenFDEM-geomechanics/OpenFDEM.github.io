@@ -44,7 +44,7 @@ Example:
 
     of.geometry.cut.circle [tunnel] [rock] center [0,0] rad 1.0 segments 10
 
-.. figure:: ../../../images/User_Guide/Circle_Cut.png
+.. figure:: ../../_static/User_Guide/Circle_Cut.png
     :alt: Circle_Cut
     :align: center
     :scale: 60%

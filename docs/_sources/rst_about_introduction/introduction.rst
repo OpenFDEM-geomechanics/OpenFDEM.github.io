@@ -32,7 +32,7 @@ or numerical algorithms (explicit and implicit) is possible, as well as the abil
 (``OpenFDEM`` is intended to be a more general FEM/DEM solver compatible with arbitrary scenarios.) Like other general open-source FEM solvers, the most important 
 feature of ``OpenFDEM`` is its standardization and generality, which allows the continuum-discontinuum method to be used with more general scenarios. The limitation of this project is the developers' thoughts, rather than the method itself.
 
-.. figure:: ../../images/Introduction/feature2.svg
+.. figure:: ../_static/Introduction/feature2.svg
   :alt: FDEM feature  
 
   OpenFDEM feature
@@ -67,7 +67,7 @@ complexity of O(NlogN) is proposed to make the contact searching process paralle
 for mesh optimization and accuracy enhancement. Based on different remeshing criteria, ``OpenFDEM`` supports various error estimations, such as primary unknown, 
 internal variables mapping, high-accuracy internal variable interpolation and fast unbalance equilibrium after refinement. The AMR supports fracture path consistent before and after remeshing.
 
-.. figure:: ../../images/Introduction/AMR.gif
+.. figure:: ../_static/Introduction/AMR.gif
   :alt: AMR Gif
 
   Global adaptive mesh refinement (up-left) and local adaptive mesh refinement (down-right) in OpenFDEM.
@@ -97,7 +97,7 @@ Furthermore, transgranular fracturing can be realized by element splitting techn
 ``OpenFDEM`` supports 17 element materials (including elastic, hyperelastic, plastic, damage, nonlocal, viscous and phas—field models), 7 cohesive materials (spanning static, dynamic and fatigue problems), 
 and 6 contact models (including Mohr-coulomb friction, hertz contact, rate friction, rough dilation shear law and so on). 
 
-.. figure:: ../../images/Introduction/feature.svg
+.. figure:: ../_static/Introduction/feature.svg
   :alt: New material library
 
   New material library in OpenFDEM.
@@ -121,7 +121,7 @@ Particle Discrete Element Method (pDEM)
 
 **Rigid DEM support** - built-in module for rigid particles packing, kinematics and collision, the particle-based contact models include linear, Hertz, cohesive bond and rotation resistance model.
 
-.. figure:: ../../images/Introduction/PDEM.png
+.. figure:: ../_static/Introduction/PDEM.png
   :alt: Sand compression test with membrane (left) and irregular deformable and breakable particles packing (right).
 
   Sand compression test with membrane (left) and irregular deformable and breakable particles packing (right).
@@ -129,7 +129,7 @@ Particle Discrete Element Method (pDEM)
 **Realistic Particle Modelling** - Overlapping particles and Fourier-Voronoi-based algorithm are used to generate realistic particles having complex shapes. 
 The realistic particles can be rigid or deformable. The breakage of the particles are also possible.
 
-.. figure:: ../../images/Introduction/landslide.gif
+.. figure:: ../_static/Introduction/landslide.gif
   :alt: landslide gif 
   
   Debris flow of rigid particles due to gravity (left) and debris flow of irregular deformable fragments due to gravity (right, .stl file from Itasca).
@@ -143,7 +143,7 @@ Fluid Dynamic Module
 
 **Analysis Procedures** - matrix flow for pore seepage, transient incompressible fracture flow, transient compressible fracture flow and gas flow problems.
 
-.. figure:: ../../images/Introduction/gasblast.gif
+.. figure:: ../_static/Introduction/gasblast.gif
   :alt: landslide gif 
   
   Blast considering gas expansion, gas flow by hydro module (left) and without gas expansion by mechanical module (right) ((Wang et al. 2021, 2022)).
@@ -169,7 +169,7 @@ Thermal Transportation Module
 
 **Analysis Procedures** - matrix thermal transportation, thermal resistance in fractures, heat conduction of fluid in fracture, heat advection of fluid, heat exchange between solid and fluid and contact thermal problems.
 
-.. figure:: ../../images/Introduction/microwavethermal.gif
+.. figure:: ../_static/Introduction/microwavethermal.gif
   :alt: Gabbro fracturing after microwave treatment in thermal module.
   
   Gabbro fracturing after microwave treatment in thermal module.

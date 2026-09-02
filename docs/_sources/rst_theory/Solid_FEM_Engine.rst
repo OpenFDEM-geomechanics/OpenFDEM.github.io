@@ -16,7 +16,7 @@ In this document, the following conventions are assumed for the notations:
 Weak formulation of updated Lagrange
 ----------------------------------------
 
-.. figure:: ../../images/Theory/FDEM_body.png
+.. figure:: ../_static/Theory/FDEM_body.png
     :alt: Timesteps
     :align: center    
 

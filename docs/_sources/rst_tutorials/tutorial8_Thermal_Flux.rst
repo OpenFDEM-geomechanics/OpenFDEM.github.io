@@ -229,7 +229,7 @@ Material properties you set on step 2.3 will be shown on the screen. You can con
 
 Furthermore, node boundaries are shown at the header of the program.
 
-.. figure:: ../../images/Command/Thermal_BC.PNG
+.. figure:: ../_static/Command/Thermal_BC.PNG
     :alt: Boundary information
     :align: center
 
@@ -241,7 +241,7 @@ Furthermore, node boundaries are shown at the header of the program.
 ==================================
 Thermal flow
 
-.. figure:: ../../images/Result/Thermal_Ele.gif
+.. figure:: ../_static/Result/Thermal_Ele.gif
     :alt: Thermal Flow
     :align: center
 

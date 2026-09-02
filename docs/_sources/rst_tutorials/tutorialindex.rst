@@ -36,7 +36,7 @@ How to create a geometry
 .. grid:: 2
    
    .. grid-item-card:: Geometry
-      :img-top: ../../images/Desmos/UCS.png
+      :img-top: ../_static/Desmos/UCS.png
       :link: tutorial0_Geometry
       :link-type: doc
 
@@ -48,19 +48,19 @@ Benchmark tests
 .. grid:: 2
    
    .. grid-item-card:: Uniaxial Compression Test
-      :img-top: ../../images/Desmos/UCS.png
+      :img-top: ../_static/Desmos/UCS.png
       :link: tutorial1_UCS_Test
       :link-type: doc
 
    .. grid-item-card:: UCS with Gmsh
-      :img-top: ../../images/Desmos/UCS.png
+      :img-top: ../_static/Desmos/UCS.png
       :link: tutorial2_UCS_with_Gmsh
       :link-type: doc
 
 .. grid:: 2
 
    .. grid-item-card:: UCS Test with Quadrangle Elements
-      :img-top: ../../images/Desmos/UCS.png
+      :img-top: ../_static/Desmos/UCS.png
       :link: tutorial3_UCS_Test_with_Quadrangle_Elements
       :link-type: doc
 
@@ -76,7 +76,7 @@ How to excavate a tunnel
 .. grid:: 2
    
    .. grid-item-card:: In-Situ Stress
-      :img-top: ../../images/Desmos/Apply_Insitu_Stress.png
+      :img-top: ../_static/Desmos/Apply_Insitu_Stress.png
       :link: tutorial5_In_Situ_Stress
       :link-type: doc
 
@@ -119,7 +119,7 @@ Grain based model
 .. grid:: 2
    
    .. grid-item-card:: Grain Based Model
-      :img-top: ../../images/Desmos/UCS.png
+      :img-top: ../_static/Desmos/UCS.png
       :link: tutorial9_GBM
       :link-type: doc
 

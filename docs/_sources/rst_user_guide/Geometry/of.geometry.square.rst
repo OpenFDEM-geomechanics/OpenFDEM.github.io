@@ -36,7 +36,7 @@ Example:
     # Method 3
     of.geometry.square [rock] xmin 0 xmax 1 ymin 0 ymax 1
 
-.. figure:: ../../../images/User_Guide/Square.png
+.. figure:: ../../_static/User_Guide/Square.png
     :alt: Square
     :align: center
     :scale: 60%

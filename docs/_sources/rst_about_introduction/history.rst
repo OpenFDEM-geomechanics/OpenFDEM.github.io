@@ -15,7 +15,7 @@ relies on primitive Y-programs, or still focuses on the development of commercia
 
 Therefore, OpenFDEM hopes to make some progress in these areas and further develop a kind of open-source code, thus contributing to the development of FDEM.
 
-.. figure:: ../../images/Introduction/timeline.svg
+.. figure:: ../_static/Introduction/timeline.svg
   :alt: timeline
   
   Timeline of the OpenFDEM project

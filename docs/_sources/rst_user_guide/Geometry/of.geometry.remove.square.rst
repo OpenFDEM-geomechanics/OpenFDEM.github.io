@@ -43,7 +43,7 @@ Example:
 
     of.geometry.remove.square [tunnel] [rock] x [0 1] y [0 1]
 
-.. figure:: ../../../images/User_Guide/Square_Remove.png
+.. figure:: ../../_static/User_Guide/Square_Remove.png
     :alt: Square
     :align: center
     :scale: 60%
