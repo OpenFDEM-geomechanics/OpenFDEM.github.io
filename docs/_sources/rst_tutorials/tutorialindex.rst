@@ -65,7 +65,7 @@ Benchmark tests
       :link-type: doc
 
    .. grid-item-card:: Brazilian Disc Test
-      :img-top: ../../images/Desmos/BD_Test.png
+      :img-top: ../_static/Desmos/BD_Test.png
       :link: tutorial4_BD_Test
       :link-type: doc
 
@@ -88,13 +88,13 @@ Rocks fractured by water
 .. grid:: 2
    
    .. grid-item-card:: Hydro Seepage
-      :img-top: ../../images/Desmos/Hydro.png
+      :img-top: ../_static/Desmos/Hydro.png
       :link: tutorial6_Hydro_Seepage
       :link-type: doc
 
    
    .. grid-item-card:: Hydro Fracture Flow
-      :img-top: ../../images/Desmos/Hydro.png
+      :img-top: ../_static/Desmos/Hydro.png
       :link: tutorial7_Hydro_Fracture_Flow
       :link-type: doc
 
@@ -107,7 +107,7 @@ Thermal transportation in rock
 .. grid:: 2
    
    .. grid-item-card:: Thermal Flux
-      :img-top: ../../images/Desmos/Thermal.png
+      :img-top: ../_static/Desmos/Thermal.png
       :link: tutorial8_Thermal_Flux
       :link-type: doc
 

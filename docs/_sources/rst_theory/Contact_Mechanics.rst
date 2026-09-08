@@ -134,7 +134,7 @@ boundary :math:`\varGamma _{cont}`. Based on the virtual work theory, the
 equivalent nodal force in the quadratic element can be naturally computed, as
 shown in Figure 2 (c).
 
-.. figure:: ../../images/Theory/qFDEM_contact_force.png
+.. figure:: ../_static/Theory/qFDEM_contact_force.png
     :alt: Contact force computation in qFDEM
     :width: 70%
     :align: center

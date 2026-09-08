@@ -201,7 +201,7 @@ Since its public release in August 2023, OpenFDEM has attracted more than 66,000
 from users in over 60 countries and regions, including China, the United States, the United Kingdom, Canada, and Australia.
 To date, 84 research groups have used OpenFDEM free of charge to conduct related research.
 
-.. figure:: ../images/Introduction/visitors_status.png
+.. figure:: _static/Introduction/visitors_status.png
     :width: 70%
     :align: center
 
@@ -216,7 +216,7 @@ To date, 84 research groups have used OpenFDEM free of charge to conduct related
 
       <div style="height: 5px;"></div>
 
-   .. image:: ../images/Introduction/special_issue.png
+   .. image:: _static/Introduction/special_issue.png
      :alt: special_issue png
 
 

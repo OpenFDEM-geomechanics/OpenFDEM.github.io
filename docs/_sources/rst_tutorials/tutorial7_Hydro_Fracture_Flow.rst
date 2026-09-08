@@ -2,7 +2,7 @@ Water flowing in rock dam: fracture flow
 ########################################
 This tutorial will continue the hydro seepage model in tutorial 6 with discrete elements. The hydro flowing is considered only on the cohesive interfaces.
 
-.. figure:: ../../images/Desmos/Hydro.png
+.. figure:: ../_static/Desmos/Hydro.png
     :alt: Geometry of the uniaxial compression test
     :align: center
 

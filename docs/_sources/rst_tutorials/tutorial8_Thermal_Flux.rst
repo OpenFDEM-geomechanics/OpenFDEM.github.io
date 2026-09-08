@@ -3,7 +3,7 @@ Thermal flux transportation in a bar
 In this tutorial, thermal module will be review. Contact thermal transition from FEM (left) part to FDEM (right) part 
 will be modeled by triangular elements (left) and quadrilateral elements (right).
 
-.. figure:: ../../images/Desmos/Thermal.png
+.. figure:: ../_static/Desmos/Thermal.png
     :alt: Geometry of the uniaxial compression test
     :align: center
 
@@ -202,7 +202,7 @@ To start with programming, create a new empty input file or copy it from the exi
 ==================================
 When you run the program, you can first check the mesh that was created by Gmsh as shown in Figure 2. If the mesh has a good quality, you can close the window to continue run the program.
 
-.. figure:: ../../images/Gmsh/Thermal.png
+.. figure:: ../_static/Gmsh/Thermal.png
     :alt: Mesh of the sample
     :align: center
 
@@ -211,7 +211,7 @@ When you run the program, you can first check the mesh that was created by Gmsh 
 
 The thermal module is ON in this model.
 
-.. figure:: ../../images/Command/Thermal_module.png
+.. figure:: ../_static/Command/Thermal_module.png
     :alt: Thermal module is ON
     :align: center
 
@@ -220,7 +220,7 @@ The thermal module is ON in this model.
 
 Material properties you set on step 2.3 will be shown on the screen. You can confirm it while the program just starts to run.
 
-.. figure:: ../../images/Command/Thermal_Material.png
+.. figure:: ../_static/Command/Thermal_Material.png
     :alt: Material assignment
     :align: center
 

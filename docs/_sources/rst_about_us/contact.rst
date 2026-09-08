@@ -1,6 +1,6 @@
 Contact
 #############################
-.. figure:: ../../images/Aboutus/developergroup_fig_2026.png
+.. figure:: ../_static/Aboutus/developergroup_fig_2026.png
     :width: 100%
 
     OpenFDEM developer group

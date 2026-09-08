@@ -23,7 +23,7 @@ Collaborating
 
 |
 
-.. figure:: ../../images/Aboutus/torontoLogo.png
+.. figure:: ../_static/Aboutus/torontoLogo.png
     :align: left
 
 |
@@ -47,7 +47,7 @@ Collaborating
 
 |
 
-.. figure:: ../../images/Aboutus/polyulogo.png   
+.. figure:: ../_static/Aboutus/polyulogo.png
     :align: left
 
 |

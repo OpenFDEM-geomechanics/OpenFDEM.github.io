@@ -43,7 +43,7 @@ If ``NotePad++`` is not installed in your computer, you can download this `free 
 
 The content in the input file when opened in ``NotePad++`` will be shown in different colors. By default,
 
-.. figure:: ../../images/Notepad++/syntax_highlight.png
+.. figure:: ../_static/Notepad++/syntax_highlight.png
     :alt: Example input file opened in NotePad++ showing the various commands/syntax
     :align: center
 

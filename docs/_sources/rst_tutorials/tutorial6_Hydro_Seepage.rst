@@ -3,7 +3,7 @@ Water flowing in rock dam: seepage flow
 Tutorial 6 and 7 will present the modelling to solve hydraulic fracture on a dam model in both finite element method (FEM) and finite-discrete element method (FDEM). 
 
 
-.. figure:: ../../images/Desmos/Hydro.png
+.. figure:: ../_static/Desmos/Hydro.png
     :alt: Geometry of a Dam Model
     :align: center
 
