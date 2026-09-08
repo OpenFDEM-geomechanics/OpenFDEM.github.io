@@ -218,7 +218,7 @@ When you run the program, you can first check the mesh that was created by Gmsh 
 
 The mesh is using triangle elements.
 
-.. figure:: ../../images/Command/UCS_T3.PNG
+.. figure:: ../../images/Command/UCS_T3.png
     :alt: Triangle elements
     :align: center
 
@@ -227,7 +227,7 @@ The mesh is using triangle elements.
 
 Material properties you set on step 2.3 will be shown on the screen. You can confirm it while the program just starts to run.
 
-.. figure:: ../../images/Command/UCS_Material.PNG
+.. figure:: ../../images/Command/UCS_Material.png
     :alt: Material assignment
     :align: center
 
@@ -236,7 +236,7 @@ Material properties you set on step 2.3 will be shown on the screen. You can con
 
 Furthermore, node boundaries are shown at the header of the program.
 
-.. figure:: ../_static/Command/UCS_bondaries.PNG
+.. figure:: ../_static/Command/UCS_bondaries.png
     :alt: Boundary information
     :align: center
 
@@ -245,7 +245,7 @@ Furthermore, node boundaries are shown at the header of the program.
 
 Global timestep is shown here.
 
-.. figure:: ../../images/Command/UCS_timesteps.PNG
+.. figure:: ../../images/Command/UCS_timesteps.png
     :alt: Timesteps
     :align: center
 
@@ -254,7 +254,7 @@ Global timestep is shown here.
 
 Start to run the program. Results are logged for every 2000 steps.
 
-.. figure:: ../../images/Command/UCS_run.PNG
+.. figure:: ../../images/Command/UCS_run.png
     :alt: Start to run the program
     :align: center
 

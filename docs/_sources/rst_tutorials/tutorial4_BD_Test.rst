@@ -5,7 +5,7 @@ Due to its simplicity and efficiencly, it is amonst the most commonly used labor
 geotechnical investigation in rocks. It is also used as a benchmark test for calibrating the tensile behaviour 
 of rocks in FDEM.
 
-.. figure:: ../../images/Desmos/BD_Test.PNG
+.. figure:: ../../images/Desmos/BD_Test.png
     :alt: Geometry of the Brazilian disc test
     :align: center
 
@@ -208,7 +208,7 @@ The material properties of this model is shown as the table below:
 ==================================
 When you run the program, you can first check the mesh that was created by Gmsh as shown in Figure 2. If the mesh has a good quality, you can close the window to continue run the program.
 
-.. figure:: ../../images/Gmsh/BD_Test.PNG
+.. figure:: ../../images/Gmsh/BD_Test.png
     :alt: Mesh of the sample
     :align: center
 

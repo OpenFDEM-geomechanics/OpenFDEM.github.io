@@ -3,7 +3,7 @@ Water flowing in rock dam: seepage flow
 Tutorial 6 and 7 will present the modelling to solve hydraulic fracture on a dam model in both finite element method (FEM) and finite-discrete element method (FDEM). 
 
 
-.. figure:: ../../images/Desmos/Hydro.PNG
+.. figure:: ../../images/Desmos/Hydro.png
     :alt: Geometry of a Dam Model
     :align: center
 
@@ -162,7 +162,7 @@ p0 is the initial water pressure on the boundary and head is the water level.
 ==================================
 Hydro module and matrix flow module are on to model the hydro seepage.
 
-.. figure:: ../_static/Command/Hydro_Fracture_Modulus.PNG
+.. figure:: ../_static/Command/Hydro_Fracture_Modulus.png
     :alt: Applied Modules
     :align: center
 
@@ -170,7 +170,7 @@ Hydro module and matrix flow module are on to model the hydro seepage.
 
 Hydro material information are included in the modeling.
 
-.. figure:: ../_static/Command/Hydro_Fracture_Material.PNG
+.. figure:: ../_static/Command/Hydro_Fracture_Material.png
     :alt: Hydro Materials
     :align: center
 
@@ -178,7 +178,7 @@ Hydro material information are included in the modeling.
 
 Hydro boundary conditions.
 
-.. figure:: ../_static/Command/Hydro_BC.PNG
+.. figure:: ../_static/Command/Hydro_BC.png
     :alt: Hydro Boundary Conditions
     :align: center
 

@@ -2,7 +2,7 @@ Water flowing in rock dam: fracture flow
 ########################################
 This tutorial will continue the hydro seepage model in tutorial 6 with discrete elements. The hydro flowing is considered only on the cohesive interfaces.
 
-.. figure:: ../../images/Desmos/Hydro.PNG
+.. figure:: ../../images/Desmos/Hydro.png
     :alt: Geometry of the uniaxial compression test
     :align: center
 
@@ -69,7 +69,7 @@ Based on the code in tutorial 6, fracture flow parameters will be add to model t
 ==================================
 1. Hydro module, Fracture flow module and CZM module are on to model the hydro fracture flow.
 
-.. figure:: ../_static/Command/Hydro_Fracture_Modulus.PNG
+.. figure:: ../_static/Command/Hydro_Fracture_Modulus.png
     :alt: Applied Modules
     :align: center
 
@@ -77,7 +77,7 @@ Based on the code in tutorial 6, fracture flow parameters will be add to model t
 
 2. Contact material, hydro fracture material and hydro fluid material are include in the modeling.
 
-.. figure:: ../_static/Command/Hydro_Fracture_Material.PNG
+.. figure:: ../_static/Command/Hydro_Fracture_Material.png
     :alt: Hydro Fracture Materials
     :align: center
 
@@ -85,7 +85,7 @@ Based on the code in tutorial 6, fracture flow parameters will be add to model t
 
 3. Hydro boundary conditions.
 
-.. figure:: ../_static/Command/Hydro_BC.PNG
+.. figure:: ../_static/Command/Hydro_BC.png
     :alt: Hydro Boundary Conditions
     :align: center
 

@@ -2,7 +2,7 @@ Phase Field
 ########################################
 
 
-.. figure:: ../../images/Desmos/Phase_Field.PNG
+.. figure:: ../_static/Desmos/Phase_Field.png
     :alt: Geometry of the phase field model
     :align: center
     :scale: 60%
@@ -149,7 +149,7 @@ When you run the program, you can first check the mesh that was created by Gmsh 
 
 The phase field module is ON in this model.
 
-.. figure:: ../../images/Command/Phase_Field_module.PNG
+.. figure:: ../../images/Command/Phase_Field_module.png
     :alt: Phase field module is ON
     :align: center
 
@@ -158,7 +158,7 @@ The phase field module is ON in this model.
 
 Material properties you set on step 2.3 will be shown on the screen. You can confirm it while the program just starts to run.
 
-.. figure:: ../../images/Command/Phase_Field_Material.PNG
+.. figure:: ../../images/Command/Phase_Field_Material.png
     :alt: Material assignment
     :align: center
 
