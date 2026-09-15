@@ -55,7 +55,7 @@ nodal fracture volumes of all cohesive elements contained within it
 where :math:`n` denotes the number of channels connected to the cavity, and
 :math:`M` is half the number of nodes in a single channel.
 
-.. figure:: ../../images/Theory/gas_flow_process.png
+.. figure:: ../_static/Theory/gas_flow_process.png
     :alt: Fracture flow process
     :width: 45%
     :align: center
@@ -63,14 +63,14 @@ where :math:`n` denotes the number of channels connected to the cavity, and
     Figure 1. Fluid flow through the fracture network formed by failed
     cohesive elements.
 
-.. figure:: ../../images/Theory/gas_fracture_aperture.png
+.. figure:: ../_static/Theory/gas_fracture_aperture.png
     :alt: Fracture unit opening and channel volume
     :width: 41%
     :align: center
 
     Figure 2. Fracture unit opening and channel volume.
 
-.. figure:: ../../images/Theory/gas_flow_cavity.png
+.. figure:: ../_static/Theory/gas_flow_cavity.png
     :alt: Schematic of the flow cavity
     :width: 41%
     :align: center

@@ -51,7 +51,7 @@ variable defined as
 .. math::
     D=\min \left[ 1,\sqrt{\left( \frac{o-o_p}{o_r-o_p} \right) ^2+\left( \frac{|s|-s_p}{s_r-s_p} \right) ^2} \right] \tag{3}
 
-.. figure:: ../../images/Theory/qFDEM_joint_behaviour.png
+.. figure:: ../_static/Theory/qFDEM_joint_behaviour.png
     :alt: Mechanical behaviour of joint elements in FDEM
     :width: 85%
     :align: center
@@ -116,7 +116,7 @@ apparent cohesive strength, and causing premature damage of the cohesive
 element at the edges even when the overall stress level is far below the
 nominal strength.
 
-.. figure:: ../../images/Theory/qFDEM_cohesive_strategies.png
+.. figure:: ../_static/Theory/qFDEM_cohesive_strategies.png
     :alt: High order cohesive elements and two computation strategies
     :width: 70%
     :align: center
@@ -154,7 +154,7 @@ uniform. This not only ensures the interface compatibility but also prevents
 the artificial reduction of the material strength in the quadratic-order
 circumstance of FDEM.
 
-.. figure:: ../../images/Theory/qFDEM_interface_compat.png
+.. figure:: ../_static/Theory/qFDEM_interface_compat.png
     :alt: Comparison of interface compatibility
     :width: 85%
     :align: center

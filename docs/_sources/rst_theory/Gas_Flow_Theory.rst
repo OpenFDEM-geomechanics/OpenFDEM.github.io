@@ -12,7 +12,7 @@ is subsequently used for the next gas-flow calculation. The definition of the
 fracture aperture and volume is described in the :doc:`Fracture_Fluid_Theory`
 section.
 
-.. figure:: ../../images/Theory/gas_fracture_development.png
+.. figure:: ../_static/Theory/gas_fracture_development.png
     :alt: Blast-induced fracture development
     :width: 80%
     :align: center
@@ -99,7 +99,7 @@ where :math:`\varDelta p_g` is the gas pressure difference between cavity
 :math:`i` and cavity :math:`j`, calculated from the previous time step, and
 :math:`L` is the length of the fracture element.
 
-.. figure:: ../../images/Theory/gas_nondarcy_flow.png
+.. figure:: ../_static/Theory/gas_nondarcy_flow.png
     :alt: Non-Darcy gas flow
     :width: 60%
     :align: center
@@ -167,7 +167,7 @@ deformation and gas compressibility, recalculates the gas density and bulk
 modulus, and determines the gas pressure, which is applied back to the
 mechanical solver as an external load.
 
-.. figure:: ../../images/Theory/gas_module_interaction.png
+.. figure:: ../_static/Theory/gas_module_interaction.png
     :alt: Interaction between computational modules
     :width: 53%
     :align: center

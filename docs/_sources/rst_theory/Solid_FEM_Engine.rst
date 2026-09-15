@@ -302,7 +302,7 @@ Lagrange polynomials in natural coordinates :math:`(\xi ,\eta )`, given by
 
     \[l_j(\eta )=\prod_{\substack{m=0\\m\ne j}}^p{\frac{\eta -\eta _m}{\eta _j-\eta _m}},\quad \eta _m\in [-1,1] \tag{33}\]
 
-.. figure:: ../../images/Theory/qFDEM_quad_triangle.png
+.. figure:: ../_static/Theory/qFDEM_quad_triangle.png
     :alt: Quadratic triangle element in natural coordinates
     :width: 56%
     :align: center
