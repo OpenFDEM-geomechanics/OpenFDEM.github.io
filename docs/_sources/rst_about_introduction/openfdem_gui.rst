@@ -8,25 +8,25 @@ creation, mesh generation, material definition, boundary condition assignment,
 model solving, and post-processing, as illustrated by a tunnel excavation
 example below.
 
-.. figure:: ../_static/Introduction/gui_geometry.png
+.. figure:: ../../images/Introduction/gui_geometry.png
     :width: 85%
     :align: center
 
     Figure 1. Geometry creation.
 
-.. figure:: ../_static/Introduction/gui_mesh.png
+.. figure:: ../../images/Introduction/gui_mesh.png
     :width: 85%
     :align: center
 
     Figure 2. Mesh generation.
 
-.. figure:: ../_static/Introduction/gui_material.png
+.. figure:: ../../images/Introduction/gui_material.png
     :width: 85%
     :align: center
 
     Figure 3. Material definition and boundary condition assignment.
 
-.. figure:: ../_static/Introduction/gui_postprocess.png
+.. figure:: ../../images/Introduction/gui_postprocess.png
     :width: 85%
     :align: center
 
