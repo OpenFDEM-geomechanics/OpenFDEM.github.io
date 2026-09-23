@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Thermal-Hydromechanical (Chemical) Couple</title>
+    <title>Thermal-Hydromechanical Coupling</title>
   
   
   
@@ -49,7 +49,8 @@
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'rst_theory/Thermal_Hydromechanical_Chemical_Couple';</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'rst_theory/Thermal_Hydromechanical_Coupling';</script>
     <script data-cf-beacon="{&quot;token&quot;: &quot;ac93cb22b57e4eaf93d395726ff0e9ef&quot;}" defer="defer" type="module" src="https://static.cloudflareinsights.com/beacon.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -176,7 +177,7 @@
 <li class="toctree-l3"><a class="reference internal" href="Matrix_Thermal.html">Matrix Thermal</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Fracture_Heat_Resistance.html">Fracture Heat Resistance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contact_Thermal.html">Contact Thermal</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">Thermal-Hydromechanical (Chemical) Couple</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Thermal-Hydromechanical Coupling</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="Phase_Field.html">Phase Field</a></li>
@@ -490,7 +491,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -501,11 +504,21 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Thermal-Hydromechanical (Chemical) Couple</h1>
+    <h1>Thermal-Hydromechanical Coupling</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-transport">Heat transport</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fluid-flow-and-pressure">Fluid flow and pressure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thermal-and-poroelastic-deformation">Thermal and poroelastic deformation</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -515,9 +528,85 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="thermal-hydromechanical-chemical-couple">
-<h1>Thermal-Hydromechanical (Chemical) Couple<a class="headerlink" href="#thermal-hydromechanical-chemical-couple" title="Link to this heading">#</a></h1>
-<p>under construction</p>
+  <section id="thermal-hydromechanical-coupling">
+<h1>Thermal-Hydromechanical Coupling<a class="headerlink" href="#thermal-hydromechanical-coupling" title="Link to this heading">#</a></h1>
+<p>Thermal-hydromechanical (THM) coupling describes the interaction between
+temperature, fluid pressure and flow, and deformation. Heating or cooling
+changes the temperature field and produces thermal strain; deformation can in
+turn change fracture aperture and fluid storage, while fluid flow transports
+heat. The relative importance of these feedbacks depends on the material,
+loading, and time scale.</p>
+<p>The high-temperature rock treatment described in the accompanying reference
+uses a one-way thermo-mechanical approximation: temperature drives thermal
+stress, while deformation has a negligible effect on heat transfer. The
+equations below present a broader THM framework and should be read as governing
+principles; particular constitutive laws, coupling terms, and sign conventions
+depend on the model setup.</p>
+<section id="heat-transport">
+<h2>Heat transport<a class="headerlink" href="#heat-transport" title="Link to this heading">#</a></h2>
+<p>In a fluid-bearing porous medium, heat is conducted through the solid-fluid
+mixture and may also be carried by moving fluid. A common local energy balance
+is</p>
+<div class="math notranslate nohighlight">
+\[C_{\mathrm{eff}}\frac{\partial T}{\partial t}
++ \rho_f c_f\,\mathbf{v}\cdot\nabla T
+= \nabla\cdot(\mathbf{K}_{\mathrm{eff}}\nabla T) + Q,\]</div>
+<p>where <span class="math notranslate nohighlight">\(T\)</span> is temperature, <span class="math notranslate nohighlight">\(C_{\mathrm{eff}}\)</span> is the effective
+volumetric heat capacity, <span class="math notranslate nohighlight">\(\rho_f\)</span> and <span class="math notranslate nohighlight">\(c_f\)</span> are the fluid density
+and specific heat, <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> is the Darcy velocity,
+<span class="math notranslate nohighlight">\(\mathbf{K}_{\mathrm{eff}}\)</span> is the effective thermal-conductivity
+tensor, and <span class="math notranslate nohighlight">\(Q\)</span> is a volumetric heat source. The advection term may be
+omitted when fluid transport is absent or negligible. In an impermeable solid,
+this reduces to transient matrix heat conduction.</p>
+</section>
+<section id="fluid-flow-and-pressure">
+<h2>Fluid flow and pressure<a class="headerlink" href="#fluid-flow-and-pressure" title="Link to this heading">#</a></h2>
+<p>For a single-phase fluid under Darcy flow, the Darcy velocity can be written
+as</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{v}=-\frac{\mathbf{k}}{\mu_f}
+\left(\nabla p-\rho_f\mathbf{g}\right),\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{k}\)</span> is intrinsic permeability,
+<span class="math notranslate nohighlight">\(\mu_f\)</span> is dynamic viscosity, <span class="math notranslate nohighlight">\(p\)</span> is pore pressure, and
+<span class="math notranslate nohighlight">\(\mathbf{g}\)</span> is gravitational acceleration. A simplified fluid mass
+balance is</p>
+<div class="math notranslate nohighlight">
+\[S\frac{\partial p}{\partial t}
++ \alpha_B\frac{\partial \varepsilon_v}{\partial t}
++ \nabla\cdot\mathbf{v}=q_f,\]</div>
+<p>where <span class="math notranslate nohighlight">\(S\)</span> is fluid-storage capacity, <span class="math notranslate nohighlight">\(\alpha_B\)</span> is the Biot
+coefficient, <span class="math notranslate nohighlight">\(\varepsilon_v\)</span> is volumetric strain, and <span class="math notranslate nohighlight">\(q_f\)</span> is a
+fluid source per unit bulk volume. This form illustrates pressure-deformation
+coupling; compressibility, temperature-dependent properties, and fracture
+storage can require additional terms.</p>
+</section>
+<section id="thermal-and-poroelastic-deformation">
+<h2>Thermal and poroelastic deformation<a class="headerlink" href="#thermal-and-poroelastic-deformation" title="Link to this heading">#</a></h2>
+<p>For small strains, an isotropic thermal strain is</p>
+<div class="math notranslate nohighlight">
+\[\boldsymbol{\varepsilon}_{\mathrm{th}}
+=\alpha_T(T-T_0)\mathbf{I},\]</div>
+<p>where <span class="math notranslate nohighlight">\(\alpha_T\)</span> is the linear thermal-expansion coefficient, <span class="math notranslate nohighlight">\(T_0\)</span>
+is a reference temperature, and <span class="math notranslate nohighlight">\(\mathbf{I}\)</span> is the identity tensor. A
+representative linear poroelastic stress relation, with tension-positive stress
+and compression-positive pore pressure, is</p>
+<div class="math notranslate nohighlight">
+\[\boldsymbol{\sigma}
+=\mathsf{C}:
+\left(\boldsymbol{\varepsilon}-\boldsymbol{\varepsilon}_{\mathrm{th}}\right)
+-\alpha_B p\mathbf{I},\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathsf{C}\)</span> is the elastic stiffness tensor and
+<span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span> is total strain. Under idealized complete
+restraint of an isotropic solid, the thermal stress increment is hydrostatic
+and has magnitude <span class="math notranslate nohighlight">\(3K\alpha_T\Delta T\)</span>, where <span class="math notranslate nohighlight">\(K\)</span> is the bulk
+modulus. The actual stress state depends on constraints, geometry, and
+constitutive assumptions; this limiting expression is not a general plane-
+strain formula.</p>
+<p>In fractured media, the coupling may also occur through deformation-dependent
+fracture aperture and permeability. These feedbacks connect the thermal,
+hydraulic, and mechanical fields and can be important even when the intact
+matrix is treated as impermeable.</p>
+</section>
 </section>
 
 
@@ -555,6 +644,25 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-transport">Heat transport</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fluid-flow-and-pressure">Fluid flow and pressure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thermal-and-poroelastic-deformation">Thermal and poroelastic deformation</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

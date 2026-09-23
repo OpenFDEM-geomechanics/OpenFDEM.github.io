@@ -7,5 +7,5 @@ Thermal Transfer
    Matrix_Thermal
    Fracture_Heat_Resistance
    Contact_Thermal
-   Thermal_Hydromechanical_Chemical_Couple
+   Thermal_Hydromechanical_Coupling
 

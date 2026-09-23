@@ -49,6 +49,7 @@
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'rst_theory/Irregular_Deformable_Cluster_DEM';</script>
     <script data-cf-beacon="{&quot;token&quot;: &quot;ac93cb22b57e4eaf93d395726ff0e9ef&quot;}" defer="defer" type="module" src="https://static.cloudflareinsights.com/beacon.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -168,7 +169,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="Fluid_Transport_Theory.html">Fluid Transport</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="Fracture_Fluid_Theory.html">Fracture Fluid</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Porous_Fluid_Theory.html">Porous Fluid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Two_Phase_Fluid_Theory.html">Two Phase Fluid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Two_Phase_Fluid_Theory.html">Two-Phase Fluid</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Gas_Flow_Theory.html">Gas Flow</a></li>
 </ul>
 </details></li>
@@ -176,7 +177,7 @@
 <li class="toctree-l3"><a class="reference internal" href="Matrix_Thermal.html">Matrix Thermal</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Fracture_Heat_Resistance.html">Fracture Heat Resistance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contact_Thermal.html">Contact Thermal</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Thermal_Hydromechanical_Chemical_Couple.html">Thermal-Hydromechanical (Chemical) Couple</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Thermal_Hydromechanical_Coupling.html">Thermal-Hydromechanical Coupling</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="Phase_Field.html">Phase Field</a></li>
@@ -490,7 +491,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -506,6 +509,16 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cluster-kinematics-and-force-balance">Cluster kinematics and force balance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-bond-response-and-breakage">Internal bond response and breakage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macroscopic-response-and-calibration">Macroscopic response and calibration</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -517,7 +530,74 @@
                   
   <section id="irregular-deformable-cluster-dem">
 <h1>Irregular Deformable Cluster DEM<a class="headerlink" href="#irregular-deformable-cluster-dem" title="Link to this heading">#</a></h1>
-<p>under construction</p>
+<p>An irregular deformable particle can be represented as a cluster of
+interacting constituent particles. The cluster geometry captures a
+non-circular or otherwise irregular outline, while relative motion among its
+constituents allows the aggregate to deform. If internal bonds soften or fail,
+the particle can also fragment. This differs from a rigid clump, whose
+constituents retain fixed relative positions and whose overall shape cannot
+change.</p>
+<p>OpenFDEM’s project description identifies realistic particles as rigid or
+deformable, notes overlapping-particle and Fourier-Voronoi-based shape
+generation, and states that particle breakage is possible. The bonded-cluster
+equations below are a general theoretical description; the exact internal
+representation, bond law, and breakage criterion depend on the selected model.</p>
+<section id="cluster-kinematics-and-force-balance">
+<h2>Cluster kinematics and force balance<a class="headerlink" href="#cluster-kinematics-and-force-balance" title="Link to this heading">#</a></h2>
+<p>For a cluster with constituent particles <span class="math notranslate nohighlight">\(a=1,\ldots,N_c\)</span>, each
+constituent obeys its own translational and rotational balances,</p>
+<div class="math notranslate nohighlight">
+\[m_a\dot{\mathbf{v}}_a
+=\sum_{b}\mathbf{F}_{ab}^{\mathrm{int}}
++\sum_{c}\mathbf{F}_{ac}^{\mathrm{ext}}
++m_a\mathbf{g},\]</div>
+<div class="math notranslate nohighlight">
+\[\mathbf{I}_a\dot{\boldsymbol{\omega}}_a
++\boldsymbol{\omega}_a\times
+(\mathbf{I}_a\boldsymbol{\omega}_a)
+=\sum_b\mathbf{M}_{ab}^{\mathrm{int}}
++\sum_c\mathbf{M}_{ac}^{\mathrm{ext}},\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{F}^{\mathrm{int}}\)</span> and
+<span class="math notranslate nohighlight">\(\mathbf{M}^{\mathrm{int}}\)</span> are forces and moments transmitted by
+internal contacts or bonds, while the external terms arise from other
+particles, boundaries, and applied loads. If all internal bonds remain intact
+and infinitely stiff, relative constituent motion is suppressed and the
+cluster approaches rigid-clump behavior. Finite bond stiffness permits
+deformation; bond damage or failure permits irreversible shape change and
+fragmentation.</p>
+</section>
+<section id="internal-bond-response-and-breakage">
+<h2>Internal bond response and breakage<a class="headerlink" href="#internal-bond-response-and-breakage" title="Link to this heading">#</a></h2>
+<p>A simple bonded-contact idealization relates the local normal and tangential
+relative displacements <span class="math notranslate nohighlight">\(\delta_n\)</span> and <span class="math notranslate nohighlight">\(\boldsymbol{\delta}_t\)</span> to
+trial bond forces through</p>
+<div class="math notranslate nohighlight">
+\[F_n^{\mathrm{trial}}=k_n^b\delta_n,
+\qquad
+\mathbf{F}_t^{\mathrm{trial}}=k_t^b\boldsymbol{\delta}_t,\]</div>
+<p>where <span class="math notranslate nohighlight">\(k_n^b\)</span> and <span class="math notranslate nohighlight">\(k_t^b\)</span> are bond stiffnesses. A chosen strength
+criterion may trigger damage when the normal or shear traction reaches its
+corresponding tensile or shear capacity. After damage, the transmitted force
+is reduced according to the selected softening law; after complete failure,
+the interface no longer carries cohesive tension or shear, although ordinary
+compressive contact and friction may remain. These equations illustrate the
+mechanism and are not a claim about one specific OpenFDEM bond implementation.</p>
+</section>
+<section id="macroscopic-response-and-calibration">
+<h2>Macroscopic response and calibration<a class="headerlink" href="#macroscopic-response-and-calibration" title="Link to this heading">#</a></h2>
+<p>The response of an irregular cluster assembly emerges from both external
+particle contacts and internal deformation. Cluster geometry affects packing,
+contact orientation, and interlocking; constituent size and bond properties
+affect the effective stiffness, strength, and breakage pattern. Resolution
+should be adequate to represent the target particle shape and expected
+deformation modes. Calibration should consider bulk observables such as
+packing density, stress-strain response, peak strength, dilation, and fragment
+size distribution, rather than fitting only individual bond parameters.</p>
+<p>This cluster approach provides a mesoscale compromise: it can represent
+particle-scale deformation and breakage without resolving a continuum mesh
+inside every grain. Predictions remain dependent on the chosen cluster
+discretization, contact law, bond law, and numerical time step.</p>
+</section>
 </section>
 
 
@@ -555,6 +635,25 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cluster-kinematics-and-force-balance">Cluster kinematics and force balance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-bond-response-and-breakage">Internal bond response and breakage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macroscopic-response-and-calibration">Macroscopic response and calibration</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

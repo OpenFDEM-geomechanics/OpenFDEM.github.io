@@ -49,11 +49,12 @@
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'rst_theory/Porous_Fluid_Theory';</script>
     <script data-cf-beacon="{&quot;token&quot;: &quot;ac93cb22b57e4eaf93d395726ff0e9ef&quot;}" defer="defer" type="module" src="https://static.cloudflareinsights.com/beacon.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Two Phase Fluid" href="Two_Phase_Fluid_Theory.html" />
+    <link rel="next" title="Two-Phase Fluid" href="Two_Phase_Fluid_Theory.html" />
     <link rel="prev" title="Fracture Fluid" href="Fracture_Fluid_Theory.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -168,7 +169,7 @@
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="Fluid_Transport_Theory.html">Fluid Transport</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="Fracture_Fluid_Theory.html">Fracture Fluid</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Porous Fluid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Two_Phase_Fluid_Theory.html">Two Phase Fluid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Two_Phase_Fluid_Theory.html">Two-Phase Fluid</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Gas_Flow_Theory.html">Gas Flow</a></li>
 </ul>
 </details></li>
@@ -176,7 +177,7 @@
 <li class="toctree-l3"><a class="reference internal" href="Matrix_Thermal.html">Matrix Thermal</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Fracture_Heat_Resistance.html">Fracture Heat Resistance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contact_Thermal.html">Contact Thermal</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Thermal_Hydromechanical_Chemical_Couple.html">Thermal-Hydromechanical (Chemical) Couple</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Thermal_Hydromechanical_Coupling.html">Thermal-Hydromechanical Coupling</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="Phase_Field.html">Phase Field</a></li>
@@ -490,7 +491,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -506,6 +509,16 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#darcy-flux">Darcy flux</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mass-conservation-and-pressure-diffusion">Mass conservation and pressure diffusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pressure-initial-and-boundary-conditions">Pressure initial and boundary conditions</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -517,7 +530,69 @@
                   
   <section id="porous-fluid">
 <h1>Porous Fluid<a class="headerlink" href="#porous-fluid" title="Link to this heading">#</a></h1>
-<p>under construction</p>
+<p>Porous-fluid theory describes fluid transport through the connected pore
+space of a permeable solid. At the continuum scale, the pore geometry is
+represented by porosity and permeability rather than by resolving each pore.
+The formulation below is for a saturated, single-phase Newtonian fluid; it is
+a general porous-media model and does not imply that every coupling term is
+active in every OpenFDEM analysis.</p>
+<section id="darcy-flux">
+<h2>Darcy flux<a class="headerlink" href="#darcy-flux" title="Link to this heading">#</a></h2>
+<p>For slow viscous flow through a porous medium, the volumetric Darcy flux is</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{q}=-\frac{\mathbf{k}}{\mu}
+\left(\nabla p-\rho\mathbf{g}\right),\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{q}\)</span> is the volume of fluid crossing unit bulk area per
+unit time, <span class="math notranslate nohighlight">\(\mathbf{k}\)</span> is the intrinsic permeability tensor,
+<span class="math notranslate nohighlight">\(\mu\)</span> is dynamic viscosity, <span class="math notranslate nohighlight">\(p\)</span> is pore pressure, <span class="math notranslate nohighlight">\(\rho\)</span> is
+fluid density, and <span class="math notranslate nohighlight">\(\mathbf{g}\)</span> is gravitational acceleration. The
+minus sign makes flow proceed down the hydraulic-potential gradient. For
+isotropic material, <span class="math notranslate nohighlight">\(\mathbf{k}=k\mathbf{I}\)</span>. Darcy’s law assumes that
+inertial effects are small; high-speed flow may require a non-Darcy relation.</p>
+</section>
+<section id="mass-conservation-and-pressure-diffusion">
+<h2>Mass conservation and pressure diffusion<a class="headerlink" href="#mass-conservation-and-pressure-diffusion" title="Link to this heading">#</a></h2>
+<p>The local fluid mass balance is</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial (\phi\rho)}{\partial t}
++\nabla\cdot(\rho\mathbf{q})=m_f,\]</div>
+<p>where <span class="math notranslate nohighlight">\(\phi\)</span> is porosity and <span class="math notranslate nohighlight">\(m_f\)</span> is a mass source per unit bulk
+volume. For slightly compressible fluid and solid constituents, a commonly
+used pressure form is</p>
+<div class="math notranslate nohighlight">
+\[S_p\frac{\partial p}{\partial t}
++\alpha_B\frac{\partial\varepsilon_v}{\partial t}
++\nabla\cdot\mathbf{q}=Q_f,\]</div>
+<p>where <span class="math notranslate nohighlight">\(S_p\)</span> is the pressure-storage coefficient,
+<span class="math notranslate nohighlight">\(\alpha_B\)</span> is the Biot coefficient, <span class="math notranslate nohighlight">\(\varepsilon_v\)</span> is volumetric
+strain, and <span class="math notranslate nohighlight">\(Q_f\)</span> is a volumetric fluid source. The strain term accounts
+for the change in pore volume caused by deformation; its sign follows the
+tension-positive strain convention. If deformation is not coupled, this term
+is omitted. Combining this balance with Darcy’s law gives the pressure
+diffusion equation</p>
+<div class="math notranslate nohighlight">
+\[S_p\frac{\partial p}{\partial t}
++\alpha_B\frac{\partial\varepsilon_v}{\partial t}
+-\nabla\cdot\left[
+\frac{\mathbf{k}}{\mu}(\nabla p-\rho\mathbf{g})\right]=Q_f.\]</div>
+<p>For constant properties, no gravity, and no deformation coupling, this reduces
+to a diffusion equation for pore pressure. The permeability tensor controls
+the ease and direction of flow, while storage controls the rate at which
+pressure responds to fluid injection, production, or boundary loading.</p>
+</section>
+<section id="pressure-initial-and-boundary-conditions">
+<h2>Pressure initial and boundary conditions<a class="headerlink" href="#pressure-initial-and-boundary-conditions" title="Link to this heading">#</a></h2>
+<p>A transient problem requires an initial pressure field. Typical boundary
+conditions prescribe pore pressure, normal fluid flux, a source or sink, or
+no-flow on an impermeable boundary. Prescribed pressure represents connection
+to a pressure-controlled reservoir; prescribed flux represents a specified
+injection or discharge rate. These conditions should be applied consistently
+with the sign convention used for <span class="math notranslate nohighlight">\(\mathbf{q}\)</span> and <span class="math notranslate nohighlight">\(Q_f\)</span>.</p>
+<p>The equations above assume a continuum representative volume and single-phase
+flow. When two immiscible fluids occupy the pore space, saturation-dependent
+relative permeability and capillary pressure are needed; see
+<a class="reference internal" href="Two_Phase_Fluid_Theory.html"><span class="doc">Two-Phase Fluid</span></a>.</p>
+</section>
 </section>
 
 
@@ -545,7 +620,7 @@
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Two Phase Fluid</p>
+        <p class="prev-next-title">Two-Phase Fluid</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -555,6 +630,25 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#darcy-flux">Darcy flux</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mass-conservation-and-pressure-diffusion">Mass conservation and pressure diffusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pressure-initial-and-boundary-conditions">Pressure initial and boundary conditions</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

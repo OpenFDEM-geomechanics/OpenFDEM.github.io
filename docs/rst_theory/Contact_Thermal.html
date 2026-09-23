@@ -49,11 +49,12 @@
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'rst_theory/Contact_Thermal';</script>
     <script data-cf-beacon="{&quot;token&quot;: &quot;ac93cb22b57e4eaf93d395726ff0e9ef&quot;}" defer="defer" type="module" src="https://static.cloudflareinsights.com/beacon.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Thermal-Hydromechanical (Chemical) Couple" href="Thermal_Hydromechanical_Chemical_Couple.html" />
+    <link rel="next" title="Thermal-Hydromechanical Coupling" href="Thermal_Hydromechanical_Coupling.html" />
     <link rel="prev" title="Fracture Heat Resistance" href="Fracture_Heat_Resistance.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -176,7 +177,7 @@
 <li class="toctree-l3"><a class="reference internal" href="Matrix_Thermal.html">Matrix Thermal</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Fracture_Heat_Resistance.html">Fracture Heat Resistance</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Contact Thermal</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Thermal_Hydromechanical_Chemical_Couple.html">Thermal-Hydromechanical (Chemical) Couple</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Thermal_Hydromechanical_Coupling.html">Thermal-Hydromechanical Coupling</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="Phase_Field.html">Phase Field</a></li>
@@ -490,7 +491,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -506,6 +509,15 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interface-law">Interface law</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-conservation-and-interpretation">Energy conservation and interpretation</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -517,7 +529,45 @@
                   
   <section id="contact-thermal">
 <h1>Contact Thermal<a class="headerlink" href="#contact-thermal" title="Link to this heading">#</a></h1>
-<p>under construction</p>
+<p>Contact thermal transfer exchanges heat between the surfaces of two discrete
+elements or blocks in contact. It provides a thermal connection across a
+mechanical contact and is commonly modeled with a conductance proportional to
+the temperature difference across the interface.</p>
+<section id="interface-law">
+<h2>Interface law<a class="headerlink" href="#interface-law" title="Link to this heading">#</a></h2>
+<p>Let <span class="math notranslate nohighlight">\(\Gamma_c\)</span> denote the active contact interface, and let <span class="math notranslate nohighlight">\(T_t\)</span>
+and <span class="math notranslate nohighlight">\(T_c\)</span> be the temperatures on the target and contactor sides. The
+normal heat flux from target to contactor is</p>
+<div class="math notranslate nohighlight">
+\[q_{t\rightarrow c}=h_c(T_t-T_c),\]</div>
+<p>where <span class="math notranslate nohighlight">\(h_c\)</span> is the thermal contact conductance. The heat-transfer rate
+over the interface is</p>
+<div class="math notranslate nohighlight">
+\[\dot Q_{t\rightarrow c}
+=\int_{\Gamma_c}h_c(T_t-T_c)\,\mathrm{d}\Gamma.\]</div>
+<p>For a uniform conductance and temperature difference over an interface of
+area <span class="math notranslate nohighlight">\(A_c\)</span>, this reduces to
+<span class="math notranslate nohighlight">\(\dot Q_{t\rightarrow c}=h_cA_c(T_t-T_c)\)</span>. In a two-dimensional model,
+the measure <span class="math notranslate nohighlight">\(\mathrm{d}\Gamma\)</span> is a boundary length and the out-of-plane
+thickness must be included if a three-dimensional heat rate is required.</p>
+</section>
+<section id="energy-conservation-and-interpretation">
+<h2>Energy conservation and interpretation<a class="headerlink" href="#energy-conservation-and-interpretation" title="Link to this heading">#</a></h2>
+<p>The equal-and-opposite heat rate is applied to the other body:</p>
+<div class="math notranslate nohighlight">
+\[\dot Q_{c\rightarrow t}=-\dot Q_{t\rightarrow c}.\]</div>
+<p>Thus, contact exchange redistributes energy between the bodies but does not
+create or remove energy from the pair. If <span class="math notranslate nohighlight">\(T_t&gt;T_c\)</span> and <span class="math notranslate nohighlight">\(h_c&gt;0\)</span>,
+heat flows from the target to the contactor. A larger conductance approaches
+the perfect-contact limit, while a small conductance represents a more
+thermally resistive interface. The conductance may be prescribed or calibrated
+as an effective parameter; its dependence on contact pressure, roughness,
+aperture, and interface material is model-specific.</p>
+<p>Contact thermal transfer applies only where a contact interface is defined.
+Heat transfer across an open fracture or a gap requires a fracture-resistance
+or other gap-transfer model. Care is needed to avoid applying both laws to the
+same interface unless their resistances have been intentionally combined.</p>
+</section>
 </section>
 
 
@@ -541,11 +591,11 @@
       </div>
     </a>
     <a class="right-next"
-       href="Thermal_Hydromechanical_Chemical_Couple.html"
+       href="Thermal_Hydromechanical_Coupling.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Thermal-Hydromechanical (Chemical) Couple</p>
+        <p class="prev-next-title">Thermal-Hydromechanical Coupling</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -555,6 +605,24 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interface-law">Interface law</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-conservation-and-interpretation">Energy conservation and interpretation</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

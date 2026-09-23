@@ -49,12 +49,13 @@
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'rst_theory/Phase_Field';</script>
     <script data-cf-beacon="{&quot;token&quot;: &quot;ac93cb22b57e4eaf93d395726ff0e9ef&quot;}" defer="defer" type="module" src="https://static.cloudflareinsights.com/beacon.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Particle Discrete Element Method (pDEM)" href="Particle_Discrete_Element_Method.html" />
-    <link rel="prev" title="Thermal-Hydromechanical (Chemical) Couple" href="Thermal_Hydromechanical_Chemical_Couple.html" />
+    <link rel="prev" title="Thermal-Hydromechanical Coupling" href="Thermal_Hydromechanical_Coupling.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -168,7 +169,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="Fluid_Transport_Theory.html">Fluid Transport</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="Fracture_Fluid_Theory.html">Fracture Fluid</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Porous_Fluid_Theory.html">Porous Fluid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Two_Phase_Fluid_Theory.html">Two Phase Fluid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Two_Phase_Fluid_Theory.html">Two-Phase Fluid</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Gas_Flow_Theory.html">Gas Flow</a></li>
 </ul>
 </details></li>
@@ -176,7 +177,7 @@
 <li class="toctree-l3"><a class="reference internal" href="Matrix_Thermal.html">Matrix Thermal</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Fracture_Heat_Resistance.html">Fracture Heat Resistance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contact_Thermal.html">Contact Thermal</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Thermal_Hydromechanical_Chemical_Couple.html">Thermal-Hydromechanical (Chemical) Couple</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Thermal_Hydromechanical_Coupling.html">Thermal-Hydromechanical Coupling</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Phase Field</a></li>
@@ -490,7 +491,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -506,6 +509,17 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regularized-fracture-energy">Regularized fracture energy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mechanical-equilibrium-and-damage-evolution">Mechanical equilibrium and damage evolution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-interpretation">Numerical interpretation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -517,7 +531,88 @@
                   
   <section id="phase-field">
 <h1>Phase Field<a class="headerlink" href="#phase-field" title="Link to this heading">#</a></h1>
-<p>under construction</p>
+<p>The phase-field method represents a sharp crack by a smooth damage field over
+a narrow band. This avoids explicitly tracking a moving crack surface and
+allows complex crack paths, branching, and coalescence to emerge from the
+solution. In this section, <span class="math notranslate nohighlight">\(d=0\)</span> denotes intact material and <span class="math notranslate nohighlight">\(d=1\)</span>
+fully developed fracture. The formulation is a standard variational model for
+quasi-brittle or brittle fracture; the precise degradation law and material
+split used in a computation are model choices.</p>
+<section id="regularized-fracture-energy">
+<h2>Regularized fracture energy<a class="headerlink" href="#regularized-fracture-energy" title="Link to this heading">#</a></h2>
+<p>For linear elastic material, a representative total potential energy is</p>
+<div class="math notranslate nohighlight">
+\[\Pi(\mathbf{u},d)
+=\int_{\Omega}
+\left[g(d)\psi_e^+(\boldsymbol{\varepsilon})
++\psi_e^-(\boldsymbol{\varepsilon})\right]\,\mathrm{d}\Omega
++\int_{\Omega}G_c\,\gamma_\ell(d,\nabla d)\,\mathrm{d}\Omega
+-W_{\mathrm{ext}},\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> is displacement,
+<span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span> is strain, <span class="math notranslate nohighlight">\(\psi_e^+\)</span> and
+<span class="math notranslate nohighlight">\(\psi_e^-\)</span> are the tensile and compressive parts of the elastic energy,
+<span class="math notranslate nohighlight">\(G_c\)</span> is fracture energy per unit crack area, and
+<span class="math notranslate nohighlight">\(W_{\mathrm{ext}}\)</span> is external work. Separating tensile and compressive
+energy prevents compressive states from spuriously driving crack growth.</p>
+<p>For the common AT2 crack-density function and quadratic degradation law,</p>
+<div class="math notranslate nohighlight">
+\[\gamma_\ell(d,\nabla d)
+=\frac{d^2}{2\ell}+\frac{\ell}{2}|\nabla d|^2,
+\qquad
+g(d)=(1-d)^2+\kappa,\]</div>
+<p>where <span class="math notranslate nohighlight">\(\ell\)</span> is the regularization length and <span class="math notranslate nohighlight">\(\kappa\)</span> is a small
+residual stiffness used to avoid a singular elastic operator. The length
+<span class="math notranslate nohighlight">\(\ell\)</span> controls the width of the diffused crack and must be resolved by
+the mesh. Other crack-density functions, such as AT1, lead to different
+evolution equations and nucleation behavior.</p>
+</section>
+<section id="mechanical-equilibrium-and-damage-evolution">
+<h2>Mechanical equilibrium and damage evolution<a class="headerlink" href="#mechanical-equilibrium-and-damage-evolution" title="Link to this heading">#</a></h2>
+<p>Quasi-static mechanical equilibrium is expressed as</p>
+<div class="math notranslate nohighlight">
+\[\nabla\cdot\boldsymbol{\sigma}+\mathbf{b}=\mathbf{0},
+\qquad
+\boldsymbol{\sigma}
+=g(d)\frac{\partial\psi_e^+}{\partial\boldsymbol{\varepsilon}}
++\frac{\partial\psi_e^-}{\partial\boldsymbol{\varepsilon}},\]</div>
+<p>where <span class="math notranslate nohighlight">\(\boldsymbol{\sigma}\)</span> is Cauchy stress and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> is
+body force per unit volume. For the AT2 choice, a common phase-field equation
+is</p>
+<div class="math notranslate nohighlight">
+\[\frac{G_c}{\ell}d-G_c\ell\nabla^2d
+-2(1-d)H=0,\]</div>
+<p>where <span class="math notranslate nohighlight">\(H\)</span> is a history field that stores the maximum tensile elastic
+energy attained at a material point. Using a non-decreasing history field
+enforces the irreversibility of fracture in a staggered solution; equivalently,
+the damage is constrained not to decrease with loading. Boundary conditions
+for <span class="math notranslate nohighlight">\(d\)</span> and mechanical displacement must be selected consistently with
+the physical crack and loading problem.</p>
+</section>
+<section id="numerical-interpretation">
+<h2>Numerical interpretation<a class="headerlink" href="#numerical-interpretation" title="Link to this heading">#</a></h2>
+<p>The regularization length is a material/model scale, not simply a mesh size.
+The mesh should contain multiple elements across the diffused crack band, and
+results should be checked for sensitivity to <span class="math notranslate nohighlight">\(\ell\)</span>, mesh resolution,
+and residual stiffness. Staggered solution alternates between mechanical
+equilibrium and damage evolution; monolithic solution solves both fields
+together. These are numerical strategies for the coupled equations, not
+different fracture-energy definitions.</p>
+<p>The equations shown are a reference AT2-type formulation. They provide
+theoretical context for the Phase Field module and should not be interpreted as
+a complete listing of every constitutive option or solver detail in OpenFDEM.</p>
+</section>
+<section id="further-reading">
+<h2>Further reading<a class="headerlink" href="#further-reading" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Bourdin, B., Francfort, G. A., and Marigo, J.-J. (2000). Numerical
+experiments in revisited brittle fracture. <em>Journal of the Mechanics and
+Physics of Solids</em>, 48(4), 797-826. DOI: 10.1016/S0022-5096(99)00028-9.</p></li>
+<li><p>Miehe, C., Welschinger, F., and Hofacker, M. (2010). Thermodynamically
+consistent phase-field models of fracture: Variational principles and
+multi-field FE implementations. <em>International Journal for Numerical
+Methods in Engineering</em>, 83(10), 1273-1311. DOI: 10.1002/nme.2861.</p></li>
+</ul>
+</section>
 </section>
 
 
@@ -532,12 +627,12 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Thermal_Hydromechanical_Chemical_Couple.html"
+       href="Thermal_Hydromechanical_Coupling.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Thermal-Hydromechanical (Chemical) Couple</p>
+        <p class="prev-next-title">Thermal-Hydromechanical Coupling</p>
       </div>
     </a>
     <a class="right-next"
@@ -555,6 +650,26 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regularized-fracture-energy">Regularized fracture energy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mechanical-equilibrium-and-damage-evolution">Mechanical equilibrium and damage evolution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-interpretation">Numerical interpretation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

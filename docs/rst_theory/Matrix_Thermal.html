@@ -49,6 +49,7 @@
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'rst_theory/Matrix_Thermal';</script>
     <script data-cf-beacon="{&quot;token&quot;: &quot;ac93cb22b57e4eaf93d395726ff0e9ef&quot;}" defer="defer" type="module" src="https://static.cloudflareinsights.com/beacon.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -176,7 +177,7 @@
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Matrix Thermal</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Fracture_Heat_Resistance.html">Fracture Heat Resistance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contact_Thermal.html">Contact Thermal</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Thermal_Hydromechanical_Chemical_Couple.html">Thermal-Hydromechanical (Chemical) Couple</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Thermal_Hydromechanical_Coupling.html">Thermal-Hydromechanical Coupling</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="Phase_Field.html">Phase Field</a></li>
@@ -490,7 +491,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -506,6 +509,16 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fourier-s-law">Fourier’s law</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-balance">Energy balance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-and-boundary-conditions">Initial and boundary conditions</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -517,7 +530,58 @@
                   
   <section id="matrix-thermal">
 <h1>Matrix Thermal<a class="headerlink" href="#matrix-thermal" title="Link to this heading">#</a></h1>
-<p>under construction</p>
+<p>Matrix thermal transfer describes heat storage and conduction within the
+intact solid material. Temperature gradients drive heat from warmer regions
+toward cooler regions, while heat sources, boundary conditions, and material
+properties determine the transient temperature field.</p>
+<section id="fourier-s-law">
+<h2>Fourier’s law<a class="headerlink" href="#fourier-s-law" title="Link to this heading">#</a></h2>
+<p>The conductive heat-flux density is given by Fourier’s law:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{q}=-\mathbf{K}\nabla T,\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{q}\)</span> is heat flux per unit area, <span class="math notranslate nohighlight">\(T\)</span> is temperature,
+and <span class="math notranslate nohighlight">\(\mathbf{K}\)</span> is the thermal-conductivity tensor. The negative sign
+indicates that heat flows down the temperature gradient. For a two-dimensional
+domain, <span class="math notranslate nohighlight">\(\nabla T=(\partial T/\partial x,\,\partial T/\partial y)\)</span>.
+For an isotropic material, <span class="math notranslate nohighlight">\(\mathbf{K}=k\mathbf{I}\)</span>, where <span class="math notranslate nohighlight">\(k\)</span> is
+the scalar thermal conductivity.</p>
+</section>
+<section id="energy-balance">
+<h2>Energy balance<a class="headerlink" href="#energy-balance" title="Link to this heading">#</a></h2>
+<p>For a stationary solid with constant density and specific heat capacity, local
+energy conservation is</p>
+<div class="math notranslate nohighlight">
+\[\rho C_p\frac{\partial T}{\partial t}
++\nabla\cdot\mathbf{q}=Q,\]</div>
+<p>where <span class="math notranslate nohighlight">\(\rho\)</span> is mass density, <span class="math notranslate nohighlight">\(C_p\)</span> is specific heat capacity,
+and <span class="math notranslate nohighlight">\(Q\)</span> is the volumetric heat-generation rate. Combining this balance
+with Fourier’s law gives</p>
+<div class="math notranslate nohighlight">
+\[\rho C_p\frac{\partial T}{\partial t}
+=\nabla\cdot(\mathbf{K}\nabla T)+Q.\]</div>
+<p>For homogeneous isotropic material with constant <span class="math notranslate nohighlight">\(k\)</span>, this becomes</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial T}{\partial t}
+=\frac{k}{\rho C_p}\nabla^2T+\frac{Q}{\rho C_p}.\]</div>
+<p>The thermal diffusivity <span class="math notranslate nohighlight">\(a_T=k/(\rho C_p)\)</span> measures how quickly
+temperature disturbances spread through the matrix. If properties vary with
+temperature or position, the divergence form should be retained rather than
+replacing it with <span class="math notranslate nohighlight">\(k\nabla^2T\)</span>.</p>
+</section>
+<section id="initial-and-boundary-conditions">
+<h2>Initial and boundary conditions<a class="headerlink" href="#initial-and-boundary-conditions" title="Link to this heading">#</a></h2>
+<p>Transient conduction requires an initial temperature field
+<span class="math notranslate nohighlight">\(T(\mathbf{x},0)=T_0(\mathbf{x})\)</span>. Common boundary conditions include a
+prescribed temperature, a prescribed normal heat flux
+<span class="math notranslate nohighlight">\(-\mathbf{n}\cdot\mathbf{K}\nabla T\)</span>, or an exchange condition with the
+surrounding environment. These conditions define how the matrix receives or
+loses heat and should be consistent with the physical heating or cooling
+process being represented.</p>
+<p>The equations above assume a continuum matrix and do not by themselves
+represent heat exchange across a discontinuity. Heat transfer between
+separated blocks or across a fracture is described by the contact and fracture
+thermal-resistance models, respectively.</p>
+</section>
 </section>
 
 
@@ -555,6 +619,25 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fourier-s-law">Fourier’s law</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-balance">Energy balance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-and-boundary-conditions">Initial and boundary conditions</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

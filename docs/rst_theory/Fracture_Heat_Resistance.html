@@ -49,6 +49,7 @@
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'rst_theory/Fracture_Heat_Resistance';</script>
     <script data-cf-beacon="{&quot;token&quot;: &quot;ac93cb22b57e4eaf93d395726ff0e9ef&quot;}" defer="defer" type="module" src="https://static.cloudflareinsights.com/beacon.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -176,7 +177,7 @@
 <li class="toctree-l3"><a class="reference internal" href="Matrix_Thermal.html">Matrix Thermal</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Fracture Heat Resistance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contact_Thermal.html">Contact Thermal</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Thermal_Hydromechanical_Chemical_Couple.html">Thermal-Hydromechanical (Chemical) Couple</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Thermal_Hydromechanical_Coupling.html">Thermal-Hydromechanical Coupling</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="Phase_Field.html">Phase Field</a></li>
@@ -490,7 +491,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -506,6 +509,15 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#series-resistance-model">Series-resistance model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-and-assumptions">Interpretation and assumptions</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -517,7 +529,49 @@
                   
   <section id="fracture-heat-resistance">
 <h1>Fracture Heat Resistance<a class="headerlink" href="#fracture-heat-resistance" title="Link to this heading">#</a></h1>
-<p>under construction</p>
+<p>A fracture interrupts direct heat conduction through the intact matrix. Heat
+may still cross the discontinuity through gas, liquid, or solid material in the
+fracture, as well as through microscopic asperity contacts between its faces.
+These mechanisms can be represented by an effective thermal resistance.</p>
+<section id="series-resistance-model">
+<h2>Series-resistance model<a class="headerlink" href="#series-resistance-model" title="Link to this heading">#</a></h2>
+<p>Consider a fracture of aperture <span class="math notranslate nohighlight">\(b\)</span> filled with a material of thermal
+conductivity <span class="math notranslate nohighlight">\(k_f\)</span>. For one-dimensional steady conduction normal to the
+fracture, the resistance per unit area of the filling layer is</p>
+<div class="math notranslate nohighlight">
+\[R''_{f}=\frac{b}{k_f}.\]</div>
+<p>If the two fracture faces also have interfacial resistances
+<span class="math notranslate nohighlight">\(R''_{c,1}\)</span> and <span class="math notranslate nohighlight">\(R''_{c,2}\)</span>, the total resistance per unit area is</p>
+<div class="math notranslate nohighlight">
+\[R''_{\mathrm{tot}}=R''_{c,1}+\frac{b}{k_f}+R''_{c,2}.\]</div>
+<p>The corresponding effective conductance is
+<span class="math notranslate nohighlight">\(h_f=1/R''_{\mathrm{tot}}\)</span>, and the heat flux from side 1 to side 2 is</p>
+<div class="math notranslate nohighlight">
+\[q''_{1\rightarrow2}
+=h_f(T_1-T_2)
+=\frac{T_1-T_2}{R''_{\mathrm{tot}}}.\]</div>
+<p>Here <span class="math notranslate nohighlight">\(T_1\)</span> and <span class="math notranslate nohighlight">\(T_2\)</span> are the temperatures on the opposing sides of
+the fracture. For a fracture with negligible filling-layer resistance,
+<span class="math notranslate nohighlight">\(b/k_f\)</span> may be omitted; for a dry, open fracture, the effective
+conductance can instead be calibrated to account for gas conduction and
+radiation if those mechanisms are included in the intended model.</p>
+</section>
+<section id="interpretation-and-assumptions">
+<h2>Interpretation and assumptions<a class="headerlink" href="#interpretation-and-assumptions" title="Link to this heading">#</a></h2>
+<p>The series model assumes heat flows approximately normal to a locally planar
+fracture and that the layer and interface resistances act in series. The
+resistance has units of <span class="math notranslate nohighlight">\(\mathrm{m^2\,K/W}\)</span>, while conductance has units
+of <span class="math notranslate nohighlight">\(\mathrm{W/(m^2\,K)}\)</span>. For a contact area <span class="math notranslate nohighlight">\(A\)</span>, the total heat
+transfer rate is <span class="math notranslate nohighlight">\(\dot Q=Aq''_{1\rightarrow2}\)</span>. A larger aperture or
+lower filling conductivity increases the layer resistance and reduces heat
+transfer, all else being equal.</p>
+<p>This effective fracture resistance represents heat transmission across the
+fracture itself. It is distinct from the contact-thermal exchange law used
+when two discrete elements or blocks are in thermal contact. In a numerical
+model, the effective conductance should reflect the chosen representation so
+that fracture resistance and contact resistance are not inadvertently counted
+twice.</p>
+</section>
 </section>
 
 
@@ -555,6 +609,24 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#series-resistance-model">Series-resistance model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-and-assumptions">Interpretation and assumptions</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
