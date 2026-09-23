@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Two Phase Fluid</title>
+    <title>Two-Phase Fluid</title>
   
   
   
@@ -49,6 +49,7 @@
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'rst_theory/Two_Phase_Fluid_Theory';</script>
     <script data-cf-beacon="{&quot;token&quot;: &quot;ac93cb22b57e4eaf93d395726ff0e9ef&quot;}" defer="defer" type="module" src="https://static.cloudflareinsights.com/beacon.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -168,7 +169,7 @@
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="Fluid_Transport_Theory.html">Fluid Transport</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="Fracture_Fluid_Theory.html">Fracture Fluid</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Porous_Fluid_Theory.html">Porous Fluid</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">Two Phase Fluid</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Two-Phase Fluid</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Gas_Flow_Theory.html">Gas Flow</a></li>
 </ul>
 </details></li>
@@ -176,7 +177,7 @@
 <li class="toctree-l3"><a class="reference internal" href="Matrix_Thermal.html">Matrix Thermal</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Fracture_Heat_Resistance.html">Fracture Heat Resistance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contact_Thermal.html">Contact Thermal</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Thermal_Hydromechanical_Chemical_Couple.html">Thermal-Hydromechanical (Chemical) Couple</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Thermal_Hydromechanical_Coupling.html">Thermal-Hydromechanical Coupling</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="Phase_Field.html">Phase Field</a></li>
@@ -490,7 +491,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -501,11 +504,22 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Two Phase Fluid</h1>
+    <h1>Two-Phase Fluid</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saturation-and-capillary-pressure">Saturation and capillary pressure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-specific-darcy-law-and-mass-balance">Phase-specific Darcy law and mass balance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relative-permeability-and-closure">Relative permeability and closure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-limits">Model limits</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -516,8 +530,77 @@
                 <article class="bd-article">
                   
   <section id="two-phase-fluid">
-<h1>Two Phase Fluid<a class="headerlink" href="#two-phase-fluid" title="Link to this heading">#</a></h1>
-<p>under construction</p>
+<h1>Two-Phase Fluid<a class="headerlink" href="#two-phase-fluid" title="Link to this heading">#</a></h1>
+<p>Two-phase porous flow describes two immiscible fluids, such as water and gas
+or water and oil, sharing the same pore space. Because both phases compete for
+the available pores, each phase’s mobility depends on saturation. The
+equations below give the standard continuum formulation; they do not prescribe
+a particular relative-permeability curve or imply that this formulation is
+used by every OpenFDEM fluid solver.</p>
+<section id="saturation-and-capillary-pressure">
+<h2>Saturation and capillary pressure<a class="headerlink" href="#saturation-and-capillary-pressure" title="Link to this heading">#</a></h2>
+<p>For a two-phase system, the phase saturations satisfy</p>
+<div class="math notranslate nohighlight">
+\[S_w+S_n=1,\]</div>
+<p>where <span class="math notranslate nohighlight">\(S_w\)</span> and <span class="math notranslate nohighlight">\(S_n\)</span> are the wetting- and non-wetting-phase
+saturations. Capillary pressure is the pressure difference between the phases,
+conventionally defined as</p>
+<div class="math notranslate nohighlight">
+\[p_c(S_w)=p_n-p_w,\]</div>
+<p>where <span class="math notranslate nohighlight">\(p_w\)</span> and <span class="math notranslate nohighlight">\(p_n\)</span> are the wetting- and non-wetting-phase
+pressures. A constitutive relation <span class="math notranslate nohighlight">\(p_c(S_w)\)</span> closes the pressure-
+saturation relation and reflects pore-scale interface and wettability effects.</p>
+</section>
+<section id="phase-specific-darcy-law-and-mass-balance">
+<h2>Phase-specific Darcy law and mass balance<a class="headerlink" href="#phase-specific-darcy-law-and-mass-balance" title="Link to this heading">#</a></h2>
+<p>The Darcy flux for phase <span class="math notranslate nohighlight">\(\alpha\in\{w,n\}\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{q}_{\alpha}
+=-\frac{\mathbf{k}\,k_{r\alpha}(S_\alpha)}{\mu_\alpha}
+\left(\nabla p_\alpha-\rho_\alpha\mathbf{g}\right),\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{k}\)</span> is the absolute permeability tensor,
+<span class="math notranslate nohighlight">\(k_{r\alpha}\)</span> is the dimensionless relative permeability,
+<span class="math notranslate nohighlight">\(\mu_\alpha\)</span> and <span class="math notranslate nohighlight">\(\rho_\alpha\)</span> are phase viscosity and density,
+and <span class="math notranslate nohighlight">\(\mathbf{g}\)</span> is gravity. The phase mass balances are</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial(\phi\rho_\alpha S_\alpha)}{\partial t}
++\nabla\cdot(\rho_\alpha\mathbf{q}_\alpha)=m_\alpha,
+\qquad \alpha\in\{w,n\},\]</div>
+<p>where <span class="math notranslate nohighlight">\(\phi\)</span> is porosity and <span class="math notranslate nohighlight">\(m_\alpha\)</span> is a mass source per unit
+bulk volume for that phase. These balances are coupled through the saturation
+constraint, the capillary-pressure relation, and the relative-permeability
+functions.</p>
+</section>
+<section id="relative-permeability-and-closure">
+<h2>Relative permeability and closure<a class="headerlink" href="#relative-permeability-and-closure" title="Link to this heading">#</a></h2>
+<p>Relative permeability accounts macroscopically for the reduction in a phase’s
+conducting pore space due to the presence of the other phase. It usually
+varies between zero and one and is specified as a function of saturation,
+often together with residual saturations. One illustrative Corey-type closure
+uses the effective wetting saturation</p>
+<div class="math notranslate nohighlight">
+\[S_e=\frac{S_w-S_{wr}}{1-S_{wr}-S_{nr}},
+\qquad
+k_{rw}=S_e^{n_w},
+\qquad
+k_{rn}=(1-S_e)^{n_n},\]</div>
+<p>where <span class="math notranslate nohighlight">\(S_{wr}\)</span> and <span class="math notranslate nohighlight">\(S_{nr}\)</span> are residual wetting- and
+non-wetting-phase saturations, and <span class="math notranslate nohighlight">\(n_w,n_n\)</span> are empirical exponents.
+This is an example, not a universal law: measured or calibrated
+capillary-pressure and relative-permeability curves should be used when
+available. Hysteresis, compressibility, dissolution, and dynamic interfacial
+effects require additional constitutive assumptions.</p>
+</section>
+<section id="model-limits">
+<h2>Model limits<a class="headerlink" href="#model-limits" title="Link to this heading">#</a></h2>
+<p>If capillary effects are negligible, the phase pressures may be approximated
+as equal; if one phase is absent, the model reduces to single-phase flow.
+Saturation fronts can be sharp, so the predicted solution may depend on
+constitutive curves, mesh resolution, and time-step selection. The choice of
+primary unknowns (for example, one phase pressure and one saturation) is a
+numerical formulation decision and does not change the underlying conservation
+laws.</p>
+</section>
 </section>
 
 
@@ -555,6 +638,26 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saturation-and-capillary-pressure">Saturation and capillary pressure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-specific-darcy-law-and-mass-balance">Phase-specific Darcy law and mass balance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relative-permeability-and-closure">Relative permeability and closure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-limits">Model limits</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

@@ -49,6 +49,7 @@
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'rst_theory/Rigid_Particle_DEM';</script>
     <script data-cf-beacon="{&quot;token&quot;: &quot;ac93cb22b57e4eaf93d395726ff0e9ef&quot;}" defer="defer" type="module" src="https://static.cloudflareinsights.com/beacon.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -168,7 +169,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="Fluid_Transport_Theory.html">Fluid Transport</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="Fracture_Fluid_Theory.html">Fracture Fluid</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Porous_Fluid_Theory.html">Porous Fluid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Two_Phase_Fluid_Theory.html">Two Phase Fluid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Two_Phase_Fluid_Theory.html">Two-Phase Fluid</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Gas_Flow_Theory.html">Gas Flow</a></li>
 </ul>
 </details></li>
@@ -176,7 +177,7 @@
 <li class="toctree-l3"><a class="reference internal" href="Matrix_Thermal.html">Matrix Thermal</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Fracture_Heat_Resistance.html">Fracture Heat Resistance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Contact_Thermal.html">Contact Thermal</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Thermal_Hydromechanical_Chemical_Couple.html">Thermal-Hydromechanical (Chemical) Couple</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Thermal_Hydromechanical_Coupling.html">Thermal-Hydromechanical Coupling</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="Phase_Field.html">Phase Field</a></li>
@@ -490,7 +491,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -506,6 +509,16 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#particle-motion">Particle motion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contact-and-friction">Contact and friction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-integration-and-interpretation">Time integration and interpretation</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -517,7 +530,68 @@
                   
   <section id="rigid-particle-dem">
 <h1>Rigid Particle DEM<a class="headerlink" href="#rigid-particle-dem" title="Link to this heading">#</a></h1>
-<p>under construction</p>
+<p>The rigid-particle discrete element method (DEM) models a particulate
+assembly as individual bodies whose shapes do not deform, while their
+translations, rotations, contacts, and possible bonds evolve in time. It is
+well suited to granular packing, impact, flow, and compression problems in
+which bulk behavior emerges from particle-scale interactions. OpenFDEM
+describes its pDEM module as supporting particle packing, kinematics,
+collision, and linear, Hertz, cohesive-bond, and rotation-resistance contact
+models.</p>
+<section id="particle-motion">
+<h2>Particle motion<a class="headerlink" href="#particle-motion" title="Link to this heading">#</a></h2>
+<p>For particle <span class="math notranslate nohighlight">\(i\)</span> with mass <span class="math notranslate nohighlight">\(m_i\)</span>, center position
+<span class="math notranslate nohighlight">\(\mathbf{x}_i\)</span>, and translational velocity <span class="math notranslate nohighlight">\(\mathbf{v}_i\)</span>, the
+translational equation of motion is</p>
+<div class="math notranslate nohighlight">
+\[m_i\dot{\mathbf{v}}_i
+=\sum_{c\in i}\mathbf{F}_{ic}+m_i\mathbf{g}+\mathbf{F}_i^{\mathrm{ext}},\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{F}_{ic}\)</span> are contact or bond forces,
+<span class="math notranslate nohighlight">\(\mathbf{g}\)</span> is gravity, and <span class="math notranslate nohighlight">\(\mathbf{F}_i^{\mathrm{ext}}\)</span> is
+other applied loading. Rotation follows the angular-momentum balance</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{I}_i\dot{\boldsymbol{\omega}}_i
++\boldsymbol{\omega}_i\times
+(\mathbf{I}_i\boldsymbol{\omega}_i)
+=\sum_{c\in i}\mathbf{M}_{ic}+\mathbf{M}_i^{\mathrm{ext}},\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{I}_i\)</span> is the particle inertia tensor,
+<span class="math notranslate nohighlight">\(\boldsymbol{\omega}_i\)</span> is angular velocity, and <span class="math notranslate nohighlight">\(\mathbf{M}\)</span>
+denotes contact, bond, or applied moments. In two-dimensional calculations,
+the rotational equation reduces to the out-of-plane scalar form.</p>
+</section>
+<section id="contact-and-friction">
+<h2>Contact and friction<a class="headerlink" href="#contact-and-friction" title="Link to this heading">#</a></h2>
+<p>For a pair of touching particles, the contact force is commonly resolved into
+normal and tangential components,
+<span class="math notranslate nohighlight">\(\mathbf{F}_c=F_n\mathbf{n}+\mathbf{F}_t\)</span>, where <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> is
+the contact normal. A linear elastic-frictional model uses the overlap
+<span class="math notranslate nohighlight">\(\delta_n\)</span> to compute a trial normal force, for example</p>
+<div class="math notranslate nohighlight">
+\[F_n^{\mathrm{trial}}=k_n\delta_n-c_n v_n,
+\qquad
+|\mathbf{F}_t|\leq\mu_f F_n,\]</div>
+<p>where <span class="math notranslate nohighlight">\(k_n\)</span> is normal stiffness, <span class="math notranslate nohighlight">\(c_n\)</span> is a normal damping
+coefficient, <span class="math notranslate nohighlight">\(v_n\)</span> is the relative normal velocity, and <span class="math notranslate nohighlight">\(\mu_f\)</span>
+is the friction coefficient. A tangential spring tracks relative slip, with
+the trial force projected back to the Coulomb limit when sliding occurs. In
+Hertz-type contact, the normal force instead depends nonlinearly on overlap.
+The exact force law, damping, and friction update are constitutive choices;
+they should be selected for the particle material and the intended time scale.</p>
+</section>
+<section id="time-integration-and-interpretation">
+<h2>Time integration and interpretation<a class="headerlink" href="#time-integration-and-interpretation" title="Link to this heading">#</a></h2>
+<p>DEM commonly advances the particle equations explicitly. The stable time step
+must resolve the shortest relevant contact oscillation, which is controlled
+by particle mass or inertia and contact stiffness. Increasing stiffness
+reduces overlap but also decreases the stable time step. Contact stiffness,
+damping, and friction therefore affect both numerical cost and the effective
+macroscopic response and should be calibrated rather than treated as arbitrary
+numerical constants.</p>
+<p>Because particle shapes are fixed in rigid DEM, particle-scale deformation
+and fracture are not resolved within a body. They can be represented
+approximately by bonded particle assemblies or by the deformable-cluster
+approach described in <a class="reference internal" href="Irregular_Deformable_Cluster_DEM.html"><span class="doc">Irregular Deformable Cluster DEM</span></a>.</p>
+</section>
 </section>
 
 
@@ -555,6 +629,25 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#particle-motion">Particle motion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contact-and-friction">Contact and friction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-integration-and-interpretation">Time integration and interpretation</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
