@@ -15,7 +15,6 @@ of.geometry.minsize
     **Parameters:** 
         **minsize:** Bad segments under this threshold will be deleted.
 
-|
 
 Example:
 --------------------------------------------------------------------

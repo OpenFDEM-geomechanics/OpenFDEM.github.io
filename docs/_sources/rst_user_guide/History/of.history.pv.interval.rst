@@ -15,7 +15,6 @@ of.history.pv.interval
     **Parameters:** 
         **global:** (default 1000) output intervals
     
-|
 
 Example:
 --------------------------------------------------------------------

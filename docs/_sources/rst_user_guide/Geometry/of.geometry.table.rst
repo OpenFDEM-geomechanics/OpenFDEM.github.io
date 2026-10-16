@@ -17,7 +17,6 @@ of.geometry.table
         
         **region:** Define the points on the polygon: N, [x0,y0] [x1,y1], [x2,y2], [x3, y3]… The polygon will be closed.
         
-|
 
 Example:
 --------------------------------------------------------------------

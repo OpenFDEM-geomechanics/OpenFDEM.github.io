@@ -5,13 +5,10 @@ Collaborating
 .. figure:: ../_static/AboutUs/ISRMlogo.png   
     :align: left
 
-|
-|
-|
-|
-|
+.. raw:: html
 
-=================================================================
+   <div style="clear: both;"></div>
+
 
 - Professor **Xiaofeng Li**, Lead developer of OpenFDEM
 - Professor **Haibo Li**, Dean of Wuhan Branch, Chinese Academy of Sciences, Vice-Editor of Journal of Rock Mechanics and Geotechnical Engineering
@@ -20,23 +17,17 @@ Collaborating
 - **Kunru Xie**, 2025 -
 - **Ben Wang**, 2019 - 2022
 
+=================================================================
 
 |
 
 .. figure:: ../_static/AboutUs/torontoLogo.png
     :align: left
 
-|
-|
-|
-|
-|
-|
-|
-|
-|
+.. raw:: html
 
-===================================================================
+   <div style="clear: both;"></div>
+
 
 - | Professor **Giovanni Grasselli**, NSERC – Energi Simulation Industrial Research Chair in Fundamental Rock Physics and Rock Mechanics
 - Dr. **Xiaofeng Li**, 2021 - 2023
@@ -45,38 +36,32 @@ Collaborating
 - **Katia Ossetchkina**, 2021 - 2023
 - **Grace Hu**, 2023 - 2023
 
+=================================================================
+
 |
 
 .. figure:: ../_static/AboutUs/polyulogo.png
     :align: left
 
-|
-|
-|
-|
-|
-|
-|
+.. raw:: html
 
-=================================================================
+   <div style="clear: both;"></div>
+
 
 - Dr. **Qi Zhao**, 2019 - 2022
 - Dr. **Xiaofeng Li**, 2020 - 2021
 
+=================================================================
 
 |
 
 .. figure:: ../_static/AboutUs/monashlogo.png   
     :align: left
 
-|
-|
-|
-|
-|
-|
+.. raw:: html
 
-=================================================================
+   <div style="clear: both;"></div>
+
 
 - Professor **Jian Zhao**, Editors-in-Chief of International Journal of Rock Mechanics and Mining Sciences
 

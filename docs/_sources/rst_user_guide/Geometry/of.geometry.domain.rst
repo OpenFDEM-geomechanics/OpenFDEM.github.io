@@ -19,7 +19,6 @@ of.geometry.domain
         2. x [xmin, xmax] y [ymin, ymax]
         3. xmin value xmax value ymin value ymax value
         
-|
 
 Example:
 --------------------------------------------------------------------

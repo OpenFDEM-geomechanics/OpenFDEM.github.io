@@ -10,7 +10,6 @@ of.import.FEM.nodal.coord
 .. role:: blue
 
 **of.**\ :red:`import.FEM.nodal.coord` :blue:`*N*` <int> :blue:`*x0*` <double> :blue:`*y0*` <double> :blue:`*x1*` <double> :blue:`*y1*` <double> ...
-    |
     Import the nodal results after deformation by knowing node count and initial coordinates.
     
     **Parameters:** 
@@ -20,7 +19,6 @@ of.import.FEM.nodal.coord
 
         **y:** x coordinates     
 
-|
 
 Example:
 --------------------------------------------------------------------

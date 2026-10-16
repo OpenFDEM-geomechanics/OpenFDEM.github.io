@@ -11,9 +11,9 @@ of.finalize
     **(Mandatory)** This command terminates the console at the end of the run 
     and clear all the old memory from the last run.
 
-|
 
-**Example:**
+Example:
+--------------------------------------------------------------------
 
 .. code-block:: 
     

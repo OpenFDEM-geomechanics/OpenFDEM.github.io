@@ -10,7 +10,6 @@ of.geometry.remove.ellipse
 .. role:: blue
 
 **of.**\ :red:`geometry.remove.ellipse` :blue:`*new_geometry_tag*` <string> :blue:`*object_geometry_tag*` <string> :blue:`*region*` <double, double, double, double, double, int>
-    |
     Remove the geometry in the object by assigning the x, y, maxradius, minradius, theta and segments of the ellipse.
 
     **Parameters:** 
@@ -24,7 +23,6 @@ of.geometry.remove.ellipse
         2. center [x, y] radius [min max] theta nseg 
         3. x value, y value, rad value. minradius value, maxradius value, theta value, nseg value
         
-|
 
 Example:
 --------------------------------------------------------------------

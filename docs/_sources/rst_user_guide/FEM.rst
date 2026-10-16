@@ -11,4 +11,5 @@ Finite Element Method (FEM)
    FEM/of.import.FEM.edge.groups
    FEM/of.import.FEM.element.groups
    FEM/of.import.FEM.element.connectivity
+   FEM/of.import.FEM.dfn
 

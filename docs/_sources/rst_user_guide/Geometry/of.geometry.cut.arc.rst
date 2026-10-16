@@ -23,7 +23,6 @@ of.geometry.cut.arc
         2. center [x, y] radius nseg 
         3. x value y value rad value nseg value
         
-|
 
 Example:
 --------------------------------------------------------------------

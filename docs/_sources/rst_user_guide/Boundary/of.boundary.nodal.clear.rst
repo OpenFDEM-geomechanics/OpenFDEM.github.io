@@ -10,13 +10,11 @@ of.boundary.nodal.clear
 .. role:: blue
 
 **of.**\ :red:`boundary.nodal.clear` :blue:`*nodal1_tag*` <string> :blue:`*nodal2_tag*` <string> :blue:`*nodal3_tag*` <string> ...
-    |
     Delete the nodal boundaries defined previously. Directly set the nodal groups.
     
     **Parameters:** 
         **nodal_tag:** tag of the nodal group
 
-|
 
 Example:
 --------------------------------------------------------------------

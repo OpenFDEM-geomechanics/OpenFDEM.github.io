@@ -12,8 +12,10 @@ Group
    Group/of.group.edge.from.element
    Group/of.group.edge.from.cohelement
    Group/of.group.edge.from.dfn
+   Group/of.group.edge.from.node
    Group/of.group.cohelement.from.dfn
    Group/of.group.cohelement.from.gbm
+   Group/of.group.cohelement.from.element
    Group/of.group.nodal.bool.union
    Group/of.group.nodal.bool.intersect
    Group/of.group.nodal.bool.subtract
@@ -26,4 +28,6 @@ Group
    Group/of.group.cohelement.bool.union
    Group/of.group.cohelement.bool.intersect
    Group/of.group.cohelement.bool.subtract
+   Group/of.group.refpoint
+   Group/of.group.refpoint.bool
 

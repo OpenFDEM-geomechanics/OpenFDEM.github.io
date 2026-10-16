@@ -1,5 +1,5 @@
-of.solve
-================================
+of.solve.step / of.solve.ratio / of.solve.time
+===============================================
 
 .. raw:: html
 
@@ -9,29 +9,35 @@ of.solve
 .. role:: red
 .. role:: blue
 
-**of.**\ :red:`solve` :blue:`*mechanical_ratio*` <double>
-    **(Mandatory)** Assign the mechanical ratio as the iteration threshold to exit the running. 
-    The double value :math:`\zeta` is the ratio of the total maximum unbalance force to the total 
-    force. Generally, the ratio less than 1.0e-5 can be considered as the equilibrium state.
-    This command is important to determine the equilibrium state in in-situ stress equilibrium 
-    or static problems.
+The current parser provides three solve modes.
 
-    :math:`\zeta = \frac{\sum^n_{i=1}\sqrt{\bar{f_i}}}{\sum^n_{i=1}\sum^n_{j=1}\sqrt{f_{i,j}}}`, :math:`\bar{f_i}` is the unbalanced force on 
-    node :math:`i`. :math:`j` are types of the nodal forces. :math:`f_{i,j}` is the :math:`j` th type force on node :math:`i`.  
+**of.**\ :red:`solve.step` :blue:`*steps*` <int>
+    Run for the specified number of steps. ``of.step`` is retained as a
+    compatibility alias.
 
-    |    
-    .. note:: 
-        Also see the alternative of the mandatory option **of.step**
-    |
-    **Parameter**: 
-        **mechanical ratio**: (default 0.0001) the maximum ratio between the total maximum unbalance force to 
-        the total force before termination. 
 
-|
+**of.**\ :red:`solve.ratio` :blue:`*mechanical_ratio*` <double>
+    Stop when the mechanical unbalance ratio reaches the specified value.
+    The ratio is the total maximum unbalanced force divided by the total
+    force. This is useful for in-situ stress equilibrium and static problems.
 
-**Example:**
+
+**of.**\ :red:`solve.time` :blue:`*time*` <double>
+    Run until the specified physical time has been reached.
+
+Example:
+--------------------------------------------------------------------
 
 .. code-block::
 
-    # Default 
-    of.solve 0.0001
+    # Run 2000 steps
+    of.solve.step 2000
+
+    # Solve to a mechanical ratio
+    of.solve.ratio 1.0e-5
+
+    # Run for a physical time
+    of.solve.time 0.002
+
+.. The old page documented of.solve <ratio>. Direct of.solve needs runtime
+.. verification before documenting it as fully supported.

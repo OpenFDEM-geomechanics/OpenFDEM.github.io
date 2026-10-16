@@ -10,7 +10,6 @@ of.geometry.cut.ellipse
 .. role:: blue
 
 **of.**\ :red:`geometry.cut.ellipse` :blue:`*new_geometry_tag*` <string> :blue:`*object_geometry_tag*` <string> :blue:`*region*` <double, double, double, double, double, int>
-    |
     Cut a geometry in the object by assigning x, y, maxradius, minradius, theta and segments of the ellipse.
 
     **Parameters:** 
@@ -24,7 +23,6 @@ of.geometry.cut.ellipse
         2. center [x, y] radius [min max] theta nseg 
         3. x value, y value, rad value. minradius value, maxradius value, theta value, nseg value
         
-|
 
 Example:
 --------------------------------------------------------------------

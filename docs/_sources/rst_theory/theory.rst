@@ -41,8 +41,8 @@ Fracture Heat Resistance
 Contact Thermal
 ----------------
 
-Thermal-HydroMechanical (Chemical) Couple 
-------------------------------------------
+Thermal-Hydromechanical Coupling
+--------------------------------
 
 
 

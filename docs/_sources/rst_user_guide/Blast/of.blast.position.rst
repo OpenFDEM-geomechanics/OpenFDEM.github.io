@@ -20,7 +20,6 @@ of.blast.position
         **y:** y coordinate of the center of the borehole
         
         **radius:** the radius of the borehole.
-|
 
 Example:
 --------------------------------------------------------------------

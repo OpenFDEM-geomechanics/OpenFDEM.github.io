@@ -9,7 +9,6 @@ of.boundary.nodal.velocity
 .. role:: blue
 
 **of.**\ :red:`boundary.nodal.velocity` :blue:`*nodal_tag*` <string> :blue:`x` <double> :blue:`y` <double> :blue:`r` <double> :blue:`xtable` <string_tag> :blue:`ytable` <string_tag> :blue:`rtable` <string_tag>
-    |
     Create the nodal velocity boundary on the nodal groups. r is for the angular velocity, in rad/s. The velocity can be time dependent if you use the table. The x, y, r values will be the factor if you use the table. That is 
 
     :math:`v[i] = x \times table[i]`
@@ -28,7 +27,6 @@ of.boundary.nodal.velocity
         **ytable:** (default -1) time dependent velocity in y direction.
         
         **rtable:** (default -1) time dependent angular velocity.
-|
 
 Example:
 --------------------------------------------------------------------

@@ -11,13 +11,13 @@ of.set.gravity
 **of.**\ :red:`gravity` :blue:`x` <double> :blue:`y` <double>
     Add gravity to the model. Gravity is a body force, which is issued by x and y components. Negative is down forward by default.
     
-    |
     **Parameters:** 
         **x:** gravitational acceleration in the x directions.
         
         **y:** gravitational acceleration in the y directions.
 
-**Example:**
+Example:
+--------------------------------------------------------------------
 
 .. code-block:: 
 
@@ -27,4 +27,3 @@ of.set.gravity
     of.set.gravity x 0.0 y -9.8
     # Method 2
     of.set.gravity y -9.8
-

@@ -31,17 +31,15 @@ of.import.table
         ...
 
     
-    |
     **Parameters:** 
         **table_tag:** the tag to this table of data.
         
         **file_path:** file path of the table.
 
-**Example:**
+Example:
+--------------------------------------------------------------------
 
 .. code-block:: 
 
     # Example
     of.import.table ‘pwave’ “inputPwave.dat”
-
-

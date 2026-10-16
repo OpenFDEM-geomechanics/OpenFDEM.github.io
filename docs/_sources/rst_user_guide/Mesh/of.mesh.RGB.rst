@@ -15,7 +15,6 @@ of.mesh.RGB
     **Parameters:** 
         **element_tag:** tag of the elements.
         
-|
 
 Example:
 --------------------------------------------------------------------

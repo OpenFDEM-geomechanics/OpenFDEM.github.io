@@ -8,6 +8,8 @@ Command  reference
    general
    blast
    boundary
+   contact
+   cohesive
    DFN
    FEM
    geometry
@@ -52,7 +54,7 @@ General
 +--------------------------------------------------------+-----------------------------------------------------------------------------+
 | :doc:`of.set.debug<General/of.set.debug>`              | Turn on the debug mode.                                                     |
 +--------------------------------------------------------+-----------------------------------------------------------------------------+
-| :doc:`of.set.GBM<General/of.set.GBM>`                  | Assign the number of groups for minerals in GBM model.                      |
+| :doc:`of.set.gbm<General/of.set.GBM>`                  | Assign the number of groups for minerals in GBM model.                      |
 +--------------------------------------------------------+-----------------------------------------------------------------------------+
 | :doc:`of.set.gravity<General/of.set.gravity>`          | Add the gravity in the model.                                               |
 +--------------------------------------------------------+-----------------------------------------------------------------------------+
@@ -68,12 +70,23 @@ General
 +--------------------------------------------------------+-----------------------------------------------------------------------------+
 | :doc:`of.set.rgbm<General/of.set.rgbm>`                | Assign the number of groups for minerals to create the realistic GBM model. |
 +--------------------------------------------------------+-----------------------------------------------------------------------------+
-| :doc:`of.solve<General/of.solve>`                      | Assign the mechanical ratio as the iteration threshold to exit the running. |
+| :doc:`of.solve<General/of.solve>`                      | Select step, ratio or physical-time solve termination.                      |
 +--------------------------------------------------------+-----------------------------------------------------------------------------+
 | :doc:`of.step<General/of.step>`                        | Assign the cycle steps for the current run.                                 |
 +--------------------------------------------------------+-----------------------------------------------------------------------------+
 | :doc:`of.timestep<General/of.timestep>`                | Set the user-defined timestep.                                              |
 +--------------------------------------------------------+-----------------------------------------------------------------------------+
+
+The following 4.35 parser commands have dedicated pages but were not present
+in the original command table:
+
+- :doc:`of.import.function<General/of.import.function>`
+- :doc:`of.set.fastmode<General/of.set.fastmode>`
+- :doc:`of.set.path<General/of.set.path>`
+- :doc:`of.set.precision<General/of.set.precision>`
+- :doc:`of.set.clear<General/of.set.clear>`
+
+The geometry parser also exposes :doc:`additional geometry operations<Geometry/of.geometry.additional>`.
 
 
 Blast
@@ -121,6 +134,12 @@ Boundary Conditions
 | :doc:`of.boundary.blast<Boundary/of.boundary.blast>`                               | Create the blast borehole boundaries from the table.                              |
 +------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+
 
+Additional mechanical boundary pages:
+
+- :doc:`of.boundary.nodal.pressure<Boundary/of.boundary.nodal.pressure>`
+- :doc:`of.boundary.edge.viscous<Boundary/of.boundary.edge.viscous>`
+- :doc:`of.boundary.edge.pressure<Boundary/of.boundary.edge.pressure>`
+
 
 
 DFN
@@ -150,14 +169,16 @@ FEM
 +-----------------------------------------------------------------------------------+---------------------------------------------------------------------------+
 | :doc:`of.import.FEM.nodal.velocity<FEM/of.import.FEM.nodal.velocity>`             | Import the nodal velocities by knowing node count and initial velocities. |
 +-----------------------------------------------------------------------------------+---------------------------------------------------------------------------+
-| :doc:`of.import.FEM.nodal.groups<FEM/of.import.FEM.nodal.groups>`                 | Import the nodal groups.                                                  |
+| :doc:`of.import.FEM.nodal.group<FEM/of.import.FEM.nodal.groups>`                  | Import the nodal group.                                                   |
 +-----------------------------------------------------------------------------------+---------------------------------------------------------------------------+
-| :doc:`of.import.FEM.edge.groups<FEM/of.import.FEM.edge.groups>`                   | Import the edge groups.                                                   |
+| :doc:`of.import.FEM.edge.group<FEM/of.import.FEM.edge.groups>`                    | Import the edge group.                                                    |
 +-----------------------------------------------------------------------------------+---------------------------------------------------------------------------+
-| :doc:`of.import.FEM.element.groups<FEM/of.import.FEM.element.groups>`             | Import the element groups.                                                |
+| :doc:`of.import.FEM.element.group<FEM/of.import.FEM.element.groups>`              | Import the element group.                                                 |
 +-----------------------------------------------------------------------------------+---------------------------------------------------------------------------+
 | :doc:`of.import.FEM.element.connectivity<FEM/of.import.FEM.element.connectivity>` | Import the element connectivity.                                          |
 +-----------------------------------------------------------------------------------+---------------------------------------------------------------------------+
+
+The current parser also supports :doc:`of.import.FEM.dfn<FEM/of.import.FEM.dfn>`.
 
 
 
@@ -173,13 +194,13 @@ Geometry
 +-------------------------------------------------------------------------+-----------------------------------------------------------------+
 | :doc:`of.geometry.remove.square<Geometry/of.geometry.remove.square>`    | remove the rectangle from the existing geometry                 |
 +-------------------------------------------------------------------------+-----------------------------------------------------------------+
-| :doc:`of.geometry.cir<Geometry/of.geometry.circle>`                     | create a circle object                                          |
+| :doc:`of.geometry.circle<Geometry/of.geometry.circle>`                  | create a circle object                                          |
 +-------------------------------------------------------------------------+-----------------------------------------------------------------+
 | :doc:`of.geometry.cut.circle<Geometry/of.geometry.cut.circle>`          | cut the circle from the existing geometry                       |
 +-------------------------------------------------------------------------+-----------------------------------------------------------------+
 | :doc:`of.geometry.remove.circle<Geometry/of.geometry.remove.circle>`    | remove the circle from the existing geometry                    |
 +-------------------------------------------------------------------------+-----------------------------------------------------------------+
-| :doc:`of.geometry.ellip<Geometry/of.geometry.ellipse>`                  | create a ellipse object                                         |
+| :doc:`of.geometry.ellipse<Geometry/of.geometry.ellipse>`                | create a ellipse object                                         |
 +-------------------------------------------------------------------------+-----------------------------------------------------------------+
 | :doc:`of.geometry.cut.ellipse<Geometry/of.geometry.cut.ellipse>`        | cut the ellipse from the existing geometry                      |
 +-------------------------------------------------------------------------+-----------------------------------------------------------------+
@@ -191,7 +212,7 @@ Geometry
 +-------------------------------------------------------------------------+-----------------------------------------------------------------+
 | :doc:`of.geometry.remove.polygon<Geometry/of.geometry.remove.polygon>`  | remove the polygon from the existing geometry                   |
 +-------------------------------------------------------------------------+-----------------------------------------------------------------+
-| :doc:`of.geometry.t<Geometry/of.geometry.table>`                        | create an object based on the data in the table                 |
+| :doc:`of.geometry.table<Geometry/of.geometry.table>`                    | create an object based on the data in the table                 |
 +-------------------------------------------------------------------------+-----------------------------------------------------------------+
 | :doc:`of.geometry.cut.table<Geometry/of.geometry.cut.table>`            | cut the object from the existing geometry                       |
 +-------------------------------------------------------------------------+-----------------------------------------------------------------+
@@ -310,6 +331,13 @@ Group
 |                                                                                     | and store them into the first tags. |
 +-------------------------------------------------------------------------------------+-------------------------------------+
 
+Additional group pages:
+
+- :doc:`of.group.edge.from.node<Group/of.group.edge.from.node>`
+- :doc:`of.group.cohelement.from.element<Group/of.group.cohelement.from.element>`
+- :doc:`of.group.refpoint<Group/of.group.refpoint>`
+- :doc:`of.group.refpoint.bool<Group/of.group.refpoint.bool>`
+
 
 
 Mesh
@@ -319,6 +347,8 @@ Mesh
 | Function                                          | Description                                                         |
 +===================================================+=====================================================================+
 | :doc:`of.mesh.insert<Mesh/of.mesh.insert>`        | Insert cohesive in the target element groups.                       |
++---------------------------------------------------+---------------------------------------------------------------------+
+| :doc:`internal<Mesh/of.mesh.insert.internal>`     | Internal cohesive insertion.                                        |
 +---------------------------------------------------+---------------------------------------------------------------------+
 | :doc:`of.mesh.insert.dfn<Mesh/of.mesh.insert.dfn>`| Insert cohesive only on a dfn plane, the dfn should cross the block.|
 +---------------------------------------------------+---------------------------------------------------------------------+
@@ -338,9 +368,19 @@ Mesh
 | :doc:`of.mesh.baryGB<Mesh/of.mesh.baryGB>`        | Refine the target element groups using baryGB separation scheme.    |
 +---------------------------------------------------+---------------------------------------------------------------------+
 
+Additional mesh pages:
+
+- :doc:`of.mesh.insert.internal<Mesh/of.mesh.insert.internal>`
+- :doc:`of.mesh.AMR<Mesh/of.mesh.AMR>`
+- :doc:`of.mesh.mmg<Mesh/of.mesh.mmg>`
+- :doc:`of.mesh.implicit<Mesh/of.mesh.implicit>`
+
 
 Material
 -----------------------------------------
+
+See :doc:`material_parser_4_35<Material/material_parser_4_35>` for the
+complete 4.35 top-level material parser list and compatibility notes.
 
 +--------------------------------------------------------------+-----------------------------------------+
 | Function                                                     | Description                             |
@@ -402,5 +442,19 @@ History
 +---------------------------------------------------------------------------------+-----------------------------------------------+
 | :doc:`of.history.pv.ae<History/of.history.pv.ae>`                               | Export ae results.                            |
 +---------------------------------------------------------------------------------+-----------------------------------------------+
+
+See also :doc:`history_commands<History/history_commands>` for the non-PV
+history command families in the current parser.
+
+Contact
+-------
+
+- :doc:`of.contact.detection<Contact/of.contact.detection>`
+- :doc:`of.contact.force<Contact/of.contact.force>`
+
+Cohesive
+--------
+
+- :doc:`of.cohesive.delete<Cohesive/of.cohesive.delete>`
 
 

@@ -10,7 +10,6 @@ of.geometry.cut.jset
 .. role:: blue
 
 **of.** :red:`geometry.cut.jset` :blue:`*geometry_tag*` <string> :blue:`*object_geometry_tag*` <string> :blue:`*dip_method*` <double, double> :blue:`*space_method*` <double, double> :blue:`*trace_method*` <double, double> :blue:`*gap_method*` <double, double> :blue:`*start_point*` <double, double>
-    |
     Cut a joint in an object by assign the <x> <y> <x> <y>…
 
     **Parameters:** 
@@ -51,7 +50,6 @@ of.geometry.cut.jset
         
         - rule 6, the start points must be located within (not on) the domain.
 
-|
 
 Example:
 --------------------------------------------------------------------

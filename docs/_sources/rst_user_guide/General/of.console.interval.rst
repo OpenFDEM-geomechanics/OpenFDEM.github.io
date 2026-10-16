@@ -13,14 +13,13 @@ of.console.interval
     Set the interval to print the results on the console screen. A high frequency 
     of outputting rate will reduce the computational speed and could be unnecessary.
     
-    |
     **Parameters:** 
         **interval:** (default 1000) The interval for results to print on the screen.
 
-**Example:**
+Example:
+--------------------------------------------------------------------
 
 .. code-block:: 
 
     # Default
     of.console.interval 1000
-

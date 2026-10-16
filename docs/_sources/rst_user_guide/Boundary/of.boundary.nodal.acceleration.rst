@@ -10,7 +10,6 @@ of.boundary.nodal.acceleration
 .. role:: blue
 
 **of.**\ :red:`boundary.nodal.acceleration` :blue:`*nodal_tag*` <string> :blue:`x` <double> :blue:`y` <double> :blue:`r` <double> :blue:`xtable` <string_tag> :blue:`ytable` <string_tag> :blue:`rtable` <string_tag>
-    |
     Create the nodal acceleration boundary on the nodal groups. r is for the angular acceleration, in :math:`rad/s^2`. The acceleration can be time dependent if you use the table. The x, y, r values will be the factor if you use the table. That is 
     :math:`a[i] = x \times table[i]`
     
@@ -28,7 +27,6 @@ of.boundary.nodal.acceleration
         **ytable:** (default -1) time dependent acceleration in y direction.
         
         **rtable:** (default -1) time dependent angular acceleration.
-|
 
 Example:
 --------------------------------------------------------------------

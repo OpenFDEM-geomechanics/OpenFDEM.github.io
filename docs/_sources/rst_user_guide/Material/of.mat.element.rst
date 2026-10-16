@@ -10,7 +10,6 @@ of.mat.element
 .. role:: blue
 
 **of.**\ :red:`mat.element` :blue:`*element_tag*` <string> :blue:`*material_type*` <string> :blue:`parameter_keyword1` <string> :blue:`parameter_value1` <double> ...
-    |
     Assign the material parameters to the target element groups. The details of materials in OpenFDEM can be found in the table below.
 
     +-----------------+------------------+------------------------+-------+
@@ -317,7 +316,6 @@ of.mat.element
     +-----------------+------------------+------------------------+-------+
 
     
-|
 
 Example:
 --------------------------------------------------------------------

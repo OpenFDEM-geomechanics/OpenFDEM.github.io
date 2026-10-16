@@ -15,15 +15,12 @@ of.save
     .. note::
         Also see :doc:`of.restore<of.restore>`.
 
-    |
     **Parameters:** 
         **file_name:** File name of the data file.
 
-**Example:**
+Example:
+--------------------------------------------------------------------
 
 .. code-block:: 
 
     of.save 'usc.json'
-
-
-

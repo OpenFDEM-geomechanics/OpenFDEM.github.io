@@ -10,7 +10,6 @@ of.import.FEM.element.connectivity
 .. role:: blue
 
 **of.**\ :red:`import.FEM.element.connectivity` :blue:`*N*` <int> :blue:`*type*` <int> :blue:`*node_count*` <int> :blue:`*edge_id1*` <int> :blue:`*edge_id2*` <int> :blue:`*edge_id3*` <int> ...
-    |
     Import the element connectivity.
     
     **Parameters:** 
@@ -40,7 +39,6 @@ of.import.FEM.element.connectivity
         
         **node_id:** node ids.  
 
-|
 
 Example:
 --------------------------------------------------------------------

@@ -20,7 +20,6 @@ of.history.pv.dynamic.interval
         **reduce:** step of reducing.
 
     
-|
 
 Example:
 --------------------------------------------------------------------

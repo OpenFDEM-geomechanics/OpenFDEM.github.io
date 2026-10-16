@@ -10,7 +10,6 @@ of.group.cohelement.from.gbm
 .. role:: blue
 
 **of.**\ :red:`group.cohelement.from.gbm` :blue:`*group_tag*` <string> :blue:`*element_group_tag1*` <string> :blue:`*element_group_tag2*` <string>
-    |
     Create the cohesive element groups if they are located between the target element tags.
 
     **Parameters:** 
@@ -18,7 +17,6 @@ of.group.cohelement.from.gbm
         
         **element_group_tag:** element group tag.        
         
-|
 
 Example:
 --------------------------------------------------------------------

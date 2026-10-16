@@ -10,7 +10,6 @@ of.boundary.nodal.inivelocity
 .. role:: blue
 
 **of.**\ :red:`boundary.nodal.inivelocity` :blue:`*nodal_tag*` <string> :blue:`x` <double> :blue:`y` <double> :blue:`r` <double> :blue:`xtable` <string_tag> :blue:`ytable` <string_tag> :blue:`rtable` <string_tag>
-    |
     Create the nodal initial velocity boundaries on the nodal groups. r is for the angular velocity, in rad/s. The velocity will be applied only at the initial.
 
     **Parameters:** 
@@ -22,7 +21,6 @@ of.boundary.nodal.inivelocity
         
         **r:** (default free) Initial angular velocity
 
-|
 
 Example:
 --------------------------------------------------------------------

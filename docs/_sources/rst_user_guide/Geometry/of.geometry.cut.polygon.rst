@@ -10,7 +10,6 @@ of.geometry.cut.polygon
 .. role:: blue
 
 **of.** :red:`geometry.cut.polygon` :blue:`*new_geometry_tag*` <string> :blue:`*object_geometry_tag*` <string> :blue:`*region*` <int, double, double, double, double...>
-    |
     Cut a geometry in the object by assigning the N <x> <y> <x> <y>… of the polygon.
 
     **Parameters:** 
@@ -20,7 +19,6 @@ of.geometry.cut.polygon
         
         **region:** Define the points on the polygon: N, [x0,y0] [x1,y1], [x2,y2], [x3, y3]…
         
-|
 
 Example:
 --------------------------------------------------------------------

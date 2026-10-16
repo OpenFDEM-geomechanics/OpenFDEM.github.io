@@ -15,7 +15,8 @@ of.set.contact
     **Parameters:** 
         **mode:** turn on or turn off the contact mode.
 
-**Example:**
+Example:
+--------------------------------------------------------------------
 
 .. code-block:: 
 
@@ -23,6 +24,3 @@ of.set.contact
     of.set.contact ON 
     # Turn the contact mode OFF
     of.set.contact OFF
-
-
-

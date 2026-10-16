@@ -13,12 +13,10 @@ of.set.large
     Set the flag of large deformation for the kinematics.
     
 
-**Example:**
+Example:
+--------------------------------------------------------------------
 
 .. code-block:: 
 
     of.set.large on
     of.set.large off
-
-
-

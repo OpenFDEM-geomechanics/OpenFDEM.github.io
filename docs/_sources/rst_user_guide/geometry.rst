@@ -32,4 +32,5 @@ Geometry
    Geometry/of.geometry.recombine
    Geometry/of.geometry.mesh
    Geometry/of.geometry.mesh.write
+   Geometry/of.geometry.additional
 

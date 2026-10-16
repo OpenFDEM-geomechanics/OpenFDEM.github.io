@@ -15,12 +15,11 @@ of.step
 
     .. note:: 
         Also see the alternative of the mandatory option **of.solve**
-    |
     **parameter:**
         **number_of_steps:** the number of steps program will run before termination.
-|
 
-**Example:**
+Example:
+--------------------------------------------------------------------
 
 .. code-block:: 
 

@@ -15,4 +15,5 @@ Material
    Material/of.mat.hydro.gas
    Material/of.mat.nonlocal
    Material/of.mat.thermal
+   Material/material_parser_4_35
 
