@@ -13,16 +13,14 @@ of.log.interval
     Set the interval to print the results in the .log file. A high frequency of 
     outputting rate will reduce the computational speed and could be unnecessary.
     
-    |
     **Parameters:** 
         **interval:** (default 2000) interval to print the results in .log file.
 
 
-**Example:**
+Example:
+--------------------------------------------------------------------
 
 .. code-block:: 
 
     # Default
     of.log.interval 2000
-
-

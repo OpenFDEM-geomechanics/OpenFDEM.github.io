@@ -15,7 +15,6 @@ of.geometry.minangle
     **Parameters:**      
         **minangle:** Bad segments under this threshold will be deleted.
         
-|
 
 Example:
 --------------------------------------------------------------------

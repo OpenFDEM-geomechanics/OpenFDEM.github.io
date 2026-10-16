@@ -10,7 +10,6 @@ of.group.edge.bool.union
 .. role:: blue
 
 **of.**\ :red:`group.edge.bool.union` :blue:`*group_tag*` <string> :blue:`tag1` <string> :blue:`tag2` <string> ...
-    |
     Get the bool union of the second - last edge groups and store them into the first tags.
     
     **Parameters:** 
@@ -18,7 +17,6 @@ of.group.edge.bool.union
         
         **tag:** edge groups to be operated.
         
-|
 
 Example:
 --------------------------------------------------------------------

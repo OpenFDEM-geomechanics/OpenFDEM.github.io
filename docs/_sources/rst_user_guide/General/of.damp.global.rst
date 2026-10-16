@@ -12,15 +12,13 @@ of.damp.global
 **of.**\ :red:`damp.global` :blue:`*ratio*` <Real> 
     Set the global damping value to slow down the loading velocity, which is helpful for balance. **The damping value should not be over than 1.0.**
     
-    |
     **Parameters:** 
         **ratio:** (default 0.7) Global damping value for slow down the loading velocity.
 
-**Example:**
+Example:
+--------------------------------------------------------------------
 
 .. code-block:: 
 
     # Default
     of.damp.global 0.7
-
-

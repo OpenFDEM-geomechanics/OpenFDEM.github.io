@@ -51,7 +51,6 @@ of.geometry.group
 
         - rule 3, the group information is updated after the entity fragmentation
 
-|
 
 Example:
 --------------------------------------------------------------------

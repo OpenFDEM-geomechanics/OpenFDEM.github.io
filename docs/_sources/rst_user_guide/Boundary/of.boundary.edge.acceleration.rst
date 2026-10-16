@@ -10,7 +10,6 @@ of.boundary.edge.acceleration
 .. role:: blue
 
 **of.**\ :red:`boundary.edge.acceleration` :blue:`*edge_tag*` <string> :blue:`normal` <double> :blue:`shear` <double> :blue:`ntable` <string_tag> :blue:`stable` <string_tag>
-    |
     Create the edge acceleration boundary on the edge groups. The acceleration can be time dependent if you use the table. The normal shear values will be the factor if you use the table. That is 
     :math:`a[i] = x \times table[i]`
     
@@ -25,7 +24,6 @@ of.boundary.edge.acceleration
         
         **stable:** (default -1) time dependent acceleration in the shear direction.
 
-|
 
 Example:
 --------------------------------------------------------------------

@@ -1,5 +1,5 @@
-of.import.FEM.element.groups
-============================
+of.import.FEM.element.group
+===========================
 
 .. raw:: html
 
@@ -9,8 +9,7 @@ of.import.FEM.element.groups
 .. role:: red
 .. role:: blue
 
-**of.**\ :red:`import.FEM.element.groups` :blue:`*element_tag*` <string> :blue:`*size*` <int> :blue:`*edge_id1*` <int> :blue:`*edge_id2*` <int> :blue:`*edge_id3*` <int> ...
-    |
+**of.**\ :red:`import.FEM.element.group` :blue:`*element_tag*` <string> :blue:`*size*` <int> :blue:`*edge_id1*` <int> :blue:`*edge_id2*` <int> :blue:`*edge_id3*` <int> ...
     Import the element groups.
     
     **Parameters:** 
@@ -20,12 +19,11 @@ of.import.FEM.element.groups
 
         **edge_id:** edge ids.   
 
-|
 
 Example:
 --------------------------------------------------------------------
 
 .. code-block:: 
 
-    of.import.FEM.element.groups 'rock' 5 1 3 9 15 32
+    of.import.FEM.element.group 'rock' 5 1 3 9 15 32
 

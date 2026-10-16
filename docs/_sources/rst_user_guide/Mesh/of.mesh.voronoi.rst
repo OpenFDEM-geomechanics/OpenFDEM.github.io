@@ -9,19 +9,17 @@ of.mesh.voronoi
 .. role:: red
 .. role:: blue
 
-**of.**\ :red:`blast.position` :blue:`*element_tag*` <string> 
-    Change the delaunay element to Voronoi element. All the group information will be cleared after this mesh processing. You should regroup all the entities. This command only supports entire mesh processing.
-    
-    **Parameters:** 
-        **element:** tag of the elements.
-        
-|
+**of.**\ :red:`mesh.voronoi`
+    Change the Delaunay mesh to a Voronoi mesh. All group information is
+    cleared after this mesh processing, so entities should be regrouped.
+    The current parser does not read an element-group argument; the command
+    applies to the entire mesh.
 
 Example:
 --------------------------------------------------------------------
 
 .. code-block:: 
 
-    of.mesh.voronoi [rock]
+    of.mesh.voronoi
 
 

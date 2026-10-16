@@ -10,7 +10,6 @@ of.mat.cohesive
 .. role:: blue
 
 **of.**\ :red:`mat.cohesive` :blue:`*element_tag*` <string> :blue:`*material_type*` <string> :blue:`parameter_keyword1` <string> :blue:`parameter_value1` <double> ...
-    |
     Assign the material parameters to the target cohesive element groups. The details of materials in OpenFDEM can be found in the table below.
 
     
@@ -233,7 +232,6 @@ of.mat.cohesive
     +-----------------+------------------+----------------------------------------+-------+
 
     
-|
 
 Example:
 --------------------------------------------------------------------

@@ -848,13 +848,16 @@ of.mat. cohesive ‘rock’ em_het power 0.5 dip 35 ten 30e6 3e6 coh 30e6 3e6 fr
 
 .. _section-16:
 
-of.mat.contact elementgroupname1 elementgroupname2(all) modelname p1 p2 p3 … 
+of.mat.contact default modelname p1 p2 p3 …
+of.mat.contact element elementgroupname1 elementgroupname2 modelname p1 p2 p3 …
 ----------------------------------------------------------------------------
 
 **demo**:: 
 
-   of.mat.contact ‘all’ mc kn 2e10 ks 1e10 fric 0.3
-   of.mat.contact ‘rock’ ‘plate’ mc kn 2e10 ks 1e10 fric 0.3 kn ks
+   of.mat.contact default mc kn 2e10 ks 1e10 fric 0.3
+   of.mat.contact element ‘rock’ ‘plate’ mc kn 2e10 ks 1e10 fric 0.3 kn ks
+
+For a pair of element groups, ``element`` is a required literal keyword.
 
 of.mat.fluid den bulk viscousity cohesion
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

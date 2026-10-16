@@ -15,7 +15,6 @@ of.mesh.insert.dfn
     **Parameters:** 
         **dfn_tag:** tag of the DFNs.
         
-|
 
 Example:
 --------------------------------------------------------------------

@@ -12,11 +12,11 @@ of.set.result
 **of.**\ :red:`set.result` :blue:`*path*` <string>
     Set the path to store the result files.
     
-    |
     **Parameters:** 
         **path:** (default ../result) the folder path to save the results.
 
-**Example:**
+Example:
+--------------------------------------------------------------------
 
 .. code-block:: 
 
@@ -24,6 +24,3 @@ of.set.result
     of.set.result “result”
     # Example
     of.set.result “C:/user/document/openfdem/example/result”
-
-
-

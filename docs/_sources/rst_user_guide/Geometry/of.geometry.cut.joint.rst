@@ -10,7 +10,6 @@ of.geometry.cut.joint
 .. role:: blue
 
 **of.** :red:`geometry.cut.joint` :blue:`*new_geometry_tag*` <string> :blue:`*object_geometry_tag*` <string> :blue:`*region*` <double, double, double, double...>
-    |
     Cut a joint in an object by assign the <x> <y> <x> <y>…
 
     **Parameters:** 
@@ -20,7 +19,6 @@ of.geometry.cut.joint
         
         **region:** Define the points on the joints: [x0,y0] [x1,y1], [x2,y2], [x3, y3]…
         
-|
 
 Example:
 --------------------------------------------------------------------

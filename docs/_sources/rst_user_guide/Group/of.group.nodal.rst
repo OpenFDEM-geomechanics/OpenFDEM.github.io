@@ -10,7 +10,6 @@ of.group.nodal
 .. role:: blue
 
 **of.**\ :red:`group.nodal` :blue:`*group_tag*` <string> :blue:`*method*` <string> :blue:`*region*` <double, double, ...> ...
-    |
     **Parameters:** 
         **group_tag:** tag of the group.
         
@@ -30,11 +29,11 @@ of.group.nodal
         
         - [xmin xmax ymin ymax]
 
-        The region for circle can be set as 
-        
-        - center [x,y] radius or 
+        The region for circle can be set as
 
-        - [x,y,radius]
+        - center [x y] radius or
+
+        - [x y radius]
         
         The region for plane can be set as 
         
@@ -51,7 +50,6 @@ of.group.nodal
         - rule 3: the node groups can be done before the mesh processing. The group information will be transferred to the new inserted nodes automatically.
 
         
-|
 
 Example:
 --------------------------------------------------------------------
@@ -59,4 +57,12 @@ Example:
 .. code-block:: 
 
     of.group.nodal [rock] range box.in x [0,1] y [0,1]
+    of.group.nodal [circle_nodes] range circle.on center [0.0 0.0] radius 1.0
+
+.. note::
+
+    ``circle.on`` selects nodes whose distance from the center differs from
+    the radius by less than the solver position tolerance. It is therefore a
+    circle-boundary selection, not a selection of all nodes inside the circle.
+    The mesh must contain nodes close enough to the requested circumference.
 

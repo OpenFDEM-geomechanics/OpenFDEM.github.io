@@ -10,17 +10,16 @@ of.group.element
 .. role:: blue
 
 **of.**\ :red:`group.element` :blue:`*group_tag*` <string> :blue:`*method*` <string> :blue:`*region*` <double, double, ...> ...
-    |
     **Parameters:** 
         **group_tag:** tag of the group.
         
         **method:** 
         
-        -box.in/box.on/box.out
+        -box.in
     
-        -circle.in/circle.on/circle.out
+        -circle.in/circle.out
         
-        -plane.on/plane.above/plane.below
+        -plane.above/plane.below
 
         **region:**
 
@@ -51,7 +50,6 @@ of.group.element
         - rule 3: the node groups can be done before the mesh processing. The group information will be transferred to the new inserted nodes automatically.
 
         
-|
 
 Example:
 --------------------------------------------------------------------
@@ -59,4 +57,11 @@ Example:
 .. code-block:: 
 
     of.group.element [rock] range box.in x [0,1] y [0,1]
+
+.. note::
+
+    The current parser rejects ``box.on``, ``box.out``, ``circle.on`` and
+    ``plane.on`` for ordinary element groups. ``circle.on`` is available for
+    nodal, edge and cohesive-element groups, but not for
+    ``of.group.element``.
 

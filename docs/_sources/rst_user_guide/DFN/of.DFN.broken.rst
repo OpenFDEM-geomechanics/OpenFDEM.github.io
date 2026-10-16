@@ -15,7 +15,6 @@ of.DFN.broken
     **Parameters:** 
         **dfn_tag:** tag of the DFN group
         
-|
 
 Example:
 --------------------------------------------------------------------

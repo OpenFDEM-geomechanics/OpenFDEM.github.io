@@ -1,4 +1,4 @@
-of.set.GBM
+of.set.gbm
 ================================
 
 .. raw:: html
@@ -9,10 +9,9 @@ of.set.GBM
 .. role:: red
 .. role:: blue
 
-**of.**\ :red:`set.GBM` :blue:`*group_count*` <int> :blue:`*group1_name*` <string> :blue:`*ratio1*` <double> :blue:`*group2_name*` <string> :blue:`*ratio2*` <double>...
+**of.**\ :red:`set.gbm` :blue:`*group_count*` <int> :blue:`*group1_name*` <string> :blue:`*ratio1*` <double> :blue:`*group2_name*` <string> :blue:`*ratio2*` <double>...
     Assign the number of groups for minerals in GBM module and assign the group tags and area ratio for different minerals. The groups are issued to elements. The accumulation of all ratios should equal to 1.0.
     
-    |
     **Parameters:** 
         **group_count:** Number of groups will be assigned.
         
@@ -20,12 +19,15 @@ of.set.GBM
         
         **ratio:** The ratio of mineral in the model. The sum of mineral ratio should be 1.0.
 
-**Example:**
+Example:
+--------------------------------------------------------------------
 
 .. code-block:: 
 
     # Example
-    of.set.GBM 3 ‘Quartz’ 0.4 ‘Feldspar’ 0.3 ‘Mica’ 0.3
+    of.set.gbm 3 ‘Quartz’ 0.4 ‘Feldspar’ 0.3 ‘Mica’ 0.3
 
+.. note::
 
-
+    ``of.config.GBM`` is a separate parser command that only enables the GBM
+    flag and does not read the group-count arguments shown above.

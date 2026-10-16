@@ -10,7 +10,6 @@ of.boundary.edge.force
 .. role:: blue
 
 **of.**\ :red:`boundary.edge.force` :blue:`*edge_tag*` <string> :blue:`normal` <double> :blue:`shear` <double> :blue:`ntable` <string_tag> :blue:`stable` <string_tag>
-    |
     Create the edge force boundary on the edge groups. The force can be time dependent if you use the table. The normal shear values will be the factor if you use the table. That is 
     :math:`f[i] = x \times table[i]`
 
@@ -28,7 +27,6 @@ of.boundary.edge.force
         
         **stable:** (default -1) time dependent force in the local shear direction.
 
-|
 
 Example:
 --------------------------------------------------------------------

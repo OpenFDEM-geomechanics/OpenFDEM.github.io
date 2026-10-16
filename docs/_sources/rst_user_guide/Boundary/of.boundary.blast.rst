@@ -18,7 +18,6 @@ of.boundary.blast
         **p0:** initial position.
         
         **table:** time dependent position.
-|
 
 Example:
 --------------------------------------------------------------------

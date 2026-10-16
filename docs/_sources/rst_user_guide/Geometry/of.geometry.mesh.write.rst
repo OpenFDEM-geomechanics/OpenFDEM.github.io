@@ -16,7 +16,6 @@ of.geometry.mesh.write
     **Parameters:** 
         **mesh_file_path:** The path to save the mesh. 
         
-|
 
 Example:
 --------------------------------------------------------------------

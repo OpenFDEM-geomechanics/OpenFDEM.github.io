@@ -10,7 +10,6 @@ of.group.nodal.bool.intersect
 .. role:: blue
 
 **of.**\ :red:`group.nodal.bool.intersect` :blue:`*group_tag*` <string> :blue:`tag1` <string> :blue:`tag2` <string> ...
-    |
     Get the bool intersect of the second - last nodal groups and store them into the first tags.
     
     **Parameters:** 
@@ -18,7 +17,6 @@ of.group.nodal.bool.intersect
         
         **tag:** nodal groups to be operated.
         
-|
 
 Example:
 --------------------------------------------------------------------

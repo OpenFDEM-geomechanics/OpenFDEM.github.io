@@ -10,7 +10,6 @@ of.geometry.cut.table
 .. role:: blue
 
 **of.** :red:`geometry.cut.table` :blue:`*new_geometry_tag*` <string> :blue:`*object_geometry_tag*` <string> :blue:`*table_tage*` <string>
-    |
     Cut a geometry by assign the N <x> <y> <x> <y>… of the polygon from a table, the polygon will not be closed.
 
     **Parameters:** 
@@ -20,7 +19,6 @@ of.geometry.cut.table
         
         **region:** Define the points on the polygon: N, [x0,y0] [x1,y1], [x2,y2], [x3, y3]… The polygon will be closed.
         
-|
 
 Example:
 --------------------------------------------------------------------

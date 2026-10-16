@@ -16,7 +16,8 @@ of.set.config
         **type:** (default planestress) 2D problem can be solved based on plane stress or plane strain.
 
 
-**Example:**
+Example:
+--------------------------------------------------------------------
 
 .. code-block:: 
 
@@ -24,6 +25,3 @@ of.set.config
     of.set.config planestress
     # Alternative
     of.set.config planestrain
-
-
-

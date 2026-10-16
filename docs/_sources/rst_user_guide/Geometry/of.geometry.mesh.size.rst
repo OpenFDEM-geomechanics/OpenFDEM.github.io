@@ -18,7 +18,6 @@ of.geometry.mesh.size
         
         **mesh_size:** the mesh size for global or local area.
         
-|
 
 Example:
 --------------------------------------------------------------------

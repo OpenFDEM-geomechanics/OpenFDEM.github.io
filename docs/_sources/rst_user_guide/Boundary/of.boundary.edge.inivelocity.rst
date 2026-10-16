@@ -10,7 +10,6 @@ of.boundary.edge.inivelocity
 .. role:: blue
 
 **of.**\ :red:`boundary.edge.inivelocity` :blue:`*edge_tag*` <string> :blue:`normal` <double> :blue:`shear` <double>
-    |
     Create the edge initial velocity boundaries on the edge groups. The velocity will be applied only at the initial.
 
 
@@ -21,7 +20,6 @@ of.boundary.edge.inivelocity
         
         **shear:** (default free) Edge velocity in the local shear direction or the amplitude of s table.
 
-|
 
 Example:
 --------------------------------------------------------------------

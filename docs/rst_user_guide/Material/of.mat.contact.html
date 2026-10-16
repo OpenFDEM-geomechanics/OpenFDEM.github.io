@@ -169,7 +169,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../rst_theory/Fluid_Transport_Theory.html">Fluid Transport</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../rst_theory/Fracture_Fluid_Theory.html">Fracture Fluid</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../rst_theory/Porous_Fluid_Theory.html">Porous Fluid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../rst_theory/Two_Phase_Fluid_Theory.html">Two Phase Fluid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_theory/Two_Phase_Fluid_Theory.html">Two-Phase Fluid</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../rst_theory/Gas_Flow_Theory.html">Gas Flow</a></li>
 </ul>
 </details></li>
@@ -177,7 +177,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../rst_theory/Matrix_Thermal.html">Matrix Thermal</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../rst_theory/Fracture_Heat_Resistance.html">Fracture Heat Resistance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../rst_theory/Contact_Thermal.html">Contact Thermal</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../rst_theory/Thermal_Hydromechanical_Chemical_Couple.html">Thermal-Hydromechanical (Chemical) Couple</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rst_theory/Thermal_Hydromechanical_Coupling.html">Thermal-Hydromechanical Coupling</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../../rst_theory/Phase_Field.html">Phase Field</a></li>
@@ -225,6 +225,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../General/of.finalize.html">of.finalize</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../General/of.import.html">of.import</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../General/of.import.table.html">of.import.table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../General/of.import.function.html">of.import.function</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../General/of.log.interval.html">of.log.interval</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../General/of.new.html">of.new</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../General/of.restore.html">of.restore</a></li>
@@ -232,16 +233,20 @@
 <li class="toctree-l4"><a class="reference internal" href="../General/of.save.FEM.html">of.save.FEM</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../General/of.set.config.html">of.set.config</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../General/of.set.contact.html">of.set.contact</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../General/of.set.fastmode.html">of.set.fastmode</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../General/of.set.debug.html">of.set.debug</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../General/of.set.GBM.html">of.set.GBM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../General/of.set.GBM.html">of.set.gbm</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../General/of.set.gravity.html">of.set.gravity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../General/of.set.large.html">of.set.large</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../General/of.set.massscale.html">of.set.massscale</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../General/of.set.module.html">of.set.module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../General/of.set.omp.html">of.set.omp</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../General/of.set.result.html">of.set.result</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../General/of.set.path.html">of.set.path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../General/of.set.precision.html">of.set.precision</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../General/of.set.clear.html">of.set.clear</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../General/of.set.rgbm.html">of.set.rgbm</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../General/of.solve.html">of.solve</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../General/of.solve.html">of.solve.step / of.solve.ratio / of.solve.time</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../General/of.step.html">of.step</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../General/of.timestep.html">of.timestep</a></li>
 </ul>
@@ -255,17 +260,29 @@
 <li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.nodal.velocity.html">of.boundary.nodal.velocity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.nodal.inivelocity.html">of.boundary.nodal.inivelocity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.nodal.acceleration.html">of.boundary.nodal.acceleration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.nodal.pressure.html">of.boundary.nodal.pressure</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.nodal.clear.html">of.boundary.nodal.clear</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.edge.viscous.html">of.boundary.edge.viscous</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.edge.force.html">of.boundary.edge.force</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.edge.velocity.html">of.boundary.edge.velocity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.edge.inivelocity.html">of.boundary.edge.inivelocity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.edge.acceleration.html">of.boundary.edge.acceleration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.edge.pressure.html">of.boundary.edge.pressure</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.edge.clear.html">of.boundary.edge.clear</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.element.stress.html">of.boundary.element.stress</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.element.stress.xgrad.html">of.boundary.element.stress.xgrad</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.element.stress.ygrad.html">of.boundary.element.stress.ygrad</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.element.clear.html">of.boundary.element.clear</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Boundary/of.boundary.blast.html">of.boundary.blast</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../contact.html">Contact</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Contact/of.contact.detection.html">of.contact.detection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Contact/of.contact.force.html">of.contact.force</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../cohesive.html">Cohesive</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Cohesive/of.cohesive.delete.html">of.cohesive.delete</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../DFN.html">Discrete Fracture Networks (DFN)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -279,10 +296,11 @@
 <li class="toctree-l4"><a class="reference internal" href="../FEM/of.import.FEM.nodal.coord.html">of.import.FEM.nodal.coord</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../FEM/of.import.FEM.nodal.coord0.html">of.import.FEM.nodal.coord0</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../FEM/of.import.FEM.nodal.velocity.html">of.import.FEM.nodal.velocity</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../FEM/of.import.FEM.nodal.groups.html">of.import.FEM.nodal.groups</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../FEM/of.import.FEM.edge.groups.html">of.import.FEM.edge.groups</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../FEM/of.import.FEM.element.groups.html">of.import.FEM.element.groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../FEM/of.import.FEM.nodal.groups.html">of.import.FEM.nodal.group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../FEM/of.import.FEM.edge.groups.html">of.import.FEM.edge.group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../FEM/of.import.FEM.element.groups.html">of.import.FEM.element.group</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../FEM/of.import.FEM.element.connectivity.html">of.import.FEM.element.connectivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../FEM/of.import.FEM.dfn.html">of.import.FEM.dfn</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../geometry.html">Geometry</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -314,6 +332,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.recombine.html">of.geometry.recombine</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.mesh.html">of.geometry.mesh</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.mesh.write.html">of.geometry.mesh.write</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Geometry/of.geometry.additional.html">Additional geometry commands</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../group.html">Group</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -325,8 +344,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../Group/of.group.edge.from.element.html">of.group.edge.from.element</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Group/of.group.edge.from.cohelement.html">of.group.edge.from.cohcohelement</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Group/of.group.edge.from.dfn.html">of.group.edge.from.dfn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Group/of.group.edge.from.node.html">of.group.edge.from.node</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Group/of.group.cohelement.from.dfn.html">of.group.cohelement.from.dfn</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Group/of.group.cohelement.from.gbm.html">of.group.cohelement.from.gbm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Group/of.group.cohelement.from.element.html">of.group.cohelement.from.element</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Group/of.group.nodal.bool.union.html">of.group.nodal.bool.union</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Group/of.group.nodal.bool.intersect.html">of.group.nodal.bool.intersect</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Group/of.group.nodal.bool.subtract.html">of.group.nodal.bool.subtract</a></li>
@@ -339,11 +360,17 @@
 <li class="toctree-l4"><a class="reference internal" href="../Group/of.group.cohelement.bool.union.html">of.group.cohelement.bool.union</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Group/of.group.cohelement.bool.intersect.html">of.group.cohelement.bool.intersect</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Group/of.group.cohelement.bool.subtract.html">of.group.cohelement.bool.subtract</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Group/of.group.refpoint.html">of.group.refpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Group/of.group.refpoint.bool.html">of.group.refpoint.bool</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../mesh.html">Mesh</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Mesh/of.mesh.insert.html">of.mesh.insert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Mesh/of.mesh.insert.internal.html">of.mesh.insert.internal</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Mesh/of.mesh.insert.dfn.html">of.mesh.insert.dfn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Mesh/of.mesh.AMR.html">of.mesh.AMR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Mesh/of.mesh.mmg.html">of.mesh.mmg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Mesh/of.mesh.implicit.html">of.mesh.implicit</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Mesh/of.mesh.voronoi.html">of.mesh.voronoi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Mesh/of.mesh.split.html">of.mesh.split</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Mesh/of.mesh.bary.html">of.mesh.bary</a></li>
@@ -365,6 +392,7 @@
 <li class="toctree-l4"><a class="reference internal" href="of.mat.hydro.gas.html">of.mat.hydro.gas</a></li>
 <li class="toctree-l4"><a class="reference internal" href="of.mat.nonlocal.html">of.mat.nonlocal</a></li>
 <li class="toctree-l4"><a class="reference internal" href="of.mat.thermal.html">of.mat.thermal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="material_parser_4_35.html">Material parser overview (4.35)</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../history.html">History</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -375,6 +403,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../History/of.history.pv.cohesive.html">of.history.pv.cohesive</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../History/of.history.pv.damage.html">of.history.pv.damage</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../History/of.history.pv.ae.html">of.history.pv.ae</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../History/history_commands.html">History command overview</a></li>
 </ul>
 </details></li>
 </ul>
@@ -530,10 +559,10 @@
 <h1>of.mat.contact<a class="headerlink" href="#of-mat-contact" title="Link to this heading">#</a></h1>
 <style> .red {color:#F64A8A; font-weight:bold;} </style>
 <style> .blue {color:#4169E1; font-weight:bold;} </style><dl>
-<dt><strong>of.</strong><span class="red">mat.contact</span> <span class="blue">*element_tag*</span> &lt;string&gt; <span class="blue">*material_type*</span> &lt;string&gt; <span class="blue">parameter_keyword1</span> &lt;string&gt; <span class="blue">parameter_value1</span> &lt;double&gt; …</dt><dd><div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Assign the material parameters to the target element group pairs. The details of materials in OpenFDEM can be found in the table below.</p>
+<dt><strong>of.</strong><span class="red">mat.contact</span> <span class="blue">default</span> | <span class="blue">element</span> &lt;element_tag1&gt; &lt;element_tag2&gt; <span class="blue">*material_type*</span> &lt;string&gt; <span class="blue">parameter_keyword1</span> &lt;string&gt; <span class="blue">parameter_value1</span> &lt;double&gt; …</dt><dd><p>Assign contact material parameters. Use <code class="docutils literal notranslate"><span class="pre">default</span></code> for the global default
+contact material, or use <code class="docutils literal notranslate"><span class="pre">element</span></code> followed by two element-group tags to
+assign a material to a specific pair of element groups. The details of
+materials in OpenFDEM can be found in the table below.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Material type</p></th>
@@ -696,15 +725,17 @@ contact the developer</p></td>
 </div>
 </dd>
 </dl>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <section id="example">
 <h2>Example:<a class="headerlink" href="#example" title="Link to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>of.mat.contact &#39;default&#39; MC 0.3
-of.mat.contact &#39;up&#39; ‘rock’ MC 0.0
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">of</span><span class="o">.</span><span class="n">mat</span><span class="o">.</span><span class="n">contact</span> <span class="s1">&#39;default&#39;</span> <span class="n">MC</span> <span class="mf">0.3</span>
+<span class="n">of</span><span class="o">.</span><span class="n">mat</span><span class="o">.</span><span class="n">contact</span> <span class="n">element</span> <span class="s1">&#39;up&#39;</span> <span class="s1">&#39;rock&#39;</span> <span class="n">MC</span> <span class="mf">0.0</span>
 </pre></div>
 </div>
+<p>For a pair of element groups, the literal keyword <code class="docutils literal notranslate"><span class="pre">element</span></code> is required.
+The old form <code class="docutils literal notranslate"><span class="pre">of.mat.contact</span> <span class="pre">'up'</span> <span class="pre">'rock'</span> <span class="pre">...</span></code> is not a valid 4.35
+alternative: the parser interprets the first quoted token as the contact
+material category, and it is therefore rejected unless it is <code class="docutils literal notranslate"><span class="pre">default</span></code>,
+<code class="docutils literal notranslate"><span class="pre">element</span></code> or <code class="docutils literal notranslate"><span class="pre">cohesive</span></code>.</p>
 </section>
 </section>
 

@@ -10,7 +10,6 @@ of.boundary.nodal.force
 .. role:: blue
 
 **of.**\ :red:`boundary.nodal.force` :blue:`*nodal_tag*` <string> :blue:`x` <double> :blue:`y` <double> :blue:`r` <double> :blue:`xtable` <string_tag> :blue:`ytable` <string_tag> :blue:`rtable` <string_tag>
-    |
     Create nodal force boundaries on nodal groups. r is for the moment. The force can be time dependent if you use the table. The x, y, r values will be the factor if you use the table. That is 
 
     :math:`f[i] = x \times table[i]`
@@ -29,7 +28,6 @@ of.boundary.nodal.force
         **ytable:** (default -1) time dependent nodal force in y direction.
         
         **rtable:** (default -1) time dependent moment.
-|
 
 Example:
 --------------------------------------------------------------------

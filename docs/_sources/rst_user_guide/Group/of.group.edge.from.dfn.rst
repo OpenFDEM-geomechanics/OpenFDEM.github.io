@@ -10,7 +10,6 @@ of.group.edge.from.dfn
 .. role:: blue
 
 **of.**\ :red:`group.edge.from.dfn` :blue:`*group_tag*` <string> :blue:`*dfn_group_tag*` <string>
-    |
     Inherit the edge group from their parent dfns. All the edges of the targeted dfns will be group as the new edge groups.
 
     **Parameters:** 
@@ -18,7 +17,6 @@ of.group.edge.from.dfn
         
         **dfn_group_tag:** dfn group tag.        
         
-|
 
 Example:
 --------------------------------------------------------------------

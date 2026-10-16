@@ -10,7 +10,6 @@ of.import.FEM.nodal.velocity
 .. role:: blue
 
 **of.**\ :red:`import.FEM.nodal.velocity` :blue:`*N*` <int> :blue:`*x0*` <double> :blue:`*y0*` <double> :blue:`*x1*` <double> :blue:`*y1*` <double>  ...
-    |
     Import the nodal velocities by knowing node count and initial coordinates.
     
     **Parameters:** 
@@ -21,7 +20,6 @@ of.import.FEM.nodal.velocity
         **y:** y coordinates
     
 
-|
 
 Example:
 --------------------------------------------------------------------

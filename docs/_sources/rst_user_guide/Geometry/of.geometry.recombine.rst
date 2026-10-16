@@ -15,7 +15,6 @@ of.geometry.recombine
     **Parameters:** 
         **surface_tag:** generate quadrangle element for the given tag group. 
         
-|
 
 Example:
 --------------------------------------------------------------------

@@ -15,7 +15,6 @@ of.DFN.cohesive
     **Parameters:** 
         **dfn_tag:** tag of the group
 
-|
 
 Example:
 --------------------------------------------------------------------

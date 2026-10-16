@@ -10,7 +10,6 @@ of.group.cohelement.from.dfn
 .. role:: blue
 
 **of.**\ :red:`group.cohelement.from.dfn` :blue:`*group_tag*` <string> :blue:`*dfn_group_tag*` <string>
-    |
     Inherit the cohelement group from their parent dfns. All the cohelements of the targeted dfns will be group as the new cohelement groups.
 
     **Parameters:** 
@@ -18,7 +17,6 @@ of.group.cohelement.from.dfn
         
         **dfn_group_tag:** dfn group tag.        
         
-|
 
 Example:
 --------------------------------------------------------------------

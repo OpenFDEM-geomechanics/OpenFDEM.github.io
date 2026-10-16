@@ -21,7 +21,6 @@ of.geometry.ellipse
         2. center [x, y] radius [min max] theta nseg 
         3. x value, y value, rad value. minradius value, maxradius value, theta value, nseg value
         
-|
 
 Example:
 --------------------------------------------------------------------

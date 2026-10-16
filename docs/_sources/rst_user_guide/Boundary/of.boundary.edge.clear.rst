@@ -10,13 +10,11 @@ of.boundary.edge.clear
 .. role:: blue
 
 **of.**\ :red:`boundary.edge.clear` :blue:`*edge1_tag*` <string> :blue:`*edge2_tag*` <string> :blue:`*edge3_tag*` <string> ...
-    |
     Delete the edge boundaries defined previously. Directly set the edge groups.
     
     **Parameters:** 
         **edge_tag:** tag of the edge group
 
-|
 
 Example:
 --------------------------------------------------------------------

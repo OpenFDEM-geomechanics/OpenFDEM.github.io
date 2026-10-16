@@ -10,7 +10,6 @@ of.group.edge.from.cohcohelement
 .. role:: blue
 
 **of.**\ :red:`group.edge.from.cohelement` :blue:`*group_tag*` <string> :blue:`*cohelement_group_tag*` <string>
-    |
     Inherit the edge group from their parent cohelements. All the edges of the targeted cohelements will be group as the new edge groups.
 
     **Parameters:** 
@@ -18,7 +17,6 @@ of.group.edge.from.cohcohelement
         
         **cohelement_group_tag:** cohelement group tag.        
         
-|
 
 Example:
 --------------------------------------------------------------------

@@ -10,7 +10,6 @@ of.group.edge
 .. role:: blue
 
 **of.**\ :red:`group.edge` :blue:`*group_tag*` <string> :blue:`*method*` <string> :blue:`*region*` <double, double, ...> ...
-    |
     **Parameters:** 
         **group_tag:** tag of the group.
         
@@ -51,7 +50,6 @@ of.group.edge
         - rule 3: the node groups can be done before the mesh processing. The group information will be transferred to the new inserted nodes automatically.
 
         
-|
 
 Example:
 --------------------------------------------------------------------

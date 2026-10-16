@@ -15,7 +15,8 @@ of.set.debug
     **Parameters:** 
         **mode:** turn on or turn off the debug mode.
 
-**Example:**
+Example:
+--------------------------------------------------------------------
 
 .. code-block:: 
 
@@ -23,5 +24,3 @@ of.set.debug
     of.set.debug ON 
     # Debug mode OFF
     of.set.debug OFF
-
-

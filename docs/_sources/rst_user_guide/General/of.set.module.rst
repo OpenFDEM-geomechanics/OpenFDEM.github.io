@@ -12,32 +12,35 @@ of.set.module
 **of.**\ :red:`set.module` :blue:`*type*` <string> :blue:`*switch*` <bool>
     Turn on or off for special modules.
     
-    |
     **Parameters:** 
-        **type:** Modules currently available are 'hydro', 'thermal', 'blast' and 'dynamic'. 
-        For some special modules which are not listed here, please contact the developer for 
-        the access.
+        **type:** Modules currently available are ``hydro``, ``thermal``, ``blast``,
+        ``blast_hydro`` and ``dynamic``.
 
 
-**Example:**
+Example:
+--------------------------------------------------------------------
 
 .. code-block:: 
 
     # Hydro modules
-    of.set.config hydro on
-    of.set.config hydro off
+    of.set.module hydro on
+    of.set.module hydro off
 
     # Thermal modules
-    of.set.config thermal on
-    of.set.config thermal off
+    of.set.module thermal on
+    of.set.module thermal off
 
     # Blast modules
-    of.set.config blast on
-    of.set.config blast off
+    of.set.module blast on
+    of.set.module blast off
 
     # Dynamic modules
-    of.set.config dynamic on
-    of.set.config dynamic off
+    of.set.module dynamic on
+    of.set.module dynamic off
 
+    # Coupled blast-hydro module
+    of.set.module blast_hydro
 
-
+.. blast_hydro is handled as a combined switch and does not read a
+.. following on/off token in the current parser. dynamic off needs runtime
+.. verification before documenting it as fully supported.

@@ -15,12 +15,10 @@ of.new
     when two programs run at the same time.
     
 
-**Example:**
+Example:
+--------------------------------------------------------------------
 
 .. code-block:: 
 
     # First line of the program
     of.new
-
-
-

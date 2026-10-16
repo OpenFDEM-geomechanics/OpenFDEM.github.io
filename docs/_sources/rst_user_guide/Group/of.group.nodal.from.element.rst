@@ -10,7 +10,6 @@ of.group.nodal.from.element
 .. role:: blue
 
 **of.**\ :red:`group.nodal.from.element` :blue:`*group_tag*` <string> :blue:`*element_group_tag*` <string>
-    |
     Inherit the nodal group from their parent elements. All the nodals of the targeted elements will be group as the new nodal groups.
 
     **Parameters:** 
@@ -18,7 +17,6 @@ of.group.nodal.from.element
         
         **element_group_tag:** element group tag.        
         
-|
 
 Example:
 --------------------------------------------------------------------

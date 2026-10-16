@@ -17,12 +17,11 @@ of.set.omp
     .. note::
         Go Task Manager > Performance > CPU > Cores to check the number of cores your 
         computer has. If nothing is set here, serial computing with 1 core will be used.
-    |
     **Parameter**: 
         **number_of_cores:** (default 1) The number of cores will be used for computation.
-|
 
-**Example:**
+Example:
+--------------------------------------------------------------------
 
 .. code-block:: 
 

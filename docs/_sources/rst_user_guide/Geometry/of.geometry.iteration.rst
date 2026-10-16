@@ -15,7 +15,6 @@ of.geometry.iteration
     **Parameters:** 
         **iteration:** (default 1000) number of iteration to run to converge the generation of jsets and dfns.
         
-|
 
 Example:
 --------------------------------------------------------------------

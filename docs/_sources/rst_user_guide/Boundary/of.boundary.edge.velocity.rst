@@ -10,7 +10,6 @@ of.boundary.edge.velocity
 .. role:: blue
 
 **of.**\ :red:`boundary.edge.velocity` :blue:`*edge_tag*` <string> :blue:`normal` <double> :blue:`shear` <double> :blue:`ntable` <string_tag> :blue:`stable` <string_tag>
-    |
     Create the edge velocity boundary on the edge groups. The velocity can be time dependent if you use the table. The normal shear values will be the factor if you use the table. That is
     :math:`v[i] = x \times table[i]`
 
@@ -28,7 +27,6 @@ of.boundary.edge.velocity
         
         **stable:** (default -1) time dependent velocity in the local shear direction.
 
-|
 
 Example:
 --------------------------------------------------------------------

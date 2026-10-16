@@ -10,7 +10,6 @@ of.boundary.element.stress
 .. role:: blue
 
 **of.**\ :red:`boundary.element.stress` :blue:`*element_tag*` <string> :blue:`xx` <double> :blue:`xy` <double> :blue:`yy` <double>
-    |
     Create the in-situ stress on the assigned element groups.
     
     **Parameters:** 
@@ -21,7 +20,6 @@ of.boundary.element.stress
         **xy:** (default 0.0) In-situ stress in the xy direction
         
         **yy:** (default 0.0) In-situ stress in the yy direction
-|
 
 Example:
 --------------------------------------------------------------------

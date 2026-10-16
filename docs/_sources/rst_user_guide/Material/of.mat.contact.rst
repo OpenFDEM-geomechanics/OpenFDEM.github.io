@@ -9,9 +9,11 @@ of.mat.contact
 .. role:: red
 .. role:: blue
 
-**of.**\ :red:`mat.contact` :blue:`*element_tag*` <string> :blue:`*material_type*` <string> :blue:`parameter_keyword1` <string> :blue:`parameter_value1` <double> ...
-    |
-    Assign the material parameters to the target element group pairs. The details of materials in OpenFDEM can be found in the table below.
+**of.**\ :red:`mat.contact` :blue:`default` | :blue:`element` <element_tag1> <element_tag2> :blue:`*material_type*` <string> :blue:`parameter_keyword1` <string> :blue:`parameter_value1` <double> ...
+    Assign contact material parameters. Use ``default`` for the global default
+    contact material, or use ``element`` followed by two element-group tags to
+    assign a material to a specific pair of element groups. The details of
+    materials in OpenFDEM can be found in the table below.
     
 
     +-----------------+------------------+----------------------------------------+-------+
@@ -99,7 +101,6 @@ of.mat.contact
 
 
     
-|
 
 Example:
 --------------------------------------------------------------------
@@ -107,7 +108,13 @@ Example:
 .. code-block:: 
 
     of.mat.contact 'default' MC 0.3
-    of.mat.contact 'up' ‘rock’ MC 0.0
+    of.mat.contact element 'up' 'rock' MC 0.0
+
+For a pair of element groups, the literal keyword ``element`` is required.
+The old form ``of.mat.contact 'up' 'rock' ...`` is not a valid 4.35
+alternative: the parser interprets the first quoted token as the contact
+material category, and it is therefore rejected unless it is ``default``,
+``element`` or ``cohesive``.
 
 
 

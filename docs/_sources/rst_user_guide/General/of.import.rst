@@ -30,10 +30,10 @@ of.import
         -``.iges``, which is for the standard geometry from CAD
     
 
-**Example:**
+Example:
+--------------------------------------------------------------------
 
 .. code-block:: 
 
     # Example
     of.import “mesh.msh”
-
