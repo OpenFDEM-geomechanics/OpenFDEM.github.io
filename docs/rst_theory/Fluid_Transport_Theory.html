@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=4cc4c028" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=684690f2" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -49,11 +49,12 @@
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'rst_theory/Fluid_Transport_Theory';</script>
     <script data-cf-beacon="{&quot;token&quot;: &quot;ac93cb22b57e4eaf93d395726ff0e9ef&quot;}" defer="defer" type="module" src="https://static.cloudflareinsights.com/beacon.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Fracture Fluid" href="Fracture_Fluid_Theory.html" />
+    <link rel="next" title="Thermal Transfer" href="Thermal_Transfer_Theory.html" />
     <link rel="prev" title="Contact Mechanics" href="Contact_Mechanics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -165,31 +166,11 @@
 <li class="toctree-l2"><a class="reference internal" href="Solid_FEM_Engine.html">Solid FEM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Solid_Cohesive_Mechanics.html">Solid Cohesive Mechanics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Contact_Mechanics.html">Contact Mechanics</a></li>
-<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Fluid Transport</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="Fracture_Fluid_Theory.html">Fracture Fluid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Porous_Fluid_Theory.html">Porous Fluid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Two_Phase_Fluid_Theory.html">Two-Phase Fluid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Gas_Flow_Theory.html">Gas Flow</a></li>
-</ul>
-</details></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="Thermal_Transfer_Theory.html">Thermal Transfer</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="Matrix_Thermal.html">Matrix Thermal</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Fracture_Heat_Resistance.html">Fracture Heat Resistance</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Contact_Thermal.html">Contact Thermal</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Thermal_Hydromechanical_Coupling.html">Thermal-Hydromechanical Coupling</a></li>
-</ul>
-</details></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Fluid Transport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Thermal_Transfer_Theory.html">Thermal Transfer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Phase_Field.html">Phase Field</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="Particle_Discrete_Element_Method.html">Particle Discrete Element Method (pDEM)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="Rigid_Particle_DEM.html">Rigid Particle DEM</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Irregular_Deformable_Cluster_DEM.html">Irregular Deformable Cluster DEM</a></li>
-</ul>
-</details></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="Mesh_Adaptive_Analysis.html">Mesh Adaptive Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="Local_Adaptive_Mesh_Refinement.html">Local Adaptive Mesh Refinement</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Global_Adaptive_Mesh_Refinement.html">Global Adaptive Mesh Refinement</a></li>
-</ul>
-</details></li>
+<li class="toctree-l2"><a class="reference internal" href="Particle_Discrete_Element_Method.html">Particle Discrete Element Method (pDEM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mesh_Adaptive_Analysis.html">Mesh Adaptive Analysis</a></li>
 </ul>
 </details></li>
 </ul>
@@ -224,6 +205,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.finalize.html">of.finalize</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.import.html">of.import</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.import.table.html">of.import.table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.import.function.html">of.import.function</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.log.interval.html">of.log.interval</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.new.html">of.new</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.restore.html">of.restore</a></li>
@@ -231,16 +213,20 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.save.FEM.html">of.save.FEM</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.config.html">of.set.config</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.contact.html">of.set.contact</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.fastmode.html">of.set.fastmode</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.debug.html">of.set.debug</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.GBM.html">of.set.GBM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.GBM.html">of.set.gbm</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.gravity.html">of.set.gravity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.large.html">of.set.large</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.massscale.html">of.set.massscale</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.module.html">of.set.module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.omp.html">of.set.omp</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.result.html">of.set.result</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.path.html">of.set.path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.precision.html">of.set.precision</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.clear.html">of.set.clear</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.rgbm.html">of.set.rgbm</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.solve.html">of.solve</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.solve.html">of.solve.step / of.solve.ratio / of.solve.time</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.step.html">of.step</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.timestep.html">of.timestep</a></li>
 </ul>
@@ -254,17 +240,29 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.velocity.html">of.boundary.nodal.velocity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.inivelocity.html">of.boundary.nodal.inivelocity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.acceleration.html">of.boundary.nodal.acceleration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.pressure.html">of.boundary.nodal.pressure</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.clear.html">of.boundary.nodal.clear</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.viscous.html">of.boundary.edge.viscous</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.force.html">of.boundary.edge.force</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.velocity.html">of.boundary.edge.velocity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.inivelocity.html">of.boundary.edge.inivelocity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.acceleration.html">of.boundary.edge.acceleration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.pressure.html">of.boundary.edge.pressure</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.clear.html">of.boundary.edge.clear</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.stress.html">of.boundary.element.stress</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.stress.xgrad.html">of.boundary.element.stress.xgrad</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.stress.ygrad.html">of.boundary.element.stress.ygrad</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.clear.html">of.boundary.element.clear</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.blast.html">of.boundary.blast</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../rst_user_guide/contact.html">Contact</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Contact/of.contact.detection.html">of.contact.detection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Contact/of.contact.force.html">of.contact.force</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../rst_user_guide/cohesive.html">Cohesive</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Cohesive/of.cohesive.delete.html">of.cohesive.delete</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../rst_user_guide/DFN.html">Discrete Fracture Networks (DFN)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -278,10 +276,11 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.coord.html">of.import.FEM.nodal.coord</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.coord0.html">of.import.FEM.nodal.coord0</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.velocity.html">of.import.FEM.nodal.velocity</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.groups.html">of.import.FEM.nodal.groups</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.edge.groups.html">of.import.FEM.edge.groups</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.element.groups.html">of.import.FEM.element.groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.groups.html">of.import.FEM.nodal.group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.edge.groups.html">of.import.FEM.edge.group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.element.groups.html">of.import.FEM.element.group</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.element.connectivity.html">of.import.FEM.element.connectivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.dfn.html">of.import.FEM.dfn</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../rst_user_guide/geometry.html">Geometry</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -313,6 +312,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.recombine.html">of.geometry.recombine</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.mesh.html">of.geometry.mesh</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.mesh.write.html">of.geometry.mesh.write</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.additional.html">Additional geometry commands</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../rst_user_guide/group.html">Group</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -324,8 +324,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.from.element.html">of.group.edge.from.element</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.from.cohelement.html">of.group.edge.from.cohcohelement</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.from.dfn.html">of.group.edge.from.dfn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.from.node.html">of.group.edge.from.node</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.from.dfn.html">of.group.cohelement.from.dfn</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.from.gbm.html">of.group.cohelement.from.gbm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.from.element.html">of.group.cohelement.from.element</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.bool.union.html">of.group.nodal.bool.union</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.bool.intersect.html">of.group.nodal.bool.intersect</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.bool.subtract.html">of.group.nodal.bool.subtract</a></li>
@@ -338,11 +340,17 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.bool.union.html">of.group.cohelement.bool.union</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.bool.intersect.html">of.group.cohelement.bool.intersect</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.bool.subtract.html">of.group.cohelement.bool.subtract</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.refpoint.html">of.group.refpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.refpoint.bool.html">of.group.refpoint.bool</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../rst_user_guide/mesh.html">Mesh</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.insert.html">of.mesh.insert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.insert.internal.html">of.mesh.insert.internal</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.insert.dfn.html">of.mesh.insert.dfn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.AMR.html">of.mesh.AMR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.mmg.html">of.mesh.mmg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.implicit.html">of.mesh.implicit</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.voronoi.html">of.mesh.voronoi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.split.html">of.mesh.split</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.bary.html">of.mesh.bary</a></li>
@@ -364,6 +372,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Material/of.mat.hydro.gas.html">of.mat.hydro.gas</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Material/of.mat.nonlocal.html">of.mat.nonlocal</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Material/of.mat.thermal.html">of.mat.thermal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Material/material_parser_4_35.html">Material parser overview (4.35)</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../rst_user_guide/history.html">History</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -374,6 +383,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.cohesive.html">of.history.pv.cohesive</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.damage.html">of.history.pv.damage</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.ae.html">of.history.pv.ae</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/History/history_commands.html">History command overview</a></li>
 </ul>
 </details></li>
 </ul>
@@ -411,11 +421,7 @@
 </details></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../rst_appendix/index.html">Appendix</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../rst_appendix/publication.html">Publications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../rst_developer/appendix.html">Index</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst_appendix/index.html">Publications</a></li>
 </ul>
 
     </div>
@@ -490,7 +496,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -506,6 +514,38 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fracture-fluid">Fracture Fluid</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fracture-aperture">Fracture aperture</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fracture-volume">Fracture volume</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#porous-fluid">Porous Fluid</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#darcy-flux">Darcy flux</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mass-conservation-and-pressure-diffusion">Mass conservation and pressure diffusion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pressure-initial-and-boundary-conditions">Pressure initial and boundary conditions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-phase-fluid">Two-Phase Fluid</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#saturation-and-capillary-pressure">Saturation and capillary pressure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-specific-darcy-law-and-mass-balance">Phase-specific Darcy law and mass balance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relative-permeability-and-closure">Relative permeability and closure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-limits">Model limits</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gas-flow">Gas Flow</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compressible-gas-flow-model">Compressible gas flow model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gas-equation-of-state">Gas equation of state</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gas-solid-coupling">Gas-solid coupling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#critical-time-step-of-the-coupling">Critical time step of the coupling</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -517,14 +557,378 @@
                   
   <section id="fluid-transport">
 <h1>Fluid Transport<a class="headerlink" href="#fluid-transport" title="Link to this heading">#</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Fracture_Fluid_Theory.html">Fracture Fluid</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Porous_Fluid_Theory.html">Porous Fluid</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Two_Phase_Fluid_Theory.html">Two-Phase Fluid</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Gas_Flow_Theory.html">Gas Flow</a></li>
-</ul>
-</div>
+<hr class="docutils" />
+<section id="fracture-fluid">
+<h2>Fracture Fluid<a class="headerlink" href="#fracture-fluid" title="Link to this heading">#</a></h2>
+<p>When subjected to explosive loading, the rock mass experiences the rapid
+propagation of stress waves radiating outward from the blast hole. As the
+waves travel and dissipate, radial fractures form, and the blasting gas
+infiltrates the newly formed cracks, driving their secondary extension and
+ultimately giving rise to a well-connected fracture network. In OpenFDEM, the
+fracture geometry provides the flow domain through which the fluid (gas or
+liquid) travels.</p>
+<section id="fracture-aperture">
+<h3>Fracture aperture<a class="headerlink" href="#fracture-aperture" title="Link to this heading">#</a></h3>
+<p>Before rock failure occurs, the fluid is assumed to be unable to penetrate the
+intact medium. Once the cohesive elements connecting adjacent solid elements
+exceed their strength limit, they separate and become failed cohesive
+elements. The intact rock blocks remain impermeable, so the fluid can only
+flow through these fracture paths. The fracture aperture of each element, which
+acts as the hydraulic opening, directly controls the fluid volume within the
+flow domain. The aperture is evaluated using</p>
+<div class="math notranslate nohighlight">
+\[a=\begin{cases}
+a_{\min}, &amp; o_n+a_0&lt;a_{\min}\\
+o_n+a_0, &amp; a_{\min}&lt;o_n+a_0&lt;a_{\max}\\
+a_{\max}, &amp; o_n+a_0&gt;a_{\max}\\
+\end{cases} \tag{1}\]</div><p>where <span class="math notranslate nohighlight">\(a_0\)</span> denotes the initial fracture aperture, <span class="math notranslate nohighlight">\(a_{\max}\)</span> and
+<span class="math notranslate nohighlight">\(a_{\min}\)</span> represent its upper and lower bounds, respectively, and
+<span class="math notranslate nohighlight">\(o_n\left( n=1,2,3 \right)\)</span> is the aperture obtained from the Gauss
+points along the adjacent edges shared between the fracture and neighboring
+solid elements.</p>
+</section>
+<section id="fracture-volume">
+<h3>Fracture volume<a class="headerlink" href="#fracture-volume" title="Link to this heading">#</a></h3>
+<p>The fluid volume within each channel is calculated as</p>
+<div class="math notranslate nohighlight">
+\[V_{channel,j}=\int_{\varGamma _n}{N_ga}\,ds \tag{2}\]</div>
+<p>where <span class="math notranslate nohighlight">\(N_g\)</span> denotes the shape function of the Gauss point, and <span class="math notranslate nohighlight">\(a\)</span>
+represents the aperture at a specific Gauss point within a channel. The fluid
+volume of each cavity is determined by the volumes of the channels connected
+to it. The total fracture volume of a cavity is obtained by aggregating the
+nodal fracture volumes of all cohesive elements contained within it</p>
+<div class="math notranslate nohighlight">
+\[V_{cavity}=\frac{1}{M}\oint_n{\int_{\varGamma _n}{N_ga}}\,ds \tag{3}\]</div>
+<p>where <span class="math notranslate nohighlight">\(n\)</span> denotes the number of channels connected to the cavity, and
+<span class="math notranslate nohighlight">\(M\)</span> is half the number of nodes in a single channel.</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../_images/gas_flow_process.png"><img alt="Fracture flow process" src="../_images/gas_flow_process.png" style="width: 45%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Figure 1. Fluid flow through the fracture network formed by failed
+cohesive elements.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../_images/gas_fracture_aperture.png"><img alt="Fracture unit opening and channel volume" src="../_images/gas_fracture_aperture.png" style="width: 41%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Figure 2. Fracture unit opening and channel volume.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../_images/gas_flow_cavity.png"><img alt="Schematic of the flow cavity" src="../_images/gas_flow_cavity.png" style="width: 41%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Figure 3. Schematic of the flow cavity comprising Nodes 1-6.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<hr class="docutils" />
+<section id="porous-fluid">
+<h2>Porous Fluid<a class="headerlink" href="#porous-fluid" title="Link to this heading">#</a></h2>
+<p>Porous-fluid theory describes fluid transport through the connected pore
+space of a permeable solid. At the continuum scale, the pore geometry is
+represented by porosity and permeability rather than by resolving each pore.
+The formulation below is for a saturated, single-phase Newtonian fluid; it is
+a general porous-media model and does not imply that every coupling term is
+active in every OpenFDEM analysis.</p>
+<section id="darcy-flux">
+<h3>Darcy flux<a class="headerlink" href="#darcy-flux" title="Link to this heading">#</a></h3>
+<p>For slow viscous flow through a porous medium, the volumetric Darcy flux is</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{q}=-\frac{\mathbf{k}}{\mu}
+\left(\nabla p-\rho\mathbf{g}\right),\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{q}\)</span> is the volume of fluid crossing unit bulk area per
+unit time, <span class="math notranslate nohighlight">\(\mathbf{k}\)</span> is the intrinsic permeability tensor,
+<span class="math notranslate nohighlight">\(\mu\)</span> is dynamic viscosity, <span class="math notranslate nohighlight">\(p\)</span> is pore pressure, <span class="math notranslate nohighlight">\(\rho\)</span> is
+fluid density, and <span class="math notranslate nohighlight">\(\mathbf{g}\)</span> is gravitational acceleration. The
+minus sign makes flow proceed down the hydraulic-potential gradient. For
+isotropic material, <span class="math notranslate nohighlight">\(\mathbf{k}=k\mathbf{I}\)</span>. Darcy’s law assumes that
+inertial effects are small; high-speed flow may require a non-Darcy relation.</p>
+</section>
+<section id="mass-conservation-and-pressure-diffusion">
+<h3>Mass conservation and pressure diffusion<a class="headerlink" href="#mass-conservation-and-pressure-diffusion" title="Link to this heading">#</a></h3>
+<p>The local fluid mass balance is</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial (\phi\rho)}{\partial t}
++\nabla\cdot(\rho\mathbf{q})=m_f,\]</div>
+<p>where <span class="math notranslate nohighlight">\(\phi\)</span> is porosity and <span class="math notranslate nohighlight">\(m_f\)</span> is a mass source per unit bulk
+volume. For slightly compressible fluid and solid constituents, a commonly
+used pressure form is</p>
+<div class="math notranslate nohighlight">
+\[S_p\frac{\partial p}{\partial t}
++\alpha_B\frac{\partial\varepsilon_v}{\partial t}
++\nabla\cdot\mathbf{q}=Q_f,\]</div>
+<p>where <span class="math notranslate nohighlight">\(S_p\)</span> is the pressure-storage coefficient,
+<span class="math notranslate nohighlight">\(\alpha_B\)</span> is the Biot coefficient, <span class="math notranslate nohighlight">\(\varepsilon_v\)</span> is volumetric
+strain, and <span class="math notranslate nohighlight">\(Q_f\)</span> is a volumetric fluid source. The strain term accounts
+for the change in pore volume caused by deformation; its sign follows the
+tension-positive strain convention. If deformation is not coupled, this term
+is omitted. Combining this balance with Darcy’s law gives the pressure
+diffusion equation</p>
+<div class="math notranslate nohighlight">
+\[S_p\frac{\partial p}{\partial t}
++\alpha_B\frac{\partial\varepsilon_v}{\partial t}
+-\nabla\cdot\left[
+\frac{\mathbf{k}}{\mu}(\nabla p-\rho\mathbf{g})\right]=Q_f.\]</div>
+<p>For constant properties, no gravity, and no deformation coupling, this reduces
+to a diffusion equation for pore pressure. The permeability tensor controls
+the ease and direction of flow, while storage controls the rate at which
+pressure responds to fluid injection, production, or boundary loading.</p>
+</section>
+<section id="pressure-initial-and-boundary-conditions">
+<h3>Pressure initial and boundary conditions<a class="headerlink" href="#pressure-initial-and-boundary-conditions" title="Link to this heading">#</a></h3>
+<p>A transient problem requires an initial pressure field. Typical boundary
+conditions prescribe pore pressure, normal fluid flux, a source or sink, or
+no-flow on an impermeable boundary. Prescribed pressure represents connection
+to a pressure-controlled reservoir; prescribed flux represents a specified
+injection or discharge rate. These conditions should be applied consistently
+with the sign convention used for <span class="math notranslate nohighlight">\(\mathbf{q}\)</span> and <span class="math notranslate nohighlight">\(Q_f\)</span>.</p>
+<p>The equations above assume a continuum representative volume and single-phase
+flow. The two-phase extension is presented in the next section.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="two-phase-fluid">
+<h2>Two-Phase Fluid<a class="headerlink" href="#two-phase-fluid" title="Link to this heading">#</a></h2>
+<p>Two-phase porous flow describes two immiscible fluids, such as water and gas
+or water and oil, sharing the same pore space. Because both phases compete for
+the available pores, each phase’s mobility depends on saturation. The
+equations below give the standard continuum formulation; they do not prescribe
+a particular relative-permeability curve or imply that this formulation is
+used by every OpenFDEM fluid solver.</p>
+<section id="saturation-and-capillary-pressure">
+<h3>Saturation and capillary pressure<a class="headerlink" href="#saturation-and-capillary-pressure" title="Link to this heading">#</a></h3>
+<p>For a two-phase system, the phase saturations satisfy</p>
+<div class="math notranslate nohighlight">
+\[S_w+S_n=1,\]</div>
+<p>where <span class="math notranslate nohighlight">\(S_w\)</span> and <span class="math notranslate nohighlight">\(S_n\)</span> are the wetting- and non-wetting-phase
+saturations. Capillary pressure is the pressure difference between the phases,
+conventionally defined as</p>
+<div class="math notranslate nohighlight">
+\[p_c(S_w)=p_n-p_w,\]</div>
+<p>where <span class="math notranslate nohighlight">\(p_w\)</span> and <span class="math notranslate nohighlight">\(p_n\)</span> are the wetting- and non-wetting-phase
+pressures. A constitutive relation <span class="math notranslate nohighlight">\(p_c(S_w)\)</span> closes the pressure-
+saturation relation and reflects pore-scale interface and wettability effects.</p>
+</section>
+<section id="phase-specific-darcy-law-and-mass-balance">
+<h3>Phase-specific Darcy law and mass balance<a class="headerlink" href="#phase-specific-darcy-law-and-mass-balance" title="Link to this heading">#</a></h3>
+<p>The Darcy flux for phase <span class="math notranslate nohighlight">\(\alpha\in\{w,n\}\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{q}_{\alpha}
+=-\frac{\mathbf{k}\,k_{r\alpha}(S_\alpha)}{\mu_\alpha}
+\left(\nabla p_\alpha-\rho_\alpha\mathbf{g}\right),\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{k}\)</span> is the absolute permeability tensor,
+<span class="math notranslate nohighlight">\(k_{r\alpha}\)</span> is the dimensionless relative permeability,
+<span class="math notranslate nohighlight">\(\mu_\alpha\)</span> and <span class="math notranslate nohighlight">\(\rho_\alpha\)</span> are phase viscosity and density,
+and <span class="math notranslate nohighlight">\(\mathbf{g}\)</span> is gravity. The phase mass balances are</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial(\phi\rho_\alpha S_\alpha)}{\partial t}
++\nabla\cdot(\rho_\alpha\mathbf{q}_\alpha)=m_\alpha,
+\qquad \alpha\in\{w,n\},\]</div>
+<p>where <span class="math notranslate nohighlight">\(\phi\)</span> is porosity and <span class="math notranslate nohighlight">\(m_\alpha\)</span> is a mass source per unit
+bulk volume for that phase. These balances are coupled through the saturation
+constraint, the capillary-pressure relation, and the relative-permeability
+functions.</p>
+</section>
+<section id="relative-permeability-and-closure">
+<h3>Relative permeability and closure<a class="headerlink" href="#relative-permeability-and-closure" title="Link to this heading">#</a></h3>
+<p>Relative permeability accounts macroscopically for the reduction in a phase’s
+conducting pore space due to the presence of the other phase. It usually
+varies between zero and one and is specified as a function of saturation,
+often together with residual saturations. One illustrative Corey-type closure
+uses the effective wetting saturation</p>
+<div class="math notranslate nohighlight">
+\[S_e=\frac{S_w-S_{wr}}{1-S_{wr}-S_{nr}},
+\qquad
+k_{rw}=S_e^{n_w},
+\qquad
+k_{rn}=(1-S_e)^{n_n},\]</div>
+<p>where <span class="math notranslate nohighlight">\(S_{wr}\)</span> and <span class="math notranslate nohighlight">\(S_{nr}\)</span> are residual wetting- and
+non-wetting-phase saturations, and <span class="math notranslate nohighlight">\(n_w,n_n\)</span> are empirical exponents.
+This is an example, not a universal law: measured or calibrated
+capillary-pressure and relative-permeability curves should be used when
+available. Hysteresis, compressibility, dissolution, and dynamic interfacial
+effects require additional constitutive assumptions.</p>
+</section>
+<section id="model-limits">
+<h3>Model limits<a class="headerlink" href="#model-limits" title="Link to this heading">#</a></h3>
+<p>If capillary effects are negligible, the phase pressures may be approximated
+as equal; if one phase is absent, the model reduces to single-phase flow.
+Saturation fronts can be sharp, so the predicted solution may depend on
+constitutive curves, mesh resolution, and time-step selection. The choice of
+primary unknowns (for example, one phase pressure and one saturation) is a
+numerical formulation decision and does not change the underlying conservation
+laws.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="gas-flow">
+<h2>Gas Flow<a class="headerlink" href="#gas-flow" title="Link to this heading">#</a></h2>
+<p>To reproduce the coupled fracturing behavior driven by blasting gas with high
+fidelity, OpenFDEM provides a compressible gas-solid coupling model based on
+FDEM. The blasting gas is assumed to obey the ideal gas equation of state. At
+each time step, the gas volume at different locations along the fractures is
+computed, allowing the gas density and bulk modulus to be updated. The gas
+pressure field is then transferred to the mechanical module to compute the
+fracture propagation at the next time step, and the updated fracture geometry
+is subsequently used for the next gas-flow calculation. The definition of the
+fracture aperture and volume is described in the preceding fracture-fluid
+section.</p>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../_images/gas_fracture_development.png"><img alt="Blast-induced fracture development" src="../_images/gas_fracture_development.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Figure 1. Development of the blast-induced fracture network: from stress
+wave loading to gas-driven secondary fracture extension.</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="compressible-gas-flow-model">
+<h3>Compressible gas flow model<a class="headerlink" href="#compressible-gas-flow-model" title="Link to this heading">#</a></h3>
+<p>The velocity of blasting gas can reach the order of hundreds of meters per
+second, and the fracture aperture can be estimated to range from
+<span class="math notranslate nohighlight">\(10^{-6}\)</span> to <span class="math notranslate nohighlight">\(10^{-4}\)</span> m. The Reynolds number can then be
+calculated using</p>
+<div class="math notranslate nohighlight">
+\[\mathrm{Re}=\frac{\rho va}{\mu} \tag{1}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\rho\)</span> is the fluid density, <span class="math notranslate nohighlight">\(v\)</span> is the gas velocity,
+<span class="math notranslate nohighlight">\(a\)</span> is the fracture aperture, and <span class="math notranslate nohighlight">\(\mu\)</span> is the dynamic viscosity.
+The Reynolds number of blasting gas flowing through blast-induced fractures
+can be preliminarily estimated to range from approximately 10 to 1000. When
+<span class="math notranslate nohighlight">\(\mathrm{Re}\)</span> exceeds 1, inertial effects must be considered, meaning
+that the Forchheimer model should be adopted and the conventional Darcy flow
+model is no longer applicable.</p>
+<p>The flow of blasting gas within rock fractures satisfies the principle of mass
+conservation</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial \rho _g}{\partial t}+\nabla \cdot \left( \rho _g\mathbf{q}_{\mathbf{g}} \right) =0 \tag{2}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{q}_g\)</span> is the gas velocity vector and <span class="math notranslate nohighlight">\(\rho _g\)</span> is
+the gas density. Integrating over any control volume <span class="math notranslate nohighlight">\(V_i\)</span> and its
+control boundary <span class="math notranslate nohighlight">\(\varGamma _i\)</span> yields</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial}{\partial t}\int_{V_i}{\rho _gdV}+\int_{\varGamma _i}{\rho _g\left( \mathbf{q}_{\mathbf{g}}\cdot \mathbf{n} \right)}\,d\varGamma =0 \tag{3}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> is the unit vector normal to the boundary of the
+control volume.</p>
+<p>For an ideal adiabatic compressible gas, the variation of density with time is
+pressure-dependent</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial \rho _g}{\partial t}=\frac{\partial \rho _g}{\partial p_g}\frac{\partial p_g}{\partial t}=\frac{\rho _g}{K_g}\frac{\partial p_g}{\partial t} \tag{4}\]</div>
+<p>where <span class="math notranslate nohighlight">\(K_g\)</span> is the bulk modulus of the gas. Combining the volume and
+boundary integral terms, the discrete pressure equation for the control volume
+<span class="math notranslate nohighlight">\(V_i\)</span> becomes</p>
+<div class="math notranslate nohighlight">
+\[\frac{V_i}{K_g}\frac{\partial p_g}{\partial t}+Q_{i}^{total}=0 \tag{5}\]</div>
+<p>where <span class="math notranslate nohighlight">\(Q_{i}^{total}\)</span> is the total flow rate within the control volume,
+from which the gas pressure can be determined.</p>
+<p>Because the velocity of blasting gas is relatively high, the pressure gradient
+term and the velocity term in Darcy’s law exhibit a nonlinear dependence.
+Forchheimer introduced an empirical constant <span class="math notranslate nohighlight">\(\beta\)</span> to account for this
+nonlinearity caused by inertial effects</p>
+<div class="math notranslate nohighlight">
+\[\nabla p_g+\rho _gg=\frac{\rho _gg}{\mathrm{k}_i}q_g+\beta \rho _g{q_g}^2, \quad \mathrm{k}_i=k_g\frac{\rho _gg}{\mu} \tag{6}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathrm{k}_i\)</span> is the gas permeability coefficient, <span class="math notranslate nohighlight">\(k_g\)</span> is
+the gas permeability, and <span class="math notranslate nohighlight">\(\beta\)</span> characterizes the influence of the
+inertial effects. The parameter <span class="math notranslate nohighlight">\(\beta\)</span> is expressed as</p>
+<div class="math notranslate nohighlight">
+\[\beta =\lambda \left( \frac{\xi}{D_{\mathrm{h}}} \right) ^{\eta} \tag{7}\]</div>
+<p>where <span class="math notranslate nohighlight">\(D_{\mathrm{h}}=2a\)</span> is the hydraulic diameter, <span class="math notranslate nohighlight">\(\xi\)</span> is the
+peak penetration height, and <span class="math notranslate nohighlight">\(\lambda\)</span> and <span class="math notranslate nohighlight">\(\eta\)</span> are two
+empirical coefficients, taken as 0.022 and 2/3, respectively. Based on Eq. 6,
+the gas velocity between any fracture element node <span class="math notranslate nohighlight">\(i\)</span> in one cavity and
+its corresponding node <span class="math notranslate nohighlight">\(j\)</span> in an adjacent cavity can be expressed as</p>
+<div class="math notranslate nohighlight">
+\[q_g=\frac{1}{2\rho _g\beta}\left( -\frac{\mu}{k_g}+\sqrt{\left( \frac{\mu}{k_g} \right) ^2+4\beta \rho _g\frac{\varDelta p_g}{L}} \right) \tag{8}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\varDelta p_g\)</span> is the gas pressure difference between cavity
+<span class="math notranslate nohighlight">\(i\)</span> and cavity <span class="math notranslate nohighlight">\(j\)</span>, calculated from the previous time step, and
+<span class="math notranslate nohighlight">\(L\)</span> is the length of the fracture element.</p>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="../_images/gas_nondarcy_flow.png"><img alt="Non-Darcy gas flow" src="../_images/gas_nondarcy_flow.png" style="width: 60%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Figure 2. Non-Darcy gas flow: comparison of the gas flow velocity between
+the Forchheimer (non-Darcy) and Darcy models.</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="gas-equation-of-state">
+<h3>Gas equation of state<a class="headerlink" href="#gas-equation-of-state" title="Link to this heading">#</a></h3>
+<p>During the ideal adiabatic compressible gas flow, compressibility must be
+taken into account. Unlike liquids, which are nearly incompressible, the
+density of the gas changes significantly with pressure. Both density and bulk
+modulus vary with pressure. According to the equation of state for an ideal
+adiabatic gas, the gas density <span class="math notranslate nohighlight">\(\rho _g\)</span> and bulk modulus <span class="math notranslate nohighlight">\(K_g\)</span>
+are given by</p>
+<div class="math notranslate nohighlight">
+\[\rho _g=\rho _0p_{g}^{-\frac{1}{\gamma}} \tag{9}\]</div>
+<div class="math notranslate nohighlight">
+\[K_g=p_g\gamma \tag{10}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\rho _0\)</span> is the initial gas density, <span class="math notranslate nohighlight">\(p_g\)</span> is the current
+gas pressure in the cavity, and <span class="math notranslate nohighlight">\(\gamma\)</span> is the adiabatic index of the
+gas. In this study, the adiabatic index of the blasting gas is approximated by
+that of air, <span class="math notranslate nohighlight">\(\gamma=1.4\)</span>.</p>
+</section>
+<section id="gas-solid-coupling">
+<h3>Gas-solid coupling<a class="headerlink" href="#gas-solid-coupling" title="Link to this heading">#</a></h3>
+<p>Following the determination of gas pressures for all cavities within the
+computational domain, the gas pressure <span class="math notranslate nohighlight">\(\sigma _g\)</span> acting on each
+adjacent solid element is calculated. Defining the mass flow rate as
+<span class="math notranslate nohighlight">\(m_t=q_g\left( x \right) \rho \left( x \right) A_e\)</span>, the flow equation
+can be written as</p>
+<div class="math notranslate nohighlight">
+\[\frac{d\sigma _g\left( x \right)}{dx}=\left( \frac{\mu m_t}{k_gA_e}+\frac{{\beta m_t}^2}{A_{e}^{2}} \right) \left( \rho _{c,in}\left( \frac{\sigma _g\left( x \right)}{p_{c,in}} \right) ^{\frac{1}{\gamma}} \right) ^{-1} \tag{11}\]</div>
+<p>where <span class="math notranslate nohighlight">\(p_{c,in}\)</span> and <span class="math notranslate nohighlight">\(\rho _{c,in}\)</span> represent the gas pressure and
+density at the inlet cavity, respectively. Integrating this equation yields
+the gas pressure distribution along each fracture element</p>
+<div class="math notranslate nohighlight">
+\[\sigma _g\left( x \right) =\left[ p_{c,in}^{\frac{\gamma +1}{\gamma}}+\frac{\gamma +1}{\gamma}\frac{p_{c,in}^{\frac{1}{\gamma}}}{\rho _{c,in}}\left( \frac{\mu m_t}{k_gA_e}+\frac{{\beta m_t}^2}{A_{e}^{2}} \right) x \right] ^{\frac{\gamma}{\gamma +1}} \tag{12}\]</div>
+<p>Once the pressure distribution along the parallel plate is obtained, the
+virtual work principle is applied to equivalently assign the pressure to the
+nodes of the fracture element, yielding the nodal force</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{f}_{\mathbf{gas}}=\int_{S_e}{\mathbf{N}^{\mathrm{T}}\left( x \right) \sigma _g\left( x \right) \cdot \mathbf{n}}\,ds \tag{13}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> is the normal vector of the element surface subjected
+to the gas action, <span class="math notranslate nohighlight">\(S_e\)</span> is the area of that surface, and
+<span class="math notranslate nohighlight">\(\mathbf{N}(x)\)</span> is the shape function matrix of the element.</p>
+<p>The gas-mechanical coupling is achieved by alternately advancing the time
+steps between the mechanical solver and the gas-pressure solver, realizing a
+fully bidirectional coupling. The mechanical solver computes the deformation,
+fracturing and interaction of the rock mass. The gas flow solver then captures
+the change in cavity volume caused by fracture propagation, elastic
+deformation and gas compressibility, recalculates the gas density and bulk
+modulus, and determines the gas pressure, which is applied back to the
+mechanical solver as an external load.</p>
+<figure class="align-center" id="id6">
+<a class="reference internal image-reference" href="../_images/gas_module_interaction.png"><img alt="Interaction between computational modules" src="../_images/gas_module_interaction.png" style="width: 53%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Figure 3. Interaction between the mechanical solver and the gas flow
+solver.</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="critical-time-step-of-the-coupling">
+<h3>Critical time step of the coupling<a class="headerlink" href="#critical-time-step-of-the-coupling" title="Link to this heading">#</a></h3>
+<p>Both the mechanical and gas solvers employ an explicit time integration
+scheme. The critical time step of the mechanical solver, required to ensure
+numerical stability, can be estimated as</p>
+<div class="math notranslate nohighlight">
+\[\varDelta t_{cr}^{s}=\frac{h_{\min}}{\sqrt{\left( \lambda +2\mu \right) /\rho}} \tag{14}\]</div>
+<p>where <span class="math notranslate nohighlight">\(h_{\min}\)</span> is the minimum width of the solid element,
+<span class="math notranslate nohighlight">\(\lambda\)</span> and <span class="math notranslate nohighlight">\(\mu\)</span> are the Lamé constants, and <span class="math notranslate nohighlight">\(\rho\)</span> is
+the material density. The critical time step for the gas solver is given by</p>
+<div class="math notranslate nohighlight">
+\[\varDelta t_{cr}^{g}=\min \left[ \frac{V_i}{K_g\sum_i{\frac{k_{g,i}}{\mu _g}}} \right] \tag{15}\]</div>
+<p>where <span class="math notranslate nohighlight">\(k_{g,i}\)</span> is the permeability, <span class="math notranslate nohighlight">\(\mu _g\)</span> is the dynamic
+viscosity of the fluid, and <span class="math notranslate nohighlight">\(K_g\)</span> is the gas bulk modulus. Because the
+critical time step for transient flow can be very restrictive, a sub-cycling
+strategy is adopted, in which each mechanical time-step loop contains multiple
+gas-calculation sub-cycles. After the gas flow solver completes the specified
+number of sub-cycles, the gas pressure from the final sub-cycle is passed to
+the mechanical solver, which then proceeds to the next mechanical time step.</p>
+</section>
+</section>
 </section>
 
 
@@ -548,11 +952,11 @@
       </div>
     </a>
     <a class="right-next"
-       href="Fracture_Fluid_Theory.html"
+       href="Thermal_Transfer_Theory.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Fracture Fluid</p>
+        <p class="prev-next-title">Thermal Transfer</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -562,6 +966,47 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fracture-fluid">Fracture Fluid</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fracture-aperture">Fracture aperture</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fracture-volume">Fracture volume</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#porous-fluid">Porous Fluid</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#darcy-flux">Darcy flux</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mass-conservation-and-pressure-diffusion">Mass conservation and pressure diffusion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pressure-initial-and-boundary-conditions">Pressure initial and boundary conditions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-phase-fluid">Two-Phase Fluid</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#saturation-and-capillary-pressure">Saturation and capillary pressure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#phase-specific-darcy-law-and-mass-balance">Phase-specific Darcy law and mass balance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relative-permeability-and-closure">Relative permeability and closure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-limits">Model limits</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gas-flow">Gas Flow</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compressible-gas-flow-model">Compressible gas flow model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gas-equation-of-state">Gas equation of state</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gas-solid-coupling">Gas-solid coupling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#critical-time-step-of-the-coupling">Critical time step of the coupling</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

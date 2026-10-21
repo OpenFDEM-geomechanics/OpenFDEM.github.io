@@ -53,25 +53,25 @@ when the OpenFDEM interface is manually closed. The simulation results will be
 saved in the output folder specified in the corresponding ``.of`` file.
 
 .. figure:: ../../images/Tutorials/runse_image1.png
-    :width: 80%
+    :width: 900
     :align: center
 
     Step 1. Input the command in the console.
 
 .. figure:: ../../images/Tutorials/runse_image2.png
-    :width: 60%
+    :width: 900
     :align: center
 
     Step 2. Check the geometry and close Gmsh to continue.
 
 .. figure:: ../../images/Tutorials/runse_image3.png
-    :width: 60%
+    :width: 900
     :align: center
 
     Step 3. Check the mesh and close Gmsh to continue.
 
 .. figure:: ../../images/Tutorials/runse_image4.png
-    :width: 80%
+    :width: 900
     :align: center
 
     Step 4. Start running and wait until the simulation finishes.

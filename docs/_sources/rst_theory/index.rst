@@ -3,7 +3,7 @@ Theory
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
   
    Solid_FEM_Engine
    Solid_Cohesive_Mechanics

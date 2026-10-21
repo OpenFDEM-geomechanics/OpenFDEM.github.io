@@ -4,6 +4,7 @@ Collaborating
 
 .. figure:: ../_static/AboutUs/ISRMlogo.png   
     :align: left
+    :height: 200px
 
 .. raw:: html
 
@@ -23,6 +24,7 @@ Collaborating
 
 .. figure:: ../_static/AboutUs/torontoLogo.png
     :align: left
+    :height: 200px
 
 .. raw:: html
 
@@ -42,6 +44,7 @@ Collaborating
 
 .. figure:: ../_static/AboutUs/polyulogo.png
     :align: left
+    :height: 200px
 
 .. raw:: html
 
@@ -57,6 +60,7 @@ Collaborating
 
 .. figure:: ../_static/AboutUs/monashlogo.png   
     :align: left
+    :height: 200px
 
 .. raw:: html
 

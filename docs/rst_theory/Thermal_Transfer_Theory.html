@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=4cc4c028" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=684690f2" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -49,12 +49,13 @@
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'rst_theory/Thermal_Transfer_Theory';</script>
     <script data-cf-beacon="{&quot;token&quot;: &quot;ac93cb22b57e4eaf93d395726ff0e9ef&quot;}" defer="defer" type="module" src="https://static.cloudflareinsights.com/beacon.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Matrix Thermal" href="Matrix_Thermal.html" />
-    <link rel="prev" title="Gas Flow" href="Gas_Flow_Theory.html" />
+    <link rel="next" title="Phase Field" href="Phase_Field.html" />
+    <link rel="prev" title="Fluid Transport" href="Fluid_Transport_Theory.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -165,31 +166,11 @@
 <li class="toctree-l2"><a class="reference internal" href="Solid_FEM_Engine.html">Solid FEM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Solid_Cohesive_Mechanics.html">Solid Cohesive Mechanics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Contact_Mechanics.html">Contact Mechanics</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="Fluid_Transport_Theory.html">Fluid Transport</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="Fracture_Fluid_Theory.html">Fracture Fluid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Porous_Fluid_Theory.html">Porous Fluid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Two_Phase_Fluid_Theory.html">Two Phase Fluid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Gas_Flow_Theory.html">Gas Flow</a></li>
-</ul>
-</details></li>
-<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Thermal Transfer</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="Matrix_Thermal.html">Matrix Thermal</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Fracture_Heat_Resistance.html">Fracture Heat Resistance</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Contact_Thermal.html">Contact Thermal</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Thermal_Hydromechanical_Coupling.html">Thermal-Hydromechanical Coupling</a></li>
-</ul>
-</details></li>
+<li class="toctree-l2"><a class="reference internal" href="Fluid_Transport_Theory.html">Fluid Transport</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Thermal Transfer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Phase_Field.html">Phase Field</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="Particle_Discrete_Element_Method.html">Particle Discrete Element Method (pDEM)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="Rigid_Particle_DEM.html">Rigid Particle DEM</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Irregular_Deformable_Cluster_DEM.html">Irregular Deformable Cluster DEM</a></li>
-</ul>
-</details></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="Mesh_Adaptive_Analysis.html">Mesh Adaptive Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="Local_Adaptive_Mesh_Refinement.html">Local Adaptive Mesh Refinement</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Global_Adaptive_Mesh_Refinement.html">Global Adaptive Mesh Refinement</a></li>
-</ul>
-</details></li>
+<li class="toctree-l2"><a class="reference internal" href="Particle_Discrete_Element_Method.html">Particle Discrete Element Method (pDEM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mesh_Adaptive_Analysis.html">Mesh Adaptive Analysis</a></li>
 </ul>
 </details></li>
 </ul>
@@ -224,6 +205,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.finalize.html">of.finalize</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.import.html">of.import</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.import.table.html">of.import.table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.import.function.html">of.import.function</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.log.interval.html">of.log.interval</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.new.html">of.new</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.restore.html">of.restore</a></li>
@@ -231,16 +213,20 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.save.FEM.html">of.save.FEM</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.config.html">of.set.config</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.contact.html">of.set.contact</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.fastmode.html">of.set.fastmode</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.debug.html">of.set.debug</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.GBM.html">of.set.GBM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.GBM.html">of.set.gbm</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.gravity.html">of.set.gravity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.large.html">of.set.large</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.massscale.html">of.set.massscale</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.module.html">of.set.module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.omp.html">of.set.omp</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.result.html">of.set.result</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.path.html">of.set.path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.precision.html">of.set.precision</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.clear.html">of.set.clear</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.rgbm.html">of.set.rgbm</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.solve.html">of.solve</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.solve.html">of.solve.step / of.solve.ratio / of.solve.time</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.step.html">of.step</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.timestep.html">of.timestep</a></li>
 </ul>
@@ -254,17 +240,29 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.velocity.html">of.boundary.nodal.velocity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.inivelocity.html">of.boundary.nodal.inivelocity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.acceleration.html">of.boundary.nodal.acceleration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.pressure.html">of.boundary.nodal.pressure</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.clear.html">of.boundary.nodal.clear</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.viscous.html">of.boundary.edge.viscous</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.force.html">of.boundary.edge.force</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.velocity.html">of.boundary.edge.velocity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.inivelocity.html">of.boundary.edge.inivelocity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.acceleration.html">of.boundary.edge.acceleration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.pressure.html">of.boundary.edge.pressure</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.clear.html">of.boundary.edge.clear</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.stress.html">of.boundary.element.stress</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.stress.xgrad.html">of.boundary.element.stress.xgrad</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.stress.ygrad.html">of.boundary.element.stress.ygrad</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.clear.html">of.boundary.element.clear</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.blast.html">of.boundary.blast</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../rst_user_guide/contact.html">Contact</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Contact/of.contact.detection.html">of.contact.detection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Contact/of.contact.force.html">of.contact.force</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../rst_user_guide/cohesive.html">Cohesive</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Cohesive/of.cohesive.delete.html">of.cohesive.delete</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../rst_user_guide/DFN.html">Discrete Fracture Networks (DFN)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -278,10 +276,11 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.coord.html">of.import.FEM.nodal.coord</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.coord0.html">of.import.FEM.nodal.coord0</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.velocity.html">of.import.FEM.nodal.velocity</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.groups.html">of.import.FEM.nodal.groups</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.edge.groups.html">of.import.FEM.edge.groups</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.element.groups.html">of.import.FEM.element.groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.groups.html">of.import.FEM.nodal.group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.edge.groups.html">of.import.FEM.edge.group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.element.groups.html">of.import.FEM.element.group</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.element.connectivity.html">of.import.FEM.element.connectivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.dfn.html">of.import.FEM.dfn</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../rst_user_guide/geometry.html">Geometry</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -313,6 +312,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.recombine.html">of.geometry.recombine</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.mesh.html">of.geometry.mesh</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.mesh.write.html">of.geometry.mesh.write</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.additional.html">Additional geometry commands</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../rst_user_guide/group.html">Group</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -324,8 +324,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.from.element.html">of.group.edge.from.element</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.from.cohelement.html">of.group.edge.from.cohcohelement</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.from.dfn.html">of.group.edge.from.dfn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.from.node.html">of.group.edge.from.node</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.from.dfn.html">of.group.cohelement.from.dfn</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.from.gbm.html">of.group.cohelement.from.gbm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.from.element.html">of.group.cohelement.from.element</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.bool.union.html">of.group.nodal.bool.union</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.bool.intersect.html">of.group.nodal.bool.intersect</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.bool.subtract.html">of.group.nodal.bool.subtract</a></li>
@@ -338,11 +340,17 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.bool.union.html">of.group.cohelement.bool.union</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.bool.intersect.html">of.group.cohelement.bool.intersect</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.bool.subtract.html">of.group.cohelement.bool.subtract</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.refpoint.html">of.group.refpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.refpoint.bool.html">of.group.refpoint.bool</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../rst_user_guide/mesh.html">Mesh</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.insert.html">of.mesh.insert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.insert.internal.html">of.mesh.insert.internal</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.insert.dfn.html">of.mesh.insert.dfn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.AMR.html">of.mesh.AMR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.mmg.html">of.mesh.mmg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.implicit.html">of.mesh.implicit</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.voronoi.html">of.mesh.voronoi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.split.html">of.mesh.split</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.bary.html">of.mesh.bary</a></li>
@@ -364,6 +372,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Material/of.mat.hydro.gas.html">of.mat.hydro.gas</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Material/of.mat.nonlocal.html">of.mat.nonlocal</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Material/of.mat.thermal.html">of.mat.thermal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Material/material_parser_4_35.html">Material parser overview (4.35)</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../rst_user_guide/history.html">History</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -374,6 +383,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.cohesive.html">of.history.pv.cohesive</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.damage.html">of.history.pv.damage</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.ae.html">of.history.pv.ae</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/History/history_commands.html">History command overview</a></li>
 </ul>
 </details></li>
 </ul>
@@ -411,11 +421,7 @@
 </details></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../rst_appendix/index.html">Appendix</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../rst_appendix/publication.html">Publications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../rst_developer/appendix.html">Index</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst_appendix/index.html">Publications</a></li>
 </ul>
 
     </div>
@@ -490,7 +496,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -506,6 +514,33 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-thermal">Matrix Thermal</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fourier-s-law">Fourier’s law</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-balance">Energy balance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-and-boundary-conditions">Initial and boundary conditions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fracture-heat-resistance">Fracture Heat Resistance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#series-resistance-model">Series-resistance model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-and-assumptions">Interpretation and assumptions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contact-thermal">Contact Thermal</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interface-law">Interface law</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-conservation-and-interpretation">Energy conservation and interpretation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thermal-hydromechanical-coupling">Thermal-Hydromechanical Coupling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-transport">Heat transport</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fluid-flow-and-pressure">Fluid flow and pressure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#thermal-and-poroelastic-deformation">Thermal and poroelastic deformation</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -517,14 +552,231 @@
                   
   <section id="thermal-transfer">
 <h1>Thermal Transfer<a class="headerlink" href="#thermal-transfer" title="Link to this heading">#</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Matrix_Thermal.html">Matrix Thermal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Fracture_Heat_Resistance.html">Fracture Heat Resistance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Contact_Thermal.html">Contact Thermal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Thermal_Hydromechanical_Coupling.html">Thermal-Hydromechanical Coupling</a></li>
-</ul>
-</div>
+<hr class="docutils" />
+<section id="matrix-thermal">
+<h2>Matrix Thermal<a class="headerlink" href="#matrix-thermal" title="Link to this heading">#</a></h2>
+<p>Matrix thermal transfer describes heat storage and conduction within the
+intact solid material. Temperature gradients drive heat from warmer regions
+toward cooler regions, while heat sources, boundary conditions, and material
+properties determine the transient temperature field.</p>
+<section id="fourier-s-law">
+<h3>Fourier’s law<a class="headerlink" href="#fourier-s-law" title="Link to this heading">#</a></h3>
+<p>The conductive heat-flux density is given by Fourier’s law:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{q}=-\mathbf{K}\nabla T,\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{q}\)</span> is heat flux per unit area, <span class="math notranslate nohighlight">\(T\)</span> is temperature,
+and <span class="math notranslate nohighlight">\(\mathbf{K}\)</span> is the thermal-conductivity tensor. The negative sign
+indicates that heat flows down the temperature gradient. For a two-dimensional
+domain, <span class="math notranslate nohighlight">\(\nabla T=(\partial T/\partial x,\,\partial T/\partial y)\)</span>.
+For an isotropic material, <span class="math notranslate nohighlight">\(\mathbf{K}=k\mathbf{I}\)</span>, where <span class="math notranslate nohighlight">\(k\)</span> is
+the scalar thermal conductivity.</p>
+</section>
+<section id="energy-balance">
+<h3>Energy balance<a class="headerlink" href="#energy-balance" title="Link to this heading">#</a></h3>
+<p>For a stationary solid with constant density and specific heat capacity, local
+energy conservation is</p>
+<div class="math notranslate nohighlight">
+\[\rho C_p\frac{\partial T}{\partial t}
++\nabla\cdot\mathbf{q}=Q,\]</div>
+<p>where <span class="math notranslate nohighlight">\(\rho\)</span> is mass density, <span class="math notranslate nohighlight">\(C_p\)</span> is specific heat capacity,
+and <span class="math notranslate nohighlight">\(Q\)</span> is the volumetric heat-generation rate. Combining this balance
+with Fourier’s law gives</p>
+<div class="math notranslate nohighlight">
+\[\rho C_p\frac{\partial T}{\partial t}
+=\nabla\cdot(\mathbf{K}\nabla T)+Q.\]</div>
+<p>For homogeneous isotropic material with constant <span class="math notranslate nohighlight">\(k\)</span>, this becomes</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial T}{\partial t}
+=\frac{k}{\rho C_p}\nabla^2T+\frac{Q}{\rho C_p}.\]</div>
+<p>The thermal diffusivity <span class="math notranslate nohighlight">\(a_T=k/(\rho C_p)\)</span> measures how quickly
+temperature disturbances spread through the matrix. If properties vary with
+temperature or position, the divergence form should be retained rather than
+replacing it with <span class="math notranslate nohighlight">\(k\nabla^2T\)</span>.</p>
+</section>
+<section id="initial-and-boundary-conditions">
+<h3>Initial and boundary conditions<a class="headerlink" href="#initial-and-boundary-conditions" title="Link to this heading">#</a></h3>
+<p>Transient conduction requires an initial temperature field
+<span class="math notranslate nohighlight">\(T(\mathbf{x},0)=T_0(\mathbf{x})\)</span>. Common boundary conditions include a
+prescribed temperature, a prescribed normal heat flux
+<span class="math notranslate nohighlight">\(-\mathbf{n}\cdot\mathbf{K}\nabla T\)</span>, or an exchange condition with the
+surrounding environment. These conditions define how the matrix receives or
+loses heat and should be consistent with the physical heating or cooling
+process being represented.</p>
+<p>The equations above assume a continuum matrix and do not by themselves
+represent heat exchange across a discontinuity. Heat transfer between
+separated blocks or across a fracture is described by the contact and fracture
+thermal-resistance models, respectively.</p>
+</section>
+<section id="fracture-heat-resistance">
+<h3>Fracture Heat Resistance<a class="headerlink" href="#fracture-heat-resistance" title="Link to this heading">#</a></h3>
+<p>A fracture interrupts direct heat conduction through the intact matrix. Heat
+may still cross the discontinuity through gas, liquid, or solid material in the
+fracture, as well as through microscopic asperity contacts between its faces.
+These mechanisms can be represented by an effective thermal resistance.</p>
+</section>
+<section id="series-resistance-model">
+<h3>Series-resistance model<a class="headerlink" href="#series-resistance-model" title="Link to this heading">#</a></h3>
+<p>Consider a fracture of aperture <span class="math notranslate nohighlight">\(b\)</span> filled with a material of thermal
+conductivity <span class="math notranslate nohighlight">\(k_f\)</span>. For one-dimensional steady conduction normal to the
+fracture, the resistance per unit area of the filling layer is</p>
+<div class="math notranslate nohighlight">
+\[R''_{f}=\frac{b}{k_f}.\]</div>
+<p>If the two fracture faces also have interfacial resistances
+<span class="math notranslate nohighlight">\(R''_{c,1}\)</span> and <span class="math notranslate nohighlight">\(R''_{c,2}\)</span>, the total resistance per unit area is</p>
+<div class="math notranslate nohighlight">
+\[R''_{\mathrm{tot}}=R''_{c,1}+\frac{b}{k_f}+R''_{c,2}.\]</div>
+<p>The corresponding effective conductance is
+<span class="math notranslate nohighlight">\(h_f=1/R''_{\mathrm{tot}}\)</span>, and the heat flux from side 1 to side 2 is</p>
+<div class="math notranslate nohighlight">
+\[q''_{1\rightarrow2}
+=h_f(T_1-T_2)
+=\frac{T_1-T_2}{R''_{\mathrm{tot}}}.\]</div>
+<p>Here <span class="math notranslate nohighlight">\(T_1\)</span> and <span class="math notranslate nohighlight">\(T_2\)</span> are the temperatures on the opposing sides of
+the fracture. For a fracture with negligible filling-layer resistance,
+<span class="math notranslate nohighlight">\(b/k_f\)</span> may be omitted; for a dry, open fracture, the effective
+conductance can instead be calibrated to account for gas conduction and
+radiation if those mechanisms are included in the intended model.</p>
+</section>
+<section id="interpretation-and-assumptions">
+<h3>Interpretation and assumptions<a class="headerlink" href="#interpretation-and-assumptions" title="Link to this heading">#</a></h3>
+<p>The series model assumes heat flows approximately normal to a locally planar
+fracture and that the layer and interface resistances act in series. The
+resistance has units of <span class="math notranslate nohighlight">\(\mathrm{m^2\,K/W}\)</span>, while conductance has units
+of <span class="math notranslate nohighlight">\(\mathrm{W/(m^2\,K)}\)</span>. For a contact area <span class="math notranslate nohighlight">\(A\)</span>, the total heat
+transfer rate is <span class="math notranslate nohighlight">\(\dot Q=Aq''_{1\rightarrow2}\)</span>. A larger aperture or
+lower filling conductivity increases the layer resistance and reduces heat
+transfer, all else being equal.</p>
+<p>This effective fracture resistance represents heat transmission across the
+fracture itself. It is distinct from the contact-thermal exchange law used
+when two discrete elements or blocks are in thermal contact. In a numerical
+model, the effective conductance should reflect the chosen representation so
+that fracture resistance and contact resistance are not inadvertently counted
+twice.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="contact-thermal">
+<h2>Contact Thermal<a class="headerlink" href="#contact-thermal" title="Link to this heading">#</a></h2>
+<p>Contact thermal transfer exchanges heat between the surfaces of two discrete
+elements or blocks in contact. It provides a thermal connection across a
+mechanical contact and is commonly modeled with a conductance proportional to
+the temperature difference across the interface.</p>
+<section id="interface-law">
+<h3>Interface law<a class="headerlink" href="#interface-law" title="Link to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(\Gamma_c\)</span> denote the active contact interface, and let <span class="math notranslate nohighlight">\(T_t\)</span>
+and <span class="math notranslate nohighlight">\(T_c\)</span> be the temperatures on the target and contactor sides. The
+normal heat flux from target to contactor is</p>
+<div class="math notranslate nohighlight">
+\[q_{t\rightarrow c}=h_c(T_t-T_c),\]</div>
+<p>where <span class="math notranslate nohighlight">\(h_c\)</span> is the thermal contact conductance. The heat-transfer rate
+over the interface is</p>
+<div class="math notranslate nohighlight">
+\[\dot Q_{t\rightarrow c}
+=\int_{\Gamma_c}h_c(T_t-T_c)\,\mathrm{d}\Gamma.\]</div>
+<p>For a uniform conductance and temperature difference over an interface of
+area <span class="math notranslate nohighlight">\(A_c\)</span>, this reduces to
+<span class="math notranslate nohighlight">\(\dot Q_{t\rightarrow c}=h_cA_c(T_t-T_c)\)</span>. In a two-dimensional model,
+the measure <span class="math notranslate nohighlight">\(\mathrm{d}\Gamma\)</span> is a boundary length and the out-of-plane
+thickness must be included if a three-dimensional heat rate is required.</p>
+</section>
+<section id="energy-conservation-and-interpretation">
+<h3>Energy conservation and interpretation<a class="headerlink" href="#energy-conservation-and-interpretation" title="Link to this heading">#</a></h3>
+<p>The equal-and-opposite heat rate is applied to the other body:</p>
+<div class="math notranslate nohighlight">
+\[\dot Q_{c\rightarrow t}=-\dot Q_{t\rightarrow c}.\]</div>
+<p>Thus, contact exchange redistributes energy between the bodies but does not
+create or remove energy from the pair. If <span class="math notranslate nohighlight">\(T_t&gt;T_c\)</span> and <span class="math notranslate nohighlight">\(h_c&gt;0\)</span>,
+heat flows from the target to the contactor. A larger conductance approaches
+the perfect-contact limit, while a small conductance represents a more
+thermally resistive interface. The conductance may be prescribed or calibrated
+as an effective parameter; its dependence on contact pressure, roughness,
+aperture, and interface material is model-specific.</p>
+<p>Contact thermal transfer applies only where a contact interface is defined.
+Heat transfer across an open fracture or a gap requires a fracture-resistance
+or other gap-transfer model. Care is needed to avoid applying both laws to the
+same interface unless their resistances have been intentionally combined.</p>
+</section>
+</section>
+<section id="thermal-hydromechanical-coupling">
+<h2>Thermal-Hydromechanical Coupling<a class="headerlink" href="#thermal-hydromechanical-coupling" title="Link to this heading">#</a></h2>
+<p>Thermal-hydromechanical (THM) coupling describes the interaction between
+temperature, fluid pressure and flow, and deformation. Heating or cooling
+changes the temperature field and produces thermal strain; deformation can in
+turn change fracture aperture and fluid storage, while fluid flow transports
+heat. The relative importance of these feedbacks depends on the material,
+loading, and time scale.</p>
+<p>The high-temperature rock treatment described in the accompanying reference
+uses a one-way thermo-mechanical approximation: temperature drives thermal
+stress, while deformation has a negligible effect on heat transfer. The
+equations below present a broader THM framework and should be read as governing
+principles; particular constitutive laws, coupling terms, and sign conventions
+depend on the model setup.</p>
+<section id="heat-transport">
+<h3>Heat transport<a class="headerlink" href="#heat-transport" title="Link to this heading">#</a></h3>
+<p>In a fluid-bearing porous medium, heat is conducted through the solid-fluid
+mixture and may also be carried by moving fluid. A common local energy balance
+is</p>
+<div class="math notranslate nohighlight">
+\[C_{\mathrm{eff}}\frac{\partial T}{\partial t}
++ \rho_f c_f\,\mathbf{v}\cdot\nabla T
+= \nabla\cdot(\mathbf{K}_{\mathrm{eff}}\nabla T) + Q,\]</div>
+<p>where <span class="math notranslate nohighlight">\(T\)</span> is temperature, <span class="math notranslate nohighlight">\(C_{\mathrm{eff}}\)</span> is the effective
+volumetric heat capacity, <span class="math notranslate nohighlight">\(\rho_f\)</span> and <span class="math notranslate nohighlight">\(c_f\)</span> are the fluid density
+and specific heat, <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> is the Darcy velocity,
+<span class="math notranslate nohighlight">\(\mathbf{K}_{\mathrm{eff}}\)</span> is the effective thermal-conductivity
+tensor, and <span class="math notranslate nohighlight">\(Q\)</span> is a volumetric heat source. The advection term may be
+omitted when fluid transport is absent or negligible. In an impermeable solid,
+this reduces to transient matrix heat conduction.</p>
+</section>
+<section id="fluid-flow-and-pressure">
+<h3>Fluid flow and pressure<a class="headerlink" href="#fluid-flow-and-pressure" title="Link to this heading">#</a></h3>
+<p>For a single-phase fluid under Darcy flow, the Darcy velocity can be written
+as</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{v}=-\frac{\mathbf{k}}{\mu_f}
+\left(\nabla p-\rho_f\mathbf{g}\right),\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{k}\)</span> is intrinsic permeability,
+<span class="math notranslate nohighlight">\(\mu_f\)</span> is dynamic viscosity, <span class="math notranslate nohighlight">\(p\)</span> is pore pressure, and
+<span class="math notranslate nohighlight">\(\mathbf{g}\)</span> is gravitational acceleration. A simplified fluid mass
+balance is</p>
+<div class="math notranslate nohighlight">
+\[S\frac{\partial p}{\partial t}
++ \alpha_B\frac{\partial \varepsilon_v}{\partial t}
++ \nabla\cdot\mathbf{v}=q_f,\]</div>
+<p>where <span class="math notranslate nohighlight">\(S\)</span> is fluid-storage capacity, <span class="math notranslate nohighlight">\(\alpha_B\)</span> is the Biot
+coefficient, <span class="math notranslate nohighlight">\(\varepsilon_v\)</span> is volumetric strain, and <span class="math notranslate nohighlight">\(q_f\)</span> is a
+fluid source per unit bulk volume. This form illustrates pressure-deformation
+coupling; compressibility, temperature-dependent properties, and fracture
+storage can require additional terms.</p>
+</section>
+<section id="thermal-and-poroelastic-deformation">
+<h3>Thermal and poroelastic deformation<a class="headerlink" href="#thermal-and-poroelastic-deformation" title="Link to this heading">#</a></h3>
+<p>For small strains, an isotropic thermal strain is</p>
+<div class="math notranslate nohighlight">
+\[\boldsymbol{\varepsilon}_{\mathrm{th}}
+=\alpha_T(T-T_0)\mathbf{I},\]</div>
+<p>where <span class="math notranslate nohighlight">\(\alpha_T\)</span> is the linear thermal-expansion coefficient, <span class="math notranslate nohighlight">\(T_0\)</span>
+is a reference temperature, and <span class="math notranslate nohighlight">\(\mathbf{I}\)</span> is the identity tensor. A
+representative linear poroelastic stress relation, with tension-positive stress
+and compression-positive pore pressure, is</p>
+<div class="math notranslate nohighlight">
+\[\boldsymbol{\sigma}
+=\mathsf{C}:
+\left(\boldsymbol{\varepsilon}-\boldsymbol{\varepsilon}_{\mathrm{th}}\right)
+-\alpha_B p\mathbf{I},\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathsf{C}\)</span> is the elastic stiffness tensor and
+<span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span> is total strain. Under idealized complete
+restraint of an isotropic solid, the thermal stress increment is hydrostatic
+and has magnitude <span class="math notranslate nohighlight">\(3K\alpha_T\Delta T\)</span>, where <span class="math notranslate nohighlight">\(K\)</span> is the bulk
+modulus. The actual stress state depends on constraints, geometry, and
+constitutive assumptions; this limiting expression is not a general plane-
+strain formula.</p>
+<p>In fractured media, the coupling may also occur through deformation-dependent
+fracture aperture and permeability. These feedbacks connect the thermal,
+hydraulic, and mechanical fields and can be important even when the intact
+matrix is treated as impermeable.</p>
+</section>
+</section>
 </section>
 
 
@@ -539,20 +791,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Gas_Flow_Theory.html"
+       href="Fluid_Transport_Theory.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Gas Flow</p>
+        <p class="prev-next-title">Fluid Transport</p>
       </div>
     </a>
     <a class="right-next"
-       href="Matrix_Thermal.html"
+       href="Phase_Field.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Matrix Thermal</p>
+        <p class="prev-next-title">Phase Field</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -562,6 +814,42 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-thermal">Matrix Thermal</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fourier-s-law">Fourier’s law</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-balance">Energy balance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-and-boundary-conditions">Initial and boundary conditions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fracture-heat-resistance">Fracture Heat Resistance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#series-resistance-model">Series-resistance model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-and-assumptions">Interpretation and assumptions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contact-thermal">Contact Thermal</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interface-law">Interface law</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-conservation-and-interpretation">Energy conservation and interpretation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thermal-hydromechanical-coupling">Thermal-Hydromechanical Coupling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-transport">Heat transport</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fluid-flow-and-pressure">Fluid flow and pressure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#thermal-and-poroelastic-deformation">Thermal and poroelastic deformation</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

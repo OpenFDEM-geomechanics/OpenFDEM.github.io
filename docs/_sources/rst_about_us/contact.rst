@@ -8,11 +8,12 @@ Contact
 
 Lead Developer
 -----------------------------
-Prof. Xiaofeng Li +86 (1)363 860 4484
+Prof. Xiaofeng Li
    | Institute of Rock and Soil Mechanics
    | Chinese Academy of Sciences
    | Email: xfli@whrsm.ac.cn 
    | Website: www.xiaofengli-fdem.com_
+
 .. _www.xiaofengli-fdem.com: https://www.xiaofengli-fdem.com/
 
 Bio: 
@@ -28,9 +29,9 @@ Bio:
  problems that operates on various platform
 
 
-Developers for solver
+Developers
 ----------------------------------------
-- Dongbao Yang (3D mechanical solver, GUI) - Institute of Rock and Soil Mechanics, Chinese Academy of Sciences
+- Dr. Dongbao Yang (3D mechanical solver, GUI) - Institute of Rock and Soil Mechanics, Chinese Academy of Sciences
 
 - Qian Li (blast solver) - Institute of Rock and Soil Mechanics, Chinese Academy of Sciences
 
@@ -40,7 +41,11 @@ Developers for solver
 
 - Ben Wang (blast solver) - Institute of Rock and Soil Mechanics, Chinese Academy of Sciences
 
-Sponsors
+- Katia Ossetchkina – University of Toronto, Documentation and Website
+
+- Grace Hu - University of Toronto, Documentation and Website
+
+Advisory Committee
 -----------------------------
 Prof. Haibo Li
     | Institute of Rock and Soil Mechanics
@@ -54,7 +59,7 @@ Bio:
 
     <hr style="border:0; height:1px; background:#eee; margin:40px 0;">
 
-Professor Giovanni Grasselli +44 (0)207 594 7327
+Professor Giovanni Grasselli
     | Department of Civil & Mineral Engineering
     | University of Toronto
     | Email: giovanni.grasselli@utoronto.ca
@@ -68,21 +73,41 @@ Bio:
  He received the prestigious ISRM Rocha Medal (2004) for best thesis worldwide in rock mechanics and
  supervised two Rocha Medal winners (2015 and 2017). Through the start-up company Geomechanica Inc.,
  the FDEM technology is currently commercialized and translated to engineering practice.
-Supporting packages developers
-----------------------------------------
+
 .. raw:: html
 
-   <div style="height: 5px;"></div>
+    <hr style="border:0; height:1px; background:#eee; margin:40px 0;">
 
-- Dr. Qi Zhao - The Hong Kong Polytechnic University, Architecture Design
+Dr. Qi Zhao
+    | Department of Civil and Environmental Engineering
+    | The Hong Kong Polytechnic University
+    | Email: qi.qz.zhao@polyu.edu.hk
 
-- Katia Ossetchkina – University of Toronto, Documentation and Website
+Bio:
+ Dr. Qi Zhao obtained his Ph.D. degree at the University of Toronto with Prof. Grasselli,
+ and he worked in the same group as a postdoc for a year. He then did postdoctoral research
+ with Prof. Glaser at UC Berkeley. He joined the Hong Kong Polytechnic University in June
+ 2020 as an assistant professor in the Department of Civil and Environmental Engineering.
 
-- Grace Hu - University of Toronto, Documentation and Website
+.. raw:: html
 
-- Earl Magsipoc - University of Toronto, Graphical user interface designing
+    <hr style="border:0; height:1px; background:#eee; margin:40px 0;">
 
-- Dr. Aly Abdelaziz - University of Toronto, Postprocessing and data processing
+Dr. Qianbing Zhang
+    | Department of Civil and Environmental Engineering
+    | Monash University
+    | Email: Qianbing.Zhang@monash.edu
+
+
+Bio:
+ Dr. Qianbing Zhang is an Associate Professor specialising in Geomechanics, Tunnelling and
+ Underground Infrastructure. He earned his PhD from EPFL and, prior to joining Monash in
+ 2015, was a postdoctoral researcher at the University of Cambridge. He is an ARC Future
+ Fellow and former ARC DECRA Fellow (2020–2022), recipient of the John Booker Medal from
+ the Australian Academy of Science (AAS), Fellow of Engineers Australia (FIEAust), and
+ Chartered Professional Engineer (CPEng). He serves as Editor-in-Chief of *Tunnelling and
+ Underground Space Technology* (TUST, JCR-Q1 journal) and Vice-President (2023–2027) of the
+ International Society for Rock Mechanics and Rock Engineering (ISRM).
 
 
 .. raw:: html

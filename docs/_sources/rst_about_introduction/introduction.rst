@@ -48,7 +48,7 @@ whithin the entity, and the new kinematic scheme to construct a nonlinear deform
    <video autoplay loop muted playsinline style="max-width:100%;border-radius:4px;">
      <source src="../_static/videos/feature.mp4" type="video/mp4">
    </video>
-   <p style="color:#555;font-style:italic;margin-top:4px;">OpenFDEM supports 26 element types and 24 materials.</p>
+   <p style="color:#555;font-style:italic;margin-top:4px;text-align:center;">OpenFDEM supports 26 element types and 24 materials.</p>
 
 
 **Friendly preprocessing interface** - The ``Gmsh`` is implemented to easily create meshes from computer-aided design (CAD), 
@@ -77,7 +77,7 @@ internal variables mapping, high-accuracy internal variable interpolation and fa
    <video autoplay loop muted playsinline style="max-width:100%;border-radius:4px;">
      <source src="../_static/videos/wavebetter.mp4" type="video/mp4">
    </video>
-   <p style="color:#555;font-style:italic;margin-top:4px;">Flowing mesh refined based on the stress level in the bar.</p>
+   <p style="color:#555;font-style:italic;margin-top:4px;text-align:center;">Flowing mesh refined based on the stress level in the bar.</p>
 
 
 **Rich grain-based modelling support** - Voronoi tessellations can be created with the built-in Voronoi module. 
@@ -87,10 +87,13 @@ Furthermore, transgranular fracturing can be realized by element splitting techn
 
 .. raw:: html
 
-   <video autoplay loop muted playsinline style="max-width:100%;border-radius:4px;">
+   <video autoplay loop muted playsinline style="max-width:100%;
+                 border:none;
+                 outline:none;
+                 box-shadow:none;display:block;margin:0 auto;">
      <source src="../_static/videos/voronoi.mp4" type="video/mp4">
    </video>
-   <p style="color:#555;font-style:italic;margin-top:4px;">OpenFDEM implements a Voronoi lib and is able to simulate grains directly based on polygonal elements.</p>
+   <p style="color:#555;font-style:italic;margin-top:4px;text-align:center;">OpenFDEM implements a Voronoi lib and is able to simulate grains directly based on polygonal elements.</p>
 
 
 **Large material library** - currently, 
@@ -101,14 +104,6 @@ and 6 contact models (including Mohr-coulomb friction, hertz contact, rate frict
   :alt: New material library
 
   New material library in OpenFDEM.
-
-.. raw:: html
-
-   <video autoplay loop muted playsinline style="max-width:100%;border-radius:4px;">
-     <source src="../_static/videos/globalAMRPhase.mp4" type="video/mp4">
-   </video>
-   <p style="color:#555;font-style:italic;margin-top:4px;">Phasefield module with adaptive mesh refinement in OpenFDEM.</p>
-
 
 **Advanced analysis solvers** - Linear dynamic solver (implicit and explicit), linear static solver (PETSC), eigenvalue problem (SLEPc), 
 and nonlinear dynamic solver (explicit) are applicable for different problems, the implicit solver currently can be run on Linux-like OS.
@@ -156,7 +151,7 @@ Fluid Dynamic Module
    <video autoplay loop muted playsinline style="max-width:100%;border-radius:4px;">
      <source src="../_static/videos/water.mp4" type="video/mp4">
    </video>
-   <p style="color:#555;font-style:italic;margin-top:4px;">Fluid injection in fractured rock block (left),  Water flowing in a tube using CFD in hydro module (right)</p>
+   <p style="color:#555;font-style:italic;margin-top:4px;text-align:center;">Fluid injection in fractured rock block (left),  Water flowing in a tube using CFD in hydro module (right)</p>
 
 
 **Boundary Types** - water level, pore pressure, flow rate, steady flow and impermeable boundary conditions are supported in hydro module.
@@ -191,7 +186,7 @@ Computational Fluid Dynamics
    <video autoplay loop muted playsinline style="max-width:100%;border-radius:4px;">
      <source src="../_static/videos/tapwater.mp4" type="video/mp4">
    </video>
-   <p style="color:#555;font-style:italic;margin-top:4px;">Tap water flow into a tank, MPM + FDEM.</p>
+   <p style="color:#555;font-style:italic;margin-top:4px;text-align:center;">Tap water flow into a tank, MPM + FDEM.</p>
 
 
 .. raw:: html
@@ -199,7 +194,7 @@ Computational Fluid Dynamics
    <video autoplay loop muted playsinline style="max-width:100%;border-radius:4px;">
      <source src="../_static/videos/vortex.mp4" type="video/mp4">
    </video>
-   <p style="color:#555;font-style:italic;margin-top:4px;">Kármán vortex street example, periodic boundary.</p>
+   <p style="color:#555;font-style:italic;margin-top:4px;text-align:center;">Kármán vortex street example, periodic boundary.</p>
 
 
 Miscellaneous
