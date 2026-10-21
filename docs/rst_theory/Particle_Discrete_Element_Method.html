@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=4cc4c028" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=684690f2" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -49,11 +49,12 @@
     <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'rst_theory/Particle_Discrete_Element_Method';</script>
     <script data-cf-beacon="{&quot;token&quot;: &quot;ac93cb22b57e4eaf93d395726ff0e9ef&quot;}" defer="defer" type="module" src="https://static.cloudflareinsights.com/beacon.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Rigid Particle DEM" href="Rigid_Particle_DEM.html" />
+    <link rel="next" title="Mesh Adaptive Analysis" href="Mesh_Adaptive_Analysis.html" />
     <link rel="prev" title="Phase Field" href="Phase_Field.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -165,31 +166,11 @@
 <li class="toctree-l2"><a class="reference internal" href="Solid_FEM_Engine.html">Solid FEM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Solid_Cohesive_Mechanics.html">Solid Cohesive Mechanics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Contact_Mechanics.html">Contact Mechanics</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="Fluid_Transport_Theory.html">Fluid Transport</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="Fracture_Fluid_Theory.html">Fracture Fluid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Porous_Fluid_Theory.html">Porous Fluid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Two_Phase_Fluid_Theory.html">Two-Phase Fluid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Gas_Flow_Theory.html">Gas Flow</a></li>
-</ul>
-</details></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="Thermal_Transfer_Theory.html">Thermal Transfer</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="Matrix_Thermal.html">Matrix Thermal</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Fracture_Heat_Resistance.html">Fracture Heat Resistance</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Contact_Thermal.html">Contact Thermal</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Thermal_Hydromechanical_Coupling.html">Thermal-Hydromechanical Coupling</a></li>
-</ul>
-</details></li>
+<li class="toctree-l2"><a class="reference internal" href="Fluid_Transport_Theory.html">Fluid Transport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Thermal_Transfer_Theory.html">Thermal Transfer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Phase_Field.html">Phase Field</a></li>
-<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Particle Discrete Element Method (pDEM)</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="Rigid_Particle_DEM.html">Rigid Particle DEM</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Irregular_Deformable_Cluster_DEM.html">Irregular Deformable Cluster DEM</a></li>
-</ul>
-</details></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="Mesh_Adaptive_Analysis.html">Mesh Adaptive Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="Local_Adaptive_Mesh_Refinement.html">Local Adaptive Mesh Refinement</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Global_Adaptive_Mesh_Refinement.html">Global Adaptive Mesh Refinement</a></li>
-</ul>
-</details></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Particle Discrete Element Method (pDEM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mesh_Adaptive_Analysis.html">Mesh Adaptive Analysis</a></li>
 </ul>
 </details></li>
 </ul>
@@ -224,6 +205,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.finalize.html">of.finalize</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.import.html">of.import</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.import.table.html">of.import.table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.import.function.html">of.import.function</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.log.interval.html">of.log.interval</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.new.html">of.new</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.restore.html">of.restore</a></li>
@@ -231,16 +213,20 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.save.FEM.html">of.save.FEM</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.config.html">of.set.config</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.contact.html">of.set.contact</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.fastmode.html">of.set.fastmode</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.debug.html">of.set.debug</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.GBM.html">of.set.GBM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.GBM.html">of.set.gbm</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.gravity.html">of.set.gravity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.large.html">of.set.large</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.massscale.html">of.set.massscale</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.module.html">of.set.module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.omp.html">of.set.omp</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.result.html">of.set.result</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.path.html">of.set.path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.precision.html">of.set.precision</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.clear.html">of.set.clear</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.rgbm.html">of.set.rgbm</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.solve.html">of.solve</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.solve.html">of.solve.step / of.solve.ratio / of.solve.time</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.step.html">of.step</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.timestep.html">of.timestep</a></li>
 </ul>
@@ -254,17 +240,29 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.velocity.html">of.boundary.nodal.velocity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.inivelocity.html">of.boundary.nodal.inivelocity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.acceleration.html">of.boundary.nodal.acceleration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.pressure.html">of.boundary.nodal.pressure</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.clear.html">of.boundary.nodal.clear</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.viscous.html">of.boundary.edge.viscous</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.force.html">of.boundary.edge.force</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.velocity.html">of.boundary.edge.velocity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.inivelocity.html">of.boundary.edge.inivelocity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.acceleration.html">of.boundary.edge.acceleration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.pressure.html">of.boundary.edge.pressure</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.clear.html">of.boundary.edge.clear</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.stress.html">of.boundary.element.stress</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.stress.xgrad.html">of.boundary.element.stress.xgrad</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.stress.ygrad.html">of.boundary.element.stress.ygrad</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.clear.html">of.boundary.element.clear</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.blast.html">of.boundary.blast</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../rst_user_guide/contact.html">Contact</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Contact/of.contact.detection.html">of.contact.detection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Contact/of.contact.force.html">of.contact.force</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../rst_user_guide/cohesive.html">Cohesive</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Cohesive/of.cohesive.delete.html">of.cohesive.delete</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../rst_user_guide/DFN.html">Discrete Fracture Networks (DFN)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -278,10 +276,11 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.coord.html">of.import.FEM.nodal.coord</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.coord0.html">of.import.FEM.nodal.coord0</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.velocity.html">of.import.FEM.nodal.velocity</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.groups.html">of.import.FEM.nodal.groups</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.edge.groups.html">of.import.FEM.edge.groups</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.element.groups.html">of.import.FEM.element.groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.groups.html">of.import.FEM.nodal.group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.edge.groups.html">of.import.FEM.edge.group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.element.groups.html">of.import.FEM.element.group</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.element.connectivity.html">of.import.FEM.element.connectivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.dfn.html">of.import.FEM.dfn</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../rst_user_guide/geometry.html">Geometry</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -313,6 +312,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.recombine.html">of.geometry.recombine</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.mesh.html">of.geometry.mesh</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.mesh.write.html">of.geometry.mesh.write</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.additional.html">Additional geometry commands</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../rst_user_guide/group.html">Group</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -324,8 +324,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.from.element.html">of.group.edge.from.element</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.from.cohelement.html">of.group.edge.from.cohcohelement</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.from.dfn.html">of.group.edge.from.dfn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.from.node.html">of.group.edge.from.node</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.from.dfn.html">of.group.cohelement.from.dfn</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.from.gbm.html">of.group.cohelement.from.gbm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.from.element.html">of.group.cohelement.from.element</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.bool.union.html">of.group.nodal.bool.union</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.bool.intersect.html">of.group.nodal.bool.intersect</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.bool.subtract.html">of.group.nodal.bool.subtract</a></li>
@@ -338,11 +340,17 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.bool.union.html">of.group.cohelement.bool.union</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.bool.intersect.html">of.group.cohelement.bool.intersect</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.bool.subtract.html">of.group.cohelement.bool.subtract</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.refpoint.html">of.group.refpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.refpoint.bool.html">of.group.refpoint.bool</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../rst_user_guide/mesh.html">Mesh</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.insert.html">of.mesh.insert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.insert.internal.html">of.mesh.insert.internal</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.insert.dfn.html">of.mesh.insert.dfn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.AMR.html">of.mesh.AMR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.mmg.html">of.mesh.mmg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.implicit.html">of.mesh.implicit</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.voronoi.html">of.mesh.voronoi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.split.html">of.mesh.split</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.bary.html">of.mesh.bary</a></li>
@@ -364,6 +372,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Material/of.mat.hydro.gas.html">of.mat.hydro.gas</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Material/of.mat.nonlocal.html">of.mat.nonlocal</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Material/of.mat.thermal.html">of.mat.thermal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Material/material_parser_4_35.html">Material parser overview (4.35)</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../rst_user_guide/history.html">History</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -374,6 +383,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.cohesive.html">of.history.pv.cohesive</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.damage.html">of.history.pv.damage</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.ae.html">of.history.pv.ae</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/History/history_commands.html">History command overview</a></li>
 </ul>
 </details></li>
 </ul>
@@ -411,11 +421,7 @@
 </details></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../rst_appendix/index.html">Appendix</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../rst_appendix/publication.html">Publications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../rst_developer/appendix.html">Index</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst_appendix/index.html">Publications</a></li>
 </ul>
 
     </div>
@@ -490,7 +496,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -506,6 +514,25 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rigid-particle-dem">Rigid Particle DEM</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#particle-motion">Particle motion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contact-and-friction">Contact and friction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-integration-and-interpretation">Time integration and interpretation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#irregular-deformable-cluster-dem">Irregular Deformable Cluster DEM</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cluster-kinematics-and-force-balance">Cluster kinematics and force balance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-bond-response-and-breakage">Internal bond response and breakage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#macroscopic-response-and-calibration">Macroscopic response and calibration</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -517,12 +544,144 @@
                   
   <section id="particle-discrete-element-method-pdem">
 <h1>Particle Discrete Element Method (pDEM)<a class="headerlink" href="#particle-discrete-element-method-pdem" title="Link to this heading">#</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Rigid_Particle_DEM.html">Rigid Particle DEM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Irregular_Deformable_Cluster_DEM.html">Irregular Deformable Cluster DEM</a></li>
-</ul>
-</div>
+<hr class="docutils" />
+<section id="rigid-particle-dem">
+<h2>Rigid Particle DEM<a class="headerlink" href="#rigid-particle-dem" title="Link to this heading">#</a></h2>
+<p>The rigid-particle discrete element method (DEM) models a particulate
+assembly as individual bodies whose shapes do not deform, while their
+translations, rotations, contacts, and possible bonds evolve in time. It is
+well suited to granular packing, impact, flow, and compression problems in
+which bulk behavior emerges from particle-scale interactions. OpenFDEM
+describes its pDEM module as supporting particle packing, kinematics,
+collision, and linear, Hertz, cohesive-bond, and rotation-resistance contact
+models.</p>
+<section id="particle-motion">
+<h3>Particle motion<a class="headerlink" href="#particle-motion" title="Link to this heading">#</a></h3>
+<p>For particle <span class="math notranslate nohighlight">\(i\)</span> with mass <span class="math notranslate nohighlight">\(m_i\)</span>, center position
+<span class="math notranslate nohighlight">\(\mathbf{x}_i\)</span>, and translational velocity <span class="math notranslate nohighlight">\(\mathbf{v}_i\)</span>, the
+translational equation of motion is</p>
+<div class="math notranslate nohighlight">
+\[m_i\dot{\mathbf{v}}_i
+=\sum_{c\in i}\mathbf{F}_{ic}+m_i\mathbf{g}+\mathbf{F}_i^{\mathrm{ext}},\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{F}_{ic}\)</span> are contact or bond forces,
+<span class="math notranslate nohighlight">\(\mathbf{g}\)</span> is gravity, and <span class="math notranslate nohighlight">\(\mathbf{F}_i^{\mathrm{ext}}\)</span> is
+other applied loading. Rotation follows the angular-momentum balance</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{I}_i\dot{\boldsymbol{\omega}}_i
++\boldsymbol{\omega}_i\times
+(\mathbf{I}_i\boldsymbol{\omega}_i)
+=\sum_{c\in i}\mathbf{M}_{ic}+\mathbf{M}_i^{\mathrm{ext}},\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{I}_i\)</span> is the particle inertia tensor,
+<span class="math notranslate nohighlight">\(\boldsymbol{\omega}_i\)</span> is angular velocity, and <span class="math notranslate nohighlight">\(\mathbf{M}\)</span>
+denotes contact, bond, or applied moments. In two-dimensional calculations,
+the rotational equation reduces to the out-of-plane scalar form.</p>
+</section>
+<section id="contact-and-friction">
+<h3>Contact and friction<a class="headerlink" href="#contact-and-friction" title="Link to this heading">#</a></h3>
+<p>For a pair of touching particles, the contact force is commonly resolved into
+normal and tangential components,
+<span class="math notranslate nohighlight">\(\mathbf{F}_c=F_n\mathbf{n}+\mathbf{F}_t\)</span>, where <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> is
+the contact normal. A linear elastic-frictional model uses the overlap
+<span class="math notranslate nohighlight">\(\delta_n\)</span> to compute a trial normal force, for example</p>
+<div class="math notranslate nohighlight">
+\[F_n^{\mathrm{trial}}=k_n\delta_n-c_n v_n,
+\qquad
+|\mathbf{F}_t|\leq\mu_f F_n,\]</div>
+<p>where <span class="math notranslate nohighlight">\(k_n\)</span> is normal stiffness, <span class="math notranslate nohighlight">\(c_n\)</span> is a normal damping
+coefficient, <span class="math notranslate nohighlight">\(v_n\)</span> is the relative normal velocity, and <span class="math notranslate nohighlight">\(\mu_f\)</span>
+is the friction coefficient. A tangential spring tracks relative slip, with
+the trial force projected back to the Coulomb limit when sliding occurs. In
+Hertz-type contact, the normal force instead depends nonlinearly on overlap.
+The exact force law, damping, and friction update are constitutive choices;
+they should be selected for the particle material and the intended time scale.</p>
+</section>
+<section id="time-integration-and-interpretation">
+<h3>Time integration and interpretation<a class="headerlink" href="#time-integration-and-interpretation" title="Link to this heading">#</a></h3>
+<p>DEM commonly advances the particle equations explicitly. The stable time step
+must resolve the shortest relevant contact oscillation, which is controlled
+by particle mass or inertia and contact stiffness. Increasing stiffness
+reduces overlap but also decreases the stable time step. Contact stiffness,
+damping, and friction therefore affect both numerical cost and the effective
+macroscopic response and should be calibrated rather than treated as arbitrary
+numerical constants.</p>
+<p>Because particle shapes are fixed in rigid DEM, particle-scale deformation
+and fracture are not resolved within a body. They can be represented
+approximately by bonded particle assemblies or by the deformable-cluster
+approach described in the following section.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="irregular-deformable-cluster-dem">
+<h2>Irregular Deformable Cluster DEM<a class="headerlink" href="#irregular-deformable-cluster-dem" title="Link to this heading">#</a></h2>
+<p>An irregular deformable particle can be represented as a cluster of
+interacting constituent particles. The cluster geometry captures a
+non-circular or otherwise irregular outline, while relative motion among its
+constituents allows the aggregate to deform. If internal bonds soften or fail,
+the particle can also fragment. This differs from a rigid clump, whose
+constituents retain fixed relative positions and whose overall shape cannot
+change.</p>
+<p>OpenFDEM’s project description identifies realistic particles as rigid or
+deformable, notes overlapping-particle and Fourier-Voronoi-based shape
+generation, and states that particle breakage is possible. The bonded-cluster
+equations below are a general theoretical description; the exact internal
+representation, bond law, and breakage criterion depend on the selected model.</p>
+<section id="cluster-kinematics-and-force-balance">
+<h3>Cluster kinematics and force balance<a class="headerlink" href="#cluster-kinematics-and-force-balance" title="Link to this heading">#</a></h3>
+<p>For a cluster with constituent particles <span class="math notranslate nohighlight">\(a=1,\ldots,N_c\)</span>, each
+constituent obeys its own translational and rotational balances,</p>
+<div class="math notranslate nohighlight">
+\[m_a\dot{\mathbf{v}}_a
+=\sum_{b}\mathbf{F}_{ab}^{\mathrm{int}}
++\sum_{c}\mathbf{F}_{ac}^{\mathrm{ext}}
++m_a\mathbf{g},\]</div>
+<div class="math notranslate nohighlight">
+\[\mathbf{I}_a\dot{\boldsymbol{\omega}}_a
++\boldsymbol{\omega}_a\times
+(\mathbf{I}_a\boldsymbol{\omega}_a)
+=\sum_b\mathbf{M}_{ab}^{\mathrm{int}}
++\sum_c\mathbf{M}_{ac}^{\mathrm{ext}},\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{F}^{\mathrm{int}}\)</span> and
+<span class="math notranslate nohighlight">\(\mathbf{M}^{\mathrm{int}}\)</span> are forces and moments transmitted by
+internal contacts or bonds, while the external terms arise from other
+particles, boundaries, and applied loads. If all internal bonds remain intact
+and infinitely stiff, relative constituent motion is suppressed and the
+cluster approaches rigid-clump behavior. Finite bond stiffness permits
+deformation; bond damage or failure permits irreversible shape change and
+fragmentation.</p>
+</section>
+<section id="internal-bond-response-and-breakage">
+<h3>Internal bond response and breakage<a class="headerlink" href="#internal-bond-response-and-breakage" title="Link to this heading">#</a></h3>
+<p>A simple bonded-contact idealization relates the local normal and tangential
+relative displacements <span class="math notranslate nohighlight">\(\delta_n\)</span> and <span class="math notranslate nohighlight">\(\boldsymbol{\delta}_t\)</span> to
+trial bond forces through</p>
+<div class="math notranslate nohighlight">
+\[F_n^{\mathrm{trial}}=k_n^b\delta_n,
+\qquad
+\mathbf{F}_t^{\mathrm{trial}}=k_t^b\boldsymbol{\delta}_t,\]</div>
+<p>where <span class="math notranslate nohighlight">\(k_n^b\)</span> and <span class="math notranslate nohighlight">\(k_t^b\)</span> are bond stiffnesses. A chosen strength
+criterion may trigger damage when the normal or shear traction reaches its
+corresponding tensile or shear capacity. After damage, the transmitted force
+is reduced according to the selected softening law; after complete failure,
+the interface no longer carries cohesive tension or shear, although ordinary
+compressive contact and friction may remain. These equations illustrate the
+mechanism and are not a claim about one specific OpenFDEM bond implementation.</p>
+</section>
+<section id="macroscopic-response-and-calibration">
+<h3>Macroscopic response and calibration<a class="headerlink" href="#macroscopic-response-and-calibration" title="Link to this heading">#</a></h3>
+<p>The response of an irregular cluster assembly emerges from both external
+particle contacts and internal deformation. Cluster geometry affects packing,
+contact orientation, and interlocking; constituent size and bond properties
+affect the effective stiffness, strength, and breakage pattern. Resolution
+should be adequate to represent the target particle shape and expected
+deformation modes. Calibration should consider bulk observables such as
+packing density, stress-strain response, peak strength, dilation, and fragment
+size distribution, rather than fitting only individual bond parameters.</p>
+<p>This cluster approach provides a mesoscale compromise: it can represent
+particle-scale deformation and breakage without resolving a continuum mesh
+inside every grain. Predictions remain dependent on the chosen cluster
+discretization, contact law, bond law, and numerical time step.</p>
+</section>
+</section>
 </section>
 
 
@@ -546,11 +705,11 @@
       </div>
     </a>
     <a class="right-next"
-       href="Rigid_Particle_DEM.html"
+       href="Mesh_Adaptive_Analysis.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Rigid Particle DEM</p>
+        <p class="prev-next-title">Mesh Adaptive Analysis</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -560,6 +719,34 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rigid-particle-dem">Rigid Particle DEM</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#particle-motion">Particle motion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contact-and-friction">Contact and friction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-integration-and-interpretation">Time integration and interpretation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#irregular-deformable-cluster-dem">Irregular Deformable Cluster DEM</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cluster-kinematics-and-force-balance">Cluster kinematics and force balance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-bond-response-and-breakage">Internal bond response and breakage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#macroscopic-response-and-calibration">Macroscopic response and calibration</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

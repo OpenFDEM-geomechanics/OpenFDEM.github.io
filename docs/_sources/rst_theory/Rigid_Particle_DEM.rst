@@ -75,4 +75,4 @@ numerical constants.
 Because particle shapes are fixed in rigid DEM, particle-scale deformation
 and fracture are not resolved within a body. They can be represented
 approximately by bonded particle assemblies or by the deformable-cluster
-approach described in :doc:`Irregular_Deformable_Cluster_DEM`.
+approach described in the following section.

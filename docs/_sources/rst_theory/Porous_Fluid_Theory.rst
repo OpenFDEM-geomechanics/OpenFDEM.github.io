@@ -77,6 +77,4 @@ injection or discharge rate. These conditions should be applied consistently
 with the sign convention used for :math:`\mathbf{q}` and :math:`Q_f`.
 
 The equations above assume a continuum representative volume and single-phase
-flow. When two immiscible fluids occupy the pore space, saturation-dependent
-relative permeability and capillary pressure are needed; see
-:doc:`Two_Phase_Fluid_Theory`.
+flow. The two-phase extension is presented in the next section.

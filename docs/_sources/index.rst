@@ -195,7 +195,7 @@ block movement, structural failure, and composite material interface damage.
 
 
 Usage Statistics
----------------
+----------------
 
 Since its public release in August 2023, OpenFDEM has attracted more than 66,000 visits and received attention
 from users in over 60 countries and regions, including China, the United States, the United Kingdom, Canada, and Australia.
@@ -241,6 +241,7 @@ To date, 84 research groups have used OpenFDEM free of charge to conduct related
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
 
    rst_about_us/index
 

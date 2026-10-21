@@ -21,7 +21,7 @@ constitutive law between the separation
 
     \[\sigma _n=\begin{cases}
     \frac{o}{h}p_n, & o<0\\
-    p_no, & 0<o\le o_p\\
+    f\left( D \right) p_no, & 0<o\le o_p\\
     f\left( D \right) f_t, & o_p<o\le o_r\\
     0, & o>o_r\\
     \end{cases} \tag{1}\]
@@ -30,7 +30,7 @@ constitutive law between the separation
     :nowrap:
 
     \[\tau =\begin{cases}
-    p_ns, & |s|\le s_p\\
+    f\left( D \right) p_ns, & |s|\le s_p\\
     f\left( D \right) f_s, & s_p<|s|\le s_r\\
     \sigma _n\tan \varphi , & |s|>s_r\\
     \end{cases} \tag{2}\]
@@ -56,8 +56,8 @@ variable defined as
     :width: 85%
     :align: center
 
-    Figure 1. Mechanical behaviour of joint elements in FDEM: (a) Mode I
-    tensile behaviour and Mode II shear behaviour; (b) Mixed mode failure
+    Figure 1. Mechanical behaviour of joint elements in FDEM: (left) Mode I
+    tensile behaviour and Mode II shear behaviour; (right) Mixed mode failure
     criterion.
 
 Quadratic cohesive element
@@ -122,11 +122,11 @@ nominal strength.
     :align: center
 
     Figure 2. High order cohesive elements and two computation strategies:
-    (a) Quadratic order cohesive element; (b) Continuously distributed stress
-    method; (c) Discrete nodal spring method.
+    (upper) Quadratic order cohesive element; (lower left) Continuously distributed stress
+    method; (lower right) Discrete nodal spring method.
 
 Therefore, a new quadratic cohesive element is proposed to solve this problem.
-As shown in Figure 2 (c), the newly developed cohesive element can be treated
+As shown in Figure 2, the newly developed cohesive element can be treated
 as a series of independent springs, which compute the cohesive force solely
 based on each node pair's cohesive stress. Consequently, the nodal force at
 each node can be directly determined as
@@ -159,8 +159,8 @@ circumstance of FDEM.
     :width: 85%
     :align: center
 
-    Figure 3. The comparison of interface compatibility under (a) Uniform
-    nodal force between (b) Continuously distributed stress method, and (c)
+    Figure 3. The comparison of interface compatibility under (left) Uniform
+    nodal force between (middle) Continuously distributed stress method, and (right)
     Discrete nodal spring method.
 
 

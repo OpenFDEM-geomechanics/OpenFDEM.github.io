@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=4cc4c028" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=3ffa0b8a" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -166,31 +166,11 @@
 <li class="toctree-l2"><a class="reference internal" href="Solid_FEM_Engine.html">Solid FEM</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Solid Cohesive Mechanics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Contact_Mechanics.html">Contact Mechanics</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="Fluid_Transport_Theory.html">Fluid Transport</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="Fracture_Fluid_Theory.html">Fracture Fluid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Porous_Fluid_Theory.html">Porous Fluid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Two_Phase_Fluid_Theory.html">Two Phase Fluid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Gas_Flow_Theory.html">Gas Flow</a></li>
-</ul>
-</details></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="Thermal_Transfer_Theory.html">Thermal Transfer</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="Matrix_Thermal.html">Matrix Thermal</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Fracture_Heat_Resistance.html">Fracture Heat Resistance</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Contact_Thermal.html">Contact Thermal</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Thermal_Hydromechanical_Coupling.html">Thermal-Hydromechanical Coupling</a></li>
-</ul>
-</details></li>
+<li class="toctree-l2"><a class="reference internal" href="Fluid_Transport_Theory.html">Fluid Transport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Thermal_Transfer_Theory.html">Thermal Transfer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Phase_Field.html">Phase Field</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="Particle_Discrete_Element_Method.html">Particle Discrete Element Method (pDEM)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="Rigid_Particle_DEM.html">Rigid Particle DEM</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Irregular_Deformable_Cluster_DEM.html">Irregular Deformable Cluster DEM</a></li>
-</ul>
-</details></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="Mesh_Adaptive_Analysis.html">Mesh Adaptive Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="Local_Adaptive_Mesh_Refinement.html">Local Adaptive Mesh Refinement</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Global_Adaptive_Mesh_Refinement.html">Global Adaptive Mesh Refinement</a></li>
-</ul>
-</details></li>
+<li class="toctree-l2"><a class="reference internal" href="Particle_Discrete_Element_Method.html">Particle Discrete Element Method (pDEM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mesh_Adaptive_Analysis.html">Mesh Adaptive Analysis</a></li>
 </ul>
 </details></li>
 </ul>
@@ -225,6 +205,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.finalize.html">of.finalize</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.import.html">of.import</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.import.table.html">of.import.table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.import.function.html">of.import.function</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.log.interval.html">of.log.interval</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.new.html">of.new</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.restore.html">of.restore</a></li>
@@ -232,16 +213,20 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.save.FEM.html">of.save.FEM</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.config.html">of.set.config</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.contact.html">of.set.contact</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.fastmode.html">of.set.fastmode</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.debug.html">of.set.debug</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.GBM.html">of.set.GBM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.GBM.html">of.set.gbm</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.gravity.html">of.set.gravity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.large.html">of.set.large</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.massscale.html">of.set.massscale</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.module.html">of.set.module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.omp.html">of.set.omp</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.result.html">of.set.result</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.path.html">of.set.path</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.precision.html">of.set.precision</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.clear.html">of.set.clear</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.set.rgbm.html">of.set.rgbm</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.solve.html">of.solve</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.solve.html">of.solve.step / of.solve.ratio / of.solve.time</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.step.html">of.step</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/General/of.timestep.html">of.timestep</a></li>
 </ul>
@@ -255,17 +240,29 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.velocity.html">of.boundary.nodal.velocity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.inivelocity.html">of.boundary.nodal.inivelocity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.acceleration.html">of.boundary.nodal.acceleration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.pressure.html">of.boundary.nodal.pressure</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.nodal.clear.html">of.boundary.nodal.clear</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.viscous.html">of.boundary.edge.viscous</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.force.html">of.boundary.edge.force</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.velocity.html">of.boundary.edge.velocity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.inivelocity.html">of.boundary.edge.inivelocity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.acceleration.html">of.boundary.edge.acceleration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.pressure.html">of.boundary.edge.pressure</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.edge.clear.html">of.boundary.edge.clear</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.stress.html">of.boundary.element.stress</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.stress.xgrad.html">of.boundary.element.stress.xgrad</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.stress.ygrad.html">of.boundary.element.stress.ygrad</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.element.clear.html">of.boundary.element.clear</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Boundary/of.boundary.blast.html">of.boundary.blast</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../rst_user_guide/contact.html">Contact</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Contact/of.contact.detection.html">of.contact.detection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Contact/of.contact.force.html">of.contact.force</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../rst_user_guide/cohesive.html">Cohesive</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Cohesive/of.cohesive.delete.html">of.cohesive.delete</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../rst_user_guide/DFN.html">Discrete Fracture Networks (DFN)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -279,10 +276,11 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.coord.html">of.import.FEM.nodal.coord</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.coord0.html">of.import.FEM.nodal.coord0</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.velocity.html">of.import.FEM.nodal.velocity</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.groups.html">of.import.FEM.nodal.groups</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.edge.groups.html">of.import.FEM.edge.groups</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.element.groups.html">of.import.FEM.element.groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.nodal.groups.html">of.import.FEM.nodal.group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.edge.groups.html">of.import.FEM.edge.group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.element.groups.html">of.import.FEM.element.group</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.element.connectivity.html">of.import.FEM.element.connectivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/FEM/of.import.FEM.dfn.html">of.import.FEM.dfn</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../rst_user_guide/geometry.html">Geometry</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -314,6 +312,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.recombine.html">of.geometry.recombine</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.mesh.html">of.geometry.mesh</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.mesh.write.html">of.geometry.mesh.write</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Geometry/of.geometry.additional.html">Additional geometry commands</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../rst_user_guide/group.html">Group</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -325,8 +324,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.from.element.html">of.group.edge.from.element</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.from.cohelement.html">of.group.edge.from.cohcohelement</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.from.dfn.html">of.group.edge.from.dfn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.edge.from.node.html">of.group.edge.from.node</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.from.dfn.html">of.group.cohelement.from.dfn</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.from.gbm.html">of.group.cohelement.from.gbm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.from.element.html">of.group.cohelement.from.element</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.bool.union.html">of.group.nodal.bool.union</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.bool.intersect.html">of.group.nodal.bool.intersect</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.nodal.bool.subtract.html">of.group.nodal.bool.subtract</a></li>
@@ -339,11 +340,17 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.bool.union.html">of.group.cohelement.bool.union</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.bool.intersect.html">of.group.cohelement.bool.intersect</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.cohelement.bool.subtract.html">of.group.cohelement.bool.subtract</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.refpoint.html">of.group.refpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Group/of.group.refpoint.bool.html">of.group.refpoint.bool</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../rst_user_guide/mesh.html">Mesh</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.insert.html">of.mesh.insert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.insert.internal.html">of.mesh.insert.internal</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.insert.dfn.html">of.mesh.insert.dfn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.AMR.html">of.mesh.AMR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.mmg.html">of.mesh.mmg</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.implicit.html">of.mesh.implicit</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.voronoi.html">of.mesh.voronoi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.split.html">of.mesh.split</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Mesh/of.mesh.bary.html">of.mesh.bary</a></li>
@@ -365,6 +372,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Material/of.mat.hydro.gas.html">of.mat.hydro.gas</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Material/of.mat.nonlocal.html">of.mat.nonlocal</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Material/of.mat.thermal.html">of.mat.thermal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/Material/material_parser_4_35.html">Material parser overview (4.35)</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../rst_user_guide/history.html">History</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -375,6 +383,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.cohesive.html">of.history.pv.cohesive</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.damage.html">of.history.pv.damage</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/History/of.history.pv.ae.html">of.history.pv.ae</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rst_user_guide/History/history_commands.html">History command overview</a></li>
 </ul>
 </details></li>
 </ul>
@@ -412,11 +421,7 @@
 </details></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../rst_appendix/index.html">Appendix</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../rst_appendix/publication.html">Publications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../rst_developer/appendix.html">Index</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst_appendix/index.html">Publications</a></li>
 </ul>
 
     </div>
@@ -544,12 +549,12 @@ constitutive law between the separation
 <div class="math notranslate nohighlight">
 \[\sigma _n=\begin{cases}
 \frac{o}{h}p_n, &amp; o&lt;0\\
-p_no, &amp; 0&lt;o\le o_p\\
+f\left( D \right) p_no, &amp; 0&lt;o\le o_p\\
 f\left( D \right) f_t, &amp; o_p&lt;o\le o_r\\
 0, &amp; o&gt;o_r\\
 \end{cases} \tag{1}\]</div><div class="math notranslate nohighlight">
 \[\tau =\begin{cases}
-p_ns, &amp; |s|\le s_p\\
+f\left( D \right) p_ns, &amp; |s|\le s_p\\
 f\left( D \right) f_s, &amp; s_p&lt;|s|\le s_r\\
 \sigma _n\tan \varphi , &amp; |s|&gt;s_r\\
 \end{cases} \tag{2}\]</div><p>where <span class="math notranslate nohighlight">\(\sigma _n\)</span> and <span class="math notranslate nohighlight">\(\tau\)</span> denote the normal and tangent
@@ -570,8 +575,8 @@ variable defined as</p>
 <a class="reference internal image-reference" href="../_images/qFDEM_joint_behaviour.png"><img alt="Mechanical behaviour of joint elements in FDEM" src="../_images/qFDEM_joint_behaviour.png" style="width: 85%;" />
 </a>
 <figcaption>
-<p><span class="caption-text">Figure 1. Mechanical behaviour of joint elements in FDEM: (a) Mode I
-tensile behaviour and Mode II shear behaviour; (b) Mixed mode failure
+<p><span class="caption-text">Figure 1. Mechanical behaviour of joint elements in FDEM: (left) Mode I
+tensile behaviour and Mode II shear behaviour; (right) Mixed mode failure
 criterion.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
@@ -626,12 +631,12 @@ nominal strength.</p>
 </a>
 <figcaption>
 <p><span class="caption-text">Figure 2. High order cohesive elements and two computation strategies:
-(a) Quadratic order cohesive element; (b) Continuously distributed stress
-method; (c) Discrete nodal spring method.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+(upper) Quadratic order cohesive element; (lower left) Continuously distributed stress
+method; (lower right) Discrete nodal spring method.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Therefore, a new quadratic cohesive element is proposed to solve this problem.
-As shown in Figure 2 (c), the newly developed cohesive element can be treated
+As shown in Figure 2, the newly developed cohesive element can be treated
 as a series of independent springs, which compute the cohesive force solely
 based on each node pair’s cohesive stress. Consequently, the nodal force at
 each node can be directly determined as</p>
@@ -655,8 +660,8 @@ circumstance of FDEM.</p>
 <a class="reference internal image-reference" href="../_images/qFDEM_interface_compat.png"><img alt="Comparison of interface compatibility" src="../_images/qFDEM_interface_compat.png" style="width: 85%;" />
 </a>
 <figcaption>
-<p><span class="caption-text">Figure 3. The comparison of interface compatibility under (a) Uniform
-nodal force between (b) Continuously distributed stress method, and (c)
+<p><span class="caption-text">Figure 3. The comparison of interface compatibility under (left) Uniform
+nodal force between (middle) Continuously distributed stress method, and (right)
 Discrete nodal spring method.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
 </figcaption>
 </figure>

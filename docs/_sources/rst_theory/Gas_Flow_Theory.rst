@@ -9,7 +9,7 @@ computed, allowing the gas density and bulk modulus to be updated. The gas
 pressure field is then transferred to the mechanical module to compute the
 fracture propagation at the next time step, and the updated fracture geometry
 is subsequently used for the next gas-flow calculation. The definition of the
-fracture aperture and volume is described in the :doc:`Fracture_Fluid_Theory`
+fracture aperture and volume is described in the preceding fracture-fluid
 section.
 
 .. figure:: ../_static/Theory/gas_fracture_development.png
