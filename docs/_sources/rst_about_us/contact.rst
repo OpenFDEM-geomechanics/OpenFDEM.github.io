@@ -41,9 +41,10 @@ Developers
 
 - Ben Wang (blast solver) - Institute of Rock and Soil Mechanics, Chinese Academy of Sciences
 
+- Grace Hu - University of Toronto, Documentation and Website
+
 - Katia Ossetchkina – University of Toronto, Documentation and Website
 
-- Grace Hu - University of Toronto, Documentation and Website
 
 Advisory Committee
 -----------------------------
@@ -53,13 +54,20 @@ Prof. Haibo Li
     | Email: hbli@whrsm.ac.cn
 
 Bio:
- Prof. Haibo Li is a Professor and PhD Supervisor at the Institute of Rock and Soil Mechanics, Chinese Academy of Sciences. He is a recipient of the National Science Fund for Distinguished Young Scholars of China and the National High-level Talent Program. His research focuses on rock dynamics, dynamic failure of geomaterials, and the safety evaluation and control of rock engineering under dynamic loading. He has published more than 300 papers, including over 145 SCI-indexed journal articles. His research has been widely applied to major engineering projects in nuclear power, transportation, and mining, and he received the National Science and Technology Progress Award (Second Class) as the first recipient.
+ Prof. Haibo Li is a Professor and PhD Supervisor at the Institute of Rock and Soil Mechanics,
+ Chinese Academy of Sciences. He is a recipient of the National Science Fund for Distinguished
+ Young Scholars of China and the National High-level Talent Program. His research focuses on
+ rock dynamics, dynamic failure of geomaterials, and the safety evaluation and control of rock
+ engineering under dynamic loading. He has published more than 300 papers, including over 145
+ SCI-indexed journal articles. His research has been widely applied to major engineering projects
+ in nuclear power, transportation, and mining, and he received the National Science and Technology
+ Progress Award (Second Class) as the first recipient.
 
 .. raw:: html
 
     <hr style="border:0; height:1px; background:#eee; margin:40px 0;">
 
-Professor Giovanni Grasselli
+Prof. Giovanni Grasselli
     | Department of Civil & Mineral Engineering
     | University of Toronto
     | Email: giovanni.grasselli@utoronto.ca
@@ -78,6 +86,24 @@ Bio:
 
     <hr style="border:0; height:1px; background:#eee; margin:40px 0;">
 
+Prof. Jian Zhao
+    | Department of Civil and Environmental Engineering
+    | Monash University
+    | Email: Jian.Zhao@monash.edu
+
+
+Bio:
+ Prof. Jian Zhao is currently a professor of rock mechanics, mining and tunnelling at Monash University Australia,
+ and the Editor-in-Chief of International Journal of Rock Mechanics and Mining Sciences. He obtained PhD from the
+ Royal School of Mines at Imperial College London, worked as a faculty at Nanyang Technological University of Singapore
+ and a professor at Ecole Polytechnique Fédérale de Lausanne of Switzerland. He has served as a civil and mining engineering
+ consultant globally, and as company director and principal, including independent director for public company of
+ resources and minerals.
+
+.. raw:: html
+
+    <hr style="border:0; height:1px; background:#eee; margin:40px 0;">
+
 Dr. Qi Zhao
     | Department of Civil and Environmental Engineering
     | The Hong Kong Polytechnic University
@@ -89,25 +115,6 @@ Bio:
  with Prof. Glaser at UC Berkeley. He joined the Hong Kong Polytechnic University in June
  2020 as an assistant professor in the Department of Civil and Environmental Engineering.
 
-.. raw:: html
-
-    <hr style="border:0; height:1px; background:#eee; margin:40px 0;">
-
-Dr. Qianbing Zhang
-    | Department of Civil and Environmental Engineering
-    | Monash University
-    | Email: Qianbing.Zhang@monash.edu
-
-
-Bio:
- Dr. Qianbing Zhang is an Associate Professor specialising in Geomechanics, Tunnelling and
- Underground Infrastructure. He earned his PhD from EPFL and, prior to joining Monash in
- 2015, was a postdoctoral researcher at the University of Cambridge. He is an ARC Future
- Fellow and former ARC DECRA Fellow (2020–2022), recipient of the John Booker Medal from
- the Australian Academy of Science (AAS), Fellow of Engineers Australia (FIEAust), and
- Chartered Professional Engineer (CPEng). He serves as Editor-in-Chief of *Tunnelling and
- Underground Space Technology* (TUST, JCR-Q1 journal) and Vice-President (2023–2027) of the
- International Society for Rock Mechanics and Rock Engineering (ISRM).
 
 
 .. raw:: html

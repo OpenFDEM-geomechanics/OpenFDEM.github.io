@@ -139,9 +139,9 @@ shown in Figure 2 (c).
     :width: 70%
     :align: center
 
-    Figure 2. The contact force computation in qFDEM: (a) The simplified
-    overlap zone; (b) The equivalent contact traction distributed on one edge
-    of the overlap; (c) The equivalent nodal force.
+    Figure 2. The contact force computation in qFDEM: (upper left) The simplified
+    overlap zone; (upper right) The equivalent contact traction distributed on one edge
+    of the overlap; (lower) The equivalent nodal force.
 
 Note that the contact search algorithm in linear FDEM is also applicable to
 quadratic FDEM, as the mechanical part of the contact module is preserved.
