@@ -437,7 +437,7 @@ mechanical solver as an external load.
 
 .. figure:: ../_static/Theory/gas_module_interaction.png
     :alt: Interaction between computational modules
-    :width: 53%
+    :width: 100%
     :align: center
 
     Figure 3. Interaction between the mechanical solver and the gas flow
